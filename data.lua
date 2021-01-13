@@ -5,30 +5,30 @@ require('prototypes/item-groups')
 -- ))
 
 -- (( Categories ))--
-require('prototypes/recipe-categories')
+
 -- ))
 
 -- (( Technology ))--
-require('prototypes/technologies/  ')
+
 -- ))
 
 -- (( RESOURCEs ))--
-require('prototypes/ores/  ')
+
 -- ))
 
 -- (( RECIPEs ))--
-require('prototypes/recipes/recipes')
+
 -- ))
 
 -- (( ITEMs ))--
 require('prototypes/items/items')
 
 -- (( FLUIDs ))--
-require('prototypes/fluids/  ')
+
 -- ))
 
 -- (( BUILDINGS ))--
-require('prototypes/buildings/  ')
+require("prototypes/buildings/hawt-turbine-mk03")
 
 -- ))
 
