@@ -52,6 +52,21 @@ ENTITY {
             height = 288,
             shift = util.by_pixel(0, -20),
         },
+animation = {
+        layers = {
+            --TERRAIN
+            {
+                filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/off.png",
+                width = 384,
+                height = 448,
+                --line_length = 9,
+                frame_count = 1,
+                shift = util.by_pixel(0, -32),
+                priority = "low",
+                --animation_speed = 0.75,
+            },
+}
+}
     }
 
 ENTITY {
