@@ -28,7 +28,9 @@ require('prototypes/items/items')
 -- ))
 
 -- (( BUILDINGS ))--
+require("prototypes/buildings/hawt-turbine-mk01")
 require("prototypes/buildings/hawt-turbine-mk03")
+
 
 -- ))
 
