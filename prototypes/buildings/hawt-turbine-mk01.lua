@@ -45,28 +45,48 @@ ENTITY {
     },
     energy_production = '50MW',
     energy_usage = "0kW",
-    pictures =
-        {
-            filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/r1.png',
-            width = 224,
-            height = 288,
-            shift = util.by_pixel(0, -20),
-        },
-animation = {
+    animation = {
         layers = {
-            --TERRAIN
             {
-                filename = "__pyalienlifegraphics3__/graphics/entity/arqad-hive/off.png",
-                width = 384,
-                height = 448,
-                --line_length = 9,
-                frame_count = 1,
-                shift = util.by_pixel(0, -32),
-                priority = "low",
-                --animation_speed = 0.75,
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/r1.png",
+                width = 224,
+                height = 288,
+                line_length = 6,
+                frame_count = 30,
+                shift = util.by_pixel(0, -20),
+                animation_speed = 0.5,
             },
-}
-}
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a1.png",
+                width = 224,
+                height = 288,
+                line_length = 6,
+                frame_count = 30,
+                shift = util.by_pixel(0, -20),
+                animation_speed = 0.5,
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l1.png",
+                width = 224,
+                height = 288,
+                line_length = 6,
+                frame_count = 30,
+                shift = util.by_pixel(0, -20),
+                animation_speed = 0.3,
+                draw_as_glow = true,
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s1.png",
+                width = 256,
+                height = 224,
+                line_length = 6,
+                frame_count = 30,
+                shift = util.by_pixel(16, 13),
+                animation_speed = 0.5,
+                draw_as_shadow = true,
+            },
+        }
+    }
     }
 
 ENTITY {
