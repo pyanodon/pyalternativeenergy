@@ -92,7 +92,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a5.png',
                 width = 224,
@@ -100,7 +100,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l5.png',
                 width = 224,
@@ -108,7 +108,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.13,
                 draw_as_glow = true
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s5.png',
@@ -116,8 +116,8 @@ data:extend({
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                shift = util.by_pixel(16, 13),
+                animation_speed = 0.4,
                 draw_as_shadow = true
             }
         }
@@ -136,7 +136,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a6.png',
                 width = 224,
@@ -144,7 +144,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l6.png',
                 width = 224,
@@ -152,7 +152,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.13,
                 draw_as_glow = true
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s6.png',
@@ -160,8 +160,8 @@ data:extend({
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                shift = util.by_pixel(16, 13),
+                animation_speed = 0.4,
                 draw_as_shadow = true
             }
         }
@@ -180,7 +180,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a7.png',
                 width = 224,
@@ -188,7 +188,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l7.png',
                 width = 224,
@@ -196,7 +196,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.13,
                 draw_as_glow = true
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s7.png',
@@ -204,8 +204,8 @@ data:extend({
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                shift = util.by_pixel(16, 13),
+                animation_speed = 0.4,
                 draw_as_shadow = true
             }
         }
@@ -224,7 +224,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a8.png',
                 width = 224,
@@ -232,7 +232,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l8.png',
                 width = 224,
@@ -240,7 +240,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.13,
                 draw_as_glow = true
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s8.png',
@@ -248,8 +248,8 @@ data:extend({
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                shift = util.by_pixel(16, 13),
+                animation_speed = 0.4,
                 draw_as_shadow = true
             }
         }
@@ -268,7 +268,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a1.png',
                 width = 224,
@@ -276,7 +276,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l1.png',
                 width = 224,
@@ -284,7 +284,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.13,
                 draw_as_glow = true
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s1.png',
@@ -292,8 +292,8 @@ data:extend({
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                shift = util.by_pixel(16, 13),
+                animation_speed = 0.4,
                 draw_as_shadow = true
             }
         }
@@ -312,7 +312,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a2.png',
                 width = 224,
@@ -320,7 +320,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l2.png',
                 width = 224,
@@ -328,7 +328,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.13,
                 draw_as_glow = true
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s2.png',
@@ -336,8 +336,8 @@ data:extend({
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                shift = util.by_pixel(16, 13),
+                animation_speed = 0.4,
                 draw_as_shadow = true
             }
         }
@@ -356,7 +356,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a3.png',
                 width = 224,
@@ -364,7 +364,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l3.png',
                 width = 224,
@@ -372,7 +372,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.13,
                 draw_as_glow = true
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s3.png',
@@ -380,8 +380,8 @@ data:extend({
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                shift = util.by_pixel(16, 13),
+                animation_speed = 0.4,
                 draw_as_shadow = true
             }
         }
@@ -400,7 +400,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a4.png',
                 width = 224,
@@ -408,7 +408,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1
+                animation_speed = 0.4
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l4.png',
                 width = 224,
@@ -416,7 +416,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.13,
                 draw_as_glow = true
             }, {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s4.png',
@@ -425,7 +425,7 @@ data:extend({
                 line_length = 6,
                 frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 1,
+                animation_speed = 0.4,
                 draw_as_shadow = true
             }
         }
