@@ -81,7 +81,8 @@ ENTITY {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk03.ogg", volume = 0.85},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk03.ogg", volume = 0.6},
         apparent_volume = 2.5
-    }
+    },
+    placeable_by = {item = 'hawt-turbine-mk03', count = 1}
 }
 
 data:extend(

@@ -7,7 +7,10 @@
   "contact": "",
   "homepage": "",
   "description": "contains POWER",
-  "dependencies": [],
+  "dependencies": [
+    "stdlib",
+    "pyalternativeenergygraphics"
+  ],
   "package": {
     "ignore": [],
     "scripts": {}
