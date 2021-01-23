@@ -30,6 +30,7 @@ require('prototypes/items/items')
 -- (( BUILDINGS ))--
 require("prototypes/buildings/hawt-turbine-mk01")
 require("prototypes/buildings/hawt-turbine-mk03")
+require("prototypes/buildings/hawt-turbine-mk04")
 require("prototypes/buildings/multiblade-turbine-mk03")
 
 
