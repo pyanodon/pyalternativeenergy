@@ -5,7 +5,7 @@ script.on_init(function()
 
     script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
         local E = event.created_entity
-        if E.type == 'electric-energy-interface' and string.match(E.name, 'turbine') ~= nil then
+        if E.type == 'electric-energy-interface' and string.match(E.name, 'hawt%-turbine') ~= nil then
             local HE = game.surfaces['nauvis'].create_entity{
                 name = E.name .. '-hidden',
                 position = E.position,
@@ -132,7 +132,7 @@ end)
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
     local E = event.entity
     log('hit')
-    if E.type == 'electric-energy-interface' and string.match(E.name, 'turbine') ~= nil then
+    if E.type == 'electric-energy-interface' and string.match(E.name, 'hawt%-turbine') ~= nil then
         log('hit')
         local mill = global.windmills[E.unit_number]
         rendering.destroy(mill.animation)
