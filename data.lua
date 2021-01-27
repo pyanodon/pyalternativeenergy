@@ -33,6 +33,8 @@ require("prototypes/buildings/hawt-turbine-mk02")
 require("prototypes/buildings/hawt-turbine-mk03")
 require("prototypes/buildings/hawt-turbine-mk04")
 require("prototypes/buildings/multiblade-turbine-mk03")
+require("prototypes/buildings/vawt-turbine-mk01")
+require("prototypes/buildings/vawt-turbine-mk02")
 
 
 -- ))
