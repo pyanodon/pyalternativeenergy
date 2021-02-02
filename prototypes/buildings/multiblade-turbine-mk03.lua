@@ -34,8 +34,8 @@ ENTITY {
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
-    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+    collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
+    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     energy_source = {
         type = "electric",
@@ -50,7 +50,7 @@ ENTITY {
             filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png',
             width = 288,
             height = 288,
-            shift = util.by_pixel(16, 16),
+            shift = util.by_pixel(0, 0),
         },
     }
 
