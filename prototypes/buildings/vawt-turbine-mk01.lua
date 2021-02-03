@@ -25,19 +25,20 @@ ENTITY{
     icon = '__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk01.png',
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation'},
-    -- minable = {mining_time = 0.5, result = "vawt-turbine-mk01"},
+    minable = {mining_time = 0.5, result = "vawt-turbine-mk01"},
     fast_replaceable_group = 'vawt-turbine-mk01',
     max_health = 400,
     corpse = 'big-remnants',
     dying_explosion = 'medium-explosion',
     collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
-    match_animation_speed_to_activity = false,
+    continuous_animation = true,
     energy_source = {
         type = 'electric',
         usage_priority = 'primary-output',
         buffer_capacity = '500MJ',
-        output_flow_limit = '50MW'
+        output_flow_limit = "50MW",
+        render_no_power_icon = false
     },
     energy_production = '50MW',
     energy_usage = '0kW',
