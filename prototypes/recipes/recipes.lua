@@ -1,20 +1,14 @@
 RECIPE {
     type = "recipe",
-    name = "  ",
-    category = "  ",
+    name = "test",
+    category = "lrf",
     enabled = true,
-    energy_required = 1,
+    energy_required = 40,
     ingredients = {
-        {type = "item", name = "  ", amount = 1},
-        {type = "fluid", name = "  ", amount = 1}
+        {type = "item", name = "iron-plate", amount = 1}
     },
     results = {
-        {type = "item", name = "  ", amount = 1},
-        {type = "fluid", name = "  ", amount = 1}
+        {type = "item", name = "iron-plate", amount = 1},
     },
-    main_product = "  ",
-    icon = "  ",
-    icon_size = 64,
-    subgroup = "  ",
-    order = "  "
+--    main_product = "molybdenite-dust",
 }

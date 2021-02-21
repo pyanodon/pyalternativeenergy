@@ -5,7 +5,7 @@ require('prototypes/item-groups')
 -- ))
 
 -- (( Categories ))--
-
+require('prototypes/recipe-categories')
 -- ))
 
 -- (( Technology ))--
@@ -17,7 +17,7 @@ require('prototypes/item-groups')
 -- ))
 
 -- (( RECIPEs ))--
-
+require('prototypes/recipes/recipes')
 -- ))
 
 -- (( ITEMs ))--
@@ -38,6 +38,7 @@ require("prototypes/buildings/vawt-turbine-mk01")
 require("prototypes/buildings/vawt-turbine-mk02")
 require("prototypes/buildings/vawt-turbine-mk03")
 require("prototypes/buildings/vawt-turbine-mk04")
+require("prototypes/buildings/lrf-mk03")
 
 
 -- ))
