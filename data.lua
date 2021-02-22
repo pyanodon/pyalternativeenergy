@@ -40,7 +40,7 @@ require("prototypes/buildings/vawt-turbine-mk03")
 require("prototypes/buildings/vawt-turbine-mk04")
 require("prototypes/buildings/lrf-mk03")
 
-
+require("prototypes/buildings/thermal-panel-furnace-prototype")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
