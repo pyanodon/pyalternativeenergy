@@ -86,15 +86,31 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(49, 112),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
+            west_position = util.by_pixel(49, 112),
+            south_position = util.by_pixel(49, 112),
+            east_position = util.by_pixel(49, 112),
             animation = {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/part.png",
                 frame_count = 36,
                 line_length = 6,
                 width = 96,
                 height = 96,
+                animation_speed = 0.4,
+                --draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(-192, -64),
+            west_position = util.by_pixel(-192, -64),
+            south_position = util.by_pixel(-192, -64),
+            east_position = util.by_pixel(-192, -64),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/smoke.png",
+                frame_count = 50,
+                line_length = 10,
+                width = 128,
+                run_mode = "backward",
+                height = 320,
                 animation_speed = 0.4,
                 --draw_as_glow = true,
             }
@@ -119,6 +135,22 @@ ENTITY {
             pipe_connections = {{type = "input", position = {-1.5, -8.5}}}
         },
         {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {3.5, -8.5}}}
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {-3.5, -8.5}}}
+        },
+        {
             production_type = "output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
@@ -131,6 +163,20 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_level = 1,
             pipe_connections = {{type = "output", position = {-1.5, 8.5}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {3.5, 8.5}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {-3.5, 8.5}}}
         },
         off_when_no_fluid_recipe = false
     },
