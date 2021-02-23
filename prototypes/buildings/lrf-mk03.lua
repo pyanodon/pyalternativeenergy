@@ -71,9 +71,9 @@ ENTITY {
     working_visualisations = {
         {
             north_position = util.by_pixel(140, 17),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
+            west_position = util.by_pixel(140, 17),
+            south_position = util.by_pixel(140, 17),
+            east_position = util.by_pixel(140, 17),
             animation = {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/tela.png",
                 frame_count = 200,
@@ -82,6 +82,21 @@ ENTITY {
                 height = 32,
                 animation_speed = 0.5,
                 draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(49, 112),
+            west_position = util.by_pixel(0, -0),
+            south_position = util.by_pixel(0, -0),
+            east_position = util.by_pixel(0, -0),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/part.png",
+                frame_count = 36,
+                line_length = 6,
+                width = 96,
+                height = 96,
+                animation_speed = 0.4,
+                --draw_as_glow = true,
             }
         },
     },

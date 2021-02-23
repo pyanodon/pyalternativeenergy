@@ -14,7 +14,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "Shit-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk03.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk03.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk03",
@@ -26,16 +26,16 @@ ITEM {
 ENTITY {
     type = "furnace",
     name = "Shit-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk03.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "Shit-mk01"},
     fast_replaceable_group = "lrf",
-    max_health = 100,
+    max_health = 35,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-7.8, -7.8}, {7.8, 7.8}},
-    selection_box = {{-8.0, -8.0}, {8.0, 8.0}},
+    collision_box = {{-2.2, -4.8}, {2.2, 4.8}},
+    selection_box = {{-2.5, -5.0}, {2.5, 5.0}},
     match_animation_speed_to_activity = false,
     module_specification = {
         module_slots = 0
@@ -43,6 +43,8 @@ ENTITY {
     --allowed_effects = {"speed"},
     crafting_categories = {"lrf"},
     crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -55,19 +57,19 @@ ENTITY {
                 layers = --works the same as normal layers in animations for other buildings. north is the first animation used.
                 {
                     {
-                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/r.png",
-                        width = 512,
-                        height = 608,
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-r2.png",
+                        width = 160,
+                        height = 416,
                         frame_count = 1,
-                        shift = util.by_pixel(0, -48)
+                        shift = util.by_pixel(0, -16)
                     },
                     {
-                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/l.png",
-                        width = 512,
-                        height = 608,
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-sh2.png",
+                        width = 191,
+                        height = 320,
                         frame_count = 1,
-                        shift = util.by_pixel(0, -48),
-                        draw_as_glow = true,
+                        shift = util.by_pixel(18, 32),
+                        draw_as_shadow = true,
                     },
                 }
             },
@@ -76,19 +78,19 @@ ENTITY {
                 layers =
                 {
                     {
-                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/r.png",
-                        width = 512,
-                        height = 608,
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-h-r.png",
+                        width = 320,
+                        height = 160,
                         frame_count = 1,
-                        shift = util.by_pixel(0, -48)
+                        shift = util.by_pixel(0, -0)
                     },
                     {
-                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/l.png",
-                        width = 512,
-                        height = 608,
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-h-sh.png",
+                        width = 354,
+                        height = 128,
                         frame_count = 1,
-                        shift = util.by_pixel(0, -48),
-                        draw_as_glow = true,
+                        shift = util.by_pixel(16, 16),
+                        draw_as_shadow = true,
                     },
                 }
             },
@@ -97,19 +99,19 @@ ENTITY {
                 layers =
                 {
                     {
-                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/r.png",
-                        width = 512,
-                        height = 608,
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-r2.png",
+                        width = 160,
+                        height = 416,
                         frame_count = 1,
-                        shift = util.by_pixel(0, -48)
+                        shift = util.by_pixel(0, -16)
                     },
                     {
-                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/l.png",
-                        width = 512,
-                        height = 608,
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-sh2.png",
+                        width = 191,
+                        height = 320,
                         frame_count = 1,
-                        shift = util.by_pixel(0, -48),
-                        draw_as_glow = true,
+                        shift = util.by_pixel(18, 32),
+                        draw_as_shadow = true,
                     },
                 }
             },
@@ -118,68 +120,23 @@ ENTITY {
                 layers =
                 {
                     {
-                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/r.png",
-                        width = 512,
-                        height = 608,
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-h-r.png",
+                        width = 320,
+                        height = 160,
                         frame_count = 1,
-                        shift = util.by_pixel(0, -48)
+                        shift = util.by_pixel(0, -0)
                     },
                     {
-                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/l.png",
-                        width = 512,
-                        height = 608,
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-h-sh.png",
+                        width = 354,
+                        height = 128,
                         frame_count = 1,
-                        shift = util.by_pixel(0, -48),
-                        draw_as_glow = true,
+                        shift = util.by_pixel(16, 16),
+                        draw_as_shadow = true,
                     },
                 }
             },
 
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(140, 17),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
-            --this works the same as up top. but copy and paste the north to the south animation and east to west.
-            north_animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/tela.png",
-                frame_count = 200,
-                line_length = 25,
-                width = 64,
-                height = 32,
-                animation_speed = 0.5,
-                draw_as_glow = true,
-            },
-            east_animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/tela.png",
-                frame_count = 200,
-                line_length = 25,
-                width = 64,
-                height = 32,
-                animation_speed = 0.5,
-                draw_as_glow = true,
-            },
-            south_animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/tela.png",
-                frame_count = 200,
-                line_length = 25,
-                width = 64,
-                height = 32,
-                animation_speed = 0.5,
-                draw_as_glow = true,
-            },
-            west_animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/tela.png",
-                frame_count = 200,
-                line_length = 25,
-                width = 64,
-                height = 32,
-                animation_speed = 0.5,
-                draw_as_glow = true,
-            },
-        },
     },
     fluid_boxes = {
         --1
@@ -189,36 +146,17 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {1.5, -8.5}}}
-        },
-        {
-            production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            base_area = 10,
-            base_level = -1,
-            pipe_connections = {{type = "input", position = {-1.5, -8.5}}}
+            pipe_connections = {{type = "input", position = {0, -5.5}}}
         },
         {
             production_type = "output",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, nil, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, false, true, true),
             base_level = 1,
-            pipe_connections = {{type = "output", position = {1.5, 8.5}}}
+            pipe_connections = {{type = "output", position = {0, 5.5}}}
         },
-        {
-            production_type = "output",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            base_level = 1,
-            pipe_connections = {{type = "output", position = {-1.5, 8.5}}}
-        },
+
         off_when_no_fluid_recipe = false
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 2.0},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 0.70},
-        apparent_volume = 2.5
-    }
 }
