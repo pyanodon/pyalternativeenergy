@@ -3,7 +3,7 @@ RECIPE {
     name = "test",
     category = "solar-tower",
     enabled = true,
-    energy_required = 40,
+    energy_required = 400,
     ingredients = {
         {type = "item", name = "iron-plate", amount = 1}
     },

@@ -76,7 +76,128 @@ ENTITY {
             },
         }
     },
-
+    working_visualisations = {
+        {
+            north_position = util.by_pixel(-176, 81),
+            west_position = util.by_pixel(-176, 81),
+            south_position = util.by_pixel(-176, 81),
+            east_position = util.by_pixel(-176, 81),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-left.png",
+                frame_count = 20,
+                line_length = 5,
+                width = 224,
+                height = 224,
+                animation_speed = 0.3,
+                --draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(48, 81),
+            west_position = util.by_pixel(48, 81),
+            south_position = util.by_pixel(48, 81),
+            east_position = util.by_pixel(48, 81),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-mid.png",
+                frame_count = 20,
+                line_length = 5,
+                width = 224,
+                height = 224,
+                animation_speed = 0.3,
+                --draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(-176, -143),
+            west_position = util.by_pixel(-176, -143),
+            south_position = util.by_pixel(-176, -143),
+            east_position = util.by_pixel(-176, -143),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-left.png",
+                frame_count = 20,
+                line_length = 5,
+                width = 224,
+                height = 224,
+                animation_speed = 0.3,
+                --draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(48, -143),
+            west_position = util.by_pixel(48, -143),
+            south_position = util.by_pixel(48, -143),
+            east_position = util.by_pixel(48, -143),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-mid.png",
+                frame_count = 20,
+                line_length = 5,
+                width = 224,
+                height = 224,
+                animation_speed = 0.3,
+                --draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(-176, -367),
+            west_position = util.by_pixel(-176, -367),
+            south_position = util.by_pixel(-176, -367),
+            east_position = util.by_pixel(-176, -367),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-left.png",
+                frame_count = 20,
+                line_length = 5,
+                width = 224,
+                height = 224,
+                animation_speed = 0.3,
+                --draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(48, -367),
+            west_position = util.by_pixel(48, -367),
+            south_position = util.by_pixel(48, -367),
+            east_position = util.by_pixel(48, -367),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-mid.png",
+                frame_count = 20,
+                line_length = 5,
+                width = 224,
+                height = 224,
+                animation_speed = 0.3,
+                --draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(208, -143),
+            west_position = util.by_pixel(208, -143),
+            south_position = util.by_pixel(208, -143),
+            east_position = util.by_pixel(208, -143),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/right.png",
+                frame_count = 20,
+                line_length = 20,
+                width = 96,
+                height = 672,
+                animation_speed = 0.3,
+                --draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(-16, -720),
+            west_position = util.by_pixel(-16, -720),
+            south_position = util.by_pixel(-16, -720),
+            east_position = util.by_pixel(-16, -720),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/concentrator.png",
+                frame_count = 20,
+                line_length = 5,
+                width = 288,
+                height = 288,
+                animation_speed = 0.3,
+                --draw_as_glow = true,
+            }
+        },
+    },
     fluid_boxes = {
         --1
         {
