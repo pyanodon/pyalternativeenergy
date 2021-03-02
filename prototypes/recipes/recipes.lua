@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "test",
-    category = "lrf",
+    category = "solar-tower",
     enabled = true,
     energy_required = 40,
     ingredients = {
