@@ -40,6 +40,7 @@ require("prototypes/buildings/vawt-turbine-mk03")
 require("prototypes/buildings/vawt-turbine-mk04")
 require("prototypes/buildings/lrf-mk03")
 require("prototypes/buildings/solar-tower")
+require("prototypes/buildings/solar-tower-panel")
 
 require("prototypes/buildings/thermal-panel-furnace-prototype")
 -- ))
