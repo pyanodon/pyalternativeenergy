@@ -31,20 +31,15 @@ ENTITY {
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-2, -2}, {2, 2}},
+    collision_box = {{-1.6, -1.6}, {1.6, 1.6}},
     selection_box = {{-2, -2}, {2, 2}},
     picture = {
         filename = '__pyalternativeenergygraphics__/graphics/entity/solar-tower/r-helio.png',
         width = 192,
         height = 192,
-        shift = util.by_pixel(0, 0),
+        shift = util.by_pixel(0, -32),
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 2.0},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 0.70},
-        apparent_volume = 2.5
-    }
 }
 
 -- create sprites for solar tower panels
@@ -76,7 +71,6 @@ do
                     shift = panel.picture.shift,
                 },
                 vehicle_impact_sound = panel.vehicle_impact_sound,
-                working_sound = panel.working_sound
             }
             i = i + 1
         end
