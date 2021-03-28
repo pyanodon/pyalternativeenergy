@@ -57,10 +57,10 @@ ENTITY {
         filter = "combustion-mixture1",
         minimum_temperature = 500.0,
         pipe_connections = {
-            {type = "input-output", position = {3.5, 4.5}},
-            {type = "input-output", position = {-3.5, 4.5}},
-            {type = "input-output", position = {3.5, -4.5}},
-            {type = "input-output", position = {-3.5, -4.5}},
+            {type = "input-output", position = {3.5, 5}},
+            {type = "input-output", position = {-3.5, 5}},
+            {type = "input-output", position = {3.5, -5}},
+            {type = "input-output", position = {-3.5, -5}},
         }
     },
     energy_source = {
