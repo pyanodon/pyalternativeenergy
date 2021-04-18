@@ -32,4 +32,11 @@ data:extend {
         group = "py-alternativeenergy",
         order = "ad"
     },
+    --SPECIALS--
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-special-buildings",
+        group = "py-alternativeenergy",
+        order = "ae"
+    },
 }
