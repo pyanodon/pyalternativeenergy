@@ -43,6 +43,7 @@ require("prototypes/buildings/steam-turbine-mk03")
 require("prototypes/buildings/steam-turbine-mk04")
 require("prototypes/buildings/lrf-mk03")
 require("prototypes/buildings/mdh")
+require("prototypes/buildings/anti-solar")
 require("prototypes/buildings/solar-tower")
 require("prototypes/buildings/solar-tower-panel")
 
