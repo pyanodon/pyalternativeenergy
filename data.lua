@@ -46,7 +46,7 @@ require("prototypes/buildings/mdh")
 require("prototypes/buildings/anti-solar")
 require("prototypes/buildings/solar-tower")
 require("prototypes/buildings/solar-tower-panel")
-
+require("prototypes/buildings/lightning-catcher")
 require("prototypes/buildings/thermal-panel-furnace-prototype")
 -- ))
 
