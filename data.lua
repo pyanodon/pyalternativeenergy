@@ -48,6 +48,7 @@ require("prototypes/buildings/solar-tower")
 require("prototypes/buildings/solar-tower-panel")
 require("prototypes/buildings/lightning-catcher")
 require("prototypes/buildings/thermal-panel-furnace-prototype")
+require("prototypes/buildings/solar-concentrator")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'

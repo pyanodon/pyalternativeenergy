@@ -17,7 +17,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-special-buildings",
     order = "d",
     place_result = "multiblade-turbine-mk01",
     stack_size = 10
