@@ -23,6 +23,40 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         E.destroy()
         global.windmills[HE.unit_number] = {windmill = HE, animation = ani, max_power = 50, base_name = name}
         -- log(serpent.block(global.windmills))
+    elseif string.match(E.name, 'solar%-tower%-panel') ~= nil then
+        -- find solar tower and angle from it
+        local tower = game.surfaces[E.surface.name].find_entities_filtered{name = 'solar-tower-building'}
+
+        if next(tower
+        ) ~= nil then
+            local tower_x = tower[1].position.x
+            local tower_y = tower[1].position.y
+            local x = E.position.x
+            local y = E.position.y
+
+            local zeroed_x = x - tower_x
+            local zeroed_y = y - tower_y
+            local angle = math.atan2(zeroed_y, zeroed_x
+            )
+            -- log(serpent.block(angle))
+            local deg = math.deg(angle
+            )
+            if deg < 0 then
+                deg = deg + 360
+            end
+            --log(serpent.block(deg))
+
+            local sprite_num = math.floor(deg / 11.25)
+
+            if sprite_num < 1 then sprite_num = 1 end
+
+            game.surfaces[E.surface.name].create_entity{
+                name = 'solar-tower-panel' .. sprite_num,
+                position = E.position,
+                force = E.force
+            }
+            E.destroy()
+        end
     end
 end
 )
@@ -161,47 +195,5 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
     log(serpent.block(global.windmills
     )
     )
-end
-)
-
-script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
-
-    local E = event.created_entity
-
-    if string.match(E.name, 'solar%-tower%-panel') ~= nil then
-        -- find solar tower and angle from it
-        local tower = game.surfaces[E.surface.name].find_entities_filtered{name = 'solar-tower-building'}
-
-        if next(tower
-        ) ~= nil then
-            local tower_x = tower[1].position.x
-            local tower_y = tower[1].position.y
-            local x = E.position.x
-            local y = E.position.y
-
-            local zeroed_x = x - tower_x
-            local zeroed_y = y - tower_y
-            local angle = math.atan2(zeroed_y, zeroed_x
-            )
-            -- log(serpent.block(angle))
-            local deg = math.deg(angle
-            )
-            if deg < 0 then
-                deg = deg + 360
-            end
-            --log(serpent.block(deg))
-
-            local sprite_num = math.floor(deg / 11.25)
-
-            if sprite_num < 1 then sprite_num = 1 end
-
-            game.surfaces[E.surface.name].create_entity{
-                name = 'solar-tower-panel' .. sprite_num,
-                position = E.position,
-                force = E.force
-            }
-            E.destroy()
-        end
-    end
 end
 )
