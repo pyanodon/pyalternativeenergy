@@ -1,5 +1,6 @@
 script.on_init(function()
     global.windmills = {}
+    global.reactor_tanks = {}
 end
 )
 
@@ -57,6 +58,24 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             }
             E.destroy()
         end
+    elseif E.name == "nuke-tank-input" then
+        local out1 = game.surfaces['nauvis'].create_entity{
+            name = 'nuke-tank-output',
+            position = {E.position.x + 4, E.position.y + 4},
+            force = game.players.force
+        }
+        local out2 = game.surfaces['nauvis'].create_entity{
+            name = 'nuke-tank-output',
+            position = {E.position.x + 4, E.position.y - 4},
+            force = game.players.force
+        }
+        global.reactor_tanks[E.unit_number] =
+        {
+            input_tank = E,
+            neutron_tank = out1,
+            dirty_fuel_tank = out2
+        }
+        log(serpent.block(global.reactor_tanks))
     end
 end
 )
@@ -177,6 +196,33 @@ script.on_nth_tick(60, function(event)
     end
 end
 )
+
+script.on_nth_tick(30, function(event)
+
+    if next(global.reactor_tanks) ~= nil then
+        for t, tank in pairs(global.reactor_tanks) do
+            if global.reactor_tanks[t] ~= nil then
+                --log(serpent.block(global.reactor_tanks))
+                local in_t = global.reactor_tanks[t].input_tank
+                local n_t =  global.reactor_tanks[t].neutron_tank
+                local d_t =  global.reactor_tanks[t].dirty_fuel_tank
+                local in_t_fbox = in_t.fluidbox[1]
+                log(serpent.block(in_t_fbox))
+                log("hit")
+                if in_t_fbox ~= nil then
+                    log("hit")
+                    local fuel = in_t_fbox
+                    fuel.temperature = fuel.temperature + 1
+                    global.reactor_tanks[t].input_tank.fluidbox[1] = fuel
+                    if fuel.amount >= 100 then
+                        d_t.insert_fluid({name = "dirty-uranium", amount = 100, temperature = fuel.temperature})
+                    end
+                end
+            end
+        end
+    end
+
+end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
     local E = event.entity

@@ -6,6 +6,7 @@ require('prototypes/item-groups')
 
 -- (( Categories ))--
 require('prototypes/recipe-categories')
+require('prototypes/fuel-categories')
 -- ))
 
 -- (( Technology ))--
@@ -18,12 +19,16 @@ require('prototypes/recipe-categories')
 
 -- (( RECIPEs ))--
 require('prototypes/recipes/recipes')
+require("prototypes/recipes/recipes-nuclear")
 -- ))
 
 -- (( ITEMs ))--
 require('prototypes/items/items')
 
 -- (( FLUIDs ))--
+require("prototypes/fluids/neutron")
+require("prototypes/fluids/uranium")
+require("prototypes/fluids/dirty-uranium")
 
 -- ))
 
@@ -50,6 +55,7 @@ require("prototypes/buildings/lightning-catcher")
 require("prototypes/buildings/thermal-panel-furnace-prototype")
 require("prototypes/buildings/solar-concentrator")
 require("prototypes/buildings/stirling-concentrator")
+require("prototypes/buildings/nuclear-reactor-mk02")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
