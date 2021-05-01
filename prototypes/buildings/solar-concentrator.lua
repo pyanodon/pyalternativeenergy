@@ -71,9 +71,9 @@ ENTITY {
     working_visualisations = {
         {
             north_position = util.by_pixel(-96, 16),
-            west_position = util.by_pixel(-176, 81),
-            south_position = util.by_pixel(-176, 81),
-            east_position = util.by_pixel(-176, 81),
+            west_position = util.by_pixel(-96, 16),
+            south_position = util.by_pixel(-96, 16),
+            east_position = util.by_pixel(-96, 16),
             animation = {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/flash-left.png",
                 frame_count = 50,
@@ -86,9 +86,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(64, 16),
-            west_position = util.by_pixel(-176, 81),
-            south_position = util.by_pixel(-176, 81),
-            east_position = util.by_pixel(-176, 81),
+            west_position = util.by_pixel(64, 16),
+            south_position = util.by_pixel(64, 16),
+            east_position = util.by_pixel(64, 16),
             animation = {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/flash-right.png",
                 frame_count = 50,
@@ -101,9 +101,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(-144, -64),
-            west_position = util.by_pixel(-176, 81),
-            south_position = util.by_pixel(-176, 81),
-            east_position = util.by_pixel(-176, 81),
+            west_position = util.by_pixel(-144, -64),
+            south_position = util.by_pixel(-144, -64),
+            east_position = util.by_pixel(-144, -64),
             animation = {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-left.png",
                 frame_count = 50,
@@ -117,9 +117,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(-16, -64),
-            west_position = util.by_pixel(-176, 81),
-            south_position = util.by_pixel(-176, 81),
-            east_position = util.by_pixel(-176, 81),
+            west_position = util.by_pixel(-16, -64),
+            south_position = util.by_pixel(-16, -64),
+            east_position = util.by_pixel(-16, -64),
             animation = {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-mid.png",
                 frame_count = 50,
@@ -133,9 +133,9 @@ ENTITY {
         },
         {
             north_position = util.by_pixel(112, -64),
-            west_position = util.by_pixel(-176, 81),
-            south_position = util.by_pixel(-176, 81),
-            east_position = util.by_pixel(-176, 81),
+            west_position = util.by_pixel(112, -64),
+            south_position = util.by_pixel(112, -64),
+            east_position = util.by_pixel(112, -64),
             animation = {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-right.png",
                 frame_count = 50,
@@ -210,7 +210,7 @@ ENTITY {
             base_level = 1,
             pipe_connections = {{type = "output", position = {-3, 7}}}
         },
-        off_when_no_fluid_recipe = false
+        off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {

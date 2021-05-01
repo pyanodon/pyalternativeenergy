@@ -32,8 +32,8 @@ ENTITY{
     max_health = 400,
     corpse = 'big-remnants',
     dying_explosion = 'medium-explosion',
-    collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
+    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
     energy_source = {
         type = 'electric',
@@ -47,17 +47,17 @@ ENTITY{
         layers = {
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/raw-stirling.png',
-                width = 256,
-                height = 384,
+                width = 192,
+                height = 288,
                 line_length = 5,
                 frame_count = 10,
-                shift = util.by_pixel(-16, -80),
+                shift = util.by_pixel(-16, -64),
                 --animation_speed = 0.4
             },
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/sh-stirling.png',
-                width = 288,
-                height = 224,
+                width = 224,
+                height = 160,
                 line_length = 5,
                 frame_count = 10,
                 shift = util.by_pixel(32, -0),
@@ -65,6 +65,42 @@ ENTITY{
                 --animation_speed = 0.4
             },
         }
+    },
+
+    --FLUID BOXES DONT APPEAR IN GAME
+    fluid_boxes = {
+        --1
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0, -3}}}
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0, 3}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {3, 0}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {-3, 0}}}
+        },
+        off_when_no_fluid_recipe = false
     },
     energy_production = '50MW',
     energy_usage = '0kW',
