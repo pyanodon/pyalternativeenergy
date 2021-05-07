@@ -67,4 +67,103 @@ ENTITY{
           }
         }
       }
+    },
+
+    vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.electric_network_open,
+    close_sound = sounds.electric_network_close,
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/substation.ogg",
+        volume = 0.4
+      },
+      max_sounds_per_type = 3,
+      audible_distance_modifier = 0.32,
+      fade_in_ticks = 30,
+      fade_out_ticks = 40,
+      use_doppler_shift = false
+    },
+    connection_points =
+    {
+      {
+        shadow =
+        {
+          copper = util.by_pixel(136, 8),
+          green = util.by_pixel(124, 8),
+          red = util.by_pixel(151, 9)
+        },
+        wire =
+        {
+          copper = util.by_pixel(0, -86),
+          green = util.by_pixel(-21, -82),
+          red = util.by_pixel(22, -81)
+        }
+      },
+      {
+        shadow =
+        {
+          copper = util.by_pixel(133, 9),
+          green = util.by_pixel(144, 21),
+          red = util.by_pixel(110, -3)
+        },
+        wire =
+        {
+          copper = util.by_pixel(0, -85),
+          green = util.by_pixel(15, -70),
+          red = util.by_pixel(-15, -92)
+        }
+      },
+      {
+        shadow =
+        {
+          copper = util.by_pixel(133, 9),
+          green = util.by_pixel(127, 26),
+          red = util.by_pixel(127, -8)
+        },
+        wire =
+        {
+          copper = util.by_pixel(0, -85),
+          green = util.by_pixel(0, -66),
+          red = util.by_pixel(0, -97)
+        }
+      },
+      {
+        shadow =
+        {
+          copper = util.by_pixel(133, 9),
+          green = util.by_pixel(111, 20),
+          red = util.by_pixel(144, -3)
+        },
+        wire =
+        {
+          copper = util.by_pixel(0, -86),
+          green = util.by_pixel(-15, -71),
+          red = util.by_pixel(15, -92)
+        }
+      }
+    },
+    radius_visualisation_picture =
+    {
+      filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
+      width = 12,
+      height = 12,
+      priority = "extra-high-no-scale"
+    },
+    water_reflection =
+    {
+      pictures =
+      {
+        filename = "__base__/graphics/entity/substation/substation-reflection.png",
+        priority = "extra-high",
+        width = 20,
+        height = 28,
+        shift = util.by_pixel(0, 55),
+        variation_count = 1,
+        scale = 5
+      },
+      rotate = false,
+      orientation_to_variation = false
     }
+  }
