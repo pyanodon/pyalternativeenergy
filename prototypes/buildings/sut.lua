@@ -17,7 +17,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk04",
+    subgroup = "py-alternativeenergy-buildings-mk03",
     order = "a",
     place_result = "sut",
     stack_size = 10
@@ -56,7 +56,9 @@ ENTITY {
                 width = 608,
                 height = 1312,
                 frame_count = 1,
-                shift = util.by_pixel(0, -335),
+                line_length = 1,
+                repeat_count = 30,
+                shift = util.by_pixel(1, -321),
                 scale = 0.9473
             },
             {
@@ -64,29 +66,23 @@ ENTITY {
                 width = 832,
                 height = 592,
                 frame_count = 1,
-                shift = util.by_pixel(108, 8),
+                line_length = 1,
+                repeat_count = 30,
+                shift = util.by_pixel(109, 8),
                 draw_as_shadow = true,
                 scale = 0.9473
             },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-0, 271),
-            west_position = util.by_pixel(-0, 272),
-            south_position = util.by_pixel(-0, 272),
-            east_position = util.by_pixel(-0, 272),
-            animation = {
+            {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/bottom.png",
                 frame_count = 30,
                 line_length = 3,
                 width = 608,
                 height = 32,
                 animation_speed = 0.3,
-                scale = 0.9473
-                --draw_as_glow = true,
-            }
-        },
+                scale = 0.9473,
+                shift = util.by_pixel(1, 285),
+            },
+        }
     },
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
