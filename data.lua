@@ -13,7 +13,8 @@ require('prototypes/fuel-categories')
 
 -- ))
 
--- (( RESOURCEs ))--
+--(( RESOURCES ))--
+require("prototypes.ores.geothermal-crack")
 
 -- ))
 
@@ -29,6 +30,7 @@ require('prototypes/items/items')
 require("prototypes/fluids/neutron")
 require("prototypes/fluids/uranium")
 require("prototypes/fluids/dirty-uranium")
+require("prototypes/fluids/geothermal-water")
 
 -- ))
 
@@ -51,6 +53,7 @@ require("prototypes/buildings/solar-panel-mk02")
 require("prototypes/buildings/solar-panel-mk03")
 require("prototypes/buildings/solar-panel-mk04")
 require("prototypes/buildings/lrf-mk03")
+require("prototypes/buildings/geothermal-plant-mk01")
 require("prototypes/buildings/sut")
 require("prototypes/buildings/sut-panel")
 require("prototypes/buildings/mdh")

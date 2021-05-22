@@ -18,5 +18,9 @@ data:extend {
     {
         type = "recipe-category",
         name = "neutron-moderator"
-    }
+    },
+    {
+        type = "resource-category",
+        name = "geothermal-crack"
+    },
 }

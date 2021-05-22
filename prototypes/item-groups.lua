@@ -32,6 +32,12 @@ data:extend {
         group = "py-alternativeenergy",
         order = "ad"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-fluids",
+        group = "py-alternativeenergy",
+        order = "ba"
+    },
     --SPECIALS--
     {
         type = "item-subgroup",
