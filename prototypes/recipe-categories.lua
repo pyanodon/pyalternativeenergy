@@ -23,4 +23,8 @@ data:extend {
         type = "resource-category",
         name = "geothermal-crack"
     },
+    {
+        type = "resource-category",
+        name = "ree"
+    },
 }
