@@ -16,6 +16,7 @@ require('prototypes/fuel-categories')
 --(( RESOURCES ))--
 require("prototypes.ores.geothermal-crack")
 require("prototypes.ores.ree")
+require("prototypes.ores.antimonium")
 
 -- ))
 
@@ -70,6 +71,10 @@ require("prototypes/buildings/ree-mining-drill-mk01")
 require("prototypes/buildings/ree-mining-drill-mk02")
 require("prototypes/buildings/ree-mining-drill-mk03")
 require("prototypes/buildings/ree-mining-drill-mk04")
+require("prototypes/buildings/antimonium-drill-mk01")
+require("prototypes/buildings/antimonium-drill-mk02")
+require("prototypes/buildings/antimonium-drill-mk03")
+require("prototypes/buildings/antimonium-drill-mk04")
 require("prototypes/buildings/nuclear-reactor-mk02")
 -- ))
 

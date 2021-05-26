@@ -3,40 +3,38 @@ local resource_autoplace = require("resource-autoplace")
 DATA {
     type = "autoplace-control",
     category = "resource",
-    name = "ree",
+    name = "antimonium",
     richness = true,
     order = "p"
 }
 
 DATA {
     type = "noise-layer",
-    name = "ree"
+    name = "antimonium"
 }
 
 ENTITY {
     type = "resource",
-    name = "ree",
-    category = "ree",  --maybe here
-    icon = "__pyhightechgraphics__/graphics/icons/mip/re-01.png",
+    name = "antimonium",
+    category = "antimonium",  --maybe here
+    icon = "__pyalternativeenergygraphics__/graphics/ore/antimonium/antimonium.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
-    map_color = {r = 0.356, g = 0.305, b = 0.274},
+    map_color = {r = 0.839, g = 0.352, b = 0.301},
     minable = {
         -- mining_particle = "aluminium-ore-particle",
-        mining_time = 2,
+        mining_time = 1,
         results = {
-            {"rare-earth-ore", 1}
+            {"antimonium-ore", 1}
         },
-        fluid_amount = 100,
-        required_fluid = "refsyngas"
     },
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    tree_removal_probability = 0.7,
-    tree_removal_max_distance = 32 * 32,
+    tantimonium_removal_probability = 0.7,
+    tantimonium_removal_max_distance = 32 * 32,
     autoplace = resource_autoplace.resource_autoplace_settings {
-        name = "ree",
+        name = "antimonium",
         order = "b",
         base_density = 10,
         base_spots_per_km2 = 1.25,
@@ -47,17 +45,17 @@ ENTITY {
         starting_rq_factor_multiplier = 2,
         candidate_spot_count = 20
     },
-    stage_counts = {2500, 1700, 1500, 1200, 900, 450, 200, 40},
+    stage_counts = {2000, 1700, 1500, 1200, 900, 450, 200, 40},
     stages = {
         sheet = {
-            filename = "__pyalternativeenergygraphics__/graphics/ore/ree/ree.png",
+            filename = "__pyalternativeenergygraphics__/graphics/ore/antimonium/antimonium.png",
             priority = "extra-high",
             width = 64,
             height = 64,
             frame_count = 8,
             variation_count = 8,
             hr_version = {
-                filename = "__pyalternativeenergygraphics__/graphics/ore/ree/hr-ree.png",
+                filename = "__pyalternativeenergygraphics__/graphics/ore/antimonium/hr-antimonium.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,

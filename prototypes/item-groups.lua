@@ -38,6 +38,12 @@ data:extend {
         group = "py-alternativeenergy",
         order = "ba"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-items",
+        group = "py-alternativeenergy",
+        order = "bc"
+    },
     --SPECIALS--
     {
         type = "item-subgroup",

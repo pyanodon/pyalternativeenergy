@@ -27,4 +27,8 @@ data:extend {
         type = "resource-category",
         name = "ree"
     },
+    {
+        type = "resource-category",
+        name = "antimonium"
+    },
 }

@@ -24,3 +24,14 @@ ITEM {
     fuel_category = 'control-rod',
     fuel_value = "10MJ"
 }
+
+ITEM {
+    type = "item",
+    name = "antimonium-ore",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/antimonium-ore.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-antimonium",
+    order = "aaa",
+    stack_size = 500
+}
