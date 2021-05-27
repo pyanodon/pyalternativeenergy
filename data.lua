@@ -75,6 +75,7 @@ require("prototypes/buildings/antimonium-drill-mk01")
 require("prototypes/buildings/antimonium-drill-mk02")
 require("prototypes/buildings/antimonium-drill-mk03")
 require("prototypes/buildings/antimonium-drill-mk04")
+require("prototypes/buildings/nuclear-reactor-mk01")
 require("prototypes/buildings/nuclear-reactor-mk02")
 -- ))
 
