@@ -77,6 +77,7 @@ require("prototypes/buildings/antimonium-drill-mk03")
 require("prototypes/buildings/antimonium-drill-mk04")
 require("prototypes/buildings/nuclear-reactor-mk01")
 require("prototypes/buildings/nuclear-reactor-mk02")
+require("prototypes/buildings/neutron-absorber-mk01")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
