@@ -1,40 +1,40 @@
 RECIPE {
     type = "recipe",
-    name = "nuclear-reactor-mk01",
+    name = "nuclear-reactor-mk02",
     energy_required = 5,
     enabled = true,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
-        {"nuclear-reactor-mk01", 1}
+        {"nuclear-reactor-mk02", 1}
     }
 }
 
 ITEM {
     type = "item",
-    name = "nuclear-reactor-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk01.png",
+    name = "nuclear-reactor-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-buildings-mk02",
     order = "a",
-    place_result = "nuclear-reactor-mk01",
+    place_result = "nuclear-reactor-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "nuclear-reactor-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk01.png",
+    name = "nuclear-reactor-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk02.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "nuclear-reactor-mk01"},
+    minable = {mining_time = 0.1, result = "nuclear-reactor-mk02"},
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
+    selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
         module_slots = 1
@@ -51,35 +51,50 @@ ENTITY {
     animation = {
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/off.png",
-                width = 352,
+                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk02/off.png",
+                width = 416,
                 height = 576,
                 frame_count = 1,
-                shift = util.by_pixel(0, -112)
+                shift = util.by_pixel(0, -80)
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/sh.png",
-                width = 416,
-                height = 320,
+                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk02/sh.png",
+                width = 480,
+                height = 384,
                 frame_count = 1,
-                shift = util.by_pixel(32, 16),
+                shift = util.by_pixel(32, -16),
                 draw_as_shadow = true,
             },
         }
     },
     working_visualisations = {
         {
-            north_position = util.by_pixel(-0, -208),
-            west_position = util.by_pixel(-0, -208),
-            south_position = util.by_pixel(-0, -208),
-            east_position = util.by_pixel(-0, -208),
+            north_position = util.by_pixel(-0, -16),
+            west_position = util.by_pixel(-0, -16),
+            south_position = util.by_pixel(-0, -16),
+            east_position = util.by_pixel(-0, -16),
             animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/l.png",
-                frame_count = 20,
-                line_length = 5,
-                width = 352,
-                height = 384,
-                animation_speed = 0.3,
+                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk02/l1.png",
+                frame_count = 50,
+                line_length = 8,
+                width = 224,
+                height = 256,
+                animation_speed = 0.5,
+                draw_as_glow = true,
+            }
+        },
+        {
+            north_position = util.by_pixel(-176, -192),
+            west_position = util.by_pixel(-176, -192),
+            south_position = util.by_pixel(-176, -192),
+            east_position = util.by_pixel(-176, -192),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk02/l2.png",
+                frame_count = 50,
+                line_length = 10,
+                width = 64,
+                height = 160,
+                animation_speed = 0.5,
                 draw_as_glow = true,
             }
         },
@@ -92,7 +107,7 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, 6.0}}}
+            pipe_connections = {{type = "input", position = {0.0, 7.0}}}
         },
         {
             production_type = "input",
@@ -100,7 +115,7 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {-2.0, 6.0}}}
+            pipe_connections = {{type = "input", position = {-3.0, 7.0}}}
         },
         {
             production_type = "input",
@@ -108,28 +123,28 @@ ENTITY {
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {2.0, 6.0}}}
+            pipe_connections = {{type = "input", position = {3.0, 7.0}}}
         },
         {
             production_type = "output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_level = 1,
-            pipe_connections = {{type = "output", position = {1.0, -6.0}}}
+            pipe_connections = {{type = "output", position = {2.0, -7.0}}}
         },
         {
             production_type = "output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_level = 1,
-            pipe_connections = {{type = "output", position = {-1.0, -6.0}}}
+            pipe_connections = {{type = "output", position = {-2.0, -7.0}}}
         },
-        off_when_no_fluid_recipe = true
+        off_when_no_fluid_recipe = false
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/nuclear-reactor-mk01.ogg", volume = 0.7},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/nuclear-reactor-mk01.ogg", volume = 0.1},
+        sound = {filename = "__pyalternativeenergygraphics__/sounds/nuclear-reactor-mk02.ogg", volume = 0.7},
+        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/nuclear-reactor-mk02.ogg", volume = 0.1},
         apparent_volume = 2.5
     }
   }
