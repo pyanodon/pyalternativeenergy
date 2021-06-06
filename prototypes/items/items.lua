@@ -13,7 +13,7 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "bullshitium-348",
+    name = "control-rod",
     icon = "__base__/graphics/icons/iron-plate.png",
     icon_size = 64,
     icon_mipmaps = 4,

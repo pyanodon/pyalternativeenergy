@@ -61,19 +61,31 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
     elseif E.name == "nuke-tank-input" then
         local out1 = game.surfaces['nauvis'].create_entity{
             name = 'nuke-tank-output',
-            position = {E.position.x + 4, E.position.y + 4},
+            position = {E.position.x + 6, E.position.y},
             force = game.players.force
         }
         local out2 = game.surfaces['nauvis'].create_entity{
             name = 'nuke-tank-output',
-            position = {E.position.x + 4, E.position.y - 4},
+            position = {E.position.x + 6, E.position.y + 6},
+            force = game.players.force
+        }
+        local in2 = game.surfaces['nauvis'].create_entity{
+            name = 'nuke-tank-input',
+            position = {E.position.x, E.position.y  + 6},
+            force = game.players.force
+        }
+        local moderator = game.surfaces['nauvis'].create_entity{
+            name = 'control-rod',
+            position = {E.position.x + 3, E.position.y + 6},
             force = game.players.force
         }
         global.reactor_tanks[E.unit_number] =
         {
             input_tank = E,
-            neutron_tank = out1,
-            dirty_fuel_tank = out2
+            output_neutron_tank = out2,
+            input_neutron_tank = in2,
+            dirty_fuel_tank = out1,
+            moderator = moderator
         }
         log(serpent.block(global.reactor_tanks))
     end
@@ -204,18 +216,26 @@ script.on_nth_tick(30, function(event)
             if global.reactor_tanks[t] ~= nil then
                 --log(serpent.block(global.reactor_tanks))
                 local in_t = global.reactor_tanks[t].input_tank
-                local n_t =  global.reactor_tanks[t].neutron_tank
+                local o_n_t =  global.reactor_tanks[t].output_neutron_tank
+                local i_n_t = global.reactor_tanks[t].input_neutron_tank
                 local d_t =  global.reactor_tanks[t].dirty_fuel_tank
+                local mod = global.reactor_tanks[t].moderator
                 local in_t_fbox = in_t.fluidbox[1]
+                local nuts_in = i_n_t.fluidbox[1]
                 log(serpent.block(in_t_fbox))
                 log("hit")
                 if in_t_fbox ~= nil then
                     log("hit")
                     local fuel = in_t_fbox
-                    fuel.temperature = fuel.temperature + 1
-                    global.reactor_tanks[t].input_tank.fluidbox[1] = fuel
-                    if fuel.amount >= 100 then
-                        d_t.insert_fluid({name = "dirty-uranium", amount = 100, temperature = fuel.temperature})
+                    if nuts_in ~= nil then
+                        if nuts_in.amount > 5 and fuel.amount > 5 then
+                            fuel.temperature = fuel.temperature + 1
+                            global.reactor_tanks[t].input_tank.fluidbox[1] = fuel
+                            local neu = i_n_t.remove_fluid{name = 'neutron', amount = 5}
+                            local amount = in_t.remove_fluid{name = 'uranium', amount = 5}
+                            d_t.insert_fluid{name = 'dirty-uranium', amount = amount, temperature = fuel.temperature}
+                            o_n_t.insert_fluid{name = 'neutron', amount = 15} -- need to adjust for neutron eco of different fluids
+                        end
                     end
                 end
             end

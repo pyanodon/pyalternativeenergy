@@ -20,18 +20,19 @@
 
 --tier 4 will over lap with the 1st and secound tier of fusion energy and will be required to eventully activate matter + anti matter fusion. plus science shit.
 
---[[
+
 RECIPE {
     type = "recipe",
-    name = "neutron-absorbton",
-    category = "nuclear-absorber",
+    name = "neutron-absorbston",
+    category = "neutron-absorber",
     icon = '__base__/graphics/icons/assembling-machine-2.png',
     icon_size = 64,
     enabled = true,
-    energy_required = 1,
+    energy_required = 0.5,
     ingredients = {
-        {type = "fluid", name = "neutron", amount = 10}
+        {type = "fluid", name = "neutron", amount = 50}
     },
     results = {},
+    subgroup = "py-items",
+    order = "g"
 }
-]]--
