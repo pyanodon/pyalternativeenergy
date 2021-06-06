@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "antimonium-drill-mk04",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"antimonium-drill-mk03", 1},
         {"science-coating", 15},
@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"antimonium-drill-mk04", 1}
     }
-}
+}:add_unlock("antimony-mk04")
 
 ITEM {
     type = "item",
