@@ -10,6 +10,7 @@ require('prototypes/fuel-categories')
 -- ))
 
 -- (( Technology ))--
+require("prototypes.technologies.antimony")
 
 -- ))
 
@@ -22,6 +23,7 @@ require("prototypes.ores.antimonium")
 
 -- (( RECIPEs ))--
 require('prototypes/recipes/recipes')
+require('prototypes/recipes/recipes-sb')
 require("prototypes/recipes/recipes-nuclear")
 -- ))
 
@@ -33,6 +35,10 @@ require("prototypes/fluids/neutron")
 require("prototypes/fluids/uranium")
 require("prototypes/fluids/dirty-uranium")
 require("prototypes/fluids/geothermal-water")
+require("prototypes/fluids/sb-pulp-01")
+require("prototypes/fluids/sb-pulp-02")
+require("prototypes/fluids/sb-58-conc")
+require("prototypes/fluids/dowfroth-250")
 
 -- ))
 
@@ -81,7 +87,13 @@ require("prototypes/buildings/nuclear-reactor-mk02")
 require("prototypes/buildings/nuclear-reactor-mk03")
 require("prototypes/buildings/nuclear-reactor-mk04")
 require("prototypes/buildings/neutron-absorber-mk01")
+require("prototypes/buildings/neutron-absorber-mk02")
+require("prototypes/buildings/neutron-absorber-mk03")
+require("prototypes/buildings/neutron-absorber-mk04")
 require("prototypes/buildings/neutron-moderator-mk01")
+require("prototypes/buildings/neutron-moderator-mk02")
+require("prototypes/buildings/neutron-moderator-mk03")
+require("prototypes/buildings/neutron-moderator-mk04")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
