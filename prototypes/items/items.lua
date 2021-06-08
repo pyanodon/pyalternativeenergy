@@ -117,6 +117,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "yellow-dextrine",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/yellow-dextrine.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "sodium-cyanate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sodium-cyanate.png",
 	icon_size = 64,

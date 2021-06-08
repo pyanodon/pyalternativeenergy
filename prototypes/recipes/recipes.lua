@@ -28,7 +28,7 @@ RECIPE {
         {type = "item", name = "lead-acetate", amount = 1},
     },
 --    main_product = "molybdenite-dust",
-}
+}:add_unlock("antimony-mk02")
 
 RECIPE {
     type = "recipe",
@@ -46,3 +46,19 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("antimony-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "sodium-cyanate",
+    category = "mixer",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "sodium-carbonate", amount = 2},
+        {type = "fluid", name = "cyanic-acid", amount = 100},
+    },
+    results = {
+        {type = "item", name = "sodium-cyanate", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("antimony-mk04")

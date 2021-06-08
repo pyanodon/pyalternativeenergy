@@ -57,7 +57,7 @@ ENTITY {
     },
     collision_box = {{-0.6, -1.05}, {0.6, 0.3}},
     selection_box = {{-0.6, -1.49}, {0.6, 0.49}},
-    damaged_trigger_effect = hit_effects.entity(),
+    --damaged_trigger_effect = hit_effects.entity(),
     fluid_box =
     {
       base_area = 1,
@@ -76,9 +76,6 @@ ENTITY {
     pumping_speed = 20,
     tile_width = 1,
     tile_height = 1,
-    vehicle_impact_sound = sounds.generic_impact,
-    open_sound = sounds.machine_open,
-    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =
