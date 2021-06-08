@@ -94,6 +94,7 @@ require("prototypes/buildings/neutron-moderator-mk01")
 require("prototypes/buildings/neutron-moderator-mk02")
 require("prototypes/buildings/neutron-moderator-mk03")
 require("prototypes/buildings/neutron-moderator-mk04")
+require("prototypes/buildings/offshore-example")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
