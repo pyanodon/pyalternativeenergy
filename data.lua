@@ -101,6 +101,7 @@ require("prototypes/buildings/neutron-moderator-mk01")
 require("prototypes/buildings/neutron-moderator-mk02")
 require("prototypes/buildings/neutron-moderator-mk03")
 require("prototypes/buildings/neutron-moderator-mk04")
+require("prototypes/buildings/accumulator-mk03")
 require("prototypes/buildings/offshore-example")
 -- ))
 
