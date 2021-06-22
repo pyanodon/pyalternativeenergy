@@ -1,4 +1,4 @@
-RECIPE{
+RECIPE {
     type = 'recipe',
     name = 'tidal-mk01',
     energy_required = 0.5,
@@ -7,7 +7,7 @@ RECIPE{
     results = {{'tidal-mk01', 1}}
 }
 
-ITEM{
+ITEM {
     type = 'item',
     name = 'tidal-mk01',
     icon = '__pyalternativeenergygraphics__/graphics/icons/tidal-mk01.png',
@@ -19,7 +19,7 @@ ITEM{
     stack_size = 10
 }
 
-ENTITY{
+ENTITY {
     type = 'electric-energy-interface',
     name = 'tidal-mk01',
     icon = '__pyalternativeenergygraphics__/graphics/icons/tidal-mk01.png',
@@ -33,61 +33,203 @@ ENTITY{
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
-    energy_source = { type = 'electric',
+    energy_source = {
+        type = 'electric',
         usage_priority = 'primary-output',
         buffer_capacity = '500MJ',
-        output_flow_limit = "50MW",
+        output_flow_limit = '50MW',
         render_no_power_icon = false
     },
     energy_production = '50MW',
     energy_usage = '0kW',
-    animation = {
-        north ={
+    animations = {
+        north = {
+            layers = {
                 {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/top.png",
-                    width = 608,
-                    height = 1312,
+                    filename = '__base__/graphics/entity/oil-refinery/oil-refinery.png',
                     frame_count = 1,
-                    line_length = 1,
-                    repeat_count = 30,
-                    shift = util.by_pixel(1, -321),
+                    height = 255,
+                    hr_version = {
+                        filename = '__base__/graphics/entity/oil-refinery/hr-oil-refinery.png',
+                        frame_count = 1,
+                        height = 430,
+                        priority = 'high',
+                        scale = 0.5,
+                        width = 386,
+                        x = 0,
+                        y = 0
+                    },
+                    priority = 'high',
+                    scale = 1,
+                    width = 337,
+                    x = 0,
+                    y = 0
                 },
-        },
-        west ={
                 {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/top.png",
-                    width = 608,
-                    height = 1312,
+                    draw_as_shadow = true,
+                    filename = '__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png',
                     frame_count = 1,
-                    line_length = 1,
-                    repeat_count = 30,
-                    shift = util.by_pixel(1, -321),
-                },
+                    height = 213,
+                    hr_version = {
+                        draw_as_shadow = true,
+                        filename = '__base__/graphics/entity/oil-refinery/hr-oil-refinery-shadow.png',
+                        force_hr_shadow = true,
+                        frame_count = 1,
+                        height = 426,
+                        priority = 'high',
+                        scale = 0.5,
+                        width = 674,
+                        x = 0,
+                        y = 0
+                    },
+                    priority = 'high',
+                    scale = 1,
+                    width = 337,
+                    x = 0,
+                    y = 0
+                }
+            }
         },
-        east ={
+        east = {
+            layers = {
                 {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/top.png",
-                    width = 608,
-                    height = 1312,
+                    filename = '__base__/graphics/entity/oil-refinery/oil-refinery.png',
                     frame_count = 1,
-                    line_length = 1,
-                    repeat_count = 30,
-                    shift = util.by_pixel(1, -321),
-                    scale = 0.9473
+                    height = 255,
+                    hr_version = {
+                        filename = '__base__/graphics/entity/oil-refinery/hr-oil-refinery.png',
+                        frame_count = 1,
+                        height = 430,
+                        priority = 'high',
+                        scale = 0.5,
+                        width = 386,
+                        x = 386,
+                        y = 0
+                    },
+                    priority = 'high',
+                    scale = 1,
+                    width = 337,
+                    x = 337,
+                    y = 0
                 },
-        },
-        south ={
                 {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/top.png",
-                    width = 608,
-                    height = 1312,
+                    draw_as_shadow = true,
+                    filename = '__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png',
                     frame_count = 1,
-                    line_length = 1,
-                    repeat_count = 30,
-                    shift = util.by_pixel(1, -321),
-                    scale = 0.9473
-                },
+                    height = 213,
+                    hr_version = {
+                        draw_as_shadow = true,
+                        filename = '__base__/graphics/entity/oil-refinery/hr-oil-refinery-shadow.png',
+                        force_hr_shadow = true,
+                        frame_count = 1,
+                        height = 426,
+                        priority = 'high',
+                        scale = 0.5,
+                        width = 674,
+                        x = 674,
+                        y = 0
+                    },
+                    priority = 'high',
+                    scale = 1,
+                    width = 337,
+                    x = 337,
+                    y = 0
+                }
+            }
         },
-    },
+        south = {
+            layers = {
+                {
+                    filename = '__base__/graphics/entity/oil-refinery/oil-refinery.png',
+                    frame_count = 1,
+                    height = 255,
+                    hr_version = {
+                        filename = '__base__/graphics/entity/oil-refinery/hr-oil-refinery.png',
+                        frame_count = 1,
+                        height = 430,
+                        priority = 'high',
+                        scale = 0.5,
+                        width = 386,
+                        x = 772,
+                        y = 0
+                    },
+                    priority = 'high',
+                    scale = 1,
+                    width = 337,
+                    x = 674,
+                    y = 0
+                },
+                {
+                    draw_as_shadow = true,
+                    filename = '__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png',
+                    frame_count = 1,
+                    height = 213,
+                    hr_version = {
+                        draw_as_shadow = true,
+                        filename = '__base__/graphics/entity/oil-refinery/hr-oil-refinery-shadow.png',
+                        force_hr_shadow = true,
+                        frame_count = 1,
+                        height = 426,
+                        priority = 'high',
+                        scale = 0.5,
+                        width = 674,
+                        x = 1348,
+                        y = 0
+                    },
+                    priority = 'high',
+                    scale = 1,
+                    width = 337,
+                    x = 674,
+                    y = 0
+                }
+            }
+        },
+        west = {
+            layers = {
+                {
+                    filename = '__base__/graphics/entity/oil-refinery/oil-refinery.png',
+                    frame_count = 1,
+                    height = 255,
+                    hr_version = {
+                        filename = '__base__/graphics/entity/oil-refinery/hr-oil-refinery.png',
+                        frame_count = 1,
+                        height = 430,
+                        priority = 'high',
+                        scale = 0.5,
+                        width = 386,
+                        x = 1158,
+                        y = 0
+                    },
+                    priority = 'high',
+                    scale = 1,
+                    width = 337,
+                    x = 1011,
+                    y = 0
+                },
+                {
+                    draw_as_shadow = true,
+                    filename = '__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png',
+                    frame_count = 1,
+                    height = 213,
+                    hr_version = {
+                        draw_as_shadow = true,
+                        filename = '__base__/graphics/entity/oil-refinery/hr-oil-refinery-shadow.png',
+                        force_hr_shadow = true,
+                        frame_count = 1,
+                        height = 426,
+                        priority = 'high',
+                        scale = 0.5,
+                        width = 674,
+                        x = 2022,
+                        y = 0
+                    },
+                    priority = 'high',
+                    scale = 1,
+                    width = 337,
+                    x = 1011,
+                    y = 0
+                }
+            }
+        }
+    }
 }
-
