@@ -44,6 +44,18 @@ data:extend {
         group = "py-alternativeenergy",
         order = "bc"
     },
+    {
+        type = "item-subgroup",
+        name = "py-rawores-thorium",
+        group = "py-rawores",
+        order = "br"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-rawores-gd",
+        group = "py-rawores",
+        order = "bs"
+    },
     --SPECIALS--
     {
         type = "item-subgroup",

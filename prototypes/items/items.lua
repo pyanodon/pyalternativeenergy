@@ -169,3 +169,117 @@ ITEM {
     order = "aaz",
     stack_size = 500
 }
+
+--THORIUM
+
+ITEM {
+    type = "item",
+    name = "re-precipitate-01",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/re-precipitate-01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-hightech-items",
+    order = "cd",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "re-precipitate-02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/re-precipitate-02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-hightech-items",
+    order = "cd",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "th-dust",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/th-dust.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-thorium",
+    order = "aa",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "th-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/th-oxide.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-thorium",
+    order = "ab",
+    stack_size = 500
+}
+
+--GADOLINIUM
+
+ITEM {
+    type = "item",
+    name = "gd-oxalate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gd-oxalate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-gd",
+    order = "aa",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "gd-mixture",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gd-mixture.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-gd",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "crystalized-gd",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/crystalized-gd.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-gd",
+    order = "ac",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "impure-gd",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/impure-gd.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-gd",
+    order = "ad",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "gd-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gd-oxide.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-gd",
+    order = "ae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "gd-metal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gd-metal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-gd",
+    order = "af",
+    stack_size = 500
+}
