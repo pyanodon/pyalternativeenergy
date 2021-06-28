@@ -46,6 +46,13 @@ require("prototypes/fluids/sb-final-conc")
 require("prototypes/fluids/sb-low-conc")
 require("prototypes/fluids/sb-58-conc")
 require("prototypes/fluids/dowfroth-250")
+require("prototypes/fluids/re-pulp-01")
+require("prototypes/fluids/re-pulp-02")
+require("prototypes/fluids/re-pulp-03")
+require("prototypes/fluids/re-pulp-04")
+require("prototypes/fluids/th-pulp")
+require("prototypes/fluids/th-oxalate")
+require("prototypes/fluids/gd-stripped-solution")
 
 -- ))
 
