@@ -62,3 +62,37 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("antimony-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "ammonium-oxalate",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "ammonia", amount = 100},
+        {type = "item", name = "flask", amount = 1},
+        {type = "item", name = "oxalic-acid", amount = 1},
+    },
+    results = {
+        {type = "item", name = "ammonium-oxalate", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("thorium")
+
+RECIPE {
+    type = "recipe",
+    name = "oxalic-acid",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "sulfuric-acid", amount = 100},
+        {type = "item", name = "vanadium-oxide", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 1},
+    },
+    results = {
+        {type = "item", name = "oxalic-acid", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("thorium")

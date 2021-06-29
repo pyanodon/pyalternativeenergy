@@ -275,11 +275,46 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "gd-crystal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gd-crystal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-rawores-gd",
+    order = "af",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "gd-metal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gd-metal.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-rawores-gd",
-    order = "af",
+    order = "ag",
+    stack_size = 500
+}
+
+--ETC
+
+ITEM {
+    type = "item",
+    name = "ammonium-oxalate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ammonium-oxalate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "oxalic-acid",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/oxalic-acid.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
     stack_size = 500
 }

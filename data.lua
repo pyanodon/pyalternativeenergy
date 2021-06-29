@@ -11,6 +11,8 @@ require('prototypes/fuel-categories')
 
 -- (( Technology ))--
 require("prototypes.technologies.antimony")
+require("prototypes.technologies.thorium")
+require("prototypes.technologies.gd")
 
 -- ))
 
@@ -24,6 +26,7 @@ require("prototypes.ores.antimonium")
 -- (( RECIPEs ))--
 require('prototypes/recipes/recipes')
 require('prototypes/recipes/recipes-sb')
+require('prototypes/recipes/recipes-gd')
 require("prototypes/recipes/recipes-nuclear")
 -- ))
 
@@ -52,6 +55,7 @@ require("prototypes/fluids/re-pulp-03")
 require("prototypes/fluids/re-pulp-04")
 require("prototypes/fluids/th-pulp")
 require("prototypes/fluids/th-oxalate")
+require("prototypes/fluids/stripped-th")
 require("prototypes/fluids/gd-stripped-solution")
 
 -- ))
