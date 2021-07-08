@@ -1,7 +1,7 @@
 
 FLUID {
     type = "fluid",
-    name = "uranium",
+    name = "plutonium-peroxide",
     icon = "__base__/graphics/icons/iron-plate.png",
     icon_size = 64,
     icon_mipmaps = 4,
