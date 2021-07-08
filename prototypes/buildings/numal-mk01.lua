@@ -157,6 +157,17 @@ ENTITY {
                 shift = util.by_pixel(-80, -96),
             },
             {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/l-top.png",
+                width = 128,
+                height = 96,
+                frame_count = 150,
+                --repeat_count = 150,
+                line_length = 16,
+                draw_as_glow = true,
+                animation_speed = 0.5,
+                shift = util.by_pixel(80, -128),
+            },
+            {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/sh.png",
                 width = 288,
                 height = 480,
@@ -268,7 +279,48 @@ ENTITY {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/s-gtop.png",
                         frame_count = 75,
                         line_length = 10,
-                        priority = "extra-high",
+                        run_mode = "forward-then-backward",
+                        width = 96,
+                        height = 128,
+                        shift = util.by_pixel(0, -0),
+                        animation_speed = 0.5,
+                        },
+                    },
+                },
+                south = {
+                    layers = {
+                        {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/s-gtop.png",
+                        frame_count = 75,
+                        line_length = 10,
+                        run_mode = "forward-then-backward",
+                        width = 96,
+                        height = 128,
+                        shift = util.by_pixel(0, -0),
+                        animation_speed = 0.5,
+                        },
+                    },
+                },
+                west = {
+                    layers = {
+                        {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/s-gtop.png",
+                        frame_count = 75,
+                        line_length = 10,
+                        run_mode = "forward-then-backward",
+                        width = 96,
+                        height = 128,
+                        shift = util.by_pixel(0, -0),
+                        animation_speed = 0.5,
+                        },
+                    },
+                },
+                east = {
+                    layers = {
+                        {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/s-gtop.png",
+                        frame_count = 75,
+                        line_length = 10,
                         run_mode = "forward-then-backward",
                         width = 96,
                         height = 128,
