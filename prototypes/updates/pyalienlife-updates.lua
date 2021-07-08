@@ -1,7 +1,8 @@
 
 --TECHNOLOGY--
-
+require("prototypes.technologies.numal")
 --BUILDINDS--
+require("prototypes/buildings/numal-mk01")
 
 -----RECIPES-----
 RECIPE('sb-pulp-01'):replace_ingredient("naphtha", "fish-oil")

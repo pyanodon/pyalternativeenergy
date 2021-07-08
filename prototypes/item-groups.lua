@@ -56,6 +56,12 @@ data:extend {
         group = "py-rawores",
         order = "bs"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-numal",
+        group = "py-alienlife",
+        order = "e-u"
+    },
     --SPECIALS--
     {
         type = "item-subgroup",
