@@ -62,6 +62,12 @@ data:extend {
         group = "py-alienlife",
         order = "e-u"
     },
+    {
+        type = "item-subgroup",
+        name = "py-nuclear-waste",
+        group = "py-alternativeenergy",
+        order = "nw"
+    },
     --SPECIALS--
     {
         type = "item-subgroup",

@@ -1,4 +1,6 @@
 
+--NUCLEAR ITEMS
+
 ITEM {
     type = "item",
     name = "bullshitium-348",
@@ -23,6 +25,318 @@ ITEM {
     stack_size = 500,
     fuel_category = 'control-rod',
     fuel_value = "10MJ"
+}
+
+ITEM {
+    type = "item",
+    name = "high-energy-waste-1",
+    icon = "__base__/graphics/icons/iron-plate.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "high-energy-waste-2",
+    icon = "__base__/graphics/icons/iron-plate.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "high-energy-waste-3",
+    icon = "__base__/graphics/icons/iron-plate.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "high-energy-waste-4",
+    icon = "__base__/graphics/icons/iron-plate.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "high-energy-waste-5",
+    icon = "__base__/graphics/icons/iron-plate.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "thorium-232",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-232.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "th-233",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-233.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "pa-233",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pa-233.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "uranium-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-232.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-232",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-232.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-233",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-233.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-234",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-234.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-235",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-235.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-236",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-236.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-237",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-237.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-238",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-238.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-239",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-239.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "u-240",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-240.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "plutonium-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-238.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "pu-238",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-238.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "pu-239",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-239.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "pu-240",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "pu-241",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-241.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "americium-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "curium-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "sb-chloride",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
 }
 
 --ANTIMONY
@@ -311,6 +625,17 @@ ITEM {
 ITEM {
     type = "item",
     name = "oxalic-acid",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/oxalic-acid.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "lithium",
     icon = "__pyalternativeenergygraphics__/graphics/icons/oxalic-acid.png",
 	icon_size = 64,
     flags = {},
