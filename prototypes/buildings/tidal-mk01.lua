@@ -30,8 +30,8 @@ ENTITY {
     max_health = 400,
     corpse = 'big-remnants',
     dying_explosion = 'medium-explosion',
-    collision_box = {{-2.3, -5.3}, {2.3, 5.3}},
-    selection_box = {{-2.5, -5.5}, {2.5, 5.5}},
+    collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
+    selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
     match_animation_speed_to_activity = false,
     energy_source = {
         type = 'electric',

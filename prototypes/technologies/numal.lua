@@ -36,7 +36,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'numal-mk03',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/sb-mk03.png',
+    icon = '__pyalternativeenergygraphics__/graphics/technology/numal-mk03.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {"water-animals-mk03",'numal-mk02'},
@@ -55,7 +55,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'numal-mk04',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/sb-mk04.png',
+    icon = '__pyalternativeenergygraphics__/graphics/technology/numal-mk04.png',
     icon_size = 128,
     order = 'c-a',
     prerequisites = {"water-animals-mk04",'numal-mk03'},

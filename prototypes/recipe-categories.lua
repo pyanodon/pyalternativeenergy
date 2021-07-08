@@ -20,6 +20,11 @@ data:extend {
         name = "neutron-moderator"
     },
     {
+        type = "recipe-category",
+        name = "numal"
+    },
+    --resources
+    {
         type = "resource-category",
         name = "geothermal-crack"
     },
@@ -30,9 +35,5 @@ data:extend {
     {
         type = "resource-category",
         name = "antimonium"
-    },
-    {
-        type = "resource-category",
-        name = "numal"
     },
 }

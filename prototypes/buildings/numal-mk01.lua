@@ -22,7 +22,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/numal-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-numal",
+    subgroup = "py-alienlife-buildings-mk01",
     order = "a",
     place_result = "numal-mk01",
     stack_size = 10
@@ -39,15 +39,15 @@ ENTITY {
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+    collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
+    selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
         module_slots = 8
     },
     allowed_effects = {"speed","productivity",'consumption','pollution'},
-    crafting_categories = {"numal"},
+    crafting_categories = {"solar-tower"},
     crafting_speed = 0.1,
     energy_source = {
         type = "electric",
@@ -63,17 +63,70 @@ ENTITY {
                 width = 288,
                 height = 480,
                 frame_count = 1,
+                repeat_count = 150,
                 line_length = 1,
+                animation_speed = 0.5,
                 shift = util.by_pixel(0, -0),
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/raw-mask.png",
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-bot.png",
+                width = 96,
+                height = 96,
+                frame_count = 150,
+                line_length = 20,
+                animation_speed = 0.5,
+                shift = util.by_pixel(-64, -96),
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-top.png",
+                width = 64,
+                height = 128,
+                frame_count = 150,
+                line_length = 20,
+                animation_speed = 0.5,
+                shift = util.by_pixel(80, -112),
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-mask.png",
                 width = 288,
                 height = 480,
                 frame_count = 1,
                 line_length = 1,
+                repeat_count = 150,
+                animation_speed = 0.5,
                 shift = util.by_pixel(0, -0),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-bot-mask.png",
+                width = 96,
+                height = 96,
+                frame_count = 150,
+                line_length = 20,
+                animation_speed = 0.5,
+                shift = util.by_pixel(-64, -96),
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-top-mask.png",
+                width = 64,
+                height = 128,
+                frame_count = 150,
+                line_length = 20,
+                animation_speed = 0.5,
+                shift = util.by_pixel(80, -112),
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/sh.png",
+                width = 288,
+                height = 480,
+                frame_count = 1,
+                repeat_count = 150,
+                line_length = 1,
+                draw_as_shadow = true,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -0),
             },
         },
     },
@@ -88,7 +141,7 @@ ENTITY {
                 shift = util.by_pixel(0, -0),
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/raw-mask.png",
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-mask.png",
                 width = 288,
                 height = 480,
                 frame_count = 1,
@@ -109,7 +162,7 @@ ENTITY {
                 shift = util.by_pixel(0, -0),
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/raw-mask.png",
+                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-mask.png",
                 width = 288,
                 height = 480,
                 frame_count = 1,
@@ -130,7 +183,7 @@ ENTITY {
             shift = util.by_pixel(0, -0),
         },
         {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/numal/raw-mask.png",
+            filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-mask.png",
             width = 288,
             height = 480,
             frame_count = 1,
@@ -142,21 +195,28 @@ ENTITY {
 },
     },
     working_visualisations = {
-        {
-            north_position = util.by_pixel(0, -0),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/s-gtop.png",
-                frame_count = 150,
-                line_length = 10,
-                --run_mode = "forward-then-backward",
-                width = 96,
-                height = 128,
-                animation_speed = 0.5
-            }
-        },
+        --{
+            --north_position = util.by_pixel(0, -0),
+            --west_position = util.by_pixel(0, -0),
+            --south_position = util.by_pixel(0, -0),
+            --east_position = util.by_pixel(0, -0),
+            --animation = {
+                north = {
+                    layers = {
+                        {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/s-gtop.png",
+                        frame_count = 75,
+                        line_length = 10,
+                        run_mode = "forward-then-backward",
+                        width = 96,
+                        height = 128,
+                        shift = util.by_pixel(0, -0),
+                        animation_speed = 0.5,
+                        },
+                    },
+                },
+            --},
+        --},
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
