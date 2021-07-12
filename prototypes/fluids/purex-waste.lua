@@ -2,7 +2,7 @@
 FLUID {
     type = "fluid",
     name = "purex-waste-1",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/waste-01.png",
     icon_size = 64,
     icon_mipmaps = 4,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
@@ -19,7 +19,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "purex-waste-2",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/waste-02.png",
     icon_size = 64,
     icon_mipmaps = 4,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
@@ -36,7 +36,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "purex-waste-3",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/waste-03.png",
     icon_size = 64,
     icon_mipmaps = 4,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas

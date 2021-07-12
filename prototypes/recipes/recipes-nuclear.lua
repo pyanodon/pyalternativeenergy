@@ -145,7 +145,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-washing-3",
-    category = "pan",
+    category = "compressor",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
