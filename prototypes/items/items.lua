@@ -306,7 +306,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "americium-oxide",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/Americium-2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {},
@@ -318,7 +318,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "curium-oxide",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/curium-oxide.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {},
