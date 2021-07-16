@@ -8,8 +8,9 @@
   "homepage": "",
   "description": "contains POWER",
   "dependencies": [
-    "stdlib",
-    "pyalternativeenergygraphics"
+    "pyalienlife >= 1.12.5",
+    "pyhightech >= 1.7.7",
+    "~ pyalternativeenergygraphics"
   ],
   "package": {
     "ignore": [],

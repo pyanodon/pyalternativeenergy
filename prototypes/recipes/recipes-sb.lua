@@ -247,7 +247,7 @@ RECIPE {
         {type = "fluid", name = "kerosene", amount = 50},
     },
     results = {
-        {type = "fluid", name = "dirty-water", amount = 100},
+        {type = "fluid", name = "dirty-water-heavy", amount = 100},
         {type = "fluid", name = "sb-low-conc", amount = 50},
     },
     main_product = "sb-low-conc",
@@ -319,7 +319,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "sb-final-conc", amount = 100},
-        {type = "fluid", name = "dirty-water", amount = 100},
+        {type = "fluid", name = "dirty-water-heavy", amount = 100},
     },
     main_product = "sb-final-conc",
 }:add_unlock("antimony-mk04")
@@ -336,7 +336,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "sb-conc", amount = 100},
-        {type = "fluid", name = "dirty-water", amount = 100},
+        {type = "fluid", name = "dirty-water-heavy", amount = 100},
     },
     main_product = "sb-conc",
 }:add_unlock("antimony-mk04")
