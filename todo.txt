@@ -4,7 +4,9 @@ MOD IN GENERAL
  - Write the rest of tech tree
  - Check for deadlocks
  - Investigate if its possible to use the same resource for two differents outputs (coalbed gas and kerogen).
+        - sort of. items only. you can have a item and a fluid as results. a drill can remove the item without the fluid but you cant get the fluid without the solid and that cant be gotten out at all and it jams. only way for a drill to have multiple results is for them to be items. - KING
  - Investigate if its possible to put a sattelice in space to send microwaves to the ground receptor.
+        - would need to do some script work to adjust the energy output as the satelites are sent up. unless you want to do something more interesting that i have an idea for. - KING
  - Check why the working animations on Numals just doesnt appears.
  - Change the turbines to work with steam in different temps and efficiency
  - Move py-turbine from fusion energy to pyAE steam turbine mk01
@@ -27,4 +29,3 @@ CODING:
 - Make all the thermo solar buildings working as intended
 - Make the aerials move around and back to base to "deposit" energy in the grid
 - Make tidal powerplant and Numal farm works on shore
-
