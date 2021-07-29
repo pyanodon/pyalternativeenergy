@@ -1,10 +1,10 @@
 TECHNOLOGY {
     type = "technology",
     name = "nuclear-power",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/nuclear-power.png",
+    icon_size = 128,
+    icon = "__pyalternativeenergygraphics__/graphics/technology/nuclear-mk01.png",
     effects = {},
-    prerequisites = {"uranium-mk01"},
+    prerequisites = {"uranium-mk01","thermal-mk01"},
     unit =
     {
       ingredients =
