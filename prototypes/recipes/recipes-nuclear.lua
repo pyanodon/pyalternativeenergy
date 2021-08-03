@@ -562,3 +562,6 @@ RECIPE {
 
 --weapons grade is pu-239. the long the reactor is run the more not weapons grade plutonium is mixed in.
 --pu-238 is used for rtgs
+
+--spent fuel plutonium isotope breakdown
+--53% Pu-239, 25% Pu-240, 15% Pu-241, 5% Pu-242 and 2% of Pu-238
