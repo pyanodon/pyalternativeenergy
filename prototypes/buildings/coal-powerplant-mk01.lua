@@ -47,6 +47,13 @@ ENTITY {
       type = "burner",
       fuel_category = "chemical",
       effectivity = 1,
+      light_flicker =
+      {
+        minimum_intensity = 0,
+        maximum_intensity = 0,
+        light_intensity_to_size_coefficient = 0,
+        color = {0,0,0},
+      },
       fuel_inventory_size = 1,
       emissions_per_minute = 12,
       smoke =

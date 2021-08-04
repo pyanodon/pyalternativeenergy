@@ -14,6 +14,7 @@ require("prototypes.technologies.antimony")
 require("prototypes.technologies.thermal")
 require("prototypes.technologies.thorium")
 require("prototypes.technologies.coalplant")
+require("prototypes.technologies.oilplant")
 require("prototypes.technologies.gd")
 require("prototypes/technologies/nuclear-power")
 
@@ -137,6 +138,7 @@ require("prototypes/buildings/accumulator-mk03")
 require("prototypes/buildings/tidal-mk01")
 require("prototypes/buildings/numal-mk01-test")
 require("prototypes/buildings/coal-powerplant-mk01")
+require("prototypes/buildings/oil-powerplant-mk01")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
