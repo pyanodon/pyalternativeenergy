@@ -80,6 +80,7 @@ require("prototypes/fluids/butanol")
 require("prototypes/fluids/phosphoryl-chloride")
 require("prototypes/fluids/phosphorus-tricloride")
 require("prototypes/fluids/tributyl-phosphate")
+require("prototypes/fluids/uf6")
 
 -- ))
 

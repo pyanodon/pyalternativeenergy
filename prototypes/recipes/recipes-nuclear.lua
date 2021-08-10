@@ -23,6 +23,19 @@
 --tier 4 will over lap with the 1st and secound tier of fusion energy and will be required to eventully activate matter + anti matter fusion. plus science shit.
 
 
+-- (( FAST VS THERMAL )) --
+
+--u235 does not like to fission with fast neutrons. using fast neutrons therfore requires more enriched uranium for there to be sufficant u235 fission events. more u235 means more fission products aka waste products.
+--u238 does not like thermal neutrons and will not fission most of the time. a percentage of u238 will convert to plutonium in a thermal reactor but the largest amount will remain as irradiated u238 about 96% due to limited fast neutrons before they strike the moderator.
+
+--pu239 also prefers thermal neutrons over fast neutrons for fission.
+--adding plutonium to the fuel greatly increases the rate at which the minor actinides are created
+
+--to breed u238 you need a plutonium core and fast neutrons as the neutron economy is to low with slow neutrons. requires more plutonium to make up for neutron capture cross section. breeding will stabalize the production of plutonium with that which is burned up.
+
+--need pu238 for rtg for satelite limited amount from uranium. thorium can be used as a better breeding source as it can produce only pu238 which removes the need to spend effort seperating the pu238 from higher isotopes.
+    --isotope seperation is hard and expensive. most pu238 made from neutron bombardment of neptunium-237 itself made from u236 seperated from spent fuel which thorium is a good sorce for a more pure pu238. can also be made from americium thru curium. pu239 can be bombarded to pu240 and again to pu241. pu241 decays to am241. am241 bombarded to am242 which decays to cm242. cm242 decays to pu238. during element changes it also easier seperation of the elements chemically vs isotope seperation of mixed plutonium.
+
 RECIPE {
     type = "recipe",
     name = "neutron-absorbston",
@@ -35,6 +48,24 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 50}
     },
     results = {},
+    subgroup = "py-items",
+    order = "g"
+}
+
+RECIPE {
+    type = "recipe",
+    name = "neutron-moderation",
+    category = "neutron-moderator",
+    --icon = '__base__/graphics/icons/assembling-machine-2.png',
+    --icon_size = 64,
+    enabled = false,
+    energy_required = 1,
+    ingredients = {
+        {type = "fluid", name = "neutron", amount = 100}
+    },
+    results = {
+        {type = "fluid", name = "neutron", amount = 100, temperature = 500}
+    },
     subgroup = "py-items",
     order = "g"
 }
