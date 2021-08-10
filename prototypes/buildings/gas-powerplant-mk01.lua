@@ -1,0 +1,186 @@
+RECIPE {
+    type = "recipe",
+    name = "gas-powerplant-mk01",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+        {"iron-plate", 1},
+    },
+    results = {
+        {"gas-powerplant-mk01", 1}
+    }
+}:add_unlock("gasplant-mk01")
+
+ITEM {
+    type = "item",
+    name = "gas-powerplant-mk01",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gas-powerplant-mk01.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    place_result = "gas-powerplant-mk01",
+    stack_size = 10
+}
+
+ENTITY {
+    type = "assembling-machine",
+    name = "gas-powerplant-mk01",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gas-powerplant-mk01.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.1, result = "gas-powerplant-mk01"},
+    max_health = 500,
+    corpse = "big-remnants",
+    dying_explosion = "big-explosion",
+    collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
+    selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
+    match_animation_speed_to_activity = false,
+    module_specification = {
+        module_slots = 1
+    },
+    allowed_effects = {"speed"},
+    crafting_categories = {"solar-tower"},
+    crafting_speed = 1,
+    energy_source =
+    {
+        type = "fluid",
+        emissions_per_minute = 15,
+        fluid_box =
+          {
+          base_area = 1,
+          height = 2,
+          base_level = -1,
+          pipe_connections =
+          {
+              {type = "input", position = {0, 7.0}}
+          },
+          pipe_covers = DATA.Pipes.covers(false, true, true, true),
+          pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+          production_type = "input",
+          },
+      effectivity = 1,
+      burns_fluid = true,
+      scale_fluid_usage = true,
+      light_flicker =
+      {
+        minimum_intensity = 0,
+        maximum_intensity = 0,
+        light_intensity_to_size_coefficient = 0,
+        color = {0,0,0},
+      },
+      fluid_usage_per_tick = 20,
+        smoke =
+        {
+          {
+            name = "fire-smoke-on-adding-fuel",
+            north_position = util.by_pixel(-16, -432),
+            south_position = util.by_pixel(-0, -0),
+            east_position = util.by_pixel(-0, -0),
+            west_position = util.by_pixel(-0, -0),
+            frequency = 25,
+            slow_down_factor = 0.1,
+            starting_vertical_speed = 0.16,
+            starting_frame_deviation = 10
+          },
+        }
+      },
+    energy_usage = "500kW",
+    animation = {
+        layers = {
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/gas-powerplant/raw.png",
+                width = 416,
+                height = 576,
+                frame_count = 1,
+                repeat_count = 80,
+                animation_speed = 1/3,
+                shift = util.by_pixel(0, -0),
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/gas-powerplant/mask.png",
+                width = 416,
+                height = 576,
+                frame_count = 1,
+                repeat_count = 80,
+                animation_speed = 1/3,
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                shift = util.by_pixel(0, -0),
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/gas-powerplant/rotate.png",
+                width = 96,
+                height = 128,
+                frame_count = 80,
+                line_length = 20,
+                --repeat_count = 151,
+                animation_speed = 1/3,
+                shift = util.by_pixel(0, -0),
+            },
+        }
+    },
+    working_visualisations = {
+        {
+            north_position = util.by_pixel(0, -0),
+            west_position = util.by_pixel(0, -0),
+            south_position = util.by_pixel(0, -0),
+            east_position = util.by_pixel(0, -0),
+            animation = {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/gas-powerplant/flicker.png",
+                frame_count = 80,
+                line_length = 8,
+                width = 256,
+                height = 128,
+                animation_speed = 1/3,
+                draw_as_glow = true,
+            }
+        },
+    },
+    fluid_boxes = {
+        --1
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {-3.0, 7.0}}}
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {3.0, 7.0}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {0.0, -7.0}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {3.0, -7.0}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {-3.0, -7.0}}}
+        },
+        off_when_no_fluid_recipe = false
+    },
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    working_sound = {
+        sound = {filename = "__pyalternativeenergygraphics__/sounds/gas-powerplant.ogg", volume = 0.8},
+        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/gas-powerplant.ogg", volume = 0.1},
+        apparent_volume = 0.45
+    }
+  }
