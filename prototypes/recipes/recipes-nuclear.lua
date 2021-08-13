@@ -275,7 +275,7 @@ RECIPE {
     main_product = "metallic-glass",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power")--TODO: replace metallic glass with a different process and rocket launches to get rid of the waste in space
 
 
 --plutonium washing
