@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"accumulator-mk03", 1},
     }
-}
+}:add_unlock("nano-tech")
 
 ITEM {
     type = "item",

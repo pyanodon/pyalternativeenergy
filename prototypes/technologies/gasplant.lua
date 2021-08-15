@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/gasplant-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {'thermal-mk01'},
+    prerequisites = {'nonrenewable-mk01'},
     effects = {},
     unit = {
         count = 500,
@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/gasplant-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk02','gasplant-mk01'},
+    prerequisites = {'nonrenewable-mk02','gasplant-mk01'},
     effects = {},
     unit = {
         count = 500,
@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/gasplant-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk03','gasplant-mk02'},
+    prerequisites = {'nonrenewable-mk03','gasplant-mk02'},
     effects = {},
     unit = {
         count = 500,
@@ -58,7 +58,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/gasplant-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk04','gasplant-mk03'},
+    prerequisites = {'nonrenewable-mk04','gasplant-mk03'},
     effects = {},
     unit = {
         count = 500,

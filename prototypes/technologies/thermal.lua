@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/thermal-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {'energy-1'},
+    prerequisites = {'solar-power-mk01'},
     effects = {},
     unit = {
         count = 150,
@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/thermal-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk01'},
+    prerequisites = {'thermal-mk01','solar-power-mk02'},
     effects = {},
     unit = {
         count = 150,
@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/thermal-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk02'},
+    prerequisites = {'thermal-mk02','solar-power-mk03'},
     effects = {},
     unit = {
         count = 150,
@@ -58,7 +58,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/thermal-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk03'},
+    prerequisites = {'thermal-mk03','solar-power-mk04'},
     effects = {},
     unit = {
         count = 150,

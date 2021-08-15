@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/biomassplant-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {'thermal-mk01'},
+    prerequisites = {'renewable-mk01'},
     effects = {},
     unit = {
         count = 500,
@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/biomassplant-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk02','biomassplant-mk01'},
+    prerequisites = {'renewable-mk02','biomassplant-mk01'},
     effects = {},
     unit = {
         count = 500,
@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/biomassplant-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk03','biomassplant-mk02'},
+    prerequisites = {'renewable-mk03','biomassplant-mk02'},
     effects = {},
     unit = {
         count = 500,
@@ -58,7 +58,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/biomassplant-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk04','biomassplant-mk03'},
+    prerequisites = {'renewable-mk04','biomassplant-mk03'},
     effects = {},
     unit = {
         count = 500,

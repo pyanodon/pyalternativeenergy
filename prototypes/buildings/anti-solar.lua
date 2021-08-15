@@ -2,14 +2,20 @@ RECIPE {
     type = "recipe",
     name = "anti-solar",
     energy_required = 5,
-    enabled = true,
+    enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"laser-module", 3},
+        {"processing-unit", 30},
+        {"super-steel", 35},
+        {"nbfe-alloy", 20},
+        {"graphene-roll", 30},
+        {"cobalt-nx", 10},
+        {"nano-wires", 10},
     },
     results = {
         {"anti-solar", 1}
     }
-}
+}:add_unlock("anti-solar")
 
 ITEM {
     type = "item",

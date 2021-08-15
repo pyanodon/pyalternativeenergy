@@ -14,12 +14,8 @@ MOD IN GENERAL
 
 GRAPHICS (feel free to insert any requierements here):
 
-- Make biomass powerplant
-- Make Coal powerplant
-- Make Oil powerplant
-- Make Gas powerplant
-- Make Cottonguts powerplant
-- Make Phaddai powerplant
+- Make Cottonguts powerplant (DUNNO, maybe not)
+- Make Phaddai powerplant (DUNNO, maybe not)
 - Make microwave receiver
 - Redo coalbed gas (maybe make it as a resource in map like oil sands or antimony, to restrict the area to extract it).
 
