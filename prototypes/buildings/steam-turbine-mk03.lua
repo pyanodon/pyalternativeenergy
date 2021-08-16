@@ -9,7 +9,7 @@ RECIPE {
     results = {
         {"steam-turbine-mk03", 1}
     }
-}
+}:add_unlock("nonrenewable-mk03")
 
 ITEM {
     type = "item",

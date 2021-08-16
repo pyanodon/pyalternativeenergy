@@ -2,10 +2,10 @@ RECIPE{
     type = 'recipe',
     name = 'solar-tower-panel',
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {{'iron-plate', 1}},
     results = {{'solar-tower-panel', 1}}
-}
+}:add_unlock("thermal-mk04")
 
 ITEM{
     type = 'item',

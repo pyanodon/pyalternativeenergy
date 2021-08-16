@@ -2,10 +2,10 @@ RECIPE {
   type = 'recipe',
   name = 'nexelit-substation',
   energy_required = 0.5,
-  enabled = true,
+  enabled = false,
   ingredients = {{'pipe', 20}},
   results = {{'nexelit-substation', 1}}
-}
+}:add_unlock("electric-energy-distribution-2")
 
 ITEM {
   type = 'item',

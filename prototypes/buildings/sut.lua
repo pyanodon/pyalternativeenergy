@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "sut",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"sut", 1}
     }
-}
+}:add_unlock("thermal-mk03")
 
 ITEM {
     type = "item",

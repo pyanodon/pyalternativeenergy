@@ -2,19 +2,19 @@ RECIPE {
     type = "recipe",
     name = "Shit-mk01",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"Shit-mk01", 1}
     }
-}
+}:add_unlock("thermal-mk01")
 
 ITEM {
     type = "item",
     name = "Shit-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk03.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk03",
@@ -26,7 +26,7 @@ ITEM {
 ENTITY {
     type = "furnace",
     name = "Shit-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk03.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "Shit-mk01"},

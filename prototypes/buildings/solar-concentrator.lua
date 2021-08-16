@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "solar-concentrator",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"solar-concentrator", 1}
     }
-}
+}:add_unlock("thermal-mk02")
 
 ITEM {
     type = "item",

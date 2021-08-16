@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "lightning-catcher",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"lightning-catcher", 1}
     }
-}
+}:add_unlock("lightning-catcher")
 
 ITEM {
     type = "item",

@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "hawt-turbine-mk04",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"pipe", 20},
     },
     results = {
         {"hawt-turbine-mk04", 1}
     }
-}
+}:add_unlock("wind-mk04")
 
 ITEM {
     type = "item",

@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "ree-mining-drill-mk01",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"electric-mining-drill", 1},
         {"electronic-circuit", 10},
@@ -12,7 +12,7 @@ RECIPE {
     results = {
         {"ree-mining-drill-mk01", 1}
     }
-}
+}:add_unlock("machines-mk01")
 
 ITEM {
     type = "item",

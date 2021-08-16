@@ -3,7 +3,7 @@
     type = "recipe",
     name = "geothermal-plant-mk01",
     energy_required = 15,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"electric-mining-drill", 4},
         {"steel-plate", 30},
@@ -13,7 +13,7 @@
     results = {
         {"geothermal-plant-mk01", 1}
     }
-}--:add_unlock("oil-machines-mk01")
+}:add_unlock("geothermal-mk01")
 
 ITEM {
     type = "item",

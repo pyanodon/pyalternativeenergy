@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "mdh",
     energy_required = 5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"mdh", 1}
     }
-}
+}:add_unlock("energy-3")
 
 ITEM {
     type = "item",

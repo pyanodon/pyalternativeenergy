@@ -1,13 +1,13 @@
 TECHNOLOGY {
     type = "technology",
-    name = "thermal-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/technology/thermal-mk01.png",
+    name = "wind-mk01",
+    icon = "__pyalternativeenergygraphics__/graphics/technology/wind-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {'solar-power-mk01'},
+    prerequisites = {'renewable-mk01'},
     effects = {},
     unit = {
-        count = 300,
+        count = 150,
         ingredients = {
             {"automation-science-pack", 1},
         },
@@ -17,14 +17,14 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = 'technology',
-    name = 'thermal-mk02',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/thermal-mk02.png',
+    name = 'wind-mk02',
+    icon = '__pyalternativeenergygraphics__/graphics/technology/wind-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk01','solar-power-mk02'},
+    prerequisites = {'wind-mk01','renewable-mk02'},
     effects = {},
     unit = {
-        count = 400,
+        count = 250,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1}
@@ -35,14 +35,14 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = 'technology',
-    name = 'thermal-mk03',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/thermal-mk03.png',
+    name = 'wind-mk03',
+    icon = '__pyalternativeenergygraphics__/graphics/technology/wind-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk02','solar-power-mk03'},
+    prerequisites = {'wind-mk02','renewable-mk03'},
     effects = {},
     unit = {
-        count = 500,
+        count = 350,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
@@ -54,20 +54,19 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = 'technology',
-    name = 'thermal-mk04',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/thermal-mk04.png',
+    name = 'wind-mk04',
+    icon = '__pyalternativeenergygraphics__/graphics/technology/wind-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk03'},
+    prerequisites = {'wind-mk03','renewable-mk04'},
     effects = {},
     unit = {
-        count = 600,
+        count = 450,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
             {'chemical-science-pack', 1},
-            {'production-science-pack', 1},
-            {'utility-science-pack', 1},
+            {'production-science-pack', 1}
         },
         time = 60
     }

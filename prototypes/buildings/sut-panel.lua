@@ -2,10 +2,10 @@ RECIPE{
     type = 'recipe',
     name = 'sut-panel',
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {{'iron-plate', 1}},
     results = {{'sut-panel', 1}}
-}
+}:add_unlock("thermal-mk03")
 
 ITEM{
     type = 'item',
