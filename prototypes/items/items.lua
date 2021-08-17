@@ -643,3 +643,58 @@ ITEM {
     order = "aae",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "eg-si",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/eg-si.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "polycrystalline-slab",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-slab.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "polycrystalline-plate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-plate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "crucible",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/crucible.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "diamond-wire",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/diamond-wire.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
