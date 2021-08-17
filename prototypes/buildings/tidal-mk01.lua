@@ -2,10 +2,10 @@ RECIPE {
     type = 'recipe',
     name = 'tidal-mk01',
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {{'pipe', 20}},
     results = {{'tidal-mk01', 1}}
-}
+}:add_unlock("tidal-mk01")
 
 ITEM {
     type = 'item',

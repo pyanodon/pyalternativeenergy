@@ -1,11 +1,23 @@
 RECIPE {
     type = 'recipe',
     name = 'solar-panel-mk01',
-    energy_required = 0.5,
-    enabled = true,
-    ingredients = {{'pipe', 20}},
-    results = {{'solar-panel-mk01', 1}}
-}
+    energy_required = 10,
+    enabled = false,
+    category = "crafting-with-fluid",
+    ingredients = {
+        {'aluminium-plate', 5},
+        {'polycrystalline-cell', 12},
+        {'anti-reflex-glass', 1},
+        {type = "fluid", name = "etching", amount = 50},
+        {'electronic-circuit', 5},
+        {'copper-cable', 10},
+        {'small-parts-01', 10},
+        {'melamine', 10},
+    },
+    results = {
+        {'solar-panel-mk01', 1}
+    }
+}:add_unlock("solar-mk01")
 
 ITEM {
     type = 'item',
@@ -63,5 +75,5 @@ ENTITY {
           }
         },
         vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-        production = "60kW"
+        production = "1MW"
 }

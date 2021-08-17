@@ -643,3 +643,113 @@ ITEM {
     order = "aae",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "eg-si",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/eg-si.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "polycrystalline-slab",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-slab.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "polycrystalline-plate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-plate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "crucible",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/crucible.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "diamond-wire",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/diamond-wire.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "anti-reflex-glass",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/anti-reflex-glass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "monocrystalline-cell",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-cell.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "polycrystalline-cell",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-cell.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "alag-alloy",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/alag-alloy.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "passivation-layer",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/passivation-layer.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}

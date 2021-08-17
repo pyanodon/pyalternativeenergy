@@ -96,3 +96,108 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("thorium")
+
+RECIPE {
+    type = "recipe",
+    name = "diamond-wire",
+    category = "hpf",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "stainless-steel", amount = 5},
+        {type = "item", name = "diamond", amount = 5},
+        {type = "item", name = "copper-plate", amount = 2},
+        {type = "item", name = "zinc-plate", amount = 3},
+        {type = "item", name = "sic", amount = 4},
+        {type = "fluid", name = "vacuum", amount = 50},
+    },
+    results = {
+        {type = "item", name = "diamond-wire", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("diamond-mining")
+
+RECIPE {
+    type = "recipe",
+    name = "anti-reflex-glass",
+    category = "glassworks",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "sb-oxide", amount = 1},
+        {type = "fluid", name = "molten-glass", amount = 50},
+    },
+    results = {
+        {type = "item", name = "anti-reflex-glass", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "agal-alloy",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "silver-plate", amount = 5},
+        {type = "item", name = "aluminium-plate", amount = 5},
+    },
+    results = {
+        {type = "item", name = "alag-alloy", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "agal-alloy-2",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "molten-silver", amount = 50},
+        {type = "fluid", name = "molten-aluminium", amount = 50},
+    },
+    results = {
+        {type = "item", name = "alag-alloy", amount = 10},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "passivation-layer",
+    category = "crafting",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "alag-alloy", amount = 1},
+    },
+    results = {
+        {type = "item", name = "passivation-layer", amount = 4},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "polycrystalline-cell",
+    category = "electronic",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "polycrystalline-plate", amount = 2},
+        {type = "item", name = "passivation-layer", amount = 1},
+        {type = "item", name = "silver-plate", amount = 1},
+        {type = "item", name = "nickel-plate", amount = 1},
+        {type = "item", name = "copper-plate", amount = 1},
+        {type = "item", name = "ore-quartz", amount = 3},
+        {type = "item", name = "boron-trioxide", amount = 2},
+        {type = "fluid", name = "phosphine-gas", amount = 30},
+    },
+    results = {
+        {type = "item", name = "polycrystalline-cell", amount = 2},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk01")

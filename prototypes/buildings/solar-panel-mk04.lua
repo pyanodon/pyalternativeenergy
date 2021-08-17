@@ -5,7 +5,7 @@ RECIPE {
     enabled = true,
     ingredients = {{'pipe', 20}},
     results = {{'solar-panel-mk04', 1}}
-}
+}:add_unlock("solar-mk04")
 
 ITEM {
     type = 'item',

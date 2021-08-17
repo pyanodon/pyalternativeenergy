@@ -1,5 +1,9 @@
 local fun = require("__pyrawores__/prototypes/functions/functions")
 
+--RECIPE MOVING--
+RECIPE("eaf-mk01"):remove_unlock('aluminium-mk01'):add_unlock('machines-mk01')
+
+
 --removing old nuclear reactor fuel cells as they wont do anything now.
 RECIPE("uranium-fuel-cell"):remove_unlock('uranium-processing')
 RECIPE("fuelrod-mk01"):remove_unlock('fuel-production')

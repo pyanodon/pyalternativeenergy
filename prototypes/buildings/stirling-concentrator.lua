@@ -2,10 +2,10 @@ RECIPE{
     type = 'recipe',
     name = 'stirling-concentrator',
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {{'pipe', 20}},
     results = {{'stirling-concentrator', 1}}
-}
+}:add_unlock("thermal-mk02")
 
 ITEM{
     type = 'item',

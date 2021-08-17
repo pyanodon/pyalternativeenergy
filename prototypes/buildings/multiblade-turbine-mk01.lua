@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "multiblade-turbine-mk01",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"pipe", 20},
     },
     results = {
         {"multiblade-turbine-mk01", 1}
     }
-}
+}:add_unlock("renewable-mk02")
 
 ITEM {
     type = "item",

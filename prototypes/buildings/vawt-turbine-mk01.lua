@@ -2,10 +2,10 @@ RECIPE{
     type = 'recipe',
     name = 'vawt-turbine-mk01',
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {{'pipe', 20}},
     results = {{'vawt-turbine-mk01', 1}}
-}
+}:add_unlock("wind-mk01")
 
 ITEM{
     type = 'item',

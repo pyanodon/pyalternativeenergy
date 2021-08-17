@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "steam-turbine-mk02",
     energy_required = 5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"steam-turbine-mk02", 1}
     }
-}
+}:add_unlock("nonrenewable-mk02")
 
 ITEM {
     type = "item",

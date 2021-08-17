@@ -7,7 +7,7 @@ TECHNOLOGY {
     prerequisites = {'solar-power-mk01'},
     effects = {},
     unit = {
-        count = 150,
+        count = 300,
         ingredients = {
             {"automation-science-pack", 1},
         },
@@ -24,7 +24,7 @@ TECHNOLOGY {
     prerequisites = {'thermal-mk01','solar-power-mk02'},
     effects = {},
     unit = {
-        count = 150,
+        count = 400,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1}
@@ -42,7 +42,7 @@ TECHNOLOGY {
     prerequisites = {'thermal-mk02','solar-power-mk03'},
     effects = {},
     unit = {
-        count = 150,
+        count = 500,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
@@ -58,15 +58,16 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/thermal-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thermal-mk03','solar-power-mk04'},
+    prerequisites = {'thermal-mk03'},
     effects = {},
     unit = {
-        count = 150,
+        count = 600,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
             {'chemical-science-pack', 1},
-            {'production-science-pack', 1}
+            {'production-science-pack', 1},
+            {'utility-science-pack', 1},
         },
         time = 60
     }
