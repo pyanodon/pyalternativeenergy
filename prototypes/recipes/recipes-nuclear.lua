@@ -95,6 +95,9 @@ steb 6b: Pu-sol3 + heat -> PuO2 + offgas
 
 --varsol == kerosene/acetone
 
+--((Waste 1))--
+--mostly u238 from light enrichment
+
 RECIPE {
     type = "recipe",
     name = "lithium-salt-fuel-seperation",
@@ -126,7 +129,7 @@ RECIPE {
         {type = "fluid", name = "sulfuric-acid", amount = 50}
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-1", amount = 50}
+        {type = "fluid", name = "purex-concentrate-1", amount = 50, temperature = 50}
     },
     subgroup = "py-nuclear-waste",
     order = "b"
@@ -140,12 +143,12 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-1", amount = 50},
+        {type = "fluid", name = "purex-concentrate-1", amount = 50, max_temperature = 99},
         {type = "fluid", name = "tributyl-phosphate", amount = 100},
         {type = "fluid", name = "kerosene", amount = 100},
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-2", amount = 50},
+        {type = "fluid", name = "purex-concentrate-2", amount = 50, temperature = 50},
         {type = "fluid", name = "purex-waste-1", amount = 50},
     },
     main_product = "purex-concentrate-2",
@@ -160,12 +163,12 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-2", amount = 50},
+        {type = "fluid", name = "purex-concentrate-2", amount = 50, max_temperature = 99},
         {type = "fluid", name = "acetone", amount = 100},
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-3", amount = 50},
-        {type = "fluid", name = "purex-concentrate-4", amount = 50},
+        {type = "fluid", name = "purex-concentrate-3", amount = 50, temperature = 50},
+        {type = "fluid", name = "purex-concentrate-4", amount = 50, temperature = 50},
         {type = "fluid", name = "purex-waste-1", amount = 50},
     },
     main_product = "purex-concentrate-3",
@@ -180,12 +183,12 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-4", amount = 50},
+        {type = "fluid", name = "purex-concentrate-4", amount = 50, max_temperature = 99},
         {type = "fluid", name = "naphtha", amount = 100},
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-5", amount = 50},
-        {type = "fluid", name = "purex-pu-concentrate-2", amount = 50},
+        {type = "fluid", name = "purex-concentrate-5", amount = 50, temperature = 50},
+        {type = "fluid", name = "purex-pu-concentrate-2", amount = 50, temperature = 50},
         {type = "fluid", name = "purex-waste-1", amount = 50},
     },
     main_product = "purex-concentrate-5",
@@ -200,17 +203,139 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-3", amount = 50},
+        {type = "fluid", name = "purex-concentrate-3", amount = 50, max_temperature = 99},
     },
     results = {
-        {type = "fluid", name = "purex-u-concentrate-1", amount = 50},
-        {type = "fluid", name = "purex-concentrate-4", amount = 25},
+        {type = "fluid", name = "purex-u-concentrate-1", amount = 50, temperature = 50},
+        {type = "fluid", name = "purex-concentrate-4", amount = 25, temperature = 50},
         {type = "fluid", name = "purex-waste-1", amount = 50},
     },
     main_product = "purex-u-concentrate-1",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power")
+
+--((waste 2))--
+--waste from medium enrichemnt
+
+RECIPE {
+    type = "recipe",
+    name = "lithium-salt-fuel-seperation-2",
+    category = "fluid-separator",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "fluid", name = "reactor-waste-2", amount = 100},
+        {type = "fluid", name = "lithium-salt", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "reactor-salt", amount = 50}, --need to find out what molten salt we are using
+        {type = "item", name = "high-energy-waste-2", amount = 10},
+        {type = "item", name = "lithium", amount = 10}
+    },
+    main_product = "high-energy-waste-2",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power")
+
+RECIPE {
+    type = "recipe",
+    name = "waste-uranium-disolving-2",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "item", name = "high-energy-waste-2", amount = 5},
+        {type = "fluid", name = "sulfuric-acid", amount = 50}
+    },
+    results = {
+        {type = "fluid", name = "purex-concentrate-1", amount = 50, temperature = 100}
+    },
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power")
+
+
+RECIPE {
+    type = "recipe",
+    name = "purex-washing-1-2",
+    category = "hydroclassifier",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "fluid", name = "purex-concentrate-1", amount = 50, minimum_temperature = 100, max_temperature = 199},
+        {type = "fluid", name = "tributyl-phosphate", amount = 100},
+        {type = "fluid", name = "kerosene", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "purex-concentrate-2", amount = 50, temperature = 100},
+        {type = "fluid", name = "purex-waste-1", amount = 50},
+    },
+    main_product = "purex-concentrate-2",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power")
+
+RECIPE {
+    type = "recipe",
+    name = "purex-washing-2-2",
+    category = "fluid-separator",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "fluid", name = "purex-concentrate-2", amount = 50, minimum_temperature = 100, max_temperature = 199},
+        {type = "fluid", name = "acetone", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "purex-concentrate-3", amount = 50, temperature = 100},
+        {type = "fluid", name = "purex-concentrate-4", amount = 50, temperature = 100},
+        {type = "fluid", name = "purex-waste-1", amount = 50},
+    },
+    main_product = "purex-concentrate-3",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power")
+
+RECIPE {
+    type = "recipe",
+    name = "purex-washing-3-2",
+    category = "compressor",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "fluid", name = "purex-concentrate-4", amount = 50, minimum_temperature = 100, max_temperature = 199},
+        {type = "fluid", name = "naphtha", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "purex-concentrate-5", amount = 50, temperature = 100},
+        {type = "fluid", name = "purex-pu-concentrate-2", amount = 50, temperature = 100},
+        {type = "fluid", name = "purex-waste-1", amount = 50},
+    },
+    main_product = "purex-concentrate-5",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power")
+
+RECIPE {
+    type = "recipe",
+    name = "purex-washing-4-2",
+    category = "fluid-separator",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "fluid", name = "purex-concentrate-3", amount = 50, minimum_temperature = 100, max_temperature = 199},
+    },
+    results = {
+        {type = "fluid", name = "purex-u-concentrate-1", amount = 50, temperature = 100},
+        {type = "fluid", name = "purex-concentrate-4", amount = 25, temperature = 100},
+        {type = "fluid", name = "purex-waste-1", amount = 50},
+    },
+    main_product = "purex-u-concentrate-1",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power")
+
+
 
 --purex waste
 
@@ -544,6 +669,24 @@ RECIPE {
     order = "b"
 }:add_unlock("nuclear-power")--lithium is a reducing agent and therefore should be an oxide
 
+RECIPE {
+    type = "recipe",
+    name = "sb-chloride-to-ore",
+    category = "hpf",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "item", name = "sb-chloride", amount = 10},
+        {type = "fluid", name = "water", amount = 200}
+    },
+    results = {
+        {type = "item", name = "antimonium-ore", amount = 4},
+        {type = "fluid", name = "hydrogen-chloride", amount = 50}
+    },
+    main_product = "antimonium-ore",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power")
 
 --Uranium transmutaion
 
