@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/solar-power-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'solar-power-mk01','renewable-mk01'},
+    prerequisites = {'solar-power-mk01','renewable-mk02','eva'},
     effects = {},
     unit = {
         count = 250,

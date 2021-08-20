@@ -753,3 +753,25 @@ ITEM {
     order = "aae",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "quartz-crucible",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/quartz-crucible.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "eva",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/eva.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
