@@ -25,3 +25,8 @@ CODING:
 - Make all the thermo solar buildings working as intended
 - Make the aerials move around and back to base to "deposit" energy in the grid
 - Make tidal powerplant and Numal farm works on shore
+
+FYI:
+
+- there is no more "dirty-water". there is dirty-water-light (mud) and dirty-water-heavy(normal tailings)
+- mukmoux lard is called mukmoux-fat

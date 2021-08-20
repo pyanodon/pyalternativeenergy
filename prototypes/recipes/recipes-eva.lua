@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "mukmoux-lard", amount = 5},
+        {type = "item", name = "mukmoux-fat", amount = 5}, --Py its called mukmoux fat
         {type = "item", name = "coke", amount = 5},
         {type = "fluid", name = "water", amount = 500},
     },
@@ -62,7 +62,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "vinyl-acetate", amount = 50},
-        {type = "fluid", name = "dirty-water", amount = 100},
+        {type = "fluid", name = "dirty-water-heavy", amount = 100},
         {type = "fluid", name = "carbon-dioxide", amount = 50},
     },
     main_product = "vinyl-acetate",
