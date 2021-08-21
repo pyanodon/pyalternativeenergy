@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "mukmoux-fat", amount = 5},
+        {type = "item", name = "mukmoux-fat", amount = 5}, --Py its called mukmoux fat
         {type = "item", name = "coke", amount = 5},
         {type = "fluid", name = "water", amount = 500},
     },
