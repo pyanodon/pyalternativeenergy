@@ -201,3 +201,26 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("solar-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "monocrystalline-cell",
+    category = "electronic",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "monocrystalline-plate", amount = 2},
+        {type = "item", name = "passivation-layer", amount = 1},
+        {type = "item", name = "silver-plate", amount = 1},
+        {type = "item", name = "nickel-plate", amount = 1},
+        {type = "item", name = "copper-plate", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 3},
+        {type = "item", name = "boron", amount = 1},
+        {type = "fluid", name = "phosphine-gas", amount = 30},
+        {type = "item", name = "sic", amount = 3},
+    },
+    results = {
+        {type = "item", name = "monocrystalline-cell", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk02")

@@ -10,6 +10,7 @@ TECHNOLOGY {
         count = 150,
         ingredients = {
             {"automation-science-pack", 1},
+            {'logistic-science-pack', 1},
         },
         time = 45
     }
@@ -24,10 +25,11 @@ TECHNOLOGY {
     prerequisites = {'machines-mk02','silicon-mk01'},
     effects = {},
     unit = {
-        count = 150,
+        count = 200,
         ingredients = {
             {'automation-science-pack', 1},
-            {'logistic-science-pack', 1}
+            {'logistic-science-pack', 1},
+            {'chemical-science-pack', 1},
         },
         time = 45
     }
@@ -42,11 +44,12 @@ TECHNOLOGY {
     prerequisites = {'machines-mk03','silicon-mk02'},
     effects = {},
     unit = {
-        count = 150,
+        count = 300,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
-            {'chemical-science-pack', 1}
+            {'chemical-science-pack', 1},
+            {'production-science-pack', 1},
         },
         time = 60
     }
@@ -61,12 +64,13 @@ TECHNOLOGY {
     prerequisites = {'machines-mk04','silicon-mk03'},
     effects = {},
     unit = {
-        count = 150,
+        count = 400,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
             {'chemical-science-pack', 1},
-            {'production-science-pack', 1}
+            {'production-science-pack', 1},
+            {'utility-science-pack', 1},
         },
         time = 60
     }

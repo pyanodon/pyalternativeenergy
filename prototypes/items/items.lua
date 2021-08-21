@@ -712,17 +712,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "monocrystalline-cell",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-cell.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
-    stack_size = 500
-}
-
-ITEM {
-    type = "item",
     name = "polycrystalline-cell",
     icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-cell.png",
 	icon_size = 64,
@@ -769,6 +758,39 @@ ITEM {
     type = "item",
     name = "eva",
     icon = "__pyalternativeenergygraphics__/graphics/icons/eva.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "monocrystalline-slab",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-slab.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "monocrystalline-plate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-plate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "monocrystalline-cell",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-cell.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",

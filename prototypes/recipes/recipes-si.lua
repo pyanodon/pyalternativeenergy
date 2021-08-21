@@ -32,7 +32,7 @@ RECIPE {
         {type = "item", name = "crucible", amount = 2},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk02")
+}:add_unlock("silicon-mk01")
 
 RECIPE {
     type = "recipe",
@@ -49,7 +49,7 @@ RECIPE {
         {type = "item", name = "polycrystalline-slab", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk02")
+}:add_unlock("silicon-mk01")
 
 RECIPE {
     type = "recipe",
@@ -66,4 +66,87 @@ RECIPE {
         {type = "item", name = "polycrystalline-plate", amount = 5},
     },
     --main_product = "eg-si",
+}:add_unlock("silicon-mk01")
+
+--MONO
+
+RECIPE {
+    type = "recipe",
+    name = "quartz-crucible",
+    category = "hpf",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "sand-casting", amount = 2},
+        {type = "item", name = "ore-quartz", amount = 10},
+    },
+    results = {
+        {type = "item", name = "quartz-crucible", amount = 1},
+    },
+    --main_product = "eg-si",
 }:add_unlock("silicon-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "monocrystalline-slab",
+    category = "eaf",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "eg-si", amount = 3},
+        {type = "item", name = "quartz-crucible", amount = 1},
+    },
+    results = {
+        {type = "item", name = "monocrystalline-slab", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("silicon-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "monocrystalline-plate",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "monocrystalline-slab", amount = 1},
+        {type = "fluid", name = "wax", amount = 30},
+        {type = "item", name = "diamond-wire", amount = 1},
+    },
+    results = {
+        {type = "item", name = "monocrystalline-plate", amount = 5},
+    },
+    --main_product = "eg-si",
+}:add_unlock("silicon-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "silicon-wafer-2",
+    category = "electronic",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "monocrystalline-plate", amount = 1},
+        {type = "item", name = "aramid", amount = 1},
+    },
+    results = {
+        {type = "item", name = "silicon-wafer", amount = 5},
+    },
+    --main_product = "eg-si",
+}:add_unlock("basic-electronics")
+
+RECIPE {
+    type = "recipe",
+    name = "silicon-wafer-3",
+    category = "electronic",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "polycrystalline-plate", amount = 1},
+        {type = "item", name = "aramid", amount = 1},
+    },
+    results = {
+        {type = "item", name = "silicon-wafer", amount = 3},
+    },
+    --main_product = "eg-si",
+}:add_unlock("basic-electronics")

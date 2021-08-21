@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/solar-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {'solar-power-mk01'},
+    prerequisites = {'solar-power-mk01',"silicon-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/solar-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'solar-mk01','solar-power-mk02'},
+    prerequisites = {'solar-mk01','solar-power-mk02',"silicon-mk02"},
     effects = {},
     unit = {
         count = 250,
