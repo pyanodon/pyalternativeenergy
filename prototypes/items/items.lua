@@ -797,3 +797,14 @@ ITEM {
     order = "aae",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "battery-mk01",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}

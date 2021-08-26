@@ -224,3 +224,23 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("solar-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "battery-mk01",
+    category = "crafting-with-fluid", --change for future chemical plant
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "glass", amount = 1},
+        {type = "item", name = "melamine", amount = 2},
+        {type = "item", name = "bolts", amount = 3},
+        {type = "item", name = "graphite", amount = 3},
+        {type = "item", name = "zinc-plate", amount = 3},
+        {type = "fluid", name = "cyanic-acid", amount = 30},
+    },
+    results = {
+        {type = "item", name = "battery-mk01", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("vacuum-tube-electronics")
