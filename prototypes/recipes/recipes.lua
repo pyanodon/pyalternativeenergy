@@ -243,20 +243,115 @@ RECIPE {
         {type = "item", name = "battery-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("vacuum-tube-electronics")
+}:add_unlock("battery-mk01")
 
 RECIPE {
-    name = "CuZn-battery",
+    type = "recipe",
+    name = "battery-mk00",
     category = "crafting-with-fluid",
     enabled = true,
     energy_required = 10,
     ingredients = {
         {type = "item", name = "copper-plate", amount = 10},
         {type = "item", name = "zinc-plate", amount = 10},
-        {type = "fluid", name = "saline-water", amount = 250},
+        {type = "fluid", name = "water-saline", amount = 250},
     },
     results = {
-        {type = "item", name = "battery-mk01", amount = 1},
+        {type = "item", name = "battery-mk00", amount = 1},
     },
     --main_product = "eg-si",
 }
+
+RECIPE {
+    type = "recipe",
+    name = "flo",
+    category = "mixer", --change for future chemical plant
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "flask", amount = 1},
+        {type = "item", name = "chromium", amount = 2},
+        {type = "fluid", name = "perylene", amount = 100},
+        {type = "fluid", name = "cumene", amount = 50},
+    },
+    results = {
+        {type = "item", name = "flo", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("battery-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "dbr",
+    category = "nmf",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "silica-powder", amount = 5},
+        {type = "item", name = "1d-photonic-crystal", amount = 6},
+        {type = "fluid", name = "niobium-complex", amount = 100},
+        {type = "fluid", name = "vacuum", amount = 200},
+    },
+    results = {
+        {type = "item", name = "dbr", amount = 2},
+    },
+    --main_product = "eg-si",
+}:add_unlock("battery-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "1d-photonic-crystal",
+    category = "nano",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "photophore", amount = 5},
+        {type = "item", name = "yag-laser-module", amount = 1},
+        {type = "item", name = "graphene-roll", amount = 4},
+        {type = "item", name = "silver-plate", amount = 5},
+        {type = "fluid", name = "vacuum", amount = 200},
+    },
+    results = {
+        {type = "item", name = "1d-photonic-crystal", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("battery-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "micro-cavity-core",
+    category = "crafting-with-fluid",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "super-alloy", amount = 6},
+        {type = "item", name = "biopolymer", amount = 4},
+        {type = "item", name = "flo", amount = 3},
+        {type = "item", name = "nexelit-matrix", amount = 5},
+        {type = "item", name = "nxsb-alloy", amount = 3},
+        {type = "item", name = "small-parts-03", amount = 10},
+        {type = "fluid", name = "deuterium", amount = 30},
+        {type = "item", name = "sc-wire", amount = 5},
+        {type = "item", name = "carbon-nanotube", amount = 3},
+    },
+    results = {
+        {type = "item", name = "micro-cavity-core", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("battery-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "nxsb-alloy",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "sb-oxide", amount = 10},
+        {type = "item", name = "nexelit-plate", amount = 10},
+    },
+    results = {
+        {type = "item", name = "nxsb-alloy", amount = 3},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("antimony-mk01")

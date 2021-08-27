@@ -808,3 +808,80 @@ ITEM {
     order = "aae",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "battery-mk00",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk00.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "flo",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/flo.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "dbr",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/dbr.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "micro-cavity-core",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/micro-cavity-core.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "quantum-battery",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/quantum-battery.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "1d-photonic-crystal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/1d-photonic-crystal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "nxsb-alloy",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nxsb-alloy.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
