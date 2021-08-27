@@ -885,3 +885,36 @@ ITEM {
     order = "aae",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "fenxsb-alloy",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/fenxsb.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "vitreloy",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/vitreloy.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "intermetallics",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/intermetallics.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}

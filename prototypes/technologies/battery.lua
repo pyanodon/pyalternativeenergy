@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/battery-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'machines-mk02','battery-mk01'},
+    prerequisites = {'basic-electronics','battery-mk01'},
     effects = {},
     unit = {
         count = 200,
@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/battery-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'machines-mk03','battery-mk02'},
+    prerequisites = {'genetic-design','battery-mk02'},
     effects = {},
     unit = {
         count = 300,
@@ -58,7 +58,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/battery-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'machines-mk04','battery-mk03'},
+    prerequisites = {'advanced-electronics','battery-mk03'},
     effects = {},
     unit = {
         count = 400,

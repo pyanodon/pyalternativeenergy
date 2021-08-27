@@ -272,7 +272,7 @@ RECIPE {
         {type = "item", name = "flask", amount = 1},
         {type = "item", name = "chromium", amount = 2},
         {type = "fluid", name = "perylene", amount = 100},
-        {type = "fluid", name = "cumene", amount = 50},
+        {type = "fluid", name = "cumene", amount = 100},
     },
     results = {
         {type = "item", name = "flo", amount = 1},
@@ -355,3 +355,26 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("antimony-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "quantum-battery",
+    category = "nano",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "super-alloy", amount = 5},
+        {type = "item", name = "biopolymer", amount = 5},
+        {type = "item", name = "cooling-system", amount = 1},
+        {type = "item", name = "supercapacitor", amount = 1},
+        {type = "item", name = "science-coating", amount = 4},
+        {type = "item", name = "diamagnetic-material", amount = 1},
+        {type = "item", name = "nano-wires", amount = 4},
+        {type = "item", name = "dbr", amount = 10},
+        {type = "item", name = "micro-cavity-core", amount = 1},
+    },
+    results = {
+        {type = "item", name = "quantum-battery", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("battery-mk04")

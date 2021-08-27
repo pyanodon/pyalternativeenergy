@@ -13,6 +13,7 @@ RECIPE("sodium-silicate"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"}
 RECIPE("silica-powder"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
 RECIPE('silicon-wafer'):remove_unlock('placeholder') -- MUST SOLVE THAT WHEN THINGS GOT FIXED
 RECIPE("electronic-circuit"):add_ingredient({type = "item", name = "battery-mk01", amount = 1})
+RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "quantum-battery", amount = 1})
 
 
 ----EXCLUSIVE RECIPES----

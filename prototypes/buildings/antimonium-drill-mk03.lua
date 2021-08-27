@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {"antimonium-drill-mk03", 1}
     }
-}:add_unlock("antimony-mk03")
+}:add_unlock("machines-mk03")
 
 ITEM {
     type = "item",
