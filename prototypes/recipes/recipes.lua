@@ -244,3 +244,19 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("vacuum-tube-electronics")
+
+RECIPE {
+    name = "CuZn-battery",
+    category = "crafting-with-fluid",
+    enabled = true,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "copper-plate", amount = 10},
+        {type = "item", name = "zinc-plate", amount = 10},
+        {type = "fluid", name = "saline-water", amount = 250},
+    },
+    results = {
+        {type = "item", name = "battery-mk01", amount = 1},
+    },
+    --main_product = "eg-si",
+}
