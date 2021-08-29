@@ -25,10 +25,10 @@ RECIPE {
         {type = "item", name = "lithium-peroxide", amount = 2},
         {type = "item", name = "navens", amount = 5},
         {type = "item", name = "p2s5", amount = 5},
-        {type = "fluid", name = "benzene", amount = 100},
+        {type = "fluid", name = "benzene", amount = 150},
     },
     results = {
         {type = "fluid", name = "perylene", amount = 50},
     },
     --main_product = "eg-si",
-}:add_unlock("battery-mk04")
+}:add_unlock("intermetallics-mk02")

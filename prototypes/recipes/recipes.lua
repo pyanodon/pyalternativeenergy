@@ -271,11 +271,28 @@ RECIPE {
     ingredients = {
         {type = "item", name = "flask", amount = 1},
         {type = "item", name = "chromium", amount = 2},
+        {type = "item", name = "copper-plate", amount = 4},
         {type = "fluid", name = "perylene", amount = 100},
         {type = "fluid", name = "cumene", amount = 100},
     },
     results = {
         {type = "item", name = "flo", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("battery-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "lfo",
+    category = "mixer", --change for future chemical plant
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "flo", amount = 1},
+        {type = "fluid", name = "dcm", amount = 100},
+    },
+    results = {
+        {type = "item", name = "lfo", amount = 1},
     },
     --main_product = "eg-si",
 }:add_unlock("battery-mk04")
@@ -375,6 +392,21 @@ RECIPE {
     },
     results = {
         {type = "item", name = "quantum-battery", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("battery-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "organi-solvent-pyae",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+        {type = "fluid", name = "dcm", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "organic-solvent", amount = 100},
     },
     --main_product = "eg-si",
 }:add_unlock("battery-mk04")

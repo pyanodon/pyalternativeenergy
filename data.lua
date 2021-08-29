@@ -84,6 +84,7 @@ require("prototypes/fluids/middle-processed-lard")
 require("prototypes/fluids/vinyl-acetate")
 require("prototypes/fluids/perylene")
 require("prototypes/fluids/organic-acid-anhydride")
+require("prototypes/fluids/dcm")
 
 require("prototypes/fluids/neutron")
 --require("prototypes/fluids/uranium")

@@ -833,6 +833,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "lfo",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lfo.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "dbr",
     icon = "__pyalternativeenergygraphics__/graphics/icons/dbr.png",
 	icon_size = 64,
@@ -912,6 +923,50 @@ ITEM {
     type = "item",
     name = "intermetallics",
     icon = "__pyalternativeenergygraphics__/graphics/icons/intermetallics.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "ptcda",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ptcda.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "self-assembly-monolayer",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/self-assembly-monolayer.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "nbalti",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nbalti.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "crmoni",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/crmoni.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
