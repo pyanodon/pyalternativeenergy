@@ -973,3 +973,157 @@ ITEM {
     order = "aae",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "citric-acid",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/citric-acid.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "sodium-citrate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/sodium-citrate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "metallic-core",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/metallic-core.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "silica-shell",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/silica-shell.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "plasmonic-core",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/plasmonic-core.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "diethylaniline",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/diethylaniline.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "3-diethylaminophenol",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/3-diethylaminophenol.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "phthalic-anhydride",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/phthalic-anhydride.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "rhodamine-b",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/rhodamine-b.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "fluorophore",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/fluorophore.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "lithium-niobate-nano",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-niobate-nano.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "dieletric-layer",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/dieletric-layer.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "core-shell",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/core-shell.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ns-material",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ns-material.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}

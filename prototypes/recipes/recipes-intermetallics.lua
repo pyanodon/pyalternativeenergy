@@ -122,3 +122,268 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("intermetallics-mk02")
+
+--MK03
+
+RECIPE {
+    type = "recipe",
+    name = "citric-acid-01",
+    category = "nursery",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "yotoi-fruit", amount = 10},
+        {type = "fluid", name = "sulfuric-acid", amount = 50},
+        {type = "fluid", name = "slacked-lime", amount = 100},
+    },
+    results = {
+        {type = "item", name = "citric-acid", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "citric-acid-02",
+    category = "bio-reactor",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "sugar", amount = 5},
+        {type = "item", name = "fawogae", amount = 10},
+    },
+    results = {
+        {type = "item", name = "citric-acid", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "sodium-citrate",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "citric-acid", amount = 1},
+        {type = "item", name = "sodium-hydroxide", amount = 3},
+    },
+    results = {
+        {type = "item", name = "sodium-citrate", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "metallic-core",
+    category = "nmf",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "sodium-citrate", amount = 5},
+        {type = "item", name = "steel-chest", amount = 1},
+        {type = "fluid", name = "ethanol", amount = 100},
+        {type = "fluid", name = "chloroauric-acid", amount = 100},
+    },
+    results = {
+        {type = "item", name = "metallic-core", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "silica-shell",
+    category = "nmf",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "teos", amount = 100},
+        {type = "fluid", name = "ammonia", amount = 100},
+    },
+    results = {
+        {type = "item", name = "silica-shell", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "plasmonic-core",
+    category = "nano",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "metallic-core", amount = 1},
+        {type = "item", name = "silica-shell", amount = 1},
+        {type = "item", name = "gold-plate", amount = 1},
+        {type = "item", name = "polycrystalline-slab", amount = 1},
+        {type = "item", name = "aluminium-plate", amount = 3},
+    },
+    results = {
+        {type = "item", name = "plasmonic-core", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "diethylaniline",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "aniline", amount = 50},
+        {type = "fluid", name = "ethanol", amount = 50},
+        {type = "item", name = "flask", amount = 1},
+    },
+    results = {
+        {type = "item", name = "diethylaniline", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "3-diethylaminophenol",
+    category = "mixer", ---chemistry
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "acidgas", amount = 100},
+        {type = "item", name = "diethylaniline", amount = 1},
+        {type = "fluid", name = "sulfuric-acid", amount = 50},
+        {type = "item", name = "flask", amount = 1},
+        {type = "item", name = "lab-instrument", amount = 1},
+    },
+    results = {
+        {type = "item", name = "3-diethylaminophenol", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "phthalic-anhydride",
+    category = "mixer", ---chemistry
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "perylene", amount = 100},
+        {type = "item", name = "vanadium-oxide", amount = 2},
+        {type = "fluid", name = "oxygen", amount = 100},
+        {type = "item", name = "plastic-bar", amount = 3},
+        {type = "item", name = "lab-instrument", amount = 1},
+    },
+    results = {
+        {type = "item", name = "phthalic-anhydride", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "rhodamine-b",
+    category = "mixer", ---chemistry
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "3-diethylaminophenol", amount = 1},
+        {type = "item", name = "flask", amount = 2},
+        {type = "item", name = "phthalic-anhydride", amount = 1},
+        {type = "fluid", name = "sulfuric-acid", amount = 100},
+    },
+    results = {
+        {type = "item", name = "rhodamine-b", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "fluorophore",
+    category = "mixer", ---chemistry
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "rhodamine-b", amount = 1},
+        {type = "item", name = "ceramic", amount = 5},
+        {type = "item", name = "photophore", amount = 1},
+    },
+    results = {
+        {type = "item", name = "fluorophore", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "lithium-niobate-nano",
+    category = "nmf",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "lithium-niobate", amount = 1},
+        {type = "item", name = "diamond", amount = 3},
+        {type = "fluid", name = "nitrogen", amount = 100},
+    },
+    results = {
+        {type = "item", name = "lithium-niobate-nano", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "dieletric-layer",
+    category = "nmf",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "lithium-niobate-nano", amount = 1},
+        {type = "item", name = "lignin", amount = 5},
+    },
+    results = {
+        {type = "item", name = "dieletric-layer", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "core-shell",
+    category = "nano",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "dieletric-layer", amount = 1},
+        {type = "item", name = "fluorophore", amount = 1},
+        {type = "item", name = "plasmonic-core", amount = 1},
+    },
+    results = {
+        {type = "item", name = "core-shell", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "ns-material",
+    category = "nano",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "core-shell", amount = 1},
+        {type = "item", name = "kevlar", amount = 2},
+        {type = "item", name = "solidified-sarcorus", amount = 1},
+        {type = "item", name = "stainless-steel", amount = 5},
+        {type = "item", name = "aramid", amount = 2},
+        {type = "item", name = "cobalt-oxide", amount = 1},
+        {type = "item", name = "fiberglass", amount = 4},
+    },
+    results = {
+        {type = "item", name = "ns-material", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
