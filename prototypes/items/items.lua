@@ -1127,3 +1127,80 @@ ITEM {
     order = "aae",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "metastable-quasicrystal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/metastable-quasicrystal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "time-crystal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/time-crystal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "quasicrystal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/quasicrystal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "photon-deposited-quartz",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/photon-deposited-quartz.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "mositial-nx",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mositial-nx.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "pbsb-alloy",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/pbsb-alloy.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "nxzngd",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nxzngd.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}

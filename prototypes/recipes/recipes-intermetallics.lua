@@ -387,3 +387,25 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("intermetallics-mk03")
+
+--MK04
+
+RECIPE {
+    type = "recipe",
+    name = "metastable-quasicrystal",
+    category = "nano",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "time-crystal", amount = 1},
+        {type = "item", name = "quasicrystal", amount = 1},
+        {type = "item", name = "denatured-seismite", amount = 1},
+        {type = "item", name = "photon-deposited-quartz", amount = 1},
+        {type = "item", name = "mositial-nx", amount = 1},
+        {type = "item", name = "pbsb-alloy", amount = 1},
+    },
+    results = {
+        {type = "item", name = "metastable-quasicrystal", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk04")
