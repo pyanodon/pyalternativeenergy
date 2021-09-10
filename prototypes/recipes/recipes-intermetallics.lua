@@ -393,7 +393,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "metastable-quasicrystal",
-    category = "nano",
+    category = "vat",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -406,6 +406,96 @@ RECIPE {
     },
     results = {
         {type = "item", name = "metastable-quasicrystal", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "time-crystal",
+    category = "fusion-01",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "diamond", amount = 5},
+        {type = "item", name = "nv-center", amount = 1},
+        {type = "item", name = "yag-laser-module", amount = 1},
+    },
+    results = {
+        {type = "item", name = "time-crystal", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "quasicrystal",
+    category = "advanced-foundry",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "helium", amount = 100},
+        {type = "item", name = "nxzngd", amount = 1},
+        {type = "item", name = "metallic-glass", amount = 2},
+    },
+    results = {
+        {type = "item", name = "quasicrystal", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk04")
+
+
+RECIPE {
+    type = "recipe",
+    name = "nxzngd",
+    category = "casting",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "molten-nxzngd", amount = 50},
+        {type = "fluid", name = "helium", amount = 100},
+        {type = "item", name = "copper-plate", amount = 2},
+        {type = "item", name = "sand-casting", amount = 1},
+    },
+    results = {
+        {type = "item", name = "nxzngd", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "molten-nxzngd",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = "fluid", name = "molten-nexelit", amount = 50},
+        {type = "fluid", name = "molten-zinc", amount = 50},
+        {type = "fluid", name = "helium", amount = 100},
+        {type = "item", name = "gd-oxide", amount = 2},
+        {type = "item", name = "crucible", amount = 1},
+        {type = "item", name = "graphite", amount = 3},
+    },
+    results = {
+        {type = "fluid", name = "molten-nxzngd", amount = 10},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "photon-deposited-quartz",
+    category = "nano",
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = "fluid", name = "perylene", amount = 100},
+        {type = "item", name = "high-grade-quartz", amount = 2},
+        {type = "item", name = "silver-plate", amount = 2},
+    },
+    results = {
+        {type = "item", name = "photon-deposited-quartz", amount = 10},
     },
     --main_product = "sb-dust",
 }:add_unlock("intermetallics-mk04")

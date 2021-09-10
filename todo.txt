@@ -5,12 +5,14 @@ MOD IN GENERAL
  - Check for deadlocks
  - Investigate if its possible to use the same resource for two differents outputs (coalbed gas and kerogen).
         - sort of. items only. you can have a item and a fluid as results. a drill can remove the item without the fluid but you cant get the fluid without the solid and that cant be gotten out at all and it jams. only way for a drill to have multiple results is for them to be items. - KING
+        - Then i believe we will need a new resource to allow coalbed gas and kerogen to be extracted as a finite resource. - py
  - Investigate if its possible to put a sattelice in space to send microwaves to the ground receptor.
         - would need to do some script work to adjust the energy output as the satelites are sent up. unless you want to do something more interesting that i have an idea for. - KING
  - Check why the working animations on Numals just doesnt appears.
  - Change the turbines to work with steam in different temps and efficiency
  - Move py-turbine from fusion energy to pyAE steam turbine mk01
  - All burning based, nuclear and solar powerplants shall contain a cooling cycle and generation of molten salt for further use (as heat source/steam)
+ - The consumption of metals/minerals shall increase in the later recipes since the ore chains tends to be very productive in later stages.
 
 GRAPHICS (feel free to insert any requierements here):
 

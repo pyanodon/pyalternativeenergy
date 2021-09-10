@@ -88,6 +88,7 @@ require("prototypes/fluids/dcm")
 require("prototypes/fluids/chloroauric-acid")
 require("prototypes/fluids/teos")
 require("prototypes/fluids/aniline")
+require("prototypes/fluids/molten-nxzngd")
 
 require("prototypes/fluids/neutron")
 --require("prototypes/fluids/uranium")
