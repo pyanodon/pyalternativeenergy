@@ -448,7 +448,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nxzngd",
-    category = "casting",
+    category = "py-rawores-smelter",
     enabled = false,
     energy_required = 20,
     ingredients = {
