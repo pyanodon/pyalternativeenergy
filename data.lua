@@ -49,6 +49,7 @@ require('prototypes/recipes/recipes-sb')
 require('prototypes/recipes/recipes-si')
 require('prototypes/recipes/recipes-gd')
 require('prototypes/recipes/recipes-intermetallics')
+require('prototypes/recipes/recipes-photonic-chip')
 require("prototypes/recipes/recipes-nuclear")
 -- ))
 

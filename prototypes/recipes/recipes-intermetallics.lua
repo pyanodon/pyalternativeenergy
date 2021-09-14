@@ -478,7 +478,7 @@ RECIPE {
         {type = "item", name = "graphite", amount = 3},
     },
     results = {
-        {type = "fluid", name = "molten-nxzngd", amount = 10},
+        {type = "fluid", name = "molten-nxzngd", amount = 1},
     },
     --main_product = "sb-dust",
 }:add_unlock("intermetallics-mk04")
@@ -495,7 +495,7 @@ RECIPE {
         {type = "item", name = "silver-plate", amount = 2},
     },
     results = {
-        {type = "item", name = "photon-deposited-quartz", amount = 10},
+        {type = "item", name = "photon-deposited-quartz", amount = 1},
     },
     --main_product = "sb-dust",
 }:add_unlock("intermetallics-mk04")

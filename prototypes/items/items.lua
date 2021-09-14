@@ -1204,3 +1204,102 @@ ITEM {
     order = "aae",
     stack_size = 200
 }
+
+ITEM {
+    type = "item",
+    name = "fdtd",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/fdtd.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "fbg",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/fbg.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "dieletric-mirror",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/dieletric-mirror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "animal-reflectors",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/animal-reflectors.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "inverse-opal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/inverse-opal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "photonic-crystal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/photonic-crystal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "hardener",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/hardener.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "glycidylamine",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/glycidylamine.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "photonic-chip",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/photonic-chip.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 200
+}
