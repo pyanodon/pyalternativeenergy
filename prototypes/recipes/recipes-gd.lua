@@ -226,7 +226,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gd-stripped-solution",
-    category = "mixer",
+    category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {

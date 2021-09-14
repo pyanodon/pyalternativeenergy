@@ -247,7 +247,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "3-diethylaminophenol",
-    category = "mixer", ---chemistry
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -266,7 +266,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phthalic-anhydride",
-    category = "mixer", ---chemistry
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -285,7 +285,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rhodamine-b",
-    category = "mixer", ---chemistry
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -303,7 +303,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fluorophore",
-    category = "mixer", ---chemistry
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {

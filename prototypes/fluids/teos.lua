@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "teos",
-    category = "mixer",
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {

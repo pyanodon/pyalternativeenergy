@@ -17,7 +17,7 @@ FLUID {
 RECIPE {
     type = "recipe",
     name = "perylene",
-    category = "mixer", --change for future chemical plant
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {

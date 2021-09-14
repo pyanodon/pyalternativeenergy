@@ -228,7 +228,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "battery-mk01",
-    category = "crafting-with-fluid", --change for future chemical plant
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -265,7 +265,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "flo",
-    category = "mixer", --change for future chemical plant
+    category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -283,8 +283,8 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "lfo",
-    category = "mixer", --change for future chemical plant
+    name = "chemistry",
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
