@@ -1303,3 +1303,48 @@ ITEM {
     order = "aae",
     stack_size = 200
 }
+
+ITEM {
+    type = "item",
+    name = "gaas",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gaas.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "ti-n",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ti-n.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = 'item',
+    name = 'animal-eye',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/mips/e1.png',
+    icon_size = 64,
+    icon_mipmaps = 9,
+    pictures = {
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e1.png', scale = 0.25, mipmap_count = 1},
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e2.png', scale = 0.25, mipmap_count = 1},
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e3.png', scale = 0.25, mipmap_count = 1},
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e4.png', scale = 0.25, mipmap_count = 1},
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e5.png', scale = 0.25, mipmap_count = 1},
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e6.png', scale = 0.25, mipmap_count = 1},
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e7.png', scale = 0.25, mipmap_count = 1},
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e8.png', scale = 0.25, mipmap_count = 1},
+        {size = 64, filename = '__pyalternativeenergygraphics__/graphics/icons/mips/e9.png', scale = 0.25, mipmap_count = 1},
+    },
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aaa",
+    stack_size = 500
+}
