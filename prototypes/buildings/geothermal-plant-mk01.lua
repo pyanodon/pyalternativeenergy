@@ -13,7 +13,7 @@
     results = {
         {"geothermal-plant-mk01", 1}
     }
-}:add_unlock("geothermal-mk01")
+}:add_unlock("geothermal-power-mk01")
 
 ITEM {
     type = "item",

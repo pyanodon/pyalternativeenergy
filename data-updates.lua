@@ -1,3 +1,6 @@
+if mods["pycoalprocessing"] then
+    require("prototypes/updates/pycoalprocessing-updates")
+end
 if mods["pyalienlife"] then
     require("prototypes/updates/pyalienlife-updates")
 end

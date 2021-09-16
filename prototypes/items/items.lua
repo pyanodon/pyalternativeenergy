@@ -804,7 +804,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk01.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-hightech-items",
     order = "aae",
     stack_size = 500
 }
@@ -815,7 +815,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk00.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-hightech-items",
     order = "aae",
     stack_size = 100
 }

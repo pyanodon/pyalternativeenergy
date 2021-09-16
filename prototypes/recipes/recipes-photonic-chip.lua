@@ -80,7 +80,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ti-n",
-    category = "gas-separator",
+    category = "hpf",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -132,3 +132,58 @@ RECIPE {
     --main_product = "middle-processed-lard",
 }:add_unlock("photonics")
 
+RECIPE {
+    type = "recipe",
+    name = "inverse-opal",
+    category = "research",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "biopolymer", amount = 5},
+        {type = "item", name = "colloidal-silica", amount = 2},
+        {type = "item", name = "hardener", amount = 1},
+        {type = "item", name = "yag-laser-module", amount = 1},
+        {type = "fluid", name = "hydrogen-chloride", amount = 100},
+    },
+    results = {
+        {type = "item", name = "inverse-opal", amount = 1},
+    },
+    --main_product = "middle-processed-lard",
+}:add_unlock("photonics")
+
+RECIPE {
+    type = "recipe",
+    name = "hardener",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "plastic-bar", amount = 3},
+        {type = "item", name = "glycidylamine", amount = 2},
+        {type = "item", name = "phenol", amount = 10},
+        {type = "fluid", name = "hydrogen-chloride", amount = 100},
+        {type = "fluid", name = "fatty-acids", amount = 100},
+        {type = "fluid", name = "organic-acid-anhydride", amount = 100},
+    },
+    results = {
+        {type = "item", name = "hardener", amount = 1},
+    },
+    --main_product = "middle-processed-lard",
+}:add_unlock("photonics")
+
+RECIPE {
+    type = "recipe",
+    name = "glycidylamine",
+    category = "research",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "flask", amount = 5},
+        {type = "fluid", name = "ech", amount = 100},
+        {type = "fluid", name = "aniline", amount = 100},
+    },
+    results = {
+        {type = "item", name = "glycidylamine", amount = 1},
+    },
+    --main_product = "middle-processed-lard",
+}:add_unlock("photonics")
