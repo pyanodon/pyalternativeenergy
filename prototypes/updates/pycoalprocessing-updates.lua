@@ -38,6 +38,7 @@ RECIPE("desulfurizator-unit-mk02"):add_ingredient({type = "item", name = "self-a
 RECIPE("evaporator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("fluid-separator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("fts-reactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
+RECIPE("niobium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("gasifier-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("methanol-reactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("olefin-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
