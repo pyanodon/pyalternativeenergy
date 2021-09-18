@@ -13,6 +13,9 @@ end
 if mods["pyrawores"] then
     require("prototypes/updates/pyrawores-updates")
 end
+if mods["pypetroleumhandling"] then
+    require("prototypes/updates/pypetroleumhandling-updates")
+end
 
 --disable combustion recipes--
 RECIPE('acetylene-combustion'):set_fields{hidden = true}
