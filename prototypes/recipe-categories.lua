@@ -23,6 +23,10 @@ data:extend {
         type = "recipe-category",
         name = "numal"
     },
+    {
+        type = "recipe-category",
+        name = "coal-powerplant"
+    },
     --resources
     {
         type = "resource-category",

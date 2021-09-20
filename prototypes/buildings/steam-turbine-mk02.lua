@@ -32,9 +32,9 @@ ENTITY {
     minable = {mining_time = 1, result = "steam-turbine-mk02"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
+    effectivity = 2,
     fluid_usage_per_tick = 1,
-    maximum_temperature = 1000,
+    maximum_temperature = 5000,
     resistances = {
         {
             type = "fire",
@@ -44,7 +44,7 @@ ENTITY {
     collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     fluid_input = {
-        name = "combustion-mixture1",
+        name = "pressured-steam",
         amount = 0.0,
         minimum_temperature = 500.0
     },
@@ -54,7 +54,7 @@ ENTITY {
         pipe_covers = DATA.Pipes.covers(true, true, true, true),
         pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         production_type = "input-output",
-        filter = "combustion-mixture1",
+        filter = "pressured-steam",
         minimum_temperature = 500.0,
         pipe_connections = {
             {type = "input-output", position = {0, 4}},
@@ -77,7 +77,7 @@ ENTITY {
             frame_count = 30,
             line_length = 6,
             shift = util.by_pixel(0, -176),
-            animation_speed = 1/3,
+            animation_speed = 1/2,
             },
             {
             filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk02/bot.png",
@@ -87,7 +87,7 @@ ENTITY {
             line_length = 1,
             repeat_count = 30,
             shift = util.by_pixel(0, 16),
-            animation_speed = 1/3,
+            animation_speed = 1/2,
             },
             {
             filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk02/sh.png",
@@ -97,7 +97,7 @@ ENTITY {
             line_length = 1,
             repeat_count = 30,
             shift = util.by_pixel(32, -3),
-            animation_speed = 1/3,
+            animation_speed = 1/2,
             draw_as_shadow = true;
             },
         },
@@ -111,7 +111,7 @@ ENTITY {
             frame_count = 30,
             line_length = 6,
             shift = util.by_pixel(0, -176),
-            animation_speed = 1/3,
+            animation_speed = 1/2,
             },
             {
             filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk02/bot.png",
@@ -121,7 +121,7 @@ ENTITY {
             line_length = 1,
             repeat_count = 30,
             shift = util.by_pixel(0, 16),
-            animation_speed = 1/3,
+            animation_speed = 1/2,
             },
             {
             filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk02/sh.png",
@@ -131,7 +131,7 @@ ENTITY {
             line_length = 1,
             repeat_count = 30,
             shift = util.by_pixel(32, -3),
-            animation_speed = 1/3,
+            animation_speed = 1/2,
             draw_as_shadow = true;
             },
     },
@@ -151,8 +151,8 @@ ENTITY {
     performance_to_sound_speedup = 0.3,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk02.ogg"},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk02.ogg", volume = 0.4},
-        apparent_volume = 1.5
+        sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk02.ogg", volume = 0.5},
+        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk02.ogg", volume = 0.15},
+        apparent_volume = 0.45
     }
 }

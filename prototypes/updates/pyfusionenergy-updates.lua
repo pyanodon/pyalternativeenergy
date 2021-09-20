@@ -8,6 +8,7 @@ RECIPE("lead-container"):remove_unlock('diamond-mining'):add_unlock('production-
 RECIPE("science-coating"):remove_unlock('diamond-mining'):add_unlock('production-science-pack')
 RECIPE("coated-container"):remove_unlock('diamond-mining'):add_unlock('production-science-pack')
 RECIPE("grease-table-mk01"):remove_unlock('diamond-mining'):add_unlock('machines-mk02')
+RECIPE("py-turbine"):remove_unlock('fusion-1'):add_unlock('nonrenewable-mk01'):subgroup_order("py-alternativeenergy-buildings-mk01", "d")
 
 --BUILDINDS--
 RECIPE("agitator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})

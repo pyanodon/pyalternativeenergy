@@ -32,9 +32,9 @@ ENTITY {
     minable = {mining_time = 1, result = "steam-turbine-mk04"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
+    effectivity = 4,
     fluid_usage_per_tick = 1,
-    maximum_temperature = 1000,
+    maximum_temperature = 5000,
     resistances = {
         {
             type = "fire",
@@ -44,7 +44,7 @@ ENTITY {
     collision_box = {{-2.6, -11}, {2.6, 11}},
     selection_box = {{-3.0, -11.5}, {3.0, 11.5}},
     fluid_input = {
-        name = "combustion-mixture1",
+        name = "pressured-steam",
         amount = 0.0,
         minimum_temperature = 500.0
     },
@@ -54,7 +54,7 @@ ENTITY {
         pipe_covers = DATA.Pipes.covers(true, true, true, true),
         pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         production_type = "input-output",
-        filter = "combustion-mixture1",
+        filter = "pressured-steam",
         minimum_temperature = 500.0,
         pipe_connections = {
             {type = "input-output", position = {3.5, 6.5}},

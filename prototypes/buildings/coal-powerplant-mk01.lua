@@ -40,7 +40,7 @@ ENTITY {
         module_slots = 1
     },
     allowed_effects = {"speed"},
-    crafting_categories = {"solar-tower"},
+    crafting_categories = {"coal-powerplant"},
     crafting_speed = 1,
     energy_source =
     {
