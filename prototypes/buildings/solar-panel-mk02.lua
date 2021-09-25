@@ -12,6 +12,7 @@ RECIPE{
         {'tinned-cable', 10},
         {'small-parts-02', 12},
         {'eva', 10},
+        {'self-assembly-monolayer', 10},
         {'electric-engine-unit', 1},
         {type = "fluid", name = "etching", amount = 50},
     },

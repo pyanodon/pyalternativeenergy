@@ -1,10 +1,22 @@
 RECIPE{
     type = 'recipe',
     name = 'solar-panel-mk03',
-    energy_required = 0.5,
-    enabled = true,
-    ingredients = {{'pipe', 20}},
+    energy_required = 15,
+    enabled = false,
+    category = "crafting",
+    ingredients = {
+        {'super-steel', 20},
+        {'dsnc-cell', 10},
+        {'anti-reflex-glass', 21},
+        {'processing-unit', 3},
+        {'ns-material', 10},
+        {'small-parts-03', 25},
+        {'graphene-roll', 5},
+        {'electric-engine-unit', 3},
+        {'aerogel', 5},
+    },
     results = {{'solar-panel-mk03', 1}}
+
 }:add_unlock("solar-mk03")
 
 ITEM{

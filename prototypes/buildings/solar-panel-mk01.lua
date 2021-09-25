@@ -5,6 +5,7 @@ RECIPE {
     enabled = false,
     category = "crafting-with-fluid",
     ingredients = {
+        {'intermetallics', 5},
         {'aluminium-plate', 5},
         {'polycrystalline-cell', 12},
         {'anti-reflex-glass', 1},

@@ -1348,3 +1348,190 @@ ITEM {
     order = "aaa",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "ingap",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ingap.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "ingaas",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ingaas.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "arsenic",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/arsenic.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "mqdc",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mqdc.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "crude-top-layer",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/crude-top-layer.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "tio2",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/tio2.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "transparent-anode",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transparent-anode.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "triphenylanime",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/triphenylanime.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "bt",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/bt.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cyanoacetate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/cyanoacetate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "cyanoacrylate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/cyanoacrylate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "bca",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/bca.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "photosensitive-dye",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/photosensitive-dye.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "conductive-sheet",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/conductive-sheet.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "czts-slab",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/czts-slab.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "czts-plate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/czts-plate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "dsnc-cell",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/dsnc-cell.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 500
+}

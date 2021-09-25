@@ -96,6 +96,7 @@ require("prototypes/fluids/aniline")
 require("prototypes/fluids/molten-nxzngd")
 require("prototypes/fluids/molten-salt")
 require("prototypes/fluids/hot-molten-salt")
+require("prototypes/fluids/bca")
 
 require("prototypes/fluids/neutron")
 --require("prototypes/fluids/uranium")

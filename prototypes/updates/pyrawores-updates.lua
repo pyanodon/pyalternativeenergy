@@ -62,7 +62,11 @@ RECIPE("impact-crusher-mk04"):add_ingredient({type = "item", name = "metastable-
 RECIPE("leaching-station-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4})
 RECIPE("scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10})
 RECIPE("wet-scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6})
-RECIPE("sinter-unit"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 20})
+RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','processing-unit'):remove_unlock('machine-mk04'):add_unlock('machine-mk03'):add_ingredient({type = "item", name = "ns-material", amount = 20})
+
+
+--RECIPES--
+RECIPE("plastic3"):replace_ingredient('nitrobenzene','aniline')
 
 
 --RECIPE MOVING--

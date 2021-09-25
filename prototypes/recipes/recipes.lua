@@ -410,3 +410,219 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("battery-mk04")
+
+
+--SOLAR panel/cell MK03--
+
+RECIPE {
+    type = "recipe",
+    name = "dsnc-cell",
+    category = "electronic",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "transparent-anode", amount = 4},
+        {type = "item", name = "photosensitive-dye", amount = 5},
+        {type = "item", name = "conductive-sheet", amount = 1},
+        {type = "item", name = "czts-plate", amount = 5},
+        {type = "item", name = "eva", amount = 5},
+        {type = "item", name = "graphene-roll", amount = 1},
+    },
+    results = {
+        {type = "item", name = "dsnc-cell", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "transparent-anode",
+    category = "sinter",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "zno-nanoparticles", amount = 1},
+        {type = "item", name = "tio2", amount = 3},
+        {type = "item", name = "crude-top-layer", amount = 2},
+    },
+    results = {
+        {type = "item", name = "transparent-anode", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "tio2",
+    category = "distilator",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "ticl4", amount = 5},
+        {type = "fluid", name = "oxygen", amount = 150},
+        {type = "item", name = "plastic-bar", amount = 1},
+    },
+    results = {
+        {type = "item", name = "tio2", amount = 2},
+        {type = "fluid", name = "chlorine", amount = 50},
+    },
+    main_product = "tio2",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "crude-top-layer",
+    category = "gas-separator",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "tin-plate", amount = 3},
+        {type = "item", name = "sb-oxide", amount = 2},
+        {type = "item", name = "glass", amount = 5},
+        {type = "fluid", name = "oxygen", amount = 100},
+    },
+    results = {
+        {type = "item", name = "crude-top-layer", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "photosensitive-dye",
+    category = "mixer",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "triphenylanime", amount = 1},
+        {type = "item", name = "bt", amount = 3},
+        {type = "item", name = "flask", amount = 1},
+        {type = "fluid", name = "bca", amount = 100},
+    },
+    results = {
+        {type = "item", name = "photosensitive-dye", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "triphenylanime",
+    category = "hpf",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "nickel-plate", amount = 1},
+        {type = "fluid", name = "aniline", amount = 100},
+    },
+    results = {
+        {type = "item", name = "triphenylanime", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "bt",
+    category = "hpf",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "empty-barrel", amount = 1},
+        {type = "item", name = "cadaveric-arum", amount = 5},
+        {type = "item", name = "chromium", amount = 1},
+
+    },
+    results = {
+        {type = "item", name = "bt", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "cyanoacrylate",
+    category = "mixer",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "cyanoacetate", amount = 1},
+        {type = "fluid", name = "methanal", amount = 100},
+        {type = "item", name = "plastic-bar", amount = 1},
+
+    },
+    results = {
+        {type = "item", name = "cyanoacrylate", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "cyanoacetate",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "fluid", name = "cyanic-acid", amount = 100},
+        {type = "fluid", name = "sulfuric-acid", amount = 100},
+        {type = "fluid", name = "ethanol", amount = 100},
+        {type = "item", name = "plastic-bar", amount = 1},
+
+    },
+    results = {
+        {type = "item", name = "cyanoacetate", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "conductive-sheet",
+    category = "gas-separator",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "nexelit-plate", amount = 10},
+        {type = "item", name = "silver-plate", amount = 2},
+    },
+    results = {
+        {type = "item", name = "conductive-sheet", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "czts-slab",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "copper-plate", amount = 8},
+        {type = "item", name = "zinc-plate", amount = 10},
+        {type = "item", name = "sulfur", amount = 3},
+        {type = "item", name = "tin-plate", amount = 5},
+    },
+    results = {
+        {type = "item", name = "czts-slab", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "czts-plate",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "czts-slab", amount = 8},
+        {type = "fluid", name = "wax", amount = 30},
+        {type = "item", name = "diamond-wire", amount = 1},
+    },
+    results = {
+        {type = "item", name = "czts-plate", amount = 3},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk03")
