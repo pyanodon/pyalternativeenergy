@@ -3,8 +3,19 @@ RECIPE {
     name = 'solar-panel-mk04',
     energy_required = 0.5,
     enabled = true,
-    ingredients = {{'pipe', 20}},
-    results = {{'solar-panel-mk04', 1}}
+    ingredients = {
+      {'super-alloy', 15},
+      {'mqdc', 10},
+      {'anti-reflex-glass', 20},
+      {'intelligent-unit', 5},
+      {'metastable-quasicrystal', 1},
+      {'small-parts-03', 25},
+      {'biopolymer', 10},
+      {'molybdenum-plate', 5},
+      {'carbon-nanotube', 10},
+  },
+  results = {{'solar-panel-mk04', 1}}
+
 }:add_unlock("solar-mk04")
 
 ITEM {

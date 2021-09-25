@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/photonics.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'nano-tech','battery-mk04'},
+    prerequisites = {'advanced-electronics'},
     effects = {},
     unit = {
         count = 500,

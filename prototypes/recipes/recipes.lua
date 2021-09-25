@@ -626,3 +626,139 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("solar-mk03")
+
+--SOLAR panel/cell MK04--
+
+RECIPE {
+    type = "recipe",
+    name = "mqdc",
+    category = "nano",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "alag-grid", amount = 2},
+        {type = "item", name = "quantum-dots", amount = 3},
+        {type = "item", name = "quantum-well", amount = 3},
+        {type = "item", name = "eg-si", amount = 5},
+        {type = "item", name = "supercapacitor-shell", amount = 1},
+        {type = "item", name = "processor-core", amount = 1},
+        {type = "item", name = "heavy-n", amount = 5},
+        {type = "item", name = "photonic-crystal", amount = 1},
+        {type = "fluid", name = "helium", amount = 50},
+        {type = "item", name = "ingap", amount = 1},
+        {type = "item", name = "ingaas", amount = 1},
+        {type = "item", name = "gaas", amount = 1},
+        {type = "item", name = "sb-oxide", amount = 5},
+    },
+    results = {
+        {type = "item", name = "mqdc", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("solar-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "gaas",
+    category = "nmf",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "arsenic", amount = 1},
+        {type = "item", name = "reo", amount = 3},
+        {type = "fluid", name = "vacuum", amount = 200},
+    },
+    results = {
+        {type = "item", name = "gaas", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("nano-tech")
+
+RECIPE {
+    type = "recipe",
+    name = "arsenic",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "iron-ore", amount = 10},
+        {type = "item", name = "copper-ore", amount = 10},
+        {type = "item", name = "rich-clay", amount = 20},
+        {type = "item", name = "ore-lead", amount = 10},
+    },
+    results = {
+        {type = "item", name = "arsenic", amount = 1},
+        {type = "item", name = "iron-oxide", amount = 5},
+    },
+    main_product = "arsenic",
+}:add_unlock("nano-tech")
+
+RECIPE {
+    type = "recipe",
+    name = "ingap",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "epoxy", amount = 1},
+        {type = "item", name = "graphene-roll", amount = 1},
+        {type = "item", name = "reo", amount = 5},
+        {type = "fluid", name = "phosphorous-acid", amount = 100},
+    },
+    results = {
+        {type = "item", name = "ingap", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("nano-tech")
+
+RECIPE {
+    type = "recipe",
+    name = "ingaas",
+    category = "nano",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "ingap", amount = 1},
+        {type = "item", name = "gaas", amount = 1},
+        {type = "fluid", name = "helium", amount = 50},
+    },
+    results = {
+        {type = "item", name = "ingaas", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("nano-tech")
+
+RECIPE {
+    type = "recipe",
+    name = "quantum-well",
+    category = "nano",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "ingap", amount = 2},
+        {type = "item", name = "gaas", amount = 1},
+        {type = "item", name = "ti-n", amount = 1},
+        {type = "item", name = "zinc-nanocompound", amount = 1},
+        {type = "item", name = "gold-plate", amount = 1},
+        {type = "item", name = "silicon-wafer", amount = 5},
+        },
+    results = {
+        {type = "item", name = "quantum-well", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("nano-tech")
+
+RECIPE {
+    type = "recipe",
+    name = "alag-grid",
+    category = "nmf",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "alag-alloy", amount = 1},
+        {type = "fluid", name = "vacuum", amount = 200},
+    },
+    results = {
+        {type = "item", name = "alag-grid", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("nano-tech")

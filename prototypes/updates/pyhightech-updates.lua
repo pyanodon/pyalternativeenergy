@@ -1,5 +1,7 @@
 
 --TECHNOLOGY--
+TECHNOLOGY('quantum'):add_prereq('machines-mk02')
+TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04')
 
 --BUILDINDS--
 RECIPE("clay-pit-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
@@ -53,11 +55,15 @@ RECIPE('crystalized-gd'):set_category("fbreactor")
 
 RECIPE("pa-uranium-235"):remove_unlock('nucleo')
 RECIPE("sodium-silicate"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
+RECIPE("quantum-dots"):remove_unlock('quantum'):add_unlock({"nano-tech"})
 RECIPE("silica-powder"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
 RECIPE('silicon-wafer'):remove_unlock('placeholder') -- MUST SOLVE THAT WHEN THINGS GOT FIXED
 RECIPE("electronic-circuit"):add_ingredient({type = "item", name = "battery-mk01", amount = 1})
 RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "quantum-battery", amount = 2})
 RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "photonic-chip", amount = 1})
+RECIPE("nanochip"):add_ingredient({type = "item", name = "quantum-dots", amount = 2}):add_ingredient({type = "item", name = "quantum-well", amount = 2}):add_ingredient({type = "item", name = "nano-wires", amount = 2})
+RECIPE("kondo-processor"):add_ingredient({type = "item", name = "nano-wires", amount = 3})
+RECIPE("pi-josephson-junction"):add_ingredient({type = "item", name = "mqdc", amount = 1})
 
 RECIPE("py-construction-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("py-logistic-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})

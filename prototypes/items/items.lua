@@ -1535,3 +1535,69 @@ ITEM {
     order = "aae",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "mqdc",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mqdc.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "ingap",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ingap.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "ingaas",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ingaas.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "arsenic",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/arsenic.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "alag-grid",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/alag-grid.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "quantum-well",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/quantum-well.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-hightech-quantum",
+    order = "ab",
+    stack_size = 500
+}

@@ -61,7 +61,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/solar-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'solar-mk03','solar-power-mk04'},
+    prerequisites = {'solar-mk03','solar-power-mk04','nano-tech'},
     effects = {},
     unit = {
         count = 450,
