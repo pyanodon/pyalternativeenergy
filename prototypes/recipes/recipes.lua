@@ -684,6 +684,7 @@ RECIPE {
         {type = "item", name = "copper-ore", amount = 10},
         {type = "item", name = "rich-clay", amount = 20},
         {type = "item", name = "ore-lead", amount = 10},
+        {type = "item", name = "antimonium-ore", amount = 10},
     },
     results = {
         {type = "item", name = "arsenic", amount = 1},
