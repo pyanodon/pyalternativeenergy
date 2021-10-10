@@ -376,7 +376,6 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = "item", name = "core-shell", amount = 1},
-        {type = "item", name = "aramid", amount = 4},
         {type = "item", name = "kevlar", amount = 2},
         {type = "item", name = "solidified-sarcorus", amount = 1},
         {type = "item", name = "stainless-steel", amount = 5},
