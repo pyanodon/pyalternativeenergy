@@ -1,6 +1,7 @@
 MOD IN GENERAL
 
  - Make all the pending recipes
+       - add flourite/Hydrofluoric acid
  - Write the rest of tech tree
  - Check for deadlocks
  - Investigate if its possible to use the same resource for two differents outputs (coalbed gas and kerogen).

@@ -106,7 +106,7 @@ RECIPE("u-83"):remove_unlock('uranium-mk04')
 
 
 RECIPE("20-u-powder"):remove_unlock("uranium-mk01")
-RECIPE("u-pulp-01"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "powdered-u", amount = 5}):replace_ingredient('sulfuric-acid','hydrogen-peroxide'):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
+--RECIPE("u-pulp-01"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "powdered-u", amount = 5}):replace_ingredient('sulfuric-acid','hydrogen-peroxide'):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 RECIPE("u-pulp-02"):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 RECIPE("u-pulp-03"):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 
