@@ -327,7 +327,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-conc",
-    category = "thickener",
+    category = "centrifuging",
     enabled = false,
     energy_required = 10,
     ingredients = {

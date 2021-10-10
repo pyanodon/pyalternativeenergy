@@ -229,6 +229,7 @@ RECIPE('sb-pulp-05'):add_ingredient({type = "item", name = "yellow-dextrine", am
 RECIPE('sodium-cyanate'):add_ingredient({type = "item", name = "urea", amount = 5})
 RECIPE('oxalic-acid'):add_ingredient({type = "item", name = "sugar", amount = 5})
 RECIPE('gd-metal'):add_ingredient({type = "item", name = "cobalt-extract", amount = 2})
+RECIPE('chloral'):set_category("chemistry")
 
 ----EXCLUSIVE RECIPES----
 
