@@ -1,41 +1,42 @@
 RECIPE {
     type = "recipe",
-    name = "centrifuge-mk01",
+    name = "centrifuge-mk04",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"electric-mining-drill", 2},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 100},
-        {"aluminium-plate", 20},
-        {"duralumin", 50},
-        {"engine-unit", 2},
-        {'intermetallics', 5},
+        {'centrifuge-mk03', 1},
+        {'super-alloy', 50},
+        {'metastable-quasicrystal', 5},
+        {'small-parts-03', 100},
+        {'molybdenum-plate', 20},
+        {"low-density-structure", 20},
+        {"nbfe-alloy", 10},
+
     },
     results = {
-        {"centrifuge-mk01", 1}
+        {"centrifuge-mk04", 1}
     }
-}:add_unlock("machines-mk01")
+}:add_unlock("machines-mk04")
 
 ITEM {
     type = "item",
-    name = "centrifuge-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/centrifuge-mk01.png",
+    name = "centrifuge-mk04",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/centrifuge-mk04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-buildings-mk04",
     order = "a",
-    place_result = "centrifuge-mk01",
+    place_result = "centrifuge-mk04",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "centrifuge-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/centrifuge-mk01.png",
+    name = "centrifuge-mk04",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/centrifuge-mk04.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "centrifuge-mk01"},
+    minable = {mining_time = 0.1, result = "centrifuge-mk04"},
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
@@ -43,17 +44,17 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 4
     },
     allowed_effects = {"speed"},
     crafting_categories = {"centrifuging"},
-    crafting_speed = 1,
+    crafting_speed = 4,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 4
     },
-    energy_usage = "500kW",
+    energy_usage = "1800kW",
     animation = {
         layers = {
             {
@@ -84,7 +85,7 @@ ENTITY {
                 line_length = 9,
                 animation_speed = 0.7,
                 shift = util.by_pixel(0, 0),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/centrifuge/top.png",
@@ -105,7 +106,7 @@ ENTITY {
                 line_length = 1,
                 animation_speed = 0.7,
                 shift = util.by_pixel(0, -144),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
             },
         }
     },

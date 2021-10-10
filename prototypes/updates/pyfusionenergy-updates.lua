@@ -72,3 +72,6 @@ RECIPE("mixer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrys
 RECIPE("fusion-reactor-mk01"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("fusion-reactor-mk02"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("py-turbine"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}) --check after made the turbine
+
+RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "super-alloy", amount = 50}):add_ingredient({type = "item", name = "py-heat-exchanger", amount = 1})
+RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "nbti-alloy", amount = 30}):add_ingredient({type = "item", name = "wall-shield", amount = 5}):add_ingredient({type = "item", name = "science-coating", amount = 10}):add_ingredient({type = "item", name = "control-unit", amount = 5})

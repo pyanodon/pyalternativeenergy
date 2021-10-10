@@ -176,6 +176,9 @@ require("prototypes/buildings/neutron-moderator-mk03")
 require("prototypes/buildings/neutron-moderator-mk04")
 require("prototypes/buildings/accumulator-mk03")
 require("prototypes/buildings/centrifuge-mk01")
+require("prototypes/buildings/centrifuge-mk02")
+require("prototypes/buildings/centrifuge-mk03")
+require("prototypes/buildings/centrifuge-mk04")
 require("prototypes/buildings/tidal-mk01")
 require("prototypes/buildings/numal-mk01-test")
 require("prototypes/buildings/coal-powerplant-mk01")
@@ -185,3 +188,4 @@ require("prototypes/buildings/biomass-powerplant-mk01")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
+

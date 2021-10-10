@@ -48,6 +48,10 @@ RECIPE("nano-assembler-mk04"):add_ingredient({type = "item", name = "metastable-
 RECIPE("blackhole"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15})
 RECIPE("quantum-computer"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 50})
 
+RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotubes", amount = 20})
+RECIPE("centrifuge-mk04"):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "quantum-dots", amount = 10}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 20})
+
+
 -----RECIPES-----
 RECIPE('accumulator-mk03'):add_unlock({"nano-tech"})
 RECIPE('oxalic-acid'):replace_ingredient("sulfuric-acid", "cyanic-acid")
