@@ -69,6 +69,11 @@ ENTITY {
     },
     working_visualisations = {
         {
+            effect = "uranium-glow",
+            fadeout = true,
+            light = {intensity = 2, size = 20, shift = {0.0, 0.0}, color = {r = 0.584, g = 0.8, b = 1.0}}
+        },
+        {
             north_position = util.by_pixel(-0, -208),
             west_position = util.by_pixel(-0, -208),
             south_position = util.by_pixel(-0, -208),
@@ -81,6 +86,8 @@ ENTITY {
                 height = 384,
                 animation_speed = 0.3,
                 draw_as_glow = true,
+                effect = "uranium-glow",
+                fadeout = true,
             }
         },
     },

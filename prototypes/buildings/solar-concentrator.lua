@@ -70,6 +70,11 @@ ENTITY {
     },
     working_visualisations = {
         {
+            effect = "uranium-glow",
+            fadeout = true,
+            light = {intensity = 1.3, size = 30, shift = {0.0, 0.0}, color = {r = 0.584, g = 1.0, b = 1.0}}
+        },
+        {
             north_position = util.by_pixel(-96, 16),
             west_position = util.by_pixel(-96, 16),
             south_position = util.by_pixel(-96, 16),
@@ -113,6 +118,8 @@ ENTITY {
                 animation_speed = 0.3,
                 blend_mode = "additive",
                 draw_as_glow = true,
+                effect = "uranium-glow",
+                fadeout = true,
             }
         },
         {
@@ -129,6 +136,8 @@ ENTITY {
                 animation_speed = 0.3,
                 blend_mode = "additive",
                 draw_as_glow = true,
+                effect = "uranium-glow",
+                fadeout = true,
             }
         },
         {
@@ -145,6 +154,8 @@ ENTITY {
                 animation_speed = 0.3,
                 blend_mode = "additive",
                 draw_as_glow = true,
+                effect = "uranium-glow",
+                fadeout = true,
             }
         },
     },
@@ -214,7 +225,7 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 1.0},
+        sound = {filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 0.5},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 0.1},
         apparent_volume = 2.5
     }
