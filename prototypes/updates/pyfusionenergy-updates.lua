@@ -17,7 +17,7 @@ RECIPE("secondary-crusher-mk01"):add_ingredient({type = "item", name = "intermet
 RECIPE("thickener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
 RECIPE("gas-separator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("hydrocyclone-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
-RECIPE("automated-screener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
+--RECIPE("automated-screener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("centrifugal-pan-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("compressor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
 RECIPE("jig-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})

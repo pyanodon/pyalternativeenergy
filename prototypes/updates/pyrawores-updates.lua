@@ -1,11 +1,11 @@
 local fun = require("__pyrawores__/prototypes/functions/functions")
 
 --BUILDINDS--
-RECIPE("bof-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
-RECIPE("smelter-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 15})
+--RECIPE("bof-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+--RECIPE("smelter-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 15})
 RECIPE("casting-unit-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("eaf-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
-RECIPE("electrolyzer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+--RECIPE("electrolyzer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("flotation-cell-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("hydroclassifier-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("impact-crusher-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
@@ -107,6 +107,7 @@ RECIPE("u-83"):remove_unlock('uranium-mk04')
 
 RECIPE("20-u-powder"):remove_unlock("uranium-mk01")
 --RECIPE("u-pulp-01"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "powdered-u", amount = 5}):replace_ingredient('sulfuric-acid','hydrogen-peroxide'):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
+--TODO:look into uranium issues with pyro changes
 RECIPE("u-pulp-02"):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 RECIPE("u-pulp-03"):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 
