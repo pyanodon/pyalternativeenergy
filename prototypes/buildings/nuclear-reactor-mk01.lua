@@ -71,7 +71,7 @@ ENTITY {
         {
             effect = "uranium-glow",
             fadeout = true,
-            light = {intensity = 2, size = 20, shift = {0.0, 0.0}, color = {r = 0.584, g = 0.8, b = 1.0}}
+            light = {intensity = 1.3, size = 20, shift = {0.0, 0.0}, color = {r = 0.584, g = 0.8, b = 1.0}}
         },
         {
             north_position = util.by_pixel(-0, -208),
