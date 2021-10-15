@@ -1601,3 +1601,14 @@ ITEM {
     order = "ab",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "microwave-satellite",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/microwave-satellite.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-special-buildings",
+    order = "fa",
+    stack_size = 5
+}

@@ -763,3 +763,23 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("nano-tech")
+
+RECIPE {
+    type = "recipe",
+    name = "microwave-satellite",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 120,
+    ingredients = {
+        {type = "item", name = "low-density-structure", amount = 100},
+        {type = "item", name = "solar-panel-mk02", amount = 4},
+        {type = "item", name = "advanced-circuit", amount = 30},
+        {type = "item", name = "aramid", amount = 50},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "control-unit", amount = 5},
+    },
+    results = {
+        {type = "item", name = "microwave-satellite", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("microwave-receiver")

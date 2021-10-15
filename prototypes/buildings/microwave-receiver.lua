@@ -26,7 +26,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
-    order = "a",
+    order = "f",
     place_result = "microwave-receiver",
     stack_size = 10
 }
