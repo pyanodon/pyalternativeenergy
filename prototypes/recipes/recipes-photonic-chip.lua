@@ -103,7 +103,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "animal-eye", amount = 10},
         {type = "item", name = "purine-analogues", amount = 2},
-        {type = "item", name = "lab-instrument", amount = 2},
+        {type = "item", name = "lab-instrument", amount = 4},
         {type = "item", name = "arqad-propolis", amount = 2},
         {type = "fluid", name = "organic-solvent", amount = 200},
         {type = "fluid", name = "water", amount = 200},

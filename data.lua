@@ -32,6 +32,7 @@ require("prototypes.technologies.gd")
 require("prototypes.technologies.intermetallics")
 require("prototypes.technologies.battery")
 require("prototypes.technologies.photonics")
+require("prototypes.technologies.microwave-receiver")
 require("prototypes/technologies/nuclear-power")
 
 -- ))
@@ -185,6 +186,7 @@ require("prototypes/buildings/coal-powerplant-mk01")
 require("prototypes/buildings/oil-powerplant-mk01")
 require("prototypes/buildings/gas-powerplant-mk01")
 require("prototypes/buildings/biomass-powerplant-mk01")
+require("prototypes/buildings/microwave-receiver")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
