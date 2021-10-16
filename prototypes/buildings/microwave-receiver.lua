@@ -32,10 +32,10 @@ ITEM {
 }
 
 ENTITY {
-    type = "assembling-machine",
+    type = "electric-energy-interface",
     name = "microwave-receiver",
     icon = "__pyalternativeenergygraphics__/graphics/icons/microwave-receiver.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "microwave-receiver"},
     max_health = 200,
@@ -44,18 +44,15 @@ ENTITY {
     collision_box = {{-4.3, -4.3}, {4.3, 4.3}},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 0
-    },
-    allowed_effects = {"speed"},
-    crafting_categories = {"solar-tower"},
-    crafting_speed = 1,
     energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 4
+        type = 'electric',
+        usage_priority = 'primary-output',
+        buffer_capacity = '5MJ',
+        --output_flow_limit = "500MW",
+        render_no_power_icon = false
     },
-    energy_usage = "500kW",
+    energy_production = '5MW',
+    energy_usage = '0kW',
     animation = {
         layers = {
             {

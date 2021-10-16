@@ -1,6 +1,10 @@
 script.on_init(function()
     global.windmills = {}
     global.reactor_tanks = {}
+    global.microwave_satellites =
+        {
+            orphan_sats = 0
+        }
 end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
@@ -82,6 +86,14 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             -- moderator = moderator
         }
         log(serpent.block(global.reactor_tanks))
+    elseif E.name == "microwave-receiver" then
+        global.microwave_satellites[E.unit_number] =
+            {
+                reciver = E,
+                satellites = 0,
+                max = 10
+            }
+
     end
 end)
 
@@ -185,4 +197,51 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         global.windmills[E.unit_number] = nil
     end
     log(serpent.block(global.windmills))
+end)
+
+script.on_event(defines.events.on_rocket_launched, function(event)
+
+    local r_inv = event.rocket.get_inventory(defines.inventory.rocket).get_contents()
+    local items = 0
+    log(serpent.block(r_inv))
+    for s, sat in pairs(r_inv) do
+        log(s)
+        log(sat)
+        if s == "microwave-satellite" then
+            items = sat
+        end
+    end
+    log(items)
+
+    if items > 0 then
+        log('hit')
+        for r, recivers in pairs(global.microwave_satellites) do
+            --log('hit')
+            if items > 0 then
+                --log('hit')
+                local sats = recivers.satellites
+                if sats < recivers.max then
+                    --log('hit')
+                    sats = sats + items
+                    items = 0
+                end
+                if sats > recivers.max then
+                    --log('hit')
+                    items = sats - recivers.max
+                    sats = reciver.max
+                end
+                --log('hit')
+                --log(sats)
+                recivers.satellites = sats
+                --log(serpent.block(global.microwave_satellites))
+                recivers.reciver.power_production = sats * 83333.34
+                recivers.reciver.electric_buffer_size = sats * 5000000
+                --log(serpent.block(recivers.reciver.power_production))
+            else
+                break
+            end
+            log(items)
+            global.microwave_satellites.orphan_sats = global.microwave_satellites.orphan_sats + items
+        end
+    end
 end)
