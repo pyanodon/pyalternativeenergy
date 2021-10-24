@@ -34,6 +34,7 @@ RECIPE("reformer-mk02"):add_ingredient({type = "item", name = "self-assembly-mon
 RECIPE("tholin-atm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("tholin-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("upgrader-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
+RECIPE("guar-gum-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("sulfur-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 
 RECIPE("natural-gas-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
@@ -50,6 +51,8 @@ RECIPE("reformer-mk03"):add_ingredient({type = "item", name = "ns-material", amo
 RECIPE("tholin-atm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 RECIPE("tholin-plant-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 RECIPE("upgrader-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
+RECIPE("guar-gum-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
+
 
 RECIPE("natural-gas-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4})
 RECIPE("bitumen-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
@@ -67,3 +70,4 @@ RECIPE("tholin-plant-mk04"):add_ingredient({type = "item", name = "metastable-qu
 RECIPE("upgrader-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10})
 RECIPE("retorter"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10})
 RECIPE("fracking-rig"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 30})
+RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10})
