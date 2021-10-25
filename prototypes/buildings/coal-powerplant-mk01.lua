@@ -4,7 +4,13 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"electric-mining-drill", 10},
+        {"electronic-circuit", 100},
+        {"iron-gear-wheel", 300},
+        {"gasifier", 1},
+        {"steel-plate", 200},
+        {"engine-unit", 20},
+        {'intermetallics', 50},
     },
     results = {
         {"coal-powerplant-mk01", 1}

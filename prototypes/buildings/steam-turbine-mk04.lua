@@ -32,7 +32,7 @@ ENTITY {
     minable = {mining_time = 1, result = "steam-turbine-mk04"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 4,
+    effectivity = 1,
     fluid_usage_per_tick = 1,
     maximum_temperature = 5000,
     resistances = {
@@ -46,7 +46,7 @@ ENTITY {
     fluid_input = {
         name = "pressured-steam",
         amount = 0.0,
-        minimum_temperature = 500.0
+        minimum_temperature = 3000.0
     },
     fluid_box = {
         base_area = 1,

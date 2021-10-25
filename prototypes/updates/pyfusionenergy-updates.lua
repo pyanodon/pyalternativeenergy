@@ -8,7 +8,7 @@ RECIPE("lead-container"):remove_unlock('diamond-mining'):add_unlock('production-
 RECIPE("science-coating"):remove_unlock('diamond-mining'):add_unlock('production-science-pack')
 RECIPE("coated-container"):remove_unlock('diamond-mining'):add_unlock('production-science-pack')
 RECIPE("grease-table-mk01"):remove_unlock('diamond-mining'):add_unlock('machines-mk02')
-RECIPE("py-turbine"):remove_unlock('fusion-1'):add_unlock('nonrenewable-mk01'):subgroup_order("py-alternativeenergy-buildings-mk01", "d")
+RECIPE("py-turbine"):remove_unlock('fusion-mk01')
 
 --BUILDINDS--
 RECIPE("agitator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -71,7 +71,6 @@ RECIPE("grease-table-mk04"):add_ingredient({type = "item", name = "metastable-qu
 RECIPE("mixer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("fusion-reactor-mk01"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("fusion-reactor-mk02"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
-RECIPE("py-turbine"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}) --check after made the turbine
 
 RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "super-alloy", amount = 50}):add_ingredient({type = "item", name = "py-heat-exchanger", amount = 1})
 RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "nbti-alloy", amount = 30}):add_ingredient({type = "item", name = "wall-shield", amount = 5}):add_ingredient({type = "item", name = "science-coating", amount = 10}):add_ingredient({type = "item", name = "control-unit", amount = 5})

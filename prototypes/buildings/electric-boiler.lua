@@ -113,6 +113,14 @@ ENTITY {
             height = 224,
             shift = util.by_pixel(0, -64),
           },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png",
+            priority = "extra-high",
+            width = 160,
+            height = 64,
+            draw_as_shadow = true,
+            shift = util.by_pixel(32, 16),
+          },
         }
       },
       east =
@@ -125,6 +133,14 @@ ENTITY {
             width = 96,
             height = 224,
             shift = util.by_pixel(0, -64),
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png",
+            priority = "extra-high",
+            width = 160,
+            height = 64,
+            draw_as_shadow = true,
+            shift = util.by_pixel(32, 16),
           },
         }
       },
@@ -139,6 +155,14 @@ ENTITY {
             height = 224,
             shift = util.by_pixel(0, -64),
           },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png",
+            priority = "extra-high",
+            width = 160,
+            height = 64,
+            draw_as_shadow = true,
+            shift = util.by_pixel(32, 16),
+          },
         }
       },
       west =
@@ -151,6 +175,14 @@ ENTITY {
             width = 96,
             height = 224,
             shift = util.by_pixel(0, -64),
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png",
+            priority = "extra-high",
+            width = 160,
+            height = 64,
+            draw_as_shadow = true,
+            shift = util.by_pixel(32, 16),
           },
         }
       },
