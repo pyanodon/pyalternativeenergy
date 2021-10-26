@@ -112,8 +112,7 @@ end
 
 script.on_nth_tick(60, function(event)
     local wind_dir = game.surfaces['nauvis'].wind_orientation
-    -- local wind_speed = game.surfaces['nauvis'].wind_speed
-    -- log(wind_speed)
+    log(wind_dir)
     local dir = ''
     if wind_dir > 0.9375 and wind_dir <= 0.0625 then
         dir = '-north'
@@ -146,6 +145,7 @@ script.on_nth_tick(60, function(event)
     end
 end)
 
+--[[
 script.on_nth_tick(60, function(event)
 
     if next(global.reactor_tanks) ~= nil then
@@ -185,6 +185,7 @@ script.on_nth_tick(60, function(event)
     end
 
 end)
+]]--
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
     local E = event.entity

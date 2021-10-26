@@ -1,6 +1,19 @@
 --TECHNOLOGY--
 
 --BUILDINDS--
+
+--RECIPE--
+
+--remove combustion mix stuff
+RECIPE("power-house"):remove_unlock('energy-1')
+RECIPE("power-house-mk02"):remove_unlock('')
+RECIPE("power-house-mk03"):remove_unlock('')
+RECIPE("power-house-mk04"):remove_unlock('')
+
+RECIPE("gasturbinemk01"):remove_unlock('energy-1')
+RECIPE("gasturbinemk02"):remove_unlock('energy-2')
+RECIPE("gasturbinemk03"):remove_unlock('energy-3')
+
 --RECIPE("advanced-foundry-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("automated-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("ground-borer"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
