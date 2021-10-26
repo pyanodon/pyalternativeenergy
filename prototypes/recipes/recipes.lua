@@ -783,3 +783,18 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("microwave-receiver")
+
+RECIPE {
+    type = "recipe",
+    name = "molten-salt",
+    category = "bof",
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = "item", name = "salt", amount = 300},
+    },
+    results = {
+        {type = "fluid", name = "molten-salt", amount = 100},
+    },
+    --main_product = "eg-si",
+}:add_unlock("energy-1")
