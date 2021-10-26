@@ -75,9 +75,9 @@ ENTITY {
           {
             name = "fire-smoke-on-adding-fuel",
             north_position = util.by_pixel(-16, -432),
-            south_position = util.by_pixel(-0, -0),
-            east_position = util.by_pixel(-0, -0),
-            west_position = util.by_pixel(-0, -0),
+            south_position = util.by_pixel(-16, -432)
+            east_position = util.by_pixel(-16, -432)
+            west_position = util.by_pixel(-16, -432)
             frequency = 25,
             slow_down_factor = 0.1,
             starting_vertical_speed = 0.16,
