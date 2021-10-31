@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "centrifuge-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/centrifuge-mk01.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "centrifuge-mk01"},
     max_health = 200,

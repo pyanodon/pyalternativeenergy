@@ -4,7 +4,7 @@ FLUID {
     name = "reactor-waste-3",
     icon = "__base__/graphics/icons/iron-plate.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_color = {r = 0.180, g = 0.756, b = 0.196},
     flow_color = {r = 0.180, g = 0.756, b = 0.196},

@@ -27,7 +27,7 @@ ENTITY {
     type = "assembling-machine",
     name = "neutron-absorber-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/neutron-absorber-mk03.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "neutron-absorber-mk03"},
     max_health = 200,
