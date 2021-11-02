@@ -7,6 +7,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "fdtd", amount = 1},
         {type = "item", name = "fbg", amount = 2},
+        {type = "item", name = "milfe", amount = 3},
         {type = "item", name = "anti-reflex-glass", amount = 2},
         {type = "item", name = "biopolymer", amount = 3},
         {type = "item", name = "optical-fiber", amount = 3},

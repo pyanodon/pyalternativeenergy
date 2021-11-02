@@ -4,15 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = true,
     ingredients = {
-      {'super-alloy', 15},
+      {'super-alloy', 50},
       {'mqdc', 10},
       {'anti-reflex-glass', 20},
       {'intelligent-unit', 5},
       {'metastable-quasicrystal', 1},
-      {'small-parts-03', 25},
-      {'biopolymer', 10},
-      {'molybdenum-plate', 5},
+      {'small-parts-03', 100},
+      {'biopolymer', 30},
+      {'molybdenum-plate', 10},
       {'carbon-nanotube', 10},
+      {'milfe', 5},
   },
   results = {{'solar-panel-mk04', 1}}
 

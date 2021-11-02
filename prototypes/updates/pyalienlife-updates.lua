@@ -230,6 +230,13 @@ RECIPE('sodium-cyanate'):add_ingredient({type = "item", name = "urea", amount = 
 RECIPE('oxalic-acid'):add_ingredient({type = "item", name = "sugar", amount = 5})
 RECIPE('gd-metal'):add_ingredient({type = "item", name = "cobalt-extract", amount = 2})
 RECIPE('chloral'):set_category("chemistry")
+RECIPE('nanocarrier'):add_ingredient({type = "item", name = "metallic-glass", amount = 1})
+RECIPE('gh'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
+RECIPE('gh-2'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
+RECIPE('antiviral'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
+RECIPE('antiviral-02'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
+RECIPE('nanochondria'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
+RECIPE('adam42-gen'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 
 ----EXCLUSIVE RECIPES----
 

@@ -1614,3 +1614,58 @@ ITEM {
     fuel_category = 'microwave',
     fuel_value = "5MJ"
 }
+
+ITEM {
+    type = "item",
+    name = "dodecanoic-acid",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/dodecanoic-acid.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "dodecylamine",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/dda.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "iron-nanoparticles",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/iron-nanoparticles.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "milfe",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/milfe.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "nanocarrier",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nanocarrier.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 500
+}
