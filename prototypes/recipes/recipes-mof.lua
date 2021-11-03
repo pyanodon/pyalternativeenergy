@@ -23,7 +23,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "item", name = "dodecanoic-acid", amount = 1},
-        {type = "item", name = "empty-steel-barrel", amount = 1},
+        {type = "item", name = "empty-barrel", amount = 1},
         {type = "item", name = "molybdenum-plate", amount = 5},
         {type = "fluid", name = "ammonia", amount = 200},
         {type = "fluid", name = "water", amount = 100},
@@ -41,7 +41,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "dodecanoic-acid", amount = 1},
+        {type = "item", name = "dodecylamine", amount = 1},
         {type = "item", name = "plastic-bar", amount = 5},
         {type = "item", name = "iron-plate", amount = 10},
         {type = "item", name = "copper-plate", amount = 5},
@@ -88,4 +88,4 @@ RECIPE {
         {type = "item", name = "nanocarrier", amount = 1},
     },
     --main_product = "dodecanoic-acid",
-}:add_unlock("gh")
+}:add_unlock("growth-hormone")

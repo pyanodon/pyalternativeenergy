@@ -361,6 +361,7 @@ RECIPE {
         {type = "item", name = "dieletric-layer", amount = 1},
         {type = "item", name = "fluorophore", amount = 1},
         {type = "item", name = "plasmonic-core", amount = 1},
+        {type = "item", name = "milfe", amount = 1},
     },
     results = {
         {type = "item", name = "core-shell", amount = 1},

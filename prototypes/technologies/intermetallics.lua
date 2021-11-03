@@ -39,14 +39,15 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/intermetallics-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'machines-mk03','intermetallics-mk02'},
+    prerequisites = {'machines-mk03','intermetallics-mk02','mof'},
     effects = {},
     unit = {
         count = 350,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
-            {'chemical-science-pack', 1}
+            {'chemical-science-pack', 1},
+            {'py-science-pack-2', 1},
         },
         time = 60
     }
