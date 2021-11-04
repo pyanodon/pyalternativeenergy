@@ -15,6 +15,21 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "organic-pulp-03",
+    category = "pulp",
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = "item", name = "grod", amount = 120},
+    },
+    results = {
+        {type = "fluid", name = "organic-pulp", amount = 50},
+    },
+    main_product = "organic-pulp",
+}:add_unlock("mof")
+
+RECIPE {
+    type = "recipe",
     name = "organic-pulp-02",
     category = "pulp",
     enabled = false,
