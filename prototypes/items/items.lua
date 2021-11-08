@@ -1669,3 +1669,80 @@ ITEM {
     order = "ab",
     stack_size = 500
 }
+
+ITEM {
+    type = "item",
+    name = "tbp",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/tbp.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "sb-silicate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/sb-silicate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "pyridine",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/pyridine.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "pocl3",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/pocl3.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "lithium-hydroxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-hydroxide.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "lithium-carbonate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-carbonate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "acetaldehyde",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/acetaldehyde.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ab",
+    stack_size = 100
+}
