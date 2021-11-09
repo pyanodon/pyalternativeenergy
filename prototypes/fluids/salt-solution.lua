@@ -1,3 +1,20 @@
+RECIPE {
+    type = "recipe",
+    name = "salt-solution",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "sb-silicate", amount = 1},
+        {type = "fluid", name = "geothermal-water", amount = 150},
+    },
+    results = {
+        {type = "item", name = "pu-238", amount = 1, probability = 0.05},
+        {type = "fluid", name = "salt-solution", amount = 100},
+    },
+    main_product = "salt-solution",
+}:add_unlock("lithium-processing")
+
 FLUID {
     type = "fluid",
     name = "salt-solution",

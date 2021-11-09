@@ -1,3 +1,19 @@
+RECIPE {
+    type = "recipe",
+    name = "filtered-silicate-solution",
+    category = "carbonfilter",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "filtration-media", amount = 2},
+        {type = "fluid", name = "silicate-solution", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "filtered-silicate-solution", amount = 100},
+    },
+    --main_product = "dodecanoic-acid",
+}:add_unlock("lithium-processing")
+
 FLUID {
     type = "fluid",
     name = "filtered-silicate-solution",

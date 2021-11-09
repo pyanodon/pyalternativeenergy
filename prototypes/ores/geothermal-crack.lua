@@ -32,6 +32,7 @@ DATA {
             type = "fluid",
             name = "geothermal-water",
             amount = 100,
+            temperature = 300,
             }
         },
         fluid_amount = 100,
@@ -51,8 +52,8 @@ DATA {
         has_starting_area_placement = false,
         random_spot_size_minimum = 1,
         random_spot_size_maximum = 2,
-        additional_richness = 10000,
-        regular_rq_factor_multiplier = 1
+        additional_richness = 30000,
+        regular_rq_factor_multiplier = 1.1
         --starting_rq_factor_multiplier = 2,
         --candidate_spot_count = 20
     },

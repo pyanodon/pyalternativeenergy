@@ -1,3 +1,21 @@
+RECIPE {
+    type = "recipe",
+    name = "silicate-solution",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "sb-oxide", amount = 1},
+        {type = "fluid", name = "teos", amount = 50},
+        {type = "fluid", name = "sulfuric-acid", amount = 100},
+        {type = "fluid", name = "ethanol", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "silicate-solution", amount = 100},
+    },
+    --main_product = "dodecanoic-acid",
+}:add_unlock("lithium-processing")
+
 FLUID {
     type = "fluid",
     name = "silicate-solution",
