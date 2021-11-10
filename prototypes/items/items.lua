@@ -636,7 +636,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "lithium",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/oxalic-acid.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-plate.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",

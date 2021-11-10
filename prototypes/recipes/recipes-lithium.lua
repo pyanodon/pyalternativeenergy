@@ -124,3 +124,19 @@ RECIPE {
     },
     main_product = "lithium-hydroxide",
 }:add_unlock("lithium-processing")
+
+RECIPE {
+    type = "recipe",
+    name = "lithium",
+    category = "electrolyzer",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "water", amount = 100},
+        {type = "item", name = "lithium-hydroxide", amount = 1},
+    },
+    results = {
+        {type = "item", name = "lithium", amount = 2},
+    },
+    --main_product = "lithium-hydroxide",
+}:add_unlock("lithium-processing")
