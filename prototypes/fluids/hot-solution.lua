@@ -5,7 +5,6 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "sb-silicate", amount = 1},
         {type = "fluid", name = "salt-solution", amount = 100},
         {type = "fluid", name = "mibc", amount = 50},
         {type = "item", name = "tbp", amount = 1},

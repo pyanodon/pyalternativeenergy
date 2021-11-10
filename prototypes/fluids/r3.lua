@@ -1,3 +1,18 @@
+RECIPE {
+    type = "recipe",
+    name = "r3",
+    category = "evaporator",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "r2", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "r3", amount = 100},
+    },
+    --main_product = "r2",
+}:add_unlock("lithium-processing")
+
 FLUID {
     type = "fluid",
     name = "r3",

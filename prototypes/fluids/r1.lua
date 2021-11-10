@@ -1,3 +1,22 @@
+RECIPE {
+    type = "recipe",
+    name = "r1",
+    category = "carbonfilter",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "nano-cellulose", amount = 1},
+        {type = "fluid", name = "anolyte", amount = 100},
+        {type = "fluid", name = "vacuum", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "r1", amount = 100},
+        {type = "fluid", name = "dirty-water-heavy", amount = 50},
+    },
+    main_product = "r1",
+}:add_unlock("lithium-processing")
+
+
 FLUID {
     type = "fluid",
     name = "r1",

@@ -1,3 +1,19 @@
+RECIPE {
+    type = "recipe",
+    name = "r4",
+    category = "mixer",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "r3", amount = 100},
+        {type = "item", name = "sodium-hydroxide", amount = 5},
+    },
+    results = {
+        {type = "fluid", name = "r4", amount = 100},
+    },
+    --main_product = "r2",
+}:add_unlock("lithium-processing")
+
 FLUID {
     type = "fluid",
     name = "r4",

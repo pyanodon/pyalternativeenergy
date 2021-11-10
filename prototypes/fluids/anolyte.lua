@@ -1,3 +1,21 @@
+RECIPE {
+    type = "recipe",
+    name = "anolyte",
+    category = "electrolyzer",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "iron-plate", amount = 2},
+        {type = "fluid", name = "mother-liquor", amount = 100},
+        {type = "fluid", name = "hot-solution", amount = 100},
+        {type = "fluid", name = "phosphoric-acid", amount = 100},
+    },
+    results = {
+        {type = "fluid", name = "anolyte", amount = 100},
+    },
+    --main_product = "dodecanoic-acid",
+}:add_unlock("lithium-processing")
+
 FLUID {
     type = "fluid",
     name = "anolyte",

@@ -1,3 +1,20 @@
+RECIPE {
+    type = "recipe",
+    name = "r2",
+    category = "carbonfilter",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "filtration-media", amount = 1},
+        {type = "fluid", name = "r1", amount = 50},
+    },
+    results = {
+        {type = "fluid", name = "r2", amount = 50},
+        {type = "fluid", name = "dirty-water-heavy", amount = 50},
+    },
+    main_product = "r2",
+}:add_unlock("lithium-processing")
+
 FLUID {
     type = "fluid",
     name = "r2",

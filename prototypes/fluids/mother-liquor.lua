@@ -1,3 +1,37 @@
+RECIPE {
+    type = "recipe",
+    name = "mother-liquor",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "r4", amount = 100},
+        {type = "item", name = "sodium-carbonate", amount = 1},
+        {type = "item", name = "flask", amount = 1},
+    },
+    results = {
+        {type = "fluid", name = "mother-liquor", amount = 100},
+        {type = "item", name = "lithium-carbonate", amount = 1},
+    },
+    main_product = "lithium-carbonate",
+}:add_unlock("lithium-processing")
+
+RECIPE {
+    type = "recipe",
+    name = "mother-liquor-prime",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "hot-solution", amount = 100},
+        {type = "item", name = "chromium", amount = 5},
+    },
+    results = {
+        {type = "fluid", name = "mother-liquor", amount = 20},
+    },
+    --main_product = "r2",
+}:add_unlock("lithium-processing")
+
 FLUID {
     type = "fluid",
     name = "mother-liquor",
