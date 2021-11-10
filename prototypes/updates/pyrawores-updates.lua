@@ -68,7 +68,6 @@ RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','processing-unit'):r
 --RECIPES--
 RECIPE("plastic3"):replace_ingredient('nitrobenzene','aniline')
 
-
 --RECIPE MOVING--
 RECIPE("eaf-mk01"):remove_unlock('aluminium-mk01'):add_unlock('machines-mk01')
 

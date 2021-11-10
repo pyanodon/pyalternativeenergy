@@ -237,6 +237,8 @@ RECIPE('antiviral'):add_ingredient({type = "item", name = "nanocarrier", amount 
 RECIPE('antiviral-02'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 RECIPE('nanochondria'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 RECIPE('adam42-gen'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
+RECIPE("biobattery"):remove_unlock('chitin'):add_unlock({"battery-mk03"})
+RECIPE("nanofibrils"):remove_unlock('chitin'):add_unlock({"battery-mk03"})
 
 ----EXCLUSIVE RECIPES----
 
@@ -291,6 +293,7 @@ RECIPE {
         {type = "item", name = "cdna", amount = 5},
         {type = "item", name = "bio-sample01", amount = 10},
         {type = "item", name = "hyaline", amount = 2},
+        {type = "item", name = "nanofibrils", amount = 1},
         {type = "item", name = "xeno-egg", amount = 5},
     },
     results = {

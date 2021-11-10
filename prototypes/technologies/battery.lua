@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/battery-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'genetic-design','battery-mk02'},
+    prerequisites = {'chitin','battery-mk02'},
     effects = {},
     unit = {
         count = 300,

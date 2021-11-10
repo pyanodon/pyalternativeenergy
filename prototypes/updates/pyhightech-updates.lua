@@ -2,6 +2,7 @@
 --TECHNOLOGY--
 TECHNOLOGY('quantum'):add_prereq('machines-mk02')
 TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04')
+TECHNOLOGY('ht-trains'):add_prereq('battery-mk02')
 
 --BUILDINDS--
 --RECIPE("clay-pit-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
@@ -74,5 +75,8 @@ RECIPE("py-construction-robot-02"):add_ingredient({type = "item", name = "self-a
 RECIPE("py-logistic-robot-02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("construction-robot-ht"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3})
 RECIPE("logistic-robot-ht"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3})
+RECIPE('lithium-chloride'):remove_ingredient("reo"):add_ingredient({type = "item", name = "lithium-hydroxide", amount = 1})
+RECIPE("nexelit-battery"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"})
+RECIPE("nexelit-battery-recharge"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"})
 
 ----EXCLUSIVE RECIPES----
