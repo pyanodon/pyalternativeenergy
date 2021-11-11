@@ -5,14 +5,76 @@
 --RECIPE--
 
 --remove combustion mix stuff
-RECIPE("power-house"):remove_unlock('energy-1')
-RECIPE("power-house-mk02"):remove_unlock('')
-RECIPE("power-house-mk03"):remove_unlock('')
-RECIPE("power-house-mk04"):remove_unlock('')
+RECIPE("power-house"):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE("power-house-mk02"):remove_unlock('machines-mk02'):set_fields{hidden = true}
+RECIPE("power-house-mk03"):remove_unlock('machines-mk03'):set_fields{hidden = true}
+RECIPE("power-house-mk04"):remove_unlock('machines-mk04'):set_fields{hidden = true}
 
-RECIPE("gasturbinemk01"):remove_unlock('energy-1')
-RECIPE("gasturbinemk02"):remove_unlock('energy-2')
-RECIPE("gasturbinemk03"):remove_unlock('energy-3')
+RECIPE("gasturbinemk01"):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE("gasturbinemk02"):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE("gasturbinemk03"):remove_unlock('energy-3'):set_fields{hidden = true}
+
+--disabling all combustion recipes
+RECIPE('coalgas-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('coalslurry-combustion'):remove_unlock('fluid-separation'):set_fields{hidden = true}
+RECIPE('syngas-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('diborane-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('heavy-oil-combustion'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('light-oil-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('petgas-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('methanol-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('refsyngas-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('olefin-combustion'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('supercritical-combustion'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('ultrasupercritical-combustion'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('methane-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('benzene-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('tall-oil-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('hydrogen-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('subcritical-water-01'):remove_unlock('biotech-mk01'):set_fields{hidden = true}
+RECIPE('subcritical-water-02'):remove_unlock('biotech-mk02'):set_fields{hidden = true}
+RECIPE('oleochemical-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('fish-oil-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('lard-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('ethanol-combustion'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('bio-oil-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('acetylene-combustion'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('gasoline-combustion'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('kerosene-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('fuelrodmk02-combustion'):remove_unlock('fuel-production'):set_fields{hidden = true}
+RECIPE('fuelrodmk03-combustion'):remove_unlock('fuel-production'):set_fields{hidden = true}
+RECIPE('fuelrodmk04-combustion'):remove_unlock('fuel-production'):set_fields{hidden = true}
+RECIPE('fuelrodmk05-combustion'):remove_unlock('fuel-production'):set_fields{hidden = true}
+RECIPE('diesel-combustion'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('fuel-oil-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('natural-gas-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('aromatics-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('scrude-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('crude-oil-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('naphtha-combustion'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('lubricant-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('xylenol-combustion'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('methane-combustion-biomass'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('benzene-combustion-biomass'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('tall-oil-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('hydrogen-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('oleochemical-combustion-biomass'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('fish-oil-combustion-biomass'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('lard-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('ethanol-combustion-biomass'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('bio-oil-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('acetylene-combustion-biomass'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('gasoline-combustion-biomass'):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE('fuel-oil-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('natural-gas-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('aromatics-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('scrude-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('crude-oil-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('naphtha-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden = true}
+RECIPE('lubricant-combustion-biomass'):remove_unlock('energy-2'):set_fields{hidden = true}
+RECIPE('xylenol-combustion-biomass'):remove_unlock('energy-2')
+
+RECIPE("evaporator"):remove_ingredient('gasturbinemk01')
 
 --RECIPE("advanced-foundry-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("automated-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})

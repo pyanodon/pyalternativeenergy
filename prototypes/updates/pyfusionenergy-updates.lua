@@ -42,7 +42,7 @@ RECIPE("mixer-mk02"):add_ingredient({type = "item", name = "self-assembly-monola
 
 RECIPE("agitator-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("vacuum-pump-mk03"):add_ingredient({type = "item", name = "ns-material", amount =2})
-RECIPE("mo-mine"):add_ingredient({type = "item", name = "ns-material", amount = 5})
+--RECIPE("mo-mine"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("nmf-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("secondary-crusher-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
 RECIPE("thickener-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7})

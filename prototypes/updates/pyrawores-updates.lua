@@ -63,7 +63,7 @@ RECIPE("leaching-station-mk04"):add_ingredient({type = "item", name = "metastabl
 RECIPE("scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10})
 RECIPE("wet-scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6})
 RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','processing-unit'):remove_unlock('machine-mk04'):add_unlock('machine-mk03'):add_ingredient({type = "item", name = "ns-material", amount = 20})
-
+RECIPE("p2s5"):remove_unlock('machines-mk03'):add_unlock('machines-mk02')
 
 --RECIPES--
 RECIPE("plastic3"):replace_ingredient('nitrobenzene','aniline')
