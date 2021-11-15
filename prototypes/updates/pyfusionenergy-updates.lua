@@ -24,7 +24,7 @@ RECIPE("jig-mk01"):add_ingredient({type = "item", name = "intermetallics", amoun
 RECIPE("grease-table-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
 RECIPE("mixer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 
-RECIPE("py-heat-exchanger"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
+RECIPE("py-heat-exchanger"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):remove_unlock('fusion-mk01')
 RECIPE("agitator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("vacuum-pump-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount =2})
 RECIPE("nmf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
@@ -74,3 +74,5 @@ RECIPE("fusion-reactor-mk02"):add_ingredient({type = "item", name = "metastable-
 
 RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "super-alloy", amount = 50}):add_ingredient({type = "item", name = "py-heat-exchanger", amount = 1})
 RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "nbti-alloy", amount = 30}):add_ingredient({type = "item", name = "wall-shield", amount = 5}):add_ingredient({type = "item", name = "science-coating", amount = 10}):add_ingredient({type = "item", name = "control-unit", amount = 5})
+
+RECIPE("blanket"):add_ingredient({type = "item", name = "lithium", amount = 5})

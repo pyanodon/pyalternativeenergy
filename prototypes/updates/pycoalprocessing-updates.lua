@@ -1,5 +1,5 @@
 --TECHNOLOGY--
-
+TECHNOLOGY('filtration-2'):add_prereq('lithium-processing')
 --BUILDINDS--
 
 --RECIPE--
@@ -198,3 +198,4 @@ RECIPE("soil-extractormk04"):add_ingredient({type = "item", name = "metastable-q
 RECIPE("drill-head"):remove_unlock('niobium'):add_unlock('machines-mk01')
 
 ----EXCLUSIVE RECIPES----
+RECIPE("lithium-peroxide"):add_ingredient({type = "item", name = "lithium", amount = 3})
