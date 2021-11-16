@@ -1,35 +1,35 @@
 RECIPE {
     type = "recipe",
-    name = "gas-powerplant-mk01",
+    name = "py-gas-powerplant-mk01",
     energy_required = 5,
     enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
-        {"gas-powerplant-mk01", 1}
+        {"py-gas-powerplant-mk01", 1}
     }
 }:add_unlock("gasplant-mk01")
 
 ITEM {
     type = "item",
-    name = "gas-powerplant-mk01",
+    name = "py-gas-powerplant-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gas-powerplant-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    place_result = "gas-powerplant-mk01",
+    place_result = "py-gas-powerplant-mk01",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "gas-powerplant-mk01",
+    name = "py-gas-powerplant-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gas-powerplant-mk01.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "gas-powerplant-mk01"},
+    minable = {mining_time = 0.1, result = "py-gas-powerplant-mk01"},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
@@ -40,7 +40,7 @@ ENTITY {
         module_slots = 1
     },
     allowed_effects = {"speed"},
-    crafting_categories = {"solar-tower"},
+    crafting_categories = {"gas-powerplant"},
     crafting_speed = 1,
     energy_source =
     {
@@ -58,6 +58,7 @@ ENTITY {
           pipe_covers = DATA.Pipes.covers(false, true, true, true),
           pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
           production_type = "input",
+          filter = "raw-gas"
           },
       effectivity = 1,
       burns_fluid = true,

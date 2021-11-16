@@ -5,6 +5,7 @@ script.on_init(function()
         {
             orphan_sats = 0
         }
+    global.currently_selected_entity = {}
 end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
@@ -112,7 +113,7 @@ end
 
 script.on_nth_tick(60, function(event)
     local wind_dir = game.surfaces['nauvis'].wind_orientation
-    log(wind_dir)
+    --log(wind_dir)
     local dir = ''
     if wind_dir > 0.9375 and wind_dir <= 0.0625 then
         dir = '-north'
@@ -143,10 +144,6 @@ script.on_nth_tick(60, function(event)
         -- log(serpent.block(mill.power_production))
         -- mill.windmill.power_production = mill.max_power * wind_speed
     end
-end)
-
---[[
-script.on_nth_tick(60, function(event)
 
     if next(global.reactor_tanks) ~= nil then
         for t, tank in pairs(global.reactor_tanks) do
@@ -183,13 +180,11 @@ script.on_nth_tick(60, function(event)
             end
         end
     end
-
 end)
-]]--
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
     local E = event.entity
-    log('hit')
+    --log('hit')
     if E.type == 'electric-energy-interface' and
         (string.match(E.name, 'hawt%-turbine') ~= nil or string.match(E.name, 'multiblade%-turbine') ~= nil) then
         log('hit')
@@ -197,7 +192,7 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         rendering.destroy(mill.animation)
         global.windmills[E.unit_number] = nil
     end
-    log(serpent.block(global.windmills))
+    --log(serpent.block(global.windmills))
 end)
 
 script.on_event(defines.events.on_rocket_launched, function(event)
@@ -244,5 +239,60 @@ script.on_event(defines.events.on_rocket_launched, function(event)
             log(items)
             global.microwave_satellites.orphan_sats = global.microwave_satellites.orphan_sats + items
         end
+    end
+end)
+
+script.on_event(defines.events.on_gui_opened, function(event)
+    local E = event.entity
+    local player = game.players[event.player_index]
+    if E ~= nil and string.match(E.name, "py%-oil%-powerplant") ~= nil and player.gui.relative.fuel_frame == nil then
+        global.currently_selected_entity = E
+        --add fluid gui
+        local fuel_frame = player.gui.relative.add(
+            {
+                type = "frame",
+                name = "fuel_frame",
+                anchor =
+                {
+                    gui = defines.relative_gui_type.assembling_machine_gui,
+                    position = defines.relative_gui_position.right,
+                }
+            }
+        )
+        fuel_frame.add(
+            {
+                type = "label",
+                name = "test",
+                caption = "TESTING"
+            }
+        )
+        fuel_frame.add(
+            {
+                type = "choose-elem-button",
+                name = "fuel_selection",
+                elem_type = "fluid",
+                elem_filters =
+                {
+                    {
+                        filter = "subgroup",
+                        --type = "fluid",
+                        subgroup = "test"
+                    }
+                }
+            }
+        )
+    end
+end)
+
+script.on_event(defines.events.on_gui_elem_changed, function(event)
+    if event.element.name == "fuel_selection" then
+        --set filter to fluid
+        local E = global.currently_selected_entity
+        local setfil = E.fluidbox.set_filter(3, event.element.elem_value)
+        E.fluidbox = setfil
+        log(serpent.block(setfil))
+        log(serpent.block(E.fluidbox.get_locked_fluid(1)))
+        log(serpent.block(E.fluidbox.get_locked_fluid(2)))
+        log(serpent.block(E.fluidbox.get_locked_fluid(3)))
     end
 end)

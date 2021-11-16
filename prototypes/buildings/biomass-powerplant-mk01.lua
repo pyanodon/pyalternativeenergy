@@ -1,35 +1,35 @@
 RECIPE {
     type = "recipe",
-    name = "biomass-powerplant-mk01",
+    name = "py-biomass-powerplant-mk01",
     energy_required = 5,
     enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
-        {"biomass-powerplant-mk01", 1}
+        {"py-biomass-powerplant-mk01", 1}
     }
 }:add_unlock("biomassplant-mk01")
 
 ITEM {
     type = "item",
-    name = "biomass-powerplant-mk01",
+    name = "py-biomass-powerplant-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/biomass-powerplant-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    place_result = "biomass-powerplant-mk01",
+    place_result = "py-biomass-powerplant-mk01",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "biomass-powerplant-mk01",
+    name = "py-biomass-powerplant-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/biomass-powerplant-mk01.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "biomass-powerplant-mk01"},
+    minable = {mining_time = 0.1, result = "py-biomass-powerplant-mk01"},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
@@ -40,28 +40,13 @@ ENTITY {
         module_slots = 1
     },
     allowed_effects = {"speed"},
-    crafting_categories = {"solar-tower"},
+    crafting_categories = {"biomass-powerplant"},
     crafting_speed = 1,
     energy_source =
     {
-        type = "fluid",
-        emissions_per_minute = 15,
-        fluid_box =
-          {
-          base_area = 1,
-          height = 2,
-          base_level = -1,
-          pipe_connections =
-          {
-              {type = "input", position = {0, 8.0}}
-          },
-          pipe_covers = DATA.Pipes.covers(false, true, true, true),
-          pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-          production_type = "input",
-          },
+      type = "burner",
+      fuel_category = "biomass",
       effectivity = 1,
-      burns_fluid = true,
-      scale_fluid_usage = true,
       light_flicker =
       {
         minimum_intensity = 0,
@@ -69,8 +54,9 @@ ENTITY {
         light_intensity_to_size_coefficient = 0,
         color = {0,0,0},
       },
-      fluid_usage_per_tick = 20,
-        smoke =
+      fuel_inventory_size = 1,
+      emissions_per_minute = 12,
+      smoke =
         {
             {
                 name = "turbine-smoke",
@@ -85,7 +71,7 @@ ENTITY {
                 color = {r = 0.2, g = 0.2, b = 0.2},
             },
         }
-      },
+    },
     energy_usage = "800kW",
     animation = {
         layers = {

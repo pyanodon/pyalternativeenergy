@@ -56,7 +56,10 @@ require('prototypes/recipes/recipes-intermetallics')
 require('prototypes/recipes/recipes-photonic-chip')
 require('prototypes/recipes/recipes-extract-eyes')
 require('prototypes/recipes/recipes-heat-exchanger')
+require('prototypes/recipes/recipes-biomassplant')
 require('prototypes/recipes/recipes-coalplant')
+require('prototypes/recipes/recipes-gasplant')
+require('prototypes/recipes/recipes-oilplant')
 require("prototypes/recipes/recipes-nuclear")
 require("prototypes/recipes/recipes-mof")
 require("prototypes/recipes/recipes-lithium")
@@ -209,3 +212,5 @@ require("prototypes/buildings/electric-boiler")
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
 
+data.raw.fluid["crude-oil"].subgroup = "test"
+data.raw.fluid["gasoline"].subgroup = "test"

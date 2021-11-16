@@ -29,7 +29,7 @@ RECIPE("agitator-mk02"):add_ingredient({type = "item", name = "self-assembly-mon
 RECIPE("vacuum-pump-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount =2})
 RECIPE("nmf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("secondary-crusher-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("diamond-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
+RECIPE("diamond-mine"):replace_ingredient("advanced-circuit", "electronic-circuit")
 RECIPE("thickener-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7})
 RECIPE("gas-separator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("hydrocyclone-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})

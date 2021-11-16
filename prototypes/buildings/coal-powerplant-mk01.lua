@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "coal-powerplant-mk01",
+    name = "py-coal-powerplant-mk01",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -13,29 +13,29 @@ RECIPE {
         {'intermetallics', 50},
     },
     results = {
-        {"coal-powerplant-mk01", 1}
+        {"py-coal-powerplant-mk01", 1}
     }
 }:add_unlock("coalplant-mk01")
 
 ITEM {
     type = "item",
-    name = "coal-powerplant-mk01",
+    name = "py-coal-powerplant-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/coal-powerplant-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    place_result = "coal-powerplant-mk01",
+    place_result = "py-coal-powerplant-mk01",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "coal-powerplant-mk01",
+    name = "py-coal-powerplant-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/coal-powerplant-mk01.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "coal-powerplant-mk01"},
+    minable = {mining_time = 0.1, result = "py-coal-powerplant-mk01"},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",

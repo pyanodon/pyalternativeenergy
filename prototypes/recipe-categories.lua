@@ -27,6 +27,18 @@ data:extend {
         type = "recipe-category",
         name = "coal-powerplant"
     },
+    {
+        type = "recipe-category",
+        name = "biomass-powerplant"
+    },
+    {
+        type = "recipe-category",
+        name = "oil-powerplant"
+    },
+    {
+        type = "recipe-category",
+        name = "gas-powerplant"
+    },
     --resources
     {
         type = "resource-category",

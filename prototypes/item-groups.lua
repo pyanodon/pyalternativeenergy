@@ -75,4 +75,10 @@ data:extend {
         group = "py-alternativeenergy",
         order = "ae"
     },
+    {
+        type = "item-subgroup",
+        name = "test",
+        group = "py-alternativeenergy",
+        order = "az"
+    }
 }

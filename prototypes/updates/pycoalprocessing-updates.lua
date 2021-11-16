@@ -75,6 +75,7 @@ RECIPE('lubricant-combustion-biomass'):remove_unlock('energy-2'):set_fields{hidd
 RECIPE('xylenol-combustion-biomass'):remove_unlock('energy-2')
 
 RECIPE("evaporator"):remove_ingredient('gasturbinemk01')
+RECIPE("methanol-reactor"):remove_ingredient('gasturbinemk01')
 
 --RECIPE("advanced-foundry-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("automated-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
