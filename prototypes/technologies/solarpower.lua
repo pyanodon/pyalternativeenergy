@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/solar-power-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'solar-power-mk02','renewable-mk02'},
+    prerequisites = {'solar-power-mk02','renewable-mk03'},
     effects = {},
     unit = {
         count = 350,
@@ -58,7 +58,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/solar-power-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'solar-power-mk03','renewable-mk03'},
+    prerequisites = {'solar-power-mk03','renewable-mk04'},
     effects = {},
     unit = {
         count = 450,

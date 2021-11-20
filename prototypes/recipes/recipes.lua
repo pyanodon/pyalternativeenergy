@@ -555,7 +555,7 @@ RECIPE {
         {type = "item", name = "cyanoacrylate", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("solar-mk03")
+}:add_unlock("renewable-mk03")
 
 RECIPE {
     type = "recipe",
@@ -574,7 +574,7 @@ RECIPE {
         {type = "item", name = "cyanoacetate", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("solar-mk03")
+}:add_unlock("renewable-mk03")
 
 RECIPE {
     type = "recipe",
