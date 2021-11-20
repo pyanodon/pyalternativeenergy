@@ -68,6 +68,12 @@ data:extend {
         group = "py-alternativeenergy",
         order = "nw"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts",
+        group = "py-alternativeenergy",
+        order = "z"
+    },
     --SPECIALS--
     {
         type = "item-subgroup",

@@ -63,10 +63,12 @@ require('prototypes/recipes/recipes-oilplant')
 require("prototypes/recipes/recipes-nuclear")
 require("prototypes/recipes/recipes-mof")
 require("prototypes/recipes/recipes-lithium")
+require("prototypes/recipes/recipes-wind")
 -- ))
 
 -- (( ITEMs ))--
 require('prototypes/items/items')
+require('prototypes/items/items-wind')
 
 -- (( FLUIDs ))--
 require("prototypes/fluids/geothermal-water")
