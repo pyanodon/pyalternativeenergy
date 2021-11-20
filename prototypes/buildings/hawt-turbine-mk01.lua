@@ -3,8 +3,16 @@ RECIPE{
     name = 'hawt-turbine-mk01',
     energy_required = 0.5,
     enabled = false,
-    ingredients = {{'pipe', 20}},
-    results = {{'hawt-turbine-mk01', 1}}
+    ingredients = {
+        {"rotor-mk01", 1},
+        {"nacelle-mk01", 1},
+        {"anemometer-mk01", 1},
+        {"vane-mk01", 1},
+        {"tower-mk01", 1},
+    },
+    results = {
+        {"hawt-turbine-mk01", 1}
+    }
 }:add_unlock("wind-mk01")
 
 ITEM{
