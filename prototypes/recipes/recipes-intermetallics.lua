@@ -371,6 +371,25 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "mositial-nx",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = "item", name = "molybdenum-plate", amount = 4},
+        {type = "item", name = "silicon", amount = 5},
+        {type = "item", name = "titanium-plate", amount = 10},
+        {type = "item", name = "aluminium-plate", amount = 5},
+        {type = "item", name = "nexelit-plate", amount = 2},
+    },
+    results = {
+        {type = "item", name = "mositial-nx", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("intermetallics-mk03")
+
+RECIPE {
+    type = "recipe",
     name = "ns-material",
     category = "nano",
     enabled = false,
@@ -379,6 +398,7 @@ RECIPE {
         {type = "item", name = "core-shell", amount = 1},
         {type = "item", name = "kevlar", amount = 2},
         {type = "item", name = "solidified-sarcorus", amount = 1},
+        {type = "item", name = "mositial-nx", amount = 10},
         {type = "item", name = "stainless-steel", amount = 5},
         {type = "item", name = "aramid", amount = 2},
         {type = "item", name = "cobalt-oxide", amount = 1},
@@ -450,7 +470,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nxzngd",
-    category = "py-rawores-smelter",
+    category = "casting",
     enabled = false,
     energy_required = 20,
     ingredients = {

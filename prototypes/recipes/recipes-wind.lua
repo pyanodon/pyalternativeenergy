@@ -136,6 +136,7 @@ RECIPE {
         {type = "item", name = "yaw-drive-mk01", amount = 1},
         {type = "item", name = "brake-mk01", amount = 1},
         {type = "item", name = "electronics-mk01", amount = 2},
+        {type = "item", name = "shaft-mk01", amount = 1},
         {type = "item", name = "iron-plate", amount = 30},
     },
     results = {
@@ -197,6 +198,7 @@ RECIPE {
         {type = "item", name = "electronic-circuit", amount = 4},
         {type = "item", name = "iron-plate", amount = 5},
         {type = "item", name = "glass", amount = 4},
+        {type = "item", name = "battery-mk01", amount = 3},
         {type = "item", name = "ore-quartz", amount = 5},
     },
     results = {
@@ -267,7 +269,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "item", name = "blade-mk01", amount = 3},
+        {type = "item", name = "blade-mk02", amount = 3},
         {type = "item", name = "bolts", amount = 30},
         {type = "item", name = "aluminium-plate", amount = 10},
         {type = "item", name = "nxsb-alloy", amount = 10},
@@ -448,6 +450,7 @@ RECIPE {
         {type = "item", name = "advanced-circuit", amount = 10},
         {type = "item", name = "steel-plate", amount = 10},
         {type = "item", name = "small-lamp", amount = 10},
+        {type = "item", name = "nexelit-battery", amount = 5},
         {type = "item", name = "eva", amount = 20},
         {type = "item", name = "bakelite", amount = 15},
         {type = "item", name = "small-parts-02", amount = 20},
@@ -488,6 +491,7 @@ RECIPE {
         {type = "item", name = "eva", amount = 10},
         {type = "item", name = "small-parts-02", amount = 150},
         {type = "item", name = "gearbox-mk02", amount = 1},
+        {type = "item", name = "shaft-mk02", amount = 1},
         {type = "item", name = "controler-mk02", amount = 1},
         {type = "item", name = "utility-box-mk02", amount = 1},
         {type = "item", name = "yaw-drive-mk02", amount = 1},
@@ -499,3 +503,300 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("wind-mk02")
+
+--MK03
+
+RECIPE {
+    type = "recipe",
+    name = "blade-mk03",
+    category = "casting",
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = "fluid", name = "molten-aluminium", amount = 400},
+        {type = "fluid", name = "molten-silver", amount = 100},
+        {type = "item", name = "mold", amount = 2},
+        {type = "item", name = "aramid", amount = 5},
+        {type = "item", name = "phenolicboard", amount = 5},
+    },
+    results = {
+        {type = "item", name = "blade-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "rotor-mk03",
+    category = "crafting",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "item", name = "blade-mk03", amount = 3},
+        {type = "item", name = "alag-alloy", amount = 10},
+        {type = "item", name = "latex", amount = 10},
+        {type = "item", name = "aramid", amount = 10},
+        {type = "item", name = "nxsb-alloy", amount = 5},
+        {type = "item", name = "cyanoacrylate", amount = 15},
+        {type = "item", name = "fiberglass", amount = 50},
+        {type = "item", name = "small-parts-03", amount = 40},
+    },
+    results = {
+        {type = "item", name = "rotor-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "yaw-drive-mk03",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "item", name = "electric-engine-unit", amount = 2},
+        {type = "item", name = "fiberglass", amount = 20},
+        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "nbti-alloy", amount = 30},
+        {type = "item", name = "mositial-nx", amount = 5},
+        {type = "fluid", name = "grease", amount = 300},
+        {type = "item", name = "small-parts-03", amount = 100},
+        {type = "item", name = "aramid", amount = 25},
+    },
+    results = {
+        {type = "item", name = "yaw-drive-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "vane-mk03",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "super-steel", amount = 20},
+        {type = "item", name = "nbfe-alloy", amount = 5},
+        {type = "item", name = "small-parts-03", amount = 20},
+    },
+    results = {
+        {type = "item", name = "vane-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "anemometer-mk03",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "cyanoacrylate", amount = 15},
+        {type = "item", name = "super-steel", amount = 10},
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "small-parts-03", amount = 40},
+        {type = "item", name = "glass", amount = 20},
+    },
+    results = {
+        {type = "item", name = "anemometer-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "utility-box-mk03",
+    category = "electronic",
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = "item", name = "super-steel", amount = 40},
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "processing-unit", amount = 20},
+        {type = "item", name = "small-parts-03", amount = 50},
+        {type = "item", name = "red-wire", amount = 50},
+        {type = "item", name = "green-wire", amount = 50},
+        {type = "item", name = "titanium-plate", amount = 10},
+    },
+    results = {
+        {type = "item", name = "utility-box-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "tower-mk03",
+    category = "crafting",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "item", name = "nbti-alloy", amount = 50},
+        {type = "item", name = "alag-alloy", amount = 15},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "small-parts-03", amount = 20},
+        {type = "item", name = "concrete", amount = 30},
+        {type = "item", name = "titanium-plate", amount = 50},
+        {type = "item", name = "mositial-nx", amount = 3},
+    },
+    results = {
+        {type = "item", name = "tower-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "shaft-mk03",
+    category = "casting",
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+        {type = "fluid", name = "molten-super-steel", amount = 200},
+        {type = "item", name = "mold", amount = 2},
+        {type = "item", name = "boron-carbide", amount = 10},
+    },
+    results = {
+        {type = "item", name = "shaft-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "gearbox-mk03",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "item", name = "small-parts-03", amount = 300},
+        {type = "item", name = "alag-alloy", amount = 30},
+        {type = "item", name = "niobium-plate", amount = 20},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "mositial-nx", amount = 3},
+        {type = "item", name = "nbti-alloy", amount = 40},
+        {type = "item", name = "belt", amount = 10},
+        {type = "item", name = "boron-carbide", amount = 20},
+        {type = "item", name = "nxsb-alloy", amount = 40},
+        {type = "fluid", name = "lubricant", amount = 300},
+        {type = "fluid", name = "grease", amount = 200},
+    },
+    results = {
+        {type = "item", name = "gearbox-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "electronics-mk03",
+    category = "electronic",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "pcb3", amount = 2},
+        {type = "item", name = "neuromorphic-chip", amount = 20},
+        {type = "item", name = "processor", amount = 1},
+        {type = "item", name = "aluminium-plate", amount = 10},
+        {type = "item", name = "capacitor2", amount = 20},
+        {type = "item", name = "capacitor3", amount = 40},
+        {type = "item", name = "resistor3", amount = 15},
+        {type = "item", name = "solder", amount = 5},
+        {type = "item", name = "epoxy", amount = 10},
+        {type = "item", name = "steel-plate", amount = 10},
+        {type = "item", name = "glass", amount = 5},
+        {type = "item", name = "plastic-bar", amount = 20},
+
+    },
+    results = {
+        {type = "item", name = "electronics-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "controler-mk03",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = "item", name = "processing-unit", amount = 10},
+        {type = "item", name = "steel-plate", amount = 10},
+        {type = "item", name = "small-lamp", amount = 10},
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "biobattery", amount = 3},
+        {type = "item", name = "small-parts-03", amount = 50},
+    },
+    results = {
+        {type = "item", name = "controler-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "brake-mk03",
+    category = "crafting",
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = "item", name = "nxsb-alloy", amount = 20},
+        {type = "item", name = "graphite", amount = 25},
+        {type = "item", name = "ceramic", amount = 40},
+        {type = "item", name = "phenolicboard", amount = 10},
+        {type = "item", name = "super-steel", amount = 10},
+        {type = "item", name = "cyanoacrylate", amount = 15},
+        {type = "item", name = "small-parts-03", amount = 20},
+    },
+    results = {
+        {type = "item", name = "brake-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "hydraulic-system-mk01",
+    category = "crafting",
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "rubber", amount = 50},
+        {type = "item", name = "cyanoacrylate", amount = 15},
+        {type = "item", name = "pump", amount = 2},
+        {type = "item", name = "small-parts-03", amount = 20},
+    },
+    results = {
+        {type = "item", name = "hydraulic-system-mk01", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "nacelle-mk03",
+    category = "crafting",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "item", name = "cyanoacrylate", amount = 10},
+        {type = "item", name = "small-parts-03", amount = 200},
+        {type = "item", name = "gearbox-mk03", amount = 1},
+        {type = "item", name = "controler-mk03", amount = 1},
+        {type = "item", name = "shaft-mk03", amount = 1},
+        {type = "item", name = "utility-box-mk03", amount = 1},
+        {type = "item", name = "yaw-drive-mk03", amount = 1},
+        {type = "item", name = "hydraulic-system-mk01", amount = 4},
+        {type = "item", name = "brake-mk03", amount = 1},
+        {type = "item", name = "super-steel", amount = 100},
+    },
+    results = {
+        {type = "item", name = "nacelle-mk03", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("wind-mk03")

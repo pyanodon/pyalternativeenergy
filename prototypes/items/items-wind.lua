@@ -311,3 +311,159 @@ ITEM {
     order = "ab",
     stack_size = 100
 }
+
+--MK03
+
+ITEM {
+    type = "item",
+    name = "blade-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/blade-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "hydraulic-system-mk01",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/hydraulic-system-mk01.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "yaw-drive-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/yaw-drive-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "vane-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/vane-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "utility-box-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/utility-box-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "tower-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/tower-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "shaft-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/shaft-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "rotor-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/rotor-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "nacelle-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nacelle-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "gearbox-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gearbox-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "electronics-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/electronics-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "controler-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/controler-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "brake-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/brake-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "anemometer-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/anemometer-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-parts",
+    order = "ac",
+    stack_size = 100
+}
