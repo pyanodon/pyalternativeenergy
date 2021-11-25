@@ -1746,3 +1746,91 @@ ITEM {
     order = "ab",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "acrylonitrile",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/acrylonitrile.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ba",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "pan",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/pan.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ba",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "oxidized-pan-fiber",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/oxidized-pan-fiber.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ba",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "pre-carbon-fiber",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/pre-cf.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ba",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cf1",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/cf1.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ba",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cf2",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/cf2.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ba",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "dry-cf",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/dry-cf.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ba",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cf",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/cf.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ba",
+    stack_size = 100
+}

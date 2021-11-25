@@ -36,6 +36,7 @@ require("prototypes.technologies.battery")
 require("prototypes.technologies.photonics")
 require("prototypes.technologies.microwave-receiver")
 require("prototypes/technologies/nuclear-power")
+require("prototypes/technologies/carbon-fiber")
 
 -- ))
 
@@ -64,6 +65,7 @@ require("prototypes/recipes/recipes-nuclear")
 require("prototypes/recipes/recipes-mof")
 require("prototypes/recipes/recipes-lithium")
 require("prototypes/recipes/recipes-wind")
+require("prototypes/recipes/recipes-carbonfiber")
 -- ))
 
 -- (( ITEMs ))--

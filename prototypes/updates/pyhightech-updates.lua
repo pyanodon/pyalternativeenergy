@@ -80,3 +80,19 @@ RECIPE("nexelit-battery"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"}
 RECIPE("nexelit-battery-recharge"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"})
 
 ----EXCLUSIVE RECIPES----
+
+RECIPE {
+    type = 'recipe',
+    name = 'nylon3',
+    category = 'rectisol',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'acrylonitrile', amount = 1},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+        {type = 'item', name = 'sb-oxide', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'nylon', amount = 5}
+    }
+}:add_unlock('placeholder')-- CHANGE LATER!
