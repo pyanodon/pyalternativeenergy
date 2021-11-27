@@ -21,7 +21,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "phenol", amount = 3},
+        {type = "item", name = "phenol", amount = 10},
         {type = "fluid", name = "ammonia", amount = 100},
     },
     results = {

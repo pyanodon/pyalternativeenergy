@@ -273,7 +273,7 @@ RECIPE {
         {type = "item", name = "oxalic-acid", amount = 1},
     },
     --main_product = "sb-dust",
-}:add_unlock("thorium")
+}:add_unlock("carbon-fiber")
 
 RECIPE {
     type = "recipe",

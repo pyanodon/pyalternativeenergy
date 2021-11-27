@@ -4,7 +4,10 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"pipe", 20},
+        {"nacelle-mk04", 1},
+        {"anemometer-mk04", 1},
+        {"tower-mk04", 1},
+        {"electronics-mk04", 1},
     },
     results = {
         {"hawt-turbine-mk04", 1}

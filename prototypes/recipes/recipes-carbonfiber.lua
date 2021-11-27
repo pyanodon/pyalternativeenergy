@@ -1,11 +1,11 @@
 RECIPE {
     type = "recipe",
     name = "acrylonitrile",
-    category = "fbreator",
+    category = "fbreactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "propylene", amount = 50},
+        {type = "fluid", name = "propene", amount = 50},
         {type = "fluid", name = "ammonia", amount = 50},
         {type = "fluid", name = "oxygen", amount = 100},
         {type = "item", name = "molybdenum-plate", amount = 1},
@@ -20,7 +20,7 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "acrylonitrile",
+    name = "acrylonitrile-2",
     category = "biofactory",
     enabled = false,
     energy_required = 10,
@@ -40,7 +40,7 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "acrylonitrile",
+    name = "acrylonitrile-3",
     category = "chemistry",
     enabled = false,
     energy_required = 10,

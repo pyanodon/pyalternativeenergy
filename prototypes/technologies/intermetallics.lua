@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/intermetallics-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'machines-mk03','intermetallics-mk02','mof'},
+    prerequisites = {'machines-mk03','intermetallics-mk02','mof','carbon-fiber'},
     effects = {},
     unit = {
         count = 350,
