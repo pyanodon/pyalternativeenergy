@@ -67,7 +67,7 @@ RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "quantum-batter
 RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "photonic-chip", amount = 1})
 RECIPE("nanochip"):add_ingredient({type = "item", name = "quantum-dots", amount = 2}):add_ingredient({type = "item", name = "quantum-well", amount = 2}):add_ingredient({type = "item", name = "nano-wires", amount = 2})
 RECIPE("kondo-processor"):add_ingredient({type = "item", name = "nano-wires", amount = 3})
-RECIPE("pi-josephson-junction"):add_ingredient({type = "item", name = "mqdc", amount = 1})
+RECIPE("pi-josephson-junction"):add_ingredient({type = "item", name = "mqdc", amount = 1}):add_ingredient({type = "item", name = "time-crystal", amount = 1})
 
 RECIPE("py-construction-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("py-logistic-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -83,6 +83,8 @@ RECIPE("carbon-nanotube"):add_ingredient({type = "item", name = "milfe", amount 
 RECIPE("parametric-oscilator"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("quantum-well"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("quantum-dots"):add_ingredient({type = "item", name = "milfe", amount = 1})
+RECIPE("harmonic-absorber"):add_ingredient({type = "item", name = "cf", amount = 30})
+RECIPE("var-josephson-junction"):add_ingredient({type = "item", name = "cf", amount = 30}):add_ingredient({type = "item", name = "photonic-crystal", amount = 1}):add_ingredient({type = "item", name = "gd-metal", amount = 1})
 
 ----EXCLUSIVE RECIPES----
 

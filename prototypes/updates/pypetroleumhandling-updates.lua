@@ -71,3 +71,8 @@ RECIPE("upgrader-mk04"):add_ingredient({type = "item", name = "metastable-quasic
 RECIPE("retorter"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10})
 RECIPE("fracking-rig"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 30})
 RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10})
+
+--RECIPES --
+
+RECIPE("tholin-capsule"):add_ingredient({type = "item", name = "cf", amount = 30})
+RECIPE("small-parts-03"):replace_ingredient("rubber", "cf")

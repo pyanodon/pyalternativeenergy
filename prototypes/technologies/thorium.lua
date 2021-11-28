@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/thorium.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'rare-earth-tech'},
+    prerequisites = {'rare-earth-tech','vanadium-processing'},
     effects = {},
     unit = {
         count = 200,
@@ -12,6 +12,7 @@ TECHNOLOGY {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
             {'chemical-science-pack', 1},
+            {'py-science-pack-2', 1},
         },
         time = 60
     }

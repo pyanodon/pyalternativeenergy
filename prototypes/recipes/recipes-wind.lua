@@ -512,13 +512,12 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "blade-mk03",
-    category = "casting",
+    category = "crafting",
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "fluid", name = "molten-aluminium", amount = 400},
-        {type = "fluid", name = "molten-silver", amount = 100},
-        {type = "item", name = "mold", amount = 2},
+        {type = "item", name = "cf", amount = 200},
+        {type = "item", name = "aluminium-plate", amount = 50},
         {type = "item", name = "aramid", amount = 5},
         {type = "item", name = "phenolicboard", amount = 5},
     },
