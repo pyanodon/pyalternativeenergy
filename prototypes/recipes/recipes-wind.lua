@@ -499,7 +499,7 @@ RECIPE {
         {type = "item", name = "yaw-drive-mk02", amount = 1},
         {type = "item", name = "brake-mk02", amount = 1},
         {type = "item", name = "stainless-steel", amount = 40},
-        {type = "item", name = "self-assembly-monolayer", amount = 10}
+        {type = "item", name = "self-assembly-monolayer", amount = 10},
         {type = "item", name = "electric-engine-unit", amount = 1},
     },
     results = {
@@ -798,7 +798,7 @@ RECIPE {
         {type = "item", name = "hydraulic-system-mk01", amount = 4},
         {type = "item", name = "brake-mk03", amount = 1},
         {type = "item", name = "super-steel", amount = 100},
-        {type = "item", name = "ns-material", amount = 20}
+        {type = "item", name = "ns-material", amount = 20},
         {type = "item", name = "electric-engine-unit", amount = 1},
     },
     results = {
@@ -1118,7 +1118,7 @@ RECIPE {
         {type = "item", name = "heating-system", amount = 1},
         {type = "item", name = "cooling-system", amount = 1},
         {type = "item", name = "super-alloy", amount = 100},
-        {type = "item", name = "metastable-quasicrystal", amount = 10}
+        {type = "item", name = "metastable-quasicrystal", amount = 10},
         {type = "item", name = "electric-engine-unit", amount = 1},
     },
     results = {

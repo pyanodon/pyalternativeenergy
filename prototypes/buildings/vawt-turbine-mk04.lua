@@ -15,7 +15,7 @@ RECIPE{
         {"hyperelastic-material", 4},
         {"biopolymer", 40},
         {"cf", 200},
-        {"nxzngd", 4},
+        {"fes", 1},
         {"electronics-mk04", 2},
         {"controler-mk04", 1},
     },
