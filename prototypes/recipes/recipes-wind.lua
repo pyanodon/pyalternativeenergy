@@ -500,6 +500,7 @@ RECIPE {
         {type = "item", name = "brake-mk02", amount = 1},
         {type = "item", name = "stainless-steel", amount = 40},
         {type = "item", name = "self-assembly-monolayer", amount = 10}
+        {type = "item", name = "electric-engine-unit", amount = 1},
     },
     results = {
         {type = "item", name = "nacelle-mk02", amount = 1},
@@ -798,6 +799,7 @@ RECIPE {
         {type = "item", name = "brake-mk03", amount = 1},
         {type = "item", name = "super-steel", amount = 100},
         {type = "item", name = "ns-material", amount = 20}
+        {type = "item", name = "electric-engine-unit", amount = 1},
     },
     results = {
         {type = "item", name = "nacelle-mk03", amount = 1},
@@ -1117,6 +1119,7 @@ RECIPE {
         {type = "item", name = "cooling-system", amount = 1},
         {type = "item", name = "super-alloy", amount = 100},
         {type = "item", name = "metastable-quasicrystal", amount = 10}
+        {type = "item", name = "electric-engine-unit", amount = 1},
     },
     results = {
         {type = "item", name = "nacelle-mk04", amount = 1},

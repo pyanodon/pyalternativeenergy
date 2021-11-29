@@ -3,8 +3,24 @@ RECIPE{
     name = 'vawt-turbine-mk03',
     energy_required = 0.5,
     enabled = false,
-    ingredients = {{'pipe', 20}},
-    results = {{'vawt-turbine-mk03', 1}}
+    ingredients = {
+        {"shaft-mk03", 1},
+        {"anemometer-mk03", 1},
+        {"gearbox-mk03", 1},
+        {"processing-unit", 10},
+        {"small-parts-03", 400},
+        {"self-assembly-monolayer", 20},
+        {"utility-box-mk03", 2},
+        {"controler-mk03", 2},
+        {"super-steel", 60},
+        {"nxsb-alloy", 30},
+        {"plastic-bar", 40},
+        {"cf", 200},
+        {"electric-engine-unit", 1},
+    },
+    results = {
+        {"vawt-turbine-mk03", 1}
+    }
 }:add_unlock("wind-mk03")
 
 ITEM{
@@ -40,7 +56,7 @@ ENTITY{
         output_flow_limit = "50MW",
         render_no_power_icon = false
     },
-    energy_production = '50MW',
+    energy_production = '120MW',
     energy_usage = '0kW',
     working_sound = {
         sound = {filename = '__pyalternativeenergygraphics__/sounds/vawt-turbine-mk02.ogg', volume = 0.75},
