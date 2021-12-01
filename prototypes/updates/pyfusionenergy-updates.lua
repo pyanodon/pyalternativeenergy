@@ -76,3 +76,4 @@ RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "super-alloy", a
 RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "nbti-alloy", amount = 30}):add_ingredient({type = "item", name = "wall-shield", amount = 5}):add_ingredient({type = "item", name = "science-coating", amount = 10}):add_ingredient({type = "item", name = "control-unit", amount = 5})
 
 RECIPE("blanket"):add_ingredient({type = "item", name = "lithium", amount = 5})
+RECIPE("magnetic-core"):add_ingredient({type = "item", name = "battery", amount = 1})

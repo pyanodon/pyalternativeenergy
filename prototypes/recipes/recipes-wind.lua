@@ -623,6 +623,7 @@ RECIPE {
         {type = "item", name = "red-wire", amount = 50},
         {type = "item", name = "green-wire", amount = 50},
         {type = "item", name = "titanium-plate", amount = 10},
+        {type = "item", name = "battery", amount = 2},
     },
     results = {
         {type = "item", name = "utility-box-mk03", amount = 1},

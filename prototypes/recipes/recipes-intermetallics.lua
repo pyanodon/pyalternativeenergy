@@ -426,7 +426,7 @@ RECIPE {
         {type = "item", name = "photon-deposited-quartz", amount = 1},
         {type = "item", name = "mositial-nx", amount = 1},
         {type = "item", name = "gd-metal", amount = 1},
-        {type = "item", name = "pbsb-alloy", amount = 1},
+        {type = "item", name = "pbsb-alloy", amount = 5},
     },
     results = {
         {type = "item", name = "metastable-quasicrystal", amount = 1},

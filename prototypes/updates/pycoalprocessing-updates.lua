@@ -197,6 +197,7 @@ RECIPE("soil-extractormk04"):add_ingredient({type = "item", name = "metastable-q
 
 -----RECIPES-----
 RECIPE("drill-head"):remove_unlock('niobium'):add_unlock('machines-mk01')
+RECIPE("nas-battery"):replace_ingredient("lead-plate", "pbsb-alloy")
 
 ----EXCLUSIVE RECIPES----
 RECIPE("lithium-peroxide"):add_ingredient({type = "item", name = "lithium", amount = 3})

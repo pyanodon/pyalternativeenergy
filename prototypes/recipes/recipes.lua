@@ -234,6 +234,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "glass", amount = 1},
         {type = "item", name = "melamine", amount = 2},
+        {type = "item", name = "pbsb-alloy", amount = 1},
         {type = "item", name = "bolts", amount = 3},
         {type = "item", name = "graphite", amount = 3},
         {type = "item", name = "zinc-plate", amount = 3},
@@ -799,3 +800,35 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("energy-1")
+
+RECIPE {
+    type = "recipe",
+    name = "pbsb-alloy",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "lead-plate", amount = 5},
+        {type = "item", name = "sb-oxide", amount = 1},
+    },
+    results = {
+        {type = "item", name = "pbsb-alloy", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("lead-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "pbsb-alloy-2",
+    category = "py-rawores-smelter",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "molten-lead", amount = 100},
+        {type = "item", name = "sb-oxide", amount = 4},
+    },
+    results = {
+        {type = "item", name = "pbsb-alloy", amount = 5},
+    },
+    --main_product = "eg-si",
+}:add_unlock("lead-mk02")
