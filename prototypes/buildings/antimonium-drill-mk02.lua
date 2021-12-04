@@ -9,6 +9,7 @@ RECIPE {
         {"advanced-circuit", 15},
         {"tin-plate", 50},
         {"stainless-steel", 20},
+        {"self-assembly-monolayer", 10},
         {"duralumin", 15},
         {"nexelit-plate", 20},
     },

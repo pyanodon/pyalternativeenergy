@@ -58,7 +58,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/wind-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'wind-mk03','renewable-mk04'},
+    prerequisites = {'wind-mk03','renewable-mk04','intermetallics-mk04'},
     effects = {},
     unit = {
         count = 450,

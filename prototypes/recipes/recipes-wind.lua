@@ -68,7 +68,7 @@ RECIPE {
         {type = "item", name = "utility-box-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk01")
+}:add_unlock("energy-1")
 
 RECIPE {
     type = "recipe",
@@ -101,7 +101,7 @@ RECIPE {
         {type = "item", name = "shaft-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk01")
+}:add_unlock("energy-1")
 
 RECIPE {
     type = "recipe",
@@ -164,7 +164,7 @@ RECIPE {
         {type = "item", name = "gearbox-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk01")
+}:add_unlock("energy-1")
 
 RECIPE {
     type = "recipe",
@@ -187,7 +187,7 @@ RECIPE {
         {type = "item", name = "electronics-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk01")
+}:add_unlock("energy-1")
 
 RECIPE {
     type = "recipe",
@@ -206,7 +206,7 @@ RECIPE {
         {type = "item", name = "controler-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk01")
+}:add_unlock("energy-1")
 
 RECIPE {
     type = "recipe",
@@ -227,7 +227,7 @@ RECIPE {
         {type = "item", name = "brake-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk01")
+}:add_unlock("energy-1")
 
 RECIPE {
     type = "recipe",
@@ -357,7 +357,7 @@ RECIPE {
         {type = "item", name = "utility-box-mk02", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk02")
+}:add_unlock("energy-2")
 
 RECIPE {
     type = "recipe",
@@ -392,7 +392,7 @@ RECIPE {
         {type = "item", name = "shaft-mk02", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk02")
+}:add_unlock("energy-2")
 
 RECIPE {
     type = "recipe",
@@ -414,7 +414,7 @@ RECIPE {
         {type = "item", name = "gearbox-mk02", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk02")
+}:add_unlock("energy-2")
 
 RECIPE {
     type = "recipe",
@@ -440,7 +440,7 @@ RECIPE {
         {type = "item", name = "electronics-mk02", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk02")
+}:add_unlock("energy-2")
 
 RECIPE {
     type = "recipe",
@@ -461,7 +461,7 @@ RECIPE {
         {type = "item", name = "controler-mk02", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk02")
+}:add_unlock("energy-2")
 
 RECIPE {
     type = "recipe",
@@ -481,7 +481,7 @@ RECIPE {
         {type = "item", name = "brake-mk02", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk02")
+}:add_unlock("energy-2")
 
 RECIPE {
     type = "recipe",
@@ -629,7 +629,7 @@ RECIPE {
         {type = "item", name = "utility-box-mk03", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk03")
+}:add_unlock("energy-3")
 
 RECIPE {
     type = "recipe",
@@ -667,7 +667,7 @@ RECIPE {
         {type = "item", name = "shaft-mk03", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk03")
+}:add_unlock("energy-3")
 
 RECIPE {
     type = "recipe",
@@ -692,7 +692,7 @@ RECIPE {
         {type = "item", name = "gearbox-mk03", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk03")
+}:add_unlock("energy-3")
 
 RECIPE {
     type = "recipe",
@@ -720,7 +720,7 @@ RECIPE {
         {type = "item", name = "electronics-mk03", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk03")
+}:add_unlock("energy-3")
 
 RECIPE {
     type = "recipe",
@@ -740,7 +740,7 @@ RECIPE {
         {type = "item", name = "controler-mk03", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk03")
+}:add_unlock("energy-3")
 
 RECIPE {
     type = "recipe",
@@ -761,7 +761,7 @@ RECIPE {
         {type = "item", name = "brake-mk03", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk03")
+}:add_unlock("energy-3")
 
 RECIPE {
     type = "recipe",
@@ -780,7 +780,7 @@ RECIPE {
         {type = "item", name = "hydraulic-system-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk03")
+}:add_unlock("energy-3")
 
 RECIPE {
     type = "recipe",
@@ -855,7 +855,7 @@ RECIPE {
         {type = "item", name = "hydraulic-system-mk02", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",
@@ -898,7 +898,7 @@ RECIPE {
         {type = "item", name = "utility-box-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",
@@ -936,7 +936,7 @@ RECIPE {
         {type = "item", name = "shaft-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",
@@ -961,7 +961,7 @@ RECIPE {
         {type = "item", name = "gearbox-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",
@@ -991,7 +991,7 @@ RECIPE {
         {type = "item", name = "electronics-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",
@@ -1011,7 +1011,7 @@ RECIPE {
         {type = "item", name = "controler-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",
@@ -1032,7 +1032,7 @@ RECIPE {
         {type = "item", name = "brake-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",
@@ -1074,7 +1074,7 @@ RECIPE {
         {type = "item", name = "fes", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",
@@ -1097,7 +1097,7 @@ RECIPE {
         {type = "item", name = "heating-system", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("intermetallics-mk04")
 
 RECIPE {
     type = "recipe",

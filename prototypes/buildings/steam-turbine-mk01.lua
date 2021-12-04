@@ -9,6 +9,10 @@ RECIPE {
         {"iron-gear-wheel", 200},
         {"duralumin", 20},
         {"intermetallics", 10},
+        {"shaft-mk01", 1},
+        {"brake-mk01", 4},
+        {"utility-box-mk01", 2},
+        {"gearbox-mk01", 1},
         {"electronic-circuit", 30},
     },
     results = {

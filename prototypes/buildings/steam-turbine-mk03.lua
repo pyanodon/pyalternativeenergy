@@ -4,7 +4,22 @@ RECIPE {
     energy_required = 5,
     enabled = true,
     ingredients = {
-        {"iron-plate", 1},
+        {'centrifuge-mk02', 1},
+        {'titanium-plate', 40},
+        {'processing-unit', 10},
+        {'ns-material', 25},
+        {'small-parts-03', 100},
+        {'graphene-roll', 25},
+        {'plastic-bar', 100},
+        {"brake-mk03", 5},
+        {"shaft-mk03", 1},
+        {"gearbox-mk03", 1},
+        {"utility-box-mk03", 2},
+        {"electronics-mk03", 1},
+        {"controler-mk03", 2},
+        {'aerogel', 20},
+        {"cf", 100},
+        {"nxsb-alloy", 30},
     },
     results = {
         {"steam-turbine-mk03", 1}

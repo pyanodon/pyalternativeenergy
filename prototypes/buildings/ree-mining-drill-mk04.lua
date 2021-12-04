@@ -10,6 +10,10 @@ RECIPE {
         {"storage-tank", 1},
         {"low-density-structure", 10},
         {"nbfe-alloy", 10},
+        {'metastable-quasicrystal', 2},
+        {"intelligent-unit", 3},
+        {"superconductor-servomechanims", 2},
+        {"hyperelastic-material", 5},
     },
     results = {
         {"ree-mining-drill-mk04", 1}

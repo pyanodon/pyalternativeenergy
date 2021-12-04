@@ -12,6 +12,7 @@ RECIPE{
         {"self-assembly-monolayer", 20},
         {"utility-box-mk03", 2},
         {"controler-mk03", 2},
+        {"electronics-mk03", 1},
         {"super-steel", 60},
         {"nxsb-alloy", 30},
         {"plastic-bar", 40},

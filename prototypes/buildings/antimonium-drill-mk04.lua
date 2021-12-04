@@ -12,6 +12,7 @@ RECIPE {
         {"intelligent-unit", 10},
         {"superconductor-servomechanims", 10},
         {"hyperelastic-material", 15},
+        {'metastable-quasicrystal', 4},
     },
     results = {
         {"antimonium-drill-mk04", 1}

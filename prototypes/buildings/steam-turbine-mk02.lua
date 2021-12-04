@@ -4,7 +4,19 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"stainless-steel", 100},
+        {"steel-plate", 40},
+        {"duralumin", 15},
+        {"shaft-mk02", 1},
+        {"small-parts-02", 100},
+        {"nexelit-plate", 30},
+        {"rubber", 20},
+        {"brake-mk02", 5},
+        {"utility-box-mk02", 2},
+        {"controler-mk02", 1},
+        {"gearbox-mk02", 1},
+        {"advanced-circuit", 10},
+        {"self-assembly-monolayer", 20},
     },
     results = {
         {"steam-turbine-mk02", 1}

@@ -9,6 +9,7 @@ RECIPE {
         {"steel-plate", 40},
         {"duralumin", 15},
         {"lead-plate", 10},
+        {"self-assembly-monolayer", 20},
         {"nexelit-plate", 15},
         {"advanced-circuit", 10},
     },

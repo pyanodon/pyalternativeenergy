@@ -4,7 +4,21 @@ RECIPE {
     energy_required = 5,
     enabled = true,
     ingredients = {
-        {"iron-plate", 1},
+        {"concrete", 50},
+        {"super-alloy", 30},
+        {"electronics-mk04", 1},
+        {"low-density-structure", 10},
+        {"nbfe-alloy", 10},
+        {"gearbox-mk04", 1},
+        {"brake-mk04", 2},
+        {"nxzngd", 8},
+        {"cf", 100},
+        {"fes", 3},
+        {"shaft-mk04", 1},
+        {'metastable-quasicrystal', 1},
+        {"hyperelastic-material", 10},
+        {"biopolymer", 50},
+        {"controler-mk04", 4},
     },
     results = {
         {"steam-turbine-mk04", 1}

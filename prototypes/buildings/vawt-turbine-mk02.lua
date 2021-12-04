@@ -17,6 +17,7 @@ RECIPE{
         {"eva", 40},
         {"green-wire", 50},
         {"electric-engine-unit", 1},
+        {"electronics-mk02", 1},
     },
     results = {
         {"vawt-turbine-mk02", 1}

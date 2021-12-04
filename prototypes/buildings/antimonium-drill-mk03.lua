@@ -9,6 +9,7 @@ RECIPE {
         {"super-steel", 20},
         {"biopolymer", 15},
         {"graphene-roll", 20},
+        {'ns-material', 20},
         {"processing-unit", 10},
         {"electric-engine-unit", 3},
     },

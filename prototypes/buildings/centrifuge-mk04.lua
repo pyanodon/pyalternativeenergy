@@ -11,7 +11,6 @@ RECIPE {
         {'molybdenum-plate', 20},
         {"low-density-structure", 20},
         {"nbfe-alloy", 10},
-
     },
     results = {
         {"centrifuge-mk04", 1}

@@ -9,6 +9,7 @@ RECIPE {
         {"stainless-steel", 20},
         {"nbti-alloy", 20},
         {"tin-plate", 20},
+        {'ns-material', 20},
         {"processing-unit", 10}
     },
     results = {
