@@ -1834,3 +1834,25 @@ ITEM {
     order = "ba",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "rotor",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/rotor.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "intermediate-product",
+    order = "i[electric-engine-unit]",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "stator",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/stator.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "intermediate-product",
+    order = "i[electric-engine-unit]",
+    stack_size = 100
+}

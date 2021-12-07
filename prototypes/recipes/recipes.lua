@@ -832,3 +832,34 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("lead-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "rotor",
+    category = "crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "shaft-mk01", amount =  1},
+        {type = "item", name = "duralumin", amount = 5},
+    },
+    results = {
+        {type = "item", name = "rotor", amount = 1}
+    },
+  }:add_unlock("electric-engine")
+
+  RECIPE {
+    type = "recipe",
+    name = "stator",
+    category = "crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "copper-cable", amount =  100},
+        {type = "item", name = "aluminium-plate", amount = 10},
+        {type = "item", name = "plastic-bar", amount = 3},
+    },
+    results = {
+        {type = "item", name = "stator", amount = 1}
+    },
+  }:add_unlock("electric-engine")

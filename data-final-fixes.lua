@@ -26,6 +26,8 @@ RECIPE('extract-sulfur'):set_category("chemistry")
 
 RECIPE('low-density-structure'):add_ingredient({type = "item", name = "nxsb-alloy", amount = 25})
 
+RECIPE("electric-engine-unit"):remove_ingredient("copper-cable"):replace_ingredient("iron-stick", "rotor"):remove_ingredient("duralumin"):add_ingredient({type = "item", name = "stator", amount = 1})
+
 --[[
 local com_recipes = {}
 
