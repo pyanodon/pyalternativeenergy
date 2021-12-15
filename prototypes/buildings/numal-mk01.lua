@@ -674,9 +674,9 @@ ENTITY{
             },
             west_animation = {
 
-                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/s-gtop.png',
+                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/s-top.png',
                         frame_count = 75,
-                        line_length = 10,
+                        line_length = 20,
                         run_mode = 'forward-then-backward',
                         width = 96,
                         height = 128,
@@ -686,7 +686,7 @@ ENTITY{
             },
             east_animation = {
 
-                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/s-gtop.png',
+                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/s-top.png',
                         frame_count = 75,
                         line_length = 10,
                         run_mode = 'forward-then-backward',
