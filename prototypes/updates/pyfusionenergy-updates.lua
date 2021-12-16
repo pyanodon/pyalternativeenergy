@@ -1,7 +1,7 @@
 
 RECIPE("nuclear-sample"):replace_ingredient('uranium-ore', 'pu-238')
 
-TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02')
+TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-2')
 
 
 RECIPE("lead-container"):remove_unlock('diamond-mining'):add_unlock('production-science-pack')
