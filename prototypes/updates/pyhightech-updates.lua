@@ -58,6 +58,7 @@ RECIPE('centrifuge-mk03'):add_ingredient({type = "item", name = "phosphate-glass
 -----RECIPES-----
 RECIPE('accumulator-mk03'):add_unlock({"nano-tech"})
 RECIPE('oxalic-acid'):replace_ingredient("sulfuric-acid", "cyanic-acid")
+RECIPE("dbr"):add_ingredient({type = "item", name = "nanocrystaline-core", amount = 1})
 
 RECIPE("pa-uranium-235"):remove_unlock('nucleo')
 RECIPE("sodium-silicate"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
