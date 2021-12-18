@@ -83,7 +83,7 @@ RECIPE("logistic-robot-ht"):add_ingredient({type = "item", name = "metastable-qu
 RECIPE('lithium-chloride'):remove_ingredient("reo"):add_ingredient({type = "item", name = "lithium-hydroxide", amount = 1})
 RECIPE("nexelit-battery"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"})
 RECIPE("nexelit-battery-recharge"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"})
-RECIPE("nano-chip"):add_ingredient({type = "item", name = "milfe", amount = 1})
+RECIPE("nanochip"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("carbon-nanotube"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("parametric-oscilator"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("quantum-well"):add_ingredient({type = "item", name = "milfe", amount = 1})
