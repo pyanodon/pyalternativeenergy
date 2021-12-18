@@ -60,6 +60,7 @@ RECIPE('accumulator-mk03'):add_unlock({"nano-tech"})
 RECIPE('oxalic-acid'):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE("dbr"):add_ingredient({type = "item", name = "nanocrystaline-core", amount = 1})
 
+RECIPE("heavy-n"):add_ingredient({type = "item", name = "sb-oxide", amount = 5})
 RECIPE("pa-uranium-235"):remove_unlock('nucleo')
 RECIPE("sodium-silicate"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
 RECIPE("quantum-dots"):remove_unlock('quantum'):add_unlock({"nano-tech"})
@@ -71,6 +72,7 @@ RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "photonic-chip"
 RECIPE("nanochip"):add_ingredient({type = "item", name = "quantum-dots", amount = 2}):add_ingredient({type = "item", name = "quantum-well", amount = 2}):add_ingredient({type = "item", name = "nano-wires", amount = 2})
 RECIPE("kondo-processor"):add_ingredient({type = "item", name = "nano-wires", amount = 3})
 RECIPE("pi-josephson-junction"):add_ingredient({type = "item", name = "mqdc", amount = 1}):add_ingredient({type = "item", name = "time-crystal", amount = 1})
+RECIPE("kondo-core"):add_ingredient({type = "item", name = "gaas", amount = 1}):add_ingredient({type = "item", name = "heavy-p-type", amount = 10}):add_ingredient({type = "item", name = "light-n", amount = 10})
 
 RECIPE("py-construction-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("py-logistic-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -106,3 +108,40 @@ RECIPE {
         {type = 'item', name = 'nylon', amount = 5}
     }
 }:add_unlock('placeholder')-- CHANGE LATER!
+
+RECIPE {
+    type = 'recipe',
+    name = 'light-n2',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'silicon-wafer', amount = 5},
+        {type = 'item', name = 'arsenic', amount = 3},
+        {type = 'fluid', name = 'phosphine-gas', amount = 30},
+        {type = 'fluid', name = 'etching', amount = 20}
+    },
+    results = {
+        {type = 'item', name = 'light-n', amount = 20}
+    },
+    main_product = 'light-n'
+}:add_unlock('nano-tech')
+
+RECIPE {
+    type = 'recipe',
+    name = 'p-dope2',
+    category = 'gas-separator',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'silicon-wafer', amount = 5},
+        {type = 'item', name = 'zinc-acetate', amount = 1},
+        {type = 'item', name = 'lithium', amount = 2},
+        {type = 'fluid', name = 'diborane', amount = 40},
+        {type = 'fluid', name = 'etching', amount = 20}
+    },
+    results = {
+        {type = 'item', name = 'p-dope', amount = 20}
+    },
+    main_product = 'p-dope'
+}:add_unlock('lithium-processing')

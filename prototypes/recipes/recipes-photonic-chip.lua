@@ -70,6 +70,7 @@ RECIPE {
         {type = "item", name = "ti-n", amount = 2},
         {type = "item", name = "photonic-crystal", amount = 1},
         {type = "item", name = "zno-nanoparticles", amount = 1},
+        {type = 'item', name = 'lens', amount = 3},
         {type = "item", name = "sb-oxide", amount = 4},
         {type = "item", name = "glass", amount = 10},
     },
