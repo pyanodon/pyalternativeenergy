@@ -212,6 +212,8 @@ require("prototypes/buildings/gas-powerplant-mk01")
 require("prototypes/buildings/biomass-powerplant-mk01")
 require("prototypes/buildings/microwave-receiver")
 require("prototypes/buildings/electric-boiler")
+require("prototypes/buildings/aerial-base")
+require("prototypes/buildings/aerial-mk01")
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'

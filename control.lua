@@ -6,6 +6,12 @@ script.on_init(function()
             orphan_sats = 0
         }
     global.currently_selected_entity = {}
+    global.aerials =
+        {
+            aerial_base_list = {},
+            aerial_bases = {},
+            aerial_blimps = {}
+        }
 end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
@@ -94,7 +100,21 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                 satellites = 0,
                 max = 10
             }
-
+    elseif E.name == "aerial-base" then
+        log('hit')
+        table.insert(global.aerials.aerial_base_list, E.unit_number)
+        global.aerials.aerial_bases[E.unit_number] = E
+    elseif string.match(E.name, "aerial%-blimp") ~= nil then
+        log('hit')
+        global.aerials.aerial_blimps[E.unit_number] = {unit = E, current_destination = 1}
+        if next(global.aerials.aerial_base_list) ~= nil then
+            log('hit')
+            E.set_command{
+                type = defines.command.go_to_location,
+                destination = global.aerials.aerial_bases[global.aerials.aerial_base_list[1]].position,
+                radius = 5
+            }
+        end
     end
 end)
 
@@ -191,6 +211,18 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         local mill = global.windmills[E.unit_number]
         rendering.destroy(mill.animation)
         global.windmills[E.unit_number] = nil
+        elseif E.name == "aerial-base" then
+            for b, base in pairs(global.aerials.aerial_base_list) do
+                if E.unit_number == base then
+                    global.aerials.aerial_base_list[b] = nil
+                    global.aerials.aerial_bases[E.unit_number] = nil
+                end
+                break
+            end
+        elseif string.match(E.name, "aerial%-blimp") ~= nil then
+            if global.aerials.aerial_blimps[E.unit_number] ~= nil then
+                global.aerials.aerial_blimps[E.unit_number] = nil
+            end
     end
     --log(serpent.block(global.windmills))
 end)
@@ -294,5 +326,33 @@ script.on_event(defines.events.on_gui_elem_changed, function(event)
         log(serpent.block(E.fluidbox.get_locked_fluid(1)))
         log(serpent.block(E.fluidbox.get_locked_fluid(2)))
         log(serpent.block(E.fluidbox.get_locked_fluid(3)))
+    end
+end)
+
+script.on_event(defines.events.on_ai_command_completed, function(event)
+    if event.result == defines.behavior_result.success then
+        log('hit')
+        if global.aerials.aerial_blimps[event.unit_number] ~= nil then
+            log('hit')
+            local blimp = global.aerials.aerial_blimps[event.unit_number]
+            local bases = game.surfaces[blimp.unit.surface.name].find_entities_filtered{position = blimp.unit.position, radius = 4, name = "aerial-base"}
+            log(serpent.block(bases[1].position))
+            for b, base in pairs(bases) do
+                log('hit')
+                base.energy = base.energy + 2000
+                break
+            end
+            log('hit')
+            local cd = blimp.current_destination + 1
+            if global.aerials.aerial_base_list[cd] == nil then
+                cd = 1
+            end
+            blimp.unit.set_command{
+                type = defines.command.go_to_location,
+                destination = global.aerials.aerial_bases[global.aerials.aerial_base_list[cd]].position,
+                radius = 5
+            }
+            blimp.current_destination = cd
+        end
     end
 end)
