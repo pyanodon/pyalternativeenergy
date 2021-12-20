@@ -336,7 +336,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
             log('hit')
             local blimp = global.aerials.aerial_blimps[event.unit_number]
             local bases = game.surfaces[blimp.unit.surface.name].find_entities_filtered{position = blimp.unit.position, radius = 4, name = "aerial-base"}
-            log(serpent.block(bases[1].position))
+            --log(serpent.block(bases[1].position))
             for b, base in pairs(bases) do
                 log('hit')
                 base.energy = base.energy + 2000
