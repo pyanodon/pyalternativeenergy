@@ -9,7 +9,7 @@ RECIPE {
     results = {
         {type = "item", name = "aerial-base", amount = 1}
     }
-}:add_unlock("aerial-base")
+}:add_unlock("renewable-mk01")
 
 ITEM {
     type = "item",
