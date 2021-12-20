@@ -14,7 +14,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "aerial-base",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/microwave-receiver.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-base.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
@@ -26,14 +26,14 @@ ITEM {
 ENTITY {
     type = "accumulator",
     name = "aerial-base",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/accumulator-mk03.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-base.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aerial-base"},
     max_health = 150,
-    corpse = "medium-remnants",
-    collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    corpse = "big-remnants",
+    collision_box = {{-5.4, -5.4}, {5.4, 5.4}},
+    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     energy_source = {
         type = "electric",
         buffer_capacity = "10GJ",
@@ -44,76 +44,56 @@ ENTITY {
     picture = {
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/raw.png",
-                width = 160,
-                height = 287,
-                frame_count = 1,
-                line_length = 1,
-                --animation_speed = 0.45,
-                --blend_mode = "additive",
-                --draw_as_glow = true,
-                shift = util.by_pixel(0, -64)
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/r.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                shift = util.by_pixel(0, -48)
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/idle.png",
-                width = 160,
-                height = 256,
-                frame_count = 1,
-                line_length = 1,
-                --animation_speed = 0.45,
-                --blend_mode = "additive",
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/l.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
                 draw_as_glow = true,
-                shift = util.by_pixel(0, -112)
+                shift = util.by_pixel(0, -48)
             },
             {
-              filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/sh.png",
-              width = 192,
-              height = 160,
-              frame_count = 1,
-              line_length = 1,
-              --animation_speed = 0.45,
-              --blend_mode = "multiplicative",
-              draw_as_shadow = true,
-              shift = util.by_pixel(16, -0)
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/mask.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                shift = util.by_pixel(0, -48),
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/sh.png",
+                width = 384,
+                height = 352,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+                shift = util.by_pixel(16, -0)
             },
         }
     },
     charge_animation = {
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/raw.png",
-                width = 160,
-                height = 287,
-                frame_count = 1,
-                repeat_count = 25,
-                line_length = 1,
-                animation_speed = 0.3,
-                --blend_mode = "additive",
-                --draw_as_glow = true,
-                shift = util.by_pixel(0, -64)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/charging.png",
-                width = 160,
-                height = 256,
-                line_length = 5,
-                frame_count = 25,
-                shift = util.by_pixel(0, -112),
-                draw_as_glow = true,
-                animation_speed = 0.3
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/sh.png",
-                width = 192,
-                height = 160,
-                repeat_count = 25,
+                filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
+                width = 4,
+                height = 4,
                 frame_count = 1,
                 line_length = 1,
-                animation_speed = 0.3,
-                --blend_mode = "multiplicative",
-                draw_as_shadow = true,
-                shift = util.by_pixel(16, -0)
-              },
+                shift = util.by_pixel(0, -0)
+            },
         },
     },
     charge_cooldown = 30,
@@ -121,55 +101,18 @@ ENTITY {
     discharge_animation = {
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/raw.png",
-                width = 160,
-                height = 287,
+                filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
+                width = 4,
+                height = 4,
                 frame_count = 1,
                 line_length = 1,
-                repeat_count = 25,
-                animation_speed = 0.3,
-                --blend_mode = "additive",
-                --draw_as_glow = true,
-                shift = util.by_pixel(0, -64)
+                shift = util.by_pixel(0, -0)
             },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/discharging.png",
-                width = 160,
-                height = 256,
-                line_length = 5,
-                frame_count = 25,
-                shift = util.by_pixel(0, -112),
-                draw_as_glow = true,
-                animation_speed = 0.3,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/sh.png",
-                width = 192,
-                height = 160,
-                frame_count = 1,
-                line_length = 1,
-                repeat_count = 25,
-                animation_speed = 0.3,
-                --blend_mode = "multiplicative",
-                draw_as_shadow = true,
-                shift = util.by_pixel(16, -0)
-              },
         },
     },
     discharge_cooldown = 60,
     discharge_light = {intensity = 1, size = 12, color = {r = 0.862, g = 0.117, b = 0.117}},
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = {
-        sound = {
-            filename = "__pyalternativeenergygraphics__/sounds/accumulator-mk03.ogg",
-            volume = 0.6
-        },
-        idle_sound = {
-            filename = "__base__/sound/accumulator-idle.ogg",
-            volume = 0.4
-        },
-        max_sounds_per_type = 5
-    },
     circuit_wire_connection_point = {
         shadow = {
             red = {0.984375, 1.10938},
