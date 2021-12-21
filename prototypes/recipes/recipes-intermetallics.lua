@@ -63,7 +63,7 @@ RECIPE {
         {type = "item", name = "nbalti", amount = 1},
         {type = "item", name = "crmoni", amount = 1},
         {type = "item", name = "rayon", amount = 3},
-        {type = "item", name = "gold-plate", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 3},
         {type = "fluid", name = "trichlorosilane", amount = 100},
     },
     results = {

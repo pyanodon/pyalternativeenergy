@@ -133,6 +133,7 @@ RECIPE("hpf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolaye
 RECIPE("washer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
 RECIPE("borax-mine-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
 RECIPE("soil-extractormk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
+RECIPE("py-roboport-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient({type = "item", name = "tower-mk02", amount = 1}):add_ingredient({type = "item", name = "eva", amount = 3})
 
 RECIPE("advanced-foundry-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("automated-factory-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2})

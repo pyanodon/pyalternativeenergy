@@ -14,7 +14,7 @@ RECIPE("electronics-factory-mk01"):add_ingredient({type = "item", name = "interm
 RECIPE("pulp-mill-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("nano-assembler-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 15})
 RECIPE("py-recharging-station-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
-RECIPE("py-robotport-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+RECIPE("py-roboport-mk02"):add_ingredient({type = "item", name = "nexelit-battery", amount = 2})
 
 RECIPE("clay-pit-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 3})
 RECIPE("chipshooter-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
