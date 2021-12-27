@@ -2,7 +2,7 @@ local util = require('util')
 
 RECIPE{
     type = "recipe",
-    name = "aerial-blimp-mk01",
+    name = "aerial-blimp-mk02",
 	energy_required = 50,
 	category = 'crafting',
     enabled = false,
@@ -10,17 +10,17 @@ RECIPE{
     {
         {type = 'item', name = 'iron-plate', amount = 1},
     },
-    result = "aerial-blimp-mk01"
-  }:add_unlock("renewable-mk01")
+    result = "aerial-blimp-mk02"
+  }:add_unlock("renewable-mk02")
 
 ITEM{
     type = "item",
-    name = "aerial-blimp-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk01.png",
+    name = "aerial-blimp-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk02.png",
     icon_size = 64,
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-buildings-mk02",
     order = "b",
-    place_result = "aerial-blimp-mk01",
+    place_result = "aerial-blimp-mk02",
     stack_size = 5
   }
 
@@ -28,11 +28,11 @@ data:extend(
 {
   {
     type = "unit",
-    name = "aerial-blimp-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk01.png",
+    name = "aerial-blimp-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk02.png",
     icon_size = 64,
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
-	minable = {mining_time = 0.1, result = "aerial-blimp-mk01"},
+	minable = {mining_time = 0.1, result = "aerial-blimp-mk02"},
     max_health = 25,
     order = "b-b-a",
     subgroup="enemies",
@@ -49,7 +49,7 @@ data:extend(
     immune_to_rock_impacts = true,
     collision_box = {{0,0}, {0,0}},
     collision_mask = {},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    selection_box = {{-1, -1}, {1, 1}},
     attack_parameters =
     {
       type = "projectile",
@@ -62,36 +62,44 @@ data:extend(
 		layers =
 		{
 			{
-			filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/raw.png",
-			--slice = 8,
-			--lines_per_file = 4,
-			line_length = 16,
-			width = 127,
-			height = 287,
+				filenames =
+				{
+					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/r1.png",
+					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/r2.png",
+				},
+			slice = 5,
+			lines_per_file = 7,
+			line_length = 5,
+			width = 352,
+			height = 224,
 			frame_count = 1,
 			direction_count = 64,
 			shift = util.mul_shift(util.by_pixel(-0, -0)),
 			scale = 0.4,
 			},
 			{
-				filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/sh.png",
-				--slice = 8,
-				--lines_per_file = 4,
-				line_length = 16,
-				width = 96,
-				height = 64,
+				filenames =
+				{
+					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/s1.png",
+					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/s2.png",
+				},
+				slice = 5,
+				lines_per_file = 7,
+				line_length = 5,
+				width = 192,
+				height = 128,
 				frame_count = 1,
 				direction_count = 64,
 				--draw_as_shadow = true,
 				shift = util.mul_shift(util.by_pixel(128, 224)),
-				scale = 0.45,
+				scale = 0.3,
 			},
 		}
 	},
 	},
 	vision_distance = 30,
-	movement_speed = 0.02,
-	distance_per_frame = 0.13,
+	movement_speed = 0.04,
+	distance_per_frame = 0.18,
 	pollution_to_join_attack = 4,
 	distraction_cooldown = 300,
 	min_pursue_time = 10 * 60,
@@ -103,29 +111,37 @@ data:extend(
 		layers =
 		{
 			{
-			filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/raw.png",
-			--slice = 8,
-			--lines_per_file = 4,
-			line_length = 16,
-			width = 127,
-			height = 287,
+				filenames =
+				{
+					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/r1.png",
+					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/r2.png",
+				},
+			slice = 5,
+			lines_per_file = 7,
+			line_length = 5,
+			width = 352,
+			height = 224,
 			frame_count = 1,
 			direction_count = 64,
 			shift = util.mul_shift(util.by_pixel(-0, -0)),
 			scale = 0.4,
 			},
 			{
-				filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/sh.png",
-				--slice = 8,
-				--lines_per_file = 4,
-				line_length = 16,
-				width = 96,
-				height = 64,
+				filenames =
+				{
+					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/s1.png",
+					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/s2.png",
+				},
+				slice = 5,
+				lines_per_file = 7,
+				line_length = 5,
+				width = 192,
+				height = 128,
 				frame_count = 1,
 				direction_count = 64,
 				--draw_as_shadow = true,
 				shift = util.mul_shift(util.by_pixel(128, 224)),
-				scale = 0.45,
+				scale = 0.3,
 			},
 		}
 	},

@@ -1,3 +1,5 @@
+require("prototypes/buildings/aerial-ht")
+require("prototypes/buildings/multiblade-turbine-mk03")
 
 --TECHNOLOGY--
 TECHNOLOGY('quantum'):add_prereq('machines-mk02')

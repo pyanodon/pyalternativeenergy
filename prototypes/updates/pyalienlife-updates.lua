@@ -1,4 +1,5 @@
 
+require("prototypes/buildings/multiblade-turbine-mk01")
 --TECHNOLOGY--
 require("prototypes.technologies.numal")
 --BUILDINDS--
