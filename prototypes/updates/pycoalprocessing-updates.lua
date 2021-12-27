@@ -164,6 +164,7 @@ RECIPE("hpf-mk03"):add_ingredient({type = "item", name = "ns-material", amount =
 RECIPE("washer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
 RECIPE("borax-mine-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
 RECIPE("soil-extractormk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
+RECIPE("py-roboport-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient({type = "item", name = "electronics-mk03", amount = 1}):add_ingredient({type = "item", name = "biopolymer", amount = 5}):add_ingredient({type = "item", name = "cf", amount = 15}):add_ingredient({type = "item", name = "biobattery", amount = 3})
 
 RECIPE("advanced-foundry-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("automated-factory-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2})
