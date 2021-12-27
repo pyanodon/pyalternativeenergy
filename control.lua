@@ -1,17 +1,13 @@
+local util = require("util")
+--TODO: rewrite microwave sat code to have launched sats added to a pool and the code sorting the sat pool between recivers as seperate functions
+
 script.on_init(function()
     global.windmills = {}
     global.reactor_tanks = {}
-    global.microwave_satellites =
-        {
-            orphan_sats = 0
-        }
+    global.microwave_satellites = {}
+    global.orphan_sats = 0
     global.currently_selected_entity = {}
-    global.aerials =
-        {
-            aerial_base_list = {},
-            aerial_bases = {},
-            aerial_blimps = {}
-        }
+    global.aerials = {aerial_base_list = {},abl_count = 0, aerial_bases = {}, aerial_blimps = {}}
 end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
@@ -93,18 +89,33 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             -- moderator = moderator
         }
         log(serpent.block(global.reactor_tanks))
-    elseif E.name == "microwave-receiver" then
-        global.microwave_satellites[E.unit_number] =
-            {
-                reciver = E,
-                satellites = 0,
-                max = 10
-            }
-    elseif E.name == "aerial-base" then
+    elseif E.name == 'microwave-receiver' then
+        global.microwave_satellites[E.unit_number] = {reciver = E, satellites = 0, max = 10}
+        local ent_sats = global.microwave_satellites[E.unit_number].satellites
+        if global.orphan_sats > 0 then
+            if global.orphan_sats > 10 then
+                ent_sats = 10
+                global.orphan_sats = global.orphan_sats - 10
+            elseif global.orphan_sats <= 10 then
+                ent_sats = global.orphan_sats
+                global.orphan_sats = 0
+            end
+        end
+        E.power_production = ent_sats * 83333.34
+        E.electric_buffer_size = ent_sats * 5000000
+        log(serpent.block(global.microwave_satellites))
+        local ani = rendering.draw_animation{
+            animation = E.name,
+            surface = E.surface,
+            target = E,
+            render_layer = 129
+        }
+    elseif E.name == 'aerial-base' then
         log('hit')
         table.insert(global.aerials.aerial_base_list, E.unit_number)
+        global.aerials.abl_count = global.aerials.abl_count + 1
         global.aerials.aerial_bases[E.unit_number] = E
-    elseif string.match(E.name, "aerial%-blimp") ~= nil then
+    elseif string.match(E.name, 'aerial%-blimp') ~= nil then
         log('hit')
         global.aerials.aerial_blimps[E.unit_number] = {unit = E, current_destination = 1}
         if next(global.aerials.aerial_base_list) ~= nil then
@@ -133,7 +144,7 @@ end
 
 script.on_nth_tick(60, function(event)
     local wind_dir = game.surfaces['nauvis'].wind_orientation
-    --log(wind_dir)
+    -- log(wind_dir)
     local dir = ''
     if wind_dir > 0.9375 and wind_dir <= 0.0625 then
         dir = '-north'
@@ -204,27 +215,31 @@ end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
     local E = event.entity
-    --log('hit')
+    -- log('hit')
     if E.type == 'electric-energy-interface' and
         (string.match(E.name, 'hawt%-turbine') ~= nil or string.match(E.name, 'multiblade%-turbine') ~= nil) then
         log('hit')
         local mill = global.windmills[E.unit_number]
         rendering.destroy(mill.animation)
         global.windmills[E.unit_number] = nil
-        elseif E.name == "aerial-base" then
-            for b, base in pairs(global.aerials.aerial_base_list) do
-                if E.unit_number == base then
-                    global.aerials.aerial_base_list[b] = nil
-                    global.aerials.aerial_bases[E.unit_number] = nil
-                end
-                break
+    elseif E.name == 'aerial-base' then
+        for b, base in pairs(global.aerials.aerial_base_list) do
+            if E.unit_number == base then
+                global.aerials.aerial_base_list[b] = nil
+                global.aerials.aerial_bases[E.unit_number] = nil
             end
-        elseif string.match(E.name, "aerial%-blimp") ~= nil then
-            if global.aerials.aerial_blimps[E.unit_number] ~= nil then
-                global.aerials.aerial_blimps[E.unit_number] = nil
-            end
+            break
+        end
+    elseif string.match(E.name, 'aerial%-blimp') ~= nil then
+        if global.aerials.aerial_blimps[E.unit_number] ~= nil then
+            global.aerials.aerial_blimps[E.unit_number] = nil
+        end
+    elseif E.name == 'microwave-receiver' then
+        global.orphan_sats = global.orphan_sats + global.microwave_satellites[E.unit_number].satellites
+        global.microwave_satellites[E.unit_number] = nil
+        log(serpent.block(global.orphan_sats))
     end
-    --log(serpent.block(global.windmills))
+    -- log(serpent.block(global.windmills))
 end)
 
 script.on_event(defines.events.on_rocket_launched, function(event)
@@ -235,90 +250,83 @@ script.on_event(defines.events.on_rocket_launched, function(event)
     for s, sat in pairs(r_inv) do
         log(s)
         log(sat)
-        if s == "microwave-satellite" then
-            items = sat
-        end
+        if s == 'microwave-satellite' then items = sat end
     end
     log(items)
 
     if items > 0 then
         log('hit')
-        for r, recivers in pairs(global.microwave_satellites) do
-            --log('hit')
-            if items > 0 then
-                --log('hit')
-                local sats = recivers.satellites
-                if sats < recivers.max then
-                    --log('hit')
-                    sats = sats + items
-                    items = 0
+        if next(global.microwave_satellites) ~= nil then
+            for r, recivers in pairs(global.microwave_satellites) do
+                -- log('hit')
+                if items > 0 then
+                    -- log('hit')
+                    log(serpent.block(recivers))
+                    local sats = recivers.satellites
+                    if sats < recivers.max then
+                        -- log('hit')
+                        sats = sats + items
+                        items = 0
+                    end
+                    if sats > recivers.max then
+                        -- log('hit')
+                        items = sats - recivers.max
+                        sats = recivers.max
+                    end
+                    -- log('hit')
+                    -- log(sats)
+                    recivers.satellites = sats
+                    -- log(serpent.block(global.microwave_satellites))
+                    recivers.reciver.power_production = sats * 83333.34
+                    recivers.reciver.electric_buffer_size = sats * 5000000
+                    -- log(serpent.block(recivers.reciver.power_production))
+                else
+                    break
                 end
-                if sats > recivers.max then
-                    --log('hit')
-                    items = sats - recivers.max
-                    sats = reciver.max
-                end
-                --log('hit')
-                --log(sats)
-                recivers.satellites = sats
-                --log(serpent.block(global.microwave_satellites))
-                recivers.reciver.power_production = sats * 83333.34
-                recivers.reciver.electric_buffer_size = sats * 5000000
-                --log(serpent.block(recivers.reciver.power_production))
-            else
-                break
+                log(items)
+                global.orphan_sats = global.orphan_sats + items
+                log(serpent.block(global.orphan_sats))
             end
-            log(items)
-            global.microwave_satellites.orphan_sats = global.microwave_satellites.orphan_sats + items
+        else
+            global.orphan_sats = global.orphan_sats + items
         end
+        log(serpent.block(global.orphan_sats))
     end
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
     local E = event.entity
     local player = game.players[event.player_index]
-    if E ~= nil and string.match(E.name, "py%-oil%-powerplant") ~= nil and player.gui.relative.fuel_frame == nil then
+    if E ~= nil and string.match(E.name, 'py%-oil%-powerplant') ~= nil and player.gui.relative.fuel_frame == nil then
         global.currently_selected_entity = E
-        --add fluid gui
-        local fuel_frame = player.gui.relative.add(
-            {
-                type = "frame",
-                name = "fuel_frame",
-                anchor =
+        -- add fluid gui
+        local fuel_frame = player.gui.relative.add({
+            type = 'frame',
+            name = 'fuel_frame',
+            anchor = {
+                gui = defines.relative_gui_type.assembling_machine_gui,
+                position = defines.relative_gui_position.right
+            }
+        })
+        fuel_frame.add({type = 'label', name = 'test', caption = 'TESTING'})
+        fuel_frame.add({
+            type = 'choose-elem-button',
+            name = 'fuel_selection',
+            elem_type = 'fluid',
+            elem_filters = {
                 {
-                    gui = defines.relative_gui_type.assembling_machine_gui,
-                    position = defines.relative_gui_position.right,
+                    filter = 'subgroup',
+                    -- type = "fluid",
+                    subgroup = 'test'
                 }
             }
-        )
-        fuel_frame.add(
-            {
-                type = "label",
-                name = "test",
-                caption = "TESTING"
-            }
-        )
-        fuel_frame.add(
-            {
-                type = "choose-elem-button",
-                name = "fuel_selection",
-                elem_type = "fluid",
-                elem_filters =
-                {
-                    {
-                        filter = "subgroup",
-                        --type = "fluid",
-                        subgroup = "test"
-                    }
-                }
-            }
-        )
+        })
     end
 end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
-    if event.element.name == "fuel_selection" then
-        --set filter to fluid
+    if event.element.name == 'fuel_selection' then
+        -- set filter to fluid
         local E = global.currently_selected_entity
         local setfil = E.fluidbox.set_filter(3, event.element.elem_value)
         E.fluidbox = setfil
@@ -335,24 +343,42 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
         if global.aerials.aerial_blimps[event.unit_number] ~= nil then
             log('hit')
             local blimp = global.aerials.aerial_blimps[event.unit_number]
-            local bases = game.surfaces[blimp.unit.surface.name].find_entities_filtered{position = blimp.unit.position, radius = 4, name = "aerial-base"}
+            log(blimp.unit.surface.name)
+            local bases = game.surfaces[blimp.unit.surface.name].find_entities_filtered{
+                position = blimp.unit.position,
+                radius = 10,
+                name = 'aerial-base'
+            }
             --log(serpent.block(bases[1].position))
+            local cd = blimp.current_destination
+            log(cd)
+            local cd_last = cd - 1
+            local base = global.aerials.aerial_base_list[cd_last] or global.aerials.aerial_base_list[global.aerials.abl_count]
+            log(base)
+            local dist = util.distance(global.aerials.aerial_bases[base].position, blimp.unit.position)
+            log(dist)
             for b, base in pairs(bases) do
                 log('hit')
-                base.energy = base.energy + 2000
+                base.energy = base.energy + (100 * dist)
                 break
             end
             log('hit')
-            local cd = blimp.current_destination + 1
-            if global.aerials.aerial_base_list[cd] == nil then
-                cd = 1
-            end
+            local cd_next = cd + 1
+            if global.aerials.aerial_base_list[cd_next] == nil then cd_next = 1 end
             blimp.unit.set_command{
                 type = defines.command.go_to_location,
-                destination = global.aerials.aerial_bases[global.aerials.aerial_base_list[cd]].position,
+                destination = global.aerials.aerial_bases[global.aerials.aerial_base_list[cd_next]].position,
                 radius = 5
             }
-            blimp.current_destination = cd
+            blimp.current_destination = cd_next
         end
+    end
+end)
+
+script.on_event(defines.events.on_entity_died, function(event)
+    local E = event.entity
+    if E.name == 'microwave-receiver' then
+        global.orphan_sats = global.orphan_sats + global.microwave_satellites[E.unit_number].satellites
+        global.microwave_satellites[E.unit_number] = nil
     end
 end)
