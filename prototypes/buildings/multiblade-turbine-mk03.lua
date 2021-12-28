@@ -4,7 +4,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"pipe", 20},
+        {"aerial-base", 1},
+        {"rotor-mk03", 3},
+        {"anemometer-mk03", 1},
+        {"vane-mk03", 1},
+        {"tower-mk03", 1},
     },
     results = {
         {"multiblade-turbine-mk03", 1}
@@ -44,7 +48,7 @@ ENTITY {
         output_flow_limit = "50MW",
         render_no_power_icon = false
     },
-    energy_production = '50MW',
+    energy_production = '200MW',
     energy_usage = "0kW",
     picture =
         {

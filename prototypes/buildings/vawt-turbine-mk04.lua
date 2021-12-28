@@ -57,7 +57,7 @@ ENTITY{
         output_flow_limit = "50MW",
         render_no_power_icon = false
     },
-    energy_production = '160MW',
+    energy_production = '220MW',
     energy_usage = '0kW',
     working_sound = {
         sound = {filename = '__pyalternativeenergygraphics__/sounds/vawt-turbine-mk04.ogg', volume = 0.65},

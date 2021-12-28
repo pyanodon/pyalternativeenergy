@@ -1,41 +1,43 @@
 RECIPE {
     type = "recipe",
-    name = "py-coal-powerplant-mk01",
+    name = "py-coal-powerplant-mk03",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"electric-mining-drill", 10},
-        {"electronic-circuit", 100},
-        {"iron-gear-wheel", 300},
-        {"gasifier", 3},
-        {"steel-plate", 200},
-        {"engine-unit", 20},
-        {'intermetallics', 50},
+        {"py-coal-powerplant-mk02", 1},
+        {'ns-material', 40},
+        {"processing-unit", 50},
+        {"biopolymer", 50},
+        {"cf", 100},
+        {"glass-fiber", 100},
+        {"super-steel", 100},
+        {"low-density-structure", 100},
+        {"small-parts-03", 300},
     },
     results = {
-        {"py-coal-powerplant-mk01", 1}
+        {"py-coal-powerplant-mk03", 1}
     }
-}:add_unlock("coalplant-mk01")
+}:add_unlock("coalplant-mk03")
 
 ITEM {
     type = "item",
-    name = "py-coal-powerplant-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/coal-powerplant-mk01.png",
+    name = "py-coal-powerplant-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/coal-powerplant-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-buildings-mk03",
     order = "a",
-    place_result = "py-coal-powerplant-mk01",
+    place_result = "py-coal-powerplant-mk03",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "py-coal-powerplant-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/coal-powerplant-mk01.png",
+    name = "py-coal-powerplant-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/coal-powerplant-mk03.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "py-coal-powerplant-mk01"},
+    minable = {mining_time = 0.1, result = "py-coal-powerplant-mk03"},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
@@ -43,11 +45,11 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 3
     },
     allowed_effects = {"speed"},
     crafting_categories = {"coal-powerplant"},
-    crafting_speed = 1,
+    crafting_speed = 3,
     energy_source =
     {
       type = "burner",
@@ -61,7 +63,7 @@ ENTITY {
         color = {0,0,0},
       },
       fuel_inventory_size = 1,
-      emissions_per_minute = 12,
+      emissions_per_minute = 15,
       smoke =
       {
         {
@@ -90,7 +92,7 @@ ENTITY {
         },
       },
     },
-    energy_usage = "500kW",
+    energy_usage = "800kW",
     animation = {
         layers = {
             {
@@ -120,7 +122,7 @@ ENTITY {
                 repeat_count = 151,
                 animation_speed = 1/3,
                 shift = util.by_pixel(0, 144),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/coal-powerplant/r1.png",

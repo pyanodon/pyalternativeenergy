@@ -4,7 +4,14 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = 'item', name = 'iron-plate', amount = 1},
+        {"iron-plate", 100},
+        {"glass", 50},
+        {"automated-factory-mk01", 2},
+        {"aluminium-plate", 50},
+        {"steel-plate", 50},
+        {"iron-gear-wheel", 100},
+        {"pipe", 25},
+        {'intermetallics', 10},
     },
     results = {
         {type = "item", name = "aerial-base", amount = 1}

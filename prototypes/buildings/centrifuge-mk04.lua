@@ -9,6 +9,7 @@ RECIPE {
         {'metastable-quasicrystal', 5},
         {'small-parts-03', 100},
         {'molybdenum-plate', 20},
+        {"ti-n", 100},
         {"low-density-structure", 20},
         {"nbfe-alloy", 10},
     },

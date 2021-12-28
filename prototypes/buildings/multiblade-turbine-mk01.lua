@@ -4,7 +4,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"pipe", 20},
+        {"aerial-base", 1},
+        {"rotor-mk01", 3},
+        {"plastic-bar", 100},
+        {"vane-mk01", 1},
+        {"tower-mk01", 1},
     },
     results = {
         {"multiblade-turbine-mk01", 1}

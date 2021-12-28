@@ -9,6 +9,7 @@ RECIPE {
         {"nbfe-alloy", 5},
         {"low-density-structure", 30},
         {"super-alloy", 20},
+        {"ti-n", 100},
         {"intelligent-unit", 10},
         {"superconductor-servomechanims", 10},
         {"hyperelastic-material", 15},

@@ -1,43 +1,43 @@
 RECIPE {
     type = "recipe",
-    name = "py-gas-powerplant-mk01",
+    name = "py-gas-powerplant-mk02",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"distilator", 5},
-        {"copper-plate", 400},
-        {"iron-gear-wheel", 500},
-        {"pipe", 200},
-        {"iron-plate", 200},
-        {"steam-engine", 20},
-        {"electronic-circuit", 100},
-        {'intermetallics', 50},
-        {'engine-unit', 50},
+        {"py-gas-powerplant-mk01", 1},
+        {"nexelit-plate", 200},
+        {"concrete", 100},
+        {"steel-plate", 400},
+        {"eva", 100},
+        {"advanced-circuit", 50},
+        {'small-parts-02', 200},
+        {'self-assembly-monolayer', 20},
+        {'electric-engine-unit', 30},
     },
     results = {
-        {"py-gas-powerplant-mk01", 1}
+        {"py-gas-powerplant-mk02", 1}
     }
-}:add_unlock("gasplant-mk01")
+}:add_unlock("gasplant-mk02")
 
 ITEM {
     type = "item",
-    name = "py-gas-powerplant-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/gas-powerplant-mk01.png",
+    name = "py-gas-powerplant-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gas-powerplant-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-buildings-mk02",
     order = "a",
-    place_result = "py-gas-powerplant-mk01",
+    place_result = "py-gas-powerplant-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "py-gas-powerplant-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/gas-powerplant-mk01.png",
+    name = "py-gas-powerplant-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gas-powerplant-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "py-gas-powerplant-mk01"},
+    minable = {mining_time = 0.1, result = "py-gas-powerplant-mk02"},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
@@ -45,11 +45,11 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 2
     },
     allowed_effects = {"speed"},
     crafting_categories = {"gas-powerplant"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source =
     {
         type = "fluid",
@@ -107,7 +107,7 @@ ENTITY {
             },
         }
       },
-    energy_usage = "500kW",
+    energy_usage = "600kW",
     animation = {
         layers = {
             {
@@ -126,7 +126,7 @@ ENTITY {
                 frame_count = 1,
                 repeat_count = 80,
                 animation_speed = 1/2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(0, -80),
             },
             {
@@ -136,7 +136,7 @@ ENTITY {
                 frame_count = 1,
                 repeat_count = 80,
                 animation_speed = 1/2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 draw_as_glow = true,
                 shift = util.by_pixel(0, -80),
             },
@@ -147,7 +147,7 @@ ENTITY {
                 frame_count = 1,
                 repeat_count = 80,
                 animation_speed = 1/2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(0, -80),
             },
             {
@@ -209,7 +209,7 @@ ENTITY {
                 frame_count = 80,
                 line_length = 10,
                 width = 192,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 height = 96,
                 animation_speed = 1/2,
                 draw_as_glow = true,
