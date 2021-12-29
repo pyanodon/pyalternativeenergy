@@ -1,42 +1,43 @@
 RECIPE {
     type = "recipe",
-    name = "py-oil-powerplant-mk01",
+    name = "py-oil-powerplant-mk02",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"steel-plate", 100},
-        {"small-parts-01", 200},
-        {"duralumin", 50},
-        {"pipe", 200},
-        {"gas-refinery-mk01", 1},
-        {"electronic-circuit", 100},
-        {"distilator", 1},
-        {"intermetallics", 40},
+        {"py-oil-powerplant-mk01", 1},
+        {"small-parts-02", 100},
+        {"stainless-steel", 50},
+        {"advanced-circuit", 50},
+        {"plastic-bar", 200},
+        {'eva', 50},
+        {'engine-unit', 20},
+        {"niobium-pipe", 200},
+        {'self-assembly-monolayer', 20},
     },
     results = {
-        {"py-oil-powerplant-mk01", 1}
+        {"py-oil-powerplant-mk02", 1}
     }
-}:add_unlock("oilplant-mk01")
+}:add_unlock("oilplant-mk02")
 
 ITEM {
     type = "item",
-    name = "py-oil-powerplant-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/oil-powerplant-mk01.png",
+    name = "py-oil-powerplant-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/oil-powerplant-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-buildings-mk02",
     order = "a",
-    place_result = "py-oil-powerplant-mk01",
+    place_result = "py-oil-powerplant-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "py-oil-powerplant-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/oil-powerplant-mk01.png",
+    name = "py-oil-powerplant-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/oil-powerplant-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "py-oil-powerplant-mk01"},
+    minable = {mining_time = 0.1, result = "py-oil-powerplant-mk02"},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
@@ -44,11 +45,11 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 2
     },
     allowed_effects = {"speed"},
     crafting_categories = {"oil-powerplant"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source =
     {
         type = "fluid",
@@ -93,7 +94,7 @@ ENTITY {
           },
         }
       },
-    energy_usage = "400kW",
+    energy_usage = "600kW",
     animation = {
         layers = {
             {
@@ -112,7 +113,7 @@ ENTITY {
                 frame_count = 1,
                 --repeat_count = 151,
                 --animation_speed = 1/3,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(0, -176),
             },
             {

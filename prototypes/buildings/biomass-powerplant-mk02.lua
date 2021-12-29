@@ -1,42 +1,45 @@
 RECIPE {
     type = "recipe",
-    name = "py-biomass-powerplant-mk01",
+    name = "py-biomass-powerplant-mk02",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"steam-engine", 10},
-        {"iron-plate", 300},
-        {"plastic-bar", 50},
-        {"electronic-circuit", 100},
-        {"small-parts-01", 100},
-        {"pipe", 50},
-        {"steel-plate", 100},
-        {"intermetallics", 20},
+        {"py-biomass-powerplant-mk01", 1},
+        {"nexelit-plate", 300},
+        {"advanced-circuit", 100},
+        {'aluminium-plate', 100},
+        {"neuroprocessor", 20},
+        {"small-parts-02", 150},
+        {"niobium-pipe", 50},
+        {"engine-unit", 20},
+        {"eva", 50},
+        {"stainless-steel", 100},
+        {"self-assembly-monolayer", 40},
     },
     results = {
-        {"py-biomass-powerplant-mk01", 1}
+        {"py-biomass-powerplant-mk02", 1}
     }
-}:add_unlock("biomassplant-mk01")
+}:add_unlock("biomassplant-mk02")
 
 ITEM {
     type = "item",
-    name = "py-biomass-powerplant-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/biomass-powerplant-mk01.png",
+    name = "py-biomass-powerplant-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/biomass-powerplant-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-buildings-mk02",
     order = "a",
-    place_result = "py-biomass-powerplant-mk01",
+    place_result = "py-biomass-powerplant-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "py-biomass-powerplant-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/biomass-powerplant-mk01.png",
+    name = "py-biomass-powerplant-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/biomass-powerplant-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "py-biomass-powerplant-mk01"},
+    minable = {mining_time = 0.1, result = "py-biomass-powerplant-mk02"},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
@@ -44,11 +47,11 @@ ENTITY {
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 2
     },
     allowed_effects = {"speed"},
     crafting_categories = {"biomass-powerplant"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source =
     {
       type = "burner",
@@ -79,7 +82,7 @@ ENTITY {
             },
         }
     },
-    energy_usage = "800kW",
+    energy_usage = "900kW",
     animation = {
         layers = {
             {
@@ -116,7 +119,7 @@ ENTITY {
                 frame_count = 1,
                 repeat_count = 50,
                 animation_speed = 1/2,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                 shift = util.by_pixel(0, -80),
             },
             {

@@ -12,6 +12,7 @@ RECIPE {
         {"superconductor-servomechanims", 50},
         {"control-unit", 20},
         {"ti-n", 100},
+        {"metallic-glass", 50},
         {"nbti-alloy", 200},
     },
     results = {
