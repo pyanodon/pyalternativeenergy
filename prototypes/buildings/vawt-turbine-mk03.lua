@@ -9,7 +9,7 @@ RECIPE{
         {"gearbox-mk03", 1},
         {"processing-unit", 10},
         {"small-parts-03", 400},
-        {"self-assembly-monolayer", 20},
+        {"ns-material", 20},
         {"utility-box-mk03", 2},
         {"controler-mk03", 2},
         {"electronics-mk03", 1},

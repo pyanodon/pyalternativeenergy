@@ -13,7 +13,6 @@ RECIPE {
         {'plastic-bar', 100},
         {'electric-engine-unit', 10},
         {'aerogel', 20},
-
     },
     results = {
         {"centrifuge-mk03", 1}

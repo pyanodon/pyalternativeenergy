@@ -4,11 +4,24 @@ RECIPE{
     type = "recipe",
     name = "aerial-blimp-mk04",
 	energy_required = 50,
-	category = 'crafting',
+	category = 'advanced-crafting',
     enabled = false,
     ingredients =
     {
-        {type = 'item', name = 'iron-plate', amount = 1},
+		{"shaft-mk04", 1},
+        {"anemometer-mk04", 1},
+		{"solar-panel-mk02", 1},
+        {"intelligent-unit", 20},
+        {"small-parts-03", 100},
+        {"metastable-quasicrystal", 5},
+        {"low-density-structure", 50},
+        {"hyperelastic-material", 10},
+        {'carbon-aerogel', 20},
+		{"quantum-battery", 5},
+        {"cf", 200},
+        {"electronics-mk04", 1},
+        {"controler-mk04", 1},
+		{"bose-einstein-superfluid", 10},
     },
     result = "aerial-blimp-mk04"
   }:add_unlock("renewable-mk04")
