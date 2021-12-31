@@ -302,3 +302,107 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("pharmagenomics")
+
+--------------NUMAL-------------------
+
+ITEM {
+    type = "module",
+    name = "numal",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-a",
+    stack_size = 300,
+	effect = { speed = {bonus = 3.75}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk02",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-b",
+    stack_size = 300,
+	effect = { speed = {bonus = 5}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk03",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-c",
+    stack_size = 300,
+	effect = { speed = {bonus = 6.25}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk04",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-d",
+    stack_size = 300,
+	effect = { speed = {bonus = 7.5}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'art-numal',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'fluid', name = 'artificial-blood', amount = 100},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'item', name = 'tissue-engineered-fat', amount = 1},
+        {type = 'item', name = 'scafold-free-bones', amount = 1},
+        {type = 'item', name = 'laboratory-grown-brain', amount = 1},
+        {type = 'item', name = 'in-vitro-meat', amount = 1},
+        {type = 'item', name = 'biomimetic-skin', amount = 1},
+        {type = 'item', name = 'bioartificial-guts', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'numal', amount = 10},
+    },
+    --main_product = "psc",
+}:add_unlock("mass-production")

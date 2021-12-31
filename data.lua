@@ -7,6 +7,7 @@ require('prototypes/item-groups')
 -- (( Categories ))--
 require('prototypes/recipe-categories')
 require('prototypes/fuel-categories')
+require("prototypes/module-categories")
 -- ))
 
 -- (( Technology ))--
