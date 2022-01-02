@@ -10,6 +10,10 @@ RECIPE("coated-container"):remove_unlock('diamond-mining'):add_unlock('productio
 RECIPE("grease-table-mk01"):remove_unlock('diamond-mining'):add_unlock('machines-mk02')
 RECIPE("py-turbine"):remove_unlock('fusion-mk01')
 
+RECIPE("py-heat-exchanger-mk02"):add_unlock('machines-mk02')
+RECIPE("py-heat-exchanger-mk03"):add_unlock('machines-mk03')
+RECIPE("py-heat-exchanger-mk04"):add_unlock('machines-mk04')
+
 --BUILDINDS--
 RECIPE("agitator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("nmf-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -23,8 +27,9 @@ RECIPE("compressor-mk01"):add_ingredient({type = "item", name = "intermetallics"
 RECIPE("jig-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("grease-table-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
 RECIPE("mixer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+RECIPE("py-heat-exchanger"):add_ingredient({type = "item", name = "intermetallics", amount = 5}):remove_unlock('fusion-mk01')
 
-RECIPE("py-heat-exchanger"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):remove_unlock('fusion-mk01')
+
 RECIPE("agitator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("vacuum-pump-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount =2})
 RECIPE("nmf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
@@ -39,6 +44,7 @@ RECIPE("compressor-mk02"):add_ingredient({type = "item", name = "self-assembly-m
 RECIPE("jig-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("grease-table-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7})
 RECIPE("mixer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
+RECIPE("py-heat-exchanger-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 
 RECIPE("agitator-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("vacuum-pump-mk03"):add_ingredient({type = "item", name = "ns-material", amount =2})
@@ -55,6 +61,7 @@ RECIPE("compressor-mk03"):add_ingredient({type = "item", name = "ns-material", a
 RECIPE("jig-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("grease-table-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7})
 RECIPE("mixer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
+RECIPE("py-heat-exchanger-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 
 RECIPE("agitator-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("vacuum-pump-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount =2})
@@ -71,6 +78,7 @@ RECIPE("grease-table-mk04"):add_ingredient({type = "item", name = "metastable-qu
 RECIPE("mixer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("fusion-reactor-mk01"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("fusion-reactor-mk02"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
+RECIPE("py-heat-exchanger-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 
 RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "super-alloy", amount = 50}):add_ingredient({type = "item", name = "py-heat-exchanger", amount = 1})
 RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "nbti-alloy", amount = 30}):add_ingredient({type = "item", name = "wall-shield", amount = 5}):add_ingredient({type = "item", name = "science-coating", amount = 10}):add_ingredient({type = "item", name = "control-unit", amount = 5})
