@@ -64,7 +64,7 @@ RECIPE('py-oil-powerplant-mk03'):add_ingredient({type = "item", name = "harbonic
 RECIPE('accumulator-mk03'):add_unlock({"nano-tech"})
 RECIPE('oxalic-acid'):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE("dbr"):add_ingredient({type = "item", name = "nanocrystaline-core", amount = 1})
-
+RECIPE("yag-laser-module"):add_ingredient({type = "item", name = "erbium", amount = 1})
 RECIPE("heavy-n"):add_ingredient({type = "item", name = "sb-oxide", amount = 5})
 RECIPE("pa-uranium-235"):remove_unlock('nucleo')
 RECIPE("sodium-silicate"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
