@@ -1856,3 +1856,168 @@ ITEM {
     order = "i[electric-engine-unit]",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "erbium",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/erbium.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ernico",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ernico.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "er-oxalate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/er-oxalate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "er-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/er-oxide.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "impure-er-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/impure-er-oxide.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "fan",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/fan.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "hts-coil",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/hts-coil.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "magnetic-ring",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/magnetic-ring.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "rotor-m",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/rotor-m.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "sc-engine",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/sc-engine.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "sc-stator",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/sc-stator.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ybco-monocrystal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ybco-monocrystal.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "air-duct",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/air-duct.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cryostat",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/cryostat.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cryocooler",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/cryocooler.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
