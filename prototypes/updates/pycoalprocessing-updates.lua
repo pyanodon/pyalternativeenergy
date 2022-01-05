@@ -203,3 +203,24 @@ RECIPE("nas-battery"):replace_ingredient("lead-plate", "pbsb-alloy")
 
 ----EXCLUSIVE RECIPES----
 RECIPE("lithium-peroxide"):add_ingredient({type = "item", name = "lithium", amount = 3})
+
+RECIPE {
+    type = "recipe",
+    name = "mining-antimony",
+    category = "ground-borer",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+        {type = "fluid", name = "lubricant", amount = 100},
+        {type = "fluid", name = "syngas", amount = 100},
+        {type = "item", name = "drill-head", amount = 2}
+    },
+    results = {
+        {type = "item", name = "antimonium-ore", amount = 15}
+    },
+    main_product = "antimonium-ore",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/drilling-antimony.png",
+    icon_size = 64,
+    subgroup = "py-drilling",
+    order = "c"
+}:add_unlock("excavation-2")
