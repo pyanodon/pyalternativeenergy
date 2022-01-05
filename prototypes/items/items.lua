@@ -870,6 +870,10 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/quantum-battery.png",
 	icon_size = 64,
     flags = {},
+    fuel_value = "1000MJ",
+    fuel_category = "nexelit",
+    fuel_acceleration_multiplier = 3.5,
+    fuel_top_speed_multiplier = 2.5,
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 500
