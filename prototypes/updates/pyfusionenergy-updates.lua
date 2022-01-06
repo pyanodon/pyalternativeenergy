@@ -85,3 +85,4 @@ RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "nbti-alloy", am
 
 RECIPE("blanket"):add_ingredient({type = "item", name = "lithium", amount = 5})
 RECIPE("magnetic-core"):add_ingredient({type = "item", name = "battery", amount = 1})
+RECIPE("sc-unit"):add_ingredient({type = "item", name = "hts-coil", amount = 1})

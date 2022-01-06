@@ -138,3 +138,155 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("erbium")
+
+RECIPE {
+    type = "recipe",
+    name = "air-duct",
+    category = "crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "niobium-pipe", amount = 2},
+        {type = "item", name = "small-parts-02", amount = 10},
+        {type = "item", name = "science-coating", amount = 1},
+        {type = "item", name = "cf", amount = 4},
+    },
+    results = {
+        {type = "item", name = "air-duct", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("erbium")
+
+RECIPE {
+    type = "recipe",
+    name = "cryostat",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "cooling-system", amount = 1},
+        {type = "item", name = "vacuum-pump-mk01", amount = 1},
+        {type = "item", name = "czts-plate", amount = 3},
+        {type = "item", name = "stainless-steel", amount = 5},
+        {type = "fluid", name = "liquid-nitrogen", amount = 100},
+    },
+    results = {
+        {type = "item", name = "cryostat", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("erbium")
+
+RECIPE {
+    type = "recipe",
+    name = "cryocooler",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "cooling-system", amount = 1},
+        {type = "item", name = "pump", amount = 1},
+        {type = "item", name = "ernico", amount = 2},
+        {type = "fluid", name = "liquid-helium", amount = 50},
+    },
+    results = {
+        {type = "item", name = "cryocooler", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("erbium")
+
+RECIPE {
+    type = "recipe",
+    name = "sc-engine",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "cryostat", amount = 1},
+        {type = "item", name = "cryocooler", amount = 1},
+        {type = "item", name = "rotor-m", amount = 1},
+        {type = "item", name = "fan", amount = 2},
+        {type = "item", name = "sc-stator", amount = 1},
+        {type = "item", name = "magnetic-ring", amount = 1},
+        {type = "item", name = "superconductor", amount = 1},
+        {type = "item", name = "optical-fiber", amount = 2},
+        {type = "item", name = "super-steel", amount = 5},
+        {type = "item", name = "small-parts-03", amount = 20},
+        {type = "item", name = "air-duct", amount = 2},
+        {type = "fluid", name = "vacuum", amount = 100},
+    },
+    results = {
+        {type = "item", name = "sc-engine", amount = 3},
+    },
+    --main_product = "eg-si",
+}:add_unlock("erbium")
+
+RECIPE {
+    type = "recipe",
+    name = "rotor-m",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "shaft-mk03", amount = 1},
+        {type = "item", name = "small-parts-02", amount = 5},
+        {type = "item", name = "ybco-monocrystal", amount = 1},
+        {type = "item", name = "diamagnetic-material", amount = 1},
+        {type = "item", name = "mositial-nx", amount = 1},
+        {type = "fluid", name = "grease", amount = 50},
+    },
+    results = {
+        {type = "item", name = "rotor-m", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("erbium")
+
+RECIPE {
+    type = "recipe",
+    name = "magnetic-ring",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "nano-wires", amount = 1},
+        {type = "item", name = "low-density-structure", amount = 2},
+        {type = "item", name = "science-coating", amount = 1},
+    },
+    results = {
+        {type = "item", name = "magnetic-ring", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("erbium")
+
+RECIPE {
+    type = "recipe",
+    name = "sc-stator",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "hts-coil", amount = 2},
+        {type = "item", name = "nxsb-alloy", amount = 1},
+        {type = "item", name = "cf", amount = 4},
+        {type = "item", name = "super-alloy", amount = 4},
+    },
+    results = {
+        {type = "item", name = "sc-stator", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("erbium")
+
+RECIPE {
+    type = "recipe",
+    name = "hts-coil",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "nbti-alloy", amount = 3},
+        {type = "item", name = "sc-wire", amount = 1},
+    },
+    results = {
+        {type = "item", name = "hts-coil", amount = 1},
+    },
+    --main_product = "eg-si",
+}:add_unlock("erbium")
