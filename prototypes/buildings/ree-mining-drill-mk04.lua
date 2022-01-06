@@ -11,6 +11,7 @@ RECIPE {
         {"low-density-structure", 10},
         {"nbfe-alloy", 10},
         {'metastable-quasicrystal', 2},
+        {"sc-engine", 2}),
         {"intelligent-unit", 3},
         {"superconductor-servomechanims", 2},
         {"hyperelastic-material", 5},

@@ -47,6 +47,11 @@ RECIPE("low-density-structure"):add_ingredient({type = "item", name = "cf", amou
 RECIPE("arithmetic-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("decider-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("constant-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
+RECIPE("spidertron"):add_ingredient({type = "item", name = "sc-engine", amount = 25})
+RECIPE("artillery-wagon"):add_ingredient({type = "item", name = "sc-engine", amount = 8})
+RECIPE("satellite"):add_ingredient({type = "item", name = "sc-engine", amount = 1})
+RECIPE("utility-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 1})
+RECIPE("space-science"):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 
 --[[
 local com_recipes = {}
