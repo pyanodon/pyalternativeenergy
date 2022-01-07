@@ -86,12 +86,12 @@ do
                     layers = {
                         {
                             filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/glass.png',
-                            width = panel.picture.width,
-                            height = panel.picture.height,
+                            width = 64,
+                            height = 64,
                             x = x,
                             y = y,
                             scale = 0.5,
-                            shift = panel.picture.shift,
+                            shift = util.by_pixel(0, -32),
                         },
                     },
                 },
