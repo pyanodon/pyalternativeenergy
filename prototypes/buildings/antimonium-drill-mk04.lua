@@ -14,7 +14,7 @@ RECIPE {
         {"superconductor-servomechanims", 10},
         {"hyperelastic-material", 15},
         {'metastable-quasicrystal', 4},
-        {"sc-engine", 3}),
+        {"sc-engine", 3},
     },
     results = {
         {"antimonium-drill-mk04", 1}

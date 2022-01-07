@@ -13,7 +13,7 @@ RECIPE {
         {"control-unit", 20},
         {"ti-n", 100},
         {"metallic-glass", 50},
-        {"sc-engine", 8}),
+        {"sc-engine", 8},
         {"nbti-alloy", 200},
     },
     results = {

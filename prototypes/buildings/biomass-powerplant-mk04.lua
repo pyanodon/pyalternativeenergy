@@ -12,7 +12,7 @@ RECIPE {
         {"intelligent-unit", 50},
         {'metastable-quasicrystal', 10},
         {'alag-alloy', 60},
-        {"sc-engine", 8}),
+        {"sc-engine", 8},
         {"control-unit", 20},
         {"metallic-glass", 100},
     },

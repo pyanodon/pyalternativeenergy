@@ -10,7 +10,7 @@ RECIPE {
         {"control-unit", 30},
         {"boron", 40},
         {"metallic-glass", 100},
-        {"sc-engine", 8}),
+        {"sc-engine", 8},
         {"hyperelastic-material", 30},
         {"ti-n", 100},
         {"super-alloy", 500},
