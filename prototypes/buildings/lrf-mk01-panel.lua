@@ -1,35 +1,35 @@
 RECIPE {
     type = "recipe",
-    name = "Shit-mk01",
+    name = "lrf-panel-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
-        {"Shit-mk01", 1}
+        {"lrf-panel-mk01", 1}
     }
 }:add_unlock("thermal-mk01")
 
 ITEM {
     type = "item",
-    name = "Shit-mk01",
+    name = "lrf-panel-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk03",
     order = "a",
-    place_result = "Shit-mk01",
+    place_result = "lrf-panel-mk01",
     stack_size = 10
 }
 
 ENTITY {
     type = "furnace",
-    name = "Shit-mk01",
+    name = "lrf-panel-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "Shit-mk01"},
+    minable = {mining_time = 0.5, result = "lrf-panel-mk01"},
     fast_replaceable_group = "lrf",
     max_health = 35,
     corpse = "big-remnants",
@@ -41,15 +41,11 @@ ENTITY {
         module_slots = 0
     },
     --allowed_effects = {"speed"},
-    crafting_categories = {"lrf"},
+    crafting_categories = {"lrf-panel"},
     crafting_speed = 1,
     source_inventory_size = 1,
     result_inventory_size = 1,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.0,
-    },
+    energy_source = {type = "void"},
     energy_usage = "400kW",
     animation = {
         north =

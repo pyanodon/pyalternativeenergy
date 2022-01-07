@@ -38,6 +38,9 @@ KING TODO:
       - oil
       - nuclear
       - thermal solar
+      - solar updraft tower
+      - solar concentrator
+      - mdh at 3000 degrees
  - convert all non electric buildings to heat based energy source
  - setup energy converter building with 4 variants
       - electric

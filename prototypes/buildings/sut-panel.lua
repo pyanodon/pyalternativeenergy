@@ -35,6 +35,7 @@ ENTITY {
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     picture = {
         layers = {
+            --[[
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/floor.png',
                 width = 64,
@@ -50,6 +51,7 @@ ENTITY {
                 draw_as_shadow = true,
                 shift = util.by_pixel(10, 0),
             },
+            ]]--
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/glass.png',
                 width = 64,
@@ -61,3 +63,41 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
 }
+
+local panel = data.raw["simple-entity-with-owner"]["sut-panel"]
+do
+    local i = 1
+    for y = 0, 128 - 64, 64 do
+        for x = 0, 1920 - 64, 64 do
+            ENTITY {
+                type = "simple-entity-with-owner",
+                name = "sut-panel-" .. i,
+                icon = panel.icon,
+                icon_size = panel.icon_size,
+                flags = {"placeable-neutral", "player-creation"},
+                minable = panel.minable,
+                fast_replaceable_group = "sut-panel",
+                max_health = panel.max_health,
+                corpse = panel.corpse,
+                dying_explosion = panel.dying_explosion,
+                collision_box = panel.collision_box,
+                selection_box = panel.selection_box,
+                picture = {
+                    layers = {
+                        {
+                            filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/glass.png',
+                            width = panel.picture.width,
+                            height = panel.picture.height,
+                            x = x,
+                            y = y,
+                            scale = 0.5,
+                            shift = panel.picture.shift,
+                        },
+                    },
+                },
+                vehicle_impact_sound = panel.vehicle_impact_sound
+            }
+            i = i + 1
+        end
+    end
+end

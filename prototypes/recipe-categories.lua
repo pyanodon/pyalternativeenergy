@@ -5,6 +5,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "lrf-panel"
+    },
+    {
+        type = "recipe-category",
         name = "solar-tower"
     },
     {
