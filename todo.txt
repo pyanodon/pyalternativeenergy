@@ -15,7 +15,7 @@ GRAPHICS (feel free to insert any requierements here):
 
 - Make Cottonguts powerplant (DUNNO, maybe not)
 - Make Phaddai powerplant (DUNNO, maybe not)
-- Redo coalbed gas (maybe make it as a resource in map like oil sands or antimony, to restrict the area to extract it).
+- Redo coalbed gas (maybe make it as a resource in map like oil sands or antimony, to restrict the area to extract it). POSTPONED
 
 CODING:
 
@@ -23,7 +23,6 @@ CODING:
 - Make all the thermo solar buildings working as intended
 - Make the aerials move around and back to base to "deposit" energy in the grid
 - Make tidal powerplant and Numal farm works on shore
-- Wind turbines arent turning to wind.
 
 FYI:
 
