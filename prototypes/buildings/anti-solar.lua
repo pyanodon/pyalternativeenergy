@@ -11,6 +11,10 @@ RECIPE {
         {"graphene-roll", 30},
         {"cobalt-nx", 10},
         {"nano-wires", 10},
+        {'biopolymer', 40},
+        {'ns-material', 20},
+        {'dsnc-cell', 16},
+        {'anti-reflex-glass', 20},
     },
     results = {
         {"anti-solar", 1}
