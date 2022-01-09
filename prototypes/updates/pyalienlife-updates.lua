@@ -240,6 +240,11 @@ RECIPE('nanochondria'):add_ingredient({type = "item", name = "nanocarrier", amou
 RECIPE('adam42-gen'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 RECIPE("biobattery"):remove_unlock('chitin'):add_unlock({"battery-mk03"})
 RECIPE("nanofibrils"):remove_unlock('chitin'):add_unlock({"battery-mk03"})
+RECIPE('hyaline'):add_ingredient({type = "fluid", name = "fatty-acids", amount = 30})
+RECIPE('zinc-finger-proteins'):add_ingredient({type = "fluid", name = "fatty-acids", amount = 30})
+RECIPE('pre-pesticide-02'):add_ingredient({type = "item", name = "dodecylamine", amount = 1})
+RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
+RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 
 ----EXCLUSIVE RECIPES----
 

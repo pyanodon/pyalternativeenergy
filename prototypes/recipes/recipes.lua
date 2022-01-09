@@ -863,3 +863,17 @@ RECIPE {
         {type = "item", name = "stator", amount = 1}
     },
   }:add_unlock("electric-engine")
+
+  RECIPE {
+    type = "recipe",
+    name = "oleochemicals-to-fatty-acids",
+    category = "olefin",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "oleochemicals", amount =  100},
+    },
+    results = {
+        {type = "fluid", name = "fatty-acids", amount =  50},
+    },
+  }:add_unlock("eva")

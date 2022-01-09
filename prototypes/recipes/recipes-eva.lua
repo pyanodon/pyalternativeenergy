@@ -29,6 +29,23 @@ RECIPE {
         {type = "fluid", name = "middle-processed-lard", amount = 50},
     },
     results = {
+        {type = "fluid", name = "fatty-acids", amount = 70},
+       },
+    --main_product = "middle-processed-lard",
+}:add_unlock("eva")
+
+RECIPE {
+    type = "recipe",
+    name = "fatty-acids-2",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "organic-solvent", amount = 70},
+        {type = "fluid", name = "hot-air", amount = 100},
+        {type = "item", name = "seaweed", amount = 100},
+    },
+    results = {
         {type = "fluid", name = "fatty-acids", amount = 50},
        },
     --main_product = "middle-processed-lard",
