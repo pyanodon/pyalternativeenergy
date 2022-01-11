@@ -224,3 +224,5 @@ RECIPE {
     subgroup = "py-drilling",
     order = "c"
 }:add_unlock("excavation-2")
+
+FLUID("dirty-water-light"):subgroup_order("py-alternativeenergy-fluids", "c")
