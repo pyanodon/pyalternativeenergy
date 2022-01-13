@@ -53,6 +53,7 @@ RECIPE("satellite"):add_ingredient({type = "item", name = "sc-engine", amount = 
 RECIPE("utility-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("space-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 1}):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("nv-center"):add_ingredient({type = "item", name = "mqdc", amount = 1})
+RECIPE("production-science-pack"):add_ingredient({type = "item", name = "low-density-structure", amount = 3}):add_ingredient({type = "item", name = "super-steel", amount = 5})
 
 --[[
 local com_recipes = {}
