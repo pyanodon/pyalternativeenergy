@@ -1,5 +1,10 @@
 local fun = require("__pyrawores__/prototypes/functions/functions")
 
+--TECHNOLOGY--
+TECHNOLOGY("nexelit-mk01"):remove_pack('logistic-science-pack')
+TECHNOLOGY("fluid-processing-machines-1"):remove_pack('logistic-science-pack'):remove_prereq('electric-engine')
+TECHNOLOGY("plastics"):remove_pack('logistic-science-pack')
+
 --BUILDINDS--
 --RECIPE("bof-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 --RECIPE("smelter-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 15})
@@ -33,7 +38,7 @@ RECIPE("lead-mine"):add_ingredient({type = "item", name = "self-assembly-monolay
 RECIPE("nexelit-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("nickel-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("quartz-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("salt-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
+--RECIPE("salt-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("tin-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("uranium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("zinc-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})

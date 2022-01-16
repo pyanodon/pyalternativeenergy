@@ -1,7 +1,7 @@
 
 RECIPE("nuclear-sample"):replace_ingredient('uranium-ore', 'pu-238')
 
-TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-2')
+TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-mk02')
 
 
 RECIPE("lead-container"):remove_unlock('diamond-mining'):add_unlock('production-science-pack')
@@ -27,7 +27,7 @@ RECIPE("compressor-mk01"):add_ingredient({type = "item", name = "intermetallics"
 RECIPE("jig-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("grease-table-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
 RECIPE("mixer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
-RECIPE("py-heat-exchanger"):add_ingredient({type = "item", name = "intermetallics", amount = 5}):remove_unlock('fusion-mk01')
+RECIPE("py-heat-exchanger"):add_ingredient({type = "item", name = "intermetallics", amount = 5}):replace_ingredient('niobium-pipe', 'pipe'):remove_unlock('machines-mk02'):add_unlock('nonrenewable-mk01')
 
 
 RECIPE("agitator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})

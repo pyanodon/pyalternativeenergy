@@ -1,5 +1,5 @@
 --TECHNOLOGY--
-TECHNOLOGY('filtration-2'):add_prereq('lithium-processing')
+TECHNOLOGY('filtration-mk02'):add_prereq('lithium-processing')
 --BUILDINDS--
 
 --RECIPE--
@@ -74,7 +74,7 @@ RECIPE('naphtha-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden
 RECIPE('lubricant-combustion-biomass'):remove_unlock('energy-2'):set_fields{hidden = true}
 RECIPE('xylenol-combustion-biomass'):remove_unlock('energy-2')
 
-RECIPE("evaporator"):remove_ingredient('gasturbinemk01')
+RECIPE("evaporator"):remove_ingredient('gasturbinemk01'):remove_ingredient('chemical-plant-mk01')
 RECIPE("methanol-reactor"):remove_ingredient('gasturbinemk01')
 
 --RECIPE("advanced-foundry-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -82,7 +82,7 @@ RECIPE("automated-factory-mk01"):add_ingredient({type = "item", name = "intermet
 RECIPE("ground-borer"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("wpu"):add_ingredient({type = "item", name = "intermetallics", amount = 1})
 RECIPE("ball-mill-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
-RECIPE("chemical-plant-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+RECIPE("chemical-plant-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5}):remove_unlock('coal-processing-2'):add_unlock('machines-mk01')
 RECIPE("carbon-filter"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("classifier"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("desulfurizator-unit"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
@@ -114,7 +114,7 @@ RECIPE("desulfurizator-unit-mk02"):add_ingredient({type = "item", name = "self-a
 RECIPE("evaporator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("fluid-separator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("fts-reactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("niobium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
+--RECIPE("niobium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("gasifier-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("methanol-reactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("olefin-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
