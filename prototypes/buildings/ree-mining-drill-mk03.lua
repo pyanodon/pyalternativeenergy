@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"ree-mining-drill-mk02", 1},
         {"titanium-plate", 20},
-        {"stainless-steel", 20},
+        {"super-steel", 20},
         {"nbti-alloy", 20},
         {"tin-plate", 20},
         {'ns-material', 20},

@@ -55,6 +55,8 @@ RECIPE("space-science-pack"):add_ingredient({type = "item", name = "sc-engine", 
 RECIPE("nv-center"):add_ingredient({type = "item", name = "mqdc", amount = 1})
 RECIPE("production-science-pack"):add_ingredient({type = "item", name = "low-density-structure", amount = 3}):add_ingredient({type = "item", name = "super-steel", amount = 5})
 
+ITEM("simik"):set_field{fuel_category = 'simik'}:set_field{fuel_value = '800MJ'}
+
 --[[
 local com_recipes = {}
 

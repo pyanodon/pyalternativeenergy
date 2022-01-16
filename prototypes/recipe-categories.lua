@@ -9,6 +9,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "simik-boiler"
+    },
+    {
+        type = "recipe-category",
         name = "solar-tower"
     },
     {

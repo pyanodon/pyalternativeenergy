@@ -70,6 +70,7 @@ require("prototypes/recipes/recipes-lithium")
 require("prototypes/recipes/recipes-wind")
 require("prototypes/recipes/recipes-carbonfiber")
 require("prototypes/recipes/recipes-lrf")
+require("prototypes/recipes/recipes-simik-boiler")
 -- ))
 
 -- (( ITEMs ))--
@@ -231,6 +232,7 @@ require("prototypes/buildings/aerial-mk01")
 require("prototypes/buildings/aerial-mk02")
 require("prototypes/buildings/aerial-mk03")
 require("prototypes/buildings/aerial-mk04")
+require("prototypes/buildings/simik-boiler")
 
 -- ))
 

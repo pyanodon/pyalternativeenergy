@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"ree-mining-drill-mk03", 1},
         {"concrete", 50},
-        {"super-steel", 30},
+        {"super-alloy", 30},
         {"storage-tank", 1},
         {"low-density-structure", 10},
         {"nbfe-alloy", 10},
