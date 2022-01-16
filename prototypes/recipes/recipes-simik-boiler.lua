@@ -89,3 +89,18 @@ RECIPE {
     },
     --main_product = "eg-si",
 }:add_unlock("simik-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "simik-hot-air-boiler",
+    category = "simik-boiler",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "fluid", name = "pressured-air", amount = 200},
+    },
+    results = {
+        {type = "fluid", name = "hot-air", amount = 200,},
+    },
+    --main_product = "eg-si",
+}:add_unlock("simik-mk03")
