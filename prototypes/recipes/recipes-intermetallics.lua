@@ -6,7 +6,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "iron-plate", amount = 7},
-        {type = "item", name = "nexelit-plate", amount = 6},
+        {type = "item", name = "duralumin", amount = 6},
         {type = "item", name = "sb-oxide", amount = 1},
     },
     results = {
@@ -25,7 +25,7 @@ RECIPE {
         {type = "item", name = "titanium-plate", amount = 3},
         {type = "item", name = "copper-plate", amount = 3},
         {type = "item", name = "nickel-plate", amount = 3},
-        {type = "item", name = "nexelit-plate", amount = 3},
+        {type = "item", name = "duralumin", amount = 3},
         {type = "item", name = "sb-oxide", amount = 3},
     },
     results = {
@@ -63,7 +63,7 @@ RECIPE {
         {type = "item", name = "nbalti", amount = 1},
         {type = "item", name = "crmoni", amount = 1},
         {type = "item", name = "rayon", amount = 3},
-        {type = "item", name = "nexelit-plate", amount = 3},
+        {type = "item", name = "nexelit-plate", amount = 5},
         {type = "fluid", name = "trichlorosilane", amount = 100},
     },
     results = {
