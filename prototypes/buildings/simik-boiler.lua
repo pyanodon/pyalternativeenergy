@@ -32,6 +32,15 @@ ITEM {
     stack_size = 10
 }
 
+local pipe = {
+    south = {
+        filename = "__pyalternativeenergygraphics__/graphics/entity/simik-boiler/bottom.png",
+        priority = "extra-high",
+        width = 229,
+        height = 235
+    }
+}
+
 ENTITY {
     type = "assembling-machine",
     name = "simik-boiler",
@@ -215,32 +224,36 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
+            secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
             pipe_connections = {{type = "input", position = {-2.0, -6.0}}}
         },
         {
             production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
+            secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
             pipe_connections = {{type = "input", position = {2.0, -6.0}}}
         },
         {
             production_type = "output",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_level = 1,
+            secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
             pipe_connections = {{type = "output", position = {2.0, 6.0}}}
         },
         {
             production_type = "output",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_level = 1,
+            secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
             pipe_connections = {{type = "output", position = {-2.0, 6.0}}}
         },
         off_when_no_fluid_recipe = true
@@ -252,3 +265,19 @@ ENTITY {
         apparent_volume = 2.5
     }
 }
+-- Swap to niobium pipes
+for _, fluid_box in pairs(data.raw["assembling-machine"]["simik-boiler"].fluid_boxes) do
+    -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
+    if type(fluid_box) == "boolean" then
+        break
+     end
+     if fluid_box.pipe_covers.south.layers then
+         fluid_box.pipe_covers.south.layers[1].filename = "__pyindustry__/graphics/entity/niobium-pipe/pipe-cover-south.png"
+         fluid_box.pipe_covers.south.layers[1].hr_version.filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south.png"
+         fluid_box.pipe_covers.south.layers[2].filename = "__pyindustry__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
+         fluid_box.pipe_covers.south.layers[2].hr_version.filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south-shadow.png"
+     end
+     -- Move cover up to compensate
+     fluid_box.pipe_picture.south.scale = 0.5
+     fluid_box.pipe_picture.south.shift = {0,-2.33}
+end
