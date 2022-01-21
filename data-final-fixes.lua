@@ -52,8 +52,8 @@ RECIPE("artillery-wagon"):add_ingredient({type = "item", name = "sc-engine", amo
 RECIPE("satellite"):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("utility-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("space-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 1}):add_ingredient({type = "item", name = "milfe", amount = 1})
-RECIPE("nv-center"):add_ingredient({type = "item", name = "mqdc", amount = 1})
-RECIPE("production-science-pack"):add_ingredient({type = "item", name = "low-density-structure", amount = 3}):add_ingredient({type = "item", name = "super-steel", amount = 5})
+RECIPE("nv-center"):add_ingredient({type = "item", name = "mqdc", amount = 1}):add_ingredient({type = "item", name = "th-oxide", amount = 1})
+RECIPE("production-science-pack"):add_ingredient({type = "item", name = "low-density-structure", amount = 3}):add_ingredient({type = "item", name = "super-steel", amount = 5}):add_ingredient({type = "item", name = "gd-metal", amount = 1})
 
 ITEM("simik"):set_field{fuel_category = 'simik'}:set_field{fuel_value = '800MJ'}
 
