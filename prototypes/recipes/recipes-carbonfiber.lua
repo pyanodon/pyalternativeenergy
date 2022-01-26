@@ -66,6 +66,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "item", name = "acrylonitrile", amount = 1},
+        {type = "item", name = "methyl-acrylate", amount = 1},
     },
     results = {
         {type = "item", name = "pan", amount = 1},
