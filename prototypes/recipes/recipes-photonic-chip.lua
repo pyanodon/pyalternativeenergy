@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dieletric-mirror",
-    category = "gas-separator",
+    category = "glassworks",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -100,7 +100,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "animal-reflectors",
-    category = "biofactory",
+    category = "gas-separator",
     enabled = false,
     energy_required = 15,
     ingredients = {
