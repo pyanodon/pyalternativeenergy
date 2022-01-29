@@ -54,7 +54,7 @@ RECIPE("impact-crusher-mk03"):add_ingredient({type = "item", name = "ns-material
 RECIPE("leaching-station-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
 RECIPE("scrubber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 RECIPE("wet-scrubber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6})
-RECIPE("drp"):add_ingredient({type = "item", name = "ns-material", amount = 20})
+RECIPE("drp"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 
 RECIPE("bof-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE("smelter-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4})
@@ -67,7 +67,7 @@ RECIPE("impact-crusher-mk04"):add_ingredient({type = "item", name = "metastable-
 RECIPE("leaching-station-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
 RECIPE("scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE("wet-scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','processing-unit'):remove_unlock('machine-mk04'):add_unlock('machine-mk03'):add_ingredient({type = "item", name = "ns-material", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
+RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','processing-unit'):remove_unlock('machine-mk04'):add_unlock('machine-mk03'):add_ingredient({type = "item", name = "ns-material", amount = 20})
 RECIPE("p2s5"):remove_unlock('machines-mk03'):add_unlock('machines-mk02')
 
 --RECIPES--

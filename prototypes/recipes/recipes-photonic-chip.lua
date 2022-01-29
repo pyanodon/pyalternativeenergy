@@ -83,7 +83,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ti-n",
-    category = "hpf",
+    category = "py-rawores-smelter",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -110,7 +110,7 @@ RECIPE {
         {type = "item", name = "arqad-propolis", amount = 2},
         {type = "fluid", name = "organic-solvent", amount = 200},
         {type = "fluid", name = "water", amount = 200},
-        {type = "fluid", name = "arqad-jelly", amount = 50},
+        {type = "item", name = "arqad-jelly-barrel", amount = 1},
     },
     results = {
         {type = "item", name = "animal-reflectors", amount = 1},
