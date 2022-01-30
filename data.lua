@@ -39,7 +39,7 @@ require("prototypes.technologies.microwave-receiver")
 require("prototypes/technologies/nuclear-power")
 require("prototypes/technologies/carbon-fiber")
 require("prototypes/technologies/erbium")
-
+require("prototypes/technologies/nano-mesh")
 -- ))
 
 --(( RESOURCES ))--
@@ -71,6 +71,7 @@ require("prototypes/recipes/recipes-wind")
 require("prototypes/recipes/recipes-carbonfiber")
 require("prototypes/recipes/recipes-lrf")
 require("prototypes/recipes/recipes-simik-boiler")
+require("prototypes/recipes/nano-mesh")
 -- ))
 
 -- (( ITEMs ))--
@@ -126,6 +127,7 @@ require("prototypes/fluids/r3")
 require("prototypes/fluids/r4")
 require("prototypes/fluids/mother-liquor")
 require("prototypes/fluids/anolyte")
+require("prototypes/fluids/pre-fiber")
 
 require("prototypes/fluids/neutron")
 --require("prototypes/fluids/uranium")

@@ -2025,3 +2025,102 @@ ITEM {
     order = "ca",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "libr",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/libr.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "hfip",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/hfip.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "guhcl",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/guhcl.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "rpc-mesh",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/rpc-mesh.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "nano-mesh",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nano-mesh.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "crude-salt",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/crude-salt.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "hbr",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/hbr.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ammonium-mixture",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ammonium-mixture.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "hexafluoroacetone",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/hexafluoroacetone.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
