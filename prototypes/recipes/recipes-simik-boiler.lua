@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "steam-165",
+    name = "steam-250",
     category = "simik-boiler",
     enabled = false,
     energy_required = 5,
@@ -8,7 +8,7 @@ RECIPE {
         {type = "fluid", name = "water", amount = 500},
     },
     results = {
-        {type = "fluid", name = "steam", amount = 500, temperature = 165},
+        {type = "fluid", name = "steam", amount = 500, temperature = 250},
     },
     subgroup = "py-fluid-handling",
     order = "o2"
@@ -35,7 +35,7 @@ RECIPE {
     name = "pressured-steam-1",
     category = "simik-boiler",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
         {type = "fluid", name = "pressured-water", amount = 500},
     },
@@ -50,7 +50,7 @@ RECIPE {
     name = "pressured-steam-2",
     category = "simik-boiler",
     enabled = false,
-    energy_required = 10,
+    energy_required = 40,
     ingredients = {
         {type = "fluid", name = "pressured-water", amount = 500},
     },
@@ -65,7 +65,7 @@ RECIPE {
     name = "pressured-steam-3",
     category = "simik-boiler",
     enabled = false,
-    energy_required = 15,
+    energy_required = 60,
     ingredients = {
         {type = "fluid", name = "pressured-water", amount = 500},
     },
@@ -80,7 +80,7 @@ RECIPE {
     name = "pressured-steam-4",
     category = "simik-boiler",
     enabled = false,
-    energy_required = 20,
+    energy_required = 80,
     ingredients = {
         {type = "fluid", name = "pressured-water", amount = 500},
     },
