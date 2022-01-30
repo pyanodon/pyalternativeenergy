@@ -15,6 +15,10 @@ RECIPE("py-heat-exchanger-mk03"):add_unlock('machines-mk03')
 RECIPE("py-heat-exchanger-mk04"):add_unlock('machines-mk04')
 
 --BUILDINDS--
+RECIPE("particle-accelerator-mk01"):remove_ingredient('gasturbinemk02')
+RECIPE("fusion-reactor-mk01"):remove_ingredient('gasturbinemk03')
+RECIPE("py-turbine"):remove_ingredient('gasturbinemk03') -- TODO: replace with something
+
 RECIPE("agitator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("nmf-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("secondary-crusher-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})

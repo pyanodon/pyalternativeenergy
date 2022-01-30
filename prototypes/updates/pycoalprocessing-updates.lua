@@ -74,8 +74,10 @@ RECIPE('naphtha-combustion-biomass'):remove_unlock('energy-1'):set_fields{hidden
 RECIPE('lubricant-combustion-biomass'):remove_unlock('energy-2'):set_fields{hidden = true}
 RECIPE('xylenol-combustion-biomass'):remove_unlock('energy-2')
 
-RECIPE("evaporator"):remove_ingredient('gasturbinemk01'):remove_ingredient('chemical-plant-mk01')
+RECIPE("evaporator"):remove_ingredient('chemical-plant-mk01')
 RECIPE("methanol-reactor"):remove_ingredient('gasturbinemk01')
+RECIPE("co2-absorber"):remove_ingredient('gasturbinemk01')
+RECIPE("bio-reactor"):remove_ingredient('gasturbinemk02')
 
 --RECIPE("advanced-foundry-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("automated-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})

@@ -7,6 +7,8 @@ TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04'):add_p
 TECHNOLOGY('ht-trains'):add_prereq('battery-mk02')
 
 --BUILDINDS--
+RECIPE("quantum-computer"):remove_ingredient('gasturbinemk03')
+
 --RECIPE("clay-pit-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("chipshooter-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("pcb-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
