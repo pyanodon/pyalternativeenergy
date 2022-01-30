@@ -75,4 +75,4 @@ RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metast
 --RECIPES --
 
 RECIPE("tholin-capsule"):add_ingredient({type = "item", name = "cf", amount = 30})
-RECIPE("small-parts-03"):replace_ingredient("rubber", "cf")
+RECIPE("small-parts-03"):replace_ingredient("rubber", {type = "item", name = "cf", amount = 1})

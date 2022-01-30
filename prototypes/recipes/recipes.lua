@@ -321,18 +321,19 @@ RECIPE {
     name = "1d-photonic-crystal",
     category = "nano",
     enabled = false,
-    energy_required = 5,
+    energy_required = 25,
     ingredients = {
-        {type = "item", name = "photophore", amount = 5},
+        {type = "item", name = "photophore", amount = 25},
         {type = "item", name = "yag-laser-module", amount = 1},
-        {type = "item", name = "graphene-roll", amount = 4},
-        {type = "item", name = "silver-plate", amount = 5},
-        {type = "fluid", name = "vacuum", amount = 200},
+        {type = "item", name = "graphene-roll", amount = 20},
+        {type = "item", name = "silver-plate", amount = 25},
+        {type = "fluid", name = "vacuum", amount = 1000},
     },
     results = {
-        {type = "item", name = "1d-photonic-crystal", amount = 1},
+        {type = "item", name = "1d-photonic-crystal", amount = 5},
+        {type = "item", name = "yag-laser-module", amount = 1, probability = 0.9},
     },
-    --main_product = "eg-si",
+    main_product = "1d-photonic-crystal",
 }:add_unlock("battery-mk04")
 
 RECIPE {

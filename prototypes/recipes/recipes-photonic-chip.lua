@@ -29,7 +29,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "laser-module", amount = 2},
+        {type = "item", name = "laser-module", amount = 1},
         {type = "item", name = "cladded-core", amount = 1},
         {type = "item", name = "dbr", amount = 4},
         {type = "item", name = "gaas", amount = 2},
@@ -150,8 +150,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "inverse-opal", amount = 1},
+        {type = "item", name = "yag-laser-module", amount = 1, probability = 0.9},
     },
-    --main_product = "middle-processed-lard",
+    main_product = "inverse-opal",
 }:add_unlock("photonics")
 
 RECIPE {

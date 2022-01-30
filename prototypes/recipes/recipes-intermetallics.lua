@@ -447,8 +447,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "time-crystal", amount = 1},
+        {type = "item", name = "yag-laser-module", amount = 1, probability = 0.9},
     },
-    --main_product = "sb-dust",
+    main_product = "time-crystal",
 }:add_unlock("intermetallics-mk04")
 
 RECIPE {
@@ -502,7 +503,7 @@ RECIPE {
         {type = "item", name = "graphite", amount = 3},
     },
     results = {
-        {type = "fluid", name = "molten-nxzngd", amount = 1},
+        {type = "fluid", name = "molten-nxzngd", amount = 100},
     },
     --main_product = "sb-dust",
 }:add_unlock("intermetallics-mk04")

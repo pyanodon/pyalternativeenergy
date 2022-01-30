@@ -45,7 +45,7 @@ RECIPE {
         {type = "item", name = "plastic-bar", amount = 5},
         {type = "item", name = "iron-plate", amount = 10},
         {type = "item", name = "copper-plate", amount = 5},
-        {type = "item", name = "small-parts-03", amount = 5},
+        {type = "item", name = "small-parts-03", amount = 1},
         {type = "item", name = "lead-container", amount = 1},
     },
     results = {
