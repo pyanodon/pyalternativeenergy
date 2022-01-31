@@ -3,7 +3,7 @@ require("prototypes/buildings/multiblade-turbine-mk03")
 
 --TECHNOLOGY--
 TECHNOLOGY('quantum'):add_prereq('machines-mk02')
-TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04'):add_prereq('mof'):add_prereq('nano-mesh)
+TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04'):add_prereq('mof'):add_prereq('nano-mesh')
 TECHNOLOGY('ht-trains'):add_prereq('battery-mk02')
 
 --BUILDINDS--
