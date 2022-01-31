@@ -97,6 +97,9 @@ RECIPE("quantum-well"):add_ingredient({type = "item", name = "milfe", amount = 1
 RECIPE("quantum-dots"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("harmonic-absorber"):add_ingredient({type = "item", name = "cf", amount = 30})
 RECIPE("var-josephson-junction"):add_ingredient({type = "item", name = "cf", amount = 30}):add_ingredient({type = "item", name = "photonic-crystal", amount = 1}):add_ingredient({type = "item", name = "gd-metal", amount = 1})
+RECIPE("paradiamatic-resistor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
+RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
+RECIPE("volumetric-capacitor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 
 ----EXCLUSIVE RECIPES----
 

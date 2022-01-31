@@ -423,6 +423,7 @@ RECIPE {
         {type = "item", name = "time-crystal", amount = 1},
         {type = "item", name = "quasicrystal", amount = 1},
         {type = "item", name = "denatured-seismite", amount = 1},
+        {type = "item", name = "nano-mesh", amount = 2},
         {type = "item", name = "photon-deposited-quartz", amount = 1},
         {type = "item", name = "mositial-nx", amount = 1},
         {type = "item", name = "gd-metal", amount = 1},
