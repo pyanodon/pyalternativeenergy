@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/nano-mesh.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'nano-tech','zungror'},
+    prerequisites = {'zungror', 'intermetallics-mk03', 'aluminium-mk03', 'lithium-processing'},
     effects = {},
     unit = {
         count = 400,
