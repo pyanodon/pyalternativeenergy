@@ -20,5 +20,6 @@ for r, recipe in pairs(data.raw.recipe) do
     end
 end
 
-log(serpent.block(com_recipes))
 ]]--
+
+--log(serpent.block(data.raw['assembling-machine']['nuclear-reactor-mk03']))

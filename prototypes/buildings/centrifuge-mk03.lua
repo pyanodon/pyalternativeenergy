@@ -183,4 +183,5 @@ ENTITY {
       sound = { filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25 },
       apparent_volume = 0.5
     },
+    fast_replaceable_group = "centrifuge"
   }

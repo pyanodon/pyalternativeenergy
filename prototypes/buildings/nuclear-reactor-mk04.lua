@@ -169,5 +169,6 @@ ENTITY {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/nuclear-reactor-mk04.ogg", volume = 0.5},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/nuclear-reactor-mk04.ogg", volume = 0.1},
         apparent_volume = 2.5
-    }
+    },
+    fast_replaceable_group = "reactor"
   }

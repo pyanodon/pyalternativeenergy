@@ -43,7 +43,7 @@ ENTITY{
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation'},
     minable = {mining_time = 0.5, result = "vawt-turbine-mk03"},
-    fast_replaceable_group = 'vawt-turbine-mk03',
+    fast_replaceable_group = 'vawt-turbine',
     max_health = 400,
     corpse = 'big-remnants',
     dying_explosion = 'medium-explosion',

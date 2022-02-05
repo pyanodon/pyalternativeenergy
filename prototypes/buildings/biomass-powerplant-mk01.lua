@@ -231,5 +231,6 @@ ENTITY {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/biomass-powerplant.ogg", volume = 0.70},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/biomass-powerplant.ogg", volume = 0.1},
         apparent_volume = 0.45
-    }
+    },
+    fast_replaceable_group = "biomass-power"
   }
