@@ -13,8 +13,8 @@ ITEM {
   icon = '__pyalternativeenergygraphics__/graphics/icons/nexelit-substation.png',
   icon_size = 64,
   flags = {},
-  subgroup = 'py-alternativeenergy-special-buildings',
-  order = 'd',
+  subgroup = "py-electric",
+  order = "b",
   place_result = 'nexelit-substation',
   stack_size = 10
 }

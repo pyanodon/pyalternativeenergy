@@ -24,7 +24,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/accumulator-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-industry",
+    subgroup = "py-electric",
     order = "a",
     place_result = "accumulator-mk03",
     stack_size = 50
