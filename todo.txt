@@ -49,3 +49,13 @@ KING TODO:
             - reuse boiler/ heat exchanger entities for this unless py makes something
 
  - coal + coal like items to its own fuel category
+
+
+disable all combustion mix recipes
+disable all the uranium fuel cells and fuel rods
+
+move nuclear sample to chem science.
+remove space science pack from atom bomb tech.
+replace fuel rod in atom bomb with plutonium "metal"
+
+reenable vanilla reactor as air cooled graphite reactor to produce the fuel cell to generate chem sci plutonium
