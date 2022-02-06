@@ -305,6 +305,18 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "pu-242",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-241.png",
+    icon_size = 64,
+
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "americium-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/Americium-2.png",
     icon_size = 64,
@@ -319,6 +331,18 @@ ITEM {
     type = "item",
     name = "curium-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/curium-oxide.png",
+    icon_size = 64,
+
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "sb-hpo-pu",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
     icon_size = 64,
 
     flags = {},

@@ -80,16 +80,21 @@ RECIPE("eaf-mk01"):remove_unlock('aluminium-mk01'):add_unlock('machines-mk01')
 
 
 --removing old nuclear reactor fuel cells as they wont do anything now.
-RECIPE("uranium-fuel-cell"):remove_unlock('uranium-processing')
+RECIPE("uranium-fuel-cell"):remove_unlock('uranium-processing'):add_unlock('uranium-processing')
+RECIPE("uranium-fuel-cell-mk02"):remove_unlock('uranium-mk01')
+RECIPE("uranium-fuel-cell-mk03"):remove_unlock('uranium-mk02')
+RECIPE("uranium-fuel-cell-mk04"):remove_unlock('uranium-mk03')
+RECIPE("uranium-fuel-cell-mk05"):remove_unlock('uranium-mk04')
 RECIPE("fuelrod-mk01"):remove_unlock('fuel-production')
+RECIPE("fuelrod-mk01-1"):remove_unlock('uranium-mk01')
 RECIPE("fuelrod-mk01-2"):remove_unlock('uranium-mk03')
 RECIPE("fuelrod-mk01-3"):remove_unlock('uranium-mk02')
 RECIPE("fuelrod-mk01-4"):remove_unlock('uranium-mk01')
 
 --tweaked by pyal from fuel production to uranium techs. now removing completely
-RECIPE('fuelrod-mk02'):remove_unlock('uranium-mk02')
-RECIPE('fuelrod-mk03'):remove_unlock('uranium-mk03')
-RECIPE('fuelrod-mk04'):remove_unlock('uranium-mk04')
+RECIPE('fuelrod-mk02'):remove_unlock('uranium-mk01')
+RECIPE('fuelrod-mk03'):remove_unlock('uranium-mk02')
+RECIPE('fuelrod-mk04'):remove_unlock('uranium-mk03')
 RECIPE('fuelrod-mk05'):remove_unlock('uranium-mk04')
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
@@ -110,36 +115,40 @@ RECIPE("u-79-2"):remove_unlock('uranium-mk04')
 RECIPE("u-81"):remove_unlock('uranium-mk04')
 RECIPE("u-83"):remove_unlock('uranium-mk04')
 
+--move uranium ore processing recipes
+RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
+RECIPE("grade-1-u-recrush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
+RECIPE("grade-2-u-crush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
 
 RECIPE("20-u-powder"):remove_unlock("uranium-mk01")
 --RECIPE("u-pulp-01"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "powdered-u", amount = 5}):replace_ingredient('sulfuric-acid','hydrogen-peroxide'):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 --TODO:look into uranium issues with pyro changes
-RECIPE("u-pulp-02"):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
-RECIPE("u-pulp-03"):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
+RECIPE("u-pulp-01"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
+RECIPE("u235-pulp-01"):remove_unlock('uranium-mk01')
+RECIPE("u-pulp-02"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+RECIPE("u-pulp-03"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+
 
 fun.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 15)
-RECIPE("u-rich-pulp"):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
-
---TODO:deal with u-waste vanadium
+RECIPE("u-rich-pulp"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
 
 RECIPE {
-    type = "recipe",
-    name = "yellow-cake-uf6",
-    category = "hydroclassifier", --pyfe screener
-    enabled = false,
-    energy_required = 4,
-    ingredients = {
-        {type = "item", name = "yellow-cake", amount = 5},
-        {type = "fluid", name = "sulfuric-acid", amount = 100}
+  type = "recipe",
+  name = "uranium-fuel-cell",
+  enabled = false,
+  energy_required = 15,
+  ingredients =
+    {
+      {"aluminium-plate", 5},
+      {"yellow-cake", 5}
     },
-    results = {
-        {type = "fluid", name = "uf6", amount = 100, temperature = 0.7},
-    },
-    main_product = "uf6",
-    icon = "__pyraworesgraphics__/graphics/icons/powdered-u-screening.png",
-    icon_size = 32,
-    subgroup = "py-rawores-uranium",
-}:add_unlock("uranium-mk01")
+  results = {
+      {"uranium-fuel-cell", 1}
+  },
+}:add_unlock('uranium-processing')
+
+
+--TODO:deal with u-waste vanadium
 
 --replacing pyros uranium isotope seperation with new system
 local previous_enrichment = 0.7

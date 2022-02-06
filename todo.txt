@@ -59,3 +59,5 @@ remove space science pack from atom bomb tech.
 replace fuel rod in atom bomb with plutonium "metal"
 
 reenable vanilla reactor as air cooled graphite reactor to produce the fuel cell to generate chem sci plutonium
+
+bismuth phosphate process to remove plutonium from uranium before purex is unlocked

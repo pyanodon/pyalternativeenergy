@@ -499,7 +499,7 @@ RECIPE {
     --main_product = "purex-concentrate-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("uranium-processing")
 
 --URANIUM
 
@@ -688,54 +688,113 @@ RECIPE {
     order = "b"
 }:add_unlock("nuclear-power")
 
---Uranium transmutaion
+--MANHATTEN PROJECT--
 
-RECIPE {
+  RECIPE {
     type = "recipe",
-    name = "uranium-seperation",
+    name = "fuel-cell-dissolve",
+    enabled = false,
+    energy_required = 15,
+    category = "mixer",
+    ingredients =
+      {
+        {type = "item", name = "used-up-uranium-fuel-cell", amount = 5},
+        {type = "item", name = "sodium-hydroxide", amount = 15},
+        {type = "fluid", name = "water", amount = 250},
+        {type = "fluid", name = "sulfuric-acid", amount = 250}
+      },
+    results = {
+        {type = "fluid", name = "sb-phosphate-1", amount = 250}
+    },
+  }:add_unlock('uranium-processing')
+
+  RECIPE {
+    type = "recipe",
+    name = "antimony-phosphate",
+    enabled = false,
+    energy_required = 15,
     category = "centrifuging",
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-        {type = "item", name = "uranium-oxide", amount = 10},
-    },
+    ingredients =
+      {
+        {type = "fluid", name = "sb-phosphate-1", amount = 5},
+        {type = "item", name = "sb-oxide", amount = 5},
+        {type = "fluid", name = "phosphoric-acid", amount = 250}
+      },
     results = {
-        {type = "item", name = "u-232", amount = 10, probability = 0.01},
-        {type = "item", name = "u-233", amount = 10, probability = 0.01},
-        {type = "item", name = "u-234", amount = 10, probability = 0.025},
-        {type = "item", name = "u-235", amount = 10, probability = 0.1},
-        {type = "item", name = "u-236", amount = 10, probability = 0.08},
-        {type = "item", name = "u-237", amount = 1, probability = 0.1},
-        {type = "item", name = "u-238", amount = 10, probability = 0.95},
+        {type = "item", name = "sb-hpo-pu", amount = 10},
+        {type = "fluid", name = "purex-concentrate-1", amount = 100}
     },
-    main_product = "u-238",
-    subgroup = "py-nuclear-waste",
-    order = "b"
-}:add_unlock("nuclear-power")
+  }:add_unlock('uranium-processing')
+
+  RECIPE {
+    type = "recipe",
+    name = "plutonium-oxidation",
+    enabled = false,
+    energy_required = 15,
+    category = "centrifuging",
+    ingredients =
+      {
+        {type = "item", name = "sb-hpo-pu", amount = 5},
+        {type = "fluid", name = "hydrogen-peroxide", amount = 250}
+      },
+    results = {
+        {type = "fluid", name = "plutonium-peroxide", amount = 100},
+        {type = "fluid", name = "sb-phosphate-2", amount = 100}
+    },
+  }:add_unlock('uranium-processing')
+
+  RECIPE {
+    type = "recipe",
+    name = "antimony-phosphate-2",
+    enabled = false,
+    energy_required = 15,
+    category = "centrifuging",
+    ingredients =
+      {
+        {type = "fluid", name = "sb-phosphate-2", amount = 200},
+        {type = "item", name = "sb-oxide", amount = 5},
+        {type = "fluid", name = "phosphoric-acid", amount = 250},
+        {type = "item", name = "ammonium-mixture", amount = 10},
+      },
+    results = {
+        {type = "fluid", name = "plutonium-peroxide", amount = 100},
+        {type = "fluid", name = "purex-concentrate-1", amount = 100},
+        {type = "fluid", name = "sb-phosphate-3", amount = 100}
+    },
+  }:add_unlock('uranium-processing')
+
+  RECIPE {
+    type = "recipe",
+    name = "plutonium-oxidation-2",
+    enabled = false,
+    energy_required = 15,
+    category = "centrifuging",
+    ingredients =
+      {
+        {type = "fluid", name = "sb-phosphate-3", amount = 200},
+        {type = "fluid", name = "oxalic-acid", amount = 250},
+      },
+    results = {
+        {type = "fluid", name = "plutonium-peroxide", amount = 100},
+        {type = "fluid", name = "purex-raffinate", amount = 100}
+    },
+  }:add_unlock('uranium-processing')
 
 RECIPE {
     type = "recipe",
-    name = "u236-u237",
-    category = "pa",
+    name = "yellow-cake-uf6",
+    category = "hydroclassifier", --pyfe screener
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 4,
     ingredients = {
-        {type = "item", name = "u-236", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "item", name = "yellow-cake", amount = 5},
+        {type = "fluid", name = "sulfuric-acid", amount = 100}
     },
     results = {
-        {type = "item", name = "u-236", amount = 10, probability = 0.999},
-        {type = "item", name = "u-237", amount = 1, probability = 0.001}
+        {type = "fluid", name = "uf6", amount = 100, temperature = 0.7},
     },
-    main_product = "u-237",
-    subgroup = "py-nuclear-waste",
-    order = "b"
-}:add_unlock("nuclear-power")
-
---plutonium
-
---weapons grade is pu-239. the long the reactor is run the more not weapons grade plutonium is mixed in.
---pu-238 is used for rtgs
-
---spent fuel plutonium isotope breakdown
---53% Pu-239, 25% Pu-240, 15% Pu-241, 5% Pu-242 and 2% of Pu-238
+    main_product = "uf6",
+    icon = "__pyraworesgraphics__/graphics/icons/powdered-u-screening.png",
+    icon_size = 32,
+    subgroup = "py-rawores-uranium",
+}:add_unlock("uranium-mk01")

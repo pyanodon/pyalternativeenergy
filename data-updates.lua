@@ -1,3 +1,5 @@
+
+require("prototypes/updates/base-updates")
 if mods["pycoalprocessing"] then
     require("prototypes/updates/pycoalprocessing-updates")
 end
