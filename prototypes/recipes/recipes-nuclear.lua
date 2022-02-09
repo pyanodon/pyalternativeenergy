@@ -698,13 +698,13 @@ RECIPE {
     category = "mixer",
     ingredients =
       {
-        {type = "item", name = "used-up-uranium-fuel-cell", amount = 5},
+        {type = "item", name = "used-up-uranium-fuel-cell", amount = 10},
         {type = "item", name = "sodium-hydroxide", amount = 15},
         {type = "fluid", name = "water", amount = 250},
         {type = "fluid", name = "sulfuric-acid", amount = 250}
       },
     results = {
-        {type = "fluid", name = "sb-phosphate-1", amount = 250}
+        {type = "fluid", name = "sb-phosphate-1", amount = 100}
     },
   }:add_unlock('uranium-processing')
 
@@ -724,6 +724,7 @@ RECIPE {
         {type = "item", name = "sb-hpo-pu", amount = 10},
         {type = "fluid", name = "purex-concentrate-1", amount = 100}
     },
+    main_product = "sb-hpo-pu",
   }:add_unlock('uranium-processing')
 
   RECIPE {
@@ -741,6 +742,7 @@ RECIPE {
         {type = "fluid", name = "plutonium-peroxide", amount = 100},
         {type = "fluid", name = "sb-phosphate-2", amount = 100}
     },
+    main_product = "plutonium-peroxide",
   }:add_unlock('uranium-processing')
 
   RECIPE {
@@ -761,6 +763,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-1", amount = 100},
         {type = "fluid", name = "sb-phosphate-3", amount = 100}
     },
+    main_product = "plutonium-peroxide",
   }:add_unlock('uranium-processing')
 
   RECIPE {
@@ -772,12 +775,13 @@ RECIPE {
     ingredients =
       {
         {type = "fluid", name = "sb-phosphate-3", amount = 200},
-        {type = "fluid", name = "oxalic-acid", amount = 250},
+        {type = "item", name = "oxalic-acid", amount = 20},
       },
     results = {
         {type = "fluid", name = "plutonium-peroxide", amount = 100},
         {type = "fluid", name = "purex-raffinate", amount = 100}
     },
+    main_product = "plutonium-peroxide",
   }:add_unlock('uranium-processing')
 
 RECIPE {

@@ -61,9 +61,9 @@ RECIPE {
     name = "plutonium-seperation",
     category = "pa",
     enabled = false,
-    energy_required = 20,
+    energy_required = 10,
     ingredients = {
-        {type = "item", name = "plutonium-oxide", amount = 10},
+        {type = "item", name = "plutonium-oxide", amount = 5},
     },
     results = {
         {type = "item", name = "pu-238", amount = 10, probability = 0.02},
@@ -72,26 +72,7 @@ RECIPE {
         {type = "item", name = "pu-241", amount = 10, probability = 0.15},
         {type = "item", name = "pu-242", amount = 10, probability = 0.5},
     },
-    main_product = "u-238",
+    main_product = "pu-239",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nucleo")
-
-RECIPE {
-    type = "recipe",
-    name = "u236-u237",
-    category = "pa",
-    enabled = false,
-    energy_required = 0.5,
-    ingredients = {
-        {type = "item", name = "u-236", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
-    },
-    results = {
-        {type = "item", name = "u-236", amount = 10, probability = 0.999},
-        {type = "item", name = "u-237", amount = 1, probability = 0.001}
-    },
-    main_product = "u-237",
-    subgroup = "py-nuclear-waste",
-    order = "b"
-}:add_unlock("nuclear-power")

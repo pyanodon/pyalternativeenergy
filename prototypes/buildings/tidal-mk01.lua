@@ -43,7 +43,7 @@ ENTITY {
     energy_production = '50MW',
     energy_usage = '0kW',
     animations = {
-        north = {
+        south = {
             layers = {
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/tidal/north/terrain.png',
@@ -238,7 +238,7 @@ ENTITY {
                 },
             }
         },
-        south = {
+        north = {
             layers = {
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/tidal/south/terrain.png',
@@ -500,7 +500,7 @@ ENTITY {
       underwater_layer_offset = 30,
       base_render_layer = "ground-patch",
       animation = {
-        north = {
+        south = {
             layers = {
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/tidal/north/terrain.png',
@@ -695,7 +695,7 @@ ENTITY {
                 },
             }
         },
-        south = {
+        north = {
             layers = {
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/tidal/south/terrain.png',

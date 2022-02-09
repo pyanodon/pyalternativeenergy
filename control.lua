@@ -126,6 +126,22 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                 radius = 5
             }
         end
+    elseif E.name == 'tidal-placer' then
+        game.surfaces[E.surface.name].create_entity{
+            name = "tidal-mk01",
+            position = E.position,
+            force = E.force,
+            direction = E.direction
+        }
+        E.destroy()
+    elseif E.name == 'numal-placer' then
+        game.surfaces[E.surface.name].create_entity{
+            name = "numal-mk01",
+            position = E.position,
+            force = E.force,
+            direction = E.direction
+        }
+        E.destroy()
     end
 end)
 
