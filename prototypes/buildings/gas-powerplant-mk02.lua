@@ -66,7 +66,7 @@ ENTITY {
           pipe_covers = DATA.Pipes.covers(false, true, true, true),
           pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
           production_type = "input",
-          filter = "raw-gas"
+          filter = "refined-natural-gas"
           },
       effectivity = 1,
       burns_fluid = true,

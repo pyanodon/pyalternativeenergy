@@ -8,7 +8,7 @@ RECIPE {
         {type = "fluid", name = "molten-salt", amount = 200},
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 500},
+        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 1000},
 
     },
 }:add_unlock("gasplant-mk01")
