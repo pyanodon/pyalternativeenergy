@@ -80,15 +80,19 @@ RECIPE("eaf-mk01"):remove_unlock('aluminium-mk01'):add_unlock('machines-mk01')
 
 
 --removing old nuclear reactor fuel cells as they wont do anything now.
-RECIPE("uranium-fuel-cell"):remove_unlock('uranium-processing'):add_unlock('uranium-processing')
+RECIPE("uranium-fuel-cell"):remove_unlock('uranium-mk01')--:add_unlock('uranium-processing')
 RECIPE("uranium-fuel-cell-mk02"):remove_unlock('uranium-mk01')
 RECIPE("uranium-fuel-cell-mk03"):remove_unlock('uranium-mk02')
 RECIPE("uranium-fuel-cell-mk04"):remove_unlock('uranium-mk03')
 RECIPE("uranium-fuel-cell-mk05"):remove_unlock('uranium-mk04')
+RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock('buclear-fuel-reporcessing')
+RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock('uranium-mk02')
+RECIPE("nuclear-fuel-reprocessing-mk04"):remove_unlock('uranium-mk03')
+RECIPE("nuclear-fuel-reprocessing-mk05"):remove_unlock('uranium-mk04')
 RECIPE("fuelrod-mk01"):remove_unlock('fuel-production')
 RECIPE("fuelrod-mk01-1"):remove_unlock('uranium-mk01')
-RECIPE("fuelrod-mk01-2"):remove_unlock('uranium-mk03')
-RECIPE("fuelrod-mk01-3"):remove_unlock('uranium-mk02')
+RECIPE("fuelrod-mk01-2"):remove_unlock('uranium-mk02')
+RECIPE("fuelrod-mk01-3"):remove_unlock('uranium-mk03')
 RECIPE("fuelrod-mk01-4"):remove_unlock('uranium-mk01')
 
 --tweaked by pyal from fuel production to uranium techs. now removing completely
@@ -115,6 +119,9 @@ RECIPE("u-79-2"):remove_unlock('uranium-mk04')
 RECIPE("u-81"):remove_unlock('uranium-mk04')
 RECIPE("u-83"):remove_unlock('uranium-mk04')
 
+RECIPE("yellow-cake"):remove_unlock('uranium-mk04')
+RECIPE("yellow-cake-u235"):remove_unlock('uranium-mk04')
+
 --move uranium ore processing recipes
 RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
 RECIPE("grade-1-u-recrush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
@@ -127,6 +134,9 @@ RECIPE("u-pulp-01"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing
 RECIPE("u235-pulp-01"):remove_unlock('uranium-mk01')
 RECIPE("u-pulp-02"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
 RECIPE("u-pulp-03"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+
+RECIPE("pregnant-solution-01"):remove_unlock('uranium-mk04')
+RECIPE("vanadium-mixture"):remove_unlock('uranium-mk04')
 
 
 fun.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 15)
@@ -145,7 +155,7 @@ RECIPE {
   results = {
       {"uranium-fuel-cell", 1}
   },
-}:add_unlock('uranium-processing')
+}--:add_unlock('uranium-processing')
 
 
 --TODO:deal with u-waste vanadium
@@ -168,9 +178,10 @@ while enrichment < 100 do
 
     local name = string.format( "%.2f", tostring(u235))
 
+    local recipe_name = "uf6-" .. string.gsub(name, "%.", ",") .. "%"
     RECIPE {
         type = "recipe",
-        name = "uf6-" .. string.gsub(name, "%.", ",") .. "%",
+        name = recipe_name,
         category = "gas-separator",
         enabled = true,
         energy_required = 2,
@@ -184,7 +195,17 @@ while enrichment < 100 do
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
         order = "uranium-" .. recipe_num
-    }--:add_unlock("uranium-mk03")
+    }
+
+    if u235 < 10 then
+        RECIPE(recipe_name):add_unlock('uranium-mk01')
+    elseif u235 >= 10 and u235 < 25 then
+        RECIPE(recipe_name):add_unlock('uranium-mk02')
+    elseif u235 >= 25 and u235 < 50 then
+        RECIPE(recipe_name):add_unlock('uranium-mk03')
+    elseif u235 >= 50 then
+        RECIPE(recipe_name):add_unlock('uranium-mk04')
+    end
 
     previous_enrichment = u235
     enrichment = u235

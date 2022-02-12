@@ -311,46 +311,11 @@ script.on_event(defines.events.on_rocket_launched, function(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
-    local E = event.entity
-    local player = game.players[event.player_index]
-    if E ~= nil and string.match(E.name, 'py%-oil%-powerplant') ~= nil and player.gui.relative.fuel_frame == nil then
-        global.currently_selected_entity = E
-        -- add fluid gui
-        local fuel_frame = player.gui.relative.add({
-            type = 'frame',
-            name = 'fuel_frame',
-            anchor = {
-                gui = defines.relative_gui_type.assembling_machine_gui,
-                position = defines.relative_gui_position.right
-            }
-        })
-        fuel_frame.add({type = 'label', name = 'test', caption = 'TESTING'})
-        fuel_frame.add({
-            type = 'choose-elem-button',
-            name = 'fuel_selection',
-            elem_type = 'fluid',
-            elem_filters = {
-                {
-                    filter = 'subgroup',
-                    -- type = "fluid",
-                    subgroup = 'test'
-                }
-            }
-        })
-    end
+
 end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
-    if event.element.name == 'fuel_selection' then
-        -- set filter to fluid
-        local E = global.currently_selected_entity
-        local setfil = E.fluidbox.set_filter(3, event.element.elem_value)
-        E.fluidbox = setfil
-        log(serpent.block(setfil))
-        log(serpent.block(E.fluidbox.get_locked_fluid(1)))
-        log(serpent.block(E.fluidbox.get_locked_fluid(2)))
-        log(serpent.block(E.fluidbox.get_locked_fluid(3)))
-    end
+
 end)
 
 script.on_event(defines.events.on_ai_command_completed, function(event)

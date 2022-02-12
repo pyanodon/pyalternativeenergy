@@ -14,3 +14,7 @@ RECIPE("nuclear-reactor"):add_unlock('uranium-processing'):remove_ingredient('su
 --modify reactor to produce very little energy
 data.raw.reactor["nuclear-reactor"].energy_source.effectivity = 0.2
 data.raw.reactor["nuclear-reactor"].heat_buffer.connections = nil
+
+TECHNOLOGY('atomic-bomb'):remove_prereq('domestication-mk02'):remove_prereq('uranium-mk03'):add_prereq('nucleo'):remove_pack('chemical-science-pack'):remove_pack('space-science-pack')
+
+RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-238'):replace_ingredient('neuromorphic-chip', 'advanced-circuit')
