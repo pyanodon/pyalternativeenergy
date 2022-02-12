@@ -390,6 +390,7 @@ RECIPE {
         {type = "item", name = "diamagnetic-material", amount = 1},
         {type = "item", name = "nano-wires", amount = 4},
         {type = "item", name = "dbr", amount = 10},
+        {type = "item", name = "nano-mesh", amount = 2},
         {type = "item", name = "micro-cavity-core", amount = 1},
     },
     results = {

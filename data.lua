@@ -74,6 +74,7 @@ require("prototypes/recipes/recipes-carbonfiber")
 require("prototypes/recipes/recipes-lrf")
 require("prototypes/recipes/recipes-simik-boiler")
 require("prototypes/recipes/nano-mesh")
+require("prototypes/recipes/biofet")
 -- ))
 
 -- (( ITEMs ))--
@@ -130,6 +131,9 @@ require("prototypes/fluids/r4")
 require("prototypes/fluids/mother-liquor")
 require("prototypes/fluids/anolyte")
 require("prototypes/fluids/pre-fiber")
+require("prototypes/fluids/nickel-carbonyl")
+require("prototypes/fluids/allylamine")
+require("prototypes/fluids/pre-phenothiazine")
 
 require("prototypes/fluids/neutron")
 --require("prototypes/fluids/uranium")
