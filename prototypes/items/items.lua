@@ -2148,3 +2148,124 @@ ITEM {
     order = "ca",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "triethoxysilane",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/triethoxysilane.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "phenothiazine",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/phenothiazine.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "neodymium-nitrate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/neodymium-nitrate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "nickel-nitrate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nickel-nitrate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "pvp",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/pvp.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "gbl",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/gbl.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "butynediol",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/butynediol.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "perovskite-nickelate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/perovskite-nickelate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "bioreceptor",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/bioreceptors.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "aptes",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/aptes.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "biofet",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/biofet.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ca",
+    stack_size = 100
+}

@@ -40,6 +40,7 @@ require("prototypes/technologies/nuclear-power")
 require("prototypes/technologies/carbon-fiber")
 require("prototypes/technologies/erbium")
 require("prototypes/technologies/nano-mesh")
+require("prototypes/technologies/biofet")
 -- ))
 
 --(( RESOURCES ))--
