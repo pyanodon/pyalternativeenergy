@@ -100,7 +100,7 @@ RECIPE {
         {type = "fluid", name = "pressured-air", amount = 200},
     },
     results = {
-        {type = "fluid", name = "hot-air", amount = 200,},
+        {type = "fluid", name = "hot-air", amount = 200},
     },
     --main_product = "eg-si",
 }:add_unlock("simik-mk03")

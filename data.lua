@@ -243,6 +243,7 @@ require("prototypes/buildings/aerial-mk02")
 require("prototypes/buildings/aerial-mk03")
 require("prototypes/buildings/aerial-mk04")
 require("prototypes/buildings/simik-boiler")
+require("prototypes/buildings/rtg")
 
 -- ))
 
