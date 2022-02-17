@@ -12,3 +12,48 @@ RECIPE {
 
     },
 }:add_unlock("biomassplant-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "biomass-molten-salt-02",
+    category = "biomass-powerplant",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "molten-salt", amount = 200},
+    },
+    results = {
+        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 2000},
+
+    },
+}:add_unlock("biomassplant-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "biomass-molten-salt-03",
+    category = "biomass-powerplant",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "molten-salt", amount = 200},
+    },
+    results = {
+        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 3000},
+
+    },
+}:add_unlock("biomassplant-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "biomass-molten-salt-04",
+    category = "biomass-powerplant",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "molten-salt", amount = 200},
+    },
+    results = {
+        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 4000},
+
+    },
+}:add_unlock("biomassplant-mk04")

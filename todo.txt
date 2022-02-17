@@ -49,8 +49,3 @@ KING TODO:
       - liquid burner
       - solid burner
             - reuse boiler/ heat exchanger entities for this unless py makes something
-
- - coal + coal like items to its own fuel category
-
-remove space science pack from atom bomb tech.
-replace fuel rod in atom bomb with plutonium "metal"

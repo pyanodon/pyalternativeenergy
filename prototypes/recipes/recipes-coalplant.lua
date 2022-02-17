@@ -6,7 +6,6 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "fluid", name = "molten-salt", amount = 200},
-        --{type = "item", name = "raw-coal", amount = 25},
     },
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 1000},
@@ -16,13 +15,12 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "coal-molten-salt-01",
+    name = "coal-molten-salt-02",
     category = "coal-powerplant",
     enabled = false,
     energy_required = 20,
     ingredients = {
         {type = "fluid", name = "molten-salt", amount = 200},
-        --{type = "item", name = "raw-coal", amount = 25},
     },
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 2000},
@@ -32,13 +30,12 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "coal-molten-salt-01",
+    name = "coal-molten-salt-03",
     category = "coal-powerplant",
     enabled = false,
     energy_required = 20,
     ingredients = {
         {type = "fluid", name = "molten-salt", amount = 200},
-        --{type = "item", name = "raw-coal", amount = 25},
     },
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 3000},
@@ -48,13 +45,12 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "coal-molten-salt-01",
+    name = "coal-molten-salt-04",
     category = "coal-powerplant",
     enabled = false,
     energy_required = 20,
     ingredients = {
         {type = "fluid", name = "molten-salt", amount = 200},
-        --{type = "item", name = "raw-coal", amount = 25},
     },
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 4000},
