@@ -879,3 +879,25 @@ RECIPE {
         {type = "fluid", name = "fatty-acids", amount =  50},
     },
   }:add_unlock("eva")
+
+  RECIPE {
+    type = 'recipe',
+    name = 'replicator-mova',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'earth-generic-sample', amount = 5},
+        {type = 'item', name = 'earth-potato-sample', amount = 1},
+        {type = 'item', name = 'earth-flower-sample', amount = 1},
+        {type = 'item', name = 'titanium-plate', amount = 100},
+        {type = 'item', name = 'biofilm', amount = 20},
+        {type = 'item', name = 'plastic-bar', amount = 100},
+        {type = 'item', name = 'low-density-structure', amount = 1},
+        {type = 'item', name = 'gh', amount = 10},
+        {type = 'item', name = 'fertilizer', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'replicator-mova', amount = 1},
+    },
+}:add_unlock("mega-farm-mova")

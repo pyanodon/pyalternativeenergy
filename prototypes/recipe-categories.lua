@@ -60,4 +60,8 @@ data:extend {
         type = "resource-category",
         name = "antimonium"
     },
+    {
+        type = "resource-category",
+        name = "mova"
+    },
 }

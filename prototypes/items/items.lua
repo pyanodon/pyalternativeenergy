@@ -2269,3 +2269,27 @@ ITEM {
     order = "ca",
     stack_size = 100
 }
+
+----MOVA-----
+
+ITEM {
+    type = "item",
+    name = "replicator-mova",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/replicator-mova.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-replicators",
+    order = "x",
+    stack_size = 1
+}
+
+ITEM {
+    type = "item",
+    name = "mova",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mova.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mova",
+    order = "a",
+    stack_size = 300
+}

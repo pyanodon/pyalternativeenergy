@@ -170,6 +170,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "perovskite-nickelate", amount = 1},
         {type = "item", name = "gold-plate", amount = 2},
+        {type = "item", name = "molybdenum-plate", amount = 3},
         {type = "item", name = "enzyme-pks", amount = 1},
         {type = "item", name = "agar", amount = 5},
         {type = "item", name = "stainless-steel", amount = 1},

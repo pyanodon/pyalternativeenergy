@@ -41,12 +41,14 @@ require("prototypes/technologies/carbon-fiber")
 require("prototypes/technologies/erbium")
 require("prototypes/technologies/nano-mesh")
 require("prototypes/technologies/biofet")
+require("prototypes/technologies/mega-farm-mova")
 -- ))
 
 --(( RESOURCES ))--
 require("prototypes.ores.geothermal-crack")
 require("prototypes.ores.ree")
 require("prototypes.ores.antimonium")
+require("prototypes.ores.mova")
 
 -- ))
 
