@@ -47,6 +47,10 @@ data:extend {
         type = "recipe-category",
         name = "gas-powerplant"
     },
+    {
+        type = "recipe-category",
+        name = "mova-farm"
+    },
     --resources
     {
         type = "resource-category",

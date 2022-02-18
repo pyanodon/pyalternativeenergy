@@ -77,6 +77,7 @@ require("prototypes/recipes/recipes-lrf")
 require("prototypes/recipes/recipes-simik-boiler")
 require("prototypes/recipes/nano-mesh")
 require("prototypes/recipes/biofet")
+require("prototypes/recipes/mova/recipes-mova-megafarm")
 -- ))
 
 -- (( ITEMs ))--

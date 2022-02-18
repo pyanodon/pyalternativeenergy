@@ -5,6 +5,9 @@ require("prototypes.technologies.numal")
 --BUILDINDS--
 require("prototypes/buildings/numal-mk01")
 
+table.insert(data.raw["rocket-silo"]["mega-farm"].crafting_categories, "mova-farm")
+table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
+
 RECIPE("atomizer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("bio-printer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
