@@ -42,6 +42,7 @@ require("prototypes/technologies/erbium")
 require("prototypes/technologies/nano-mesh")
 require("prototypes/technologies/biofet")
 require("prototypes/technologies/mega-farm-mova")
+require("prototypes/technologies/nanozymes")
 -- ))
 
 --(( RESOURCES ))--
@@ -78,6 +79,7 @@ require("prototypes/recipes/recipes-simik-boiler")
 require("prototypes/recipes/nano-mesh")
 require("prototypes/recipes/biofet")
 require("prototypes/recipes/mova/recipes-mova-megafarm")
+require("prototypes/recipes/mova/mova-processing")
 -- ))
 
 -- (( ITEMs ))--
@@ -137,6 +139,12 @@ require("prototypes/fluids/pre-fiber")
 require("prototypes/fluids/nickel-carbonyl")
 require("prototypes/fluids/allylamine")
 require("prototypes/fluids/pre-phenothiazine")
+require("prototypes/fluids/mova-pulp1")
+require("prototypes/fluids/mova-pulp2")
+require("prototypes/fluids/mova-pulp3")
+require("prototypes/fluids/pre-enzyme")
+require("prototypes/fluids/crude-enzyme")
+require("prototypes/fluids/buffer-solution")
 
 require("prototypes/fluids/neutron")
 --require("prototypes/fluids/uranium")

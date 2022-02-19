@@ -2300,7 +2300,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ammonium-sulfate.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-mova",
+    subgroup = "py-rawores-items",
     order = "a",
     stack_size = 100
 }
@@ -2311,7 +2311,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/guaiacol.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-mova",
+    subgroup = "py-alternativeenergy-items",
     order = "a",
     stack_size = 100
 }
@@ -2322,7 +2322,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mpa.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-mova",
+    subgroup = "py-alienlife-genetics",
     order = "a",
     stack_size = 100
 }
@@ -2333,7 +2333,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nanozymes.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-mova",
+    subgroup = "py-alienlife-genetics",
     order = "a",
     stack_size = 100
 }
