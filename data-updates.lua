@@ -19,6 +19,10 @@ if mods["pypetroleumhandling"] then
     require("prototypes/updates/pypetroleumhandling-updates")
 end
 
+ITEM("space-science-pack", "tool"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
+ITEM("space-science-pack", "tool"):set("icon_size", 64)
+ITEM("space-science-pack", "tool"):set("icon_mipmaps", nil)
+
 --MOVED RECIPES CATEGORIES
 RECIPE('aromatic-organic'):set_category("centrifuging")
 RECIPE('ash-separation'):set_category("centrifuging")

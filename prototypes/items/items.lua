@@ -2293,3 +2293,58 @@ ITEM {
     order = "a",
     stack_size = 300
 }
+
+ITEM {
+    type = "item",
+    name = "ammonium-sulfate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ammonium-sulfate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mova",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "guaiacol",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/guaiacol.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mova",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "mpa",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mpa.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mova",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "nanozymes",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nanozymes.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mova",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "washed-mova",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/washed-mova.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-mova",
+    order = "a",
+    stack_size = 100
+}
