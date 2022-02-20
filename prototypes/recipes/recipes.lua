@@ -500,6 +500,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "triphenylanime", amount = 1},
         {type = "item", name = "bt", amount = 3},
+        {type = "fluid", name = "mova-pulp3", amount = 30},
         {type = "item", name = "flask", amount = 1},
         {type = "fluid", name = "bca", amount = 100},
     },

@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "nuclear-reactor-mk02",
     energy_required = 5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"nuclear-reactor-mk02", 1}
     }
-}
+}:add_unlock("nuclear-power-mk02")
 
 ITEM {
     type = "item",
@@ -68,16 +68,6 @@ ENTITY {
       scale_fluid_usage = false,
       fluid_usage_per_tick = (2/60),
       maximum_temperature = 95,
-      smoke =
-      {
-        {
-          name = "light-smoke",
-          frequency = 10 / 32,
-          starting_vertical_speed = 0.08,
-          slow_down_factor = 1,
-          starting_frame_deviation = 60
-        }
-      }
     },
     energy_usage = "300kW",
     animation = {

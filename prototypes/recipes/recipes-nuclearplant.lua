@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "coal-molten-salt-01",
+    name = "nuclear-molten-salt-01",
     category = "nuclear-fission",
     enabled = false,
     energy_required = 20,
