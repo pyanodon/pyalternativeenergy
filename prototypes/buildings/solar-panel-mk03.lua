@@ -54,7 +54,33 @@ ENTITY{
         output_flow_limit = "50MW",
         render_no_power_icon = false
     },
+    --[[
     animation =
+    {
+        layers = {
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/raw.png',
+                width = 384,
+                height = 416,
+                line_length = 5,
+                frame_count = 10,
+                shift = util.by_pixel(32, -48),
+                --animation_speed = 0.4
+            },
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/sh.png',
+                width = 384,
+                height = 416,
+                line_length = 5,
+                frame_count = 10,
+                shift = util.by_pixel(32, -48),
+                draw_as_shadow = true,
+                --animation_speed = 0.4
+            },
+        }
+    },
+    ]]--
+    picture =
     {
         layers = {
             {
@@ -83,3 +109,31 @@ ENTITY{
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
     placeable_by = {item = 'solar-panel-mk03', count = 1}
 }
+
+data:extend({
+    {
+        type = 'animation',
+        name = 'solar-panel-mk03',
+        layers = {
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/raw.png',
+                width = 384,
+                height = 416,
+                line_length = 5,
+                frame_count = 10,
+                shift = util.by_pixel(32, -48),
+                --animation_speed = 0.4
+            },
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/sh.png',
+                width = 384,
+                height = 416,
+                line_length = 5,
+                frame_count = 10,
+                shift = util.by_pixel(32, -48),
+                draw_as_shadow = true,
+                --animation_speed = 0.4
+            },
+        }
+    }
+})

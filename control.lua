@@ -8,6 +8,7 @@ script.on_init(function()
     global.orphan_sats = 0
     global.currently_selected_entity = {}
     global.aerials = {aerial_base_list = {},abl_count = 0, aerial_bases = {}, aerial_blimps = {}}
+    global.solar_panels = {}
 end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
@@ -142,6 +143,30 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             direction = E.direction
         }
         E.destroy()
+    elseif E.name == "solar-panel-mk02" then
+        local ani = rendering.draw_animation{
+            animation = "solar-panel-mk02",
+            surface = "nauvis",
+            target = E,
+            render_layer = 129,
+            animation_speed = 0
+        }
+        global.solar_panels[E.unit_number] = {
+            entity = E,
+            animation = ani
+        }
+    elseif E.name == "solar-panel-mk03" then
+        local ani = rendering.draw_animation{
+            animation = "solar-panel-mk03",
+            surface = "nauvis",
+            target = E,
+            render_layer = 129,
+            animation_speed = 0
+        }
+        global.solar_panels[E.unit_number] = {
+            entity = E,
+            animation = ani
+        }
     end
 end)
 
@@ -191,40 +216,22 @@ script.on_nth_tick(60, function(event)
         -- log(serpent.block(mill.power_production))
         -- mill.windmill.power_production = mill.max_power * wind_speed
     end
-
-    if next(global.reactor_tanks) ~= nil then
-        for t, tank in pairs(global.reactor_tanks) do
-            if global.reactor_tanks[t] ~= nil then
-                -- log(serpent.block(global.reactor_tanks))
-                local in_t = global.reactor_tanks[t].input_tank
-                local o_n_t = global.reactor_tanks[t].output_neutron_tank
-                local i_n_t = global.reactor_tanks[t].input_neutron_tank
-                local d_t = global.reactor_tanks[t].dirty_fuel_tank
-                -- local mod = global.reactor_tanks[t].moderator
-                local in_t_fbox = in_t.fluidbox[1]
-                local nuts_in = i_n_t.fluidbox[1]
-                log(serpent.block(in_t_fbox))
-                log('hit')
-                if in_t_fbox ~= nil then
-                    log('hit')
-                    local fuel = in_t_fbox
-                    if nuts_in ~= nil then
-                        -- "hot" neutrons fission more u235 as they are "thermal". will breed the u238 making more higher waste
-                        -- "cold" neutrons fission less u235 but will fission some of the u238
-                        if nuts_in.amount > 5 and fuel.amount > 5 then
-                            fuel.temperature = fuel.temperature - ((nuts_in.temperature / 10) * 0.001)
-                            global.reactor_tanks[t].input_tank.fluidbox[1] = fuel
-                            local neu = i_n_t.remove_fluid{name = 'neutron', amount = 5}
-                            local amount = in_t.remove_fluid{name = 'uf6', amount = 5}
-                            d_t.insert_fluid{name = 'uf6', amount = amount, temperature = fuel.temperature}
-                            o_n_t.insert_fluid{
-                                name = 'neutron',
-                                amount = 5 + math.ceil(((nuts_in.temperature - 500) / 5 / 10))
-                            } -- need to adjust for neutron eco of different fluids
-                        end
-                    end
-                end
-            end
+    if next(global.solar_panels) ~= nil then
+        --log(serpent.block(global.solar_panels))
+        for p, panel in pairs(global.solar_panels) do
+            --log(serpent.block(p))
+            --log(serpent.block(panel))
+            --log(serpent.block(math.floor((game.surfaces["nauvis"].daytime * 10))))
+            rendering.destroy(global.solar_panels[p].animation)
+            local ani = rendering.draw_animation{
+                animation = panel.entity.name,
+                surface = "nauvis",
+                target = panel.entity,
+                render_layer = 129,
+                animation_speed = 0,
+                animation_offset = math.floor((game.surfaces["nauvis"].daytime * 10))
+            }
+            global.solar_panels[p].animation = ani
         end
     end
 end)
@@ -254,6 +261,12 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         global.orphan_sats = global.orphan_sats + global.microwave_satellites[E.unit_number].satellites
         global.microwave_satellites[E.unit_number] = nil
         log(serpent.block(global.orphan_sats))
+    elseif E.name == "solar-panel-mk02" then
+        rendering.destroy(global.solar_panels[E.unit_number].animation)
+        global.solar_panels[E.unit_number] = nil
+    elseif E.name == "solar-panel-mk03" then
+        rendering.destroy(global.solar_panels[E.unit_number].animation)
+        global.solar_panels[E.unit_number] = nil
     end
     -- log(serpent.block(global.windmills))
 end)

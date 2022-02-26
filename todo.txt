@@ -21,7 +21,7 @@ CODING:
 
 - Solar panels MK02 to MK04 to change rotation during day (simulate sun tracking)
 - Make all the thermo solar buildings working as intended
-- Make the aerials move around and back to base to "deposit" energy in the grid
+- Make the aerials move around and back to base to "deposit" energy in the grid : NEEDS CHECKED
 
 FYI:
 
@@ -31,7 +31,6 @@ FYI:
 KING TODO:
 
  - setup molten salt loops on all the power plants
-      - nuclear
       - thermal solar
       - solar updraft tower
       - solar concentrator
@@ -43,3 +42,7 @@ KING TODO:
       - liquid burner
       - solid burner
             - reuse boiler/ heat exchanger entities for this unless py makes something
+
+
+      - Check lfr temps to match between panel and building.
+      - fix the solar panel mk2 and mk3 animations
