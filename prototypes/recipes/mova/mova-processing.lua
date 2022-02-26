@@ -84,6 +84,7 @@ RECIPE {
         {type = "item", name = "glass", amount = 2},
         {type = "item", name = "stainless-steel", amount = 1},
         {type = "item", name = "milfe", amount = 1},
+        {type = "item", name = "xeno-egg", amount = 5},
     },
     results = {
         {type = "item", name = "nanozymes", amount = 1}, -- USE IN PY SCIENCE
