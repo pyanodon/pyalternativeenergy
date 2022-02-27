@@ -102,7 +102,7 @@ ENTITY{
         }
     },
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
-    production = '3MW',
+    production = '4MW',
 }
 
 data:extend({
