@@ -122,9 +122,8 @@ ENTITY{
             },
         }
     },
-    production = '2MW',
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
-    placeable_by = {item = 'solar-panel-mk02', count = 1}
+    production = '2MW',
 }
 
 data:extend({
