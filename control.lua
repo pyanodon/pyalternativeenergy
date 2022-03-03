@@ -136,9 +136,19 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         }
         E.destroy()
     elseif E.name == 'numal-placer' then
+        local direction = E.direction
+        local x = 0
+        local y = 0
+        if direction == defines.direction.north then
+            log("hit")
+            y = -4
+        elseif direction == defines.direction.south then
+            log("hit")
+            y = 4
+        end
         game.surfaces[E.surface.name].create_entity{
             name = "numal-mk01",
-            position = E.position,
+            position = {E.position.x + x, E.position.y + y},
             force = E.force,
             direction = E.direction
         }
