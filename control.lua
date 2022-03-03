@@ -145,6 +145,12 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         elseif direction == defines.direction.south then
             log("hit")
             y = 4
+elseif direction == defines.direction.east then
+Log("hit")
+X = -4
+elseif direction == defines.direction.west then
+Log("hit")
+X = 4
         end
         game.surfaces[E.surface.name].create_entity{
             name = "numal-mk01",
