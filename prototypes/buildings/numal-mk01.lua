@@ -657,21 +657,53 @@ ENTITY{
                         width = 96,
                         height = 160,
                         shift = util.by_pixel(0, -0),
-                        animation_speed = 0.5
+                        animation_speed = 0.4
 
             },
             south_animation = {
-
+                layers = {
+                        {
+                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/s-gbot.png',
+                        frame_count = 75,
+                        line_length = 10,
+                        run_mode = 'forward-then-backward',
+                        width = 96,
+                        height = 96,
+                        shift = util.by_pixel(-32, -32),
+                        animation_speed = 0.3
+                        },
+                        {
+                            filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/s-swim-top.png',
+                            frame_count = 75,
+                            line_length = 10,
+                            width = 160,
+                            height = 96,
+                            shift = util.by_pixel(0, -64),
+                            animation_speed = 0.3
+                        },
+                        {
                         filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/s-gtop.png',
+                        priority = "extra-high",
                         frame_count = 75,
                         line_length = 10,
                         run_mode = 'forward-then-backward',
                         width = 96,
                         height = 128,
-                        shift = util.by_pixel(0, -0),
-                        animation_speed = 0.5
-
-            },
+                        shift = util.by_pixel(-32, 16),
+                        animation_speed = 0.3
+                        },
+                        {
+                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/s-angry.png',
+                        frame_count = 75,
+                        line_length = 10,
+                        --run_mode = 'forward-then-backward',
+                        width = 96,
+                        height = 96,
+                        shift = util.by_pixel(32, -32),
+                        animation_speed = 0.3
+                        },
+                    }
+                },
             west_animation = {
 
                         filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/s-top.png',
@@ -681,7 +713,7 @@ ENTITY{
                         width = 96,
                         height = 128,
                         shift = util.by_pixel(0, -0),
-                        animation_speed = 0.5
+                        animation_speed = 0.4
 
             },
             east_animation = {
@@ -693,7 +725,7 @@ ENTITY{
                         width = 96,
                         height = 128,
                         shift = util.by_pixel(0, -0),
-                        animation_speed = 0.5
+                        animation_speed = 0.4
 
             }
         },
