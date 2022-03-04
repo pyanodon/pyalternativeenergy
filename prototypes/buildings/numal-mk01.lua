@@ -360,7 +360,7 @@ ENTITY{
                 }
             }
         },
-        east = {
+        west = {
             layers = {
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/raw.png',
@@ -370,7 +370,7 @@ ENTITY{
                     repeat_count = 150,
                     line_length = 1,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32)
+                    shift = util.by_pixel(-128, -32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/raw-anim.png',
@@ -379,7 +379,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(64, -48)
+                    shift = util.by_pixel(-64, -48)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/raw-mask.png',
@@ -389,7 +389,7 @@ ENTITY{
                     line_length = 1,
                     repeat_count = 150,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32),
+                    shift = util.by_pixel(-128, -32),
                     tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
                 {
@@ -399,7 +399,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(64, -48),
+                    shift = util.by_pixel(-64, -48),
                     tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
                 {
@@ -410,7 +410,7 @@ ENTITY{
                     repeat_count = 150,
                     line_length = 1,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32)
+                    shift = util.by_pixel(-128, -32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/ao.png',
@@ -419,7 +419,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(64, -48)
+                    shift = util.by_pixel(-64, -48)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/l-bot.png',
@@ -430,7 +430,7 @@ ENTITY{
                     line_length = 20,
                     draw_as_glow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(64, 32)
+                    shift = util.by_pixel(-64, 32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/l-up.png',
@@ -441,7 +441,7 @@ ENTITY{
                     line_length = 20,
                     draw_as_glow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(64, -128)
+                    shift = util.by_pixel(-64, -128)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/dome.png',
@@ -451,7 +451,7 @@ ENTITY{
                     repeat_count = 150,
                     line_length = 1,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32)
+                    shift = util.by_pixel(-128, -32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/sh.png',
@@ -462,7 +462,7 @@ ENTITY{
                     line_length = 1,
                     draw_as_shadow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32)
+                    shift = util.by_pixel(-128, -32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/sh-bot.png',
@@ -473,7 +473,7 @@ ENTITY{
                     line_length = 10,
                     draw_as_shadow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(80, 80)
+                    shift = util.by_pixel(-48, 80)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/sh-top.png',
@@ -484,11 +484,11 @@ ENTITY{
                     line_length = 20,
                     draw_as_shadow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(80, -80)
+                    shift = util.by_pixel(-48, -80)
                 }
             }
         },
-        west = {
+        east = {
             layers = {
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/raw.png',
@@ -498,7 +498,7 @@ ENTITY{
                     repeat_count = 150,
                     line_length = 1,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32)
+                    shift = util.by_pixel(128, -32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-bot.png',
@@ -507,7 +507,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, 32)
+                    shift = util.by_pixel(64, 32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-top.png',
@@ -516,7 +516,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, -112)
+                    shift = util.by_pixel(64, -112)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-mask.png',
@@ -526,7 +526,7 @@ ENTITY{
                     line_length = 1,
                     repeat_count = 150,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32),
+                    shift = util.by_pixel(128, -32),
                     tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
                 {
@@ -536,7 +536,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, 32),
+                    shift = util.by_pixel(64, 32),
                     tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
                 {
@@ -546,7 +546,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, -112),
+                    shift = util.by_pixel(64, -112),
                     tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
                 {
@@ -557,7 +557,7 @@ ENTITY{
                     repeat_count = 150,
                     line_length = 1,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32)
+                    shift = util.by_pixel(128, -32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/ao-bot.png',
@@ -566,7 +566,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, 32)
+                    shift = util.by_pixel(64, 32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/ao-top.png',
@@ -575,7 +575,7 @@ ENTITY{
                     frame_count = 150,
                     line_length = 20,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, -112)
+                    shift = util.by_pixel(64, -112)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/l-bot.png',
@@ -586,7 +586,7 @@ ENTITY{
                     line_length = 20,
                     draw_as_glow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, 32)
+                    shift = util.by_pixel(64, 32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/l-top.png',
@@ -597,7 +597,7 @@ ENTITY{
                     line_length = 20,
                     draw_as_glow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, -144)
+                    shift = util.by_pixel(64, -144)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/dome.png',
@@ -607,7 +607,7 @@ ENTITY{
                     repeat_count = 150,
                     line_length = 1,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32)
+                    shift = util.by_pixel(128, -32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/sh.png',
@@ -618,7 +618,7 @@ ENTITY{
                     line_length = 1,
                     draw_as_shadow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0, -32)
+                    shift = util.by_pixel(128, -32)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/sh-bot.png',
@@ -629,7 +629,7 @@ ENTITY{
                     line_length = 20,
                     draw_as_shadow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-64, 80)
+                    shift = util.by_pixel(64, 80)
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/sh-top.png',
@@ -640,7 +640,7 @@ ENTITY{
                     line_length = 20,
                     draw_as_shadow = true,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(-48, -80)
+                    shift = util.by_pixel(80, -80)
                 }
             }
         }
@@ -650,14 +650,13 @@ ENTITY{
         {
             north_animation = {
 
-                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/north/s-top.png',
-                        frame_count = 75,
-                        line_length = 10,
-                        run_mode = 'forward-then-backward',
-                        width = 96,
-                        height = 160,
-                        shift = util.by_pixel(0, -0),
-                        animation_speed = 0.4
+                filename = '__pyalternativeenergygraphics__/graphics/entity/numal/north/all.png',
+                frame_count = 150,
+                line_length = 15,
+                width = 192,
+                height = 192,
+                shift = util.by_pixel(16, -76),
+                animation_speed = 0.4
 
             },
             south_animation = {
@@ -671,27 +670,24 @@ ENTITY{
                 },
             west_animation = {
 
-                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/s-top.png',
-                        frame_count = 75,
-                        line_length = 20,
-                        run_mode = 'forward-then-backward',
-                        width = 96,
-                        height = 128,
-                        shift = util.by_pixel(0, -0),
+                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/all.png',
+                        frame_count = 150,
+                        line_length = 15,
+                        width = 192,
+                        height = 192,
+                        shift = util.by_pixel(-176, -48),
                         animation_speed = 0.4
 
             },
             east_animation = {
 
-                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/s-top.png',
-                        frame_count = 75,
-                        line_length = 10,
-                        run_mode = 'forward-then-backward',
-                        width = 96,
-                        height = 128,
-                        shift = util.by_pixel(0, -0),
+                        filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/all.png',
+                        frame_count = 150,
+                        line_length = 15,
+                        width = 192,
+                        height = 160,
+                        shift = util.by_pixel(173, -64),
                         animation_speed = 0.4
-
             }
         },
     },
