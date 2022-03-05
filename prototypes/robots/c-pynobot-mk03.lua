@@ -5,7 +5,7 @@ RECIPE {
   name = "c-pynobot-mk03",
   energy_required = 15,
   category = "crafting-with-fluid",
-  enabled = true,
+  enabled = false,
   ingredients = {
     {"harmonic-absorber", 2},
     {"superconductor-servomechanims", 2},

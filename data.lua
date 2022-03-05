@@ -43,6 +43,7 @@ require("prototypes/technologies/nano-mesh")
 require("prototypes/technologies/biofet")
 require("prototypes/technologies/mega-farm-mova")
 require("prototypes/technologies/nanozymes")
+require("prototypes/technologies/advanced-robotics")
 -- ))
 
 --(( RESOURCES ))--
@@ -174,6 +175,7 @@ require("prototypes/fluids/antimony-phosphate")
 
 -- (( ROBOTS ))--
 require("prototypes/robots/c-pynobot-mk03")
+require("prototypes/robots/l-pynobot-mk03")
 
 -- (( BUILDINGS ))--
 require("prototypes/buildings/hawt-turbine-mk01")
