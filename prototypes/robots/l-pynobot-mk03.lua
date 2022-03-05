@@ -7,13 +7,19 @@ RECIPE {
   category = "crafting-with-fluid",
   enabled = false,
   ingredients = {
-    {"harmonic-absorber", 2},
-    {"superconductor-servomechanims", 2},
-    {"diamagnetic-material", 1},
-    {"paramagnetic-material", 1},
-    {"intelligent-unit", 1},
-    {"construction-robot", 1},
-    {type = "fluid", name = "grease", amount = 300}
+    {"processing-unit", 3},
+    {"py-logistic-robot-02", 1},
+    {"ns-material", 1},
+    {"low-density-structure", 4},
+    {'biobattery', 1},
+    {"nbfe-alloy", 5},
+    {"cf", 10},
+    {"carbon-nanotube", 4},
+    {"biopolymer", 2},
+    {"small-parts-03", 50},
+    {"electric-engine-unit", 1},
+    {"gearbox-mk03", 1},
+    {type = "fluid", name = "bio-oil", amount = 200},
   },
   results = {
     {"l-pynobot-mk03", 1}
