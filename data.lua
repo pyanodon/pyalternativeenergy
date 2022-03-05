@@ -172,6 +172,9 @@ require("prototypes/fluids/antimony-phosphate")
 
 -- ))
 
+-- (( ROBOTS ))--
+require("prototypes/robots/c-pynobot-mk03")
+
 -- (( BUILDINGS ))--
 require("prototypes/buildings/hawt-turbine-mk01")
 require("prototypes/buildings/hawt-turbine-mk02")
