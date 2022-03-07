@@ -29,7 +29,8 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "numal"
+        name = "numal",
+        allowed_module_categories = { "numal" }
     },
     {
         type = "recipe-category",
