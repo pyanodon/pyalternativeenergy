@@ -1,35 +1,35 @@
 RECIPE {
     type = "recipe",
-    name = "lrf-building-mk01",
+    name = "lrf-building-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
-        {"lrf-building-mk01", 1}
+        {"lrf-building-mk04", 1}
     }
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk04")
 
 ITEM {
     type = "item",
-    name = "lrf-building-mk01",
+    name = "lrf-building-mk04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-alternativeenergy-buildings-mk04",
     order = "a",
-    place_result = "lrf-building-mk01",
+    place_result = "lrf-building-mk04",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "lrf-building-mk01",
+    name = "lrf-building-mk04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "lrf-building-mk01"},
+    minable = {mining_time = 0.5, result = "lrf-building-mk04"},
     fast_replaceable_group = "lrf",
     max_health = 100,
     corpse = "big-remnants",
@@ -41,7 +41,7 @@ ENTITY {
         module_slots = 0
     },
     --allowed_effects = {"speed"},
-    crafting_categories = {"lrf"},
+    crafting_categories = {"lrf4"},
     crafting_speed = 1,
     energy_source = {
         type = "void",
