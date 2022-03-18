@@ -267,6 +267,8 @@ require("prototypes/buildings/aerial-mk04")
 require("prototypes/buildings/simik-boiler")
 require("prototypes/buildings/rtg")
 
+require("prototypes/buildings/heat-smelter-test")
+
 -- ))
 
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
