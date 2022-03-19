@@ -41,7 +41,7 @@ ENTITY {
         module_slots = 0
     },
     --allowed_effects = {"speed"},
-    crafting_categories = {"lrf-panel", "lrf-panel2", "lrf-panel3"},
+    crafting_categories = {"lrf-panel3"},
     crafting_speed = 1,
     source_inventory_size = 1,
     result_inventory_size = 1,

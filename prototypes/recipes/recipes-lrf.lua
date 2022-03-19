@@ -4,7 +4,7 @@ local temp = 1000
 local max_temp = temp - 5
 local min_temp = 0
 
-for i = 1, 10 do
+for i = 0, 10 do
 
     RECIPE {
         type = "recipe",
@@ -20,49 +20,63 @@ for i = 1, 10 do
         },
     }:add_unlock("thermal-mk01")
 
-    --[[
-    RECIPE {
-        type = "recipe",
-        name = "lrf-salt-heating-" .. (i + 10),
-        category = "lrf-panel2",
-        enabled = false,
-        energy_required = 1,
-        ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 1000, maximum_temperature = max_temp + 1000},
-        },
-        results = {
-            {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 1000},
-        },
-    }:add_unlock("thermal-mk02")
+    if i > 0 then
+        if i == 1 then
+            min_temp = -1000
+        end
 
-    RECIPE {
-        type = "recipe",
-        name = "lrf-salt-heating-" .. (i + 20),
-        category = "lrf-panel3",
-        enabled = false,
-        energy_required = 1,
-        ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 2000, maximum_temperature = max_temp + 2000},
-        },
-        results = {
-            {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 2000},
-        },
-    }:add_unlock("thermal-mk03")
+        RECIPE {
+            type = "recipe",
+            name = "lrf-salt-heating-" .. (i + 10),
+            category = "lrf-panel2",
+            enabled = false,
+            energy_required = 1,
+            ingredients = {
+                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 1000, maximum_temperature = max_temp + 1000},
+            },
+            results = {
+                {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 1000},
+            },
+        }:add_unlock("thermal-mk02")
 
-    RECIPE {
-        type = "recipe",
-        name = "lrf-salt-heating-" .. (i + 30),
-        category = "lrf-panel4",
-        enabled = false,
-        energy_required = 1,
-        ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 3000, maximum_temperature = max_temp + 3000},
-        },
-        results = {
-            {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 3000},
-        },
-    }:add_unlock("thermal-mk04")
-]]--
+        if i == 1 then
+            min_temp = -2000
+        end
+
+        RECIPE {
+            type = "recipe",
+            name = "lrf-salt-heating-" .. (i + 20),
+            category = "lrf-panel3",
+            enabled = false,
+            energy_required = 1,
+            ingredients = {
+                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 2000, maximum_temperature = max_temp + 2000},
+            },
+            results = {
+                {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 2000},
+            },
+        }:add_unlock("thermal-mk03")
+
+        if i == 1 then
+            min_temp = -3000
+        end
+
+        RECIPE {
+            type = "recipe",
+            name = "lrf-salt-heating-" .. (i + 30),
+            category = "lrf-panel4",
+            enabled = false,
+            energy_required = 1,
+            ingredients = {
+                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 3000, maximum_temperature = max_temp + 3000},
+            },
+            results = {
+                {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 3000},
+            },
+        }:add_unlock("thermal-mk04")
+
+    end
+
     temp = temp + 100
     max_temp = temp - 5
     min_temp = max_temp - 250

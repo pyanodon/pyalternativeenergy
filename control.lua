@@ -1,5 +1,5 @@
-local util = require("util")
---TODO: rewrite microwave sat code to have launched sats added to a pool and the code sorting the sat pool between recivers as seperate functions
+local util = require('util')
+-- TODO: rewrite microwave sat code to have launched sats added to a pool and the code sorting the sat pool between recivers as seperate functions
 
 script.on_init(function()
     global.windmills = {}
@@ -7,8 +7,9 @@ script.on_init(function()
     global.microwave_satellites = {}
     global.orphan_sats = 0
     global.currently_selected_entity = {}
-    global.aerials = {aerial_base_list = {},abl_count = 0, aerial_bases = {}, aerial_blimps = {}}
+    global.aerials = {aerial_base_list = {}, abl_count = 0, aerial_bases = {}, aerial_blimps = {}}
     global.solar_panels = {}
+    global.lrf_panels = {}
 end)
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
@@ -105,12 +106,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         E.power_production = ent_sats * 83333.34
         E.electric_buffer_size = ent_sats * 5000000
         log(serpent.block(global.microwave_satellites))
-        local ani = rendering.draw_animation{
-            animation = E.name,
-            surface = E.surface,
-            target = E,
-            render_layer = 129
-        }
+        local ani = rendering.draw_animation{animation = E.name, surface = E.surface, target = E, render_layer = 129}
     elseif E.name == 'aerial-base' then
         log('hit')
         table.insert(global.aerials.aerial_base_list, E.unit_number)
@@ -129,7 +125,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         end
     elseif E.name == 'tidal-placer' then
         game.surfaces[E.surface.name].create_entity{
-            name = "tidal-mk01",
+            name = 'tidal-mk01',
             position = E.position,
             force = E.force,
             direction = E.direction
@@ -140,49 +136,46 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         local x = 0
         local y = 0
         if direction == defines.direction.north then
-            log("hit")
+            log('hit')
             y = -4
         elseif direction == defines.direction.south then
-            log("hit")
+            log('hit')
             y = 4
-elseif direction == defines.direction.east then
-log("hit")
-X = -4
-elseif direction == defines.direction.west then
-log("hit")
-X = 4
+        elseif direction == defines.direction.east then
+            log('hit')
+            X = -4
+        elseif direction == defines.direction.west then
+            log('hit')
+            X = 4
         end
         game.surfaces[E.surface.name].create_entity{
-            name = "numal-mk01",
+            name = 'numal-mk01',
             position = {E.position.x + x, E.position.y + y},
             force = E.force,
             direction = E.direction
         }
         E.destroy()
-    elseif E.name == "solar-panel-mk02" then
+    elseif E.name == 'solar-panel-mk02' then
         local ani = rendering.draw_animation{
-            animation = "solar-panel-mk02",
-            surface = "nauvis",
+            animation = 'solar-panel-mk02',
+            surface = 'nauvis',
             target = E,
             render_layer = 129,
             animation_speed = 0
         }
-        global.solar_panels[E.unit_number] = {
-            entity = E,
-            animation = ani
-        }
-    elseif E.name == "solar-panel-mk03" then
+        global.solar_panels[E.unit_number] = {entity = E, animation = ani}
+    elseif E.name == 'solar-panel-mk03' then
         local ani = rendering.draw_animation{
-            animation = "solar-panel-mk03",
-            surface = "nauvis",
+            animation = 'solar-panel-mk03',
+            surface = 'nauvis',
             target = E,
             render_layer = 129,
             animation_speed = 0
         }
-        global.solar_panels[E.unit_number] = {
-            entity = E,
-            animation = ani
-        }
+        global.solar_panels[E.unit_number] = {entity = E, animation = ani}
+    elseif string.match(E.name, "lrf%-panel") ~= nil then
+        log('hit')
+        global.lrf_panels[E.unit_number] = E
     end
 end)
 
@@ -233,21 +226,38 @@ script.on_nth_tick(60, function(event)
         -- mill.windmill.power_production = mill.max_power * wind_speed
     end
     if next(global.solar_panels) ~= nil then
-        --log(serpent.block(global.solar_panels))
+        -- log(serpent.block(global.solar_panels))
         for p, panel in pairs(global.solar_panels) do
-            --log(serpent.block(p))
-            --log(serpent.block(panel))
-            --log(serpent.block(math.floor((game.surfaces["nauvis"].daytime * 10))))
+            -- log(serpent.block(p))
+            -- log(serpent.block(panel))
+            -- log(serpent.block(math.floor((game.surfaces["nauvis"].daytime * 10))))
             rendering.destroy(global.solar_panels[p].animation)
             local ani = rendering.draw_animation{
                 animation = panel.entity.name,
-                surface = "nauvis",
+                surface = 'nauvis',
                 target = panel.entity,
                 render_layer = 129,
                 animation_speed = 0,
-                animation_offset = math.floor((game.surfaces["nauvis"].daytime * 10))
+                animation_offset = math.floor((game.surfaces['nauvis'].daytime * 10))
             }
             global.solar_panels[p].animation = ani
+        end
+    end
+end)
+
+script.on_nth_tick(55, function(event)
+    log('hit')
+    if game.surfaces['nauvis'].daytime >= 0.25 and game.surfaces['nauvis'].daytime < 0.75 then
+        log('hit')
+        for p, panel in pairs(global.lrf_panels) do
+            if panel.valid == true then
+                panel.active = false
+            end
+        end
+    elseif game.surfaces['nauvis'].daytime >= 0.75 then
+        log('hit')
+        for p, panel in pairs(global.lrf_panels) do
+            panel.active = true
         end
     end
 end)
@@ -277,12 +287,14 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         global.orphan_sats = global.orphan_sats + global.microwave_satellites[E.unit_number].satellites
         global.microwave_satellites[E.unit_number] = nil
         log(serpent.block(global.orphan_sats))
-    elseif E.name == "solar-panel-mk02" then
+    elseif E.name == 'solar-panel-mk02' then
         rendering.destroy(global.solar_panels[E.unit_number].animation)
         global.solar_panels[E.unit_number] = nil
-    elseif E.name == "solar-panel-mk03" then
+    elseif E.name == 'solar-panel-mk03' then
         rendering.destroy(global.solar_panels[E.unit_number].animation)
         global.solar_panels[E.unit_number] = nil
+    elseif string.match(E.name, "lrf%-panel") ~= nil then
+        global.lrf_panels[E.unit_number] = nil
     end
     -- log(serpent.block(global.windmills))
 end)
@@ -359,11 +371,12 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
                 radius = 10,
                 name = 'aerial-base'
             }
-            --log(serpent.block(bases[1].position))
+            -- log(serpent.block(bases[1].position))
             local cd = blimp.current_destination
             log(cd)
             local cd_last = cd - 1
-            local base = global.aerials.aerial_base_list[cd_last] or global.aerials.aerial_base_list[global.aerials.abl_count]
+            local base = global.aerials.aerial_base_list[cd_last] or
+                             global.aerials.aerial_base_list[global.aerials.abl_count]
             log(base)
             local dist = util.distance(global.aerials.aerial_bases[base].position, blimp.unit.position)
             log(dist)
