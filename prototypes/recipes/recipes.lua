@@ -902,3 +902,18 @@ RECIPE {
         {type = 'item', name = 'replicator-mova', amount = 1},
     },
 }:add_unlock("mega-farm-mova")
+
+RECIPE {
+    type = 'recipe',
+    name = 'quantum-battery-recharge',
+    category = 'pa',
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = 'item', name = 'used-quantum-battery', amount = 1},
+        {type = "item", name = "th-oxide", amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'quantum-battery', amount = 1}
+    }
+}:add_unlock('railway-mk04')

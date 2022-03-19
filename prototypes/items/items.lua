@@ -895,13 +895,24 @@ ITEM {
 	icon_size = 64,
     flags = {},
     fuel_value = "1000MJ",
-    fuel_category = "nexelit",
+    fuel_category = "quantum",
     fuel_acceleration_multiplier = 3.5,
     fuel_top_speed_multiplier = 2.5,
-    --burnt_result = "used-nexelit-battery",
+    burnt_result = "used-quantum-battery",
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "used-quantum-battery",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/used-quantum-battery.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "aae",
+    stack_size = 10
 }
 
 ITEM {

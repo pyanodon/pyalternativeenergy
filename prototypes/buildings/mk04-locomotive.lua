@@ -6,18 +6,22 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"steel-plate", 150},
-        {"plastic-bar", 200},
-        {"electronic-circuit", 20},
+        {"super-alloy", 150},
+        {"biopolymer", 200},
+        {"intelligent-unit", 5},
         {"nexelit-plate", 20},
-        {"niobium-plate", 20},
-        {"engine-unit", 5},
-        {"iron-gear-wheel", 200},
+        {"electronics-mk04", 2},
+        {"cf", 100},
+        {"sc-engine", 5},
+        {'metastable-quasicrystal', 2},
+        {"small-parts-03", 300},
+        {"metallic-glass", 10},
+        {"low-density-structure", 20},
     },
     results = {
         {"mk04-locomotive", 1}
     }
-}:add_unlock("railway-mk02")
+}:add_unlock("railway-mk04")
 
 ITEM {
     type = "item",
@@ -49,7 +53,7 @@ ITEM {
     alert_icon_shift = util.by_pixel(0, -24),
     weight = 900,
     max_speed = 1.30,
-    max_power = "900kW",
+    max_power = "1000kW",
     reversing_power_modifier = 0.4,
     braking_force = 25,
     friction_force = 0.40,
@@ -88,10 +92,10 @@ ITEM {
     },
     burner =
     {
-      fuel_category = "nexelit",
+      fuel_category = "quantum",
       effectivity = 1,
-      fuel_inventory_size = 2,
-      burnt_inventory_size = 2,
+      fuel_inventory_size = 1,
+      burnt_inventory_size = 1,
     },
     front_light =
     {
