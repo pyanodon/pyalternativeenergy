@@ -898,6 +898,7 @@ ITEM {
     fuel_category = "nexelit",
     fuel_acceleration_multiplier = 3.5,
     fuel_top_speed_multiplier = 2.5,
+    --burnt_result = "used-nexelit-battery",
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 500
