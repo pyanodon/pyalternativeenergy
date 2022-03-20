@@ -52,13 +52,13 @@ ITEM {
     drawing_box = {{-1, -4}, {1, 3}},
     alert_icon_shift = util.by_pixel(0, -24),
     weight = 900,
-    max_speed = 1.30,
-    max_power = "1000kW",
+    max_speed = 1.7,
+    max_power = "700kW",
     reversing_power_modifier = 0.4,
     braking_force = 25,
     friction_force = 0.40,
-    vertical_selection_shift = -0.5,
-    air_resistance = 0.0050, -- this is a percentage of current speed that will be subtracted
+    vertical_selection_shift = -0.2,
+    air_resistance = 0.0025, -- this is a percentage of current speed that will be subtracted
     connection_distance = 3,
     joint_distance = 4,
     energy_per_hit_point = 5,
@@ -153,7 +153,7 @@ ITEM {
           },
           line_length = 4,
           lines_per_file = 4,
-          shift = util.by_pixel(0, -20),
+          shift = util.by_pixel(0, -0),
           hr_version =
           {
             priority = "very-low",
@@ -183,7 +183,7 @@ ITEM {
             },
             line_length = 4,
             lines_per_file = 4,
-            shift = util.by_pixel(0, -20),
+            shift = util.by_pixel(0, -0),
             scale = 0.5
             }
         },
@@ -219,7 +219,7 @@ ITEM {
           },
           line_length = 4,
           lines_per_file = 4,
-          shift = util.by_pixel(0, -20),
+          shift = util.by_pixel(0, -0),
           apply_runtime_tint = true,
           hr_version =
           {
@@ -254,7 +254,7 @@ ITEM {
             },
             line_length = 4,
             lines_per_file = 4,
-            shift = util.by_pixel(0, -20),
+            shift = util.by_pixel(0, -0),
             apply_runtime_tint = true,
             scale = 0.5
             }
@@ -289,7 +289,7 @@ ITEM {
           },
           line_length = 4,
           lines_per_file = 4,
-          shift = util.by_pixel(32, 0),
+          shift = util.by_pixel(32, 10),
         }
       }
     },

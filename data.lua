@@ -267,6 +267,7 @@ require("prototypes/buildings/aerial-mk04")
 require("prototypes/buildings/simik-boiler")
 require("prototypes/buildings/rtg")
 require("prototypes/buildings/mk04-locomotive")
+require("prototypes/buildings/mk04-cargo-wagon")
 
 require("prototypes/buildings/heat-smelter-test")
 
