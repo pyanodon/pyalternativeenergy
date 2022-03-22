@@ -252,6 +252,12 @@ RECIPE('pre-pesticide-02'):add_ingredient({type = "item", name = "dodecylamine",
 RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 
+ITEM("simik"):set_fields{fuel_category = "simik", fuel_value = "600MJ", burnt_result = "used-simik"}
+ITEM("simik-mk02"):set_fields{fuel_category = "simik", fuel_value = "800MJ", burnt_result = "used-simik-mk02"}
+ITEM("simik-mk03"):set_fields{fuel_category = "simik", fuel_value = "1100MJ", burnt_result = "used-simik-mk03"}
+ITEM("simik-mk04"):set_fields{fuel_category = "simik", fuel_value = "1500MJ", burnt_result = "used-simik-mk04"}
+
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {
