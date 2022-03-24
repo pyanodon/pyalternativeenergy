@@ -2360,3 +2360,91 @@ ITEM {
     order = "a",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "polished-glass-surface",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/polished-glass-surface.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "clean-glass-sheet",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/clean-glass-sheet.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "stannous-chloride",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/stannous-chloride.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "prepared-glass",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/prepared-glass.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "crude-mirror",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/crude-mirror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "silver-nitrate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/silver-nitrate.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "polishing-wheel",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/polishing-wheel.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "mirror-mk01",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mirror.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "a",
+    stack_size = 100
+}
