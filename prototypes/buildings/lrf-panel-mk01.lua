@@ -1,10 +1,17 @@
 RECIPE {
     type = "recipe",
     name = "lrf-panel-mk01",
-    energy_required = 0.5,
+    energy_required = 1,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"axis-tracker", 2},
+        {"mirror-mk01", 20},
+        {"steel-plate", 50},
+        {"duralumin", 20},
+        {"quartz-tube", 10},
+        {"small-parts-01", 100},
+        {"utility-box-mk01", 1},
+        {"electronic-circuit", 5},
     },
     results = {
         {"lrf-panel-mk01", 1}
@@ -17,7 +24,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk03",
+    subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
     place_result = "lrf-panel-mk01",
     stack_size = 10

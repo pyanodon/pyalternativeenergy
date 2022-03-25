@@ -82,6 +82,7 @@ require("prototypes/recipes/nano-mesh")
 require("prototypes/recipes/biofet")
 require("prototypes/recipes/mova/recipes-mova-megafarm")
 require("prototypes/recipes/mova/mova-processing")
+require("prototypes/recipes/mirrors")
 -- ))
 
 -- (( ITEMs ))--

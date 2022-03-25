@@ -2368,7 +2368,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "a",
+    order = "da",
     stack_size = 100
 }
 
@@ -2379,7 +2379,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "a",
+    order = "da",
     stack_size = 100
 }
 
@@ -2390,7 +2390,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "a",
+    order = "da",
     stack_size = 100
 }
 
@@ -2401,7 +2401,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "a",
+    order = "da",
     stack_size = 100
 }
 
@@ -2412,7 +2412,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "a",
+    order = "da",
     stack_size = 100
 }
 
@@ -2423,7 +2423,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "a",
+    order = "da",
     stack_size = 100
 }
 
@@ -2434,7 +2434,7 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "a",
+    order = "da",
     stack_size = 100
 }
 
@@ -2445,6 +2445,61 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "a",
+    order = "da",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "mirror-mk02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk02.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "dab",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "mirror-mk03",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk03.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "dac",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "mirror-mk04",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk04.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "dad",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "cerium-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/cerium-oxide.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "da",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "axis-tracker",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/axis-tracker.png",
+	icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "da",
     stack_size = 100
 }
