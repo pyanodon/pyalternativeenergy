@@ -9,6 +9,7 @@ script.on_init(function()
     global.currently_selected_entity = {}
     global.aerials = {aerial_base_list = {}, abl_count = 0, aerial_bases = {}, aerial_blimps = {}}
     global.solar_panels = {}
+    global.antisolar_panels = {}
     global.lrf_panels = {}
 end)
 
@@ -173,6 +174,8 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             animation_speed = 0
         }
         global.solar_panels[E.unit_number] = {entity = E, animation = ani}
+    elseif E.name == 'anti-solar' then
+        global.antisolar_panels[E.unit_number] = E
     elseif string.match(E.name, "lrf%-panel") ~= nil then
         log('hit')
         global.lrf_panels[E.unit_number] = E
@@ -254,10 +257,20 @@ script.on_nth_tick(55, function(event)
                 panel.active = false
             end
         end
-    elseif game.surfaces['nauvis'].daytime >= 0.75 then
+        for a,anti in pairs(global.antisolar_panels) do
+            if anti.valid == true then
+                anti.active = true
+            end
+        end
+    else
         log('hit')
         for p, panel in pairs(global.lrf_panels) do
             panel.active = true
+        end
+        for a,anti in pairs(global.antisolar_panels) do
+            if anti.valid == true then
+                anti.active = false
+            end
         end
     end
 end)
@@ -295,6 +308,8 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         global.solar_panels[E.unit_number] = nil
     elseif string.match(E.name, "lrf%-panel") ~= nil then
         global.lrf_panels[E.unit_number] = nil
+    elseif E.name == 'anti-solar' then
+        global.antisolar_panels[E.unit_number] = nil
     end
     -- log(serpent.block(global.windmills))
 end)

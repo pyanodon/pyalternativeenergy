@@ -103,6 +103,8 @@ RECIPE("paradiamatic-resistor"):add_ingredient({type = "item", name = "nano-mesh
 RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("volumetric-capacitor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 
+RECIPE("phosphoric-acid2"):add_result({type = "fluid", name = "hydrofluoric-acid", amount = 25})
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {

@@ -792,7 +792,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = "item", name = "yellow-cake", amount = 5},
-        {type = "fluid", name = "sulfuric-acid", amount = 100}
+        {type = "fluid", name = "hydrofluoric-acid", amount = 100}
     },
     results = {
         {type = "fluid", name = "uf6", amount = 100, temperature = 0.7},
