@@ -4,7 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"axis-tracker", 2},
+        {"mirror-mk02", 20},
+        {"stainless-steel", 40},
+        {"aluminum-plate", 50},
+        {"quartz-tube", 15},
+        {"small-parts-02", 100},
+        {"utility-box-mk02", 2},
+        {'self-assembly-monolayer', 10},
+        {"advanced-circuit", 10},
     },
     results = {
         {"lrf-panel-mk02", 1}
@@ -30,7 +38,7 @@ ENTITY {
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "lrf-panel-mk02"},
-    fast_replaceable_group = "lrf",
+    fast_replaceable_group = "lrf-panel",
     max_health = 35,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",

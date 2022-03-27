@@ -4,7 +4,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"iron-plate", 600},
+        {"steel-plate", 200},
+        {"glass", 200},
+        {"pipe", 100},
+        {"small-parts-01", 1000},
+        {"steam-engine", 10},
+        {"electronic-circuit", 100},
+        {'intermetallics', 50},
     },
     results = {
         {"lrf-building-mk01", 1}

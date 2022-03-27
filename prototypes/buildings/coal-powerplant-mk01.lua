@@ -9,7 +9,7 @@ RECIPE {
         {"iron-gear-wheel", 300},
         {"gasifier", 3},
         {"steel-plate", 200},
-        {"engine-unit", 20},
+        {"steam-engine", 20},
         {'intermetallics', 50},
     },
     results = {

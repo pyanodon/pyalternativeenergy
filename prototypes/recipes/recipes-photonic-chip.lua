@@ -72,7 +72,7 @@ RECIPE {
         {type = "item", name = "zno-nanoparticles", amount = 1},
         {type = 'item', name = 'lens', amount = 3},
         {type = "item", name = "sb-oxide", amount = 4},
-        {type = "item", name = "glass", amount = 10},
+        {type = "item", name = "mirror-mk02", amount = 5},
     },
     results = {
         {type = "item", name = "dieletric-mirror", amount = 1},

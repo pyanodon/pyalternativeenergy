@@ -11,7 +11,7 @@ RECIPE {
         {"titanium-plate", 100},
         {'concrete', 80},
         {'small-parts-02', 100},
-        {'electric-engine-unit', 20},
+        {'engine-unit', 20},
         {'advanced-circuit', 50},
     },
     results = {

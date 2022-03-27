@@ -12,6 +12,7 @@ RECIPE {
         {"glass-fiber", 100},
         {"super-steel", 100},
         {"low-density-structure", 100},
+        {'electric-engine-unit', 20},
         {"small-parts-03", 300},
     },
     results = {

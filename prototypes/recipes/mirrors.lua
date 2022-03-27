@@ -1,3 +1,25 @@
+--MK01
+
+RECIPE {
+    type = "recipe",
+    name = "mirror-mk01",
+    category = "advanced-foundry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "zinc-plate", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 1},
+        {type = "item", name = "copper-plate", amount = 3},
+        {type = "item", name = "aluminium-plate", amount = 5},
+    },
+    results = {
+        {type = "item", name = "mirror-mk01", amount = 1},
+    },
+    --main_product = "libr",
+}:add_unlock("thermal-mk01")
+
+--MK02
+
 RECIPE {
     type = "recipe",
     name = "cerium-oxide",
@@ -15,7 +37,7 @@ RECIPE {
         {type = "item", name = "cerium-oxide", amount = 1},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -32,7 +54,7 @@ RECIPE {
         {type = "item", name = "polishing-wheel", amount = 1},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -49,7 +71,7 @@ RECIPE {
         {type = "item", name = "polished-glass-surface", amount = 5},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -71,7 +93,7 @@ RECIPE {
     icon_size = 64,
     subgroup = "py-washer",
     order = "d"
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -88,7 +110,7 @@ RECIPE {
         {type = "item", name = "stannous-chloride", amount = 1},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -106,7 +128,7 @@ RECIPE {
         {type = "item", name = "silver-nitrate", amount = 1},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -122,7 +144,7 @@ RECIPE {
         {type = "item", name = "prepared-glass", amount = 5},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -141,7 +163,7 @@ RECIPE {
         {type = "item", name = "crude-mirror", amount = 5},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -160,25 +182,7 @@ RECIPE {
         {type = "item", name = "crude-mirror", amount = 8},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk01")
-
-RECIPE {
-    type = "recipe",
-    name = "mirror-mk01",
-    category = "glassworks",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = "item", name = "crude-mirror", amount = 1},
-        {type = "item", name = "lead-plate", amount = 1},
-        {type = "item", name = "copper-plate", amount = 3},
-        {type = "fluid", name = "sulfuric-acid", amount = 50},
-    },
-    results = {
-        {type = "item", name = "mirror-mk01", amount = 1},
-    },
-    --main_product = "libr",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
 
 RECIPE {
     type = "recipe",
@@ -200,4 +204,22 @@ RECIPE {
         {type = "item", name = "axis-tracker", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("thermal-mk01")
+}:add_unlock("thermal-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "mirror-mk02",
+    category = "glassworks",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "crude-mirror", amount = 1},
+        {type = "item", name = "lead-plate", amount = 1},
+        {type = "item", name = "copper-plate", amount = 3},
+        {type = "fluid", name = "sulfuric-acid", amount = 50},
+    },
+    results = {
+        {type = "item", name = "mirror-mk02", amount = 1},
+    },
+    --main_product = "libr",
+}:add_unlock("thermal-mk02")

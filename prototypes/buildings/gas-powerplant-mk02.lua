@@ -12,7 +12,7 @@ RECIPE {
         {"advanced-circuit", 50},
         {'small-parts-02', 200},
         {'self-assembly-monolayer', 20},
-        {'electric-engine-unit', 30},
+        {'engine-unit', 30},
     },
     results = {
         {"py-gas-powerplant-mk02", 1}

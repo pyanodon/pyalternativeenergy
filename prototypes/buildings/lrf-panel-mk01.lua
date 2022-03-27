@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     ingredients = {
         {"axis-tracker", 2},
-        {"mirror-mk01", 20},
+        {"mirror-mk01", 25},
         {"steel-plate", 50},
         {"duralumin", 20},
         {"quartz-tube", 10},
@@ -37,7 +37,7 @@ ENTITY {
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "lrf-panel-mk01"},
-    fast_replaceable_group = "lrf",
+    fast_replaceable_group = "lrf-panel",
     max_health = 35,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",

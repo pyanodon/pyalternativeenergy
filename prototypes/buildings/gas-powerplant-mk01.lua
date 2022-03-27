@@ -12,7 +12,7 @@ RECIPE {
         {"steam-engine", 20},
         {"electronic-circuit", 100},
         {'intermetallics', 50},
-        {'engine-unit', 50},
+        {'steam-engine', 50},
     },
     results = {
         {"py-gas-powerplant-mk01", 1}
