@@ -10,6 +10,7 @@ RECIPE {
         {type = "item", name = "zinc-plate", amount = 1},
         {type = "item", name = "nexelit-plate", amount = 1},
         {type = "item", name = "copper-plate", amount = 3},
+        {type = "item", name = "crucible", amount = 1},
         {type = "item", name = "aluminium-plate", amount = 5},
     },
     results = {
@@ -223,3 +224,88 @@ RECIPE {
     },
     --main_product = "libr",
 }:add_unlock("thermal-mk02")
+
+--MK03
+
+RECIPE {
+    type = "recipe",
+    name = "acrylic",
+    category = "distilator",
+    enabled = false,
+    energy_required = 25,
+    ingredients = {
+        {type = "item", name = "acrylonitrile", amount = 1},
+        {type = "item", name = "methyl-acrylate", amount = 1},
+        {type = "fluid", name = "ammonia", amount = 80},
+        {type = "fluid", name = "sulfuric-acid", amount = 50},
+        {type = "fluid", name = "natural-gas", amount = 150},
+        {type = "fluid", name = "acetone", amount = 50},
+    },
+    results = {
+        {type = "item", name = "acrylic", amount = 1},
+    },
+    --main_product = "libr",
+}:add_unlock("thermal-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "mirror-mk03",
+    category = "gas-separator",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "acrylic", amount = 1},
+        {type = "item", name = "anti-reflex-glass", amount = 1},
+        {type = "item", name = "polishing-wheel", amount = 1},
+        {type = "item", name = "cerium-oxide", amount = 1},
+        {type = "item", name = "silver-plate", amount = 2},
+        {type = "item", name = "epoxy", amount = 2},
+    },
+    results = {
+        {type = "item", name = "mirror-mk03", amount = 1},
+    },
+    --main_product = "libr",
+}:add_unlock("thermal-mk03")
+
+--MK04
+
+RECIPE {
+    type = "recipe",
+    name = "ometad",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "perovskite-nickelate", amount = 1},
+        {type = "item", name = "rhodamine-b", amount = 1},
+        {type = "item", name = "1d-photonic-crystal", amount = 1},
+        {type = "item", name = "nxzngd", amount = 1},
+    },
+    results = {
+        {type = "item", name = "ometad", amount = 1},
+    },
+    --main_product = "libr",
+}:add_unlock("thermal-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "mirror-mk04",
+    category = "nano",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "ometad", amount = 1},
+        {type = "item", name = "phosphate-glass", amount = 1},
+        {type = "item", name = "nano-mesh", amount = 1},
+        {type = "item", name = "transparent-anode", amount = 1},
+        {type = "item", name = "animal-reflectors", amount = 1},
+        {type = "item", name = "tio2", amount = 3},
+        {type = "item", name = "silver-nitrate", amount = 2},
+        {type = "item", name = "polishing-wheel", amount = 2},
+        {type = "item", name = "cerium-oxide", amount = 1},
+    },
+    results = {
+        {type = "item", name = "mirror-mk04", amount = 1},
+    },
+    --main_product = "libr",
+}:add_unlock("thermal-mk03")

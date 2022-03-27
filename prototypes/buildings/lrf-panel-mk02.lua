@@ -22,7 +22,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "lrf-panel-mk02",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk02.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk02",
@@ -34,7 +34,7 @@ ITEM {
 ENTITY {
     type = "furnace",
     name = "lrf-panel-mk02",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk02.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "lrf-panel-mk02"},
@@ -68,6 +68,14 @@ ENTITY {
                         shift = util.by_pixel(0, -16)
                     },
                     {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-r2-mask.png",
+                        width = 160,
+                        height = 416,
+                        frame_count = 1,
+                        tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                        shift = util.by_pixel(0, -16)
+                    },
+                    {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-sh2.png",
                         width = 191,
                         height = 320,
@@ -86,6 +94,14 @@ ENTITY {
                         width = 320,
                         height = 160,
                         frame_count = 1,
+                        shift = util.by_pixel(0, -0)
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-h-r-mask.png",
+                        width = 320,
+                        height = 160,
+                        frame_count = 1,
+                        tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                         shift = util.by_pixel(0, -0)
                     },
                     {
@@ -110,6 +126,14 @@ ENTITY {
                         shift = util.by_pixel(0, -16)
                     },
                     {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-r2-mask.png",
+                        width = 160,
+                        height = 416,
+                        frame_count = 1,
+                        tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                        shift = util.by_pixel(0, -16)
+                    },
+                    {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-sh2.png",
                         width = 191,
                         height = 320,
@@ -128,6 +152,14 @@ ENTITY {
                         width = 320,
                         height = 160,
                         frame_count = 1,
+                        shift = util.by_pixel(0, -0)
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-h-r-mask.png",
+                        width = 320,
+                        height = 160,
+                        frame_count = 1,
+                        tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
                         shift = util.by_pixel(0, -0)
                     },
                     {

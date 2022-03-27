@@ -67,6 +67,14 @@ ENTITY {
                         shift = util.by_pixel(0, -16)
                     },
                     {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-r2-mask.png",
+                        width = 160,
+                        height = 416,
+                        frame_count = 1,
+                        tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                        shift = util.by_pixel(0, -16)
+                    },
+                    {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-sh2.png",
                         width = 191,
                         height = 320,
@@ -85,6 +93,14 @@ ENTITY {
                         width = 320,
                         height = 160,
                         frame_count = 1,
+                        shift = util.by_pixel(0, -0)
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-h-r-mask.png",
+                        width = 320,
+                        height = 160,
+                        frame_count = 1,
+                        tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
                         shift = util.by_pixel(0, -0)
                     },
                     {
@@ -109,6 +125,14 @@ ENTITY {
                         shift = util.by_pixel(0, -16)
                     },
                     {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-r2-mask.png",
+                        width = 160,
+                        height = 416,
+                        frame_count = 1,
+                        tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                        shift = util.by_pixel(0, -16)
+                    },
+                    {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-v-sh2.png",
                         width = 191,
                         height = 320,
@@ -127,6 +151,14 @@ ENTITY {
                         width = 320,
                         height = 160,
                         frame_count = 1,
+                        shift = util.by_pixel(0, -0)
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/panel-h-r-mask.png",
+                        width = 320,
+                        height = 160,
+                        frame_count = 1,
+                        tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
                         shift = util.by_pixel(0, -0)
                     },
                     {

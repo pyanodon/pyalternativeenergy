@@ -2503,3 +2503,25 @@ ITEM {
     order = "da",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "acrylic",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/acrylic.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "dae",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "ometad",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/ometad.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "dae",
+    stack_size = 100
+}

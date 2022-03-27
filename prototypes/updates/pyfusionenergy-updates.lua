@@ -87,6 +87,9 @@ RECIPE("py-heat-exchanger-mk04"):add_ingredient({type = "item", name = "metastab
 RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "super-alloy", amount = 50}):add_ingredient({type = "item", name = "py-heat-exchanger", amount = 1})
 RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "nbti-alloy", amount = 30}):add_ingredient({type = "item", name = "wall-shield", amount = 5}):add_ingredient({type = "item", name = "science-coating", amount = 10}):add_ingredient({type = "item", name = "control-unit", amount = 5})
 
+--RECIPES
+
 RECIPE("blanket"):add_ingredient({type = "item", name = "lithium", amount = 5})
 RECIPE("magnetic-core"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("sc-unit"):add_ingredient({type = "item", name = "hts-coil", amount = 1})
+RECIPE("production-science-pack"):add_ingredient({type = "item", name = "acrylic", amount = 5})

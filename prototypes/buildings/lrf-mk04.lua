@@ -4,7 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"lrf-building-mk03", 1},
+        {"biopolymer", 40},
+        {"super-alloy", 100},
+        {"sc-engine", 5},
+        {"intelligent-unit", 20},
+        {"superconductor-servomechanims", 20},
+        {"hyperelastic-material", 15},
+        {'metastable-quasicrystal', 30},
+        {"control-unit", 30},
+        {"ti-n", 100},
+        {"metallic-glass", 100},
     },
     results = {
         {"lrf-building-mk04", 1}
@@ -14,7 +24,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "lrf-building-mk04",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk01.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk04.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk04",
@@ -26,7 +36,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "lrf-building-mk04",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk01.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "lrf-building-mk04"},
@@ -56,6 +66,14 @@ ENTITY {
                 width = 512,
                 height = 608,
                 frame_count = 1,
+                shift = util.by_pixel(0, -48)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/r-mask.png",
+                width = 512,
+                height = 608,
+                frame_count = 1,
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
                 shift = util.by_pixel(0, -48)
             },
             {

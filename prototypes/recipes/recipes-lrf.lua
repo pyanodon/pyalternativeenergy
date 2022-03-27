@@ -91,7 +91,7 @@ end
         name = "lrf-steam-1",
         category = "lrf",
         enabled = false,
-        energy_required = 1,
+        energy_required = 2,
         main_product = "pressured-steam",
         ingredients = {
             {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 1900, maximum_temperature = 2100},
@@ -108,7 +108,7 @@ end
         name = "lrf-steam-2",
         category = "lrf2",
         enabled = false,
-        energy_required = 1,
+        energy_required = 2,
         main_product = "pressured-steam",
         ingredients = {
             {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 2900, maximum_temperature = 3100},
@@ -125,7 +125,7 @@ end
         name = "lrf-steam-3",
         category = "lrf3",
         enabled = false,
-        energy_required = 1,
+        energy_required = 2,
         main_product = "pressured-steam",
         ingredients = {
             {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 3900, maximum_temperature = 4100},
@@ -142,10 +142,10 @@ end
         name = "lrf-steam-4",
         category = "lrf4",
         enabled = false,
-        energy_required = 1,
+        energy_required = 2,
         main_product = "pressured-steam",
         ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 3900, maximum_temperature = 4100},
+            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 3900, maximum_temperature = 5000},
             {type = "fluid", name = "pressured-water", amount = 100},
         },
         results = {

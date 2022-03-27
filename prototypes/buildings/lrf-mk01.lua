@@ -66,6 +66,14 @@ ENTITY {
                 shift = util.by_pixel(0, -48)
             },
             {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/r-mask.png",
+                width = 512,
+                height = 608,
+                frame_count = 1,
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                shift = util.by_pixel(0, -48)
+            },
+            {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/lrf/l.png",
                 width = 512,
                 height = 608,
