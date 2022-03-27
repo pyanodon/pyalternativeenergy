@@ -7,7 +7,7 @@ RECIPE {
         {"axis-tracker", 2},
         {"mirror-mk02", 20},
         {"stainless-steel", 40},
-        {"aluminum-plate", 50},
+        {"aluminium-plate", 50},
         {"quartz-tube", 15},
         {"small-parts-02", 100},
         {"utility-box-mk02", 2},

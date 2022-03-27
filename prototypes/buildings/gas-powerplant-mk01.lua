@@ -9,7 +9,6 @@ RECIPE {
         {"iron-gear-wheel", 500},
         {"pipe", 200},
         {"iron-plate", 200},
-        {"steam-engine", 20},
         {"electronic-circuit", 100},
         {'intermetallics', 50},
         {'steam-engine', 50},

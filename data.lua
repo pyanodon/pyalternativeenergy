@@ -171,7 +171,7 @@ require("prototypes/fluids/phosphorus-tricloride")
 require("prototypes/fluids/tributyl-phosphate")
 require("prototypes/fluids/uf6")
 require("prototypes/fluids/antimony-phosphate")
-require("prototypesfluids/hydrofluoric-acid")
+require("prototypes/fluids/hydrofluoric-acid")
 
 -- ))
 
