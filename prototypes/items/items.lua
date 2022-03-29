@@ -2525,3 +2525,69 @@ ITEM {
     order = "dae",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "aeroorgan",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/aeroorgan.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "d",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "blood-numal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/blood-numal.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "chitin-numal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/chitin-numal.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "guts-numal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/guts-numal.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "meat-numal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/meat-numal.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "skin-numal",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/skin-numal.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 100
+}

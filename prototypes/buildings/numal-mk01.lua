@@ -8,7 +8,7 @@ RECIPE{
         {'titanium-plate', 100},
         {'steel-plate', 100},
         {'duralumin', 50},
-        {'glass', 20},
+        {'glass', 100},
         {'advanced-circuit', 35}
     },
     results = {{'numal-mk01', 1}}

@@ -251,6 +251,7 @@ RECIPE('zinc-finger-proteins'):add_ingredient({type = "fluid", name = "fatty-aci
 RECIPE('pre-pesticide-02'):add_ingredient({type = "item", name = "dodecylamine", amount = 1})
 RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
+RECIPE('dynemicin'):add_ingredient({type = "item", name = "acrylic", amount = 2})
 
 ITEM("simik"):set_fields{fuel_category = "simik", fuel_value = "600MJ", burnt_result = "used-simik"}
 ITEM("simik-mk02"):set_fields{fuel_category = "simik", fuel_value = "800MJ", burnt_result = "used-simik-mk02"}
@@ -423,3 +424,18 @@ RECIPE {
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
+
+RECIPE {
+    type = 'recipe',
+    name = 'numal-ink-to-antimony',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'numal-ink', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'antimonium-ore', amount = 10},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk02")

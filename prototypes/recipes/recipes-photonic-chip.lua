@@ -33,6 +33,7 @@ RECIPE {
         {type = "item", name = "cladded-core", amount = 1},
         {type = "item", name = "dbr", amount = 4},
         {type = "item", name = "gaas", amount = 2},
+        {type = "item", name = "acrylic", amount = 3},
         {type = "fluid", name = "hydrogen", amount = 500},
     },
     results = {

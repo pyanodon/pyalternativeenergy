@@ -446,6 +446,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "zno-nanoparticles", amount = 1},
         {type = "item", name = "tio2", amount = 3},
+        {type = "item", name = "acrylic", amount = 5},
         {type = "item", name = "th-oxide", amount = 1},
         {type = "item", name = "crude-top-layer", amount = 2},
     },
