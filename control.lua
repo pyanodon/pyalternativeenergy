@@ -265,7 +265,11 @@ script.on_nth_tick(55, function(event)
     else
         log('hit')
         for p, panel in pairs(global.lrf_panels) do
-            panel.active = true
+            if panel.valid == true then
+                panel.active = true
+            elseif panel.valid == false then
+                panel = nil
+            end
         end
         for a,anti in pairs(global.antisolar_panels) do
             if anti.valid == true then

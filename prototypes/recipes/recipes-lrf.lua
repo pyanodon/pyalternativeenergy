@@ -1,10 +1,10 @@
 
 
 local temp = 1000
-local max_temp = temp - 5
-local min_temp = 0
 
-for i = 0, 10 do
+for i = 1, 10 do
+
+    local output_temp = temp + (100 * i)
 
     RECIPE {
         type = "recipe",
@@ -13,73 +13,60 @@ for i = 0, 10 do
         enabled = false,
         energy_required = 1,
         ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp, maximum_temperature = max_temp},
+            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = output_temp - 105, maximum_temperature = output_temp - 95},
         },
         results = {
-            {type = "fluid", name = "molten-salt", amount = 100, temperature = temp},
+            {type = "fluid", name = "molten-salt", amount = 100, temperature = output_temp},
         },
     }:add_unlock("thermal-mk01")
 
-    if i > 0 then
-        if i == 1 then
-            min_temp = -1000
-        end
+    output_temp = temp + (200 * i)
 
         RECIPE {
             type = "recipe",
-            name = "lrf-salt-heating-" .. (i + 10),
+            name = "lrf-salt-heating-mk02-" .. i,
             category = "lrf-panel2",
             enabled = false,
             energy_required = 1,
             ingredients = {
-                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 1000, maximum_temperature = max_temp + 1000},
+                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = output_temp - 205, maximum_temperature = output_temp - 195},
             },
             results = {
-                {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 1000},
+                {type = "fluid", name = "molten-salt", amount = 100, temperature = output_temp},
             },
         }:add_unlock("thermal-mk02")
 
-        if i == 1 then
-            min_temp = -2000
-        end
+        output_temp = temp + (300 * i)
 
         RECIPE {
             type = "recipe",
-            name = "lrf-salt-heating-" .. (i + 20),
+            name = "lrf-salt-heating-mk03-" .. i,
             category = "lrf-panel3",
             enabled = false,
             energy_required = 1,
             ingredients = {
-                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 2000, maximum_temperature = max_temp + 2000},
+                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = output_temp - 305, maximum_temperature = output_temp - 295},
             },
             results = {
-                {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 2000},
+                {type = "fluid", name = "molten-salt", amount = 100, temperature = output_temp},
             },
         }:add_unlock("thermal-mk03")
 
-        if i == 1 then
-            min_temp = -3000
-        end
+        output_temp = temp + (400 * i)
 
         RECIPE {
             type = "recipe",
-            name = "lrf-salt-heating-" .. (i + 30),
+            name = "lrf-salt-heating-mk04-" .. i,
             category = "lrf-panel4",
             enabled = false,
             energy_required = 1,
             ingredients = {
-                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = min_temp + 3000, maximum_temperature = max_temp + 3000},
+                {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = output_temp - 405, maximum_temperature = output_temp - 395},
             },
             results = {
-                {type = "fluid", name = "molten-salt", amount = 100, temperature = temp + 3000},
+                {type = "fluid", name = "molten-salt", amount = 100, temperature = output_temp},
             },
         }:add_unlock("thermal-mk04")
-
-    end
-
-    temp = temp + 100
-    max_temp = temp - 5
-    min_temp = max_temp - 250
 
     log(i)
     log(temp)
@@ -94,7 +81,6 @@ end
         energy_required = 2,
         main_product = "pressured-steam",
         ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 1900, maximum_temperature = 2100},
             {type = "fluid", name = "pressured-water", amount = 100},
         },
         results = {
@@ -111,7 +97,6 @@ end
         energy_required = 2,
         main_product = "pressured-steam",
         ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 2900, maximum_temperature = 3100},
             {type = "fluid", name = "pressured-water", amount = 100},
         },
         results = {
@@ -128,7 +113,6 @@ end
         energy_required = 2,
         main_product = "pressured-steam",
         ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 3900, maximum_temperature = 4100},
             {type = "fluid", name = "pressured-water", amount = 100},
         },
         results = {
@@ -145,7 +129,6 @@ end
         energy_required = 2,
         main_product = "pressured-steam",
         ingredients = {
-            {type = "fluid", name = "molten-salt", amount = 100, minimum_temperature = 3900, maximum_temperature = 5000},
             {type = "fluid", name = "pressured-water", amount = 100},
         },
         results = {

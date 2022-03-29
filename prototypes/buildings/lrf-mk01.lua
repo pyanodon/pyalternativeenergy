@@ -51,11 +51,31 @@ ENTITY {
     crafting_categories = {"lrf"},
     crafting_speed = 1,
     energy_source = {
-        type = "void",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.0,
-    },
-    energy_usage = "400kW",
+        type = "fluid",
+        effectivity = 1,
+        emissions_per_minute = 0,
+        fluid_box =
+        {
+          base_area = 1,
+          height = 2,
+          base_level = -1,
+          pipe_connections =
+          {
+            {type = "input-output", position = {1.5, -8.5}},
+            {type = "input-output", position = {1.5, 8.5}}
+          },
+          pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+          pipe_covers = DATA.Pipes.covers(false, true, true, true),
+          production_type = "input-output",
+          filter = "molten-salt"
+        },
+        burns_fluid = false,
+        scale_fluid_usage = false,
+        fluid_usage_per_tick = (50/60),
+        maximum_temperature = 2000,
+        minimum_temperature = 1000
+      },
+    energy_usage = "10MW",
     animation = {
         layers = {
             {
@@ -133,6 +153,7 @@ ENTITY {
     },
     fluid_boxes = {
         --1
+        --[[
         {
             production_type = "input",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
@@ -141,6 +162,7 @@ ENTITY {
             base_level = -1,
             pipe_connections = {{type = "input", position = {1.5, -8.5}}}
         },
+        ]]--
         {
             production_type = "input",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
@@ -165,6 +187,7 @@ ENTITY {
             base_level = -1,
             pipe_connections = {{type = "input", position = {-3.5, -8.5}}}
         },
+        --[[
         {
             production_type = "output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
@@ -172,6 +195,7 @@ ENTITY {
             base_level = 1,
             pipe_connections = {{type = "output", position = {1.5, 8.5}}}
         },
+        ]]--
         {
             production_type = "output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),

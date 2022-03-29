@@ -799,7 +799,7 @@ RECIPE {
         {type = "item", name = "salt", amount = 300},
     },
     results = {
-        {type = "fluid", name = "molten-salt", amount = 100},
+        {type = "fluid", name = "molten-salt", amount = 100, temperature = 1000},
     },
     --main_product = "eg-si",
 }:add_unlock("energy-1")
