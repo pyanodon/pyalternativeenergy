@@ -316,7 +316,7 @@ ITEM {
         type = "play-sound",
         sound =
         {
-          filename = "__pyindustry__/sounds/mk02-locomotive-off.ogg",
+          filename = "__pyalternativeenergygraphics__/sounds/locomotive-break.ogg",
           volume = 0.5
         },
       },
@@ -328,20 +328,20 @@ ITEM {
     {
       sound =
       {
-        filename = "__pyindustry__/sounds/mk02-locomotive.ogg",
-        volume = 1.2
+        filename = "__pyalternativeenergygraphics__/sounds/locomotive-engine.ogg",
+        volume = 0.4
       },
       deactivate_sound =
       {
-        filename = "__pyindustry__/sounds/mk02-locomotive-stop.ogg",
+        filename = "__pyalternativeenergygraphics__/sounds/locomotive-end-engine.ogg",
         volume = 0.3
       },
       match_speed_to_activity = true,
       max_sounds_per_type = 2,
       -- use_doppler_shift = false
     },
-    --open_sound = { filename = "__pyindustry__/sounds/mk04-locomotive-open.ogg", volume=0.5 },
-    close_sound = { filename = "__pyindustry__/sounds/mk02-locomotive-close.ogg", volume = 0.4 },
+    open_sound = { filename = "__pyalternativeenergygraphics__/sounds/locomotive-open.ogg", volume=0.6 },
+    close_sound = { filename = "__pyalternativeenergygraphics__/sounds/locomotive-close.ogg", volume = 0.6 },
     sound_minimum_speed = 0.5,
     sound_scaling_ratio = 0.35,
     water_reflection = _ENV.locomotive_reflection(),
