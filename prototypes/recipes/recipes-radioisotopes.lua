@@ -76,3 +76,105 @@ RECIPE {
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nucleo")
+
+RECIPE {
+    type = "recipe",
+    name = "pu-238-transmutation",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "pu-238", amount = 10},
+        {type = "fluid", name = "neutron", amount = 20}
+    },
+    results = {
+        {type = "item", name = "pu-239", amount = 9},
+    },
+    main_product = "pu-239",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("placeholder")
+
+RECIPE {
+    type = "recipe",
+    name = "pu-239-transmutation",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "pu-239", amount = 5},
+    },
+    results = {
+        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
+        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
+        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
+        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
+        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+    },
+    main_product = "pu-239",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nucleo")
+
+RECIPE {
+    type = "recipe",
+    name = "plutonium-seperation",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "plutonium-oxide", amount = 5},
+    },
+    results = {
+        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
+        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
+        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
+        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
+        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+    },
+    main_product = "pu-239",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nucleo")
+
+RECIPE {
+    type = "recipe",
+    name = "plutonium-seperation",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "plutonium-oxide", amount = 5},
+    },
+    results = {
+        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
+        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
+        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
+        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
+        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+    },
+    main_product = "pu-239",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nucleo")
+
+RECIPE {
+    type = "recipe",
+    name = "plutonium-seperation",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "plutonium-oxide", amount = 5},
+    },
+    results = {
+        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
+        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
+        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
+        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
+        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+    },
+    main_product = "pu-239",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nucleo")

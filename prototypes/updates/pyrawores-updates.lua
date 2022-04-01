@@ -157,6 +157,22 @@ RECIPE {
   },
 }--:add_unlock('uranium-processing')
 
+RECIPE {
+    type = "recipe",
+    name = "uranium-fuel-cell-mk02",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+      {
+        {"aluminium-plate", 5},
+        {"pu-239", 5},
+        {"u-238", 10}
+      },
+    results = {
+        {"uranium-fuel-cell-mk02", 1}
+    },
+  }--:add_unlock('uranium-processing')
+
 
 --TODO:deal with u-waste vanadium
 
