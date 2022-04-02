@@ -36,6 +36,41 @@
 --need pu238 for rtg for satelite limited amount from uranium. thorium can be used as a better breeding source as it can produce only pu238 which removes the need to spend effort seperating the pu238 from higher isotopes.
     --isotope seperation is hard and expensive. most pu238 made from neutron bombardment of neptunium-237 itself made from u236 seperated from spent fuel which thorium is a good sorce for a more pure pu238. can also be made from americium thru curium. pu239 can be bombarded to pu240 and again to pu241. pu241 decays to am241. am241 bombarded to am242 which decays to cm242. cm242 decays to pu238. during element changes it also easier seperation of the elements chemically vs isotope seperation of mixed plutonium.
 
+RECIPE {
+    type = "recipe",
+    name = "neutron-absorbston",
+    category = "neutron-absorber",
+    icon = '__base__/graphics/icons/assembling-machine-2.png',
+    icon_size = 64,
+    enabled = true,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "fluid", name = "neutron", amount = 50}
+    },
+    results = {},
+    subgroup = "py-items",
+    order = "g"
+}
+
+RECIPE {
+    type = "recipe",
+    name = "neutron-moderation",
+    category = "neutron-moderator",
+    --icon = '__base__/graphics/icons/assembling-machine-2.png',
+    --icon_size = 64,
+    enabled = false,
+    energy_required = 1,
+    ingredients = {
+        {type = "fluid", name = "neutron", amount = 100}
+    },
+    results = {
+        {type = "fluid", name = "neutron", amount = 100, temperature = 500}
+    },
+    subgroup = "py-items",
+    order = "g"
+}
+
+
 --PUREX
 
 --uranium and plutonium + fission products are seperated using tributyl-phosphate and kerosene in multistep process of washing and cleaning
@@ -179,7 +214,7 @@ RECIPE {
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power")
---[[
+
 --((waste 2))--
 --waste from medium enrichemnt
 
@@ -301,7 +336,7 @@ RECIPE {
 }:add_unlock("nuclear-power")
 
 
-]]
+
 --purex waste
 
 RECIPE {

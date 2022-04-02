@@ -4,6 +4,7 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
+        {"aerial-base", 1},
         {"rotor-mk03", 3},
         {"anemometer-mk03", 1},
         {"vane-mk03", 1},

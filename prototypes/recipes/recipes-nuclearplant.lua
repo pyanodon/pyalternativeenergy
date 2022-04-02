@@ -10,6 +10,22 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 1000},
         {type = "fluid", name = "reactor-waste-1", amount = 200, --[[temperature = 1000]]},
+        {type = "fluid", name = "neutron", amount = 200, temperature = 100},
     },
     main_product = "hot-molten-salt"
+}:add_unlock("nuclear-power")
+
+RECIPE {
+    type = "recipe",
+    name = "thermal-neutron",
+    category = "neutron-moderator",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "neutron", amount = 200},
+    },
+    results = {
+        {type = "fluid", name = "neutron", amount = 200, temperature = 1000},
+    },
+    main_product = "neutron"
 }:add_unlock("nuclear-power")

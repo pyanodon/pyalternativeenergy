@@ -1,6 +1,9 @@
 
 require("prototypes/buildings/multiblade-turbine-mk01")
-
+--TECHNOLOGY--
+require("prototypes.technologies.numal")
+--BUILDINDS--
+require("prototypes/buildings/numal-mk01")
 
 table.insert(data.raw["rocket-silo"]["mega-farm"].crafting_categories, "mova-farm")
 table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
@@ -12,7 +15,7 @@ RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "intermetallics
 RECIPE("creature-chamber-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 --RECIPE("genlab-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 --RECIPE("incubator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
-
+RECIPE("numal-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
 --RECIPE("slaughterhouse-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("spore-collector-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("cadaveric-arum-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
@@ -56,6 +59,7 @@ RECIPE("data-array"):add_ingredient({type = "item", name = "intermetallics", amo
 RECIPE("generator-1"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("pyphoon-bay"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("collector"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
+RECIPE("zungror-lair-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 
 RECIPE("atomizer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("bio-printer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
@@ -64,6 +68,7 @@ RECIPE("biofactory-mk02"):add_ingredient({type = "item", name = "self-assembly-m
 RECIPE("creature-chamber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
 RECIPE("genlab-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("incubator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
+RECIPE("numal-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
 RECIPE("slaughterhouse-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
 RECIPE("spore-collector-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("cadaveric-arum-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2})
@@ -112,6 +117,7 @@ RECIPE("vrauks-paddock-mk02"):add_ingredient({type = "item", name = "self-assemb
 RECIPE("moss-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7})
 RECIPE("sap-extractor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("seaweed-crop-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
+RECIPE("zungror-lair-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 
 RECIPE("atomizer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 RECIPE("bio-printer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40})
@@ -120,6 +126,7 @@ RECIPE("biofactory-mk03"):add_ingredient({type = "item", name = "ns-material", a
 RECIPE("creature-chamber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
 RECIPE("genlab-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient({type = "item", name = "acrylic", amount = 40})
 RECIPE("incubator-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
+RECIPE("numal-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40})
 RECIPE("slaughterhouse-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
 RECIPE("spore-collector-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("cadaveric-arum-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2})
@@ -166,6 +173,7 @@ RECIPE("vrauks-paddock-mk03"):add_ingredient({type = "item", name = "ns-material
 RECIPE("moss-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7})
 RECIPE("sap-extractor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
 RECIPE("seaweed-crop-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
+RECIPE("zungror-lair-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 
 RECIPE("atomizer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE("bio-printer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
@@ -174,6 +182,7 @@ RECIPE("biofactory-mk04"):add_ingredient({type = "item", name = "metastable-quas
 RECIPE("creature-chamber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE("genlab-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("incubator-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
+RECIPE("numal-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
 RECIPE("slaughterhouse-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE("spore-collector-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("cadaveric-arum-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
@@ -311,3 +320,122 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("pharmagenomics")
+
+--------------NUMAL-------------------
+
+ITEM {
+    type = "module",
+    name = "numal",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-a",
+    stack_size = 300,
+	effect = { speed = {bonus = 3.75}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk02",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-b",
+    stack_size = 300,
+	effect = { speed = {bonus = 5}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk03",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-c",
+    stack_size = 300,
+	effect = { speed = {bonus = 6.25}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk04",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-d",
+    stack_size = 300,
+	effect = { speed = {bonus = 7.5}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'art-numal',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'fluid', name = 'artificial-blood', amount = 100},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'item', name = 'tissue-engineered-fat', amount = 1},
+        {type = 'item', name = 'scafold-free-bones', amount = 1},
+        {type = 'item', name = 'laboratory-grown-brain', amount = 1},
+        {type = 'item', name = 'in-vitro-meat', amount = 1},
+        {type = 'item', name = 'biomimetic-skin', amount = 1},
+        {type = 'item', name = 'bioartificial-guts', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'numal', amount = 10},
+    },
+    --main_product = "psc",
+}:add_unlock("mass-production")
+
+RECIPE {
+    type = 'recipe',
+    name = 'numal-ink-to-antimony',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'numal-ink', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'antimonium-ore', amount = 10},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk02")
