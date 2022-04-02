@@ -4,7 +4,6 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"aerial-base", 1},
         {"rotor-mk01", 3},
         {"plastic-bar", 100},
         {"vane-mk01", 1},

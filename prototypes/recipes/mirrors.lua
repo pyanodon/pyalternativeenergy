@@ -296,7 +296,6 @@ RECIPE {
     ingredients = {
         {type = "item", name = "ometad", amount = 1},
         {type = "item", name = "phosphate-glass", amount = 1},
-        {type = "item", name = "nano-mesh", amount = 1},
         {type = "item", name = "transparent-anode", amount = 1},
         {type = "item", name = "animal-reflectors", amount = 1},
         {type = "item", name = "tio2", amount = 3},
