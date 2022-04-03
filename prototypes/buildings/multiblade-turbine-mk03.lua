@@ -38,7 +38,7 @@ ENTITY {
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
+    collision_box = {{-4.4, -4.4}, {4.4, 4.4}},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     energy_source = {
@@ -70,7 +70,7 @@ ENTITY {
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
+    collision_box = {{-4.4, -4.4}, {4.4, 4.4}},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     energy_source = {
@@ -399,7 +399,7 @@ data:extend(
                 height = 288,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, -32),
+                shift = util.by_pixel(0, 0),
                 animation_speed = 0.25,
             },
             {

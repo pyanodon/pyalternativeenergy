@@ -3,7 +3,13 @@ RECIPE {
   name = 'nexelit-substation',
   energy_required = 0.5,
   enabled = false,
-  ingredients = {{'pipe', 20}},
+  ingredients = {
+    {"concrete", 15},
+    {"niobium-plate", 5},
+    {"small-parts-02", 20},
+    {"steel-plate", 10},
+    {"nexelit-plate", 50},
+},
   results = {{'nexelit-substation', 1}}
 }:add_unlock("electric-energy-distribution-2")
 

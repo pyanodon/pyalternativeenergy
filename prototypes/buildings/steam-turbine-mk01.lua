@@ -102,8 +102,8 @@ ENTITY {
     match_speed_to_activity = true,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyfusionenergygraphics__/sounds/py-turbine.ogg"},
+        sound = {filename = "__pyfusionenergygraphics__/sounds/py-turbine.ogg", volume = 0.5},
         idle_sound = {filename = "__pyfusionenergygraphics__/sounds/py-turbine.ogg", volume = 0.3},
-        apparent_volume = 2.5
+        apparent_volume = 1.5
     }
 }

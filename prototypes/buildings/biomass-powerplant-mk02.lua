@@ -82,7 +82,7 @@ ENTITY {
             },
         }
     },
-    energy_usage = "900kW",
+    energy_usage = "12MW",
     animation = {
         layers = {
             {
