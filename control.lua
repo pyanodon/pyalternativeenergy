@@ -249,9 +249,9 @@ script.on_nth_tick(60, function(event)
 end)
 
 script.on_nth_tick(55, function(event)
-    log('hit')
+    --log('hit')
     if game.surfaces['nauvis'].daytime >= 0.25 and game.surfaces['nauvis'].daytime < 0.75 then
-        log('hit')
+        --log('hit')
         for p, panel in pairs(global.lrf_panels) do
             if panel.valid == true then
                 panel.active = false
@@ -263,7 +263,7 @@ script.on_nth_tick(55, function(event)
             end
         end
     else
-        log('hit')
+        --log('hit')
         for p, panel in pairs(global.lrf_panels) do
             if panel.valid == true then
                 panel.active = true

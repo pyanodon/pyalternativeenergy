@@ -95,6 +95,9 @@ RECIPE {
     order = "b"
 }:add_unlock("placeholder")
 
+
+--pu-239 is used as mox fuel in the burner and weapons. extra can be burnt up into pu-238
+--pu239 can be bombarded to pu240 and again to pu241. pu241 decays to am241. am241 bombarded to am242 which decays to cm242. cm242 decays to pu238.
 RECIPE {
     type = "recipe",
     name = "pu-239-transmutation",
@@ -102,79 +105,109 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "pu-239", amount = 5},
+        {type = "item", name = "pu-239", amount = 10},
+        {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
-        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
-        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
-        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
-        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+        {type = "item", name = "pu-240", amount = 10},
     },
-    main_product = "pu-239",
+    main_product = "pu-240",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nucleo")
+}:add_unlock("placeholder")
 
 RECIPE {
     type = "recipe",
-    name = "plutonium-seperation",
+    name = "pu-240-transmutation",
     category = "pa",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "plutonium-oxide", amount = 5},
+        {type = "item", name = "pu-240", amount = 10},
+        {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
-        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
-        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
-        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
-        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+        {type = "item", name = "pu-241", amount = 10},
     },
-    main_product = "pu-239",
+    main_product = "pu-241",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nucleo")
+}:add_unlock("placeholder")
 
 RECIPE {
     type = "recipe",
-    name = "plutonium-seperation",
+    name = "pu-241-transmutation",
     category = "pa",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "plutonium-oxide", amount = 5},
+        {type = "item", name = "pu-241", amount = 10},
+        {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
-        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
-        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
-        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
-        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+        {type = "item", name = "pu-241", amount = 6},
+        {type = "item", name = "pu-242", amount = 3},
+        {type = "item", name = "am-241", amount = 1},
     },
-    main_product = "pu-239",
+    main_product = "pu-242",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nucleo")
+}:add_unlock("placeholder")
 
 RECIPE {
     type = "recipe",
-    name = "plutonium-seperation",
+    name = "pu-242-transmutation",
     category = "pa",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "plutonium-oxide", amount = 5},
+        {type = "item", name = "pu-242", amount = 10},
     },
     results = {
-        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
-        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
-        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
-        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
-        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+        {type = "item", name = "am-243", amount = 6},
+        {type = "item", name = "u-238", amount = 3},
+        {type = "fluid", name = "helium", amount = 10},
     },
-    main_product = "pu-239",
+    main_product = "am-243",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nucleo")
+}:add_unlock("placeholder")
+
+
+--Americium
+
+RECIPE {
+    type = "recipe",
+    name = "am-241-transmutation",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "am-241", amount = 10},
+    },
+    results = {
+        {type = "item", name = "pu-238", amount = 10},
+        {type = "fluid", name = "helium", amount = 20},
+    },
+    main_product = "am-241",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("placeholder")
+
+RECIPE {
+    type = "recipe",
+    name = "am-243-transmutation",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "am-243", amount = 10},
+    },
+    results = {
+        {type = "item", name = "pu-239", amount = 8},
+        {type = "fluid", name = "helium", amount = 10},
+    },
+    main_product = "am-243",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("placeholder")
