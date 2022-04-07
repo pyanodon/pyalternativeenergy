@@ -21,7 +21,7 @@ ENTITY {
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
-    map_color = {r = 0.839, g = 0.352, b = 0.301},
+    map_color = {r = 0.850, g = 0.090, b = 0.556},
     minable = {
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 1,
