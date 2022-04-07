@@ -338,7 +338,7 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "q-a",
     stack_size = 300,
-	effect = { speed = {bonus = 3.75}},
+	effect = { speed = {bonus = 3.75}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
 }
@@ -358,7 +358,7 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "q-b",
     stack_size = 300,
-	effect = { speed = {bonus = 5}},
+	effect = { speed = {bonus = 5}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
 }
@@ -378,7 +378,7 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "q-c",
     stack_size = 300,
-	effect = { speed = {bonus = 6.25}},
+	effect = { speed = {bonus = 6.25}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
 }
@@ -398,7 +398,7 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "q-d",
     stack_size = 300,
-	effect = { speed = {bonus = 7.5}},
+	effect = { speed = {bonus = 7.5}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
 }
