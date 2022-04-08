@@ -189,7 +189,7 @@ RECIPE {
         {type = "item", name = "pu-238", amount = 10},
         {type = "fluid", name = "helium", amount = 20},
     },
-    main_product = "am-241",
+    main_product = "pu-238",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("placeholder")
@@ -207,7 +207,7 @@ RECIPE {
         {type = "item", name = "pu-239", amount = 8},
         {type = "fluid", name = "helium", amount = 10},
     },
-    main_product = "am-243",
+    main_product = "pu-239",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("placeholder")
