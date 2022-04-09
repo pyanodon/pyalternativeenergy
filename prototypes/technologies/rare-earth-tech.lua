@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "rare-earth-tech-mk02",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalternativeenergygraphics__/graphics/rare-earth-tech-mk02.png",
     icon_size = 64,
     order = "c-a",
     prerequisites = {},
