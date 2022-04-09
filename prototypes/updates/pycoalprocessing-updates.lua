@@ -6,9 +6,9 @@ TECHNOLOGY('filtration-mk02'):add_prereq('lithium-processing')
 
 --remove combustion mix stuff
 RECIPE("power-house"):remove_unlock('energy-1'):set_fields{hidden = true}
-RECIPE("power-house-mk02"):remove_unlock('machines-mk02'):set_fields{hidden = true}
-RECIPE("power-house-mk03"):remove_unlock('machines-mk03'):set_fields{hidden = true}
-RECIPE("power-house-mk04"):remove_unlock('machines-mk04'):set_fields{hidden = true}
+RECIPE("power-house-mk02"):remove_unlock('machines-mk03'):set_fields{hidden = true}
+RECIPE("power-house-mk03"):remove_unlock('machines-mk04'):set_fields{hidden = true}
+RECIPE("power-house-mk04"):remove_unlock('machines-mk05'):set_fields{hidden = true}
 
 RECIPE("gasturbinemk01"):remove_unlock('energy-1'):set_fields{hidden = true}
 RECIPE("gasturbinemk02"):remove_unlock('energy-2'):set_fields{hidden = true}
