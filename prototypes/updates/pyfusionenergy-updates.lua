@@ -11,6 +11,8 @@ RECIPE("py-heat-exchanger-mk02"):add_unlock('machines-mk02')
 RECIPE("py-heat-exchanger-mk03"):add_unlock('machines-mk03')
 RECIPE("py-heat-exchanger-mk04"):add_unlock('machines-mk04')
 
+TECHNOLOGY("ethanolamine"):remove_pack('production-science-pack')
+
 --BUILDINDS--
 RECIPE("particle-accelerator-mk01"):remove_ingredient('gasturbinemk02')
 RECIPE("fusion-reactor-mk01"):remove_ingredient('gasturbinemk03')

@@ -281,7 +281,18 @@ ITEM {
 ITEM {
     type = "item",
     name = "pu-242",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-241.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-242.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "americium-oxide",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/am-241.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",

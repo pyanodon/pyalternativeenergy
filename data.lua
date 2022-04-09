@@ -44,6 +44,7 @@ require("prototypes/technologies/biofet")
 require("prototypes/technologies/mega-farm-mova")
 require("prototypes/technologies/nanozymes")
 require("prototypes/technologies/advanced-robotics")
+require("prototypes/technologies/rare-earth-tech")
 -- ))
 
 --(( RESOURCES ))--

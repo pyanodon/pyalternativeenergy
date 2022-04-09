@@ -8,6 +8,8 @@ TECHNOLOGY('ht-trains'):add_prereq('battery-mk02')
 TECHNOLOGY("nucleo"):remove_pack('chemical-science-pack'):remove_prereq('energy-2'):remove_prereq('boron-mk02'):add_prereq('uranium-processing')
 TECHNOLOGY("ht-robotics"):add_prereq("advanced-robotics")
 
+TECHNOLOGY("microfibers"):remove_pack('production-science-pack')
+
 --BUILDINDS--
 RECIPE("quantum-computer"):remove_ingredient('gasturbinemk03')
 

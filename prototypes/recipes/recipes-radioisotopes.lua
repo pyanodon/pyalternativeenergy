@@ -171,7 +171,7 @@ RECIPE {
     main_product = "am-243",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("placeholder")
+}:add_unlock("nuclear-power")
 
 
 --Americium
@@ -210,4 +210,4 @@ RECIPE {
     main_product = "pu-239",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("placeholder")
+}:add_unlock("nuclear-power-mk02")

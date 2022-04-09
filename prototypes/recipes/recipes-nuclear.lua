@@ -750,7 +750,7 @@ RECIPE {
     name = "antimony-phosphate-2",
     enabled = false,
     energy_required = 15,
-    category = "centrifuging",
+    category = "mixer",
     ingredients =
       {
         {type = "fluid", name = "sb-phosphate-2", amount = 200},
@@ -771,7 +771,7 @@ RECIPE {
     name = "plutonium-oxidation-2",
     enabled = false,
     energy_required = 15,
-    category = "centrifuging",
+    category = "mixer",
     ingredients =
       {
         {type = "fluid", name = "sb-phosphate-3", amount = 200},

@@ -102,6 +102,10 @@ RECIPE('fuelrod-mk04'):remove_unlock('uranium-mk03')
 RECIPE('fuelrod-mk05'):remove_unlock('uranium-mk04')
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
+fun.global_item_replacer("fuelrod-mk01", "u-235")
+fun.global_item_replacer("fuelrod-mk02", "am-243")
+fun.global_item_replacer("fuelrod-mk03", "pu-239")
+
 --removing old enrichement recipes
 RECIPE("u-15"):remove_unlock('uranium-mk03')
 RECIPE("u-15-2"):remove_unlock('uranium-mk03')
