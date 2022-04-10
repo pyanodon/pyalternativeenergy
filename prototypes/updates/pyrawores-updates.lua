@@ -193,44 +193,32 @@ while enrichment < 100 do
     local u235 = enrichment + u_shift
     local u238 = enrichment - u_shift
 
-    --log(serpent.block(u_shift))
-    log(serpent.block(u235))
-    --log(serpent.block(u238))
-
-    local uran = string.format("%.2f", tostring(u235))
-    log(uran)
-    u235 = tonumber(uran)
-    --u235 = math.floor(u235*100)/100
-    --u238 = math.floor(u238*100)/100
-
-    log(serpent.block(u235))
-    --log(serpent.block(u238))
-
     if u235 > 100 then
         break
     end
 
     local name = string.format( "%.2f", tostring(u235))
-
     local recipe_name = "uf6-" .. string.gsub(name, "%.", ".") .. "%"
-    --log(recipe_name)
+
     RECIPE {
         type = "recipe",
         name = recipe_name,
         category = "gas-separator",
-        enabled = true,
+        enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = previous_enrichment}
+            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(previous_enrichment*100)}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 50, temperature = u235},
-            {type = "fluid", name = "uf6", amount = 50, temperature = u238},
+            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},
+            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
         order = "uranium-" .. recipe_num
-    }
+    }:add_unlock("uranium-mk01")
+
+    log(serpent.block(data.raw.recipe[recipe_name]))
 
     if u235 < 10 then
         RECIPE(recipe_name):add_unlock('uranium-mk01')
@@ -262,19 +250,19 @@ while duf < 0.7 do
         type = "recipe",
         name = "Depleted-uf6-" .. string.gsub(name, "%.", ",") .. "%",
         category = "gas-separator",
-        enabled = true,
+        enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = previous_enrichment}
+            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(previous_enrichment*100)}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 50, temperature = u235},
-            {type = "fluid", name = "uf6", amount = 50, temperature = u238},
+            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},
+            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
         order = "depleted-uranium-" .. recipe_num
-    }--:add_unlock("uranium-mk03")
+    }:add_unlock("uranium-mk01")
 
     previous_enrichment = u235
     duf = u235
@@ -287,10 +275,10 @@ RECIPE {
     type = "recipe",
     name = "Depleted-uf6-to-u-oxide",
     category = "evaporator",
-    enabled = true,
+    enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "fluid", name = "uf6", amount = 100, maximum_temperature = 0.15}
+        {type = "fluid", name = "uf6", amount = 100, maximum_temperature = math.floor(0.15*100)}
     },
     results = {
         {type = "item", name = "uranium-238", amount = 10},
@@ -298,4 +286,4 @@ RECIPE {
     main_product = "uranium-238",
     subgroup = "py-rawores-uranium",
     order = "depleted-uranium-" .. recipe_num
-}--:add_unlock("uranium-mk03")
+}:add_unlock("uranium-mk01")
