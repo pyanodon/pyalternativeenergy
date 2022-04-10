@@ -193,13 +193,27 @@ while enrichment < 100 do
     local u235 = enrichment + u_shift
     local u238 = enrichment - u_shift
 
+    --log(serpent.block(u_shift))
+    log(serpent.block(u235))
+    --log(serpent.block(u238))
+
+    local uran = string.format("%.2f", tostring(u235))
+    log(uran)
+    u235 = tonumber(uran)
+    --u235 = math.floor(u235*100)/100
+    --u238 = math.floor(u238*100)/100
+
+    log(serpent.block(u235))
+    --log(serpent.block(u238))
+
     if u235 > 100 then
         break
     end
 
     local name = string.format( "%.2f", tostring(u235))
 
-    local recipe_name = "uf6-" .. string.gsub(name, "%.", ",") .. "%"
+    local recipe_name = "uf6-" .. string.gsub(name, "%.", ".") .. "%"
+    --log(recipe_name)
     RECIPE {
         type = "recipe",
         name = recipe_name,
