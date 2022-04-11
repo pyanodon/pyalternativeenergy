@@ -73,7 +73,7 @@ RECIPE("dbr"):add_ingredient({type = "item", name = "nanocrystaline-core", amoun
 RECIPE("yag-laser-module"):add_ingredient({type = "item", name = "erbium", amount = 1})
 RECIPE("nems"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
 RECIPE("heavy-n"):add_ingredient({type = "item", name = "sb-oxide", amount = 5})
-RECIPE("pa-uranium-235"):remove_unlock('nucleo')
+RECIPE("pa-uranium-235"):remove_unlock('nucleo-mk03')
 RECIPE("sodium-silicate"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
 RECIPE("quantum-dots"):remove_unlock('quantum'):add_unlock({"nano-tech"})
 RECIPE("silica-powder"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
@@ -104,8 +104,14 @@ RECIPE("var-josephson-junction"):add_ingredient({type = "item", name = "cf", amo
 RECIPE("paradiamatic-resistor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("volumetric-capacitor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
+RECIPE("pa-proton"):replace_ingredient("uranium-235", "u-235")
 
-RECIPE("phosphoric-acid2"):add_result({type = "fluid", name = "hydrofluoric-acid", amount = 25})
+RECIPE("phosphoric-acid2").results = {
+    {type = 'fluid', name = 'phosphoric-acid', amount = 40},
+    {type = "fluid", name = "hydrofluoric-acid", amount = 25}
+}
+
+RECIPE("phosphoric-acid2").main_product = "phosphoric-acid"
 
 ----EXCLUSIVE RECIPES----
 

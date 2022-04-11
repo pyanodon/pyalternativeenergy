@@ -795,7 +795,7 @@ RECIPE {
         {type = "fluid", name = "hydrofluoric-acid", amount = 100}
     },
     results = {
-        {type = "fluid", name = "uf6", amount = 100, temperature = 0.7},
+        {type = "fluid", name = "uf6", amount = 100, temperature = 70},
     },
     main_product = "uf6",
     icon = "__pyraworesgraphics__/graphics/icons/powdered-u-screening.png",
