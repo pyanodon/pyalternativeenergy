@@ -107,6 +107,10 @@ fun.global_item_replacer("fuelrod-mk01", "u-235")
 fun.global_item_replacer("fuelrod-mk02", "am-243")
 fun.global_item_replacer("fuelrod-mk03", "pu-239")
 
+--need fuelrod mk04 and mk05 from thorium
+--fuelrod-mk04 with use curium-250 from califorium
+--fuelrod mk05 will use Polonium-210 from u234 from a series of alpha decays aka helium particles
+
 --removing old enrichement recipes
 RECIPE("u-15"):remove_unlock('uranium-mk03')
 RECIPE("u-15-2"):remove_unlock('uranium-mk03')
@@ -198,7 +202,7 @@ while enrichment < 100 do
     end
 
     local name = string.format( "%.2f", tostring(u235))
-    local recipe_name = "uf6-" .. string.gsub(name, "%.", ".") .. "%"
+    local recipe_name = "uf6-" .. string.gsub(name, "%.", ",") .. "%"
 
     RECIPE {
         type = "recipe",
@@ -215,7 +219,8 @@ while enrichment < 100 do
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
-        order = "uranium-" .. recipe_num
+        order = "uranium-" .. recipe_num,
+        localised_name = {"recipe-name.uf6", name}
     }:add_unlock("uranium-mk01")
 
     log(serpent.block(data.raw.recipe[recipe_name]))
@@ -248,7 +253,7 @@ while duf < 0.7 do
 
     RECIPE {
         type = "recipe",
-        name = "Depleted-uf6-" .. string.gsub(name, "%.", ",") .. "%",
+        name = "depleted-uf6-" .. string.gsub(name, "%.", ",") .. "%",
         category = "gas-separator",
         enabled = false,
         energy_required = 2,
@@ -261,7 +266,8 @@ while duf < 0.7 do
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
-        order = "depleted-uranium-" .. recipe_num
+        order = "depleted-uranium-" .. recipe_num,
+        localised_name = {"recipe-name.depleted-uf6", name}
     }:add_unlock("uranium-mk01")
 
     previous_enrichment = u235
