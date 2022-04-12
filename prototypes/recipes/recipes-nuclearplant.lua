@@ -8,11 +8,10 @@ RECIPE {
         {type = "fluid", name = "molten-salt", amount = 200},
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 1000},
         {type = "fluid", name = "reactor-waste-1", amount = 200, --[[temperature = 1000]]},
         {type = "fluid", name = "neutron", amount = 200, temperature = 100},
     },
-    main_product = "hot-molten-salt"
+    main_product = "reactor-waste-1"
 }:add_unlock("nuclear-power")
 
 RECIPE {

@@ -103,9 +103,16 @@ RECIPE('fuelrod-mk05'):remove_unlock('uranium-mk04')
 RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
-fun.global_item_replacer("fuelrod-mk01", "u-235")
-fun.global_item_replacer("fuelrod-mk02", "am-243")
-fun.global_item_replacer("fuelrod-mk03", "pu-239")
+RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'u-235'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):add_unlock('nuclear-power-mk02')
+RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'pu-239'):add_unlock('nuclear-power')
+
+--need fuelrod mk04 and mk05 from thorium
+--fuelrod-mk04 with use curium-250 from califorium
+--fuelrod mk05 will use Polonium-210 from u234 from a series of alpha decays aka helium particles
+
+RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power')
 
 --removing old enrichement recipes
 RECIPE("u-15"):remove_unlock('uranium-mk03')
@@ -198,25 +205,28 @@ while enrichment < 100 do
     end
 
     local name = string.format( "%.2f", tostring(u235))
-
     local recipe_name = "uf6-" .. string.gsub(name, "%.", ",") .. "%"
+
     RECIPE {
         type = "recipe",
         name = recipe_name,
         category = "gas-separator",
-        enabled = true,
+        enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = previous_enrichment}
+            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(previous_enrichment*100)}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 50, temperature = u235},
-            {type = "fluid", name = "uf6", amount = 50, temperature = u238},
+            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},
+            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
-        order = "uranium-" .. recipe_num
-    }
+        order = "uranium-" .. recipe_num,
+        localised_name = {"recipe-name.uf6", name}
+    }--:add_unlock("uranium-mk01")
+
+    log(serpent.block(data.raw.recipe[recipe_name]))
 
     if u235 < 10 then
         RECIPE(recipe_name):add_unlock('uranium-mk01')
@@ -246,21 +256,22 @@ while duf < 0.7 do
 
     RECIPE {
         type = "recipe",
-        name = "Depleted-uf6-" .. string.gsub(name, "%.", ",") .. "%",
+        name = "depleted-uf6-" .. string.gsub(name, "%.", ",") .. "%",
         category = "gas-separator",
-        enabled = true,
+        enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = previous_enrichment}
+            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(previous_enrichment*100)}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 50, temperature = u235},
-            {type = "fluid", name = "uf6", amount = 50, temperature = u238},
+            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},
+            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
-        order = "depleted-uranium-" .. recipe_num
-    }--:add_unlock("uranium-mk03")
+        order = "depleted-uranium-" .. recipe_num,
+        localised_name = {"recipe-name.depleted-uf6", name}
+    }:add_unlock("uranium-mk01")
 
     previous_enrichment = u235
     duf = u235
@@ -273,10 +284,10 @@ RECIPE {
     type = "recipe",
     name = "Depleted-uf6-to-u-oxide",
     category = "evaporator",
-    enabled = true,
+    enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "fluid", name = "uf6", amount = 100, maximum_temperature = 0.15}
+        {type = "fluid", name = "uf6", amount = 100, maximum_temperature = math.floor(0.15*100)}
     },
     results = {
         {type = "item", name = "uranium-238", amount = 10},
@@ -284,4 +295,4 @@ RECIPE {
     main_product = "uranium-238",
     subgroup = "py-rawores-uranium",
     order = "depleted-uranium-" .. recipe_num
-}--:add_unlock("uranium-mk03")
+}:add_unlock("uranium-mk01")

@@ -335,6 +335,28 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "cm-250",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/cm-250.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "po-210",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/po-210.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
     name = "sb-hpo-pu",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
     icon_size = 64,
