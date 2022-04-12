@@ -103,13 +103,16 @@ RECIPE('fuelrod-mk05'):remove_unlock('uranium-mk04')
 RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
-fun.global_item_replacer("fuelrod-mk01", "u-235")
-fun.global_item_replacer("fuelrod-mk02", "am-243")
-fun.global_item_replacer("fuelrod-mk03", "pu-239")
+RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'u-235'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):add_unlock('nuclear-power-mk02')
+RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'pu-239'):add_unlock('nuclear-power')
 
 --need fuelrod mk04 and mk05 from thorium
 --fuelrod-mk04 with use curium-250 from califorium
 --fuelrod mk05 will use Polonium-210 from u234 from a series of alpha decays aka helium particles
+
+RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power')
 
 --removing old enrichement recipes
 RECIPE("u-15"):remove_unlock('uranium-mk03')
@@ -221,7 +224,7 @@ while enrichment < 100 do
         subgroup = "py-rawores-uranium",
         order = "uranium-" .. recipe_num,
         localised_name = {"recipe-name.uf6", name}
-    }:add_unlock("uranium-mk01")
+    }--:add_unlock("uranium-mk01")
 
     log(serpent.block(data.raw.recipe[recipe_name]))
 

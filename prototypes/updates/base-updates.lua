@@ -19,7 +19,7 @@ data.raw.reactor["nuclear-reactor"].heat_buffer.connections = nil
 
 TECHNOLOGY('atomic-bomb'):remove_prereq('domestication-mk02'):remove_prereq('uranium-mk03'):add_prereq('nucleo'):remove_pack('chemical-science-pack'):remove_pack('space-science-pack')
 
-RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-238'):replace_ingredient('neuromorphic-chip', 'advanced-circuit')
+RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingredient('neuromorphic-chip', 'advanced-circuit')
 RECIPE("uranium-rounds-magazine"):replace_ingredient("uranium-238", "u-238")
 RECIPE("uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
 RECIPE("explosive-uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")

@@ -211,3 +211,23 @@ RECIPE {
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
+
+--Curium
+
+RECIPE {
+    type = "recipe",
+    name = "am-243-transmutation-2",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "am-243", amount = 10},
+    },
+    results = {
+        {type = "item", name = "cm-250", amount = 8},
+        {type = "fluid", name = "neutron", amount = 200},
+    },
+    main_product = "pu-239",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power-mk02")
