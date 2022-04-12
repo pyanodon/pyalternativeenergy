@@ -103,13 +103,13 @@ RECIPE {
     name = "lithium-salt-fuel-seperation",
     category = "fluid-separator",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 1,
     ingredients = {
         {type = "fluid", name = "reactor-waste-1", amount = 100},
-        {type = "fluid", name = "lithium-salt", amount = 100},
+        {type = "item", name = "lithium-peroxide", amount = 20},
     },
     results = {
-        {type = "fluid", name = "reactor-salt", amount = 50}, --need to find out what molten salt we are using
+        {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 1000},
         {type = "item", name = "high-energy-waste-1", amount = 10},
         {type = "item", name = "lithium", amount = 10}
     },
