@@ -7,14 +7,11 @@ MOD IN GENERAL
         - sort of. items only. you can have a item and a fluid as results. a drill can remove the item without the fluid but you cant get the fluid without the solid and that cant be gotten out at all and it jams. only way for a drill to have multiple results is for them to be items. - KING
         - Then i believe we will need a new resource to allow coalbed gas and kerogen to be extracted as a finite resource. - py
  - Check why the working animations on Numals just doesnt appears.
- - Change the turbines to work with steam in different temps and efficiency
  - All burning based, nuclear and solar powerplants shall contain a cooling cycle and generation of molten salt for further use (as heat source/steam)
- - The consumption of metals/minerals shall increase in the later recipes since the ore chains tends to be very productive in later stages.
+ - Numal raising and rendering
 
 GRAPHICS (feel free to insert any requierements here):
 
-- Make Cottonguts powerplant (DUNNO, maybe not)
-- Make Phaddai powerplant (DUNNO, maybe not)
 - Redo coalbed gas (maybe make it as a resource in map like oil sands or antimony, to restrict the area to extract it). POSTPONED
 
 CODING:
