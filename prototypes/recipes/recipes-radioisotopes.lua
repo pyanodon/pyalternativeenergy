@@ -227,7 +227,7 @@ RECIPE {
         {type = "item", name = "cm-250", amount = 8},
         {type = "fluid", name = "neutron", amount = 200},
     },
-    main_product = "pu-239",
+    main_product = "cm-250",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power-mk02")

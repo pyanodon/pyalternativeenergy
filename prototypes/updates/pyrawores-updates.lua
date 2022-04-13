@@ -226,7 +226,7 @@ while enrichment < 100 do
         localised_name = {"recipe-name.uf6", name}
     }--:add_unlock("uranium-mk01")
 
-    log(serpent.block(data.raw.recipe[recipe_name]))
+    -- log(serpent.block(data.raw.recipe[recipe_name]))
 
     if u235 < 10 then
         RECIPE(recipe_name):add_unlock('uranium-mk01')

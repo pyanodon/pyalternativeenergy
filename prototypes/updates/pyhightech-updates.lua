@@ -106,12 +106,8 @@ RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amoun
 RECIPE("volumetric-capacitor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("pa-proton"):replace_ingredient("uranium-235", "u-235")
 
-RECIPE("phosphoric-acid2").results = {
-    {type = 'fluid', name = 'phosphoric-acid', amount = 40},
-    {type = "fluid", name = "hydrofluoric-acid", amount = 25}
-}
+table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 
-RECIPE("phosphoric-acid2").main_product = "phosphoric-acid"
 
 ----EXCLUSIVE RECIPES----
 
