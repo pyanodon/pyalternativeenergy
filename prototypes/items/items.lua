@@ -4,7 +4,7 @@
 ITEM {
     type = "item",
     name = "bullshitium-348",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -15,7 +15,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "control-rod",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -28,7 +28,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "high-energy-waste-1",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -39,7 +39,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "high-energy-waste-2",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -50,7 +50,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "high-energy-waste-3",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -61,7 +61,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "high-energy-waste-4",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -72,7 +72,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "high-energy-waste-5",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",

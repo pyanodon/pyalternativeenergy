@@ -2,7 +2,7 @@
 FLUID {
     type = "fluid",
     name = "lithium-salt",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
 
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
@@ -19,7 +19,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "reactor-salt",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
     icon_size = 64,
 
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
