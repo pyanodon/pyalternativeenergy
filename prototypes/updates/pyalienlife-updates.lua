@@ -4,6 +4,8 @@ require("prototypes/buildings/multiblade-turbine-mk01")
 require("prototypes.technologies.numal")
 --BUILDINDS--
 require("prototypes/buildings/numal-mk01")
+--RECIPES--
+require("prototypes/recipes/numal/recipes-numal")
 
 table.insert(data.raw["rocket-silo"]["mega-farm"].crafting_categories, "mova-farm")
 table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
@@ -439,3 +441,47 @@ RECIPE {
     },
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk02")
+
+ITEM {
+    type = "item",
+    name = "numal-egg",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/numal-egg.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "numal-food-01",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/numal-food-01.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "numal-food-02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/numal-food-02.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "numal-codex",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/numal-codex.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 100
+}
