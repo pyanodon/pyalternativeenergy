@@ -2,7 +2,7 @@
 FLUID {
     type = "fluid",
     name = "ac",
-    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
 
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
@@ -19,7 +19,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "ac-oxygenated",
-    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
 
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
@@ -36,7 +36,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "c-oxygenated",
-    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
 
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas

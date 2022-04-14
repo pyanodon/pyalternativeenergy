@@ -2,7 +2,7 @@
 FLUID {
     type = "fluid",
     name = "neutron",
-    icon = "__pycoalprocessing__/graphics/missing_icon_64.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_color = {r = 0.180, g = 0.756, b = 0.196},
