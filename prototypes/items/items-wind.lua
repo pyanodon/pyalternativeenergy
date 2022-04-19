@@ -9,7 +9,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -20,7 +20,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -31,7 +31,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -42,7 +42,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -53,7 +53,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -64,7 +64,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -75,7 +75,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -86,7 +86,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -97,7 +97,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -108,7 +108,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -119,7 +119,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -130,7 +130,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -141,7 +141,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -152,7 +152,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 
@@ -166,7 +166,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -177,7 +177,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -188,7 +188,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -199,7 +199,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -210,7 +210,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -221,7 +221,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -232,7 +232,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -243,7 +243,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -254,7 +254,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -265,7 +265,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -276,7 +276,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -287,7 +287,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -298,7 +298,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -309,7 +309,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
-    stack_size = 100
+    stack_size = 500
 }
 
 --MK03
@@ -322,7 +322,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -333,7 +333,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -344,7 +344,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -355,7 +355,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -366,7 +366,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -377,7 +377,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -388,7 +388,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -399,7 +399,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -410,7 +410,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -421,7 +421,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -432,7 +432,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -443,7 +443,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -454,7 +454,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -465,7 +465,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ac",
-    stack_size = 100
+    stack_size = 500
 }
 
 --MK04
@@ -478,7 +478,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -489,7 +489,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -500,7 +500,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -511,7 +511,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -522,7 +522,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -533,7 +533,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -544,7 +544,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -555,7 +555,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -566,7 +566,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -577,7 +577,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -588,7 +588,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -599,7 +599,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -610,7 +610,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -621,5 +621,5 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-parts",
     order = "ad",
-    stack_size = 100
+    stack_size = 500
 }

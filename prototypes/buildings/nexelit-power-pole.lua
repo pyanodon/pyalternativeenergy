@@ -22,7 +22,7 @@ ITEM {
     subgroup = "py-electric",
     order = "b",
     place_result = "nexelit-power-pole",
-    stack_size = 50
+    stack_size = 500
 }
 
 ENTITY {

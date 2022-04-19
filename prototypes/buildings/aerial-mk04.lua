@@ -34,7 +34,7 @@ ITEM{
     subgroup = "py-alternativeenergy-buildings-mk04",
     order = "b",
     place_result = "aerial-blimp-mk04",
-    stack_size = 5
+    stack_size = 10
   }
 
 data:extend(

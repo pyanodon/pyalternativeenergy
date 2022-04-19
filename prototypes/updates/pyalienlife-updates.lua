@@ -339,7 +339,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "q-a",
-    stack_size = 300,
+    stack_size = 500,
 	effect = { speed = {bonus = 3.75}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
@@ -359,7 +359,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "q-b",
-    stack_size = 300,
+    stack_size = 500,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
@@ -379,7 +379,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "q-c",
-    stack_size = 300,
+    stack_size = 500,
 	effect = { speed = {bonus = 6.25}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
@@ -399,7 +399,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "q-d",
-    stack_size = 300,
+    stack_size = 500,
 	effect = { speed = {bonus = 7.5}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
@@ -450,7 +450,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -461,7 +461,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -472,7 +472,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 100
+    stack_size = 500
 }
 
 ITEM {
@@ -483,5 +483,5 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 100
+    stack_size = 500
 }
