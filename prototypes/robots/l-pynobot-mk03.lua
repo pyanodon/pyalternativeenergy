@@ -35,7 +35,7 @@ ITEM {
   subgroup = "py-robots",
   order = "g",
   place_result = "l-pynobot-mk03",
-  stack_size = 500
+  stack_size = 200
 }
 
 ENTITY {
