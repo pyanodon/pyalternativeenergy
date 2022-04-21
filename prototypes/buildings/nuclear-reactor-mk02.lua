@@ -24,7 +24,7 @@ ITEM {
 }
 
 ENTITY {
-    type = "furnace",
+    type = "assembling-machine",
     name = "nuclear-reactor-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk02.png",
     icon_size = 64,
@@ -132,15 +132,15 @@ ENTITY {
             base_level = -1,
             pipe_connections = {{type = "input", position = {0.0, 7.0}}}
         },
-        --[[
         {
             production_type = "input",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {-3.0, 7.0}}}
+            pipe_connections = {{type = "input", position = {3.0, 7.0}}}
         },
+        --[[
         {
             production_type = "input",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),

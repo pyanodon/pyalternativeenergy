@@ -48,6 +48,25 @@ RECIPE {
     order = "b"
 }:add_unlock("nuclear-power")
 
+RECIPE {
+    type = "recipe",
+    name = "u234-po210",
+    category = "neutron-moderator",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "item", name = "u-234", amount = 10},
+        {type = "fluid", name = "neutron", amount = 20}
+    },
+    results = {
+        {type = "item", name = "po-210", amount = 10, probability = 0.999},
+        {type = "fluid", name = "helium", amount = 20}
+    },
+    main_product = "po-210",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power")
+
 --plutonium
 
 --weapons grade is pu-239. the long the reactor is run the more not weapons grade plutonium is mixed in.
@@ -175,6 +194,24 @@ RECIPE {
 
 
 --Americium
+
+RECIPE {
+    type = "recipe",
+    name = "americium-seperation",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "americium-oxide", amount = 5},
+    },
+    results = {
+        {type = "item", name = "am-241", amount = 10, probability = 0.5},
+        {type = "item", name = "am-243", amount = 10, probability = 0.5},
+    },
+    main_product = "am-241",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nucleo")
 
 RECIPE {
     type = "recipe",

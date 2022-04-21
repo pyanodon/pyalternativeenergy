@@ -43,10 +43,30 @@ ENTITY {
     crafting_categories = {"neutron-absorber"},
     crafting_speed = 1,
     energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.0,
-    },
+        type = "fluid",
+        effectivity = 1,
+        emissions_per_minute = 0,
+        destroy_non_fuel_fluid = false,
+        fluid_box =
+        {
+          base_area = 1,
+          height = 2,
+          base_level = -1,
+          pipe_connections =
+          {
+            --{type = "input-output", position = {0, 6}},
+            {type = "input-output", position = {0, -2}}
+          },
+          pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+          pipe_covers = DATA.Pipes.covers(false, true, true, true),
+          production_type = "input-output",
+          filter = "boric-acid"
+        },
+        burns_fluid = false,
+        scale_fluid_usage = false,
+        fluid_usage_per_tick = (2/60),
+        --maximum_temperature = 2500,
+      },
     energy_usage = "400kW",
     animation = {
         layers = {
@@ -107,6 +127,7 @@ ENTITY {
             base_level = -1,
             pipe_connections = {{type = "input", position = {0.0, 2.0}}}
         },
+        --[[
         {
             production_type = "output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
@@ -114,6 +135,7 @@ ENTITY {
             base_level = 1,
             pipe_connections = {{type = "output", position = {0.0, -2.0}}}
         },
+        ]]--
         off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},

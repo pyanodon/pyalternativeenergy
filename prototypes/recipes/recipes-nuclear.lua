@@ -541,7 +541,7 @@ RECIPE {
         {type = "item", name = "lithium", amount = 3}
     },
     results = {
-        {type = "item", name = "curium-oxide", amount = 5},
+        {type = "item", name = "cm-250", amount = 2},
     },
     subgroup = "py-nuclear-waste",
     order = "b"
