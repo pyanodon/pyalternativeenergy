@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pa-233-seperation",
-    category = "centrifudge",
+    category = "centrifuging",
     icon = '__pycoalprocessinggraphics__/graphics/icons/missing_icon_64.png',
     icon_size = 64,
     enabled = true,
