@@ -114,3 +114,40 @@ RECIPE {
     subgroup = 'py-alienlife-numal',
     order = 'a',
 }:add_unlock("assisted-embryology")
+
+RECIPE {
+    type = 'recipe',
+    name = 'art-numal',
+    category = 'creature-chamber',
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = 'fluid', name = 'artificial-blood', amount = 100},
+        {type = 'fluid', name = 'fetal-serum', amount = 50},
+        {type = 'item', name = 'tissue-engineered-fat', amount = 1},
+        {type = 'item', name = 'scafold-free-bones', amount = 1},
+        {type = 'item', name = 'laboratory-grown-brain', amount = 1},
+        {type = 'item', name = 'in-vitro-meat', amount = 1},
+        {type = 'item', name = 'biomimetic-skin', amount = 1},
+        {type = 'item', name = 'bioartificial-guts', amount = 1},
+    },
+    results = {
+        {type = 'item', name = 'numal', amount = 10},
+    },
+    --main_product = "psc",
+}:add_unlock("mass-production")
+
+RECIPE {
+    type = 'recipe',
+    name = 'numal-ink-to-antimony',
+    category = 'atomizer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'fluid', name = 'numal-ink', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'antimonium-ore', amount = 10},
+    },
+    --main_product = "cocoon",
+}:add_unlock("molecular-decohesion-mk02")

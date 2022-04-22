@@ -45,6 +45,8 @@ require("prototypes/technologies/mega-farm-mova")
 require("prototypes/technologies/nanozymes")
 require("prototypes/technologies/advanced-robotics")
 require("prototypes/technologies/rare-earth-tech")
+require("prototypes.technologies.numal")
+
 -- ))
 
 --(( RESOURCES ))--
@@ -85,6 +87,7 @@ require("prototypes/recipes/biofet")
 require("prototypes/recipes/mova/recipes-mova-megafarm")
 require("prototypes/recipes/mova/mova-processing")
 require("prototypes/recipes/mirrors")
+-- require("prototypes/recipes/numal/recipes-numal")
 -- ))
 
 -- (( ITEMs ))--
@@ -274,6 +277,8 @@ require("prototypes/buildings/rtg")
 require("prototypes/buildings/mk04-locomotive")
 require("prototypes/buildings/mk04-cargo-wagon")
 require("prototypes/buildings/mk04-fluid-wagon")
+require("prototypes/buildings/multiblade-turbine-mk01")
+require("prototypes/buildings/numal-mk01")
 
 require("prototypes/buildings/heat-smelter-test")
 

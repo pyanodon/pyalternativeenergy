@@ -918,3 +918,63 @@ RECIPE {
         {type = 'item', name = 'quantum-battery', amount = 1}
     }
 }:add_unlock('railway-mk04')
+
+RECIPE {
+    type = "recipe",
+    name = "yellow-dextrine",
+    category = "fbreactor",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "starch", amount = 5},
+        {type = "fluid", name = "hot-air", amount = 150},
+        {type = "item", name = "nexelit-plate", amount = 10},
+    },
+    results = {
+        {type = "item", name = "yellow-dextrine", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("antimony-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "oxalic-acid-2",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "blood", amount = 100},
+        {type = "item", name = "plastic-bar", amount = 1},
+    },
+    results = {
+        {type = "item", name = "oxalic-acid", amount = 1},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("carbon-fiber")
+
+RECIPE {
+    type = "recipe",
+    name = "denatured-seismite-2",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = "fluid", name = "mutant-enzymes", amount = 100},
+        {type = "fluid", name = "formic-acid", amount = 200},
+        {type = "item", name = "zymogens", amount = 1},
+        {type = "item", name = "lithium", amount = 10},
+        {type = "item", name = "lithium-hydroxide", amount = 4},
+        {type = "item", name = "adrenal-cortex", amount = 1},
+        {type = "item", name = "dhilmos-egg", amount = 5},
+        {type = "item", name = "cottongut", amount = 50},
+        {type = "item", name = "cdna", amount = 5},
+        {type = "item", name = "bio-sample01", amount = 10},
+        {type = "item", name = "hyaline", amount = 2},
+        {type = "item", name = "nanofibrils", amount = 1},
+        {type = "item", name = "xeno-egg", amount = 5},
+    },
+    results = {
+        {type = "item", name = "denatured-seismite", amount = 3},
+    },
+    --main_product = "sb-dust",
+}:add_unlock("pharmagenomics")

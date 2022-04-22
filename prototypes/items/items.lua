@@ -2605,3 +2605,129 @@ ITEM {
     order = "a",
     stack_size = 500
 }
+
+--------------NUMAL-------------------
+
+ITEM {
+    type = "module",
+    name = "numal",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 1,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-a",
+    stack_size = 500,
+	effect = { speed = {bonus = 3.75}, productivity = {bonus = -1}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk02",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 2,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-b",
+    stack_size = 500,
+	effect = { speed = {bonus = 5}, productivity = {bonus = -1}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk03",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 3,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-c",
+    stack_size = 500,
+	effect = { speed = {bonus = 6.25}, productivity = {bonus = -1}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "module",
+    name = "numal-mk04",
+    icons =
+	{
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    icon_size = 64,
+	category = "numal",
+	tier = 4,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "q-d",
+    stack_size = 500,
+	effect = { speed = {bonus = 7.5}, productivity = {bonus = -1}},
+	limitation = {},
+	limitation_message_key = "numal"
+}
+
+ITEM {
+    type = "item",
+    name = "numal-egg",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/numal-egg.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "numal-food-01",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/numal-food-01.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "numal-food-02",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/numal-food-02.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-numal",
+    order = "a",
+    stack_size = 500
+}
+
+ITEM {
+    type = "item",
+    name = "numal-codex",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/numal-codex.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex",
+    order = "x",
+    stack_size = 500
+}
