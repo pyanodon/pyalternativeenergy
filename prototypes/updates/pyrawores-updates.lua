@@ -77,7 +77,7 @@ RECIPE("battery-2"):replace_ingredient("lead-plate", "pbsb-alloy")
 
 --RECIPE MOVING--
 RECIPE("eaf-mk01"):remove_unlock('aluminium-mk01'):add_unlock('machines-mk01')
-
+RECIPE("zinc-plate-1"):remove_unlock("zink-mk01"):add_unlock("creosote")
 
 --removing old nuclear reactor fuel cells as they wont do anything now.
 RECIPE("uranium-fuel-cell"):remove_unlock('uranium-mk01')--:add_unlock('uranium-processing')

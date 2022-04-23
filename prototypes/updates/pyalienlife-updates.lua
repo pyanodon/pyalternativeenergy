@@ -14,7 +14,7 @@ RECIPE("numal-mk01"):add_ingredient({type = "item", name = "intermetallics", amo
 RECIPE("spore-collector-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("cadaveric-arum-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("fawogae-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
-RECIPE("moondrop-greenhouse-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
+-- RECIPE("moondrop-greenhouse-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("navens-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("yaedols-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("bhoddos-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})

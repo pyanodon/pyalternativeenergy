@@ -250,7 +250,7 @@ RECIPE {
     type = "recipe",
     name = "battery-mk00",
     category = "crafting-with-fluid",
-    enabled = true,
+    enabled = false,
     energy_required = 10,
     ingredients = {
         {type = "item", name = "copper-plate", amount = 10},
@@ -261,7 +261,7 @@ RECIPE {
         {type = "item", name = "battery-mk00", amount = 1},
     },
     --main_product = "eg-si",
-}
+}:add_unlock("vacuum-tube-electronics")
 
 RECIPE {
     type = "recipe",
