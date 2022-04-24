@@ -1,7 +1,7 @@
 FLUID {
     type = "fluid",
     name = "molten-fluoride",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/missing_icon_64.png",
 	icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_color = {r = 0.705, g = 0.717, b = 0.227},
@@ -17,7 +17,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "molten-fluoride-thorium",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/missing_icon_64.png",
 	icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_color = {r = 0.705, g = 0.717, b = 0.227},
@@ -33,7 +33,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "molten-fluoride-thorium-pa233",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/missing_icon_64.png",
 	icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_color = {r = 0.705, g = 0.717, b = 0.227},
@@ -49,7 +49,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "molten-fluoride-u233",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/missing_icon_64.png",
 	icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_color = {r = 0.705, g = 0.717, b = 0.227},

@@ -44,7 +44,7 @@ KING TODO:
       - Check lfr temps to match between panel and building.
       - fix the solar panel mk2 and mk3 animations
 
-need to add lithium floride salt.
+need to add lithium fluoride salt.
       - LiF is prepared from lithium hydroxide or lithium carbonate with hydrogen fluoride.
 
 add hydrogen flouride production to phosphine gas to phosphoric acid production
