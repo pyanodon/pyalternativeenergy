@@ -8,7 +8,8 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "fluid", name = "molten-fluoride", amount = 100},
+        {type = "fluid", name = "fluorine-gas", amount = 100},
+        {type = "item", name = "lithium", amount = 10},
         {type = "item", name = "th-oxide", amount = 10}
     },
     results = {
@@ -16,7 +17,7 @@ RECIPE {
     },
     subgroup = "py-items",
     order = "g"
-}
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -36,7 +37,7 @@ RECIPE {
     },
     subgroup = "py-items",
     order = "g"
-}
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -56,7 +57,7 @@ RECIPE {
     },
     subgroup = "py-items",
     order = "g"
-}
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -74,4 +75,4 @@ RECIPE {
     },
     subgroup = "py-items",
     order = "g"
-}
+}:add_unlock("nuclear-power-mk03")
