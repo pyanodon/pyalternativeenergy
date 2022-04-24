@@ -89,6 +89,7 @@ require("prototypes/recipes/mova/mova-processing")
 require("prototypes/recipes/mirrors")
 -- require("prototypes/recipes/numal/recipes-numal")
 -- ))
+require('prototypes/recipes/recipes-fluorine')
 
 -- (( ITEMs ))--
 require('prototypes/items/items')
@@ -179,6 +180,7 @@ require("prototypes/fluids/uf6")
 require("prototypes/fluids/antimony-phosphate")
 require("prototypes/fluids/hydrofluoric-acid")
 require('prototypes/fluids/molten-fluoride')
+require('prototypes/fluids/fluorine-gas')
 
 -- ))
 

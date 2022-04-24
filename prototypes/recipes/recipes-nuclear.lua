@@ -670,7 +670,8 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = "item", name = "yellow-cake", amount = 5},
-        {type = "fluid", name = "hydrofluoric-acid", amount = 100}
+        {type = "fluid", name = "hydrofluoric-acid", amount = 100},
+        {type = "fluid", name = "fluorine-gas", amount = 100}
     },
     results = {
         {type = "fluid", name = "uf6", amount = 100, temperature = 70},
