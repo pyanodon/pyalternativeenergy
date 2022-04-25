@@ -255,6 +255,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "copper-plate", amount = 10},
         {type = "item", name = "zinc-plate", amount = 10},
+        {type = "item", name = "cellulose", amount = 5},
         {type = "fluid", name = "water-saline", amount = 250},
     },
     results = {

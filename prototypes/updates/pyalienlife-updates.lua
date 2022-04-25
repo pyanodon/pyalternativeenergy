@@ -6,7 +6,7 @@ RECIPE("atomizer-mk01"):add_ingredient({type = "item", name = "intermetallics", 
 RECIPE("bio-printer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 --RECIPE("biofactory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
-RECIPE("creature-chamber-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
+-- RECIPE("creature-chamber-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 --RECIPE("genlab-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 --RECIPE("incubator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 RECIPE("numal-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
@@ -49,10 +49,10 @@ RECIPE("tuuphra-plantation-mk01"):add_ingredient({type = "item", name = "interme
 RECIPE("yotoi-aloe-orchard-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("vonix-den-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("plankton-farm-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
-RECIPE("data-array"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+-- RECIPE("data-array"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("generator-1"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("pyphoon-bay"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
-RECIPE("collector"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
+-- RECIPE("collector"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("zungror-lair-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 
 RECIPE("atomizer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
@@ -246,6 +246,8 @@ RECIPE('pre-pesticide-02'):add_ingredient({type = "item", name = "dodecylamine",
 RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 RECIPE('dynemicin'):add_ingredient({type = "item", name = "acrylic", amount = 2})
+
+RECIPE("cellulose-00"):remove_unlock("cellulose-mk01"):add_unlock("vacuum-tube-electronics")
 
 -- TODO
 -- RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}

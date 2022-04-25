@@ -20,7 +20,7 @@ RECIPE("py-turbine"):remove_ingredient('gasturbinemk03') -- TODO: replace with s
 
 RECIPE("agitator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("nmf-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
-RECIPE("secondary-crusher-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
+-- RECIPE("secondary-crusher-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("thickener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
 RECIPE("gas-separator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("hydrocyclone-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})

@@ -74,6 +74,7 @@ RECIPE("p2s5"):remove_unlock('machines-mk03'):add_unlock('machines-mk02')
 RECIPE("plastic3"):replace_ingredient('nitrobenzene','aniline')
 RECIPE("battery-1"):replace_ingredient("lead-plate", "pbsb-alloy")
 RECIPE("battery-2"):replace_ingredient("lead-plate", "pbsb-alloy")
+RECIPE("drill-head-3"):remove_unlock('drill-head-mk01'):add_unlock('machines-mk01')
 
 --RECIPE MOVING--
 RECIPE("eaf-mk01"):remove_unlock('aluminium-mk01'):add_unlock('machines-mk01')
