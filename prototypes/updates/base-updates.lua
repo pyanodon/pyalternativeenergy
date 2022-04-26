@@ -9,6 +9,8 @@ TECHNOLOGY('chemical-science-pack'):add_prereq('nucleo')
 
 TECHNOLOGY("kovarex-enrichment-process"):set_fields({enabled = false, hidden = true})
 
+TECHNOLOGY("battery"):set_fields({enabled = false, hidden = true})
+
 RECIPE('chemical-science-pack'):add_ingredient({type = 'item', name = 'nuclear-sample', amount = 2})
 
 RECIPE("nuclear-reactor"):add_unlock('uranium-processing'):remove_ingredient('super-steel')
@@ -23,6 +25,9 @@ RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingre
 RECIPE("uranium-rounds-magazine"):replace_ingredient("uranium-238", "u-238")
 RECIPE("uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
 RECIPE("explosive-uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
+RECIPE("battery"):remove_unlock("battery"):add_unlock("battery-mk02")
 
 ITEM("uranium-235"):add_flag("hidden")
 ITEM("uranium-238"):add_flag("hidden")
+ITEM("battery"):add_flag("hidden")
+

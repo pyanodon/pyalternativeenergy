@@ -140,7 +140,7 @@ RECIPE("borax-mine-mk04"):add_ingredient({type = "item", name = "metastable-quas
 RECIPE("soil-extractormk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 
 -----RECIPES-----
-RECIPE("nas-battery"):replace_ingredient("lead-plate", "pbsb-alloy")
+RECIPE("nas-battery"):replace_ingredient("lead-plate", "pbsb-alloy"):remove_unlock("battery"):add_unlock("battery-mk02")
 
 ----EXCLUSIVE RECIPES----
 RECIPE("lithium-peroxide"):add_ingredient({type = "item", name = "lithium", amount = 3})

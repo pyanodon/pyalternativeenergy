@@ -1,5 +1,7 @@
+local fun = require("__pyalienlife__/prototypes/functions/functions")
 
 require("prototypes/updates/base-updates")
+
 if mods["pycoalprocessing"] then
     require("prototypes/updates/pycoalprocessing-updates")
 end
@@ -97,7 +99,11 @@ ITEM("simik"):set_field{fuel_category = 'simik'}:set_field{fuel_value = '800MJ'}
 RECIPE("subcritical-water-01"):change_category("heat-exchanger")
 RECIPE("subcritical-water-02"):change_category("heat-exchanger")
 
-for r, recipe in pairs(data.raw.recipe) do
+for _, recipe in pairs(data.raw.recipe) do
+    local r = RECIPE(recipe)
+    r:replace_ingredient("battery", "battery-mk01")
+    fun.results_replacer(r.name, "battery", "battery-mk01")
+
     if recipe.category == "combustion" then
         recipe.hidden = true
         for t, tech in pairs(data.raw.technology) do
