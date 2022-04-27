@@ -105,6 +105,7 @@ RECIPE("paradiamatic-resistor"):add_ingredient({type = "item", name = "nano-mesh
 RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("volumetric-capacitor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("pa-proton"):replace_ingredient("uranium-235", "u-235")
+RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
 
 table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 

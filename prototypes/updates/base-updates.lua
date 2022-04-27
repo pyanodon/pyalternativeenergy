@@ -25,7 +25,6 @@ RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingre
 RECIPE("uranium-rounds-magazine"):replace_ingredient("uranium-238", "u-238")
 RECIPE("uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
 RECIPE("explosive-uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
-RECIPE("battery"):remove_unlock("battery"):add_unlock("battery-mk02")
 
 ITEM("uranium-235"):add_flag("hidden")
 ITEM("uranium-238"):add_flag("hidden")

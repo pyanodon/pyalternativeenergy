@@ -246,8 +246,9 @@ RECIPE('pre-pesticide-02'):add_ingredient({type = "item", name = "dodecylamine",
 RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 RECIPE('dynemicin'):add_ingredient({type = "item", name = "acrylic", amount = 2})
-
 RECIPE("cellulose-00"):remove_unlock("cellulose-mk01"):add_unlock("vacuum-tube-electronics")
+RECIPE("bhoddos-mk02"):remove_ingredient("40-u-powder")
+RECIPE("bhoddos-mk02"):remove_ingredient("70-u-powder")
 
 -- TODO
 -- RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}

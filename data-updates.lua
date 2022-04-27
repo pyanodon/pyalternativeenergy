@@ -90,9 +90,8 @@ RECIPE('py-logistic-robot-01'):add_ingredient({type = 'item', name = 'gearbox-mk
 RECIPE('py-logistic-robot-02'):add_ingredient({type = 'item', name = 'rayon', amount = 3})
 RECIPE('logistic-robot-ht'):add_ingredient({type = 'item', name = 'gearbox-mk04', amount = 1}):replace_ingredient('py-logistic-robot-01', 'l-pynobot-mk03'):add_ingredient({type = 'item', name = 'quantum-battery', amount = 1}):add_ingredient({type = 'item', name = 'nano-mesh', amount = 2}):add_ingredient({type = 'item', name = 'sc-engine', amount = 1})
 
-RECIPE('py-construction-robot-01'):add_ingredient({type = 'fluid', name = 'fish-oil', amount = 50}):add_ingredient{'battery-mk01', 2}
-RECIPE('py-logistic-robot-01'):add_ingredient({type = 'fluid', name = 'fish-oil', amount = 50}):add_ingredient{'battery-mk01', 2}
-
+RECIPE('py-construction-robot-01'):add_ingredient{'battery-mk01', 2}
+RECIPE('py-logistic-robot-01'):add_ingredient{'battery-mk01', 2}
 
 ITEM("simik"):set_field{fuel_category = 'simik'}:set_field{fuel_value = '800MJ'}
 
