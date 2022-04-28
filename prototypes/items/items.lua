@@ -116,7 +116,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "uranium-oxide",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-232.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -226,7 +226,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "plutonium-oxide",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-238.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -292,7 +292,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "americium-oxide",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/am-241.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -358,7 +358,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "sb-hpo-pu",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
@@ -369,7 +369,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "sb-chloride",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",

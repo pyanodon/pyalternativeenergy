@@ -642,7 +642,7 @@ RECIPE {
         {type = "fluid", name = "sb-phosphate-3", amount = 100}
     },
     main_product = "plutonium-peroxide",
-  }:add_unlock('uranium-processing')
+  }:add_unlock('nuclear-power')
 
   RECIPE {
     type = "recipe",
@@ -660,7 +660,7 @@ RECIPE {
         {type = "fluid", name = "purex-raffinate", amount = 100}
     },
     main_product = "plutonium-peroxide",
-  }:add_unlock('uranium-processing')
+  }:add_unlock('nuclear-power')
 
 RECIPE {
     type = "recipe",

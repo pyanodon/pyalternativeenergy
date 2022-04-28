@@ -112,7 +112,7 @@ RECIPE {
     main_product = "pu-239",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("placeholder")
+}:add_unlock("nuclear-power-mk02")
 
 
 --pu-239 is used as mox fuel in the burner and weapons. extra can be burnt up into pu-238
@@ -133,7 +133,7 @@ RECIPE {
     main_product = "pu-240",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("placeholder")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -151,7 +151,7 @@ RECIPE {
     main_product = "pu-241",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("placeholder")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -171,7 +171,7 @@ RECIPE {
     main_product = "pu-242",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("placeholder")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -211,7 +211,7 @@ RECIPE {
     main_product = "am-241",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nucleo")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -229,7 +229,7 @@ RECIPE {
     main_product = "pu-238",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("placeholder")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",

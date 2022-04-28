@@ -150,6 +150,10 @@ RECIPE("u-pulp-03"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing
 RECIPE("pregnant-solution-01"):remove_unlock('uranium-mk04')
 RECIPE("vanadium-mixture"):remove_unlock('uranium-mk04')
 
+RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
+
+RECIPE("space-science-pack"):replace_ingredient("yellow-cake", "pu-238")
+
 
 fun.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 15)
 RECIPE("u-rich-pulp"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
