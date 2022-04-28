@@ -9,7 +9,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -20,7 +20,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500,
+    stack_size = 50,
     fuel_category = 'control-rod',
     fuel_value = "10MJ"
 }
@@ -33,7 +33,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -44,7 +44,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -55,7 +55,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -66,7 +66,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -77,7 +77,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -88,7 +88,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -99,7 +99,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -110,7 +110,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -121,7 +121,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -132,7 +132,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -143,7 +143,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -154,7 +154,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -165,7 +165,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -176,7 +176,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -187,7 +187,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -198,7 +198,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -209,7 +209,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -220,7 +220,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -231,7 +231,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -242,7 +242,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -253,7 +253,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -264,7 +264,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -275,7 +275,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -286,7 +286,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -297,7 +297,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -308,7 +308,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -319,7 +319,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -330,7 +330,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -341,7 +341,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -352,7 +352,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -363,7 +363,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -374,7 +374,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 --ANTIMONY
@@ -387,7 +387,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aaa",
-    stack_size = 500
+    stack_size = 50
 }
 
 ITEM {
@@ -398,7 +398,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -409,7 +409,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -420,7 +420,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -431,7 +431,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -442,7 +442,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -453,7 +453,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -464,7 +464,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -475,7 +475,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -486,7 +486,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -497,7 +497,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aac",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -508,7 +508,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-antimony",
     order = "aab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -519,7 +519,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aaz",
-    stack_size = 500
+    stack_size = 100
 }
 
 --THORIUM
@@ -532,7 +532,7 @@ ITEM {
     flags = {},
     subgroup = "py-hightech-items",
     order = "cd",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -543,7 +543,7 @@ ITEM {
     flags = {},
     subgroup = "py-hightech-items",
     order = "cd",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -554,7 +554,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-thorium",
     order = "aa",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -565,7 +565,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-thorium",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 --GADOLINIUM
@@ -578,7 +578,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-gd",
     order = "aa",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -589,7 +589,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-gd",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -600,7 +600,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-gd",
     order = "ac",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -611,7 +611,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-gd",
     order = "ad",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -622,7 +622,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-gd",
     order = "ae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -633,7 +633,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-gd",
     order = "af",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -644,7 +644,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-gd",
     order = "ag",
-    stack_size = 500
+    stack_size = 100
 }
 
 --ETC
@@ -657,7 +657,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -668,7 +668,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -679,7 +679,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -690,7 +690,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -701,7 +701,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -712,7 +712,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -723,7 +723,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -734,7 +734,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -745,7 +745,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -756,7 +756,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -767,7 +767,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -778,7 +778,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -789,7 +789,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -800,7 +800,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -811,7 +811,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -822,7 +822,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -833,7 +833,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -844,7 +844,7 @@ ITEM {
     flags = {},
     subgroup = "py-hightech-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -855,7 +855,7 @@ ITEM {
     flags = {},
     subgroup = "py-hightech-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -866,7 +866,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -877,7 +877,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -888,7 +888,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -899,7 +899,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -915,7 +915,7 @@ ITEM {
     burnt_result = "used-quantum-battery",
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -926,7 +926,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 10
+    stack_size = 100
 }
 
 ITEM {
@@ -937,7 +937,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -948,7 +948,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -959,7 +959,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -970,7 +970,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -981,7 +981,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -992,7 +992,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1003,7 +1003,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1014,7 +1014,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1025,7 +1025,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1036,7 +1036,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1047,7 +1047,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1058,7 +1058,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1069,7 +1069,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1080,7 +1080,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1091,7 +1091,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1102,7 +1102,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1113,7 +1113,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1124,7 +1124,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1135,7 +1135,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1146,7 +1146,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1157,7 +1157,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1168,7 +1168,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1179,7 +1179,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1190,7 +1190,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1201,7 +1201,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1212,7 +1212,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1223,7 +1223,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1234,7 +1234,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1245,7 +1245,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1256,7 +1256,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1267,7 +1267,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1278,7 +1278,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1289,7 +1289,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1300,7 +1300,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1311,7 +1311,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1322,7 +1322,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1333,7 +1333,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1344,7 +1344,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1355,7 +1355,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1366,7 +1366,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1377,7 +1377,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1400,7 +1400,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aaa",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1411,7 +1411,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1422,7 +1422,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1433,7 +1433,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1444,7 +1444,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1455,7 +1455,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1466,7 +1466,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1477,7 +1477,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1488,7 +1488,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1499,7 +1499,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1510,7 +1510,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1521,7 +1521,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1532,7 +1532,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1543,7 +1543,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1554,7 +1554,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1565,7 +1565,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1576,7 +1576,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1587,7 +1587,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1598,7 +1598,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1609,7 +1609,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1620,7 +1620,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1631,7 +1631,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1642,7 +1642,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1653,7 +1653,7 @@ ITEM {
     flags = {},
     subgroup = "py-hightech-quantum",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1677,7 +1677,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1688,7 +1688,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1699,7 +1699,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1710,7 +1710,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1721,7 +1721,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1732,7 +1732,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1743,7 +1743,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1754,7 +1754,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1765,7 +1765,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1776,7 +1776,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1787,7 +1787,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1798,7 +1798,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1809,7 +1809,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ba",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1820,7 +1820,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ba",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1831,7 +1831,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ba",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1842,7 +1842,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ba",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1853,7 +1853,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ba",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1864,7 +1864,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ba",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1875,7 +1875,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ba",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1886,7 +1886,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ba",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1897,7 +1897,7 @@ ITEM {
     flags = {},
     subgroup = "intermediate-product",
     order = "i[electric-engine-unit]",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1908,7 +1908,7 @@ ITEM {
     flags = {},
     subgroup = "intermediate-product",
     order = "i[electric-engine-unit]",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1919,7 +1919,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1930,7 +1930,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1941,7 +1941,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1952,7 +1952,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1963,7 +1963,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1974,7 +1974,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1985,7 +1985,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -1996,7 +1996,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2007,7 +2007,7 @@ ITEM {
     flags = {},
     subgroup = "intermediate-product",
     order = "j[electric-engine-unit]",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2018,7 +2018,7 @@ ITEM {
     flags = {},
     subgroup = "intermediate-product",
     order = "j[electric-engine-unit]",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2029,7 +2029,7 @@ ITEM {
     flags = {},
     subgroup = "intermediate-product",
     order = "j[electric-engine-unit]",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2040,7 +2040,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2051,7 +2051,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2062,7 +2062,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2073,7 +2073,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2084,7 +2084,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2095,7 +2095,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2106,7 +2106,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2117,7 +2117,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2128,7 +2128,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2139,7 +2139,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2150,7 +2150,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2161,7 +2161,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2172,7 +2172,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2183,7 +2183,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2194,7 +2194,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2205,7 +2205,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2216,7 +2216,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2227,7 +2227,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2238,7 +2238,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2249,7 +2249,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2260,7 +2260,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2271,7 +2271,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2282,7 +2282,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2293,7 +2293,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ca",
-    stack_size = 500
+    stack_size = 100
 }
 
 ----MOVA-----
@@ -2317,7 +2317,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mova",
     order = "a",
-    stack_size = 500
+    stack_size = 50
 }
 
 ITEM {
@@ -2328,7 +2328,7 @@ ITEM {
     flags = {},
     subgroup = "py-rawores-items",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2339,7 +2339,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2350,7 +2350,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2361,7 +2361,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-genetics",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2372,7 +2372,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-mova",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2383,7 +2383,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2394,7 +2394,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2405,7 +2405,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2416,7 +2416,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2427,7 +2427,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2438,7 +2438,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2449,7 +2449,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2460,7 +2460,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2471,7 +2471,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "dab",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2482,7 +2482,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "dac",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2493,7 +2493,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "dad",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2504,7 +2504,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2515,7 +2515,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "da",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2526,7 +2526,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "dae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2537,7 +2537,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "dae",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2548,7 +2548,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "d",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2559,7 +2559,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2570,7 +2570,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2581,7 +2581,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2592,7 +2592,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2603,7 +2603,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 --------------NUMAL-------------------
@@ -2622,7 +2622,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "q-a",
-    stack_size = 500,
+    stack_size = 50,
 	effect = { speed = {bonus = 3.75}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
@@ -2642,7 +2642,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "q-b",
-    stack_size = 500,
+    stack_size = 50,
 	effect = { speed = {bonus = 5}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
@@ -2662,7 +2662,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "q-c",
-    stack_size = 500,
+    stack_size = 50,
 	effect = { speed = {bonus = 6.25}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
@@ -2682,7 +2682,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "q-d",
-    stack_size = 500,
+    stack_size = 50,
 	effect = { speed = {bonus = 7.5}, productivity = {bonus = -1}},
 	limitation = {},
 	limitation_message_key = "numal"
@@ -2696,7 +2696,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2707,7 +2707,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2718,7 +2718,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
-    stack_size = 500
+    stack_size = 100
 }
 
 ITEM {
@@ -2729,5 +2729,5 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-codex",
     order = "x",
-    stack_size = 500
+    stack_size = 100
 }

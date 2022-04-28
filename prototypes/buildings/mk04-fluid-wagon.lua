@@ -30,7 +30,7 @@ ITEM {
     subgroup = "py-trains",
     order = "de",
     place_result = "mk04-fluid-wagon",
-    stack_size = 10
+    stack_size = 5
 }
 
 {

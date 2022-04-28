@@ -30,7 +30,7 @@ ITEM {
     subgroup = "py-trains",
     order = "db",
     place_result = "mk04-wagon",
-    stack_size = 10
+    stack_size = 5
 }
 
 {
