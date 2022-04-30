@@ -1,8 +1,11 @@
 
 RECIPE("nuclear-sample"):replace_ingredient('plutonium', 'pu-238'):remove_unlock('production-science-pack'):add_unlock('nucleo')
 
-TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-mk02')
+-- TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-mk02')
 TECHNOLOGY("kovarex-enrichment-process-2"):set_fields({enabled = false, hidden = true})
+
+TECHNOLOGY("helium-processing"):remove_pack("production-science-pack")
+TECHNOLOGY("boron-mk02"):remove_pack("production-science-pack")
 
 RECIPE("grease-table-mk01"):remove_unlock('diamond-mining'):add_unlock('machines-mk02')
 RECIPE("py-turbine"):remove_unlock('fusion-mk01')

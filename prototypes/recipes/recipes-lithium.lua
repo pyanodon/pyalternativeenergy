@@ -105,7 +105,7 @@ RECIPE {
         {type = "item", name = "sb-silicate", amount = 1},
     },
     --main_product = "dodecanoic-acid",
-}:add_unlock("lithium-processing")
+}:add_unlock("sb-silicate")
 
 RECIPE {
     type = "recipe",

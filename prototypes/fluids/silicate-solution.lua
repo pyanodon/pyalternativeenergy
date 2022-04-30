@@ -14,7 +14,7 @@ RECIPE {
         {type = "fluid", name = "silicate-solution", amount = 100},
     },
     --main_product = "dodecanoic-acid",
-}:add_unlock("lithium-processing")
+}:add_unlock("sb-silicate")
 
 FLUID {
     type = "fluid",

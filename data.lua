@@ -46,6 +46,7 @@ require("prototypes/technologies/nanozymes")
 require("prototypes/technologies/advanced-robotics")
 require("prototypes/technologies/rare-earth-tech")
 require("prototypes.technologies.numal")
+require("prototypes/technologies/sb-silicate")
 
 -- ))
 

@@ -5,7 +5,8 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "ticl4", amount = 2},
+        {type = "item", name = "silicon", amount = 5},
+        {type = "fluid", name = "chlorine", amount = 30},
         {type = "fluid", name = "ethanol", amount = 100},
     },
     results = {
@@ -13,7 +14,7 @@ RECIPE {
         {type = "fluid", name = "hydrogen-chloride", amount = 30},
     },
     main_product = "teos",
-}:add_unlock("intermetallics-mk03")
+}:add_unlock("sb-silicate")
 
 FLUID {
     type = "fluid",

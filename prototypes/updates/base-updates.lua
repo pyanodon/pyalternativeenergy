@@ -25,8 +25,12 @@ RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingre
 RECIPE("uranium-rounds-magazine"):replace_ingredient("uranium-238", "u-238")
 RECIPE("uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
 RECIPE("explosive-uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
+RECIPE("logistic-science-pack"):add_ingredient{type = "item", name = "battery-mk01", amount = 1}
+RECIPE("heat-exchange"):add_unlock("uranium-processing")
 
 ITEM("uranium-235"):add_flag("hidden")
 ITEM("uranium-238"):add_flag("hidden")
 ITEM("battery"):add_flag("hidden")
 
+data.raw.boiler['heat-exchanger'].target_temperature = 500
+data.raw.boiler['heat-exchanger'].energy_consumption = "122.22MW"

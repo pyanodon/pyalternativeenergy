@@ -55,7 +55,7 @@ ENTITY {
     },
     collision_box = {{-1.29, -1.29}, {1.29, 1.29}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    target_temperature = 165,
+    target_temperature = 250,
     fluid_box =
     {
       base_area = 1,

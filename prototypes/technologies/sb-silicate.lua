@@ -1,10 +1,10 @@
 TECHNOLOGY {
     type = 'technology',
-    name = 'carbon-fiber',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/carbon-fiber.png',
+    name = 'sb-silicate',
+    icon = '__pyalternativeenergygraphics__/graphics/technology/missing_icon.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'thorium'},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 500,

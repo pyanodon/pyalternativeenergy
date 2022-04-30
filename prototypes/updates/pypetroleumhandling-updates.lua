@@ -19,6 +19,7 @@ RECIPE("upgrader-mk01"):add_ingredient({type = "item", name = "intermetallics", 
 RECIPE("guar-gum-plantation"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("oil-boiler-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 --RECIPE("rhe"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+RECIPE("sulfur-mine"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 
 RECIPE("natural-gas-seep-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("bitumen-seep-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
@@ -35,7 +36,6 @@ RECIPE("tholin-atm-mk02"):add_ingredient({type = "item", name = "self-assembly-m
 RECIPE("tholin-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("upgrader-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("guar-gum-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("sulfur-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 
 RECIPE("natural-gas-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
 RECIPE("bitumen-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})

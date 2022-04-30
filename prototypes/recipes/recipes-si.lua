@@ -32,7 +32,7 @@ RECIPE {
         {type = "item", name = "crucible", amount = 2},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk01")
+}:add_unlock("silicon-mk02")
 
 RECIPE {
     type = "recipe",
@@ -49,7 +49,7 @@ RECIPE {
         {type = "item", name = "polycrystalline-slab", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk01")
+}:add_unlock("silicon-mk02")
 
 RECIPE {
     type = "recipe",
@@ -66,7 +66,7 @@ RECIPE {
         {type = "item", name = "polycrystalline-plate", amount = 5},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk01")
+}:add_unlock("silicon-mk02")
 
 --MONO
 
@@ -84,7 +84,7 @@ RECIPE {
         {type = "item", name = "quartz-crucible", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk02")
+}:add_unlock("silicon-mk03")
 
 RECIPE {
     type = "recipe",
@@ -100,7 +100,7 @@ RECIPE {
         {type = "item", name = "monocrystalline-slab", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk02")
+}:add_unlock("silicon-mk03")
 
 RECIPE {
     type = "recipe",
@@ -117,7 +117,7 @@ RECIPE {
         {type = "item", name = "monocrystalline-plate", amount = 5},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk02")
+}:add_unlock("silicon-mk03")
 
 RECIPE {
     type = "recipe",

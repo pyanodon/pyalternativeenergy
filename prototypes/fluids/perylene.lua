@@ -22,7 +22,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "tar", amount = 100},
-        {type = "item", name = "lithium-peroxide", amount = 2},
+        {type = "item", name = "nexelit-plate", amount = 2},
         {type = "item", name = "navens", amount = 5},
         {type = "item", name = "p2s5", amount = 5},
         {type = "fluid", name = "benzene", amount = 150},
