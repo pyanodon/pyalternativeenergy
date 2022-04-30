@@ -12,7 +12,7 @@ RECIPE{
 		},
 	main_product = "phosphorus-tricloride",
 	category = "electrolyzer"
-	}:add_unlock('uranium-mk01')
+	}:add_unlock('nuclear-power')
 
 FLUID {
     type = "fluid",

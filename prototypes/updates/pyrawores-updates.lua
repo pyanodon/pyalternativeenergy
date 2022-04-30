@@ -165,7 +165,8 @@ RECIPE {
   ingredients =
     {
       {"aluminium-plate", 5},
-      {"yellow-cake", 5}
+      {"u-235", 2},
+      {"u-238", 15}
     },
   results = {
       {"uranium-fuel-cell", 1}

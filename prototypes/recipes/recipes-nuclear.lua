@@ -235,7 +235,7 @@ RECIPE {
     main_product = "purex-waste-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -254,7 +254,7 @@ RECIPE {
     main_product = "purex-waste-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -278,7 +278,7 @@ RECIPE {
     main_product = "metallic-glass",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")--TODO: replace metallic glass with a different process and rocket launches to get rid of the waste in space
+}:add_unlock("nuclear-power-mk03")--TODO: replace metallic glass with a different process and rocket launches to get rid of the waste in space
 
 
 --plutonium washing
@@ -397,7 +397,7 @@ RECIPE {
     main_product = "purex-u-concentrate-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -417,7 +417,7 @@ RECIPE {
     main_product = "purex-u-concentrate-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -433,7 +433,7 @@ RECIPE {
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk02")
 
 --purex raffinate
 
@@ -454,7 +454,7 @@ RECIPE {
     main_product = "purex-raffinate-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -473,7 +473,7 @@ RECIPE {
     main_product = "purex-raffinate-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -490,7 +490,7 @@ RECIPE {
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk03")
 
 --ac reduction
 
@@ -567,6 +567,27 @@ RECIPE {
 }:add_unlock("nuclear-power")
 
 --MANHATTEN PROJECT--
+
+RECIPE {
+    type = "recipe",
+    name = "split-yellowcake",
+    enabled = false,
+    energy_required = 10,
+    category = "pa",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon_size = 64,
+    ingredients =
+      {
+        {type = "item", name = "yellow-cake", amount = 1},
+      },
+    results = {
+        {type = "item", name = "u-235", amount = 1, probability = 0.1},
+        {type = "item", name = "u-238", amount = 1, probability = 0.9}
+    },
+    --main_product = "u-235",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+  }:add_unlock('uranium-processing')
 
   RECIPE {
     type = "recipe",

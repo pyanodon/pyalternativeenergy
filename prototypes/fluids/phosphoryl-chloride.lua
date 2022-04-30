@@ -12,7 +12,7 @@ RECIPE{
 		},
 	main_product = "phosphoryl-chloride",
 	category = "electrolyzer"
-	}:add_unlock('uranium-mk01')
+	}:add_unlock('nuclear-power')
 
 FLUID {
     type = "fluid",
