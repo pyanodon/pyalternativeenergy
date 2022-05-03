@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'nonrenewable-mk01','energy-2'},
+    dependencies = {"nonrenewable-mk01"},
     effects = {},
     unit = {
         count = 300,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'nonrenewable-mk02','energy-3'},
+    dependencies = {"nonrenewable-mk02"},
     effects = {},
     unit = {
         count = 400,
@@ -59,6 +61,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'nonrenewable-mk03'},
+    dependencies = {"nonrenewable-mk03"},
     effects = {},
     unit = {
         count = 500,

@@ -60,8 +60,8 @@ RECIPE("quantum-computer"):add_ingredient({type = "item", name = "metastable-qua
 RECIPE("solar-panel-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotubes", amount = 20})
 RECIPE("solar-panel-mk04"):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "quantum-dots", amount = 10}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 20})
 
-RECIPE('centrifuge-mk04'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE('centrifuge-mk03'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 20})
+RECIPE('centrifuge-mk03'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
+RECIPE('centrifuge-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 20}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 
 RECIPE('py-oil-powerplant-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE('py-oil-powerplant-mk03'):add_ingredient({type = "item", name = "harbonic-absorber", amount = 40}):add_ingredient({type = "item", name = "nems", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotubes", amount = 20})
@@ -92,7 +92,7 @@ RECIPE("py-logistic-robot-02"):add_ingredient({type = "item", name = "self-assem
 RECIPE("construction-robot-ht"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2})
 RECIPE("logistic-robot-ht"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2})
 RECIPE('lithium-chloride'):remove_ingredient("reo"):add_ingredient({type = "item", name = "lithium-hydroxide", amount = 1})
-RECIPE("nexelit-battery"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"})
+RECIPE("nexelit-battery"):remove_unlock('railway-mk03'):add_unlock({"battery-mk02"})
 RECIPE("nexelit-battery-recharge"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"})
 RECIPE("nanochip"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("carbon-nanotube"):add_ingredient({type = "item", name = "milfe", amount = 1}).results[1].amount = 5

@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'machines-mk02','antimony-mk01'},
+    dependencies = {"antimony-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'machines-mk03','antimony-mk02'},
+    dependencies = {"antimony-mk02"},
     effects = {},
     unit = {
         count = 150,
@@ -59,6 +61,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'machines-mk04','antimony-mk03'},
+    dependencies = {"antimony-mk03"},
     effects = {},
     unit = {
         count = 150,

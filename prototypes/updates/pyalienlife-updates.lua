@@ -2,6 +2,10 @@
 table.insert(data.raw["rocket-silo"]["mega-farm"].crafting_categories, "mova-farm")
 table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
 
+RECIPE("mega-farm"):remove_ingredient("intelligent-unit"):replace_ingredient("superconductor-servomechanims", "small-parts-03")
+RECIPE("mega-farm"):remove_ingredient("blanket"):replace_ingredient("divertor", "ns-material"):remove_ingredient("harmonic-absorber")
+RECIPE("harvester"):replace_ingredient("botanical-nursery-mk03", "botanical-nursery-mk02"):replace_ingredient("soil-extractormk03", "soil-extractormk02")
+
 RECIPE("atomizer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("bio-printer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -248,7 +252,7 @@ RECIPE('korlex-food-02'):replace_ingredient("fish-oil", "fatty-acids")
 RECIPE('dynemicin'):add_ingredient({type = "item", name = "acrylic", amount = 2})
 RECIPE("cellulose-00"):remove_unlock("cellulose-mk01"):add_unlock("vacuum-tube-electronics")
 RECIPE("bhoddos-mk02"):remove_ingredient("40-u-powder")
-RECIPE("bhoddos-mk02"):remove_ingredient("70-u-powder")
+RECIPE("bhoddos-mk03"):remove_ingredient("70-u-powder")
 
 -- TODO
 -- RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}

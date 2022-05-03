@@ -460,7 +460,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "item", name = "diamond", amount = 5},
-        {type = "item", name = "nv-center", amount = 1},
+        {type = "item", name = "parametric-oscilator", amount = 1}, -- nv-center
         {type = "item", name = "yag-laser-module", amount = 1},
     },
     results = {
@@ -534,7 +534,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = "fluid", name = "perylene", amount = 100},
-        {type = "item", name = "high-grade-quartz", amount = 2},
+        {type = "fluid", name = "high-grade-quartz-pulp", amount = 50},
         {type = "item", name = "silver-plate", amount = 2},
     },
     results = {

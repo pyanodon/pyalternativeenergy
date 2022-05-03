@@ -19,7 +19,7 @@ RECIPE {
     results = {
         {"ree-mining-drill-mk04", 1}
     }
-}:add_unlock("machines-mk04")
+}:add_unlock("machines-mk05")
 
 ITEM {
     type = "item",

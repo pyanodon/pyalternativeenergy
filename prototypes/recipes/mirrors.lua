@@ -205,7 +205,7 @@ RECIPE {
         {type = "item", name = "axis-tracker", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("thermal-mk02")
+}:add_unlock("thermal-mk01")
 
 RECIPE {
     type = "recipe",

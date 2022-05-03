@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'nonrenewable-mk02','gasplant-mk01'},
+    dependencies = {"gasplant-mk01"},
     effects = {},
     unit = {
         count = 500,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'nonrenewable-mk03','gasplant-mk02'},
+    dependencies = {"gasplant-mk02"},
     effects = {},
     unit = {
         count = 500,
@@ -59,6 +61,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'nonrenewable-mk04','gasplant-mk03'},
+    dependencies = {"gasplant-mk03"},
     effects = {},
     unit = {
         count = 500,

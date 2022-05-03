@@ -18,7 +18,7 @@ RECIPE {
     results = {
         {"centrifuge-mk02", 1}
     }
-}:add_unlock("machines-mk02")
+}:add_unlock("machines-mk03")
 
 ITEM {
     type = "item",

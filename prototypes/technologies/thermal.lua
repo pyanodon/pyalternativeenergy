@@ -22,12 +22,14 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'thermal-mk01','solar-power-mk02'},
+    dependencies = {"thermal-mk01"},
     effects = {},
     unit = {
         count = 400,
         ingredients = {
             {'automation-science-pack', 1},
-            {'logistic-science-pack', 1}
+            {'logistic-science-pack', 1},
+            {'chemical-science-pack', 1}
         },
         time = 45
     }
@@ -40,13 +42,15 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'thermal-mk02','solar-power-mk03'},
+    dependencies = {"thermal-mk02"},
     effects = {},
     unit = {
         count = 500,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
-            {'chemical-science-pack', 1}
+            {'chemical-science-pack', 1},
+            {'production-science-pack', 1}
         },
         time = 60
     }
@@ -59,6 +63,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'thermal-mk03'},
+    dependencies = {"thermal-mk03"},
     effects = {},
     unit = {
         count = 600,

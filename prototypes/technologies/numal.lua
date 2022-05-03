@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {"water-animals-mk02",'numal-mk01'},
+    dependencies = {"numal-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {"water-animals-mk03",'numal-mk02'},
+    dependencies = {"numal-mk02"},
     effects = {},
     unit = {
         count = 150,
@@ -59,6 +61,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {"water-animals-mk04",'numal-mk03'},
+    dependencies = {"numal-mk03"},
     effects = {},
     unit = {
         count = 150,

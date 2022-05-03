@@ -22,6 +22,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'geothermal-power-mk01','renewable-mk01'},
+    dependencies = {"geothermal-power-mk01"},
     effects = {},
     unit = {
         count = 250,
@@ -40,6 +41,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'geothermal-power-mk02','renewable-mk02'},
+    dependencies = {"geothermal-power-mk02"},
     effects = {},
     unit = {
         count = 350,
@@ -59,6 +61,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'geothermal-power-mk03','renewable-mk03'},
+    dependencies = {"geothermal-power-mk03"},
     effects = {},
     unit = {
         count = 450,

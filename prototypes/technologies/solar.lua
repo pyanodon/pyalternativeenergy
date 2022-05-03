@@ -24,6 +24,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'solar-mk01','solar-power-mk02',"silicon-mk02"},
+    dependencies = {"solar-mk01"},
     effects = {},
     unit = {
         count = 250,
@@ -43,6 +44,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'solar-mk02','solar-power-mk03'},
+    dependencies = {"solar-mk02"},
     effects = {},
     unit = {
         count = 350,
@@ -63,6 +65,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'solar-mk03','solar-power-mk04','nano-tech'},
+    dependencies = {"solar-mk03"},
     effects = {},
     unit = {
         count = 450,

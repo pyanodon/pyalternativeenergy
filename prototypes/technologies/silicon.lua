@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'machines-mk02','silicon-mk01'},
+    dependencies = {"silicon-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -42,6 +43,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'machines-mk03','silicon-mk02'},
+    dependencies = {"silicon-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -62,6 +64,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'machines-mk04','silicon-mk03'},
+    dependencies = {"silicon-mk03"},
     effects = {},
     unit = {
         count = 400,

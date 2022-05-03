@@ -21,6 +21,7 @@ RECIPE("particle-accelerator-mk01"):remove_ingredient('gasturbinemk02')
 RECIPE("fusion-reactor-mk01"):remove_ingredient('gasturbinemk03')
 RECIPE("py-turbine"):remove_ingredient('gasturbinemk03') -- TODO: replace with something
 
+RECIPE("automated-screener-mk01"):remove_unlock("machines-mk01"):add_unlock("crusher")
 RECIPE("agitator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("nmf-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 -- RECIPE("secondary-crusher-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
@@ -68,6 +69,7 @@ RECIPE("jig-mk03"):add_ingredient({type = "item", name = "ns-material", amount =
 RECIPE("grease-table-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7})
 RECIPE("mixer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("py-heat-exchanger-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
+RECIPE("fusion-reactor-mk01"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 
 RECIPE("agitator-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
 RECIPE("vacuum-pump-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount =2}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
@@ -82,12 +84,11 @@ RECIPE("compressor-mk04"):add_ingredient({type = "item", name = "metastable-quas
 RECIPE("jig-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("grease-table-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
 RECIPE("mixer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("fusion-reactor-mk01"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5})
 RECIPE("fusion-reactor-mk02"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
 RECIPE("py-heat-exchanger-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 
-RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "super-alloy", amount = 50}):add_ingredient({type = "item", name = "py-heat-exchanger", amount = 1})
-RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "nbti-alloy", amount = 30}):add_ingredient({type = "item", name = "wall-shield", amount = 5}):add_ingredient({type = "item", name = "science-coating", amount = 10}):add_ingredient({type = "item", name = "control-unit", amount = 5})
+RECIPE("centrifuge-mk03"):add_ingredient({type = "item", name = "nbti-alloy", amount = 50}):add_ingredient({type = "item", name = "py-heat-exchanger", amount = 1})
+RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "wall-shield", amount = 5}):add_ingredient({type = "item", name = "science-coating", amount = 10}):add_ingredient({type = "item", name = "control-unit", amount = 5})
 
 --RECIPES
 

@@ -1,7 +1,6 @@
 local fun = require("__pyrawores__/prototypes/functions/functions")
 
 --TECHNOLOGY--
-TECHNOLOGY("nexelit-mk01"):remove_pack('logistic-science-pack')
 TECHNOLOGY("fluid-processing-machines-1"):remove_pack('logistic-science-pack'):remove_prereq('electric-engine')
 TECHNOLOGY("plastics"):remove_pack('logistic-science-pack')
 
@@ -17,6 +16,8 @@ RECIPE("impact-crusher-mk01"):add_ingredient({type = "item", name = "intermetall
 RECIPE("leaching-station-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 RECIPE("scrubber-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("wet-scrubber-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
+RECIPE("salt-mine"):add_ingredient({type = "item", name = "intermetallics", amount = 20})
+RECIPE("salt-mine"):remove_unlock("electrolysis"):add_unlock("energy-1")
 
 RECIPE("bof-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("smelter-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15})
@@ -38,10 +39,13 @@ RECIPE("lead-mine"):add_ingredient({type = "item", name = "self-assembly-monolay
 RECIPE("nexelit-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("nickel-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("quartz-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
---RECIPE("salt-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("tin-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("uranium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("zinc-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
+RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','advanced-circuit'):remove_unlock('machines-mk05'):add_unlock('machines-mk03'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
+RECIPE("sinter-unit"):replace_ingredient("advanced-foundry-mk03", "advanced-foundry-mk02"):replace_ingredient("super-alloy", "stainless-steel")
+RECIPE("drp"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):replace_ingredient("processing-unit", "advanced-circuit")
+RECIPE("drp"):remove_unlock("machines-mk04"):add_unlock("machines-mk03")
 
 RECIPE("bof-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 RECIPE("smelter-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15})
@@ -54,7 +58,6 @@ RECIPE("impact-crusher-mk03"):add_ingredient({type = "item", name = "ns-material
 RECIPE("leaching-station-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
 RECIPE("scrubber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 RECIPE("wet-scrubber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6})
-RECIPE("drp"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 
 RECIPE("bof-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE("smelter-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4})
@@ -67,17 +70,19 @@ RECIPE("impact-crusher-mk04"):add_ingredient({type = "item", name = "metastable-
 RECIPE("leaching-station-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
 RECIPE("scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE("wet-scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','processing-unit'):remove_unlock('machine-mk04'):add_unlock('machine-mk03'):add_ingredient({type = "item", name = "ns-material", amount = 20})
 
 --RECIPES--
 RECIPE("plastic3"):replace_ingredient('nitrobenzene','aniline')
 RECIPE("battery-1"):replace_ingredient("lead-plate", "pbsb-alloy"):remove_unlock("battery"):add_unlock("battery-mk02")
 RECIPE("battery-2"):replace_ingredient("lead-plate", "pbsb-alloy"):remove_unlock("battery"):add_unlock("battery-mk02")
-RECIPE("drill-head-3"):remove_unlock('drill-head-mk01'):add_unlock('machines-mk01')
 
 --RECIPE MOVING--
-RECIPE("eaf-mk01"):remove_unlock('aluminium-mk01'):add_unlock('machines-mk01')
+RECIPE("eaf-mk01"):remove_unlock('smelters-mk01'):add_unlock('machines-mk01')
 RECIPE("zinc-plate-1"):remove_unlock("zink-mk01"):add_unlock("creosote")
+RECIPE("nickel-plate-1"):remove_unlock("nickel-mk01"):add_unlock("syngas")
+RECIPE("drill-head-3"):remove_unlock('drill-head-mk01'):add_unlock('antimony-mk01')
+RECIPE("water-saline"):remove_unlock("electrolysis"):add_unlock("energy-1")
+RECIPE("gravel-saline-water"):remove_unlock("electrolysis"):add_unlock("crusher")
 
 --removing old nuclear reactor fuel cells as they wont do anything now.
 RECIPE("uranium-fuel-cell"):remove_unlock('uranium-mk01')--:add_unlock('uranium-processing')
@@ -102,9 +107,9 @@ RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessin
 RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
-RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'u-235'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'pu-239'):add_unlock('nuclear-power')
 RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):add_unlock('nuclear-power-mk02')
-RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'pu-239'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'u-235'):add_unlock('nuclear-power')
 
 --need fuelrod mk04 and mk05 from thorium
 --fuelrod-mk04 with use curium-250 from califorium
@@ -114,31 +119,35 @@ RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('n
 RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power')
 
 --removing old enrichement recipes
-RECIPE("u-15"):remove_unlock('uranium-mk03')
-RECIPE("u-15-2"):remove_unlock('uranium-mk03')
-RECIPE("u-20"):remove_unlock('uranium-mk03')
-RECIPE("u-23"):remove_unlock('uranium-mk03')
-RECIPE("u-30"):remove_unlock('uranium-mk03')
-RECIPE("u-33"):remove_unlock('uranium-mk03')
-RECIPE("u-40"):remove_unlock('uranium-mk03')
-RECIPE("u-50"):remove_unlock('uranium-mk03')
-RECIPE("u-65"):remove_unlock('uranium-mk03')
-RECIPE("u-70"):remove_unlock('uranium-mk03')
-RECIPE("u-73"):remove_unlock('uranium-mk04')
-RECIPE("u-75"):remove_unlock('uranium-mk04')
-RECIPE("u-79-2"):remove_unlock('uranium-mk04')
-RECIPE("u-81"):remove_unlock('uranium-mk04')
-RECIPE("u-83"):remove_unlock('uranium-mk04')
+RECIPE("u-15"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-15-2"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-20"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-23"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-30"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-33"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-40"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-50"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-65"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-70"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
+RECIPE("u-73"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+RECIPE("u-75"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+RECIPE("u-79"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+RECIPE("u-79-2"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+RECIPE("u-81"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+RECIPE("u-83"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
 
-RECIPE("yellow-cake"):remove_unlock('uranium-mk04')
-RECIPE("yellow-cake-u235"):remove_unlock('uranium-mk04')
+RECIPE("yellow-cake"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+RECIPE("yellow-cake-u235"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+
 
 --move uranium ore processing recipes
 RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
 RECIPE("grade-1-u-recrush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
 RECIPE("grade-2-u-crush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
 
-RECIPE("20-u-powder"):remove_unlock("uranium-mk01")
+RECIPE("20-u-powder"):remove_unlock("uranium-mk01"):set_fields{hidden = true, enabled = false}
+RECIPE("40-u-powder"):remove_unlock("uranium-mk02"):set_fields{hidden = true, enabled = false}
+RECIPE("70-u-powder"):remove_unlock("uranium-mk03"):set_fields{hidden = true, enabled = false}
 --RECIPE("u-pulp-01"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "powdered-u", amount = 5}):replace_ingredient('sulfuric-acid','hydrogen-peroxide'):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 --TODO:look into uranium issues with pyro changes
 RECIPE("u-pulp-01"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')

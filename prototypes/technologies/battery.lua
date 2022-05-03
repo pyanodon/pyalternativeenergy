@@ -23,6 +23,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'basic-electronics','battery-mk01'},
+    dependencies = {"battery-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -41,6 +42,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'chitin','battery-mk02'},
+    dependencies = {"battery-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -60,6 +62,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'advanced-electronics','battery-mk03'},
+    dependencies = {"battery-mk03"},
     effects = {},
     unit = {
         count = 400,

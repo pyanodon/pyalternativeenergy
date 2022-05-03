@@ -38,6 +38,22 @@
 
 RECIPE {
     type = "recipe",
+    name = "control-rod",
+    category = "crafting",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "item", name = "iron-plate", amount = 50}
+    },
+    results = {
+        {type = "item", name = "control-rod", amount = 1}
+    },
+    subgroup = "py-items",
+    order = "g"
+}
+
+RECIPE {
+    type = "recipe",
     name = "neutron-absorbston",
     category = "neutron-absorber",
     icon = '__base__/graphics/icons/assembling-machine-2.png',

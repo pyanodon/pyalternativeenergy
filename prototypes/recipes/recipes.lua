@@ -374,7 +374,7 @@ RECIPE {
         {type = "item", name = "nxsb-alloy", amount = 3},
     },
     --main_product = "sb-dust",
-}:add_unlock("antimony-mk01")
+}:add_unlock("alloys-mk02")
 
 RECIPE {
     type = "recipe",
