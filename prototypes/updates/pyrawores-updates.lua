@@ -42,10 +42,10 @@ RECIPE("quartz-mine"):add_ingredient({type = "item", name = "self-assembly-monol
 RECIPE("tin-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("uranium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("zinc-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','advanced-circuit'):remove_unlock('machines-mk05'):add_unlock('machines-mk03'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
+RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','advanced-circuit'):remove_unlock('machines-mk05'):add_unlock('smelters-mk02'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("sinter-unit"):replace_ingredient("advanced-foundry-mk03", "advanced-foundry-mk02"):replace_ingredient("super-alloy", "stainless-steel")
 RECIPE("drp"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):replace_ingredient("processing-unit", "advanced-circuit")
-RECIPE("drp"):remove_unlock("machines-mk04"):add_unlock("machines-mk03")
+RECIPE("drp"):remove_unlock("machines-mk04"):add_unlock("smelters-mk02")
 
 RECIPE("bof-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 RECIPE("smelter-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15})
@@ -83,6 +83,8 @@ RECIPE("nickel-plate-1"):remove_unlock("nickel-mk01"):add_unlock("syngas")
 RECIPE("drill-head-3"):remove_unlock('drill-head-mk01'):add_unlock('antimony-mk01')
 RECIPE("water-saline"):remove_unlock("electrolysis"):add_unlock("energy-1")
 RECIPE("gravel-saline-water"):remove_unlock("electrolysis"):add_unlock("crusher")
+RECIPE("p2s5"):remove_unlock("additives"):add_unlock("intermetallics-mk02")
+RECIPE("p2s5-2"):remove_unlock("additives"):add_unlock("intermetallics-mk02")
 
 --removing old nuclear reactor fuel cells as they wont do anything now.
 RECIPE("uranium-fuel-cell"):remove_unlock('uranium-mk01')--:add_unlock('uranium-processing')
@@ -107,7 +109,7 @@ RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessin
 RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
-RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'pu-239'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'pu-239'):add_unlock('uranium-processing')
 RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):add_unlock('nuclear-power-mk02')
 RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'u-235'):add_unlock('nuclear-power')
 

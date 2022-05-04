@@ -7,8 +7,8 @@ TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04'):add_p
 TECHNOLOGY('ht-trains'):add_prereq('battery-mk02')
 -- TECHNOLOGY("nucleo"):remove_pack('chemical-science-pack'):remove_prereq('energy-2'):remove_prereq('boron-mk02'):add_prereq('uranium-processing')
 TECHNOLOGY("ht-robotics"):add_prereq("advanced-robotics")
-
 TECHNOLOGY("microfibers"):remove_pack('production-science-pack')
+TECHNOLOGY("ethylene"):remove_pack("chemical-science-pack")
 
 --BUILDINDS--
 RECIPE("quantum-computer"):remove_ingredient('gasturbinemk03')
@@ -108,8 +108,8 @@ RECIPE("pa-proton"):replace_ingredient("uranium-235", "u-235")
 RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
 RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si")
 RECIPE("silicon"):remove_unlock("semiconductor-doping"):add_unlock("silicon-mk01")
-RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-processing")
-RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-processing")
+RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
+RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
 
 table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 
@@ -167,4 +167,4 @@ RECIPE {
         {type = 'item', name = 'p-dope', amount = 20}
     },
     main_product = 'p-dope'
-}:add_unlock('lithium-processing')
+}:add_unlock('semiconductor-doping-mk02')

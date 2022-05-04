@@ -69,7 +69,7 @@ RECIPE("ht-generic-wagon"):add_ingredient({type = "item", name = "ns-material", 
 RECIPE("ht-generic-fluid-wagon"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient({type = "item", name = "super-steel", amount = 10})
 
 TECHNOLOGY("nuclear-fuel-reprocessing"):set_field{enabled = false} --BUG?
-RECIPE('lithium-peroxide'):remove_unlock('filtration-mk02'):add_unlock('filtration'):add_ingredient({type = "item", name = "lithium-hydroxide", amount = 2})
+RECIPE('lithium-peroxide'):remove_unlock('filtration-mk02'):add_unlock('lithium-processing'):add_ingredient({type = "item", name = "lithium-hydroxide", amount = 2})
 RECIPE("low-density-structure"):add_ingredient({type = "item", name = "cf", amount = 10})
 RECIPE("arithmetic-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("decider-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})

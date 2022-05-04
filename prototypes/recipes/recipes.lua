@@ -581,7 +581,7 @@ RECIPE {
         {type = "item", name = "cyanoacetate", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("renewable-mk03")
+}:add_unlock("erbium")
 
 RECIPE {
     type = "recipe",
@@ -820,7 +820,7 @@ RECIPE {
         {type = "item", name = "pbsb-alloy", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("lead-mk01")
+}:add_unlock("antimony-mk01")
 
 RECIPE {
     type = "recipe",
@@ -836,7 +836,7 @@ RECIPE {
         {type = "item", name = "pbsb-alloy", amount = 5},
     },
     --main_product = "eg-si",
-}:add_unlock("lead-mk02")
+}:add_unlock("alloys-mk02")
 
 RECIPE {
     type = "recipe",

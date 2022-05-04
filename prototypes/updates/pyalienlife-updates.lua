@@ -2,6 +2,8 @@
 table.insert(data.raw["rocket-silo"]["mega-farm"].crafting_categories, "mova-farm")
 table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
 
+TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack")
+
 RECIPE("mega-farm"):remove_ingredient("intelligent-unit"):replace_ingredient("superconductor-servomechanims", "small-parts-03")
 RECIPE("mega-farm"):remove_ingredient("blanket"):replace_ingredient("divertor", "ns-material"):remove_ingredient("harmonic-absorber")
 RECIPE("harvester"):replace_ingredient("botanical-nursery-mk03", "botanical-nursery-mk02"):replace_ingredient("soil-extractormk03", "soil-extractormk02")
@@ -253,6 +255,8 @@ RECIPE('dynemicin'):add_ingredient({type = "item", name = "acrylic", amount = 2}
 RECIPE("cellulose-00"):remove_unlock("cellulose-mk01"):add_unlock("vacuum-tube-electronics")
 RECIPE("bhoddos-mk02"):remove_ingredient("40-u-powder")
 RECIPE("bhoddos-mk03"):remove_ingredient("70-u-powder")
+RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
+
 
 -- TODO
 -- RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}

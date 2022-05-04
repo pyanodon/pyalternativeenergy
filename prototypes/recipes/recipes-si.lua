@@ -121,7 +121,7 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "silicon-wafer-2",
+    name = "silicon-wafer-3",
     category = "electronic",
     enabled = false,
     energy_required = 5,
@@ -133,11 +133,11 @@ RECIPE {
         {type = "item", name = "silicon-wafer", amount = 5},
     },
     --main_product = "eg-si",
-}:add_unlock("basic-electronics")
+}:add_unlock("silicon-mk03")
 
 RECIPE {
     type = "recipe",
-    name = "silicon-wafer-3",
+    name = "silicon-wafer-2",
     category = "electronic",
     enabled = false,
     energy_required = 5,
@@ -149,4 +149,4 @@ RECIPE {
         {type = "item", name = "silicon-wafer", amount = 3},
     },
     --main_product = "eg-si",
-}:add_unlock("basic-electronics")
+}:add_unlock("silicon-mk02")

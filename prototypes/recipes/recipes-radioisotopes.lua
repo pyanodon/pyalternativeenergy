@@ -94,7 +94,7 @@ RECIPE {
     main_product = "pu-239",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nucleo")
+}:add_unlock("uranium-processing")
 
 RECIPE {
     type = "recipe",
