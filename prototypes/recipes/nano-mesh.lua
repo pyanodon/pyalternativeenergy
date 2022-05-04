@@ -85,7 +85,7 @@ RECIPE {
         {type = "item", name = "ammonium-mixture", amount = 1},
     },
     --main_product = "guhcl",
-}:add_unlock("nano-mesh")
+}:add_unlock("aluminium-mk03")
 
 RECIPE {
     type = "recipe",
