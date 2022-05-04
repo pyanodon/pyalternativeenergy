@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"rtg", 1}
     }
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk02")
 
 ITEM {
     type = "item",

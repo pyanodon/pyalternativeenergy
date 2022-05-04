@@ -109,16 +109,16 @@ RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessin
 RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
-RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'pu-239'):add_unlock('uranium-processing')
-RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):add_unlock('nuclear-power-mk02')
-RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'u-235'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'u-235'):add_unlock('uranium-processing')
+RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):replace_ingredient("lead-container", "coated-container"):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'pu-239'):add_unlock('nuclear-power-mk02')
 
 --need fuelrod mk04 and mk05 from thorium
 --fuelrod-mk04 with use curium-250 from califorium
 --fuelrod mk05 will use Polonium-210 from u234 from a series of alpha decays aka helium particles
 
-RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('nuclear-power')
-RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power')
+RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('nuclear-power-mk03')
+RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power-mk04')
 
 --removing old enrichement recipes
 RECIPE("u-15"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}

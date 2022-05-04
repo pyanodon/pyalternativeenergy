@@ -525,7 +525,7 @@ RECIPE {
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -544,7 +544,7 @@ RECIPE {
     main_product = "americium-oxide",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")--thorium is a reducing agent and therefore should be an oxide
+}:add_unlock("nuclear-power-mk03")--thorium is a reducing agent and therefore should be an oxide
 
 RECIPE {
     type = "recipe",
@@ -561,7 +561,7 @@ RECIPE {
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")--lithium is a reducing agent and therefore should be an oxide
+}:add_unlock("nuclear-power-mk03")--lithium is a reducing agent and therefore should be an oxide
 
 RECIPE {
     type = "recipe",
@@ -580,7 +580,7 @@ RECIPE {
     main_product = "antimonium-ore",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk03")
 
 --MANHATTEN PROJECT--
 
@@ -697,7 +697,7 @@ RECIPE {
         {type = "fluid", name = "purex-raffinate", amount = 100}
     },
     main_product = "plutonium-peroxide",
-  }:add_unlock('nuclear-power')
+  }:add_unlock('nuclear-power-mk02')
 
 RECIPE {
     type = "recipe",

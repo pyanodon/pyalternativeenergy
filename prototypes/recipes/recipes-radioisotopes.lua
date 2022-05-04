@@ -27,7 +27,7 @@ RECIPE {
     main_product = "u-238",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -46,7 +46,7 @@ RECIPE {
     main_product = "u-237",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -65,7 +65,7 @@ RECIPE {
     main_product = "po-210",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}:add_unlock("nuclear-power-mk04")
 
 --plutonium
 
@@ -211,7 +211,7 @@ RECIPE {
     main_product = "am-241",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk02")
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",

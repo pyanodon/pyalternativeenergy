@@ -285,7 +285,7 @@ RECIPE {
         {type = "item", name = "ometad", amount = 1},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk03")
+}:add_unlock("thermal-mk04")
 
 RECIPE {
     type = "recipe",
@@ -308,4 +308,4 @@ RECIPE {
         {type = "item", name = "mirror-mk04", amount = 1},
     },
     --main_product = "libr",
-}:add_unlock("thermal-mk03")
+}:add_unlock("thermal-mk04")
