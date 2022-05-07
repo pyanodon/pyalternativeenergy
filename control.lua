@@ -11,6 +11,7 @@ script.on_init(function()
     global.solar_panels = {}
     global.antisolar_panels = {}
     global.lrf_panels = {}
+    global.solar_tower = {}
 end)
 
 local function distance ( x1, y1, x2, y2 )
@@ -38,6 +39,9 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         E.destroy()
         global.windmills[HE.unit_number] = {windmill = HE, animation = ani, max_power = 50, base_name = name}
         -- log(serpent.block(global.windmills))
+
+    elseif E.name == "solar-tower-building" then
+        global.solar_tower[E.unit_number] = {tower = E, panels = {}, panel_count = 0}
     elseif string.match(E.name, 'solar%-tower%-panel') ~= nil then
         -- find solar tower and angle from it
         local tower = game.surfaces[E.surface.name].find_entities_filtered{name = 'solar-tower-building'}
@@ -61,12 +65,14 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 
                 if sprite_num < 1 then sprite_num = 1 end
 
-                game.surfaces[E.surface.name].create_entity{
+                local panel = game.surfaces[E.surface.name].create_entity{
                     name = 'solar-tower-panel' .. sprite_num,
                     position = E.position,
                     force = E.force
                 }
                 E.destroy()
+                global.solar_tower[tower[1].unit_number].panels[panel.unit_number] = panel
+                global.solar_tower[tower[1].unit_number].panel_count = global.solar_tower[tower[1].unit_number].panel_count + 1
             else
                 game.show_message_dialog{
                     text = {"warnings.solar-panel"}
@@ -258,6 +264,20 @@ script.on_nth_tick(60, function(event)
             global.solar_panels[p].animation = ani
         end
     end
+    if next(global.solar_tower) ~= nil then
+        for t,tower in pairs(global.solar_tower) do
+            if tower.panel_count ~= 0 then
+                local panel_count = tower.panel_count
+                local tt = tower.tower
+                for b,_ in pairs(tt.fluidbox) do
+                    if tt.fluidbox.get_filter(b).name == "void" then
+                        tt.remove_fluid{name = "void", amount = 500}
+                        tt.insert_fluid({name = "void", amount = 100, temperature = 10 * panel_count})
+                    end
+                end
+            end
+        end
+    end
 end)
 
 script.on_nth_tick(55, function(event)
@@ -289,6 +309,10 @@ script.on_nth_tick(55, function(event)
             end
         end
     end
+end)
+
+script.on_nth_tick(30, function(event)
+
 end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)

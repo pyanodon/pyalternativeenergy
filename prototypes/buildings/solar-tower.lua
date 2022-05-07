@@ -323,6 +323,7 @@ ENTITY {
       production_type = "input-output",
       filter = "molten-salt"
     },
+
     output_fluid_box =
     {
       base_area = 1,
@@ -334,7 +335,7 @@ ENTITY {
         {type = "output", position = {0, -3.0}}
       },
       production_type = "output",
-      filter = "steam"
+      --filter = "steam"
     },
     energy_consumption = "29.61MW",
     energy_source =
@@ -354,11 +355,13 @@ ENTITY {
 		pipe_covers = DATA.Pipes.covers(false, true, true, true),
 		pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
 		production_type = "input",
+        filter = "void",
 		},
 	effectivity = 2,
-	burns_fluid = true,
-	scale_fluid_usage = true,
-	--fluid_usage_per_tick = 2,
+	burns_fluid = false,
+	scale_fluid_usage = false,
+	fluid_usage_per_tick = 1,
+    filter = "void",
       smoke =
       {
         {
