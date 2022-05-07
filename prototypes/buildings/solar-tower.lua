@@ -23,8 +23,9 @@ ITEM {
     stack_size = 10
 }
 
+--[[
 ENTITY {
-    type = "assembling-machine",
+    type = "boiler",
     name = "solar-tower-building",
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-tower.png",
 	icon_size = 64,
@@ -36,6 +37,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-9.8, -9.8}, {9.8, 9.8}},
     selection_box = {{-10.0, -10.0}, {10.0, 10.0}},
+    mode = "heat-water-inside",
     match_animation_speed_to_activity = false,
     module_specification = {
         module_slots = 0
@@ -43,12 +45,13 @@ ENTITY {
     --allowed_effects = {"speed"},
     crafting_categories = {"solar-tower"},
     crafting_speed = 1,
+    fixed_recipe = "",
     energy_source = {
-        type = "electric",
+        type = "burner",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.0,
     },
-    energy_usage = "400kW",
+    energy_usage = "1MW",
     animation = {
         layers = {
             {
@@ -201,12 +204,17 @@ ENTITY {
     fluid_boxes = {
         --1
         {
-            production_type = "input",
+            production_type = "input-output",
             pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {1.5, -10.5}}}
+            pipe_connections =
+            {
+                {type = "input-output", position = {1.5, -10.5}},
+                {type = "input-output", position = {1.5, 10.5}}
+            },
+            filter = "molten-salt"
         },
         {
             production_type = "input",
@@ -260,6 +268,7 @@ ENTITY {
             base_level = 1,
             pipe_connections = {{type = "output", position = {-3.5, 10.5}}}
         },
+
         off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -269,3 +278,261 @@ ENTITY {
         apparent_volume = 2.5
     }
 }
+]]--
+
+ENTITY {
+    type = "boiler",
+    name = "solar-tower-building",
+    icon = "__pypetroleumhandlinggraphics__/graphics/icons/oil-burner-mk01.png",
+    icon_size = 32,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.2, result = "solar-tower-building"},
+    max_health = 200,
+    corpse = "boiler-remnants",
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    mode = "heat-water-inside",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      },
+      {
+        type = "explosion",
+        percent = 30
+      },
+      {
+        type = "impact",
+        percent = 30
+      }
+    },
+    collision_box = {{-2.29, -2.29}, {2.29, 2.29}},
+    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    target_temperature = 250,
+    fluid_box =
+    {
+      base_area = 1,
+      height = 2,
+      base_level = -1,
+      pipe_covers = DATA.Pipes.covers(false, true, true, true),
+      pipe_connections =
+      {
+        {type = "input-output", position = {-3.0, 0.0}},
+        {type = "input-output", position = {3.0, 0.0}}
+      },
+      production_type = "input-output",
+      filter = "molten-salt"
+    },
+    output_fluid_box =
+    {
+      base_area = 1,
+      height = 2,
+      base_level = 1,
+      pipe_covers = DATA.Pipes.covers(false, true, true, true),
+      pipe_connections =
+      {
+        {type = "output", position = {0, -3.0}}
+      },
+      production_type = "output",
+      filter = "steam"
+    },
+    energy_consumption = "29.61MW",
+    energy_source =
+    {
+      type = "fluid",
+      emissions_per_minute = 30,
+      destroy_non_fuel_fluid = false,
+	  fluid_box =
+		{
+		base_area = 1,
+		height = 2,
+		base_level = -1,
+		pipe_connections =
+		{
+			{type = "input", position = {0, 3.0}}
+		},
+		pipe_covers = DATA.Pipes.covers(false, true, true, true),
+		pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+		production_type = "input",
+		},
+	effectivity = 2,
+	burns_fluid = true,
+	scale_fluid_usage = true,
+	--fluid_usage_per_tick = 2,
+      smoke =
+      {
+        {
+          name = "turbine-smoke",
+          north_position = util.by_pixel(0, -160),
+          south_position = util.by_pixel(0, -160),
+          east_position = util.by_pixel(0, -160),
+          west_position = util.by_pixel(0, -160),
+          frequency = 10,
+          starting_vertical_speed = 0.04,
+          starting_frame_deviation = 50
+        }
+      }
+    },
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/boiler.ogg",
+        volume = 0.8
+      },
+      max_sounds_per_type = 3
+    },
+
+    structure =
+    {
+      north =
+      {
+        layers =
+        {
+          {
+            filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/off.png",
+            priority = "extra-high",
+            width = 196,
+            height = 320,
+            shift = util.by_pixel(18, -80),
+          },
+        }
+      },
+      east =
+      {
+        layers =
+        {
+          {
+            filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/off.png",
+            priority = "extra-high",
+            width = 196,
+            height = 320,
+            shift = util.by_pixel(18, -80),
+          },
+        }
+      },
+      south =
+      {
+        layers =
+        {
+          {
+            filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/off.png",
+            priority = "extra-high",
+            width = 196,
+            height = 320,
+            shift = util.by_pixel(18, -80),
+          },
+        }
+      },
+      west =
+      {
+        layers =
+        {
+          {
+            filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/off.png",
+            priority = "extra-high",
+            width = 196,
+            height = 320,
+            shift = util.by_pixel(18, -80),
+          },
+        }
+      },
+    },
+
+    fire_flicker_enabled = false,
+    fire =
+    {
+      north =
+      {
+        filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/anim.png",
+        priority = "extra-high",
+        frame_count = 80,
+        line_length = 10,
+        width = 96,
+        height = 128,
+        animation_speed = 0.4,
+        shift = util.by_pixel(-1, -176),
+      },
+      east =
+      {
+        filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/anim.png",
+        priority = "extra-high",
+        frame_count = 80,
+        line_length = 10,
+        width = 96,
+        height = 128,
+        animation_speed = 0.4,
+        shift = util.by_pixel(-1, -176),
+      },
+      south =
+      {
+        filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/anim.png",
+        priority = "extra-high",
+        frame_count = 80,
+        line_length = 10,
+        width = 96,
+        height = 128,
+        animation_speed = 0.4,
+        shift = util.by_pixel(-1, -176),
+      },
+      west =
+      {
+        filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/anim.png",
+        priority = "extra-high",
+        frame_count = 80,
+        line_length = 10,
+        width = 96,
+        height = 128,
+        animation_speed = 0.4,
+        shift = util.by_pixel(-1, -176),
+      },
+    },
+
+fire_glow_flicker_enabled = false,
+
+fire_glow =
+{
+  north =
+  {
+    filename = "__pypetroleumhandlinggraphics__/graphics/entity/py-converter-valve.png",
+    priority = "extra-high",
+    frame_count = 1,
+    width = 64,
+    height = 64,
+    shift = util.by_pixel(-1, -6.5),
+    --blend_mode = "additive",
+  },
+  east =
+  {
+    filename = "__pypetroleumhandlinggraphics__/graphics/entity/py-converter-valve.png",
+    priority = "extra-high",
+    frame_count = 1,
+    width = 64,
+    height = 64,
+    shift = util.by_pixel(-1, -6.5),
+    --blend_mode = "additive",
+  },
+  south =
+  {
+    filename = "__pypetroleumhandlinggraphics__/graphics/entity/py-converter-valve.png",
+    priority = "extra-high",
+    frame_count = 1,
+    width = 64,
+    height = 64,
+    shift = util.by_pixel(-1, -6.5),
+    --blend_mode = "additive",
+  },
+  west =
+  {
+    filename = "__pypetroleumhandlinggraphics__/graphics/entity/py-converter-valve.png",
+    priority = "extra-high",
+    frame_count = 1,
+    width = 64,
+    height = 64,
+    shift = util.by_pixel(-1, -6.5),
+    --blend_mode = "additive",
+  },
+},
+
+    burning_cooldown = 20
+  }

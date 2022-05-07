@@ -13,6 +13,12 @@ script.on_init(function()
     global.lrf_panels = {}
 end)
 
+local function distance ( x1, y1, x2, y2 )
+    local dx = x1 - x2
+    local dy = y1 - y2
+    return math.sqrt ( dx * dx + dy * dy )
+  end
+
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
     local E = event.created_entity
     if E.type == 'electric-energy-interface' and
@@ -41,25 +47,31 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             local tower_y = tower[1].position.y
             local x = E.position.x
             local y = E.position.y
+            if distance(tower_x, tower_y, x, y) <= 200 then
 
-            local zeroed_x = x - tower_x
-            local zeroed_y = y - tower_y
-            local angle = math.atan2(zeroed_y, zeroed_x)
-            -- log(serpent.block(angle))
-            local deg = math.deg(angle)
-            if deg < 0 then deg = deg + 360 end
-            -- log(serpent.block(deg))
+                local zeroed_x = x - tower_x
+                local zeroed_y = y - tower_y
+                local angle = math.atan2(zeroed_y, zeroed_x)
+                -- log(serpent.block(angle))
+                local deg = math.deg(angle)
+                if deg < 0 then deg = deg + 360 end
+                -- log(serpent.block(deg))
 
-            local sprite_num = math.floor(deg / 11.25)
+                local sprite_num = math.floor(deg / 11.25)
 
-            if sprite_num < 1 then sprite_num = 1 end
+                if sprite_num < 1 then sprite_num = 1 end
 
-            game.surfaces[E.surface.name].create_entity{
-                name = 'solar-tower-panel' .. sprite_num,
-                position = E.position,
-                force = E.force
-            }
-            E.destroy()
+                game.surfaces[E.surface.name].create_entity{
+                    name = 'solar-tower-panel' .. sprite_num,
+                    position = E.position,
+                    force = E.force
+                }
+                E.destroy()
+            else
+                game.show_message_dialog{
+                    text = {"warnings.solar-panel"}
+                }
+            end
         end
     elseif E.name == 'nuke-tank-input' then
         local out1 = game.surfaces['nauvis'].create_entity{
