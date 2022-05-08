@@ -269,33 +269,8 @@ script.on_nth_tick(60, function(event)
             if tower.panel_count ~= 0 then
                 local panel_count = tower.panel_count
                 local tt = tower.tower
-                --for b,_ in pairs(tt.fluidbox) do
-                log(tt.fluidbox.get_filter(1).name)
-                log(tt.fluidbox.get_filter(2).name)
-                log(tt.fluidbox.get_filter(3).name)
-                    if tt.fluidbox.get_filter(1).name == "void" then
-                        log("hit 1")
-                        tt.remove_fluid{name = "void", amount = 500}
-                        tt.insert_fluid({name = "void", amount = 100, temperature = 10 * panel_count})
-                    end
-                    --[[
-                    if tt.fluidbox.get_filter(2).name == "void" then
-                        log("hit 2")
-                        tt.remove_fluid{name = "void", amount = 500}
-                        tt.insert_fluid({name = "void", amount = 100, temperature = 10 * panel_count})
-                    end
-                    if tt.fluidbox.get_filter(3).name == "void" then
-                        log("hit 3")
-                        tt.remove_fluid{name = "void", amount = 500}
-                        tt.insert_fluid({name = "void", amount = 100, temperature = 10 * panel_count})
-                    end
-                    if tt.fluidbox.get_filter(4).name == "void" then
-                        log("hit 4")
-                        tt.remove_fluid{name = "void", amount = 500}
-                        tt.insert_fluid({name = "void", amount = 100, temperature = 10 * panel_count})
-                    end
-                    ]]--
-                --end
+                local fluid = {name = "void", amount = 100, temperature = 10 * panel_count}
+                tt.fluidbox[3] = fluid
             end
         end
     end
