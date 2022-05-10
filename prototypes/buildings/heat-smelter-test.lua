@@ -42,7 +42,7 @@ ENTITY{
     crafting_speed = 1,
     energy_source = {
         type = 'heat',
-        max_temperature = 1000,
+        max_temperature = 2000,
         specific_heat = '1MJ',
         max_transfer = '2GW',
         min_working_temperature = 500,

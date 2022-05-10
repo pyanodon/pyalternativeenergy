@@ -978,4 +978,4 @@ RECIPE {
         {type = "item", name = "denatured-seismite", amount = 3},
     },
     --main_product = "sb-dust",
-}:add_unlock("pharmagenomics")
+}:add_unlock("cottongut-science-mk05")
