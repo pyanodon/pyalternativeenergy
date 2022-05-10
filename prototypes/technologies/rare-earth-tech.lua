@@ -2,7 +2,7 @@ TECHNOLOGY {
     type = "technology",
     name = "rare-earth-tech-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/technology/rare-earth-tech-mk02.png",
-    icon_size = 64,
+    icon_size = 128,
     order = "c-a",
     prerequisites = {},
     effects = {},

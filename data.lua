@@ -48,6 +48,7 @@ require("prototypes/technologies/rare-earth-tech")
 require("prototypes.technologies.numal")
 require("prototypes/technologies/sb-silicate")
 require("prototypes/technologies/lithium-niobate")
+require("prototypes/technologies/sc-engine")
 
 -- ))
 

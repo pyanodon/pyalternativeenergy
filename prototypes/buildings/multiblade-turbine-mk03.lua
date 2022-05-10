@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {"multiblade-turbine-mk03", 1}
     }
-}:add_unlock("renewable-mk03")
+}:add_unlock("renewable-mk04")
 
 ITEM {
     type = "item",

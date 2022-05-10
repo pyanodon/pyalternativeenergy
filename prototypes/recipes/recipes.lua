@@ -473,7 +473,7 @@ RECIPE {
         {type = "fluid", name = "chlorine", amount = 50},
     },
     main_product = "tio2",
-}:add_unlock("solar-mk03")
+}:add_unlock("lithium-processing")
 
 RECIPE {
     type = "recipe",
@@ -678,7 +678,7 @@ RECIPE {
         {type = "item", name = "gaas", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("nano-tech")
+}:add_unlock("integrated-circuits-3")
 
 RECIPE {
     type = "recipe",
@@ -698,7 +698,7 @@ RECIPE {
         {type = "item", name = "iron-oxide", amount = 5},
     },
     main_product = "arsenic",
-}:add_unlock("nano-tech")
+}:add_unlock("integrated-circuits-3")
 
 RECIPE {
     type = "recipe",

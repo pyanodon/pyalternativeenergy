@@ -52,7 +52,7 @@ RECIPE {
         {type = "item", name = "ammonium-sulfate", amount = 3},
     },
     --main_product = "hexafluoroacetone",
-}:add_unlock("nanozymes")
+}:add_unlock("mega-farm")
 
 RECIPE {
     type = "recipe",

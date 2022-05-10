@@ -243,7 +243,7 @@ RECIPE {
         {type = "item", name = "anemometer-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk01")
+}:add_unlock("renewable-mk01")
 
 --MK02
 
@@ -337,7 +337,7 @@ RECIPE {
         {type = "item", name = "anemometer-mk02", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk02")
+}:add_unlock("renewable-mk02")
 
 RECIPE {
     type = "recipe",
@@ -607,7 +607,7 @@ RECIPE {
         {type = "item", name = "anemometer-mk03", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk03")
+}:add_unlock("renewable-mk03")
 
 RECIPE {
     type = "recipe",
@@ -898,7 +898,7 @@ RECIPE {
         {type = "item", name = "utility-box-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("intermetallics-mk04")
+}:add_unlock("renewable-mk04")
 
 RECIPE {
     type = "recipe",
@@ -991,7 +991,7 @@ RECIPE {
         {type = "item", name = "electronics-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("intermetallics-mk04")
+}:add_unlock("nano-tech")
 
 RECIPE {
     type = "recipe",
@@ -1011,7 +1011,7 @@ RECIPE {
         {type = "item", name = "controler-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("intermetallics-mk04")
+}:add_unlock("nano-tech")
 
 RECIPE {
     type = "recipe",
@@ -1053,7 +1053,7 @@ RECIPE {
         {type = "item", name = "anemometer-mk04", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("wind-mk04")
+}:add_unlock("renewable-mk04")
 
 RECIPE {
     type = "recipe",
@@ -1097,7 +1097,7 @@ RECIPE {
         {type = "item", name = "heating-system", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("intermetallics-mk04")
+}:add_unlock("wind-mk04")
 
 RECIPE {
     type = "recipe",

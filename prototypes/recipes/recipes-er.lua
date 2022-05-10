@@ -83,7 +83,7 @@ RECIPE {
         {type = "item", name = "ernico", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("alloys-mk04")
 
 RECIPE {
     type = "recipe",
@@ -101,7 +101,7 @@ RECIPE {
         {type = "item", name = "ernico", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("alloys-mk05")
 
 RECIPE {
     type = "recipe",
@@ -119,7 +119,7 @@ RECIPE {
         {type = "item", name = "ybco-monocrystal", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -137,7 +137,7 @@ RECIPE {
         {type = "item", name = "fan", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -155,7 +155,7 @@ RECIPE {
         {type = "item", name = "air-duct", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -174,7 +174,7 @@ RECIPE {
         {type = "item", name = "cryostat", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -192,7 +192,7 @@ RECIPE {
         {type = "item", name = "cryocooler", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -218,7 +218,7 @@ RECIPE {
         {type = "item", name = "sc-engine", amount = 3},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -238,7 +238,7 @@ RECIPE {
         {type = "item", name = "rotor-m", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -255,7 +255,7 @@ RECIPE {
         {type = "item", name = "magnetic-ring", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -273,7 +273,7 @@ RECIPE {
         {type = "item", name = "sc-stator", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -289,4 +289,4 @@ RECIPE {
         {type = "item", name = "hts-coil", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("erbium")
+}:add_unlock("sc-unit")

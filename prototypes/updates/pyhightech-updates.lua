@@ -84,6 +84,7 @@ RECIPE("nanochip"):add_ingredient({type = "item", name = "quantum-dots", amount 
 RECIPE("kondo-processor"):add_ingredient({type = "item", name = "nano-wires", amount = 3})
 RECIPE("pi-josephson-junction"):add_ingredient({type = "item", name = "mqdc", amount = 1}):add_ingredient({type = "item", name = "time-crystal", amount = 1})
 RECIPE("kondo-core"):add_ingredient({type = "item", name = "gaas", amount = 1}):add_ingredient({type = "item", name = "heavy-p-type", amount = 10}):add_ingredient({type = "item", name = "light-n", amount = 10})
+RECIPE("nanocrystaline-core"):remove_unlock("nano-tech"):add_unlock("battery-mk04")
 
 RECIPE("py-construction-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("py-logistic-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -93,7 +94,6 @@ RECIPE("construction-robot-ht"):add_ingredient({type = "item", name = "metastabl
 RECIPE("logistic-robot-ht"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2})
 RECIPE('lithium-chloride'):remove_ingredient("reo"):add_ingredient({type = "item", name = "lithium-hydroxide", amount = 1})
 RECIPE("nexelit-battery"):remove_unlock('railway-mk03'):add_unlock({"battery-mk02"})
-RECIPE("nexelit-battery-recharge"):remove_unlock('ht-trains'):add_unlock({"battery-mk02"})
 RECIPE("nanochip"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("carbon-nanotube"):add_ingredient({type = "item", name = "milfe", amount = 1}).results[1].amount = 5
 RECIPE("parametric-oscilator"):add_ingredient({type = "item", name = "milfe", amount = 1})
@@ -105,7 +105,6 @@ RECIPE("paradiamatic-resistor"):add_ingredient({type = "item", name = "nano-mesh
 RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("volumetric-capacitor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("pa-proton"):replace_ingredient("uranium-235", "u-235")
-RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
 RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si")
 RECIPE("silicon"):remove_unlock("semiconductor-doping"):add_unlock("silicon-mk01")
 RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-niobate")

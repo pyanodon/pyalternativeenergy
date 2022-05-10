@@ -3,6 +3,7 @@ table.insert(data.raw["rocket-silo"]["mega-farm"].crafting_categories, "mova-far
 table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
 
 TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack")
+TECHNOLOGY("mega-farm"):remove_pack("utility-science-pack"):remove_pack("military-science-pack")
 
 RECIPE("mega-farm"):remove_ingredient("intelligent-unit"):replace_ingredient("superconductor-servomechanims", "small-parts-03")
 RECIPE("mega-farm"):remove_ingredient("blanket"):replace_ingredient("divertor", "ns-material"):remove_ingredient("harmonic-absorber")
@@ -229,6 +230,7 @@ RECIPE("vrauks-paddock-mk04"):add_ingredient({type = "item", name = "metastable-
 RECIPE("moss-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
 RECIPE("sap-extractor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("seaweed-crop-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
+RECIPE("pydrive"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 5})
 
 -----RECIPES-----
 RECIPE('sb-pulp-01'):replace_ingredient("naphtha", "fish-oil")
@@ -245,7 +247,6 @@ RECIPE('antiviral-02'):add_ingredient({type = "item", name = "nanocarrier", amou
 RECIPE('nanochondria'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 RECIPE('adam42-gen'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 RECIPE("biobattery"):remove_unlock('chitin'):add_unlock({"battery-mk03"})
-RECIPE("nanofibrils"):remove_unlock('chitin'):add_unlock({"battery-mk03"})
 RECIPE('hyaline'):add_ingredient({type = "fluid", name = "fatty-acids", amount = 30})
 RECIPE('zinc-finger-proteins'):add_ingredient({type = "fluid", name = "fatty-acids", amount = 30})
 RECIPE('pre-pesticide-02'):add_ingredient({type = "item", name = "dodecylamine", amount = 1})
