@@ -11,6 +11,7 @@ RECIPE{
         {'advanced-circuit', 3},
         {'tinned-cable', 10},
         {'small-parts-02', 12},
+        {'axis-tracker', 1},
         {'eva', 10},
         {'self-assembly-monolayer', 10},
         {'electric-engine-unit', 1},

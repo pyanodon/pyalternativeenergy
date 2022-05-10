@@ -1,10 +1,26 @@
 RECIPE{
     type = 'recipe',
     name = 'solar-tower-panel',
-    energy_required = 0.5,
+    energy_required = 1,
     enabled = false,
-    ingredients = {{'iron-plate', 1}},
-    results = {{'solar-tower-panel', 1}}
+    ingredients = {
+        {'super-steel', 20},
+        {'mirror-mk03', 6},
+        {'mirror-mk04', 1},
+        {'anti-reflex-glass', 3},
+        {'intelligent-unit', 1},
+        {'axis-tracker', 2},
+        {'ns-material', 1},
+        {'small-parts-03', 50},
+        {'graphene-roll', 5},
+        {'engine-unit', 1},
+        {'eva', 3},
+        {'cf', 7},
+        {'aerogel', 2},
+    },
+    results = {
+        {"solar-tower-panel", 1}
+    }
 }:add_unlock("thermal-mk04")
 
 ITEM{

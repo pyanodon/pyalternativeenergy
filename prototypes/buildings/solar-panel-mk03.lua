@@ -9,6 +9,7 @@ RECIPE{
         {'dsnc-cell', 10},
         {'anti-reflex-glass', 21},
         {'processing-unit', 3},
+        {'axis-tracker', 1},
         {'ns-material', 10},
         {'small-parts-03', 25},
         {'graphene-roll', 5},

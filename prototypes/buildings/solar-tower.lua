@@ -1,10 +1,22 @@
 RECIPE {
     type = "recipe",
     name = "solar-tower-building",
-    energy_required = 0.5,
+    energy_required = 10,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"concrete", 1000},
+        {"super-alloy", 1000},
+        {"cf", 500},
+        {"biopolymer", 800},
+        {"niobium-pipe", 800},
+        {"metallic-glass", 300},
+        {"glass", 1000},
+        {"nbfe-alloy", 1000},
+        {"science-coating", 500},
+        {"carbon-aerogel", 1000},
+        {'metastable-quasicrystal', 50},
+        {"intelligent-unit", 10},
+        {"low-density-structure", 400},
     },
     results = {
         {"solar-tower-building", 1}
@@ -91,7 +103,7 @@ ENTITY {
                 line_length = 5,
                 width = 224,
                 height = 224,
-                animation_speed = 0.3,
+                animation_speed = 0.2,
                 --draw_as_glow = true,
             }
         },
@@ -106,7 +118,7 @@ ENTITY {
                 line_length = 5,
                 width = 224,
                 height = 224,
-                animation_speed = 0.3,
+                animation_speed = 0.2,
                 --draw_as_glow = true,
             }
         },
@@ -121,7 +133,7 @@ ENTITY {
                 line_length = 5,
                 width = 224,
                 height = 224,
-                animation_speed = 0.3,
+                animation_speed = 0.2,
                 --draw_as_glow = true,
             }
         },
@@ -136,7 +148,7 @@ ENTITY {
                 line_length = 5,
                 width = 224,
                 height = 224,
-                animation_speed = 0.3,
+                animation_speed = 0.2,
                 --draw_as_glow = true,
             }
         },
@@ -151,7 +163,7 @@ ENTITY {
                 line_length = 5,
                 width = 224,
                 height = 224,
-                animation_speed = 0.3,
+                animation_speed = 0.2,
                 --draw_as_glow = true,
             }
         },
@@ -166,7 +178,7 @@ ENTITY {
                 line_length = 5,
                 width = 224,
                 height = 224,
-                animation_speed = 0.3,
+                animation_speed = 0.2,
                 --draw_as_glow = true,
             }
         },
@@ -181,7 +193,7 @@ ENTITY {
                 line_length = 20,
                 width = 96,
                 height = 672,
-                animation_speed = 0.3,
+                animation_speed = 0.2,
                 --draw_as_glow = true,
             }
         },
@@ -196,7 +208,7 @@ ENTITY {
                 line_length = 5,
                 width = 288,
                 height = 288,
-                animation_speed = 0.3,
+                animation_speed = 0.2,
                 --draw_as_glow = true,
             }
         },
@@ -283,11 +295,11 @@ ENTITY {
 ENTITY {
     type = "boiler",
     name = "solar-tower-building",
-    icon = "__pypetroleumhandlinggraphics__/graphics/icons/oil-burner-mk01.png",
-    icon_size = 32,
+    icon = "__pyalternativeenergygraphics__/graphics/icons/solar-tower.png",
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.2, result = "solar-tower-building"},
-    max_health = 200,
+    max_health = 2000,
     corpse = "boiler-remnants",
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     mode = "heat-water-inside",
@@ -306,8 +318,8 @@ ENTITY {
         percent = 30
       }
     },
-    collision_box = {{-2.29, -2.29}, {2.29, 2.29}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = {{-9.8, -9.8}, {9.8, 9.8}},
+    selection_box = {{-10.0, -10.0}, {10.0, 10.0}},
     target_temperature = 250,
     fluid_box =
     {
@@ -317,8 +329,8 @@ ENTITY {
       pipe_covers = DATA.Pipes.covers(false, true, true, true),
       pipe_connections =
       {
-        {type = "input-output", position = {-3.0, 0.0}},
-        {type = "input-output", position = {3.0, 0.0}}
+        {type = "input-output", position = {1.5, 10.5}},
+        {type = "input-output", position = {-1.5, 10.5}}
       },
       production_type = "input-output",
       filter = "molten-salt"
@@ -332,7 +344,7 @@ ENTITY {
       pipe_covers = DATA.Pipes.covers(false, true, true, true),
       pipe_connections =
       {
-        {type = "output", position = {0, -3.0}}
+        {type = "output", position = {1.5, -10.5}}
       },
       production_type = "output",
       --filter = "steam"
@@ -350,7 +362,7 @@ ENTITY {
 		base_level = -1,
 		pipe_connections =
 		{
-			{type = "input", position = {0, 3.0}}
+			{type = "input", position = {-1.5, -10.5}}
 		},
 		pipe_covers = DATA.Pipes.covers(false, true, true, true),
 		pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
@@ -362,19 +374,6 @@ ENTITY {
 	scale_fluid_usage = false,
 	fluid_usage_per_tick = 1,
     filter = "void",
-      smoke =
-      {
-        {
-          name = "turbine-smoke",
-          north_position = util.by_pixel(0, -160),
-          south_position = util.by_pixel(0, -160),
-          east_position = util.by_pixel(0, -160),
-          west_position = util.by_pixel(0, -160),
-          frequency = 10,
-          starting_vertical_speed = 0.04,
-          starting_frame_deviation = 50
-        }
-      }
     },
     working_sound =
     {
@@ -392,13 +391,29 @@ ENTITY {
       {
         layers =
         {
-          {
-            filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/off.png",
-            priority = "extra-high",
-            width = 196,
-            height = 320,
-            shift = util.by_pixel(18, -80),
-          },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/off.png",
+                width = 640,
+                height = 1343,
+                frame_count = 1,
+                shift = util.by_pixel(0, -352)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/light.png",
+                width = 640,
+                height = 1343,
+                frame_count = 1,
+                shift = util.by_pixel(0, -352),
+                draw_as_light = true,
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/sh.png",
+                width = 96,
+                height = 1343,
+                frame_count = 1,
+                shift = util.by_pixel(368, -352),
+                draw_as_shadow = true,
+            },
         }
       },
       east =
@@ -406,12 +421,28 @@ ENTITY {
         layers =
         {
           {
-            filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/off.png",
-            priority = "extra-high",
-            width = 196,
-            height = 320,
-            shift = util.by_pixel(18, -80),
-          },
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/off.png",
+            width = 640,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(0, -352)
+        },
+        {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/light.png",
+            width = 640,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(0, -352),
+            draw_as_light = true,
+        },
+        {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/sh.png",
+            width = 96,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(368, -352),
+            draw_as_shadow = true,
+        },
         }
       },
       south =
@@ -419,12 +450,28 @@ ENTITY {
         layers =
         {
           {
-            filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/off.png",
-            priority = "extra-high",
-            width = 196,
-            height = 320,
-            shift = util.by_pixel(18, -80),
-          },
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/off.png",
+            width = 640,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(0, -352)
+        },
+        {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/light.png",
+            width = 640,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(0, -352),
+            draw_as_light = true,
+        },
+        {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/sh.png",
+            width = 96,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(368, -352),
+            draw_as_shadow = true,
+        },
         }
       },
       west =
@@ -432,12 +479,28 @@ ENTITY {
         layers =
         {
           {
-            filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/off.png",
-            priority = "extra-high",
-            width = 196,
-            height = 320,
-            shift = util.by_pixel(18, -80),
-          },
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/off.png",
+            width = 640,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(0, -352)
+        },
+        {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/light.png",
+            width = 640,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(0, -352),
+            draw_as_light = true,
+        },
+        {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/sh.png",
+            width = 96,
+            height = 1343,
+            frame_count = 1,
+            shift = util.by_pixel(368, -352),
+            draw_as_shadow = true,
+        },
         }
       },
     },
@@ -445,49 +508,344 @@ ENTITY {
     fire_flicker_enabled = false,
     fire =
     {
-      north =
+      north = {
+      layers =
       {
-        filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/anim.png",
-        priority = "extra-high",
-        frame_count = 80,
-        line_length = 10,
-        width = 96,
-        height = 128,
-        animation_speed = 0.4,
-        shift = util.by_pixel(-1, -176),
-      },
+        {
+          filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-left.png",
+          frame_count = 20,
+          line_length = 5,
+          width = 224,
+          height = 224,
+          animation_speed = 0.2,
+          shift = util.by_pixel(-176, 81),
+          --draw_as_glow = true,
+        },
+        {
+          filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-mid.png",
+          frame_count = 20,
+          line_length = 5,
+          width = 224,
+          height = 224,
+          animation_speed = 0.2,
+          shift = util.by_pixel(48, 81),
+        },
+        {
+          filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-left.png",
+          frame_count = 20,
+          line_length = 5,
+          width = 224,
+          height = 224,
+          animation_speed = 0.2,
+          shift = util.by_pixel(-176, -143),
+          --draw_as_glow = true,
+        },
+        {
+          filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-mid.png",
+          frame_count = 20,
+          line_length = 5,
+          width = 224,
+          height = 224,
+          animation_speed = 0.2,
+          shift = util.by_pixel(48, -143),
+          --draw_as_glow = true,
+        },
+        {
+          filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-left.png",
+          frame_count = 20,
+          line_length = 5,
+          width = 224,
+          height = 224,
+          animation_speed = 0.2,
+          shift = util.by_pixel(-176, -367),
+          --draw_as_glow = true,
+        },
+        {
+          filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-mid.png",
+          frame_count = 20,
+          line_length = 5,
+          width = 224,
+          height = 224,
+          animation_speed = 0.2,
+          shift = util.by_pixel(48, -367),
+          --draw_as_glow = true,
+        },
+        {
+          filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/right.png",
+          frame_count = 20,
+          line_length = 20,
+          width = 96,
+          height = 672,
+          animation_speed = 0.2,
+          shift = util.by_pixel(208, -143),
+          --draw_as_glow = true,
+        },
+        {
+          filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/concentrator.png",
+          frame_count = 20,
+          line_length = 5,
+          width = 288,
+          height = 288,
+          animation_speed = 0.2,
+          shift = util.by_pixel(-16, -720),
+          --draw_as_glow = true,
+        },
+      }
+    },
       east =
       {
-        filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/anim.png",
-        priority = "extra-high",
-        frame_count = 80,
-        line_length = 10,
-        width = 96,
-        height = 128,
-        animation_speed = 0.4,
-        shift = util.by_pixel(-1, -176),
+        layers =
+        {
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, 81),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, 81),
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, -367),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, -367),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/right.png",
+            frame_count = 20,
+            line_length = 20,
+            width = 96,
+            height = 672,
+            animation_speed = 0.2,
+            shift = util.by_pixel(208, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/concentrator.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 288,
+            height = 288,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-16, -720),
+            --draw_as_glow = true,
+          },
+        }
       },
       south =
       {
-        filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/anim.png",
-        priority = "extra-high",
-        frame_count = 80,
-        line_length = 10,
-        width = 96,
-        height = 128,
-        animation_speed = 0.4,
-        shift = util.by_pixel(-1, -176),
+        layers =
+        {
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, 81),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, 81),
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, -367),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, -367),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/right.png",
+            frame_count = 20,
+            line_length = 20,
+            width = 96,
+            height = 672,
+            animation_speed = 0.2,
+            shift = util.by_pixel(208, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/concentrator.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 288,
+            height = 288,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-16, -720),
+            --draw_as_glow = true,
+          },
+        }
       },
       west =
       {
-        filename = "__pypetroleumhandlinggraphics__/graphics/entity/oil-burner-mk01/anim.png",
-        priority = "extra-high",
-        frame_count = 80,
-        line_length = 10,
-        width = 96,
-        height = 128,
-        animation_speed = 0.4,
-        shift = util.by_pixel(-1, -176),
+        layers =
+        {
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, 81),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/bottom-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, 81),
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/mid-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-left.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-176, -367),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/top-mid.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 224,
+            height = 224,
+            animation_speed = 0.2,
+            shift = util.by_pixel(48, -367),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/right.png",
+            frame_count = 20,
+            line_length = 20,
+            width = 96,
+            height = 672,
+            animation_speed = 0.2,
+            shift = util.by_pixel(208, -143),
+            --draw_as_glow = true,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/concentrator.png",
+            frame_count = 20,
+            line_length = 5,
+            width = 288,
+            height = 288,
+            animation_speed = 0.2,
+            shift = util.by_pixel(-16, -720),
+            --draw_as_glow = true,
+          },
+        }
       },
     },
 
