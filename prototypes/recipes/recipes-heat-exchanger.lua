@@ -13,7 +13,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 300, temperature = 1000},
     },
     main_product = "pressured-steam",
-}:add_unlock("nonrenewable-mk01")
+}:add_unlock("coalplant-mk01"):add_unlock("oilplant-mk01"):add_unlock("biomassplant-mk01")
 
 RECIPE {
     type = "recipe",

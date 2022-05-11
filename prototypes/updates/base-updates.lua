@@ -11,6 +11,12 @@ TECHNOLOGY("kovarex-enrichment-process"):set_fields({enabled = false, hidden = t
 
 TECHNOLOGY("battery"):set_fields({enabled = false, hidden = true})
 
+TECHNOLOGY("solar-energy"):set_fields({enabled = false, hidden = true})
+
+for r, _ in pairs(data.raw.recipe) do
+    RECIPE(r):replace_ingredient("solar-panel", "solar-panel-mk01")
+end
+
 RECIPE('chemical-science-pack'):add_ingredient({type = 'item', name = 'nuclear-sample', amount = 2})
 
 RECIPE("nuclear-reactor"):add_unlock('uranium-processing'):remove_ingredient('super-steel')

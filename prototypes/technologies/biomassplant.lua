@@ -5,6 +5,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {'renewable-mk01'},
+    dependencies = {'renewable-mk01'},
     effects = {},
     unit = {
         count = 500,

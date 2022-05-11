@@ -67,7 +67,6 @@ RECIPE('py-oil-powerplant-mk04'):add_ingredient({type = "item", name = "phosphat
 RECIPE('py-oil-powerplant-mk03'):add_ingredient({type = "item", name = "harbonic-absorber", amount = 40}):add_ingredient({type = "item", name = "nems", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotubes", amount = 20})
 
 -----RECIPES-----
-RECIPE('accumulator-mk03'):add_unlock({"nano-tech"})
 RECIPE('oxalic-acid'):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE("dbr"):add_ingredient({type = "item", name = "nanocrystaline-core", amount = 1})
 RECIPE("yag-laser-module"):add_ingredient({type = "item", name = "erbium", amount = 1})

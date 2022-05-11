@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"accumulator-mk03", 1},
     }
-}:add_unlock("nano-tech")
+}:add_unlock("py-accumulator-mk03")
 
 ITEM {
     type = "item",
