@@ -13,7 +13,7 @@ RECIPE{
         {'ns-material', 1},
         {'small-parts-03', 50},
         {'graphene-roll', 5},
-        {'engine-unit', 1},
+        {'electric-engine-unit', 1},
         {'eva', 3},
         {'cf', 7},
         {'aerogel', 2},
