@@ -269,7 +269,7 @@ script.on_nth_tick(60, function(event)
             if tower.panel_count ~= 0 then
                 local panel_count = tower.panel_count
                 local tt = tower.tower
-                local fluid = {name = "void", amount = 100, temperature = 10 * panel_count}
+                local fluid = {name = "void", amount = 100, temperature = 1 * panel_count}
                 tt.fluidbox[3] = fluid
             end
         end

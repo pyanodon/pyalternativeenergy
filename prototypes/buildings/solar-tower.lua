@@ -329,11 +329,11 @@ ENTITY {
       pipe_covers = DATA.Pipes.covers(false, true, true, true),
       pipe_connections =
       {
-        {type = "input-output", position = {1.5, 10.5}},
-        {type = "input-output", position = {-1.5, 10.5}}
+        {type = "input", position = {1.5, 10.5}},
+        {type = "output", position = {-1.5, 10.5}}
       },
       production_type = "input-output",
-      filter = "molten-salt"
+      filter = "hot-molten-salt"
     },
 
     output_fluid_box =
@@ -349,7 +349,7 @@ ENTITY {
       production_type = "output",
       --filter = "steam"
     },
-    energy_consumption = "29.61MW",
+    energy_consumption = "5GW",
     energy_source =
     {
       type = "fluid",
@@ -369,11 +369,10 @@ ENTITY {
 		production_type = "input",
         filter = "void",
 		},
-	effectivity = 2,
+	effectivity = 1,
 	burns_fluid = false,
 	scale_fluid_usage = false,
 	fluid_usage_per_tick = 1,
-    filter = "void",
     },
     working_sound =
     {
@@ -591,7 +590,7 @@ ENTITY {
           --draw_as_glow = true,
         },
       }
-    },
+      },
       east =
       {
         layers =
