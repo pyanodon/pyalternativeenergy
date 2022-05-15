@@ -204,16 +204,17 @@ RECIPE {
 --TODO:deal with u-waste vanadium
 
 --replacing pyros uranium isotope seperation with new system
-local previous_enrichment = 0.7
+local total_recipes = 20
+local starting_enrichment = 0.7
 local recipe_num = 1
-local enrichment = 0.7
-local duf = 0.1
+local enrichment = starting_enrichment
+local multiplier = (100 / starting_enrichment)^(1 / total_recipes)
+-- log("Multiplier: " .. multiplier)
 
 while enrichment < 100 do
 
-    local u_shift = enrichment * 0.25
-    local u235 = enrichment + u_shift
-    local u238 = enrichment - u_shift
+    local u235 = enrichment * multiplier
+    local u238 = enrichment / multiplier
 
     if u235 > 100 then
         break
@@ -229,7 +230,7 @@ while enrichment < 100 do
         enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(previous_enrichment*100)}
+            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1} 
         },
         results = {
             {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},
@@ -237,37 +238,44 @@ while enrichment < 100 do
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
-        order = "uranium-" .. recipe_num,
+        order = string.format("uranium-%02u", recipe_num),
         localised_name = {"recipe-name.uf6", name}
     }--:add_unlock("uranium-mk01")
 
     -- log(serpent.block(data.raw.recipe[recipe_name]))
 
-    if u235 < 10 then
+    if u235 < 2.5 then
         RECIPE(recipe_name):add_unlock('uranium-mk01')
-    elseif u235 >= 10 and u235 < 25 then
+    elseif u235 >= 2.5 and u235 < 10 then
         RECIPE(recipe_name):add_unlock('uranium-mk02')
-    elseif u235 >= 25 and u235 < 50 then
+    elseif u235 >= 10 and u235 < 30 then
         RECIPE(recipe_name):add_unlock('uranium-mk03')
-    elseif u235 >= 50 then
+    elseif u235 >= 30 then
         RECIPE(recipe_name):add_unlock('uranium-mk04')
     end
 
-    previous_enrichment = u235
     enrichment = u235
-
     recipe_num = recipe_num + 1
-
 end
 
-previous_enrichment = duf
+local duf_min = 0.1
+local depleted_recipes = 5
+local depleted_multiplier = (starting_enrichment / duf_min)^(1 / math.floor(depleted_recipes + 1))
+-- log("Depleted multiplier: " .. multiplier)
+local duf = starting_enrichment / multiplier
+recipe_num = 1
 
-while duf < 0.7 do
-    local u_shift = duf * 0.125
-    local u235 = duf + (u_shift * 2)
-    local u238 = duf - u_shift
+while duf > duf_min do
+    local u235 = duf * depleted_multiplier
+    local u238 = duf / depleted_multiplier
 
-    local name = string.format( "%.2f", tostring(u235))
+    if recipe_num == 1 then
+        u235 = starting_enrichment
+    elseif recipe_num == depleted_recipes then
+        u238 = duf_min
+    end
+
+    local name = string.format( "%.2f", tostring(u238))
 
     RECIPE {
         type = "recipe",
@@ -276,23 +284,20 @@ while duf < 0.7 do
         enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(previous_enrichment*100)}
+            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 1}
         },
         results = {
             {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},
             {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
-        subgroup = "py-rawores-uranium",
-        order = "depleted-uranium-" .. recipe_num,
+        subgroup = "py-rawores-uranium-depleted",
+        order = string.format("depleted-uranium-%02u", recipe_num),
         localised_name = {"recipe-name.depleted-uf6", name}
     }:add_unlock("uranium-mk01")
 
-    previous_enrichment = u235
-    duf = u235
-
+    duf = u238
     recipe_num = recipe_num + 1
-
 end
 
 RECIPE {
@@ -302,7 +307,7 @@ RECIPE {
     enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "fluid", name = "uf6", amount = 100, maximum_temperature = math.floor(0.15*100)}
+        {type = "fluid", name = "uf6", amount = 100, maximum_temperature = math.floor(duf_min*100)}
     },
     results = {
         {type = "item", name = "uranium-238", amount = 10},

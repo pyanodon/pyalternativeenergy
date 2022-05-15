@@ -13,5 +13,6 @@ FLUID {
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-buildings-mk01",
-    order = "c"
+    order = "c",
+    auto_barrel = false
 }

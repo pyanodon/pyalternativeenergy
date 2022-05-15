@@ -86,5 +86,11 @@ data:extend {
         name = "test",
         group = "py-alternativeenergy",
         order = "az"
-    }
+    },
+    {
+        type = 'item-subgroup',
+        name = 'py-rawores-uranium-depleted',
+        group = 'py-rawores',
+        order = 'bma'
+    },
 }

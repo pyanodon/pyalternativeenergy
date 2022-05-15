@@ -63,12 +63,12 @@ ENTITY {
         pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         pipe_covers = DATA.Pipes.covers(false, true, true, true),
         production_type = "input-output",
-        filter = "molten-fluoride-u233"
+        filter = "uf6"
       },
       burns_fluid = false,
       scale_fluid_usage = false,
-      fluid_usage_per_tick = (2/60),
-      maximum_temperature = 95,
+    --   fluid_usage_per_tick = (2/60),
+      maximum_temperature = 10000,
     },
     energy_usage = "300kW",
     animation = {

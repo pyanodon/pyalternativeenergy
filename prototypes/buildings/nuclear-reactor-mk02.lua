@@ -67,8 +67,8 @@ ENTITY {
       },
       burns_fluid = false,
       scale_fluid_usage = false,
-      fluid_usage_per_tick = (2/60),
-      maximum_temperature = 95,
+    --   fluid_usage_per_tick = (2/60),
+      maximum_temperature = 1000,
     },
     energy_usage = "300kW",
     animation = {
