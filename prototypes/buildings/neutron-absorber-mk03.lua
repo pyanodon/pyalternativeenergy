@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "neutron-absorber-mk03",
     energy_required = 5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },

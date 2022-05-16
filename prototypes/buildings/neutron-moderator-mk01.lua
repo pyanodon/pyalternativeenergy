@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "neutron-moderator-mk01",
     energy_required = 5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"neutron-moderator-mk01", 1}
     }
-}
+}:add_unlock("nuclear-power")
 
 ITEM {
     type = "item",

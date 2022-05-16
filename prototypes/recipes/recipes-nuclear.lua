@@ -50,7 +50,7 @@ RECIPE {
     },
     subgroup = "py-items",
     order = "g"
-}
+}:add_unlock("nuclear-power")
 
 RECIPE {
     type = "recipe",
@@ -58,7 +58,7 @@ RECIPE {
     category = "neutron-absorber",
     icon = '__base__/graphics/icons/assembling-machine-2.png',
     icon_size = 64,
-    enabled = true,
+    enabled = false,
     energy_required = 0.5,
     ingredients = {
         {type = "fluid", name = "neutron", amount = 50}
@@ -66,7 +66,7 @@ RECIPE {
     results = {},
     subgroup = "py-items",
     order = "g"
-}
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",

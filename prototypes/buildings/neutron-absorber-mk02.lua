@@ -2,14 +2,14 @@ RECIPE {
     type = "recipe",
     name = "neutron-absorber-mk02",
     energy_required = 5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 1},
     },
     results = {
         {"neutron-absorber-mk02", 1}
     }
-}
+}:add_unlock("nuclear-power-mk04")
 
 ITEM {
     type = "item",

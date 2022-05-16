@@ -5,7 +5,7 @@ RECIPE {
     category = "electrolyzer",
     icon = '__pycoalprocessinggraphics__/graphics/missing_icon_64.png',
     icon_size = 64,
-    enabled = true,
+    enabled = false,
     energy_required = 0.5,
     ingredients = {
         {type = "fluid", name = "hydrofluoric-acid", amount = 100},
@@ -17,4 +17,4 @@ RECIPE {
     },
     subgroup = "py-items",
     order = "g"
-}
+}:add_unlock("phosphorous-processing")
