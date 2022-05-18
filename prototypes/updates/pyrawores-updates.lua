@@ -3,6 +3,7 @@ local fun = require("__pyrawores__/prototypes/functions/functions")
 --TECHNOLOGY--
 TECHNOLOGY("fluid-processing-machines-1"):remove_pack('logistic-science-pack'):remove_prereq('electric-engine')
 TECHNOLOGY("plastics"):remove_pack('logistic-science-pack')
+TECHNOLOGY("machines-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("machines-mk04"):add_pack("military-science-pack")
 
 --BUILDINDS--
