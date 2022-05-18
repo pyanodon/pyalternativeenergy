@@ -32,7 +32,7 @@ RECIPE {
         {type = "item", name = "crucible", amount = 2},
     },
     --main_product = "eg-si",
-}:add_unlock("silicon-mk02")
+}:add_unlock("energy-2")
 
 RECIPE {
     type = "recipe",

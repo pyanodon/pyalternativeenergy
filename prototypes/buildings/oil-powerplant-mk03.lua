@@ -9,7 +9,7 @@ RECIPE {
         {"super-steel", 200},
         {"processing-unit", 100},
         {"cf", 100},
-        {"biopolymer", 100},
+        {"acrylic", 100},
         {'low-density-structure', 50},
         {'electric-engine-unit', 20},
         {"aerogel", 100},

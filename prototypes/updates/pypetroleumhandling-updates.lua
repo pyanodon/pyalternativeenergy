@@ -1,5 +1,8 @@
 
 --TECHNOLOGY--
+TECHNOLOGY("oil-machines-mk03"):add_pack("military-science-pack")
+TECHNOLOGY("fracking"):add_pack("military-science-pack")
+TECHNOLOGY("kerogen"):add_pack("military-science-pack")
 
 --BUILDINDS--
 RECIPE("natural-gas-seep-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
@@ -76,3 +79,7 @@ RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metast
 
 RECIPE("tholin-capsule"):add_ingredient({type = "item", name = "cf", amount = 30})
 RECIPE("small-parts-03"):replace_ingredient("rubber", {type = "item", name = "cf", amount = 1})
+
+RECIPE("reheat-coke-gas"):remove_unlock("hot-air-mk02"):set_fields{hidden = true}
+RECIPE("reheat-outlet-gas-1"):remove_unlock("hot-air-mk03"):set_fields{hidden = true}
+RECIPE("reheat-outlet-gas-2"):remove_unlock("hot-air-mk03"):set_fields{hidden = true}

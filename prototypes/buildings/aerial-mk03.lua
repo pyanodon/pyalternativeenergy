@@ -11,7 +11,7 @@ RECIPE{
         {'processing-unit', 10},
         {'ns-material', 10},
         {'small-parts-03', 100},
-        {'biopolymer', 100},
+        {'acrylic', 100},
         {'aerogel', 20},
 		{"shaft-mk03", 1},
         {"anemometer-mk03", 1},

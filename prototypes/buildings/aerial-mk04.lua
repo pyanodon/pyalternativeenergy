@@ -21,7 +21,7 @@ RECIPE{
         {"cf", 200},
         {"electronics-mk04", 1},
         {"controler-mk04", 1},
-		{"bose-einstein-superfluid", 10},
+		-- {"bose-einstein-superfluid", 10},
     },
     result = "aerial-blimp-mk04"
   }:add_unlock("renewable-mk04")

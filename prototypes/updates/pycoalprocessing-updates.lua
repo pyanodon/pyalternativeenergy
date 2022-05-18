@@ -11,8 +11,8 @@ RECIPE("power-house-mk03"):remove_unlock('machines-mk04'):set_fields{hidden = tr
 RECIPE("power-house-mk04"):remove_unlock('machines-mk05'):set_fields{hidden = true}
 
 RECIPE("gasturbinemk01"):remove_unlock('energy-1'):set_fields{hidden = true}
-RECIPE("gasturbinemk02"):remove_unlock('energy-2'):set_fields{hidden = true}
-RECIPE("gasturbinemk03"):remove_unlock('energy-3'):set_fields{hidden = true}
+RECIPE("gasturbinemk02"):remove_unlock('machines-mk03'):set_fields{hidden = true}
+RECIPE("gasturbinemk03"):remove_unlock('machines-mk04'):set_fields{hidden = true}
 
 RECIPE("evaporator"):remove_ingredient('chemical-plant-mk01')
 RECIPE("methanol-reactor"):remove_ingredient('gasturbinemk01')
@@ -24,7 +24,7 @@ RECIPE("automated-factory-mk01"):add_ingredient({type = "item", name = "intermet
 RECIPE("ground-borer"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 -- RECIPE("wpu"):add_ingredient({type = "item", name = "intermetallics", amount = 1})
 RECIPE("ball-mill-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4}):remove_unlock("crusher"):add_unlock("machines-mk01")
-RECIPE("chemical-plant-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5}):remove_unlock('coal-processing-2'):add_unlock('machines-mk01')
+RECIPE("chemical-plant-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5}):remove_unlock('filtration'):add_unlock('machines-mk01')
 RECIPE("carbon-filter"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("classifier"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("desulfurizator-unit"):add_ingredient({type = "item", name = "intermetallics", amount = 4})

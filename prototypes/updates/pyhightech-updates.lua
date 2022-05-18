@@ -9,6 +9,9 @@ TECHNOLOGY('ht-trains'):add_prereq('battery-mk02')
 TECHNOLOGY("ht-robotics"):add_prereq("advanced-robotics")
 TECHNOLOGY("microfibers"):remove_pack('production-science-pack')
 TECHNOLOGY("ethylene"):remove_pack("chemical-science-pack")
+TECHNOLOGY("re-magnet"):remove_pack("production-science-pack")
+TECHNOLOGY("earnshaw-theorem"):add_pack("military-science-pack")
+TECHNOLOGY("nano-tech"):add_pack("military-science-pack")
 
 --BUILDINDS--
 RECIPE("quantum-computer"):remove_ingredient('gasturbinemk03')
@@ -63,8 +66,8 @@ RECIPE("solar-panel-mk04"):replace_ingredient("control-unit", "intelligent-unit"
 RECIPE('centrifuge-mk03'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE('centrifuge-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 40}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 20}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30})
 
-RECIPE('py-oil-powerplant-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 30}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE('py-oil-powerplant-mk03'):add_ingredient({type = "item", name = "harbonic-absorber", amount = 40}):add_ingredient({type = "item", name = "nems", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotubes", amount = 20})
+RECIPE('py-oil-powerplant-mk03'):add_ingredient({type = "item", name = "re-magnet", amount = 40}):add_ingredient({type = "item", name = "milfe", amount = 20})
+RECIPE('py-oil-powerplant-mk04'):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "nems", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 
 -----RECIPES-----
 RECIPE('oxalic-acid'):replace_ingredient("sulfuric-acid", "cyanic-acid")
@@ -73,10 +76,10 @@ RECIPE("yag-laser-module"):add_ingredient({type = "item", name = "erbium", amoun
 RECIPE("nems"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
 RECIPE("heavy-n"):add_ingredient({type = "item", name = "sb-oxide", amount = 5})
 RECIPE("pa-uranium-235"):remove_unlock('nucleo-mk03')
-RECIPE("sodium-silicate"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
+RECIPE("sodium-silicate"):remove_unlock('colloidal-silica'):add_unlock({"silicon-mk01"})
 RECIPE("quantum-dots"):remove_unlock('quantum'):add_unlock({"nano-tech"})
-RECIPE("silica-powder"):remove_unlock('nano-tech'):add_unlock({"silicon-mk01"})
-RECIPE("saline-water"):remove_unlock("elecrolysis"):add_unlock("vacuum-tube-electronics")
+RECIPE("silica-powder"):remove_unlock('colloidal-silica'):add_unlock({"silicon-mk01"})
+RECIPE("saline-water"):remove_unlock("electrolysis"):add_unlock("vacuum-tube-electronics")
 RECIPE("electronic-circuit"):add_ingredient({type = "item", name = "battery-mk00", amount = 1})
 RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "quantum-battery", amount = 2}):add_ingredient({type = "item", name = "photonic-chip", amount = 1}):add_ingredient({type = "item", name = "biofet", amount = 3})
 RECIPE("nanochip"):add_ingredient({type = "item", name = "quantum-dots", amount = 2}):add_ingredient({type = "item", name = "quantum-well", amount = 2}):add_ingredient({type = "item", name = "nano-wires", amount = 2})
@@ -84,6 +87,9 @@ RECIPE("kondo-processor"):add_ingredient({type = "item", name = "nano-wires", am
 RECIPE("pi-josephson-junction"):add_ingredient({type = "item", name = "mqdc", amount = 1}):add_ingredient({type = "item", name = "time-crystal", amount = 1})
 RECIPE("kondo-core"):add_ingredient({type = "item", name = "gaas", amount = 1}):add_ingredient({type = "item", name = "heavy-p-type", amount = 10}):add_ingredient({type = "item", name = "light-n", amount = 10})
 RECIPE("nanocrystaline-core"):remove_unlock("nano-tech"):add_unlock("battery-mk04")
+RECIPE('crco-alloy'):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
+RECIPE('hotair-crco-alloy'):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
+
 
 RECIPE("py-construction-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("py-logistic-robot-01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})

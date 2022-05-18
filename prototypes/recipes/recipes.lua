@@ -1,17 +1,17 @@
-RECIPE {
-    type = "recipe",
-    name = "test",
-    category = "solar-tower",
-    enabled = true,
-    energy_required = 400,
-    ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-    },
-    results = {
-        {type = "item", name = "iron-plate", amount = 1},
-    },
---    main_product = "molybdenite-dust",
-}
+-- RECIPE {
+--     type = "recipe",
+--     name = "test",
+--     category = "solar-tower",
+--     enabled = true,
+--     energy_required = 400,
+--     ingredients = {
+--         {type = "item", name = "iron-plate", amount = 1}
+--     },
+--     results = {
+--         {type = "item", name = "iron-plate", amount = 1},
+--     },
+-- --    main_product = "molybdenite-dust",
+-- }
 
 RECIPE {
     type = "recipe",
@@ -562,7 +562,7 @@ RECIPE {
         {type = "item", name = "cyanoacrylate", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("renewable-mk03")
+}:add_unlock("machine-components-mk03")
 
 RECIPE {
     type = "recipe",

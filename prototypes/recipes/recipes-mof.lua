@@ -88,4 +88,4 @@ RECIPE {
         {type = "item", name = "nanocarrier", amount = 1},
     },
     --main_product = "dodecanoic-acid",
-}:add_unlock("growth-hormone")
+}:add_unlock("bio-implants")

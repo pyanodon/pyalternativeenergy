@@ -12,7 +12,7 @@ RECIPE {
         {"super-steel", 100},
         {'processing-unit', 50},
         {'ns-material', 40},
-        {'biopolymer', 60},
+        {'acrylic', 60},
         {"cf", 100},
         {"glass-fiber", 100},
     },

@@ -1,13 +1,13 @@
 TECHNOLOGY {
     type = "technology",
-    name = "nonrenewable-mk01",
-    icon = "__pyalternativeenergygraphics__/graphics/technology/non-renewable-mk01.png",
+    name = "machine-components-mk01",
+    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {'energy-1'},
+    prerequisites = {},
     effects = {},
     unit = {
-        count = 200,
+        count = 500,
         ingredients = {
             {"automation-science-pack", 1},
             {"py-science-pack-1", 1},
@@ -18,15 +18,15 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = 'technology',
-    name = 'nonrenewable-mk02',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/non-renewable-mk02.png',
+    name = 'machine-components-mk02',
+    icon = '__pycoalprocessinggraphics__/graphics/technology/missing_icon.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'nonrenewable-mk01','energy-2'},
-    dependencies = {"nonrenewable-mk01"},
+    prerequisites = {},
+    dependencies = {"machine-components-mk01"},
     effects = {},
     unit = {
-        count = 300,
+        count = 500,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1}
@@ -37,15 +37,15 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = 'technology',
-    name = 'nonrenewable-mk03',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/non-renewable-mk03.png',
+    name = 'machine-components-mk03',
+    icon = '__pycoalprocessinggraphics__/graphics/technology/missing_icon.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'nonrenewable-mk02','energy-3'},
-    dependencies = {"nonrenewable-mk02"},
+    prerequisites = {},
+    dependencies = {"machine-components-mk02"},
     effects = {},
     unit = {
-        count = 400,
+        count = 500,
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
@@ -57,12 +57,12 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = 'technology',
-    name = 'nonrenewable-mk04',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/non-renewable-mk04.png',
+    name = 'machine-components-mk04',
+    icon = '__pycoalprocessinggraphics__/graphics/technology/missing_icon.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'nonrenewable-mk03'},
-    dependencies = {"nonrenewable-mk03"},
+    prerequisites = {},
+    dependencies = {"machine-components-mk03"},
     effects = {},
     unit = {
         count = 500,

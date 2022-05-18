@@ -13,6 +13,13 @@ TECHNOLOGY("battery"):set_fields({enabled = false, hidden = true})
 
 TECHNOLOGY("solar-energy"):set_fields({enabled = false, hidden = true})
 
+TECHNOLOGY("speed-module-3"):add_pack("military-science-pack")
+TECHNOLOGY("productivity-module-3"):add_pack("military-science-pack")
+TECHNOLOGY("effectivity-module-3"):add_pack("military-science-pack")
+
+
+RECIPE("solar-panel-equipment"):remove_ingredient("solar-panel")
+
 for r, _ in pairs(data.raw.recipe) do
     RECIPE(r):replace_ingredient("solar-panel", "solar-panel-mk01")
 end
@@ -25,9 +32,9 @@ RECIPE("nuclear-reactor"):add_unlock('uranium-processing'):remove_ingredient('su
 data.raw.reactor["nuclear-reactor"].energy_source.effectivity = 0.2
 data.raw.reactor["nuclear-reactor"].heat_buffer.connections = nil
 
-TECHNOLOGY('atomic-bomb'):remove_prereq('domestication-mk02'):remove_prereq('uranium-mk03'):add_prereq('nucleo'):remove_pack('chemical-science-pack'):remove_pack('space-science-pack')
+TECHNOLOGY('atomic-bomb'):remove_prereq('domestication-mk02'):remove_prereq('uranium-mk03'):add_prereq('nucleo'):remove_pack('space-science-pack')
 
-RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingredient('neuromorphic-chip', 'advanced-circuit')
+RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingredient('neuromorphic-chip', 'control-unit')
 RECIPE("uranium-rounds-magazine"):replace_ingredient("uranium-238", "u-238")
 RECIPE("uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
 RECIPE("explosive-uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")

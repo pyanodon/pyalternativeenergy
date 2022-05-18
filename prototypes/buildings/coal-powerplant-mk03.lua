@@ -7,7 +7,7 @@ RECIPE {
         {"py-coal-powerplant-mk02", 1},
         {'ns-material', 40},
         {"processing-unit", 50},
-        {"biopolymer", 50},
+        {"acrylic", 50},
         {"cf", 100},
         {"glass-fiber", 100},
         {"super-steel", 100},
