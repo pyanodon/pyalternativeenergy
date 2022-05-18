@@ -285,10 +285,6 @@ require("prototypes/buildings/mk04-cargo-wagon")
 require("prototypes/buildings/mk04-fluid-wagon")
 require("prototypes/buildings/multiblade-turbine-mk01")
 require("prototypes/buildings/numal-mk01")
-require("prototypes/buildings/fluid-drill-mk01")
-require("prototypes/buildings/fluid-drill-mk02")
-require("prototypes/buildings/fluid-drill-mk03")
-require("prototypes/buildings/fluid-drill-mk04")
 
 require("prototypes/buildings/heat-smelter-test")
 
