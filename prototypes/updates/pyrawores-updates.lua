@@ -313,7 +313,7 @@ RECIPE {
         {type = "fluid", name = "uf6", amount = 100, maximum_temperature = math.floor(duf_min*100)}
     },
     results = {
-        {type = "item", name = "uranium-238", amount = 10},
+        {type = "item", name = "u-238", amount = 10},
     },
     main_product = "uranium-238",
     subgroup = "py-rawores-uranium",
