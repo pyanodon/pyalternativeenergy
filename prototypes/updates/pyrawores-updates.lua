@@ -315,7 +315,7 @@ RECIPE {
     results = {
         {type = "item", name = "u-238", amount = 10},
     },
-    main_product = "uranium-238",
+    -- main_product = "u-238",
     subgroup = "py-rawores-uranium",
     order = "depleted-uranium-" .. recipe_num
 }:add_unlock("uranium-mk01")
