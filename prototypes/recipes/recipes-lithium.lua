@@ -112,15 +112,15 @@ RECIPE {
     name = "lithium-hydroxide",
     category = "chemistry",
     enabled = false,
-    energy_required = 10,
+    energy_required = 200,
     ingredients = {
-        {type = "fluid", name = "slacked-lime", amount = 100},
-        {type = "item", name = "lithium-carbonate", amount = 1},
+        {type = "fluid", name = "slacked-lime", amount = 2000},
+        {type = "item", name = "lithium-carbonate", amount = 20},
         {type = "item", name = "coated-container", amount = 1},
     },
     results = {
-        {type = "item", name = "lithium-hydroxide", amount = 2},
-        {type = "item", name = "limestone", amount = 4},
+        {type = "item", name = "lithium-hydroxide", amount = 40},
+        {type = "item", name = "limestone", amount = 80},
     },
     main_product = "lithium-hydroxide",
 }:add_unlock("lithium-processing")

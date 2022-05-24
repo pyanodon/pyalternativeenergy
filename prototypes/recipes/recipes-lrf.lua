@@ -68,8 +68,8 @@ for i = 1, 10 do
             },
         }:add_unlock("thermal-mk04")
 
-    log(i)
-    log(temp)
+    -- log(i)
+    -- log(temp)
 
 end
 

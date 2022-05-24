@@ -3,6 +3,7 @@ TECHNOLOGY('filtration-mk02'):add_prereq('lithium-processing')
 --BUILDINDS--
 
 --RECIPE--
+RECIPE("equipment-chassi"):replace_ingredient("duralumin", { type = "item", name = "fenxsb-alloy", amount = 1})
 
 --remove combustion mix stuff
 RECIPE("power-house"):remove_unlock('energy-1'):set_fields{hidden = true}
