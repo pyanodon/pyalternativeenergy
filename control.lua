@@ -12,6 +12,7 @@ script.on_init(function()
     global.antisolar_panels = {}
     global.lrf_panels = {}
     global.solar_tower = {}
+    global.tower_cicles = {}
 end)
 
 local function distance ( x1, y1, x2, y2 )
@@ -51,7 +52,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             local tower_y = tower[1].position.y
             local x = E.position.x
             local y = E.position.y
-            if distance(tower_x, tower_y, x, y) <= 200 then
+            if distance(tower_x, tower_y, x, y) <= 100 then
 
                 local zeroed_x = x - tower_x
                 local zeroed_y = y - tower_y
@@ -348,6 +349,47 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         global.antisolar_panels[E.unit_number] = nil
     end
     -- log(serpent.block(global.windmills))
+end)
+
+script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
+    local hand = game.players[event.player_index]
+    --log(serpent.dump(hand.cursor_stack))
+    log(serpent.block(hand.is_cursor_empty()))
+    if hand.cursor_stack ~= nil then
+        if hand.cursor_stack.valid_for_read == true and hand.cursor_stack.name == "solar-tower-panel" then
+            if next(global.solar_tower) ~= nil then
+                for t, tower in pairs(global.solar_tower) do
+                    if next(global.tower_cicles) == nil then
+                        local circle = rendering.draw_circle{color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = 100, target = tower.tower, filled = true, surface = hand.surface}
+                        table.insert(global.tower_cicles, circle)
+                        log(serpent.block(global.tower_cicles))
+                    end
+                end
+            end
+        elseif hand.cursor_stack.valid_for_read == true and hand.cursor_stack.name ~= "solar-tower-panel" then
+            log('hit')
+            if next(global.tower_cicles) ~= nil then
+                log('hit')
+                for c, circle in pairs(global.tower_cicles) do
+                    log('hit')
+                    rendering.destroy(circle)
+                end
+                log('hit')
+                global.tower_cicles = {}
+            end
+        elseif hand.cursor_stack.valid_for_read ~= true then
+            log('hit')
+            if next(global.tower_cicles) ~= nil then
+                log('hit')
+                for c, circle in pairs(global.tower_cicles) do
+                    log('hit')
+                    rendering.destroy(circle)
+                end
+                log('hit')
+                global.tower_cicles = {}
+            end
+        end
+    end
 end)
 
 script.on_event(defines.events.on_rocket_launched, function(event)
