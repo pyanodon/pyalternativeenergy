@@ -13,6 +13,13 @@ script.on_init(function()
     global.lrf_panels = {}
     global.solar_tower = {}
     global.tower_cicles = {}
+    global.updraft_tower = {}
+end)
+
+script.on_configuration_changed(function()
+    if global.tower_cicles == nil then
+        global.tower_cicles = {}
+    end
 end)
 
 local function distance ( x1, y1, x2, y2 )
@@ -43,6 +50,8 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 
     elseif E.name == "solar-tower-building" then
         global.solar_tower[E.unit_number] = {tower = E, panels = {}, panel_count = 0}
+    elseif E.name == "sut" then
+        global.updraft_tower[E.unit_number] = {tower = E, panels = {}, panel_count = 0}
     elseif string.match(E.name, 'solar%-tower%-panel') ~= nil then
         -- find solar tower and angle from it
         local tower = game.surfaces[E.surface.name].find_entities_filtered{name = 'solar-tower-building'}
@@ -53,7 +62,6 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             local x = E.position.x
             local y = E.position.y
             if distance(tower_x, tower_y, x, y) <= 100 then
-
                 local zeroed_x = x - tower_x
                 local zeroed_y = y - tower_y
                 local angle = math.atan2(zeroed_y, zeroed_x)
@@ -80,6 +88,47 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                 }
             end
         end
+    elseif string.match(E.name, "sut%-panel") ~= nil then
+            -- find updraft tower and angle from it
+            local tower = game.surfaces[E.surface.name].find_entities_filtered{name = 'sut'}
+
+            if next(tower) ~= nil then
+                local tower_x = tower[1].position.x
+                local tower_y = tower[1].position.y
+                local x = E.position.x
+                local y = E.position.y
+                if distance(tower_x, tower_y, x, y) <= 100 then
+                    local zeroed_x = x - tower_x
+                    local zeroed_y = y - tower_y
+                    local angle = math.atan2(zeroed_y, zeroed_x)
+                    -- log(serpent.block(angle))
+                    local deg = math.deg(angle)
+                    if deg < 0 then deg = deg + 360 end
+                    -- log(serpent.block(deg))
+
+                    local sprite_num = math.floor(deg / 6)
+                    --log(sprite_num)
+                    if sprite_num < 1 then sprite_num = 1 end
+
+                    local panel = game.surfaces[E.surface.name].create_entity{
+                        name = 'sut-panel-' .. sprite_num,
+                        position = E.position,
+                        force = E.force
+                    }
+                    local floor = game.surfaces[E.surface.name].create_entity{
+                        name = 'sut-panel-floor',
+                        position = E.position,
+                        force = E.force
+                    }
+                    E.destroy()
+                    global.updraft_tower[tower[1].unit_number].panels[panel.unit_number] = panel
+                    global.updraft_tower[tower[1].unit_number].panel_count = global.updraft_tower[tower[1].unit_number].panel_count + 1
+                else
+                    game.show_message_dialog{
+                        text = {"warnings.sut-panel"}
+                    }
+                end
+            end
     elseif E.name == 'nuke-tank-input' then
         local out1 = game.surfaces['nauvis'].create_entity{
             name = 'nuke-tank-output',
@@ -110,7 +159,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             dirty_fuel_tank = out1
             -- moderator = moderator
         }
-        log(serpent.block(global.reactor_tanks))
+        --log(serpent.block(global.reactor_tanks))
     elseif E.name == 'microwave-receiver' then
         global.microwave_satellites[E.unit_number] = {reciver = E, satellites = 0, max = 10}
         local ent_sats = global.microwave_satellites[E.unit_number].satellites
@@ -125,18 +174,18 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         end
         E.power_production = ent_sats * 83333.34
         E.electric_buffer_size = ent_sats * 5000000
-        log(serpent.block(global.microwave_satellites))
+        --log(serpent.block(global.microwave_satellites))
         local ani = rendering.draw_animation{animation = E.name, surface = E.surface, target = E, render_layer = 129}
     elseif E.name == 'aerial-base' then
-        log('hit')
+        --log('hit')
         table.insert(global.aerials.aerial_base_list, E.unit_number)
         global.aerials.abl_count = global.aerials.abl_count + 1
         global.aerials.aerial_bases[E.unit_number] = E
     elseif string.match(E.name, 'aerial%-blimp') ~= nil then
-        log('hit')
+        --log('hit')
         global.aerials.aerial_blimps[E.unit_number] = {unit = E, current_destination = 1}
         if next(global.aerials.aerial_base_list) ~= nil then
-            log('hit')
+            --log('hit')
             E.set_command{
                 type = defines.command.go_to_location,
                 destination = global.aerials.aerial_bases[global.aerials.aerial_base_list[1]].position,
@@ -156,16 +205,16 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         local x = 0
         local y = 0
         if direction == defines.direction.north then
-            log('hit')
+            --log('hit')
             y = -4
         elseif direction == defines.direction.south then
-            log('hit')
+            --log('hit')
             y = 4
         elseif direction == defines.direction.east then
-            log('hit')
+            --log('hit')
             X = -4
         elseif direction == defines.direction.west then
-            log('hit')
+            --log('hit')
             X = 4
         end
         game.surfaces[E.surface.name].create_entity{
@@ -196,7 +245,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
     elseif E.name == 'anti-solar' then
         global.antisolar_panels[E.unit_number] = E
     elseif string.match(E.name, "lrf%-panel") ~= nil then
-        log('hit')
+        --log('hit')
         global.lrf_panels[E.unit_number] = E
     end
 end)
@@ -275,6 +324,15 @@ script.on_nth_tick(60, function(event)
             end
         end
     end
+    if next(global.updraft_tower) ~= nil then
+        for t,tower in pairs(global.updraft_tower) do
+            if tower.panel_count ~= 0 then
+                local panel_count = tower.panel_count
+                local tt = tower.tower
+                tt.power_production = 10000 * panel_count
+            end
+        end
+    end
 end)
 
 script.on_nth_tick(55, function(event)
@@ -317,7 +375,7 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
     -- log('hit')
     if E.type == 'electric-energy-interface' and
         (string.match(E.name, 'hawt%-turbine') ~= nil or string.match(E.name, 'multiblade%-turbine') ~= nil) then
-        log('hit')
+        --log('hit')
         local mill = global.windmills[E.unit_number]
         rendering.destroy(mill.animation)
         global.windmills[E.unit_number] = nil
@@ -336,7 +394,7 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
     elseif E.name == 'microwave-receiver' then
         global.orphan_sats = global.orphan_sats + global.microwave_satellites[E.unit_number].satellites
         global.microwave_satellites[E.unit_number] = nil
-        log(serpent.block(global.orphan_sats))
+        --log(serpent.block(global.orphan_sats))
     elseif E.name == 'solar-panel-mk02' then
         rendering.destroy(global.solar_panels[E.unit_number].animation)
         global.solar_panels[E.unit_number] = nil
@@ -351,43 +409,54 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
     -- log(serpent.block(global.windmills))
 end)
 
+local function delete_circle()
+    if next(global.tower_cicles) ~= nil then
+        --log('hit')
+        for c, circle in pairs(global.tower_cicles) do
+            --log('hit')
+            rendering.destroy(circle)
+        end
+        --log('hit')
+        global.tower_cicles = {}
+    end
+end
+
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
+    --log("hit")
     local hand = game.players[event.player_index]
     --log(serpent.dump(hand.cursor_stack))
-    log(serpent.block(hand.is_cursor_empty()))
+    --log(serpent.block(hand.is_cursor_empty()))
     if hand.cursor_stack ~= nil then
-        if hand.cursor_stack.valid_for_read == true and hand.cursor_stack.name == "solar-tower-panel" then
-            if next(global.solar_tower) ~= nil then
-                for t, tower in pairs(global.solar_tower) do
-                    if next(global.tower_cicles) == nil then
-                        local circle = rendering.draw_circle{color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = 100, target = tower.tower, filled = true, surface = hand.surface}
-                        table.insert(global.tower_cicles, circle)
-                        log(serpent.block(global.tower_cicles))
+        --log('hit')
+        if hand.cursor_stack.valid_for_read == true then
+            --log('hit')
+            if hand.cursor_stack.name == "solar-tower-panel" then
+                --log('hit')
+                if next(global.solar_tower) ~= nil then
+                    for t, tower in pairs(global.solar_tower) do
+                        delete_circle()
+                            local circle = rendering.draw_circle{color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = 100, target = tower.tower, filled = true, surface = hand.surface}
+                            table.insert(global.tower_cicles, circle)
+                            --log(serpent.block(global.tower_cicles))
                     end
                 end
-            end
-        elseif hand.cursor_stack.valid_for_read == true and hand.cursor_stack.name ~= "solar-tower-panel" then
-            log('hit')
-            if next(global.tower_cicles) ~= nil then
-                log('hit')
-                for c, circle in pairs(global.tower_cicles) do
-                    log('hit')
-                    rendering.destroy(circle)
+            elseif hand.cursor_stack.name == "sut-panel" then
+                --log('hit')
+                if next(global.updraft_tower) ~= nil then
+                    for t, tower in pairs(global.updraft_tower) do
+                        delete_circle()
+                            local circle = rendering.draw_circle{color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = 100, target = tower.tower, filled = true, surface = hand.surface}
+                            table.insert(global.tower_cicles, circle)
+                            --log(serpent.block(global.tower_cicles))
+                    end
                 end
-                log('hit')
-                global.tower_cicles = {}
-            end
+        elseif hand.cursor_stack.name ~= "solar-tower-panel" or hand.cursor_stack.name ~= "sut-panel" then
+                    --log('hit')
+                    delete_circle()
+                end
         elseif hand.cursor_stack.valid_for_read ~= true then
-            log('hit')
-            if next(global.tower_cicles) ~= nil then
-                log('hit')
-                for c, circle in pairs(global.tower_cicles) do
-                    log('hit')
-                    rendering.destroy(circle)
-                end
-                log('hit')
-                global.tower_cicles = {}
-            end
+            --log('hit')
+            delete_circle()
         end
     end
 end)
@@ -396,22 +465,22 @@ script.on_event(defines.events.on_rocket_launched, function(event)
 
     local r_inv = event.rocket.get_inventory(defines.inventory.rocket).get_contents()
     local items = 0
-    log(serpent.block(r_inv))
+    --log(serpent.block(r_inv))
     for s, sat in pairs(r_inv) do
-        log(s)
-        log(sat)
+        --log(s)
+        --log(sat)
         if s == 'microwave-satellite' then items = sat end
     end
-    log(items)
+    --log(items)
 
     if items > 0 then
-        log('hit')
+        --log('hit')
         if next(global.microwave_satellites) ~= nil then
             for r, recivers in pairs(global.microwave_satellites) do
                 -- log('hit')
                 if items > 0 then
                     -- log('hit')
-                    log(serpent.block(recivers))
+                    --log(serpent.block(recivers))
                     local sats = recivers.satellites
                     if sats < recivers.max then
                         -- log('hit')
@@ -433,14 +502,14 @@ script.on_event(defines.events.on_rocket_launched, function(event)
                 else
                     break
                 end
-                log(items)
+                --log(items)
                 global.orphan_sats = global.orphan_sats + items
-                log(serpent.block(global.orphan_sats))
+                --log(serpent.block(global.orphan_sats))
             end
         else
             global.orphan_sats = global.orphan_sats + items
         end
-        log(serpent.block(global.orphan_sats))
+        --log(serpent.block(global.orphan_sats))
     end
 end)
 
@@ -454,11 +523,11 @@ end)
 
 script.on_event(defines.events.on_ai_command_completed, function(event)
     if event.result == defines.behavior_result.success then
-        log('hit')
+        --log('hit')
         if global.aerials.aerial_blimps[event.unit_number] ~= nil then
-            log('hit')
+            --log('hit')
             local blimp = global.aerials.aerial_blimps[event.unit_number]
-            log(blimp.unit.surface.name)
+            --log(blimp.unit.surface.name)
             local bases = game.surfaces[blimp.unit.surface.name].find_entities_filtered{
                 position = blimp.unit.position,
                 radius = 10,
@@ -466,19 +535,19 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
             }
             -- log(serpent.block(bases[1].position))
             local cd = blimp.current_destination
-            log(cd)
+            --log(cd)
             local cd_last = cd - 1
             local base = global.aerials.aerial_base_list[cd_last] or
                              global.aerials.aerial_base_list[global.aerials.abl_count]
-            log(base)
+            --log(base)
             local dist = util.distance(global.aerials.aerial_bases[base].position, blimp.unit.position)
-            log(dist)
+            --log(dist)
             for b, base in pairs(bases) do
-                log('hit')
+                --log('hit')
                 base.energy = base.energy + (100 * dist)
                 break
             end
-            log('hit')
+            --log('hit')
             local cd_next = cd + 1
             if global.aerials.aerial_base_list[cd_next] == nil then cd_next = 1 end
             blimp.unit.set_command{

@@ -24,7 +24,7 @@ ITEM {
 }
 
 ENTITY {
-    type = "assembling-machine",
+    type = "electric-energy-interface",
     name = "sut",
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png",
 	icon_size = 64,
@@ -36,19 +36,16 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-8.7, -8.7}, {8.7, 8.7}},
     selection_box = {{-9, -9}, {9, 9}},
-    match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 0
-    },
-    --allowed_effects = {"speed"},
-    crafting_categories = {"solar-tower"},
-    crafting_speed = 1,
+    continuous_animation = true,
     energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.0,
+        type = 'electric',
+        usage_priority = 'primary-output',
+        buffer_capacity = '500MJ',
+        output_flow_limit = "50MW",
+        render_no_power_icon = false
     },
-    energy_usage = "400kW",
+    energy_production = '1W',
+    energy_usage = '0kW',
     animation = {
         layers = {
             {
@@ -90,5 +87,6 @@ ENTITY {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 1.0},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 0.70},
         apparent_volume = 2.5
-    }
+    },
+    render_layer = "wires-above"
 }
