@@ -8,7 +8,7 @@ RECIPE{
         {"belt", 15},
         {"bolts", 50},
         {"anemometer-mk01", 1},
-        {"gearbox-mk01", 1},
+        {"gearbox-mk01", 5},
         {"electronic-circuit", 20},
         {"small-parts-01", 100},
         {"intermetallics", 10},

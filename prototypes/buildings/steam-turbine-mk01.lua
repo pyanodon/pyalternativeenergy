@@ -12,7 +12,7 @@ RECIPE {
         {"shaft-mk01", 1},
         {"brake-mk01", 4},
         {"utility-box-mk01", 2},
-        {"gearbox-mk01", 1},
+        {"gearbox-mk01", 3},
         {"electronic-circuit", 30},
     },
     results = {
