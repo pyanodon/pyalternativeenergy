@@ -5,10 +5,10 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "molten-salt", amount = 200},
+        {type = "fluid", name = "molten-salt", amount = 400},
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 1000},
+        {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 1000},
 
     },
 }:add_unlock("coalplant-mk01")
@@ -18,7 +18,7 @@ RECIPE {
     name = "coal-molten-salt-02",
     category = "coal-powerplant",
     enabled = false,
-    energy_required = 20,
+    energy_required = 40,
     ingredients = {
         {type = "fluid", name = "molten-salt", amount = 200},
     },
@@ -33,7 +33,7 @@ RECIPE {
     name = "coal-molten-salt-03",
     category = "coal-powerplant",
     enabled = false,
-    energy_required = 20,
+    energy_required = 60,
     ingredients = {
         {type = "fluid", name = "molten-salt", amount = 200},
     },
@@ -48,7 +48,7 @@ RECIPE {
     name = "coal-molten-salt-04",
     category = "coal-powerplant",
     enabled = false,
-    energy_required = 20,
+    energy_required = 80,
     ingredients = {
         {type = "fluid", name = "molten-salt", amount = 200},
     },

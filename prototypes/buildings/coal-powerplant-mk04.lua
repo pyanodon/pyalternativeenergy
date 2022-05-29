@@ -49,7 +49,7 @@ ENTITY {
     module_specification = {
         module_slots = 4
     },
-    allowed_effects = {"speed"},
+    allowed_effects = {"speed", "consumption"},
     crafting_categories = {"coal-powerplant"},
     crafting_speed = 4,
     energy_source =
@@ -95,7 +95,7 @@ ENTITY {
         },
       },
     },
-    energy_usage = "35MW",
+    energy_usage = "200MW",
     animation = {
         layers = {
             {
