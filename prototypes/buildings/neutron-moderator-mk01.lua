@@ -39,7 +39,7 @@ ENTITY {
     module_specification = {
         module_slots = 0
     },
-    --allowed_effects = {"speed"},
+    --allowed_effects = {"speed", "consumption"},
     crafting_categories = {"neutron-moderator"},
     crafting_speed = 1,
     energy_source = {

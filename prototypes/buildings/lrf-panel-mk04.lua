@@ -48,7 +48,7 @@ ENTITY {
     module_specification = {
         module_slots = 0
     },
-    --allowed_effects = {"speed"},
+    --allowed_effects = {"speed", "consumption"},
     crafting_categories = {"lrf-panel4"},
     crafting_speed = 1,
     source_inventory_size = 1,
