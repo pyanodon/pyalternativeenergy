@@ -20,6 +20,10 @@ script.on_configuration_changed(function()
     if global.tower_cicles == nil then
         global.tower_cicles = {}
     end
+
+    if global.updraft_tower == nil then
+        global.updraft_tower = {}
+    end
 end)
 
 local function distance ( x1, y1, x2, y2 )
