@@ -79,7 +79,6 @@ ENTITY {
         light_intensity_to_size_coefficient = 0,
         color = {0,0,0},
       },
-      fluid_usage_per_tick = 20,
         smoke =
         {
           {

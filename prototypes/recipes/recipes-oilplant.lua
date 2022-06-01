@@ -5,11 +5,10 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "molten-salt", amount = 200},
+        {type = "fluid", name = "molten-salt", amount = 400},
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 1000},
-
+        {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 1000},
     },
 }:add_unlock("oilplant-mk01")
 
@@ -20,11 +19,10 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "molten-salt", amount = 200},
+        {type = "fluid", name = "molten-salt", amount = 400},
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 2000},
-
+        {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 2000},
     },
 }:add_unlock("oilplant-mk02")
 
@@ -35,11 +33,10 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "molten-salt", amount = 200},
+        {type = "fluid", name = "molten-salt", amount = 400},
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 3000},
-
+        {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 3000},
     },
 }:add_unlock("oilplant-mk03")
 
@@ -50,10 +47,9 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "molten-salt", amount = 200},
+        {type = "fluid", name = "molten-salt", amount = 400},
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt", amount = 200, temperature = 4000},
-
+        {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 4000},
     },
 }:add_unlock("oilplant-mk04")
