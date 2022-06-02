@@ -917,7 +917,8 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'quantum-battery', amount = 1}
-    }
+    },
+    ignore_for_dependencies = true,
 }:add_unlock('railway-mk04')
 
 RECIPE {
