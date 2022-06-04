@@ -31,6 +31,42 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "u232-u233",
+    category = "pa",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "item", name = "u-232", amount = 10},
+        {type = "fluid", name = "neutron", amount = 20}
+    },
+    results = {
+        {type = "item", name = "u-233", amount = 3, probability = 0.999},
+    },
+    main_product = "u-233",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "u234-u235",
+    category = "pa",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "item", name = "u-234", amount = 10},
+        {type = "fluid", name = "neutron", amount = 20}
+    },
+    results = {
+        {type = "item", name = "u-235", amount = 8, probability = 0.999},
+    },
+    main_product = "u-233",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power-mk04")
+
+RECIPE {
+    type = "recipe",
     name = "u236-u237",
     category = "pa",
     enabled = false,
@@ -42,6 +78,25 @@ RECIPE {
     results = {
         {type = "item", name = "u-236", amount = 10, probability = 0.999},
         {type = "item", name = "u-237", amount = 1, probability = 0.001}
+    },
+    main_product = "u-237",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "u237-pu238",
+    category = "pa",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "item", name = "u-237", amount = 10},
+        {type = "fluid", name = "neutron", amount = 20}
+    },
+    results = {
+        {type = "item", name = "pu-238", amount = 10, probability = 0.999},
+        {type = "item", name = "u-238", amount = 1, probability = 0.001}
     },
     main_product = "u-237",
     subgroup = "py-nuclear-waste",
@@ -65,7 +120,43 @@ RECIPE {
     main_product = "po-210",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk04")
+}:add_unlock("nuclear-power-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "fuel-cell-mk03-dissolve",
+    enabled = false,
+    energy_required = 15,
+    category = "mixer",
+    ingredients =
+      {
+        {type = "item", name = "used-up-uranium-fuel-cell-mk03", amount = 10},
+        {type = "item", name = "sodium-hydroxide", amount = 15},
+        {type = "fluid", name = "water", amount = 250},
+        {type = "fluid", name = "sulfuric-acid", amount = 250}
+      },
+    results = {
+        {type = "item", name = "u-234", amount = 20}
+    },
+  }:add_unlock('nuclear-power-mk04')
+
+  RECIPE {
+    type = "recipe",
+    name = "fuel-cell-mk04-dissolve",
+    enabled = false,
+    energy_required = 15,
+    category = "mixer",
+    ingredients =
+      {
+        {type = "item", name = "used-up-uranium-fuel-cell-mk04", amount = 10},
+        {type = "item", name = "sodium-hydroxide", amount = 15},
+        {type = "fluid", name = "water", amount = 250},
+        {type = "fluid", name = "sulfuric-acid", amount = 250}
+      },
+    results = {
+        {type = "item", name = "u-236", amount = 30}
+    },
+  }:add_unlock('nuclear-power-mk04')
 
 --plutonium
 

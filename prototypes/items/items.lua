@@ -915,7 +915,7 @@ ITEM {
     burnt_result = "used-quantum-battery",
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 100
+    stack_size = 10
 }
 
 ITEM {
@@ -926,7 +926,7 @@ ITEM {
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aae",
-    stack_size = 100
+    stack_size = 10
 }
 
 ITEM {
