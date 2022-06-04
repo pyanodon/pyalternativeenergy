@@ -187,6 +187,7 @@ RECIPE {
   },
 }--:add_unlock('uranium-processing')
 
+--[[
 RECIPE {
     type = "recipe",
     name = "uranium-fuel-cell-mk02",
@@ -202,7 +203,37 @@ RECIPE {
         {"uranium-fuel-cell-mk02", 1}
     },
   }--:add_unlock('uranium-processing')
+]]--
 
+  RECIPE {
+    type = "recipe",
+    name = "uranium-fuel-cell-mk03",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+      {
+        {"aluminium-plate", 5},
+        {"u-233", 20},
+      },
+    results = {
+        {"uranium-fuel-cell-mk03", 1}
+    },
+  }:add_unlock('nuclear-power-mk04')--returns 2
+
+  RECIPE {
+    type = "recipe",
+    name = "uranium-fuel-cell-mk04",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+      {
+        {"aluminium-plate", 5},
+        {"u-235", 20},
+      },
+    results = {
+        {"uranium-fuel-cell-mk04", 1}
+    },
+  }:add_unlock('nuclear-power-mk04')--returns 3
 
 --TODO:deal with u-waste vanadium
 
@@ -233,7 +264,7 @@ while enrichment < 100 do
         enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1} 
+            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1}
         },
         results = {
             {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},

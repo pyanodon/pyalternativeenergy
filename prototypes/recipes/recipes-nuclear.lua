@@ -125,7 +125,7 @@ RECIPE {
         {type = "item", name = "lithium-peroxide", amount = 20},
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 1000},
+        {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 5000},
         {type = "item", name = "high-energy-waste-1", amount = 10},
         {type = "item", name = "lithium", amount = 10}
     },
