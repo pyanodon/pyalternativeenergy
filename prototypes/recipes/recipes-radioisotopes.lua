@@ -60,7 +60,7 @@ RECIPE {
     results = {
         {type = "item", name = "u-235", amount = 8, probability = 0.999},
     },
-    main_product = "u-233",
+    -- main_product = "u-233",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power-mk04")
@@ -98,7 +98,7 @@ RECIPE {
         {type = "item", name = "pu-238", amount = 10, probability = 0.999},
         {type = "item", name = "u-238", amount = 1, probability = 0.001}
     },
-    main_product = "u-237",
+    main_product = "pu-238",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
