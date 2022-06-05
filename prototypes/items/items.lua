@@ -49,39 +49,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "high-energy-waste-3",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
-    order = "a",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "high-energy-waste-4",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
-    order = "a",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "high-energy-waste-5",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
-    order = "a",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
     name = "thorium-232",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-232.png",
     icon_size = 64,

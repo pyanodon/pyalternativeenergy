@@ -1,7 +1,7 @@
 
 FLUID {
     type = "fluid",
-    name = "lithium-salt",
+    name = "reactor-waste-1",
     icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
 
@@ -16,9 +16,10 @@ FLUID {
     order = "c"
 }
 
+
 FLUID {
     type = "fluid",
-    name = "reactor-salt",
+    name = "reactor-waste-2",
     icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
     icon_size = 64,
 

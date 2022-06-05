@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = 'technology',
     name = 'lithium-niobate',
-    icon = '__pycoalprocessinggraphics__/graphics/technology/missing_icon.png',
+    icon = "__pyalternativeenergygraphics__/graphics/technology/lithium-niobate.png",
     icon_size = 128,
     order = 'c-a',
     prerequisites = {},

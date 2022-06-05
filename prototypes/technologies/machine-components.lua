@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "machine-components-mk01",
-    icon = "__pycoalprocessinggraphics__/graphics/technology/missing_icon.png",
+    icon = "__pyalternativeenergygraphics__/graphics/technology/machine-comp-mk01.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {},
@@ -19,7 +19,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'machine-components-mk02',
-    icon = '__pycoalprocessinggraphics__/graphics/technology/missing_icon.png',
+    icon = "__pyalternativeenergygraphics__/graphics/technology/machine-comp-mk02.png",
     icon_size = 128,
     order = 'c-a',
     prerequisites = {},
@@ -38,7 +38,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'machine-components-mk03',
-    icon = '__pycoalprocessinggraphics__/graphics/technology/missing_icon.png',
+    icon = "__pyalternativeenergygraphics__/graphics/technology/machine-comp-mk03.png",
     icon_size = 128,
     order = 'c-a',
     prerequisites = {},
@@ -58,7 +58,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = 'technology',
     name = 'machine-components-mk04',
-    icon = '__pycoalprocessinggraphics__/graphics/technology/missing_icon.png',
+    icon = "__pyalternativeenergygraphics__/graphics/technology/machine-comp-mk04.png",
     icon_size = 128,
     order = 'c-a',
     prerequisites = {},
