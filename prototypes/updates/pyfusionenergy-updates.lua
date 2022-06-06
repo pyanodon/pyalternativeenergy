@@ -7,12 +7,6 @@ RECIPE("nuclear-sample"):replace_ingredient('plutonium', 'pu-238'):remove_unlock
 -- TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-mk02')
 TECHNOLOGY("kovarex-enrichment-process-2"):set_fields({enabled = false, hidden = true})
 
-RECIPE("plutonium-fuel-cell"):remove_unlock("kovarex-enrichment-process-2"):add_unlock("nuclear-power-mk02"):replace_ingredient("plutonium", "pu-239")
-
-RECIPE("plutonium-fuel-reprocessing"):remove_unlock("kovarex-enrichment-process-2"):add_unlock("nuclear-power-mk02"):replace_ingredient("plutonium", "plutonium-oxide")
-
-fun.results_replacer("plutonium-fuel-reprocessing","plutonium", "plutonium-oxide")
-
 TECHNOLOGY("helium-processing"):remove_pack("production-science-pack")
 TECHNOLOGY("boron-mk02"):remove_pack("production-science-pack")
 

@@ -168,6 +168,42 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "plutonium-fuel-cell",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "niobium-plate", amount = 3},
+        {type = "item", name = "molybdenum-plate", amount = 2},
+        {type = "item", name = "u-238", amount = 12},
+        {type = "item", name = "pu-239", amount = 3},
+    },
+    results = {
+        {type = "item", name = "mox-fuel-cell", amount = 1},
+    },
+    main_product = "mox-fuel-cell",
+}:add_unlock("nuclear-power")
+
+RECIPE {
+    type = "recipe",
+    name = "plutonium-fuel-reprocessing",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "item", name = "used-up-mox-fuel-cell", amount = 2},
+    },
+    results = {
+        {type = "item", name = "u-238", amount = 6},
+        {type = "item", name = "plutonium-oxide", amount = 6}
+    },
+    main_product = "plutonium-oxide",
+    subgroup = "intermediate-product",
+    order = "t",
+}:add_unlock("nuclear-power")
+
+
+RECIPE {
+    type = "recipe",
     name = "plutonium-seperation",
     category = "pa",
     enabled = false,
@@ -262,7 +298,7 @@ RECIPE {
     main_product = "pu-242",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk02")
+}:add_unlock("nuclear-power")
 
 RECIPE {
     type = "recipe",

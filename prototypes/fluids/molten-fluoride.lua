@@ -2,7 +2,7 @@
 FLUID {
     type = "fluid",
     name = "molten-fluoride-thorium",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/molten-fluoride-thorium.png",
 	icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_color = {r = 0.705, g = 0.717, b = 0.227},
@@ -18,7 +18,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "molten-fluoride-thorium-pa233",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/molten-fluoride-thorium-pa233.png",
 	icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_color = {r = 0.705, g = 0.717, b = 0.227},
@@ -34,7 +34,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "molten-fluoride-u233",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/molten-fluoride-u233.png",
 	icon_size = 64,
     heat_capacity = "0.01KJ",
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas

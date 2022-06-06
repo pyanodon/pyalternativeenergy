@@ -388,7 +388,7 @@ RECIPE {
         {type = "fluid", name = "ethanol", amount = 100}
     },
     results = {
-        {type = "item", name = "plutonium-oxide", amount = 5}
+        {type = "item", name = "plutonium-oxide", amount = 10}
     },
     --main_product = "plutonium-oxide",
     subgroup = "py-nuclear-waste",
@@ -590,7 +590,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     category = "pa",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/pa-yellow-cake.png",
     icon_size = 64,
     ingredients =
       {

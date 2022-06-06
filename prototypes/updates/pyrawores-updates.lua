@@ -264,11 +264,11 @@ while enrichment < 100 do
         enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1}
+            {type = "fluid", name = "uf6", amount = 200, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},
-            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u238*100)},
+            {type = "fluid", name = "uf6", amount = 100, temperature = math.floor(u235*100)},
+            {type = "fluid", name = "uf6", amount = 100, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
@@ -318,11 +318,11 @@ while duf > duf_min do
         enabled = false,
         energy_required = 2,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 100, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 1}
+            {type = "fluid", name = "uf6", amount = 200, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 1}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u235*100)},
-            {type = "fluid", name = "uf6", amount = 50, temperature = math.floor(u238*100)},
+            {type = "fluid", name = "uf6", amount = 100, temperature = math.floor(u235*100)},
+            {type = "fluid", name = "uf6", amount = 100, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium-depleted",
@@ -341,7 +341,7 @@ RECIPE {
     enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "fluid", name = "uf6", amount = 100, maximum_temperature = math.floor(duf_min*100)}
+        {type = "fluid", name = "uf6", amount = 200, maximum_temperature = math.floor(duf_min*100)}
     },
     results = {
         {type = "item", name = "u-238", amount = 10},

@@ -3,7 +3,7 @@ RECIPE {
     type = "recipe",
     name = "fluorine-gas",
     category = "electrolyzer",
-    icon = '__pycoalprocessinggraphics__/graphics/missing_icon_64.png',
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/fluorine-gas.png",
     icon_size = 64,
     enabled = false,
     energy_required = 0.5,

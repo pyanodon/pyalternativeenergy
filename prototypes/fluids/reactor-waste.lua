@@ -2,7 +2,7 @@
 FLUID {
     type = "fluid",
     name = "reactor-waste-1",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/reactor-waste-1.png",
     icon_size = 64,
 
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
@@ -20,7 +20,7 @@ FLUID {
 FLUID {
     type = "fluid",
     name = "reactor-waste-2",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/reactor-waste-2.png",
     icon_size = 64,
 
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas

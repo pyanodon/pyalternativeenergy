@@ -3,7 +3,7 @@ RECIPE {
     type = "recipe",
     name = "molten-thorium",
     category = "mixer",
-    icon = '__pycoalprocessinggraphics__/graphics/missing_icon_64.png',
+    icon = "__pyalternativeenergygraphics__/graphics/icons/molten-thorium.png",
     icon_size = 64,
     enabled = false,
     energy_required = 0.5,
@@ -23,7 +23,7 @@ RECIPE {
     type = "recipe",
     name = "nuclear-molten-thorium-reactor",
     category = "nuclear-fission",
-    icon = '__pycoalprocessinggraphics__/graphics/missing_icon_64.png',
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-molten-thorium-reactor.png",
     icon_size = 64,
     enabled = false,
     energy_required = 0.5,
@@ -43,8 +43,6 @@ RECIPE {
     type = "recipe",
     name = "pa-233-seperation",
     category = "centrifuging",
-    icon = '__pycoalprocessinggraphics__/graphics/missing_icon_64.png',
-    icon_size = 64,
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -55,6 +53,7 @@ RECIPE {
         {type = "fluid", name = "molten-fluoride-thorium", amount = 50},
         {type = "item", name = "pa-233", amount = 10}
     },
+    main_product = "pa-233",
     subgroup = "py-items",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
@@ -63,8 +62,6 @@ RECIPE {
     type = "recipe",
     name = "pa233-u233",
     category = "neutron-absorber",
-    icon = '__pycoalprocessinggraphics__/graphics/missing_icon_64.png',
-    icon_size = 64,
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -73,6 +70,7 @@ RECIPE {
     results = {
         {type = "item", name = "u-233", amount = 10}
     },
+    main_product = "u-233",
     subgroup = "py-items",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
