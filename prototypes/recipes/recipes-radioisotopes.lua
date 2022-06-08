@@ -170,15 +170,15 @@ RECIPE {
     type = "recipe",
     name = "plutonium-fuel-cell",
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
-        {type = "item", name = "niobium-plate", amount = 3},
-        {type = "item", name = "molybdenum-plate", amount = 2},
-        {type = "item", name = "u-238", amount = 12},
-        {type = "item", name = "pu-239", amount = 3},
+        {type = "item", name = "niobium-plate", amount = 8},
+        {type = "item", name = "molybdenum-plate", amount = 5},
+        {type = "item", name = "u-238", amount = 24},
+        {type = "item", name = "pu-239", amount = 6},
     },
     results = {
-        {type = "item", name = "mox-fuel-cell", amount = 1},
+        {type = "item", name = "mox-fuel-cell", amount = 2},
     },
     main_product = "mox-fuel-cell",
 }:add_unlock("nuclear-power")
@@ -188,13 +188,13 @@ RECIPE {
     name = "plutonium-fuel-reprocessing",
     category = "centrifuging",
     enabled = false,
-    energy_required = 60,
+    energy_required = 20,
     ingredients = {
-        {type = "item", name = "used-up-mox-fuel-cell", amount = 2},
+        {type = "item", name = "used-up-mox-fuel-cell", amount = 4},
     },
     results = {
-        {type = "item", name = "u-238", amount = 6},
-        {type = "item", name = "plutonium-oxide", amount = 6}
+        {type = "item", name = "u-238", amount = 12},
+        {type = "item", name = "plutonium-oxide", amount = 12}
     },
     main_product = "plutonium-oxide",
     subgroup = "intermediate-product",
@@ -207,16 +207,16 @@ RECIPE {
     name = "plutonium-seperation",
     category = "pa",
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
-        {type = "item", name = "plutonium-oxide", amount = 5},
+        {type = "item", name = "plutonium-oxide", amount = 15},
     },
     results = {
-        {type = "item", name = "pu-238", amount = 10, probability = 0.02},
-        {type = "item", name = "pu-239", amount = 10, probability = 0.53},
-        {type = "item", name = "pu-240", amount = 10, probability = 0.25},
-        {type = "item", name = "pu-241", amount = 10, probability = 0.15},
-        {type = "item", name = "pu-242", amount = 10, probability = 0.5},
+        {type = "item", name = "pu-238", amount = 30, probability = 0.02},
+        {type = "item", name = "pu-239", amount = 30, probability = 0.53},
+        {type = "item", name = "pu-240", amount = 30, probability = 0.25},
+        {type = "item", name = "pu-241", amount = 30, probability = 0.15},
+        {type = "item", name = "pu-242", amount = 30, probability = 0.5},
     },
     main_product = "pu-239",
     subgroup = "py-nuclear-waste",
@@ -285,7 +285,7 @@ RECIPE {
     name = "pu-241-transmutation",
     category = "pa",
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
         {type = "item", name = "pu-241", amount = 10},
         {type = "fluid", name = "neutron", amount = 20}
@@ -305,7 +305,7 @@ RECIPE {
     name = "pu-242-transmutation",
     category = "pa",
     enabled = false,
-    energy_required = 10,
+    energy_required = 2.5,
     ingredients = {
         {type = "item", name = "pu-242", amount = 10},
     },

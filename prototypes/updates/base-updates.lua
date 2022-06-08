@@ -66,3 +66,5 @@ ITEM("battery"):add_flag("hidden")
 
 data.raw.boiler['heat-exchanger'].target_temperature = 500
 data.raw.boiler['heat-exchanger'].energy_consumption = "122.22MW"
+
+RECIPE("centrifuge"):remove_unlock("kicalk-mk02"):set_fields{hidden = true}

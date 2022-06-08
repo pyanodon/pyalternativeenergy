@@ -41,7 +41,7 @@ ENTITY {
     },
     allowed_effects = {},
     crafting_categories = {"nuclear-fission"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     source_inventory_size = 1,
     result_inventory_size = 1,
     energy_source =

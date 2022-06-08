@@ -49,13 +49,13 @@ ENTITY {
     },
     allowed_effects = {"speed", "consumption"},
     crafting_categories = {"centrifuging"},
-    crafting_speed = 3,
+    crafting_speed = 4,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 4
     },
-    energy_usage = "1500kW",
+    energy_usage = "750MW",
     animation = {
         layers = {
             {

@@ -594,11 +594,11 @@ RECIPE {
     icon_size = 64,
     ingredients =
       {
-        {type = "item", name = "yellow-cake", amount = 1},
+        {type = "item", name = "yellow-cake", amount = 10},
       },
     results = {
-        {type = "item", name = "u-235", amount = 1, probability = 0.1},
-        {type = "item", name = "u-238", amount = 1, probability = 0.9}
+        {type = "item", name = "u-235", amount = 10, probability = 0.1},
+        {type = "item", name = "u-238", amount = 10, probability = 0.9}
     },
     --main_product = "u-235",
     subgroup = "py-nuclear-waste",
