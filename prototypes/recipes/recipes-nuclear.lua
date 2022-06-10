@@ -48,7 +48,7 @@ RECIPE {
     results = {
         {type = "item", name = "control-rod", amount = 1}
     },
-    subgroup = "py-items",
+    subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power")
 
@@ -64,7 +64,7 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 50}
     },
     results = {},
-    subgroup = "py-items",
+    subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
 
@@ -82,7 +82,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "neutron", amount = 100, temperature = 500}
     },
-    subgroup = "py-items",
+    subgroup = "py-nuclear",
     order = "g"
 }
 
@@ -716,5 +716,5 @@ RECIPE {
     main_product = "uf6",
     icon = "__pyraworesgraphics__/graphics/icons/powdered-u-screening.png",
     icon_size = 32,
-    subgroup = "py-rawores-uranium",
+    subgroup = "py-nuclear",
 }:add_unlock("uranium-mk01")

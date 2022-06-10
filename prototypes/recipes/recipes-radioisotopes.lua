@@ -25,7 +25,7 @@ RECIPE {
         {type = "item", name = "u-238", amount = 10, probability = 0.95},
     },
     main_product = "u-238",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -43,7 +43,7 @@ RECIPE {
         {type = "item", name = "u-233", amount = 3, probability = 0.999},
     },
     main_product = "u-233",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk04")
 
@@ -61,7 +61,7 @@ RECIPE {
         {type = "item", name = "u-235", amount = 8, probability = 0.999},
     },
     -- main_product = "u-233",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk04")
 
@@ -80,7 +80,7 @@ RECIPE {
         {type = "item", name = "u-237", amount = 1, probability = 0.001}
     },
     main_product = "u-237",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -99,7 +99,7 @@ RECIPE {
         {type = "item", name = "u-238", amount = 1, probability = 0.001}
     },
     main_product = "pu-238",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -118,7 +118,7 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 20}
     },
     main_product = "po-210",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -197,7 +197,7 @@ RECIPE {
         {type = "item", name = "plutonium-oxide", amount = 12}
     },
     main_product = "plutonium-oxide",
-    subgroup = "intermediate-product",
+    subgroup = "py-nuclear",
     order = "t",
 }:add_unlock("nuclear-power")
 
@@ -219,7 +219,7 @@ RECIPE {
         {type = "item", name = "pu-242", amount = 30, probability = 0.5},
     },
     main_product = "pu-239",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("uranium-processing")
 
@@ -237,7 +237,7 @@ RECIPE {
         {type = "item", name = "pu-239", amount = 9},
     },
     main_product = "pu-239",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -258,7 +258,7 @@ RECIPE {
         {type = "item", name = "pu-240", amount = 10},
     },
     main_product = "pu-240",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -276,7 +276,7 @@ RECIPE {
         {type = "item", name = "pu-241", amount = 10},
     },
     main_product = "pu-241",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -296,7 +296,7 @@ RECIPE {
         {type = "item", name = "am-241", amount = 1},
     },
     main_product = "pu-242",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power")
 
@@ -315,7 +315,7 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 10},
     },
     main_product = "am-243",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power")
 
@@ -336,7 +336,7 @@ RECIPE {
         {type = "item", name = "am-243", amount = 10, probability = 0.5},
     },
     main_product = "am-241",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk03")
 
@@ -354,7 +354,7 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 20},
     },
     main_product = "pu-238",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -372,7 +372,7 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 10},
     },
     main_product = "pu-239",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
@@ -392,6 +392,6 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 200},
     },
     main_product = "cm-250",
-    subgroup = "py-nuclear-waste",
+    subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")

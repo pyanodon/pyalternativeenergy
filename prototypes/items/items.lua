@@ -7,7 +7,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/control-rod.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 50,
     fuel_category = 'control-rod',
@@ -20,7 +20,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-1.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -31,7 +31,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-2.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -42,7 +42,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-232.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -53,7 +53,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-233.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -64,7 +64,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pa-233.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -75,7 +75,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/uranium-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -86,7 +86,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-232.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -97,7 +97,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-233.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -108,7 +108,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-234.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -119,7 +119,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-235.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -130,7 +130,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-236.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -141,7 +141,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-237.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -152,7 +152,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-238.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -163,7 +163,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-239.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -174,7 +174,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-240.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -185,7 +185,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/plutonium-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -196,7 +196,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-238.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -207,7 +207,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-239.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -218,7 +218,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -229,7 +229,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-241.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -240,7 +240,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-242.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -251,7 +251,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/americium-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -262,7 +262,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/am-241.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -273,7 +273,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/am-243.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -284,7 +284,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/curium-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -295,7 +295,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/cm-250.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -306,7 +306,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/po-210.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -317,7 +317,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/sb-hpo-pu.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }
@@ -328,7 +328,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/sb-chloride.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
+    subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
 }

@@ -70,6 +70,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-nuclear",
+        group = "py-alternativeenergy",
+        order = "nu"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-parts",
         group = "py-alternativeenergy",
         order = "z"

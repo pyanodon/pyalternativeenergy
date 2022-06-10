@@ -15,7 +15,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "molten-fluoride-thorium", amount = 100}
     },
-    subgroup = "py-items",
+    subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
 
@@ -35,7 +35,7 @@ RECIPE {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 100},
         {type = "fluid", name = "reactor-waste-1", amount = 100}
     },
-    subgroup = "py-items",
+    subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
 
@@ -54,7 +54,7 @@ RECIPE {
         {type = "item", name = "pa-233", amount = 10}
     },
     main_product = "pa-233",
-    subgroup = "py-items",
+    subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
 
@@ -71,6 +71,6 @@ RECIPE {
         {type = "item", name = "u-233", amount = 10}
     },
     main_product = "u-233",
-    subgroup = "py-items",
+    subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
