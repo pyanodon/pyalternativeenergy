@@ -3,7 +3,18 @@ RECIPE{
     name = 'stirling-concentrator',
     energy_required = 0.5,
     enabled = false,
-    ingredients = {{'pipe', 20}},
+    category = "advanced-crafting",
+    ingredients = {
+        {type = "fluid", name = "lubricant", amount = 100},
+        {"axis-tracker", 2},
+        {"mirror-mk02", 40},
+        {"steel-plate", 50},
+        {"cf", 30},
+        {"stirling-engine", 1},
+        {'self-assembly-monolayer', 10},
+        {"regenerator", 1},
+        {"tower-mk02", 1},
+    },
     results = {{'stirling-concentrator', 1}}
 }:add_unlock("thermal-mk02")
 
@@ -18,8 +29,6 @@ ITEM{
     place_result = 'stirling-concentrator',
     stack_size = 10
 }
-
-
 
 ENTITY{
     type = 'electric-energy-interface',

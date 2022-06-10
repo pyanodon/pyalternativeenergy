@@ -2687,3 +2687,49 @@ ITEM {
     order = "x",
     stack_size = 100
 }
+
+---STIRLING---
+
+ITEM {
+    type = "item",
+    name = "stirling-engine",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/stirling-engine.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "eaa",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "regenerator",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/regenerator.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "eab",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "heatsink",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/heatsink.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "eac",
+    stack_size = 10
+}
+
+ITEM {
+    type = "item",
+    name = "displacer",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/displacer.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "ead",
+    stack_size = 10
+}

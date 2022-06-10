@@ -114,6 +114,7 @@ RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si")
 RECIPE("silicon"):remove_unlock("semiconductor-doping"):add_unlock("silicon-mk01")
 RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
 RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
+RECIPE("regenerator"):add_ingredient({type = "item", name = "ceramics", amount = 5})
 
 table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 

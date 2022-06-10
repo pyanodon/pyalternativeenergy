@@ -979,3 +979,77 @@ RECIPE {
     },
     --main_product = "sb-dust",
 }:add_unlock("cottongut-science-mk05")
+
+
+----STIRLING----
+
+RECIPE {
+    type = "recipe",
+    name = "stirling-engine",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "heatsink", amount = 1},
+        {type = "item", name = "displacer", amount = 1},
+        {type = "item", name = "small-parts-02", amount = 40},
+    },
+    results = {
+        {type = "item", name = "stirling-engine", amount = 1},
+    },
+
+}:add_unlock("thermal-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "heatsink",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "aluminium-plate", amount = 10},
+    },
+    results = {
+        {type = "item", name = "heatsink", amount = 1},
+    },
+
+}:add_unlock("thermal-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "displacer",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "shaft-mk01", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 3},
+        {type = "item", name = "small-parts-01", amount = 10},
+        {type = "item", name = "pipe", amount = 2},
+    },
+    results = {
+        {type = "item", name = "displacer", amount = 1},
+    },
+
+}:add_unlock("thermal-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "regenerator",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "iron-plate", amount = 30},
+        {type = "item", name = "steel-plate", amount = 20},
+        {type = "item", name = "small-parts-01", amount = 20},
+        {type = "item", name = "electric-engine-unit", amount = 1},
+        {type = "item", name = "nbti-alloy", amount = 5},
+        {type = "item", name = "eva", amount = 5},
+    },
+    results = {
+        {type = "item", name = "regenerator", amount = 1},
+    },
+
+}:add_unlock("thermal-mk02")
