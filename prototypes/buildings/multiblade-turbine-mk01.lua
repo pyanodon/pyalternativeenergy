@@ -80,7 +80,7 @@ ENTITY {
         output_flow_limit = "50MW",
         render_no_power_icon = false
     },
-    energy_production = '50MW',
+    energy_production = '0.4MW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     placeable_by = {item = 'multiblade-turbine-mk01', count = 1}

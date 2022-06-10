@@ -3,7 +3,11 @@ RECIPE{
     name = 'sut-panel',
     energy_required = 0.5,
     enabled = false,
-    ingredients = {{'iron-plate', 1}},
+    ingredients = {
+        {'small-parts-02', 5},
+        {'py-asphalt', 1},
+        {'glass', 2},
+    },
     results = {{'sut-panel', 1}}
 }:add_unlock("thermal-mk03")
 
@@ -26,7 +30,7 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "sut-panel"},
+    minable = {mining_time = 0.1, result = "sut-panel"},
     fast_replaceable_group = "sut-panel",
     max_health = 100,
     corpse = "big-remnants",
@@ -127,7 +131,7 @@ ENTITY {
                 width = 64,
                 height = 64,
                 scale = 0.5,
-                shift = util.by_pixel(0, 0),
+                shift = util.by_pixel(-16, -16),
             },
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/sh-floor.png',
@@ -135,7 +139,7 @@ ENTITY {
                 height = 64,
                 scale = 0.5,
                 draw_as_shadow = true,
-                shift = util.by_pixel(10, 0),
+                shift = util.by_pixel(-8, -16),
             },
             --[[
             {

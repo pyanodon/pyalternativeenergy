@@ -49,7 +49,7 @@ ENTITY {
         output_flow_limit = "50MW",
         render_no_power_icon = false
     },
-    energy_production = '100MW',
+    energy_production = '0.85MW',
     energy_usage = "0kW",
     picture =
         {
@@ -81,7 +81,7 @@ ENTITY {
         output_flow_limit = "50MW",
         render_no_power_icon = false
     },
-    energy_production = '100MW',
+    energy_production = '0.85MW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {

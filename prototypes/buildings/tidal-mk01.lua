@@ -3,7 +3,19 @@ RECIPE {
     name = 'tidal-mk01',
     energy_required = 0.5,
     enabled = false,
-    ingredients = {{'pipe', 20}},
+    ingredients = {
+      {"pipe", 20},
+      {"steel-plate", 100},
+      {"refined-concrete", 50},
+      {"iron-gear-wheel", 100},
+      {"duralumin", 30},
+      {"intermetallics", 10},
+      {"shaft-mk01", 3},
+      {"brake-mk01", 3},
+      {"utility-box-mk01", 2},
+      {"gearbox-mk01", 3},
+      {"electronic-circuit", 20},
+  },
     results = {{'tidal-mk01', 1}}
 }:add_unlock("tidal-mk01")
 
@@ -40,7 +52,7 @@ ENTITY {
         output_flow_limit = '50MW',
         render_no_power_icon = false
     },
-    energy_production = '50MW',
+    energy_production = '20MW',
     energy_usage = '0kW',
     animations = {
         south = {

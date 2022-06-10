@@ -4,7 +4,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"glass", 1000},
+        {"small-parts-02", 400},
+        {"stainless-steel", 500},
+        {"electric-engine-unit", 18},
+        {'ns-material', 20},
+        {"advanced-circuit", 10},
+        {"concrete", 100},
     },
     results = {
         {"sut", 1}

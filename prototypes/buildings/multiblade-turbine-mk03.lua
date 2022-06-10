@@ -48,7 +48,7 @@ ENTITY {
         output_flow_limit = "50MW",
         render_no_power_icon = false
     },
-    energy_production = '200MW',
+    energy_production = '15MW',
     energy_usage = "0kW",
     picture =
         {
