@@ -7,7 +7,7 @@ script.on_init(function()
     global.microwave_satellites = {}
     global.orphan_sats = 0
     global.currently_selected_entity = {}
-    global.aerials = {aerial_base_list = {}, abl_count = 0, aerial_bases = {}, aerial_blimps = {}}
+    global.aerials = {aerial_base_list = {}, abl_count = 0, aerial_bases = {}, aerial_blimps = {}, idle_blimps = {}}
     global.solar_panels = {}
     global.antisolar_panels = {}
     global.lrf_panels = {}
@@ -125,7 +125,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                         force = E.force
                     }
                     E.destroy()
-                    global.updraft_tower[tower[1].unit_number].panels[panel.unit_number] = panel
+                    global.updraft_tower[tower[1].unit_number].panels[panel.unit_number] = {panel = panel, floor = floor}
                     global.updraft_tower[tower[1].unit_number].panel_count = global.updraft_tower[tower[1].unit_number].panel_count + 1
                 else
                     game.show_message_dialog{
@@ -197,9 +197,25 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             }
         end
     elseif E.name == 'tidal-placer' then
+        local direction = E.direction
+        local x = 0
+        local y = 0
+        if direction == defines.direction.north then
+            --log('hit')
+            y = -1
+        elseif direction == defines.direction.south then
+            --log('hit')
+            y = 1
+        elseif direction == defines.direction.east then
+            --log('hit')
+            X = -1
+        elseif direction == defines.direction.west then
+            --log('hit')
+            X = 1
+        end
         game.surfaces[E.surface.name].create_entity{
             name = 'tidal-mk01',
-            position = E.position,
+            position = {E.position.x + x, E.position.y + y},
             force = E.force,
             direction = E.direction
         }
@@ -371,7 +387,24 @@ script.on_nth_tick(55, function(event)
 end)
 
 script.on_nth_tick(30, function(event)
-
+    if next(global.aerials.idle_blimps) ~= nil then
+        log(serpent.block(global.aerials.idle_blimps))
+        for b, blimp in pairs(global.aerials.idle_blimps) do
+            if global.aerials.aerial_base_list[1] ~= nil then
+                local dist_2_target = util.distance(global.aerials.aerial_bases[global.aerials.aerial_base_list[1]].position, blimp.unit.position)
+                --log(dist)
+                if dist_2_target > 10 then
+                    blimp.unit.set_command{
+                        type = defines.command.go_to_location,
+                        destination = global.aerials.aerial_bases[global.aerials.aerial_base_list[1]].position,
+                        radius = 5
+                    }
+                    blimp.current_destination = 1
+                    global.aerials.idle_blimps[blimp.unit_number] = nil
+                end
+            end
+        end
+    end
 end)
 
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
@@ -385,12 +418,26 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         global.windmills[E.unit_number] = nil
     elseif E.name == 'aerial-base' then
         for b, base in pairs(global.aerials.aerial_base_list) do
+            log("hit")
+            log(serpent.block(global.aerials.aerial_base_list))
+            log(b)
+            log(base)
+            log(E.unit_number)
             if E.unit_number == base then
+                log("hit")
                 global.aerials.aerial_base_list[b] = nil
                 global.aerials.aerial_bases[E.unit_number] = nil
+                global.aerials.abl_count = global.aerials.abl_count - 1
+                break
             end
-            break
         end
+        log("hit")
+            local new_table = {}
+            for e, entry in pairs(global.aerials.aerial_base_list) do
+                table.insert(new_table, entry)
+            end
+            global.aerials.aerial_base_list = new_table
+            log(serpent.block(global.aerials.aerial_base_list))
     elseif string.match(E.name, 'aerial%-blimp') ~= nil then
         if global.aerials.aerial_blimps[E.unit_number] ~= nil then
             global.aerials.aerial_blimps[E.unit_number] = nil
@@ -409,6 +456,12 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
         global.lrf_panels[E.unit_number] = nil
     elseif E.name == 'anti-solar' then
         global.antisolar_panels[E.unit_number] = nil
+    elseif string.match(E.name, "sut%-panel") ~= nil then
+        local tower = game.surfaces[E.surface.name].find_entities_filtered{name = 'sut'}
+        if next(tower) ~= nil then
+            global.updraft_tower[tower[1].unit_number].panels[E.unit_number].floor.destroy()
+            global.updraft_tower[tower[1].unit_number].panels[E.unit_number] = nil
+        end
     end
     -- log(serpent.block(global.windmills))
 end)
@@ -537,29 +590,39 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
                 radius = 10,
                 name = 'aerial-base'
             }
-            -- log(serpent.block(bases[1].position))
+            log(serpent.block(global.aerials.aerial_base_list))
             local cd = blimp.current_destination
             --log(cd)
             local cd_last = cd - 1
             local base = global.aerials.aerial_base_list[cd_last] or
                              global.aerials.aerial_base_list[global.aerials.abl_count]
-            --log(base)
+            log(serpent.block(base))
             local dist = util.distance(global.aerials.aerial_bases[base].position, blimp.unit.position)
             --log(dist)
             for b, base in pairs(bases) do
                 --log('hit')
-                base.energy = base.energy + (100 * dist)
+                base.energy = base.energy + (1000 * dist)
                 break
             end
             --log('hit')
             local cd_next = cd + 1
             if global.aerials.aerial_base_list[cd_next] == nil then cd_next = 1 end
-            blimp.unit.set_command{
-                type = defines.command.go_to_location,
-                destination = global.aerials.aerial_bases[global.aerials.aerial_base_list[cd_next]].position,
-                radius = 5
-            }
-            blimp.current_destination = cd_next
+            log(cd_next)
+            log(serpent.block(global.aerials.aerial_base_list))
+            local dist_2_target = util.distance(global.aerials.aerial_bases[global.aerials.aerial_base_list[cd_next]].position, blimp.unit.position)
+            --log(dist)
+            if dist_2_target > 10 then
+                blimp.unit.set_command{
+                    type = defines.command.go_to_location,
+                    destination = global.aerials.aerial_bases[global.aerials.aerial_base_list[cd_next]].position,
+                    radius = 5
+                }
+                blimp.current_destination = cd_next
+            else
+                log(event.unit_number)
+                log(serpent.block(global.aerials.idle_blimps))
+                global.aerials.idle_blimps[event.unit_number] = blimp
+            end
         end
     end
 end)
