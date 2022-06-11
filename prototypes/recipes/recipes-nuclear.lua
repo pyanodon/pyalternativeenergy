@@ -114,6 +114,26 @@ steb 6b: Pu-sol3 + heat -> PuO2 + offgas
 --((Waste 1))--
 --mostly u238 from light enrichment
 
+
+RECIPE{
+	type = "recipe",
+	name = "tbp-2",
+	ingredients =
+		{
+			{type = "fluid", name = "phosphoryl-chloride", amount = 50},
+            {type = "item", name = "empty-barrel", amount = 1},
+            {type = "item", name = "pyridine", amount = 1},
+			{type = "fluid", name = "butanol", amount = 50}
+		},
+	results =
+		{
+			{type = "item", name = "tbp", amount = 1},
+			{type = "fluid", name = "hydrogen-chloride", amount = 30},
+		},
+	main_product = "tbp",
+	category = "electrolyzer"
+}:add_unlock('nuclear-power')
+
 RECIPE {
     type = "recipe",
     name = "lithium-salt-fuel-seperation",
@@ -160,7 +180,7 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "fluid", name = "purex-concentrate-1", amount = 60},
-        {type = "fluid", name = "tributyl-phosphate", amount = 100},
+        {type = "item", name = "tbp", amount = 1},
         {type = "fluid", name = "kerosene", amount = 100},
     },
     results = {
@@ -423,7 +443,7 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "fluid", name = "purex-u-concentrate-2", amount = 5},
-        {type = "fluid", name = "tributyl-phosphate", amount = 100},
+        {type = "item", name = "tbp", amount = 1},
         {type = "fluid", name = "kerosene", amount = 100},
     },
     results = {

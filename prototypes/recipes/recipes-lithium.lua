@@ -87,7 +87,7 @@ RECIPE {
 
     },
     results = {
-        {type = "item", name = "tbp", amount = 1},
+        {type = "item", name = "tbp", amount = 3},
     },
     --main_product = "dodecanoic-acid",
 }:add_unlock("lithium-processing")

@@ -1053,3 +1053,94 @@ RECIPE {
     },
 
 }:add_unlock("thermal-mk02")
+
+---bio-ore---
+
+RECIPE {
+    type = "recipe",
+    name = "enriched-ash",
+    category = "hpf",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "al-biomass", amount = 20},
+        {type = "item", name = "zn-biomass", amount = 10},
+        {type = "item", name = "nb-biomass", amount = 10},
+        {type = "fluid", name = "pressured-air", amount = 100},
+    },
+    results = {
+        {type = "item", name = "enriched-ash", amount = 10},
+        {type = "fluid", name = "carbon-dioxide", amount = 50},
+    },
+    main_product = "enriched-ash",
+}:add_unlock("py-science-pack-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "washed-ash",
+    category = "washer",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "enriched-ash", amount = 10},
+        {type = "fluid", name = "water", amount = 100},
+    },
+    results = {
+        {type = "item", name = "washed-ash", amount = 5},
+        {type = "fluid", name = "dirty-water-light", amount = 50},
+    },
+    main_product = "washed-ash",
+}:add_unlock("py-science-pack-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "processed-ash",
+    category = "leaching",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "item", name = "washed-ash", amount = 5},
+        {type = "fluid", name = "sulfuric-acid", amount = 100},
+    },
+    results = {
+        {type = "item", name = "processed-ash", amount = 5},
+    },
+    --main_product = "washed-ash",
+}:add_unlock("py-science-pack-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "advanced-substrate",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "processed-ash", amount = 5},
+        {type = "fluid", name = "bio-oil", amount = 100},
+        {type = "fluid", name = "slacked-lime", amount = 100},
+        {type = "item", name = "tbp", amount = 1},
+    },
+    results = {
+        {type = "item", name = "advanced-substrate", amount = 1},
+    },
+    --main_product = "washed-ash",
+}:add_unlock("py-science-pack-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "bio-ore",
+    category = "mixer",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "advanced-substrate", amount = 1},
+        {type = "fluid", name = "cresylic-acid", amount = 100},
+        {type = "fluid", name = "z3-reagent", amount = 100},
+        {type = "fluid", name = "vinyl-acetate", amount = 50},
+    },
+    results = {
+        {type = "item", name = "bio-ore", amount = 1},
+        {type = "fluid", name = "dirty-water-light", amount = 50},
+    },
+    main_product = "bio-ore",
+}:add_unlock("py-science-pack-mk03")

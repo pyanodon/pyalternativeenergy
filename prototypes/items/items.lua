@@ -2733,3 +2733,60 @@ ITEM {
     order = "ead",
     stack_size = 10
 }
+
+---bio-ore---
+
+ITEM {
+    type = "item",
+    name = "enriched-ash",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/enriched-ash.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "fa",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "washed-ash",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/washed-ash.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "fb",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "processed-ash",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/processed-ash.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "fc",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "advanced-substrate",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/advanced-substrate.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "fd",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "bio-ore",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/bio-ore.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alternativeenergy-items",
+    order = "fe",
+    stack_size = 100
+}
