@@ -13,7 +13,7 @@ RECIPE{
 		},
 	main_product = "butanol",
 	category = "electrolyzer"
-}:add_unlock('lithium-processing')
+}:add_unlock('tbp')
 
 FLUID {
     type = "fluid",

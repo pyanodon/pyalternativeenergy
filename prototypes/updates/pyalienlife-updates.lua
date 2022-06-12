@@ -271,12 +271,12 @@ RECIPE("cellulose-00"):remove_unlock("cellulose-mk01"):add_unlock("vacuum-tube-e
 RECIPE("bhoddos-mk02"):remove_ingredient("40-u-powder")
 RECIPE("bhoddos-mk03"):remove_ingredient("70-u-powder")
 RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
+RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amount = 2})
 
 
 -- TODO
 -- RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}
 -- RECIPE('perfect-samples'):add_ingredient({type = "item", name = "aeroorgan", amount = 1})
--- RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amount = 2})
 
 ITEM("simik"):set_fields{fuel_category = "simik", fuel_value = "600MJ", burnt_result = "used-simik"}
 ITEM("simik-mk02"):set_fields{fuel_category = "simik", fuel_value = "800MJ", burnt_result = "used-simik-mk02"}

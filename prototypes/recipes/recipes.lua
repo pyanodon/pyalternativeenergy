@@ -473,7 +473,7 @@ RECIPE {
         {type = "fluid", name = "chlorine", amount = 50},
     },
     main_product = "tio2",
-}:add_unlock("lithium-processing")
+}:add_unlock("tbp")
 
 RECIPE {
     type = "recipe",

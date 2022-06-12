@@ -1482,17 +1482,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "bca",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/bca.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
     name = "photosensitive-dye",
     icon = "__pyalternativeenergygraphics__/graphics/icons/photosensitive-dye.png",
 	icon_size = 64,
@@ -1713,16 +1702,16 @@ ITEM {
     stack_size = 100
 }
 
-ITEM {
-    type = "item",
-    name = "pocl3",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/pocl3.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
-    stack_size = 100
-}
+-- ITEM {
+--     type = "item",
+--     name = "pocl3",
+--     icon = "__pyalternativeenergygraphics__/graphics/icons/pocl3.png",
+-- 	icon_size = 64,
+--     flags = {},
+--     subgroup = "py-alternativeenergy-items",
+--     order = "ab",
+--     stack_size = 100
+-- }
 
 ITEM {
     type = "item",

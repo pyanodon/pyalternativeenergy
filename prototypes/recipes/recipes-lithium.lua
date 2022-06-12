@@ -1,21 +1,21 @@
-RECIPE {
-    type = "recipe",
-    name = "pocl3",
-    category = "hpf",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = "item", name = "bones", amount = 5},
-        {type = "item", name = "active-carbon", amount = 3},
-        {type = "fluid", name = "chlorine", amount = 50},
-        {type = "item", name = "flask", amount = 2},
-    },
-    results = {
-        {type = "item", name = "pocl3", amount = 1},
-        {type = "fluid", name = "carbon-dioxide", amount = 20},
-    },
-    main_product = "pocl3",
-}:add_unlock("lithium-processing")
+-- RECIPE {
+--     type = "recipe",
+--     name = "pocl3",
+--     category = "hpf",
+--     enabled = false,
+--     energy_required = 10,
+--     ingredients = {
+--         {type = "item", name = "bones", amount = 5},
+--         {type = "item", name = "active-carbon", amount = 3},
+--         {type = "fluid", name = "chlorine", amount = 50},
+--         {type = "item", name = "flask", amount = 2},
+--     },
+--     results = {
+--         {type = "item", name = "pocl3", amount = 1},
+--         {type = "fluid", name = "carbon-dioxide", amount = 20},
+--     },
+--     main_product = "pocl3",
+-- }:add_unlock("lithium-processing")
 
 RECIPE {
     type = "recipe",
@@ -34,7 +34,7 @@ RECIPE {
         {type = "item", name = "acetaldehyde", amount = 1},
     },
     --main_product = "dodecanoic-acid",
-}:add_unlock("lithium-processing")
+}:add_unlock("tbp")
 
 RECIPE {
     type = "recipe",
@@ -51,7 +51,7 @@ RECIPE {
         {type = "item", name = "acetaldehyde", amount = 1},
     },
     --main_product = "dodecanoic-acid",
-}:add_unlock("lithium-processing")
+}:add_unlock("tbp")
 
 RECIPE {
     type = "recipe",
@@ -71,7 +71,7 @@ RECIPE {
         {type = "item", name = "pyridine", amount = 1},
     },
     --main_product = "dodecanoic-acid",
-}:add_unlock("lithium-processing")
+}:add_unlock("tbp")
 
 RECIPE {
     type = "recipe",
@@ -90,7 +90,7 @@ RECIPE {
         {type = "item", name = "tbp", amount = 3},
     },
     --main_product = "dodecanoic-acid",
-}:add_unlock("lithium-processing")
+}:add_unlock("tbp")
 
 RECIPE {
     type = "recipe",

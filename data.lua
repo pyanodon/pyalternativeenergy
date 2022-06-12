@@ -50,6 +50,7 @@ require("prototypes/technologies/sb-silicate")
 require("prototypes/technologies/lithium-niobate")
 require("prototypes/technologies/sc-engine")
 require("prototypes/technologies/machine-components")
+require("prototypes/technologies/tbp")
 
 -- ))
 
