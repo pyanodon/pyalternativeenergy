@@ -12,7 +12,7 @@ RECIPE {
         {type = "fluid", name = "aniline", amount = 50},
     },
     main_product = "aniline",
-}:add_unlock("intermetallics-mk03")
+}:add_unlock("additives")
 
 RECIPE {
     type = "recipe",
@@ -28,7 +28,7 @@ RECIPE {
         {type = "fluid", name = "aniline", amount = 50},
     },
     main_product = "aniline",
-}:add_unlock("intermetallics-mk03")
+}:add_unlock("additives")
 
 FLUID {
     type = "fluid",

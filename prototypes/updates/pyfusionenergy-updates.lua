@@ -17,7 +17,7 @@ RECIPE("py-heat-exchanger-mk02"):add_unlock('machines-mk02')
 RECIPE("py-heat-exchanger-mk03"):add_unlock('machines-mk03')
 RECIPE("py-heat-exchanger-mk04"):add_unlock('machines-mk04')
 
-TECHNOLOGY("ethanolamine"):remove_pack('production-science-pack')
+TECHNOLOGY("ethanolamine"):remove_pack('production-science-pack'):add_pack("py-science-pack-2")
 
 --BUILDINDS--
 RECIPE("particle-accelerator-mk01"):remove_ingredient('gasturbinemk02')
@@ -99,3 +99,9 @@ RECIPE("blanket"):add_ingredient({type = "item", name = "lithium", amount = 5})
 RECIPE("magnetic-core"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("sc-unit"):add_ingredient({type = "item", name = "hts-coil", amount = 1})
 RECIPE("production-science-pack"):add_ingredient({type = "item", name = "acrylic", amount = 5})
+
+RECIPE('purified-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
+RECIPE('cool-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
+RECIPE('cold-clean-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
+RECIPE('liquid-pure-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
+

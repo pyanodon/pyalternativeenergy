@@ -2,21 +2,39 @@
 table.insert(data.raw["rocket-silo"]["mega-farm"].crafting_categories, "mova-farm")
 table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
 
-TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack")
+TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack"):remove_pack("py-science-pack-2")
 TECHNOLOGY("mega-farm"):remove_pack("utility-science-pack"):remove_pack("military-science-pack")
+TECHNOLOGY("pesticides-mk01"):remove_pack("chemical-science-pack")
+
+TECHNOLOGY("semiconductor-doping-mk02"):add_pack("py-science-pack-2")
+TECHNOLOGY("helium-processing"):add_pack("py-science-pack-2")
+TECHNOLOGY("super-steel-mk01"):add_pack("py-science-pack-2")
+TECHNOLOGY("smelters-mk02"):add_pack("py-science-pack-2")
+TECHNOLOGY("advanced-material-processing-2"):add_pack("py-science-pack-2")
+TECHNOLOGY("electric-energy-distribution-2"):add_pack("py-science-pack-2")
+TECHNOLOGY("robotics"):add_pack("py-science-pack-2")
+TECHNOLOGY("small-parts-mk03"):add_pack("py-science-pack-2")
+TECHNOLOGY("low-density-structure"):add_pack("py-science-pack-2")
+TECHNOLOGY("rocket-silo"):add_pack("py-science-pack-2")
+TECHNOLOGY("tholin-mk01"):add_pack("py-science-pack-2")
+TECHNOLOGY("big-mines"):add_pack("py-science-pack-2")
+TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-2")
+
+TECHNOLOGY("kerogen"):add_pack("py-science-pack-4")
+TECHNOLOGY("machines-mk04"):add_pack("py-science-pack-4")
+TECHNOLOGY("railway-mk04"):add_pack("py-science-pack-4")
+TECHNOLOGY("oil-machines-mk03"):add_pack("py-science-pack-4")
+TECHNOLOGY("fracking"):add_pack("py-science-pack-4")
 
 -- The zungror effect
-TECHNOLOGY("cridren-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("water-animals-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("water-invertebrates-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("antitumor"):add_pack("military-science-pack")
 TECHNOLOGY("nanochondria"):add_pack("military-science-pack")
 TECHNOLOGY("vonix-mk02"):add_pack("military-science-pack")
-TECHNOLOGY("vonix-mk03"):add_pack("military-science-pack")
 TECHNOLOGY("cottongut-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("organ-printing-mk03"):add_pack("military-science-pack")
 TECHNOLOGY("py-science-pack-mk04"):add_pack("military-science-pack")
-TECHNOLOGY("mass-production"):add_pack("military-science-pack")
 
 
 RECIPE("mega-farm"):remove_ingredient("intelligent-unit"):replace_ingredient("superconductor-servomechanims", "small-parts-03")
@@ -271,8 +289,10 @@ RECIPE("cellulose-00"):remove_unlock("cellulose-mk01"):add_unlock("vacuum-tube-e
 RECIPE("bhoddos-mk02"):remove_ingredient("40-u-powder")
 RECIPE("bhoddos-mk03"):remove_ingredient("70-u-powder")
 RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
-RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amount = 2})
-
+RECIPE('steam-heating'):remove_unlock('phytomining'):add_unlock('uranium-processing')
+RECIPE('py-science-pack-2'):replace_ingredient("formic-acid", "ethanol")
+RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amount = 2}):replace_ingredient("plastic-bar", "acrylic")
+RECIPE("py-science-pack-4"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
 
 -- TODO
 -- RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}
