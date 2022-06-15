@@ -455,7 +455,7 @@ RECIPE {
         {type = "item", name = "transparent-anode", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("solar-mk03")
+}:add_unlock("zno-nanoparticles")
 
 RECIPE {
     type = "recipe",
@@ -491,7 +491,7 @@ RECIPE {
         {type = "item", name = "crude-top-layer", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("solar-mk03")
+}:add_unlock("zno-nanoparticles")
 
 RECIPE {
     type = "recipe",

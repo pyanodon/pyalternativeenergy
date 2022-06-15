@@ -5,6 +5,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {'solar-power-mk01',"silicon-mk01"},
+    dependencies = {'solar-power-mk01'},
     effects = {},
     unit = {
         count = 150,
@@ -24,7 +25,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'solar-mk01','solar-power-mk02',"silicon-mk02"},
-    dependencies = {"solar-mk01"},
+    dependencies = {"solar-mk01",'solar-power-mk02'},
     effects = {},
     unit = {
         count = 250,
@@ -45,7 +46,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'solar-mk02','solar-power-mk03'},
-    dependencies = {"solar-mk02"},
+    dependencies = {"solar-mk02",'solar-power-mk03'},
     effects = {},
     unit = {
         count = 350,
@@ -53,7 +54,9 @@ TECHNOLOGY {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
             {'chemical-science-pack', 1},
+            {'py-science-pack-3', 1},
             {'production-science-pack', 1},
+            {'py-science-pack-4', 1},
         },
         time = 60
     }
@@ -66,7 +69,7 @@ TECHNOLOGY {
     icon_size = 128,
     order = 'c-a',
     prerequisites = {'solar-mk03','solar-power-mk04','nano-tech'},
-    dependencies = {"solar-mk03"},
+    dependencies = {"solar-mk03",'solar-power-mk04'},
     effects = {},
     unit = {
         count = 450,
@@ -75,7 +78,9 @@ TECHNOLOGY {
             {'logistic-science-pack', 1},
             {'military-science-pack', 1},
             {'chemical-science-pack', 1},
+            {'py-science-pack-3', 1},
             {'production-science-pack', 1},
+            {'py-science-pack-4', 1},
             {'utility-science-pack', 1},
         },
         time = 60
