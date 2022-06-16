@@ -43,7 +43,7 @@ ENTITY{
     match_animation_speed_to_activity = false,
     module_specification = {module_slots = 8},
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
-    crafting_categories = {'solar-tower'},
+    crafting_categories = {'numal'},
     crafting_speed = 0.1,
     energy_source = {type = 'electric', usage_priority = 'secondary-input', emissions_per_minute = 1},
     energy_usage = '400kW',

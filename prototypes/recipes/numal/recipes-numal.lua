@@ -93,7 +93,7 @@ RECIPE {
 
 
 ---maturing---
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'numal-01',
@@ -136,7 +136,7 @@ RECIPE {
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
-
+]]--
 RECIPE {
     type = 'recipe',
     name = 'numal-ink-to-antimony',
@@ -150,4 +150,4 @@ RECIPE {
         {type = 'item', name = 'antimonium-ore', amount = 10},
     },
     --main_product = "cocoon",
-}:add_unlock("molecular-decohesion-mk02")
+}:add_unlock("molecular-decohesion-mk03")

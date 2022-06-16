@@ -77,6 +77,10 @@ data:extend {
         type = "recipe-category",
         name = "mova-farm"
     },
+    {
+        type = "recipe-category",
+        name = "slaughterhouse-numal"
+    },
     --resources
     {
         type = "resource-category",

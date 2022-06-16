@@ -26,7 +26,7 @@ fun.autorecipes {
 					{name='empty-barrel-milk', amount = 2},
 				},
 			crafting_speed = 150,
-			tech = 'numal'
+			tech = 'numal-mk01'
 		},
 		--prod
 		{
@@ -142,7 +142,7 @@ fun.autorecipes {
 ]]--
 
 --hatching
-
+--[[
 RECIPE {
     type = 'recipe',
     name = 'numal-grow-01',
@@ -162,7 +162,7 @@ RECIPE {
     subgroup = 'py-alienlife-numal',
     order = 'a',
 }:add_unlock("numal")
-
+]]--
 --Raising
 
 	fun.autorecipes {
@@ -189,7 +189,7 @@ RECIPE {
 					{name = 'numal', amount_min = 1, amount_max = 4},
 				},
 			crafting_speed = 250,
-			tech = 'numal'
+			tech = 'numal-mk01'
 		},
 		--prod
 		{

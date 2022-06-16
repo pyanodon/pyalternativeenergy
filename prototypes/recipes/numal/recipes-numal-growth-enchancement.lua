@@ -125,34 +125,5 @@ local fun = require("prototypes/functions/functions")
 			crafting_speed = 60,
 			tech = 'reca'
 		},
-		--orexigenic
-		{
-			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'reca',remove_item = true},
-					{name = 'orexigenic', amount =1},
-				},
-			results =
-				{
-					{name = 'chitin-numal', remove_item = true},
-					{name = 'fat-numal', amount = 2},
-				},
-			crafting_speed = 180,
-			tech = 'orexigenic'
-		},
-		--orexigenic and gh
-		{
-			ingredients =
-				{
-					{name = 'gh', amount =1},
-				},
-			results =
-				{
-
-				},
-			crafting_speed = 60,
-			tech = 'orexigenic'
-		},
 	}
 }

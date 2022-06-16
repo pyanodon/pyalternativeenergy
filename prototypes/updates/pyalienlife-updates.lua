@@ -2,6 +2,11 @@
 table.insert(data.raw["rocket-silo"]["mega-farm"].crafting_categories, "mova-farm")
 table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
 
+table.insert(data.raw["assembling-machine"]["slaughterhouse-mk01"].crafting_categories, "slaughterhouse-numal")
+table.insert(data.raw["assembling-machine"]["slaughterhouse-mk02"].crafting_categories, "slaughterhouse-numal")
+table.insert(data.raw["assembling-machine"]["slaughterhouse-mk03"].crafting_categories, "slaughterhouse-numal")
+table.insert(data.raw["assembling-machine"]["slaughterhouse-mk04"].crafting_categories, "slaughterhouse-numal")
+
 TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack"):remove_pack("py-science-pack-2")
 TECHNOLOGY("mega-farm"):remove_pack("utility-science-pack"):remove_pack("military-science-pack")
 TECHNOLOGY("pesticides-mk01"):remove_pack("chemical-science-pack")
