@@ -33,7 +33,7 @@ ENTITY {
     name = "hawt-turbine-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk02.png",
 	icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
+    flags = {"placeable-neutral", "player-creation", "hidden"},
     --minable = {mining_time = 0.5, result = "hawt-turbine-mk02"},
     fast_replaceable_group = "hawt-turbine",
     max_health = 400,
