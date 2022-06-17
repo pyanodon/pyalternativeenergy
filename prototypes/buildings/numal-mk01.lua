@@ -716,7 +716,7 @@ ENTITY {
     name = "numal-placer",
     icon = "__base__/graphics/icons/offshore-pump.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "filter-directions"},
+    flags = {"placeable-neutral", "player-creation", "filter-directions", "hidden"},
     collision_mask = { "object-layer", "train-layer" }, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
     center_collision_mask = { "water-tile", "object-layer", "player-layer" }, -- to test that tile directly under the pump is ground
     fluid_box_tile_collision_test = { "ground-tile" },
