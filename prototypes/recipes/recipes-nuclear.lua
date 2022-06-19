@@ -402,10 +402,10 @@ RECIPE {
     name = "plutonium",
     category = "evaporator",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 2,
     ingredients = {
         {type = "fluid", name = "plutonium-peroxide", amount = 100},
-        {type = "fluid", name = "ethanol", amount = 100}
+        {type = "fluid", name = "ethanol", amount = 50}
     },
     results = {
         {type = "item", name = "plutonium-oxide", amount = 10}
