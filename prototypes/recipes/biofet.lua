@@ -173,6 +173,7 @@ RECIPE {
         {type = "item", name = "molybdenum-plate", amount = 3},
         {type = "item", name = "enzyme-pks", amount = 1},
         {type = "item", name = "agar", amount = 5},
+        {type = 'fluid', name = 'numal-ink', amount = 50},
         {type = "item", name = "stainless-steel", amount = 1},
     },
     results = {

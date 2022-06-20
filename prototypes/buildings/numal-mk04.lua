@@ -9,7 +9,6 @@ RECIPE{
         {"silver-foam", 20},
         {"divertor", 10},
         {"metallic-glass", 30},
-        {"control-unit", 10},
         {'metastable-quasicrystal', 30},
         {"harmonic-absorber", 50},
         {"control-unit", 30},

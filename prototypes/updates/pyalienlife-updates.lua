@@ -53,7 +53,7 @@ RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "intermetallics
 -- RECIPE("creature-chamber-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 --RECIPE("genlab-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 --RECIPE("incubator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
-RECIPE("numal-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
+--RECIPE("numal-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
 --RECIPE("slaughterhouse-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("spore-collector-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("cadaveric-arum-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
