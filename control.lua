@@ -55,7 +55,12 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
     elseif E.name == "solar-tower-building" then
         global.solar_tower[E.unit_number] = {tower = E, panels = {}, panel_count = 0}
     elseif E.name == "sut" then
-        global.updraft_tower[E.unit_number] = {tower = E, panels = {}, panel_count = 0}
+        local base = game.surfaces[E.surface.name].create_entity{
+            name = "sut-panel-base",
+            position = E.position,
+            force = E.force
+        }
+        global.updraft_tower[E.unit_number] = {tower = E, base = base, panels = {}, panel_count = 0}
     elseif string.match(E.name, 'solar%-tower%-panel') ~= nil then
         -- find solar tower and angle from it
         local tower = game.surfaces[E.surface.name].find_entities_filtered{name = 'solar-tower-building'}
@@ -232,10 +237,10 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             y = 4
         elseif direction == defines.direction.east then
             --log('hit')
-            X = -4
+            x = 4
         elseif direction == defines.direction.west then
             --log('hit')
-            X = 4
+            x = -4
         end
         game.surfaces[E.surface.name].create_entity{
             name = 'numal-mk01',
