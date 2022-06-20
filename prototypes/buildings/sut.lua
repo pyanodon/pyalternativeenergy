@@ -111,7 +111,7 @@ ENTITY {
     collision_box = {{-8.7, -8.7}, {8.7, 8.7}},
     selection_box = {{-9, -9}, {9, 9}},
     animations = {
-        sheets = {
+        layers = {
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/sh.png",
                 width = 832,
@@ -122,7 +122,7 @@ ENTITY {
                 shift = util.by_pixel(109, 8),
                 draw_as_shadow = true,
                 scale = 0.9473,
-                variation_count = 1,
+                --variation_count = 1,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/bottom.png",
@@ -133,9 +133,10 @@ ENTITY {
                 animation_speed = 0.3,
                 scale = 0.9473,
                 shift = util.by_pixel(1, 285),
-                variation_count = 1,
+                --variation_count = 1,
             },
         }
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    render_layer = "remnants"
 }

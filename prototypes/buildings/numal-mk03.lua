@@ -1,28 +1,31 @@
 RECIPE{
     type = 'recipe',
-    name = 'numal-reef-mk01',
+    name = 'numal-reef-mk03',
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {'concrete', 200},
-        {'titanium-plate', 100},
-        {'steel-plate', 100},
-        {'steam-engine', 4},
-        {"intermetallics", 20},
-        {'duralumin', 50},
-        {'glass', 100},
-        {'advanced-circuit', 35}
+        {"numal-reef-mk02", 1},
+        {"ticocr-alloy", 50},
+        {"phosphate-glass", 100},
+        {"py-heat-exchanger", 1},
+        {"electric-engine-unit", 5},
+        {"sc-unit", 20},
+        {"cf", 100},
+        {'ns-material', 20},
+        {"small-parts-03", 200},
+        {"neuromorphic-chip", 30},
+        {"processing-unit", 50},
     },
-    results = {{'numal-reef-mk01', 1}}
-}:add_unlock('numal-mk01')
+    results = {{'numal-reef-mk03', 1}}
+}:add_unlock('numal-mk03')
 
 ITEM{
     type = 'item',
-    name = 'numal-reef-mk01',
-    icon = '__pyalternativeenergygraphics__/graphics/icons/numal-mk01.png',
+    name = 'numal-reef-mk03',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/numal-mk03.png',
     icon_size = 64,
     flags = {},
-    subgroup = 'py-alienlife-buildings-mk01',
+    subgroup = 'py-alienlife-buildings-mk03',
     order = 'a',
     place_result = 'numal-placer',
     stack_size = 10
@@ -30,11 +33,11 @@ ITEM{
 
 ENTITY{
     type = 'assembling-machine',
-    name = 'numal-reef-mk01',
-    icon = '__pyalternativeenergygraphics__/graphics/icons/numal-mk01.png',
+    name = 'numal-reef-mk03',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/numal-mk03.png',
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation'},
-    minable = {mining_time = 0.5, result = 'numal-reef-mk01'},
+    minable = {mining_time = 0.5, result = 'numal-reef-mk03'},
     fast_replaceable_group = 'numal',
     max_health = 100,
     corpse = 'big-remnants',
@@ -44,12 +47,12 @@ ENTITY{
     draw_entity_info_icon_background = false,
     show_recipe_icon = false,
     match_animation_speed_to_activity = false,
-    module_specification = {module_slots = 8},
+    module_specification = {module_slots = 13},
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {'numal'},
     crafting_speed = 0.1,
     energy_source = {type = 'electric', usage_priority = 'secondary-input', emissions_per_minute = 1},
-    energy_usage = '400kW',
+    energy_usage = '1000kW',
     animation = {
         north = {
             layers = {
@@ -90,7 +93,7 @@ ENTITY{
                     repeat_count = 150,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0, -32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/north/raw-bot-mask.png',
@@ -100,7 +103,7 @@ ENTITY{
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(64, 48),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/north/raw-top-mask.png',
@@ -110,7 +113,7 @@ ENTITY{
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-80, 32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/north/ao.png',
@@ -246,7 +249,7 @@ ENTITY{
                     repeat_count = 150,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0, -0),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-bot-mask.png',
@@ -256,7 +259,7 @@ ENTITY{
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-64, -96),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-top-mask.png',
@@ -266,7 +269,7 @@ ENTITY{
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(80, -112),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/ao.png',
@@ -393,7 +396,7 @@ ENTITY{
                     repeat_count = 150,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-0, -32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/raw-anim-mask.png',
@@ -403,7 +406,7 @@ ENTITY{
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(64, -48),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/ao-fix.png',
@@ -530,7 +533,7 @@ ENTITY{
                     repeat_count = 150,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0, -32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-bot-mask.png',
@@ -540,7 +543,7 @@ ENTITY{
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-64, 32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-top-mask.png',
@@ -550,7 +553,7 @@ ENTITY{
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-64, -112),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/ao.png',
@@ -824,7 +827,7 @@ ENTITY {
                     repeat_count = 150,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0, -32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/north/raw-bot-mask.png',
@@ -834,7 +837,7 @@ ENTITY {
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(64, 48),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/north/raw-top-mask.png',
@@ -844,7 +847,7 @@ ENTITY {
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-80, 32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/north/ao.png',
@@ -980,7 +983,7 @@ ENTITY {
                     repeat_count = 150,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0, -0),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-bot-mask.png',
@@ -990,7 +993,7 @@ ENTITY {
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-64, -96),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-top-mask.png',
@@ -1000,7 +1003,7 @@ ENTITY {
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(80, -112),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/south/ao.png',
@@ -1127,7 +1130,7 @@ ENTITY {
                     repeat_count = 150,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0, -32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/raw-anim-mask.png',
@@ -1137,7 +1140,7 @@ ENTITY {
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(64, -48),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/east/ao-fix.png',
@@ -1264,7 +1267,7 @@ ENTITY {
                     repeat_count = 150,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0, -32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-bot-mask.png',
@@ -1274,7 +1277,7 @@ ENTITY {
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-64, 32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-top-mask.png',
@@ -1284,7 +1287,7 @@ ENTITY {
                     line_length = 20,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-64, -112),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                 },
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/numal/west/ao.png',
