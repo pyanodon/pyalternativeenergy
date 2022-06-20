@@ -42,7 +42,7 @@ fun.autorecipes {
 				},
 			results =
 				{
-					{name = 'vsk', amount = 1},
+					{name = 'aeroorgan', amount = 1},
 					{name='guts', amount =20},
 				},
 			crafting_speed = 15,

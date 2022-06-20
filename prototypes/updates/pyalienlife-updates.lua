@@ -301,7 +301,7 @@ RECIPE("py-science-pack-4"):add_ingredient({type = "item", name = "nanozymes", a
 
 -- TODO
 -- RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}
--- RECIPE('perfect-samples'):add_ingredient({type = "item", name = "aeroorgan", amount = 1})
+RECIPE('perfect-samples'):add_ingredient({type = "item", name = "aeroorgan", amount = 1})
 
 ITEM("simik"):set_fields{fuel_category = "simik", fuel_value = "600MJ", burnt_result = "used-simik"}
 ITEM("simik-mk02"):set_fields{fuel_category = "simik", fuel_value = "800MJ", burnt_result = "used-simik-mk02"}
