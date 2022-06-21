@@ -24,6 +24,10 @@ script.on_configuration_changed(function()
     if global.updraft_tower == nil then
         global.updraft_tower = {}
     end
+
+    if global.aerials == nil or global.aerials.idle_blimps == nil then
+        global.aerials = {aerial_base_list = {}, abl_count = 0, aerial_bases = {}, aerial_blimps = {}, idle_blimps = {}}
+    end
 end)
 
 local function distance ( x1, y1, x2, y2 )
