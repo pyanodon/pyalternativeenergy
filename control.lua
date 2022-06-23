@@ -229,7 +229,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             direction = E.direction
         }
         E.destroy()
-    elseif E.name == 'numal-placer' then
+    elseif string.match(E.name, "numal%-reef") and string.match(E.name, "placer") then
         local direction = E.direction
         local x = 0
         local y = 0
@@ -247,7 +247,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             x = -4
         end
         game.surfaces[E.surface.name].create_entity{
-            name = 'numal-mk01',
+            name = 'numal-reef-mk' .. string.match(E.name, '%d+'),
             position = {E.position.x + x, E.position.y + y},
             force = E.force,
             direction = E.direction

@@ -29,7 +29,7 @@ ITEM{
     flags = {},
     subgroup = 'py-alienlife-buildings-mk04',
     order = 'a',
-    place_result = 'numal-placer',
+    place_result = 'numal-reef-mk04-placer',
     stack_size = 10
 }
 
@@ -44,6 +44,7 @@ ENTITY{
     max_health = 100,
     corpse = 'big-remnants',
     dying_explosion = 'big-explosion',
+    collision_mask = { "object-layer", "train-layer"},
     collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
     draw_entity_info_icon_background = false,
@@ -721,17 +722,18 @@ ENTITY{
 
 ENTITY {
     type = "offshore-pump",
-    name = "numal-placer",
+    name = "numal-reef-mk04-placer",
     icon = "__base__/graphics/icons/offshore-pump.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "filter-directions", "hidden"},
-    collision_mask = { "object-layer", "train-layer" }, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    collision_mask = { "object-layer", "train-layer"}, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
     center_collision_mask = { "water-tile", "object-layer", "player-layer" }, -- to test that tile directly under the pump is ground
     fluid_box_tile_collision_test = { "ground-tile" },
     adjacent_tile_collision_test = { "water-tile" },
     adjacent_tile_collision_mask = { "ground-tile" }, -- to prevent building on edge of map :(
     adjacent_tile_collision_box = { { -1, -2 }, { 1, -1 } },
     --minable = {mining_time = 0.1, result = "offshore-test"},
+    fast_replaceable_group = 'numal',
     max_health = 150,
     corpse = "offshore-pump-remnants",
     dying_explosion = "offshore-pump-explosion",
