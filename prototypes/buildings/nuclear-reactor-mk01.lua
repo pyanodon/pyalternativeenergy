@@ -4,7 +4,15 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"electronic-circuit", 100},
+        {"iron-gear-wheel", 1000},
+        {"concrete", 1000},
+        {"steel-plate", 1000},
+        {"duralumin", 500},
+        {"steam-engine", 10},
+        {"pbsb-alloy", 50},
+        {"niobium-pipe", 200},
+        {'intermetallics', 50},
     },
     results = {
         {"nuclear-reactor-mk01", 1}

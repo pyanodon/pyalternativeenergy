@@ -4,7 +4,16 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"nuclear-reactor-mk03", 1},
+        {"intelligent-unit", 200},
+        {"super-alloy", 1000},
+        {"sc-engine", 30},
+        {"phosphate-glass", 500},
+        {"agzn-alloy", 100},
+        {'metastable-quasicrystal', 10},
+        {"metallic-glass", 40},
+        {"carbon-aerogel", 100},
+        {"cf", 500},
     },
     results = {
         {"nuclear-reactor-mk04", 1}

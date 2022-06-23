@@ -115,6 +115,9 @@ RECIPE("silicon"):remove_unlock("semiconductor-doping"):add_unlock("silicon-mk01
 RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
 RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
 RECIPE("regenerator"):add_ingredient({type = "item", name = "ceramics", amount = 5})
+RECIPE("nuclear-reactor-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 50}):add_ingredient({type = "item", name = "aerogel", amount = 50})
+RECIPE("nuclear-reactor-mk04"):add_ingredient({type = "item", name = "control-unit", amount = 20}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 40})
+
 
 table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 

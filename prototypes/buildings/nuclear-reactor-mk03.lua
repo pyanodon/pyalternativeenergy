@@ -4,7 +4,18 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"nuclear-reactor-mk02", 1},
+        {"processing-unit", 200},
+        {"low-density-structure", 100},
+        {"small-parts-03", 700},
+        {"refined-concrete", 200},
+        {"super-steel", 1000},
+        {"electric-engine-unit", 10},
+        {"glass", 1000},
+        {"nxsb-alloy", 50},
+        {'ns-material', 50},
+        {"py-heat-exchanger", 1},
+        {"ticocr-alloy", 50},
     },
     results = {
         {"nuclear-reactor-mk03", 1}
