@@ -174,8 +174,13 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         }
         --log(serpent.block(global.reactor_tanks))
     elseif E.name == 'microwave-receiver' then
-        global.microwave_satellites[E.unit_number] = {reciver = E, satellites = 0, max = 10}
-        local ent_sats = global.microwave_satellites[E.unit_number].satellites
+        local mr = game.surfaces['nauvis'].create_entity{
+            name = "microwave-receiver-hidden",
+            position = E.position,
+            force = E.force
+        }
+        global.microwave_satellites[mr.unit_number] = {reciver = mr, satellites = 0, max = 10}
+        local ent_sats = global.microwave_satellites[mr.unit_number].satellites
         if global.orphan_sats > 0 then
             if global.orphan_sats > 10 then
                 ent_sats = 10
@@ -185,10 +190,11 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                 global.orphan_sats = 0
             end
         end
-        E.power_production = ent_sats * 83333.34
-        E.electric_buffer_size = ent_sats * 5000000
+        mr.power_production = ent_sats * 83333.34
+        mr.electric_buffer_size = ent_sats * 5000000
         --log(serpent.block(global.microwave_satellites))
-        local ani = rendering.draw_animation{animation = E.name, surface = E.surface, target = E, render_layer = 129}
+        local ani = rendering.draw_animation{animation = E.name, surface = mr.surface, target = mr, render_layer = 129}
+        E.destroy()
     elseif E.name == 'aerial-base' then
         --log('hit')
         table.insert(global.aerials.aerial_base_list, E.unit_number)

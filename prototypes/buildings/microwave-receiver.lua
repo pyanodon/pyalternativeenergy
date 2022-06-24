@@ -150,6 +150,32 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
   }
 
+  ENTITY {
+    type = "electric-energy-interface",
+    name = "microwave-receiver-hidden",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/microwave-receiver.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.1, result = "microwave-receiver"},
+    max_health = 200,
+    corpse = "big-remnants",
+    dying_explosion = "big-explosion",
+    collision_box = {{-4.3, -4.3}, {4.3, 4.3}},
+    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
+    match_animation_speed_to_activity = false,
+    energy_source = {
+        type = 'electric',
+        usage_priority = 'primary-output',
+        buffer_capacity = '5MJ',
+        --output_flow_limit = "500MW",
+        render_no_power_icon = false
+    },
+    energy_production = '0MW',
+    energy_usage = '0kW',
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    placeable_by = {item = 'microwave-receiver', count = 1}
+  }
+
   data:extend({
     {
         type = 'animation',

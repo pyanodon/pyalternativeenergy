@@ -31,7 +31,7 @@ ITEM {
 }
 
 ENTITY {
-    type = "assembling-machine",
+    type = "burner-generator",
     name = "rtg",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rtg.png",
     icon_size = 64,
@@ -43,18 +43,22 @@ ENTITY {
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 0
-    },
-    --allowed_effects = {"speed", "consumption"},
-    crafting_categories = {"solar-tower"},
-    crafting_speed = 1,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.0,
-    },
-    energy_usage = "400kW",
+    energy_source =
+		{
+				type = "electric",
+				usage_priority = "primary-output",
+		},
+	burner =
+		{
+			type = "burner",
+			fuel_category = "fuelrod",
+			effectivity = 1,
+            fuel_inventory_size = 1,
+            burnt_inventory_size = 1,
+			emissions_per_minute = 0,
+		},
+	effectivity = 1,
+	max_power_output = "50MW",
     animation = {
         layers = {
             {
