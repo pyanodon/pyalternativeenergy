@@ -4,12 +4,24 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"neutron-absorber-mk03", 1},
+        {"intelligent-unit", 10},
+        {"low-density-structure", 50},
+        {"nano-mesh", 10},
+        {"cooling-system", 10},
+        {"super-alloy", 100},
+        {"divertor", 10},
+        {'hydraulic-system-mk02', 4},
+        {"utility-box-mk04", 1},
+        {"electronics-mk04", 1},
+        {'metastable-quasicrystal', 10},
+        {"control-unit", 10},
+        {"ti-n", 30},
     },
     results = {
         {"neutron-absorber-mk04", 1}
     }
-}
+}:add_unlock("nuclear-power-mk04")
 
 ITEM {
     type = "item",

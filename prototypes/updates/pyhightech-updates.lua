@@ -117,7 +117,10 @@ RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-niobat
 RECIPE("regenerator"):add_ingredient({type = "item", name = "ceramics", amount = 5})
 RECIPE("nuclear-reactor-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 50}):add_ingredient({type = "item", name = "aerogel", amount = 50})
 RECIPE("nuclear-reactor-mk04"):add_ingredient({type = "item", name = "control-unit", amount = 20}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 40})
-
+RECIPE("neutron-moderator-mk03"):add_ingredient({type = "item", name = "heavy-fermion", amount = 40}):add_ingredient({type = "item", name = "re-magnet", amount = 30}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 10})
+RECIPE("neutron-moderator-mk04"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "nv-center", amount = 2})
+RECIPE("neutron-absorber-mk03"):add_ingredient({type = "item", name = "diamagnetic-material", amount = 20}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 15})
+RECIPE("neutron-absorber-mk04"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 6}):add_ingredient({type = "item", name = "quantum-vortex-storage-system", amount = 4})
 
 table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 

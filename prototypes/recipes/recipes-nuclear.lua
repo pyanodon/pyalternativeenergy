@@ -56,7 +56,7 @@ RECIPE {
     type = "recipe",
     name = "neutron-absorbston",
     category = "neutron-absorber",
-    icon = '__base__/graphics/icons/assembling-machine-2.png',
+    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/neutron.png",
     icon_size = 64,
     enabled = false,
     energy_required = 0.5,

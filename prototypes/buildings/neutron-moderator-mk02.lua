@@ -4,7 +4,17 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"neutron-moderator-mk01", 1},
+        {"advanced-circuit", 35},
+        {"small-parts-02", 50},
+        {"refined-concrete", 30},
+        {"stainless-steel", 100},
+        {"lithium", 30},
+        {"engine-unit", 5},
+        {"phosphate-glass", 100},
+        {"pump", 5},
+        {'self-assembly-monolayer', 15},
+        {"nxsb-alloy", 50},
     },
     results = {
         {"neutron-moderator-mk02", 1}

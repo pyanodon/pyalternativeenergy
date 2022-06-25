@@ -4,12 +4,22 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"neutron-moderator-mk02", 1},
+        {"processing-unit", 20},
+        {"small-parts-03", 100},
+        {"low-density-structure", 30},
+        {"super-steel", 80},
+        {"nexelit-plate", 100},
+        {"electric-engine-unit", 4},
+        {"anti-reflex-glass", 100},
+        {"utility-box-mk03", 1},
+        {'ns-material', 10},
+        {"alag-alloy", 30},
     },
     results = {
         {"neutron-moderator-mk03", 1}
     }
-}:add_unlock("nuclear-power-mk02")
+}:add_unlock("nuclear-power-mk03")
 
 ITEM {
     type = "item",

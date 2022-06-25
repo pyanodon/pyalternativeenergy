@@ -4,7 +4,16 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"electronic-circuit", 35},
+        {"iron-gear-wheel", 120},
+        {"iron-plate", 50},
+        {"concrete", 40},
+        {"steel-plate", 50},
+        {"duralumin", 20},
+        {"steam-engine", 1},
+        {"glass", 100},
+        {"niobium-pipe", 10},
+        {'intermetallics', 10},
     },
     results = {
         {"neutron-moderator-mk01", 1}

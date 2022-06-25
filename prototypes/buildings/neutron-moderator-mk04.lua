@@ -4,7 +4,19 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"neutron-moderator-mk03", 1},
+        {"intelligent-unit", 20},
+        {"parametric-oscilator", 5},
+        {"biopolymer", 50},
+        {"super-alloy", 80},
+        {"carbon-nanotube", 100},
+        {"sc-engine", 4},
+        {"clean-glass-sheet", 100},
+        {"utility-box-mk04", 1},
+        {'metastable-quasicrystal', 10},
+        {"fes", 2},
+        {"heating-system", 1},
+        {"cooling-system", 3},
     },
     results = {
         {"neutron-moderator-mk04", 1}
