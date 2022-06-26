@@ -44,7 +44,7 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "lithium", amount = 10},
-        {type = "item", name = "lead", amount = 5},
+        {type = "item", name = "lead-plate", amount = 5},
         {type = "item", name = "stainless-steel", amount = 3},
         {type = "item", name = "boron", amount = 10},
     },
