@@ -43,7 +43,10 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "item", name = "iron-plate", amount = 50}
+        {type = "item", name = "lithium", amount = 10},
+        {type = "item", name = "lead", amount = 5},
+        {type = "item", name = "stainless-steel", amount = 3},
+        {type = "item", name = "boron", amount = 10},
     },
     results = {
         {type = "item", name = "control-rod", amount = 1}

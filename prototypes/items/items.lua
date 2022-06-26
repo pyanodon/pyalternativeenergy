@@ -11,7 +11,8 @@ ITEM {
     order = "a",
     stack_size = 50,
     fuel_category = 'control-rod',
-    fuel_value = "10MJ"
+    fuel_value = "10MJ",
+    --burnt_result = "used-control-rod"
 }
 
 ITEM {
