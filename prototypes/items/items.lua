@@ -6,13 +6,45 @@ ITEM {
     name = "control-rod",
     icon = "__pyalternativeenergygraphics__/graphics/icons/control-rod.png",
     icon_size = 64,
+    pictures =
+    {
+      {
+        layers =
+        {
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/icons/control-rod-base.png",
+            size = 64,
+            scale = 0.25,
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/icons/control-rod.png",
+            blend_mode = "additive",
+            draw_as_light = true,
+            --tint = {r = 0.3, g = 0.3, b = 0.3, a = 1.0},
+            scale = 0.25,
+            size = 64,
+          },
+        }
+      },
+    },
     flags = {},
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 50,
     fuel_category = 'control-rod',
     fuel_value = "10MJ",
-    --burnt_result = "used-control-rod"
+    burnt_result = "used-control-rod"
+}
+
+ITEM {
+    type = "item",
+    name = "used-control-rod",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/used-control-rod.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-nuclear",
+    order = "a",
+    stack_size = 100
 }
 
 ITEM {
