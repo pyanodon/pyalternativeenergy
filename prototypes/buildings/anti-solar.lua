@@ -34,7 +34,7 @@ ITEM {
 }
 
 ENTITY {
-    type = "assembling-machine",
+    type = "electric-energy-interface",
     name = "anti-solar",
     icon = "__pyalternativeenergygraphics__/graphics/icons/anti-solar.png",
     icon_size = 64,
@@ -62,6 +62,7 @@ ENTITY {
     },
     energy_production = '5MW',
     energy_usage = '0kW',
+    continuous_animation = true,
     animation = {
         layers = {
             {
