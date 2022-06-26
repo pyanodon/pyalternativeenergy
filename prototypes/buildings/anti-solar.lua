@@ -53,11 +53,15 @@ ENTITY {
     crafting_categories = {"solar-tower"},
     crafting_speed = 1,
     energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.0,
+        type = 'electric',
+        usage_priority = 'primary-output',
+        buffer_capacity = "500MJ",
+        output_flow_limit = "50MW",
+        input_flow_limit = "0W",
+        render_no_power_icon = false
     },
-    energy_usage = "400kW",
+    energy_production = '5MW',
+    energy_usage = '0kW',
     animation = {
         layers = {
             {
