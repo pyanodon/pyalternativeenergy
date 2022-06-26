@@ -47,6 +47,7 @@ ENTITY {
         usage_priority = "primary-output",
         buffer_capacity = "500MJ",
         output_flow_limit = "50MW",
+        input_flow_limit = "0W",
         render_no_power_icon = false
     },
     energy_production = '10MW',
@@ -79,9 +80,10 @@ ENTITY {
         usage_priority = "primary-output",
         buffer_capacity = "500MJ",
         output_flow_limit = "50MW",
+        input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    eenergy_production = '10MW',
+    energy_production = '10MW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {

@@ -48,6 +48,7 @@ ENTITY {
         usage_priority = 'primary-output',
         buffer_capacity = '500MJ',
         output_flow_limit = "50MW",
+        input_flow_limit = "0W",
         render_no_power_icon = false
     },
     energy_production = '1W',

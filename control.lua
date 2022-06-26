@@ -40,11 +40,13 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
     local E = event.created_entity
     if E.type == 'electric-energy-interface' and
         (string.match(E.name, 'hawt%-turbine') ~= nil or string.match(E.name, 'multiblade%-turbine') ~= nil) then
+            log("hit")
         local HE = game.surfaces['nauvis'].create_entity{
             name = E.name .. '-hidden',
             position = E.position,
             force = E.force
         }
+        log(HE.name)
         local ani = rendering.draw_animation{
             animation = E.name .. '-north',
             surface = 'nauvis',
@@ -217,16 +219,16 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
         local y = 0
         if direction == defines.direction.north then
             --log('hit')
-            y = -1
+            y = -2
         elseif direction == defines.direction.south then
             --log('hit')
-            y = 1
+            y = 2
         elseif direction == defines.direction.east then
             --log('hit')
-            x = -1
+            x = 2
         elseif direction == defines.direction.west then
             --log('hit')
-            x = 1
+            x = -2
         end
         game.surfaces[E.surface.name].create_entity{
             name = 'tidal-mk01',
