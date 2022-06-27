@@ -87,6 +87,7 @@ do
                     shift = panel.picture.shift,
                 },
                 vehicle_impact_sound = panel.vehicle_impact_sound,
+                localised_name = {"entity-name.solar-tower-panel"}
             }
             i = i + 1
         end
