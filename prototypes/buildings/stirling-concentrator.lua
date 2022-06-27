@@ -31,7 +31,7 @@ ITEM{
 }
 
 ENTITY{
-    type = 'electric-energy-interface',
+    type = 'furnace',
     name = 'stirling-concentrator',
     icon = '__pyalternativeenergygraphics__/graphics/icons/stirling-concentrator.png',
     icon_size = 64,
@@ -44,14 +44,16 @@ ENTITY{
     collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    energy_source = {
-        type = 'electric',
-        usage_priority = 'primary-output',
-        buffer_capacity = '500MJ',
-        output_flow_limit = "50MW",
-        input_flow_limit = "0W",
-        render_no_power_icon = false
+    module_specification = {
+        module_slots = 0
     },
+    --allowed_effects = {"speed", "consumption"},
+    crafting_categories = {"lrf-panel2"},
+    crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
+    energy_source = {type = "void"},
+    energy_usage = "400kW",
     animation =
     {
         layers = {
@@ -112,8 +114,6 @@ ENTITY{
         },
         off_when_no_fluid_recipe = false
     },
-    energy_production = '50MW',
-    energy_usage = '0kW',
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
     placeable_by = {item = 'stirling-concentrator', count = 1}
 }

@@ -4,7 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
+        {"lrf-building-mk01", 1},
+        {"small-parts-02", 200},
+        {'niobium-plate', 100},
+        {'advanced-circuit', 30},
+        {'concrete', 200},
+        {'eva', 80},
+        {'self-assembly-monolayer', 20},
+        {'engine-unit', 30},
+        {'solder', 50},
     },
     results = {
         {"solar-concentrator", 1}
@@ -41,7 +49,7 @@ ENTITY {
         module_slots = 0
     },
     --allowed_effects = {"speed", "consumption"},
-    crafting_categories = {"solar-tower"},
+    crafting_categories = {"lrf"},
     crafting_speed = 1,
     energy_source = {
         type = "electric",

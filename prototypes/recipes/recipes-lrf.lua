@@ -38,39 +38,6 @@ for i = 1, 10 do
 
         output_temp = temp + (300 * i)
 
-        RECIPE {
-            type = "recipe",
-            name = "lrf-salt-heating-mk03-" .. i,
-            category = "lrf-panel3",
-            enabled = false,
-            energy_required = 1,
-            ingredients = {
-                {type = "fluid", name = "molten-salt", amount = 50, minimum_temperature = output_temp - 305, maximum_temperature = output_temp - 295},
-            },
-            results = {
-                {type = "fluid", name = "molten-salt", amount = 50, temperature = output_temp},
-            },
-        }:add_unlock("thermal-mk03")
-
-        output_temp = temp + (400 * i)
-
-        RECIPE {
-            type = "recipe",
-            name = "lrf-salt-heating-mk04-" .. i,
-            category = "lrf-panel4",
-            enabled = false,
-            energy_required = 1,
-            ingredients = {
-                {type = "fluid", name = "molten-salt", amount = 50, minimum_temperature = output_temp - 405, maximum_temperature = output_temp - 395},
-            },
-            results = {
-                {type = "fluid", name = "molten-salt", amount = 50, temperature = output_temp},
-            },
-        }:add_unlock("thermal-mk04")
-
-    -- log(i)
-    -- log(temp)
-
 end
 
     RECIPE {
