@@ -62,6 +62,7 @@ ENTITY {
         color = {0,0,0},
       },
       fuel_inventory_size = 1,
+      burnt_inventory_size = 1,
       emissions_per_minute = 12,
       smoke =
         {
