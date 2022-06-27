@@ -49,7 +49,7 @@ ENTITY {
         module_slots = 0
     },
     --allowed_effects = {"speed", "consumption"},
-    crafting_categories = {"lrf"},
+    crafting_categories = {"lrf2"},
     crafting_speed = 1,
     energy_source = {
         type = "electric",

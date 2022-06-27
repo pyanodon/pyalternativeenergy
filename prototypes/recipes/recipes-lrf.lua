@@ -71,35 +71,3 @@ end
             {type = "fluid", name = "molten-salt", amount = 100, temperature = 1000},
         },
     }:add_unlock("thermal-mk02")
-
-    RECIPE {
-        type = "recipe",
-        name = "lrf-steam-3",
-        category = "lrf3",
-        enabled = false,
-        energy_required = 10,
-        main_product = "pressured-steam",
-        ingredients = {
-            {type = "fluid", name = "pressured-water", amount = 100},
-        },
-        results = {
-            {type = "fluid", name = "pressured-steam", amount = 100, temperature = 4000},
-            {type = "fluid", name = "molten-salt", amount = 100, temperature = 1000},
-        },
-    }:add_unlock("thermal-mk03")
-
-    RECIPE {
-        type = "recipe",
-        name = "lrf-steam-4",
-        category = "lrf4",
-        enabled = false,
-        energy_required = 10,
-        main_product = "pressured-steam",
-        ingredients = {
-            {type = "fluid", name = "pressured-water", amount = 100},
-        },
-        results = {
-            {type = "fluid", name = "pressured-steam", amount = 100, temperature = 5000},
-            {type = "fluid", name = "molten-salt", amount = 100, temperature = 1000},
-        },
-    }:add_unlock("thermal-mk04")

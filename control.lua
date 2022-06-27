@@ -224,10 +224,10 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             y = 2
         elseif direction == defines.direction.east then
             --log('hit')
-            x = 2
+            x = 1
         elseif direction == defines.direction.west then
             --log('hit')
-            x = -2
+            x = -1
         end
         game.surfaces[E.surface.name].create_entity{
             name = 'tidal-mk01',
