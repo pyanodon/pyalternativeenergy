@@ -37,7 +37,7 @@ ITEM{
 
 
 ENTITY{
-    type = 'solar-panel',
+    type = 'electric-energy-interface',
     name = 'solar-panel-mk02',
     icon = '__pyalternativeenergygraphics__/graphics/icons/solar-panel-mk02.png',
     icon_size = 64,
@@ -49,12 +49,17 @@ ENTITY{
     dying_explosion = 'medium-explosion',
     collision_box = {{-3.8, -3.8}, {3.8, 3.8}},
     selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
-    match_animation_speed_to_activity = false,
+    continuous_animation = true,
     energy_source = {
         type = 'electric',
-        usage_priority = 'solar',
+        usage_priority = 'primary-output',
+        buffer_capacity = '500MJ',
+        output_flow_limit = "50MW",
+        input_flow_limit = "0W",
+        render_no_power_icon = false
     },
-    --[[
+    energy_production = '4MW',
+    energy_usage = '0kW',
     animation =
     {
         layers = {
@@ -89,78 +94,5 @@ ENTITY{
             },
         }
     },
-    ]]--
-    picture = {
-        layers = {
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk02/raw.png',
-                width = 352,
-                height = 416,
-                line_length = 5,
-                frame_count = 10,
-                shift = util.by_pixel(16, -80),
-                --animation_speed = 0.4
-            },
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk02/l.png',
-                width = 352,
-                height = 416,
-                line_length = 5,
-                frame_count = 10,
-                draw_as_glow = true,
-                shift = util.by_pixel(16, -80),
-                --animation_speed = 0.4
-            },
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk02/sh.png',
-                width = 352,
-                height = 416,
-                line_length = 5,
-                frame_count = 10,
-                shift = util.by_pixel(16, -80),
-                draw_as_shadow = true,
-                --animation_speed = 0.4
-            },
-        }
-    },
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
-    production = '4MW',
 }
-
-data:extend({
-    {
-        type = 'animation',
-        name = 'solar-panel-mk02',
-        layers = {
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk02/raw.png',
-                width = 352,
-                height = 416,
-                line_length = 5,
-                frame_count = 10,
-                shift = util.by_pixel(16, -80),
-                --animation_speed = 0.4
-            },
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk02/l.png',
-                width = 352,
-                height = 416,
-                line_length = 5,
-                frame_count = 10,
-                draw_as_glow = true,
-                shift = util.by_pixel(16, -80),
-                --animation_speed = 0.4
-            },
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk02/sh.png',
-                width = 352,
-                height = 416,
-                line_length = 5,
-                frame_count = 10,
-                shift = util.by_pixel(16, -80),
-                draw_as_shadow = true,
-                --animation_speed = 0.4
-            },
-        }
-    }
-})
