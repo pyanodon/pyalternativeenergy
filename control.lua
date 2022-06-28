@@ -330,10 +330,17 @@ script.on_nth_tick(60, function(event)
     end
     if next(global.updraft_tower) ~= nil then
         for t,tower in pairs(global.updraft_tower) do
-            if tower.panel_count ~= 0 then
-                local panel_count = tower.panel_count
-                local tt = tower.tower
-                tt.power_production = 10000 * panel_count
+            if tower.tower.valid == true then
+                if tower.panel_count ~= 0 then
+                    local panel_count = tower.panel_count
+                    local tt = tower.tower
+                    tt.power_production = 10000 * panel_count
+                end
+            else
+                if tower.base.valid == true then
+                    tower.base.destroy()
+                end
+                tower = nil
             end
         end
     end

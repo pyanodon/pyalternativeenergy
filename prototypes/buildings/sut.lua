@@ -109,8 +109,8 @@ ENTITY {
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-8.7, -8.7}, {8.7, 8.7}},
-    selection_box = {{-9, -9}, {9, 9}},
+    collision_box = {{0,0}, {0,0}},
+    selection_box = {{0,0}, {0,0}},
     animations = {
         layers = {
             {
