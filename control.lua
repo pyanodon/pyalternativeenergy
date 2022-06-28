@@ -13,6 +13,7 @@ script.on_init(function()
     global.solar_tower = {}
     global.tower_cicles = {}
     global.updraft_tower = {}
+    global.stirling = {}
 end)
 
 script.on_configuration_changed(function()
@@ -266,6 +267,8 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
     elseif string.match(E.name, "lrf%-panel") ~= nil then
         --log('hit')
         global.lrf_panels[E.unit_number] = E
+    elseif E.name == "stirling-concentrator" then
+        global.stirling[E.unit_number] = E
     end
 end)
 
@@ -350,6 +353,21 @@ script.on_nth_tick(55, function(event)
                 anti.active = true
             end
         end
+        for p,panel in pairs(global.stirling) do
+            if panel.valid == true then
+                panel.active = false
+            end
+        end
+        for e, entity in pairs(global.updraft_tower) do
+            if entity.tower.valid == true then
+                entity.tower.active = false
+            end
+        end
+        for e, entity in pairs(global.solar_tower) do
+            if entity.tower.valid == true then
+                entity.tower.active = false
+            end
+        end
     else
         --log('hit')
         for p, panel in pairs(global.lrf_panels) do
@@ -362,6 +380,21 @@ script.on_nth_tick(55, function(event)
         for a,anti in pairs(global.antisolar_panels) do
             if anti.valid == true then
                 anti.active = false
+            end
+        end
+        for p,panel in pairs(global.stirling) do
+            if panel.valid == true then
+                panel.active = true
+            end
+        end
+        for e, entity in pairs(global.updraft_tower) do
+            if entity.tower.valid == true then
+                entity.tower.active = true
+            end
+        end
+        for e, entity in pairs(global.solar_tower) do
+            if entity.tower.valid == true then
+                entity.tower.active = true
             end
         end
     end

@@ -66,7 +66,7 @@ ENTITY{
                 line_length = 5,
                 frame_count = 10,
                 shift = util.by_pixel(32, -48),
-                --animation_speed = 0.4
+                animation_speed = 0.0001
             },
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/sh.png',
@@ -76,7 +76,7 @@ ENTITY{
                 frame_count = 10,
                 shift = util.by_pixel(32, -48),
                 draw_as_shadow = true,
-                --animation_speed = 0.4
+                animation_speed = 0.0001
             },
         }
     },
