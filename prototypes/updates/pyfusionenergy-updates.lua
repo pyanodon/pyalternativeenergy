@@ -13,9 +13,7 @@ TECHNOLOGY("boron-mk02"):remove_pack("production-science-pack")
 RECIPE("grease-table-mk01"):remove_unlock('diamond-mining'):add_unlock('machines-mk03')
 RECIPE("py-turbine"):remove_unlock('fusion-mk01')
 
-RECIPE("py-heat-exchanger-mk02"):add_unlock('machines-mk02')
-RECIPE("py-heat-exchanger-mk03"):add_unlock('machines-mk03')
-RECIPE("py-heat-exchanger-mk04"):add_unlock('machines-mk04')
+
 
 TECHNOLOGY("ethanolamine"):remove_pack('production-science-pack'):add_pack("py-science-pack-2")
 

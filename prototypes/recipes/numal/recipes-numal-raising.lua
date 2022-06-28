@@ -28,6 +28,23 @@ fun.autorecipes {
 			crafting_speed = 150,
 			tech = 'numal-mk01'
 		},
+		{
+			ingredients =
+				{
+					{name = 'numal', amount = 2},
+                    {name = 'trits', amount =1},
+					{name = 'cdna', amount =1},
+					{name = 'numal-food-01', amount =1},
+					{name = 'barrel-milk', amount = 2},
+				},
+			results =
+				{
+					{name = 'numal-egg', amount = 5},
+					{name='empty-barrel-milk', amount = 2},
+				},
+			crafting_speed = 80,
+			tech = 'numal-mk01'
+		},
 		--prod
 		{
 			ingredients =
@@ -43,6 +60,23 @@ fun.autorecipes {
 			crafting_speed = 120,
 			tech = 'numal-mk02'
 		},
+		{
+			ingredients =
+				{
+					{name = 'numal', amount = 2},
+                    {name = 'trits', amount =1},
+					{name = 'cdna', amount =1},
+					{name = 'numal-food-02', amount =1},
+					{name = 'barrel-milk', amount = 2},
+				},
+			results =
+				{
+					{name = 'numal-egg', amount = 7},
+					{name='empty-barrel-milk', amount = 2},
+				},
+			crafting_speed = 100,
+			tech = 'numal-mk01'
+		},
 		--utility
 		{
 			ingredients =
@@ -57,6 +91,22 @@ fun.autorecipes {
 				},
 			crafting_speed = 80,
 			tech = 'numal-mk03'
+		},
+		--beyond
+		{
+			ingredients =
+				{
+					{name = 'numal', add_amount = 3},
+					{name = 'dhilmos', amount = 5},
+					{name = 'vrauks', amount =2},
+					{name = 'numal-food-02', amount =1},
+				},
+			results =
+				{
+					{name = 'numal-egg', add_amount = 15},
+				},
+			crafting_speed = 80,
+			tech = 'numal-mk04'
 		},
 	}
 }
@@ -191,6 +241,18 @@ RECIPE {
 			crafting_speed = 250,
 			tech = 'numal-mk01'
 		},
+		{
+			ingredients =
+				{
+					{name = 'numal-food-01', amount =1},
+				},
+			results =
+				{
+					{name = 'numal', amount_min = 1, amount_max = 6},
+				},
+			crafting_speed = 200,
+			tech = 'numal-mk01'
+		},
 		--prod
 		{
 			ingredients =
@@ -201,7 +263,22 @@ RECIPE {
 				},
 			results =
 				{
-					{name = 'numal', amount_min = 3, amount_max = 8},
+					{name = 'numal', amount_min = 3, amount_max = 6},
+				},
+			crafting_speed = 250,
+			tech = 'numal-mk02'
+		},
+		{
+			ingredients =
+				{
+					{name = 'numal-egg', add_amount = 4},
+					{name = 'bedding', amount = 3},
+					{name = 'caged-auog', amount = 1},
+					{name = 'numal-food-02', amount =1},
+				},
+			results =
+				{
+					{name = 'numal', amount_min = 3, amount_max = 10},
 				},
 			crafting_speed = 200,
 			tech = 'numal-mk02'
@@ -220,6 +297,22 @@ RECIPE {
 				},
 			crafting_speed = 150,
 			tech = 'numal-mk03'
+		},
+		--beyond
+		{
+			ingredients =
+				{
+					{name = 'numal-egg', add_amount = 5},
+					{name = 'arthurian-egg', amount = 5},
+					{name = 'navens', amount =5},
+					{name = 'numal-food-02', amount =1},
+				},
+			results =
+				{
+					{name = 'numal-egg', add_amount = 20},
+				},
+			crafting_speed = 80,
+			tech = 'numal-mk04'
 		},
 	}
 }
