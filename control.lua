@@ -212,7 +212,8 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                 radius = 5
             }
         end
-    elseif E.name == 'tidal-placer' then
+    elseif string.match(E.name, 'tidal%-placer') then
+        log("hit")
         local direction = E.direction
         local x = 0
         local y = 0
@@ -230,7 +231,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             x = -1
         end
         game.surfaces[E.surface.name].create_entity{
-            name = 'tidal-mk01',
+            name = 'tidal-mk'.. string.match(E.name, '%d+'),
             position = {E.position.x + x, E.position.y + y},
             force = E.force,
             direction = E.direction

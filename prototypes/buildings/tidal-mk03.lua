@@ -30,7 +30,7 @@ ITEM {
     flags = {},
     subgroup = 'py-alternativeenergy-buildings-mk03',
     order = 'd',
-    place_result = 'tidal-placer',
+    place_result = 'tidal-placer-mk03',
     stack_size = 10
 }
 
@@ -52,7 +52,8 @@ ENTITY {
         type = 'electric',
         usage_priority = 'primary-output',
         buffer_capacity = '500MJ',
-        output_flow_limit = '50MW',
+        output_flow_limit = '200MW',
+        input_flow_limit = "0W",
         render_no_power_icon = false
     },
     energy_production = '80MW',
@@ -447,7 +448,7 @@ ENTITY {
 
 ENTITY {
     type = "offshore-pump",
-    name = "tidal-placer",
+    name = "tidal-placer-mk03",
     icon = "__base__/graphics/icons/offshore-pump.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "filter-directions", "hidden"},

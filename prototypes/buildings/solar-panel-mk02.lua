@@ -70,7 +70,7 @@ ENTITY{
                 line_length = 5,
                 frame_count = 10,
                 shift = util.by_pixel(16, -80),
-                --animation_speed = 0.4
+                animation_speed = 0.001
             },
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk02/l.png',
@@ -80,7 +80,7 @@ ENTITY{
                 frame_count = 10,
                 draw_as_glow = true,
                 shift = util.by_pixel(16, -80),
-                --animation_speed = 0.4
+                animation_speed = 0.001
             },
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk02/sh.png',
@@ -90,7 +90,7 @@ ENTITY{
                 frame_count = 10,
                 shift = util.by_pixel(16, -80),
                 draw_as_shadow = true,
-                --animation_speed = 0.4
+                animation_speed = 0.001
             },
         }
     },
