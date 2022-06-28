@@ -77,7 +77,7 @@ ENTITY {
         maximum_temperature = 3000,
         minimum_temperature = 1000
       },
-    energy_usage = "10MW",
+    energy_usage = "60MW",
     animation = {
         layers = {
             {

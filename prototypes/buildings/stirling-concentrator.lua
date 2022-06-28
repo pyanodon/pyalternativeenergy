@@ -64,7 +64,7 @@ ENTITY{
                 line_length = 5,
                 frame_count = 10,
                 shift = util.by_pixel(-16, -64),
-                --animation_speed = 0.4
+                animation_speed = 0.001
             },
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/sh-stirling.png',
@@ -74,7 +74,7 @@ ENTITY{
                 frame_count = 10,
                 shift = util.by_pixel(32, -0),
                 draw_as_shadow = true,
-                --animation_speed = 0.4
+                animation_speed = 0.001
             },
         }
     },

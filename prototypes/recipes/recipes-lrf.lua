@@ -45,7 +45,7 @@ end
         name = "lrf-steam-1",
         category = "lrf",
         enabled = false,
-        energy_required = 10,
+        energy_required = 20,
         main_product = "pressured-steam",
         ingredients = {
             {type = "fluid", name = "pressured-water", amount = 100},
