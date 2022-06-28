@@ -43,7 +43,7 @@ fun.autorecipes {
 					{name='empty-barrel-milk', amount = 2},
 				},
 			crafting_speed = 80,
-			tech = 'numal-mk01'
+			tech = 'numal-mk02'
 		},
 		--prod
 		{
@@ -58,7 +58,7 @@ fun.autorecipes {
 					{name = 'numal-egg', add_amount = 5},
 				},
 			crafting_speed = 120,
-			tech = 'numal-mk02'
+			tech = 'numal-mk03'
 		},
 		{
 			ingredients =
@@ -75,7 +75,7 @@ fun.autorecipes {
 					{name='empty-barrel-milk', amount = 2},
 				},
 			crafting_speed = 100,
-			tech = 'numal-mk01'
+			tech = 'numal-mk03'
 		},
 		--utility
 		{
@@ -90,7 +90,7 @@ fun.autorecipes {
 					{name = 'numal-egg', add_amount = 9},
 				},
 			crafting_speed = 80,
-			tech = 'numal-mk03'
+			tech = 'numal-mk04'
 		},
 		--beyond
 		{
@@ -251,7 +251,7 @@ RECIPE {
 					{name = 'numal', amount_min = 1, amount_max = 6},
 				},
 			crafting_speed = 200,
-			tech = 'numal-mk01'
+			tech = 'numal-mk02'
 		},
 		--prod
 		{
@@ -266,7 +266,7 @@ RECIPE {
 					{name = 'numal', amount_min = 3, amount_max = 6},
 				},
 			crafting_speed = 250,
-			tech = 'numal-mk02'
+			tech = 'numal-mk03'
 		},
 		{
 			ingredients =
@@ -281,7 +281,7 @@ RECIPE {
 					{name = 'numal', amount_min = 3, amount_max = 10},
 				},
 			crafting_speed = 200,
-			tech = 'numal-mk02'
+			tech = 'numal-mk03'
 		},
 		--utility
 		{
@@ -296,7 +296,7 @@ RECIPE {
 					{name = 'numal', amount_min = 6, amount_max = 12},
 				},
 			crafting_speed = 150,
-			tech = 'numal-mk03'
+			tech = 'numal-mk04'
 		},
 		--beyond
 		{
