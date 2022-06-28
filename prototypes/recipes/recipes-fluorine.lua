@@ -15,6 +15,7 @@ RECIPE {
         {type = "fluid", name = "hydrogen", amount = 50},
         {type = "fluid", name = "fluorine-gas", amount = 50}
     },
+    main_product = "fluorine-gas",
     subgroup = "py-items",
     order = "g"
 }:add_unlock("phosphorous-processing")

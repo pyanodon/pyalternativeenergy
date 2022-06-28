@@ -35,6 +35,7 @@ RECIPE {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 100},
         {type = "fluid", name = "reactor-waste-1", amount = 100}
     },
+    main_product = "molten-fluoride-thorium-pa233",
     subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
