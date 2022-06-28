@@ -289,6 +289,10 @@ require("prototypes/buildings/numal-mk02")
 require("prototypes/buildings/numal-mk03")
 require("prototypes/buildings/numal-mk04")
 
+require("prototypes/buildings/heat-exchanger-mk02")
+require("prototypes/buildings/heat-exchanger-mk03")
+require("prototypes/buildings/heat-exchanger-mk04")
+
 --require("prototypes/buildings/heat-smelter-test")
 
 -- ))
