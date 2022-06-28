@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/tidal-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {'renewable-mk01'},
+    prerequisites = {'renewable-mk01', 'machine-components-mk01'},
     effects = {},
     unit = {
         count = 150,
@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/tidal-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'tidal-mk01','renewable-mk02'},
+    prerequisites = {'tidal-mk01','renewable-mk02', 'machine-components-mk02'},
     dependencies = {"tidal-mk01"},
     effects = {},
     unit = {
@@ -41,7 +41,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/tidal-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'tidal-mk02','renewable-mk03'},
+    prerequisites = {'tidal-mk02','renewable-mk03', 'machine-components-mk03'},
     dependencies = {"tidal-mk02"},
     effects = {},
     unit = {
@@ -61,7 +61,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/tidal-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'tidal-mk03','renewable-mk04'},
+    prerequisites = {'tidal-mk03','renewable-mk04', 'machine-components-mk04'},
     dependencies = {"tidal-mk03"},
     effects = {},
     unit = {
