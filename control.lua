@@ -259,7 +259,8 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             name = 'numal-reef-mk' .. string.match(E.name, '%d+'),
             position = {E.position.x + x, E.position.y + y},
             force = E.force,
-            direction = E.direction
+            direction = E.direction,
+            raise_built = true
         }
         E.destroy()
     elseif E.name == 'anti-solar' then
