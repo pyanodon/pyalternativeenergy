@@ -1,34 +1,23 @@
 local util = require('util')
 -- TODO: rewrite microwave sat code to have launched sats added to a pool and the code sorting the sat pool between recivers as seperate functions
 
-script.on_init(function()
-    global.windmills = {}
-    global.reactor_tanks = {}
-    global.microwave_satellites = {}
-    global.orphan_sats = 0
-    global.currently_selected_entity = {}
-    global.aerials = {aerial_base_list = {}, abl_count = 0, aerial_bases = {}, aerial_blimps = {}, idle_blimps = {}}
-    global.antisolar_panels = {}
-    global.lrf_panels = {}
-    global.solar_tower = {}
-    global.tower_cicles = {}
-    global.updraft_tower = {}
-    global.stirling = {}
-end)
+local function init_globals()
+    global.windmills = global.windmills or {}
+    global.reactor_tanks = global.reactor_tanks or {}
+    global.microwave_satellites = global.microwave_satellites or {}
+    global.orphan_sats = global.orphan_sats or 0
+    global.currently_selected_entity = global.currently_selected_entity or {}
+    global.aerials = global.aerials or {aerial_base_list = {}, abl_count = 0, aerial_bases = {}, aerial_blimps = {}, idle_blimps = {}}
+    global.solar_panels = global.solar_panels or {}
+    global.antisolar_panels = global.antisolar_panels or {}
+    global.lrf_panels = global.lrf_panels or {}
+    global.solar_tower = global.solar_tower or {}
+    global.tower_cicles = global.tower_cicles or {}
+    global.updraft_tower = global.updraft_tower or {}
+end
 
-script.on_configuration_changed(function()
-    if global.tower_cicles == nil then
-        global.tower_cicles = {}
-    end
-
-    if global.updraft_tower == nil then
-        global.updraft_tower = {}
-    end
-
-    if global.aerials == nil or global.aerials.idle_blimps == nil then
-        global.aerials = {aerial_base_list = {}, abl_count = 0, aerial_bases = {}, aerial_blimps = {}, idle_blimps = {}}
-    end
-end)
+script.on_init(init_globals)
+script.on_configuration_changed(init_globals)
 
 local function distance ( x1, y1, x2, y2 )
     local dx = x1 - x2
