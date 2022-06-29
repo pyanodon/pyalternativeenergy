@@ -51,10 +51,6 @@ RECIPE('nickel-prepared-solution'):set_category("centrifuging")
 RECIPE('chromium-rejects'):set_category("centrifuging")
 RECIPE('extract-sulfur'):set_category("chemistry")
 
-RECIPE("py-heat-exchanger-mk02"):add_unlock('machines-mk02')
-RECIPE("py-heat-exchanger-mk03"):add_unlock('machines-mk03')
-RECIPE("py-heat-exchanger-mk04"):add_unlock('machines-mk04')
-
 RECIPE('low-density-structure'):add_ingredient({type = "item", name = "nxsb-alloy", amount = 25})
 
 RECIPE("electric-engine-unit"):remove_ingredient("copper-cable"):replace_ingredient("iron-stick", "rotor"):remove_ingredient("duralumin"):add_ingredient({type = "item", name = "stator", amount = 1})
