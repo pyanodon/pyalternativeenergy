@@ -14,6 +14,7 @@ local function init_globals()
     global.solar_tower = global.solar_tower or {}
     global.tower_cicles = global.tower_cicles or {}
     global.updraft_tower = global.updraft_tower or {}
+    global.stirling = global.stirling or {}
 end
 
 script.on_init(init_globals)
