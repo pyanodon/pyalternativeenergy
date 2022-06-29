@@ -156,6 +156,7 @@ RECIPE("moss-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-mo
 RECIPE("sap-extractor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("seaweed-crop-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("zungror-lair-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
+RECIPE("fluid-drill-mk03"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 
 RECIPE("atomizer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
 RECIPE("bio-printer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40})
@@ -212,6 +213,7 @@ RECIPE("moss-farm-mk03"):add_ingredient({type = "item", name = "ns-material", am
 RECIPE("sap-extractor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
 RECIPE("seaweed-crop-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("zungror-lair-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
+RECIPE("fluid-drill-mk04"):add_ingredient({type = "item", name = "ns-material", amount = 5}):replace_ingredient("electric-engine-unit", "sc-engine")
 
 RECIPE("atomizer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 RECIPE("bio-printer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
