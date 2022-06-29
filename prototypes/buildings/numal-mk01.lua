@@ -713,7 +713,9 @@ ENTITY{
         sound = {filename = '__pyalternativeenergygraphics__/sounds/numal.ogg', volume = 1.0},
         idle_sound = {filename = '__pyalternativeenergygraphics__/sounds/numal.ogg', volume = 0.65},
         apparent_volume = 0.45
-    }
+    },
+    -- Blacklist from squeak through
+    squeak_behaviour = false
 }
 
 ENTITY {
@@ -1692,5 +1694,7 @@ ENTITY {
       },
       rotate = false,
       orientation_to_variation = true
-    }
+    },
+    -- Blacklist from squeak through
+    squeak_behaviour = false
   }
