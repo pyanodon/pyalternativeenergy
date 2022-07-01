@@ -3,7 +3,7 @@
 data.raw.technology['uranium-processing'].enabled = true
 data.raw.technology['uranium-processing'].hidden = false
 
-TECHNOLOGY('uranium-processing'):remove_pack('chemical-science-pack'):remove_prereq('chemical-science-pack')
+TECHNOLOGY('uranium-processing'):remove_pack('chemical-science-pack'):remove_prereq('chemical-science-pack'):add_pack("py-science-pack-2")
 
 TECHNOLOGY('chemical-science-pack'):add_prereq('nucleo')
 

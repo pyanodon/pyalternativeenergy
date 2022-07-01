@@ -7,7 +7,7 @@ table.insert(data.raw["assembling-machine"]["slaughterhouse-mk02"].crafting_cate
 table.insert(data.raw["assembling-machine"]["slaughterhouse-mk03"].crafting_categories, "slaughterhouse-numal")
 table.insert(data.raw["assembling-machine"]["slaughterhouse-mk04"].crafting_categories, "slaughterhouse-numal")
 
-TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack"):remove_pack("py-science-pack-2")
+TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack")
 TECHNOLOGY("mega-farm"):remove_pack("utility-science-pack"):remove_pack("military-science-pack")
 TECHNOLOGY("pesticides-mk01"):remove_pack("chemical-science-pack")
 
@@ -36,6 +36,10 @@ TECHNOLOGY("water-animals-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("water-invertebrates-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("antitumor"):add_pack("military-science-pack")
 TECHNOLOGY("nanochondria"):add_pack("military-science-pack")
+TECHNOLOGY("anabolic-rna"):add_pack("military-science-pack")
+TECHNOLOGY("orexigenic"):add_pack("military-science-pack")
+TECHNOLOGY("reca"):add_pack("military-science-pack")
+TECHNOLOGY("recombinant-ery"):add_pack("military-science-pack")
 TECHNOLOGY("vonix-mk02"):add_pack("military-science-pack")
 TECHNOLOGY("cottongut-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("organ-printing-mk03"):add_pack("military-science-pack")
@@ -297,9 +301,9 @@ RECIPE("bhoddos-mk02"):remove_ingredient("40-u-powder")
 RECIPE("bhoddos-mk03"):remove_ingredient("70-u-powder")
 RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
 RECIPE('steam-heating'):remove_unlock('phytomining'):add_unlock('uranium-processing')
-RECIPE('py-science-pack-2'):replace_ingredient("formic-acid", "ethanol")
 RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amount = 2}):replace_ingredient("plastic-bar", "acrylic")
 RECIPE("py-science-pack-4"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
+RECIPE("chemical-science-pack"):replace_ingredient("nexelit-plate", {"self-assembly-monolayer", 5}):replace_ingredient("advanced-circuit", {"controler-mk02", 1})
 
 -- TODO
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}
