@@ -11,6 +11,7 @@ TECHNOLOGY {
         ingredients = {
             {"automation-science-pack", 1},
             {'logistic-science-pack', 1},
+            {'py-science-pack-2', 1},
         },
         time = 45
     }
@@ -57,25 +58,25 @@ TECHNOLOGY {
     }
 }
 
-TECHNOLOGY {
-    type = 'technology',
-    name = 'silicon-mk04',
-    icon = '__pyalternativeenergygraphics__/graphics/technology/si-04.png',
-    icon_size = 128,
-    order = 'c-a',
-    prerequisites = {'machines-mk04','silicon-mk03'},
-    dependencies = {"silicon-mk03"},
-    effects = {},
-    unit = {
-        count = 400,
-        ingredients = {
-            {'automation-science-pack', 1},
-            {'logistic-science-pack', 1},
-            {'military-science-pack', 1},
-            {'chemical-science-pack', 1},
-            {'production-science-pack', 1},
-            {'utility-science-pack', 1},
-        },
-        time = 60
-    }
-}
+-- TECHNOLOGY {
+--     type = 'technology',
+--     name = 'silicon-mk04',
+--     icon = '__pyalternativeenergygraphics__/graphics/technology/si-04.png',
+--     icon_size = 128,
+--     order = 'c-a',
+--     prerequisites = {'machines-mk04','silicon-mk03'},
+--     dependencies = {"silicon-mk03"},
+--     effects = {},
+--     unit = {
+--         count = 400,
+--         ingredients = {
+--             {'automation-science-pack', 1},
+--             {'logistic-science-pack', 1},
+--             {'military-science-pack', 1},
+--             {'chemical-science-pack', 1},
+--             {'production-science-pack', 1},
+--             {'utility-science-pack', 1},
+--         },
+--         time = 60
+--     }
+-- }
