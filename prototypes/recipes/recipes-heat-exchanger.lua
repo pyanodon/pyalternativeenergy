@@ -82,3 +82,51 @@ RECIPE {
     },
     main_product = "pressured-steam",
 }:add_unlock("nonrenewable-mk04")
+
+--Geothermal
+RECIPE {
+    type = "recipe",
+    name = "geo-he-00",
+    category = "rhe",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "geothermal-water", amount = 200, minimum_temperature = 950},
+    },
+    results = {
+        {type = "fluid", name = "steam", amount = 300, temperature = 500},
+    },
+    main_product = "steam",
+}:add_unlock("geothermal-power-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "geo-he-01",
+    category = "heat-exchanger",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "geothermal-water", amount = 200, minimum_temperature = 950},
+        {type = "fluid", name = "pressured-water", amount = 300},
+    },
+    results = {
+        {type = "fluid", name = "pressured-steam", amount = 300, temperature = 1000},
+    },
+    main_product = "pressured-steam",
+}:add_unlock("geothermal-power-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "geo-he-02",
+    category = "heat-exchanger",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "geothermal-water", amount = 100, minimum_temperature = 1950},
+        {type = "fluid", name = "pressured-water", amount = 300},
+    },
+    results = {
+        {type = "fluid", name = "pressured-steam", amount = 300, temperature = 2000},
+    },
+    main_product = "pressured-steam",
+}:add_unlock("geothermal-power-mk02")

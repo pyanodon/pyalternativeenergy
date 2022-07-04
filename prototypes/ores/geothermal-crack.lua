@@ -32,7 +32,7 @@ DATA {
             type = "fluid",
             name = "geothermal-water",
             amount = 100,
-            temperature = 300,
+            temperature = 2000,
             }
         },
         fluid_amount = 100,
