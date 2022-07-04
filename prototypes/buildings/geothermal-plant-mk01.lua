@@ -78,7 +78,7 @@ ENTITY {
     vector_to_place_result = {0, 0},
     module_specification =
     {
-      module_slots = 0
+      module_slots = 4
     },
     radius_visualisation_picture =
     {

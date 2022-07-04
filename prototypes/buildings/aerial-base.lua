@@ -94,12 +94,43 @@ ENTITY {
     charge_animation = {
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-                width = 4,
-                height = 4,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(0, -0)
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/r.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                shift = util.by_pixel(0, -48)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/l.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                draw_as_glow = true,
+                shift = util.by_pixel(0, -48)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/mask.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                shift = util.by_pixel(0, -48),
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/sh.png",
+                width = 384,
+                height = 352,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+                shift = util.by_pixel(16, -0)
             },
         },
     },
@@ -108,12 +139,43 @@ ENTITY {
     discharge_animation = {
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-                width = 4,
-                height = 4,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(0, -0)
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/r.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                shift = util.by_pixel(0, -48)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/l.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                draw_as_glow = true,
+                shift = util.by_pixel(0, -48)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/mask.png",
+                width = 352,
+                height = 448,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                shift = util.by_pixel(0, -48),
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/sh.png",
+                width = 384,
+                height = 352,
+                frame_count = 19,
+                line_length = 5,
+                animation_speed = 0.3,
+                draw_as_shadow = true,
+                shift = util.by_pixel(16, -0)
             },
         },
     },

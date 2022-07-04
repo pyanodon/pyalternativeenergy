@@ -97,6 +97,8 @@ RECIPE {
         {type = "fluid", name = "steam", amount = 300, temperature = 500},
     },
     main_product = "steam",
+    subgroup = "py-alternativeenergy-fluids",
+    order = "s"
 }:add_unlock("geothermal-power-mk01")
 
 RECIPE {
@@ -113,6 +115,8 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 300, temperature = 1000},
     },
     main_product = "pressured-steam",
+    subgroup = "py-alternativeenergy-fluids",
+    order = "s"
 }:add_unlock("geothermal-power-mk02")
 
 RECIPE {
@@ -123,10 +127,30 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "geothermal-water", amount = 100, minimum_temperature = 1950},
-        {type = "fluid", name = "pressured-water", amount = 300},
+        {type = "fluid", name = "pressured-water", amount = 400},
     },
     results = {
-        {type = "fluid", name = "pressured-steam", amount = 300, temperature = 2000},
+        {type = "fluid", name = "pressured-steam", amount = 400, temperature = 2000},
     },
     main_product = "pressured-steam",
-}:add_unlock("geothermal-power-mk02")
+    subgroup = "py-alternativeenergy-fluids",
+    order = "s"
+}:add_unlock("geothermal-power-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "geo-he-03",
+    category = "heat-exchanger",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "geothermal-water", amount = 100, minimum_temperature = 2950},
+        {type = "fluid", name = "pressured-water", amount = 500},
+    },
+    results = {
+        {type = "fluid", name = "pressured-steam", amount = 500, temperature = 5000},
+    },
+    main_product = "pressured-steam",
+    subgroup = "py-alternativeenergy-fluids",
+    order = "s"
+}:add_unlock("geothermal-power-mk04")
