@@ -3,7 +3,7 @@ RECIPE {
     name = "fenxsb-alloy",
     category = "py-rawores-smelter",
     enabled = false,
-    energy_required = 20,
+    energy_required = 60,
     ingredients = {
         {type = "item", name = "iron-plate", amount = 7},
         {type = "item", name = "duralumin", amount = 6},
@@ -27,7 +27,7 @@ RECIPE {
         {type = "item", name = "sb-oxide", amount = 1},
     },
     results = {
-        {type = "item", name = "fenxsb-alloy", amount = 1},
+        {type = "item", name = "fenxsb-alloy", amount = 2},
     },
     --main_product = "sb-dust",
 }:add_unlock("intermetallics-mk02")
