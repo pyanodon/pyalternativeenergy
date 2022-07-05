@@ -75,6 +75,11 @@ RECIPE("retorter"):add_ingredient({type = "item", name = "metastable-quasicrysta
 RECIPE("fracking-rig"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 30}):add_ingredient({type = "item", name = "sc-engine", amount = 6})
 RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
 
+RECIPE("guar-gum-plantation-mk01"):subgroup_order("py-alienlife-buildings-mk01", "a")
+RECIPE("guar-gum-plantation-mk02"):subgroup_order("py-alienlife-buildings-mk02", "a")
+RECIPE("guar-gum-plantation-mk03"):subgroup_order("py-alienlife-buildings-mk03", "a")
+RECIPE("guar-gum-plantation-mk04"):subgroup_order("py-alienlife-buildings-mk04", "a")
+
 --RECIPES --
 
 RECIPE("tholin-capsule"):add_ingredient({type = "item", name = "cf", amount = 30})
