@@ -39,7 +39,7 @@ RECIPE("olefin-plant"):add_ingredient({type = "item", name = "intermetallics", a
 RECIPE("power-house"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 --RECIPE("quenching-tower"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("rectisol"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
-RECIPE("solid-separator"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+-- RECIPE("solid-separator"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 --RECIPE("tar-processing-unit"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("cooling-tower-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 --RECIPE("gasturbinemk01"):add_ingredient({type = "item", name = "intermetallics", amount = 15})
