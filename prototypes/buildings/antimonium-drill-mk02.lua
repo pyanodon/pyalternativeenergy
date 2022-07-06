@@ -55,6 +55,7 @@ ENTITY {
         effectivity = 1,
         light_flicker = {color = {0,0,0}},
         fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
         emissions_per_minute = 20,
     },
     energy_usage = "400kW",
