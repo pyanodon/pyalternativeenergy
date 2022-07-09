@@ -1,6 +1,6 @@
 local fun = require("__pyalienlife__/prototypes/functions/functions")
 
-data.raw.fluid["pressured-steam"].heat_capacity = "1KJ"
+data.raw.fluid["pressured-steam"].heat_capacity = "2KJ"
 
 RECIPE("nuclear-sample"):replace_ingredient('plutonium', 'pu-238'):remove_unlock('production-science-pack'):add_unlock('chemical-science-pack')
 
