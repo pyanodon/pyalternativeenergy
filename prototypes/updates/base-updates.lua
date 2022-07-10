@@ -45,15 +45,12 @@ RECIPE("inserter"):clear_ingredients():add_ingredient{"electronic-circuit", 2}:a
 RECIPE("long-handed-inserter"):add_ingredient("chromium"):replace_ingredient("iron-plate", "fenxsb-alloy")
 RECIPE("fast-inserter"):set_fields{
     ingredients = {
-        {"inserter", 5},
-        {"gearbox-mk01", 1},
-        {"electronics-mk01", 1},
-        {"controler-mk01", 1},
-        {"intermetallics", 2},
+        {"inserter", 2},
+        {"vitreloy", 1},
         {"belt", 2},
-        {"small-parts-01", 5}
+        {"small-parts-01", 10}
     },
-    result_count = 5,
+    result_count = 1,
     energy_required = 5
 }
 RECIPE("automated-factory-mk01"):replace_ingredient("fast-inserter", "inserter")
