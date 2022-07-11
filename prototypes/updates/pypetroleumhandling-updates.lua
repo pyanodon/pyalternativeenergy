@@ -3,6 +3,7 @@
 TECHNOLOGY("oil-machines-mk03"):add_pack("military-science-pack")
 TECHNOLOGY("fracking"):add_pack("military-science-pack")
 TECHNOLOGY("kerogen"):add_pack("military-science-pack")
+TECHNOLOGY("petroleum-gas-mk03"):add_pack("military-science-pack")
 
 --BUILDINDS--
 RECIPE("natural-gas-seep-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})

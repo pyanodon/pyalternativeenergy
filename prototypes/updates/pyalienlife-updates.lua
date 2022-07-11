@@ -9,7 +9,6 @@ table.insert(data.raw["assembling-machine"]["slaughterhouse-mk04"].crafting_cate
 
 TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack")
 TECHNOLOGY("mega-farm"):remove_pack("utility-science-pack"):remove_pack("military-science-pack")
-TECHNOLOGY("pesticides-mk01"):remove_pack("chemical-science-pack")
 
 TECHNOLOGY("semiconductor-doping-mk02"):add_pack("py-science-pack-2")
 TECHNOLOGY("helium-processing"):add_pack("py-science-pack-2")
@@ -26,9 +25,7 @@ TECHNOLOGY("big-mines"):add_pack("py-science-pack-2")
 TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-2")
 
 TECHNOLOGY("kerogen"):add_pack("py-science-pack-4")
-TECHNOLOGY("machines-mk04"):add_pack("py-science-pack-4")
 TECHNOLOGY("railway-mk04"):add_pack("py-science-pack-4")
-TECHNOLOGY("oil-machines-mk03"):add_pack("py-science-pack-4")
 TECHNOLOGY("fracking"):add_pack("py-science-pack-4")
 
 -- The zungror effect

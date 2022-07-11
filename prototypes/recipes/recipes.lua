@@ -615,7 +615,7 @@ RECIPE {
         {type = "item", name = "czts-slab", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("solar-mk03")
+}:add_unlock("sc-engine")
 
 RECIPE {
     type = "recipe",
@@ -632,7 +632,7 @@ RECIPE {
         {type = "item", name = "czts-plate", amount = 3},
     },
     --main_product = "eg-si",
-}:add_unlock("solar-mk03")
+}:add_unlock("sc-engine")
 
 --SOLAR panel/cell MK04--
 
