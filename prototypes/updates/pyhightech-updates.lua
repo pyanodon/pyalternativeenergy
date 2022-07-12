@@ -12,6 +12,7 @@ TECHNOLOGY("ethylene"):remove_pack("chemical-science-pack")
 TECHNOLOGY("re-magnet"):remove_pack("production-science-pack")
 TECHNOLOGY("earnshaw-theorem"):add_pack("military-science-pack")
 TECHNOLOGY("nano-tech"):add_pack("military-science-pack")
+TECHNOLOGY("schrodinger-antelope"):add_pack("military-science-pack")
 
 --BUILDINDS--
 RECIPE("quantum-computer"):remove_ingredient('gasturbinemk03')
