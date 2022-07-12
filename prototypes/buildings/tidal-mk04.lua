@@ -38,7 +38,7 @@ ENTITY {
     name = 'tidal-mk04',
     icon = '__pyalternativeenergygraphics__/graphics/icons/tidal-mk04.png',
     icon_size = 64,
-    flags = {'placeable-neutral', 'player-creation'},
+    flags = {'placeable-neutral', 'player-creation', "not-rotatable"},
     minable = {mining_time = 0.5, result = "tidal-mk04"},
     fast_replaceable_group = 'tidal-mk04',
     max_health = 400,
