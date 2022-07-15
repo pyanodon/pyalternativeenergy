@@ -45,7 +45,7 @@ ITEM {
     corpse = "fluid-wagon-remnants",
     dying_explosion = "fluid-wagon-explosion",
     collision_box = {{-1.0, -1.5}, {1.0, 1.5}}, --must have a relation between this box and the joint distance to calibrate the wagon distance. (min 0.2)
-    selection_box = {{-2.5, -1.7}, {2.5, 1.7}},
+    selection_box = {{-1.2, -1.7}, {1.2, 1.7}},
     --damaged_trigger_effect = hit_effects.entity(),
     vertical_selection_shift = -0.5,
     weight = 400,
