@@ -33,6 +33,7 @@ data.raw.reactor["nuclear-reactor"].energy_source.effectivity = 0.2
 data.raw.reactor["nuclear-reactor"].heat_buffer.connections = nil
 
 TECHNOLOGY('atomic-bomb'):remove_prereq('domestication-mk02'):remove_prereq('uranium-mk03'):add_prereq('nucleo'):remove_pack('space-science-pack')
+TECHNOLOGY("fast-inserter"):add_pack("logistic-science-pack")
 
 RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingredient('neuromorphic-chip', 'control-unit')
 RECIPE("uranium-rounds-magazine"):replace_ingredient("uranium-238", "u-238")
@@ -41,18 +42,52 @@ RECIPE("explosive-uranium-cannon-shell"):replace_ingredient("uranium-238", "u-23
 RECIPE("logistic-science-pack"):add_ingredient{type = "item", name = "battery-mk01", amount = 1}
 RECIPE("heat-exchange"):add_unlock("uranium-processing")
 
-RECIPE("inserter"):clear_ingredients():add_ingredient{"electronic-circuit", 2}:add_ingredient{"small-parts-01", 3}:add_ingredient{"duralumin", 1}
-RECIPE("long-handed-inserter"):add_ingredient("chromium"):replace_ingredient("iron-plate", "fenxsb-alloy")
+RECIPE("inserter"):clear_ingredients():add_ingredient{"burner-inserter", 1}:add_ingredient{"electronic-circuit", 2}:add_ingredient{"small-parts-01", 3}:add_ingredient{"duralumin", 1}
+RECIPE("long-handed-inserter"):set_fields {
+    ingredients = {
+        {"inserter", 1},
+        {"electronic-circuit", 1},
+        {"small-parts-01", 5},
+        {"belt", 1},
+        {"fenxsb-alloy", 1},
+        {"chromium", 10}
+    },
+    result_count = 2,
+    energy_required = 1
+}
+
 RECIPE("fast-inserter"):set_fields{
     ingredients = {
-        {"inserter", 2},
+        {"inserter", 1},
+        {"electronic-circuit", 4},
+        {"belt", 1},
+        {"nbfe-alloy", 3},
         {"vitreloy", 1},
-        {"belt", 2},
         {"small-parts-01", 10}
     },
     result_count = 1,
-    energy_required = 5
+    energy_required = 0.5
 }
+
+RECIPE("stack-inserter"):set_fields{
+    ingredients = {
+        {"fast-inserter", 1},
+        {"advanced-circuit", 1},
+        {"electric-engine-unit", 1},
+        {"small-parts-02", 1},
+        {"crmoni", 1},
+    },
+}
+
+RECIPE("stack-filter-inserter"):set_fields{
+    ingredients = {
+        {"stack-inserter", 1},
+        {"advanced-circuit", 1},
+        {"electronics-mk01", 5},
+        {"stainless-steel", 10},
+    },
+}
+
 RECIPE("automated-factory-mk01"):replace_ingredient("fast-inserter", "inserter")
 RECIPE("filter-inserter"):replace_ingredient("duralumin", {"intermetallics", 1}):replace_ingredient("electronic-circuit", {"electronics-mk01", 1})
 
