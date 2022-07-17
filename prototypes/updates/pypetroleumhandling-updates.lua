@@ -90,6 +90,8 @@ RECIPE("reheat-coke-gas"):remove_unlock("hot-air-mk02"):set_fields{hidden = true
 RECIPE("reheat-outlet-gas-1"):remove_unlock("hot-air-mk03"):set_fields{hidden = true}
 RECIPE("reheat-outlet-gas-2"):remove_unlock("hot-air-mk03"):set_fields{hidden = true}
 
-RECIPE("fast-inserter-2"):replace_ingredient("electronic-circuit", { "controler-mk01", 1 }):add_ingredient{"electronics-mk01", 1}:add_ingredient{"gearbox-mk01", 1}:replace_ingredient("steel-plate", "intermetallics")
+RECIPE("fast-inserter-2"):replace_ingredient("electronic-circuit", { "controler-mk01", 2 }):add_ingredient{"electronics-mk01", 2}:add_ingredient{"gearbox-mk01", 1}:replace_ingredient("steel-plate", "nbfe-alloy")
 RECIPE("filter-inserter-2"):replace_ingredient("electronic-circuit", { "controler-mk01", 2 }):add_ingredient{"electronics-mk01", 5}:replace_ingredient("titanium-plate", "intermetallics")
-RECIPE("long-handed-inserter-2"):replace_ingredient("duralumin", "fenxsb-alloy"):add_ingredient{"nichrome", 1}
+RECIPE("long-handed-inserter-2"):replace_ingredient("duralumin", "fenxsb-alloy"):add_ingredient{"nichrome", 2}
+RECIPE("stack-inserter-2"):replace_ingredient("titanium-plate", {"self-assembly-monolayer", 2})
+RECIPE("stack-filter-inserter-2"):replace_ingredient("titanium-plate", {"self-assembly-monolayer", 2}):add_ingredient{"electronics-mk01", 15}
