@@ -33,7 +33,7 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    --minable = {mining_time = 0.5, result = "multiblade-turbine-mk01"},
+    collision_mask = {"ghost-layer", "object-layer", "player-layer", "water-tile"},
     fast_replaceable_group = "multiblade-turbine-mk01",
     max_health = 400,
     corpse = "big-remnants",
@@ -66,6 +66,7 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
+    collision_mask = {"ghost-layer", "object-layer", "player-layer", "water-tile"},
     minable = {mining_time = 0.5, result = "multiblade-turbine-mk01"},
     fast_replaceable_group = "multiblade-turbine-mk01",
     max_health = 400,
@@ -87,6 +88,28 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     placeable_by = {item = 'multiblade-turbine-mk01', count = 1}
 }
+
+--my failed attempt to make collision area--
+
+ENTITY {
+    type = "simple-entity-with-force",
+    name = "multiblade-mk01-collision",
+    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
+	icon_size = 64,
+    flags = {"placeable-neutral", "player-creation", "not-blueprintable", "not-on-map", "hidden"},
+    collision_box = {{-10,-10}, {10,10}},
+    selection_box = {{-0.2,-0.2}, {0.2,0.2}},
+    picture = {
+            filename = '__pyalternativeenergygraphics__/graphics/icons/filler.png',
+            width = 4,
+            height = 4,
+    },
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    render_layer = "object",
+    collision_mask = {"ghost-layer"},
+}
+
+--end of my attempt--
 
 data:extend(
     {
@@ -120,9 +143,9 @@ data:extend(
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, 0),
+                shift = util.by_pixel(144, 0),
                 animation_speed = 0.5,
-                --draw_as_shadow = true,
+                draw_as_shadow = true,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r6.png",
@@ -151,9 +174,9 @@ data:extend(
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, 0),
+                shift = util.by_pixel(144, 0),
                 animation_speed = 0.5,
-                --draw_as_shadow = true,
+                draw_as_shadow = true,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r7.png",
@@ -181,9 +204,9 @@ data:extend(
                 height = 224,
                 line_length = 6,
                 frame_count = 30,
-                shift = util.by_pixel(0, 0),
+                shift = util.by_pixel(144, 0),
                 animation_speed = 0.5,
-                --draw_as_shadow = true,
+                draw_as_shadow = true,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r8.png",
