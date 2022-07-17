@@ -71,7 +71,7 @@ ENTITY {
                 height = 192,
                 frame_count = 70,
                 line_length = 10,
-                animation_speed = 0.45,
+                animation_speed = 0.3,
                 --blend_mode = "additive",
                 --draw_as_glow = true,
                 shift = util.by_pixel(0, -0)
@@ -82,7 +82,7 @@ ENTITY {
               height = 192,
               frame_count = 70,
               line_length = 10,
-              animation_speed = 0.45,
+              animation_speed = 0.3,
               --blend_mode = "multiplicative",
               --draw_as_shadow = true,
               shift = util.by_pixel(0, -0)
@@ -93,7 +93,7 @@ ENTITY {
               height = 224,
               frame_count = 70,
               line_length = 10,
-              animation_speed = 0.45,
+              animation_speed = 0.3,
               --blend_mode = "multiplicative",
               draw_as_glow = true,
               shift = util.by_pixel(0, -16)
@@ -104,7 +104,7 @@ ENTITY {
                 height = 192,
                 frame_count = 70,
                 line_length = 10,
-                animation_speed = 0.45,
+                animation_speed = 0.3,
                 --blend_mode = "additive",
                 draw_as_shadow = true,
                 shift = util.by_pixel(16, -0)
