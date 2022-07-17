@@ -31,8 +31,6 @@ data.raw.reactor["nuclear-reactor"].energy_source.effectivity = 0.2
 data.raw.reactor["nuclear-reactor"].heat_buffer.connections = nil
 
 TECHNOLOGY('atomic-bomb'):remove_prereq('domestication-mk02'):remove_prereq('uranium-mk03'):add_prereq('nucleo'):remove_pack('space-science-pack')
-TECHNOLOGY("fast-inserter"):add_pack("logistic-science-pack")
-TECHNOLOGY("fast-inserter-2"):add_pack("py-science-pack-2")
 
 RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingredient('neuromorphic-chip', 'control-unit')
 RECIPE("uranium-rounds-magazine"):replace_ingredient("uranium-238", "u-238")
