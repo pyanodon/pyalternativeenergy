@@ -85,9 +85,7 @@ RECIPE("stack-filter-inserter"):set_fields{
     },
 }
 
-RECIPE("automated-factory-mk01"):replace_ingredient("fast-inserter", "inserter")
 RECIPE("filter-inserter"):replace_ingredient("duralumin", {"intermetallics", 1}):replace_ingredient("electronic-circuit", {"electronics-mk01", 1})
-
 
 ITEM("uranium-235"):add_flag("hidden")
 ITEM("uranium-238"):add_flag("hidden")
