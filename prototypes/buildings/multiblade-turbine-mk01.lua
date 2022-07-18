@@ -1,3 +1,5 @@
+local collision_data = require("prototypes.functions.collision-mask")
+
 RECIPE {
     type = "recipe",
     name = "multiblade-turbine-mk01",
@@ -33,7 +35,7 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    collision_mask = {"ghost-layer", "object-layer", "player-layer", "water-tile"},
+    collision_mask = {collision_data.wind_layer, "object-layer", "player-layer", "water-tile"},
     fast_replaceable_group = "multiblade-turbine-mk01",
     max_health = 400,
     corpse = "big-remnants",
@@ -66,7 +68,7 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    collision_mask = {"ghost-layer", "object-layer", "player-layer", "water-tile"},
+    collision_mask = {collision_data.wind_layer, "object-layer", "player-layer", "water-tile"},
     minable = {mining_time = 0.5, result = "multiblade-turbine-mk01"},
     fast_replaceable_group = "multiblade-turbine-mk01",
     max_health = 400,
@@ -86,30 +88,31 @@ ENTITY {
     energy_production = '0.4MW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    placeable_by = {item = 'multiblade-turbine-mk01', count = 1}
+    placeable_by = {item = 'multiblade-turbine-mk01', count = 1},
 }
 
---my failed attempt to make collision area--
 
-ENTITY {
-    type = "simple-entity-with-force",
-    name = "multiblade-mk01-collision",
-    icon = "__pycoalprocessinggraphics__/graphics/missing_icon_64.png",
-	icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "not-blueprintable", "not-on-map", "hidden"},
-    collision_box = {{-10,-10}, {10,10}},
-    selection_box = {{-0.2,-0.2}, {0.2,0.2}},
-    picture = {
+data:extend(
+    {
+        {
+        type = 'simple-entity-with-force',
+        name = 'multiblade-turbine-mk01-collision',
+        render_layer = "wires-above",
+        icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
+        icon_size = 64,
+        flags = {"placeable-neutral", "player-creation", "not-on-map"},
+        collision_box = {{-15.4, -15.4}, {15.4, 15.4}},
+        collision_mask = { collision_data.wind_layer },
+        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+        selectable_in_game = false,
+        picture = {
             filename = '__pyalternativeenergygraphics__/graphics/icons/filler.png',
             width = 4,
             height = 4,
-    },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    render_layer = "object",
-    collision_mask = {"ghost-layer"},
-}
+        },
+    }
+})
 
---end of my attempt--
 
 data:extend(
     {
