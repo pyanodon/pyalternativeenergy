@@ -1,4 +1,5 @@
-local collision_data = require('prototypes.functions.collision-mask')
+local collision_data = require("prototypes.functions.collision-mask")
+local wind_layer = collision_data and collision_data.wind_layer or "layer-50" -- make YAFC happy
 
 RECIPE {
     type = "recipe",
@@ -34,42 +35,9 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk04.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "hidden"},
-    collision_mask = {collision_data.wind_layer, 'object-layer', 'player-layer', 'water-tile'},
-    --minable = {mining_time = 0.5, result = "hawt-turbine-mk04"},
-    fast_replaceable_group = "hawt-turbine",
-    max_health = 400,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
-    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
-    match_animation_speed_to_activity = false,
-    energy_source = {
-        type = "electric",
-        usage_priority = "primary-output",
-        buffer_capacity = "500MJ",
-        output_flow_limit = "50MW",
-        input_flow_limit = "0W",
-        render_no_power_icon = false
-    },
-    energy_production = '22MW',
-    energy_usage = "0kW",
-    picture =
-        {
-            filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/r1.png',
-            width = 352,
-            height = 416,
-            shift = util.by_pixel(0, -64),
-        },
-    }
-
-ENTITY {
-    type = "electric-energy-interface",
-    name = "hawt-turbine-mk04-hidden",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk04.png",
-	icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    collision_mask = {collision_data.wind_layer, 'object-layer', 'player-layer', 'water-tile'},
+    collision_mask = {wind_layer, 'object-layer', 'player-layer', 'water-tile'},
     minable = {mining_time = 0.5, result = "hawt-turbine-mk04"},
+    placeable_by = {item = 'hawt-turbine-mk04', count = 1},
     fast_replaceable_group = "hawt-turbine",
     max_health = 400,
     corpse = "big-remnants",
@@ -93,8 +61,14 @@ ENTITY {
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 1.4},
         apparent_volume = 2.5
     },
-    placeable_by = {item = 'hawt-turbine-mk04', count = 1}
-}
+    picture =
+        {
+            filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/base-mk04.png',
+            width = 352,
+            height = 416,
+            shift = util.by_pixel(0, -64),
+        },
+    }
 
 data:extend(
     {
@@ -106,7 +80,7 @@ data:extend(
         icon_size = 64,
         flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
         collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
-        collision_mask = { collision_data.wind_layer },
+        collision_mask = { wind_layer },
         selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
         selectable_in_game = false,
         picture = {

@@ -1,4 +1,5 @@
-local collision_data = require('prototypes.functions.collision-mask')
+local collision_data = require("prototypes.functions.collision-mask")
+local wind_layer = collision_data and collision_data.wind_layer or "layer-50" -- make YAFC happy
 
 RECIPE {
     type = "recipe",
@@ -36,8 +37,9 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "hidden"},
-    collision_mask = {collision_data.wind_layer, 'object-layer', 'player-layer', 'water-tile'},
-    --minable = {mining_time = 0.5, result = "hawt-turbine-mk03"},
+    collision_mask = {wind_layer, 'object-layer', 'player-layer', 'water-tile'},
+    minable = {mining_time = 0.5, result = "hawt-turbine-mk03"},
+    placeable_by = {item = 'hawt-turbine-mk03', count = 1},
     fast_replaceable_group = "hawt-turbine",
     max_health = 400,
     corpse = "big-remnants",
@@ -55,48 +57,20 @@ ENTITY {
     },
     energy_production = '8MW',
     energy_usage = "0kW",
-    picture =
-        {
-            filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r1.png',
-            width = 192,
-            height = 416,
-            shift = util.by_pixel(0, -112),
-        },
-    }
-
-ENTITY {
-    type = "electric-energy-interface",
-    name = "hawt-turbine-mk03-hidden",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk03.png",
-	icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    collision_mask = {collision_data.wind_layer, 'object-layer', 'player-layer', 'water-tile'},
-    minable = {mining_time = 0.5, result = "hawt-turbine-mk03"},
-    fast_replaceable_group = "hawt-turbine",
-    max_health = 400,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
-    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
-    match_animation_speed_to_activity = false,
-    energy_source = {
-        type = "electric",
-        usage_priority = "primary-output",
-        buffer_capacity = "500MJ",
-        output_flow_limit = "50MW",
-        input_flow_limit = "0W",
-        render_no_power_icon = false
-    },
-    energy_production = '10MW',
-    energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk03.ogg", volume = 0.85},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk03.ogg", volume = 0.6},
         apparent_volume = 2.5
     },
-    placeable_by = {item = 'hawt-turbine-mk03', count = 1}
-}
+    picture =
+        {
+            filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/base-mk03.png',
+            width = 192,
+            height = 416,
+            shift = util.by_pixel(0, -112),
+        },
+    }
 
 data:extend(
     {
@@ -107,8 +81,8 @@ data:extend(
         icon = '__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk03.png',
         icon_size = 64,
         flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
-        collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
-        collision_mask = { collision_data.wind_layer },
+        collision_box = {{-12.9, -12.9}, {12.9, 12.9}},
+        collision_mask = { wind_layer },
         selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
         selectable_in_game = false,
         picture = {
