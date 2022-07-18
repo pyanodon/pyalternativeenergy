@@ -113,7 +113,7 @@ data:extend(
         icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk03.png",
         icon_size = 64,
         flags = {"placeable-neutral", "player-creation", "not-on-map"},
-        collision_box = {{-15.4, -15.4}, {15.4, 15.4}},
+        collision_box = {{-12.4, -12.4}, {12.4, 12.4}},
         collision_mask = { collision_data.wind_layer },
         selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
         selectable_in_game = false,

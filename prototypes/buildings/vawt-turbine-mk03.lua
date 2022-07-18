@@ -61,7 +61,7 @@ ENTITY{
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '8MW',
+    energy_production = '10MW',
     energy_usage = '0kW',
     working_sound = {
         sound = {filename = '__pyalternativeenergygraphics__/sounds/vawt-turbine-mk02.ogg', volume = 0.75},
@@ -150,7 +150,7 @@ data:extend(
         icon = '__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk03.png',
         icon_size = 64,
         flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
-        collision_box = {{-15.4, -15.4}, {15.4, 15.4}},
+        collision_box = {{-17.4, -17.4}, {17.4, 17.4}},
         collision_mask = { collision_data.wind_layer },
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
         selectable_in_game = false,

@@ -107,7 +107,7 @@ data:extend(
         icon = '__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk02.png',
         icon_size = 64,
         flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
-        collision_box = {{-15.4, -15.4}, {15.4, 15.4}},
+        collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
         collision_mask = { collision_data.wind_layer },
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
         selectable_in_game = false,

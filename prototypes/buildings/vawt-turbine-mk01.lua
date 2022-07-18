@@ -112,7 +112,7 @@ data:extend(
         icon = '__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk01.png',
         icon_size = 64,
         flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
-        collision_box = {{-15.9, -15.9}, {15.9, 15.9}},
+        collision_box = {{-17.4, -17.4}, {17.4, 17.4}},
         collision_mask = { collision_data.wind_layer },
         selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
         selectable_in_game = false,

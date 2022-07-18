@@ -53,7 +53,7 @@ ENTITY {
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '10MW',
+    energy_production = '8MW',
     energy_usage = "0kW",
     picture =
         {
@@ -107,7 +107,7 @@ data:extend(
         icon = '__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk03.png',
         icon_size = 64,
         flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
-        collision_box = {{-15.9, -15.9}, {15.9, 15.9}},
+        collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
         collision_mask = { collision_data.wind_layer },
         selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
         selectable_in_game = false,
