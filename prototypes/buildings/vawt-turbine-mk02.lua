@@ -1,3 +1,5 @@
+local collision_data = require('prototypes.functions.collision-mask')
+
 RECIPE{
     type = 'recipe',
     name = 'vawt-turbine-mk02',
@@ -42,6 +44,7 @@ ENTITY{
     icon = '__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk02.png',
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation'},
+    collision_mask = {collision_data.wind_layer, 'object-layer', 'player-layer', 'water-tile'},
     minable = {mining_time = 0.5, result = "vawt-turbine-mk02"},
     fast_replaceable_group = 'vawt-turbine',
     max_health = 400,
@@ -92,3 +95,24 @@ ENTITY{
             }
         }
 }
+
+data:extend(
+    {
+        {
+        type = 'simple-entity-with-force',
+        name = 'vawt-turbine-mk02-collision',
+        render_layer = 'wires-above',
+        icon = '__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk02.png',
+        icon_size = 64,
+        flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
+        collision_box = {{-15.4, -15.4}, {15.4, 15.4}},
+        collision_mask = { collision_data.wind_layer },
+        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+        selectable_in_game = false,
+        picture = {
+            filename = '__pyalternativeenergygraphics__/graphics/icons/filler.png',
+            width = 4,
+            height = 4,
+        },
+    }
+})

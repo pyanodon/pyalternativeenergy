@@ -28,26 +28,38 @@ local function distance ( x1, y1, x2, y2 )
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
     local E = event.created_entity
-    if E.type == 'electric-energy-interface' and
-        (string.match(E.name, 'hawt%-turbine') ~= nil or string.match(E.name, 'multiblade%-turbine') ~= nil) then
-          --log("hit")
-        local HE = game.surfaces['nauvis'].create_entity{
-            name = E.name .. '-hidden',
-            position = E.position,
-            force = E.force
-        }
-      --log(HE.name)
-        local ani = rendering.draw_animation{
-            animation = E.name .. '-north',
-            surface = 'nauvis',
-            target = HE,
-            render_layer = 129
-        }
-        local name = E.name
-        E.destroy()
-        global.windmills[HE.unit_number] = {windmill = HE, animation = ani, max_power = 50, base_name = name}
-        -- log(serpent.block(global.windmills))
+    if E.type == 'electric-energy-interface' then
+        local turbine_type, mk = string.match(E.name, ('(%a+)%-turbine%-(mk%d+)'))
+        if turbine_type ~= nil then
+            local base_name = turbine_type .. '-turbine-' .. mk
+            -- Create wind collision boxes for vawt,hawt,multiblade
+            game.surfaces[E.surface.name].create_entity{
+                name = base_name .. '-collision',
+                position = E.position,
+                force = E.force,
+                create_build_effect_smoke = false,
+            }
 
+            if turbine_type == "multiblade" or turbine_type == "hawt" then
+                --log("hit")
+                local HE = game.surfaces['nauvis'].create_entity{
+                    name = base_name .. '-hidden',
+                    position = E.position,
+                    force = E.force
+                }
+                --log(HE.name)
+                local ani = rendering.draw_animation{
+                    animation = base_name .. '-north',
+                    surface = 'nauvis',
+                    target = HE,
+                    render_layer = 129
+                }
+
+                E.destroy()
+                global.windmills[HE.unit_number] = {windmill = HE, animation = ani, max_power = 50, base_name = base_name}
+                -- log(serpent.block(global.windmills))
+            end
+        end
     elseif E.name == "solar-tower-building" then
         global.solar_tower[E.unit_number] = {tower = E, panels = {}, panel_count = 0}
     elseif E.name == "sut" then
@@ -422,12 +434,24 @@ end)
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
     local E = event.entity
     -- log('hit')
-    if E.type == 'electric-energy-interface' and
-        (string.match(E.name, 'hawt%-turbine') ~= nil or string.match(E.name, 'multiblade%-turbine') ~= nil) then
-        --log('hit')
-        local mill = global.windmills[E.unit_number]
-        rendering.destroy(mill.animation)
-        global.windmills[E.unit_number] = nil
+    if E.type == 'electric-energy-interface' then
+        local turbine_type, mk = string.match(E.name, ('(%a+)%-turbine%-(mk%d+)'))
+        if turbine_type ~= nil then
+            local base_name = turbine_type .. '-turbine-' .. mk
+            local collisions = game.surfaces[E.surface.name].find_entities_filtered{
+                name = base_name .. "-collision",
+                position = E.position,
+            }
+            for _, collision_entity in pairs(collisions) do
+                if collision_entity.valid then collision_entity.destroy() end
+            end
+            if turbine_type == "multiblade" or turbine_type == "hawt" then
+                --log('hit')
+                local mill = global.windmills[E.unit_number]
+                rendering.destroy(mill.animation)
+                global.windmills[E.unit_number] = nil
+            end
+        end
     elseif E.name == 'aerial-base' then
         for b, base in pairs(global.aerials.aerial_base_list) do
           --log("hit")
