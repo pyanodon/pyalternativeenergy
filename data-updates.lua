@@ -53,6 +53,8 @@ RECIPE('extract-sulfur'):set_category("chemistry")
 RECIPE('low-density-structure'):add_ingredient({type = "item", name = "nxsb-alloy", amount = 25})
 
 RECIPE("electric-engine-unit"):remove_ingredient("copper-cable"):replace_ingredient("iron-stick", "rotor"):remove_ingredient("duralumin"):add_ingredient({type = "item", name = "stator", amount = 1})
+RECIPE("splitter"):remove_ingredient("electronic-circuit"):add_ingredient({type = "item", name = "electronic-circuit", amount = 1})
+
 
 RECIPE("locomotive"):add_ingredient({type = "item", name = "shaft-mk01", amount = 4}):add_ingredient({type = "item", name = "gearbox-mk01", amount = 1}):add_ingredient({type = "item", name = "intermetallics", amount = 5}):add_ingredient({type = "item", name = "brake-mk01", amount = 4})
 RECIPE("cargo-wagon"):add_ingredient({type = "item", name = "shaft-mk01", amount = 2}):add_ingredient({type = "item", name = "duralumin", amount = 10}):add_ingredient({type = "item", name = "intermetallics", amount = 5}):add_ingredient({type = "item", name = "brake-mk01", amount = 2})
