@@ -77,8 +77,8 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "sand-casting", amount = 2},
-        {type = "item", name = "ore-quartz", amount = 10},
+        {type = "item", name = "mold", amount = 2},
+        {type = "item", name = "high-grade-quartz-pulp", amount = 50},
     },
     results = {
         {type = "item", name = "quartz-crucible", amount = 1},
