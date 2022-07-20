@@ -58,7 +58,7 @@ ENTITY {
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     picture = {
-        filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/base.png',
+        filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/basefishturbine.png',
         width = 224,
         height = 224,
     },
