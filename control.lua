@@ -41,22 +41,14 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             }
 
             if turbine_type == "multiblade" or turbine_type == "hawt" then
-                --log("hit")
-                local HE = game.surfaces['nauvis'].create_entity{
-                    name = base_name .. '-hidden',
-                    position = E.position,
-                    force = E.force
-                }
                 --log(HE.name)
                 local ani = rendering.draw_animation{
                     animation = base_name .. '-north',
                     surface = 'nauvis',
-                    target = HE,
+                    target = E,
                     render_layer = 129
                 }
-
-                E.destroy()
-                global.windmills[HE.unit_number] = {windmill = HE, animation = ani, max_power = 50, base_name = base_name}
+                global.windmills[E.unit_number] = {windmill = E, animation = ani, max_power = 50, base_name = base_name}
                 -- log(serpent.block(global.windmills))
             end
         end
