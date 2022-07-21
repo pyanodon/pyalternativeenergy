@@ -78,7 +78,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "mold", amount = 2},
-        {type = "item", name = "high-grade-quartz-pulp", amount = 50},
+        {type = "fluid", name = "high-grade-quartz-pulp", amount = 50},
     },
     results = {
         {type = "item", name = "quartz-crucible", amount = 1},
