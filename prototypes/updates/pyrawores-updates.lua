@@ -168,6 +168,8 @@ RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
 
 RECIPE("space-science-pack"):replace_ingredient("yellow-cake", "pu-238")
 
+RECIPE("casting-lead-container"):add_ingredient{"sb-oxide", 4}
+RECIPE("hotair-casting-lead-container"):add_ingredient{"sb-oxide", 4}
 
 fun.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 15)
 RECIPE("u-rich-pulp"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')

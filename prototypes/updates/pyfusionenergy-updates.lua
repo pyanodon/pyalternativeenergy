@@ -12,7 +12,7 @@ TECHNOLOGY("boron-mk02"):remove_pack("production-science-pack")
 
 RECIPE("grease-table-mk01"):remove_unlock('diamond-mining'):add_unlock('machines-mk03')
 RECIPE("py-turbine"):remove_unlock('fusion-mk01')
-
+RECIPE("lead-container"):replace_ingredient("lead-plate", {"pbsb-alloy", 4})
 
 
 TECHNOLOGY("ethanolamine"):remove_pack('production-science-pack'):add_pack("py-science-pack-2")
