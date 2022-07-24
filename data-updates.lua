@@ -1,4 +1,4 @@
-local fun = require("__pyalienlife__/prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 require("prototypes/updates/base-updates")
 
@@ -102,7 +102,7 @@ RECIPE("subcritical-water-02"):change_category("heat-exchanger")
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient("battery", "battery-mk01")
-    fun.results_replacer(r.name, "battery", "battery-mk01")
+    FUN.results_replacer(r.name, "battery", "battery-mk01")
 
     if recipe.category == "combustion" then
         recipe.hidden = true
