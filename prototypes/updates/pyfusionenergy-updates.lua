@@ -1,4 +1,4 @@
-local fun = require("__pyalienlife__/prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 data.raw.fluid["pressured-steam"].heat_capacity = "2KJ"
 

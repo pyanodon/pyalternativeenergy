@@ -1,4 +1,4 @@
-local fun = require("__pyrawores__/prototypes/functions/functions")
+local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 --TECHNOLOGY--
 TECHNOLOGY("fluid-processing-machines-1"):remove_pack('logistic-science-pack'):remove_prereq('electric-engine')
@@ -171,7 +171,7 @@ RECIPE("space-science-pack"):replace_ingredient("yellow-cake", "pu-238")
 RECIPE("casting-lead-container"):add_ingredient{"sb-oxide", 4}
 RECIPE("hotair-casting-lead-container"):add_ingredient{"sb-oxide", 4}
 
-fun.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 15)
+FUN.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 15)
 RECIPE("u-rich-pulp"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
 
 RECIPE {
