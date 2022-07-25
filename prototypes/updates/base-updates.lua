@@ -22,7 +22,15 @@ for r, _ in pairs(data.raw.recipe) do
     RECIPE(r):replace_ingredient("solar-panel", "solar-panel-mk01")
 end
 
-RECIPE('chemical-science-pack'):add_ingredient({type = 'item', name = 'nuclear-sample', amount = 2})
+RECIPE('chemical-science-pack'):add_ingredient({type = 'item', name = 'nuclear-sample', amount = 1})
+RECIPE("chemical-science-pack"):replace_ingredient("nexelit-plate", {type = "item", name = "self-assembly-monolayer", amount = 2})
+RECIPE("chemical-science-pack"):replace_ingredient("tinned-cable", {type = "item", name = "small-parts-02", amount = 3})
+RECIPE("chemical-science-pack"):set_fields {
+    results = {
+        {type = "item", name = "chemical-science-pack", amount = 12}
+    },
+    energy_required = 240
+}
 
 RECIPE("nuclear-reactor"):add_unlock('uranium-processing'):remove_ingredient('super-steel')
 
@@ -36,7 +44,7 @@ RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingre
 RECIPE("uranium-rounds-magazine"):replace_ingredient("uranium-238", "u-238")
 RECIPE("uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
 RECIPE("explosive-uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
-RECIPE("logistic-science-pack"):add_ingredient{type = "item", name = "battery-mk01", amount = 1}
+RECIPE("logistic-science-pack"):add_ingredient{type = "item", name = "battery-mk01", amount = 3}
 RECIPE("heat-exchange"):add_unlock("uranium-processing")
 
 RECIPE("inserter"):clear_ingredients():add_ingredient{"burner-inserter", 1}:add_ingredient{"electronic-circuit", 2}:add_ingredient{"small-parts-01", 3}:add_ingredient{"duralumin", 1}

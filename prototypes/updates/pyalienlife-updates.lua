@@ -300,7 +300,6 @@ RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
 RECIPE('steam-heating'):remove_unlock('phytomining'):add_unlock('uranium-processing')
 RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amount = 2}):replace_ingredient("plastic-bar", "acrylic")
 RECIPE("py-science-pack-4"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
-RECIPE("chemical-science-pack"):replace_ingredient("nexelit-plate", {"self-assembly-monolayer", 5}):replace_ingredient("advanced-circuit", {"controler-mk02", 1})
 
 -- TODO
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}

@@ -2,7 +2,7 @@ local fun = require("__pyalienlife__/prototypes/functions/functions")
 
 data.raw.fluid["pressured-steam"].heat_capacity = "2KJ"
 
-RECIPE("nuclear-sample"):replace_ingredient('plutonium', 'pu-238'):remove_unlock('production-science-pack'):add_unlock('chemical-science-pack')
+RECIPE("nuclear-sample"):replace_ingredient('plutonium', {'pu-238', 1}):remove_unlock('production-science-pack'):add_unlock('chemical-science-pack')
 
 -- TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-mk02')
 TECHNOLOGY("kovarex-enrichment-process-2"):set_fields({enabled = false, hidden = true})
