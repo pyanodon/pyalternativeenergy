@@ -105,3 +105,13 @@ data.raw.boiler['heat-exchanger'].energy_consumption = "122.22MW"
 RECIPE("centrifuge"):remove_unlock("filtration"):set_fields{hidden = true}
 ITEM("centrifuge"):add_flag("hidden")
 ENTITY("centrifuge", "assembling-machine"):add_flag("hidden")
+
+ITEM("speed-module").effect.consumption.bonus = 1.0
+ITEM("speed-module-2").effect.consumption.bonus = 1.2
+ITEM("speed-module-3").effect.consumption.bonus = 1.5
+
+ITEM("productivity-module").effect.consumption.bonus = 1.2
+ITEM("productivity-module-2").effect.consumption.bonus = 1.5
+ITEM("productivity-module-3").effect.consumption.bonus = 2.0
+
+ENTITY("beacon", "beacon").energy_usage = "2MW"
