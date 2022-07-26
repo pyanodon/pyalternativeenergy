@@ -37,7 +37,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='brain-numal',remove_item = true},
+					{name='numal',remove_item = true},
 					{name='guts-numal', amount=1},
 				},
 			results =
