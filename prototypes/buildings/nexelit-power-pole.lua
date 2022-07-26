@@ -97,56 +97,56 @@ ENTITY {
         shadow =
         {
           copper = util.by_pixel_hr(101, 8),
-          red = util.by_pixel_hr(101, 15),
-          green = util.by_pixel_hr(101, 10)
+          red = util.by_pixel_hr(106, 18),
+          green = util.by_pixel_hr(96, 1)
         },
         wire =
         {
-          copper = util.by_pixel_hr(0, -210),
-          red = util.by_pixel_hr(0, -200),
-          green = util.by_pixel_hr(-0, -215)
+          copper = util.by_pixel_hr(0, -219),
+          red = util.by_pixel_hr(7, -208),
+          green = util.by_pixel_hr(-7, -226)
         }
       },
       {
         shadow =
         {
-            copper = util.by_pixel_hr(101, 8),
-            red = util.by_pixel_hr(101, 15),
-            green = util.by_pixel_hr(101, 10)
+          copper = util.by_pixel_hr(101, 8),
+          red = util.by_pixel_hr(106, 18),
+          green = util.by_pixel_hr(96, 1)
         },
         wire =
         {
-          copper = util.by_pixel_hr(0, -210),
-          red = util.by_pixel_hr(0, -200),
-          green = util.by_pixel_hr(-0, -215)
+          copper = util.by_pixel_hr(0, -219),
+          red = util.by_pixel_hr(7, -208),
+          green = util.by_pixel_hr(-7, -226)
         }
       },
       {
         shadow =
         {
-            copper = util.by_pixel_hr(101, 8),
-            red = util.by_pixel_hr(101, 15),
-            green = util.by_pixel_hr(101, 10)
+          copper = util.by_pixel_hr(101, 8),
+          red = util.by_pixel_hr(106, 18),
+          green = util.by_pixel_hr(96, 1)
         },
         wire =
         {
-          copper = util.by_pixel_hr(0, -210),
-          red = util.by_pixel_hr(0, -200),
-          green = util.by_pixel_hr(-0, -215)
+          copper = util.by_pixel_hr(0, -219),
+          red = util.by_pixel_hr(7, -208),
+          green = util.by_pixel_hr(-7, -226)
         }
       },
       {
         shadow =
         {
-            copper = util.by_pixel_hr(101, 8),
-            red = util.by_pixel_hr(101, 15),
-            green = util.by_pixel_hr(101, 10)
+          copper = util.by_pixel_hr(101, 8),
+          red = util.by_pixel_hr(106, 18),
+          green = util.by_pixel_hr(96, 1)
         },
         wire =
         {
-          copper = util.by_pixel_hr(0, -210),
-          red = util.by_pixel_hr(0, -200),
-          green = util.by_pixel_hr(-0, -215)
+          copper = util.by_pixel_hr(0, -219),
+          red = util.by_pixel_hr(7, -208),
+          green = util.by_pixel_hr(-7, -226)
         }
       },
     },
