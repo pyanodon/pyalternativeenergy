@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/geothermal-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {'renewable-mk01'},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 150,
