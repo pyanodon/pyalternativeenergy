@@ -86,9 +86,12 @@ RECIPE("guar-gum-plantation-mk04"):subgroup_order("py-alienlife-buildings-mk04",
 RECIPE("tholin-capsule"):add_ingredient({type = "item", name = "cf", amount = 30})
 RECIPE("small-parts-03"):replace_ingredient("rubber", {type = "item", name = "cf", amount = 1})
 
-RECIPE("reheat-coke-gas"):remove_unlock("hot-air-mk02"):set_fields{hidden = true}
+RECIPE("reheat-coke-gas"):replace_ingredient("combustion-mixture1", {type = "fluid", name = "hot-molten-salt", amount = 50, minimum_temperature = 995})
+table.insert(RECIPE("reheat-coke-gas").results, {type = "fluid", name = "molten-salt", amount = 50})
+
 RECIPE("reheat-outlet-gas-1"):remove_unlock("hot-air-mk03"):set_fields{hidden = true}
-RECIPE("reheat-outlet-gas-2"):remove_unlock("hot-air-mk03"):set_fields{hidden = true}
+RECIPE("reheat-outlet-gas-2"):replace_ingredient("combustion-mixture1", {type = "fluid", name = "hot-molten-salt", amount = 50, minimum_temperature = 1995})
+table.insert(RECIPE("reheat-outlet-gas-2").results, {type = "fluid", name = "molten-salt", amount = 50})
 
 RECIPE("fast-inserter-2"):replace_ingredient("electronic-circuit", { "controler-mk01", 2 }):add_ingredient{"electronics-mk01", 2}:add_ingredient{"gearbox-mk01", 1}:replace_ingredient("steel-plate", "nbfe-alloy")
 RECIPE("filter-inserter-2"):replace_ingredient("electronic-circuit", { "controler-mk01", 2 }):add_ingredient{"electronics-mk01", 5}:replace_ingredient("titanium-plate", "intermetallics")
