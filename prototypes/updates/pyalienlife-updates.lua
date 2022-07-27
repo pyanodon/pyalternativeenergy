@@ -40,7 +40,6 @@ TECHNOLOGY("recombinant-ery"):add_pack("military-science-pack")
 TECHNOLOGY("vonix-mk02"):add_pack("military-science-pack")
 TECHNOLOGY("cottongut-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("organ-printing-mk03"):add_pack("military-science-pack")
-TECHNOLOGY("py-science-pack-mk04"):add_pack("military-science-pack")
 
 
 RECIPE("mega-farm"):remove_ingredient("intelligent-unit"):replace_ingredient("superconductor-servomechanims", "small-parts-03")
