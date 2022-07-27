@@ -17,12 +17,11 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='meat', amount = 6},
+					{name='meat', amount = 2},
 					{name='chitin', amount = 4},
-					{name='mukmoux-fat', amount = 5},
-					{name='guts', amount = 6},
-					{name='arthropod-blood', amount =80},
-					{name='venon-gland', amount = 1},
+					{name='mukmoux-fat', amount = 1},
+					{name='guts', amount = 4},
+					{name='arthropod-blood', amount =50},
 					{name='brain', amount = 1},
 					{name='numal-ink', amount = 10},
 					{name='cage', amount = 1}
@@ -43,7 +42,8 @@ FUN.autorecipes {
 			results =
 				{
 					{name = 'aeroorgan', amount = 1},
-					{name='guts', amount =20},
+					{name='guts', amount =10},
+					{name='numal-ink', amount = 20},
 				},
 			crafting_speed = 15,
 			tech = 'antitumor',
@@ -60,8 +60,10 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount = 6},
-					{name='arthropod-blood', amount =230},
+					{name='aeroorgan',remove_item = true},
+					{name='guts', amount = 4},
+					{name='numal-ink', amount = 10},
+					{name='arthropod-blood', amount =80},
 				},
 			crafting_speed = 15,
 			tech = 'recombinant-ery',
@@ -78,8 +80,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount = 80},
-					{name='chitin', amount =13},
+					{name='arthropod-blood', amount = 50},
+					{name='chitin', amount =8},
 				},
 			crafting_speed = 15,
 			tech = 'reca',
@@ -96,8 +98,8 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount = 5},
-					{name='meat', amount =13},
+					{name='chitin', amount = 4},
+					{name='meat', amount =4},
 				},
 			crafting_speed = 15,
 			tech = 'anabolic-rna',
