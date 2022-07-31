@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/geothermal-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'geothermal-power-mk01','renewable-mk01'},
+    prerequisites = {'geothermal-power-mk01','renewable-mk02'},
     dependencies = {"geothermal-power-mk01"},
     effects = {},
     unit = {
@@ -30,6 +30,7 @@ TECHNOLOGY {
         ingredients = {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
+            {"py-science-pack-2", 1},
         },
         time = 45
     }
@@ -41,7 +42,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/geothermal-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'geothermal-power-mk02','renewable-mk02'},
+    prerequisites = {'geothermal-power-mk02','renewable-mk03'},
     dependencies = {"geothermal-power-mk02"},
     effects = {},
     unit = {
@@ -50,6 +51,7 @@ TECHNOLOGY {
             {'automation-science-pack', 1},
             {'logistic-science-pack', 1},
             {'chemical-science-pack', 1},
+            {"py-science-pack-3", 1},
         },
         time = 60
     }
@@ -61,7 +63,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/geothermal-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'geothermal-power-mk03','renewable-mk03'},
+    prerequisites = {'geothermal-power-mk03','renewable-mk04'},
     dependencies = {"geothermal-power-mk03"},
     effects = {},
     unit = {
@@ -72,7 +74,6 @@ TECHNOLOGY {
             {'military-science-pack', 1},
             {'chemical-science-pack', 1},
             {'production-science-pack', 1},
-            {'utility-science-pack', 1},
         },
         time = 60
     }

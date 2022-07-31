@@ -14,7 +14,7 @@ TECHNOLOGY("speed-module-3"):add_pack("military-science-pack")
 TECHNOLOGY("productivity-module-3"):add_pack("military-science-pack")
 TECHNOLOGY("effectivity-module-3"):add_pack("military-science-pack")
 
-TECHNOLOGY("advanced-material-processing-2"):set_fields{prerequisites = {}}:remove_pack("chemical-science-pack")
+TECHNOLOGY("advanced-material-processing-2"):set_fields{prerequisites = {}}:remove_pack("chemical-science-pack"):remove_pack("py-science-pack-3")
 
 RECIPE("heat-pipe"):add_unlock("advanced-material-processing-2")
 RECIPE("heat-exchanger"):add_unlock("advanced-material-processing-2")

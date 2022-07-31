@@ -81,7 +81,7 @@ RECIPE("satellite"):add_ingredient({type = "item", name = "sc-engine", amount = 
 RECIPE("utility-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("space-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 1}):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("nv-center"):add_ingredient({type = "item", name = "mqdc", amount = 1}):add_ingredient({type = "item", name = "th-oxide", amount = 1})
-RECIPE("production-science-pack"):add_ingredient({type = "item", name = "low-density-structure", amount = 3}):add_ingredient({type = "item", name = "super-steel", amount = 5}):add_ingredient({type = "item", name = "gd-metal", amount = 1})
+RECIPE("production-science-pack"):add_ingredient({type = "fluid", name = "tholins", amount = 100}):add_ingredient({type = "item", name = "super-steel", amount = 5}):add_ingredient({type = "item", name = "gd-metal", amount = 1})
 
 RECIPE('py-construction-robot-01'):add_ingredient({type = 'item', name = 'gearbox-mk01', amount = 1})
 RECIPE('py-construction-robot-02'):add_ingredient({type = 'item', name = 'gearbox-mk02', amount = 1}):add_ingredient({type = 'item', name = 'eva', amount = 2})

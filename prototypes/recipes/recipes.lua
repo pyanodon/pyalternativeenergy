@@ -78,7 +78,7 @@ RECIPE {
         {type = "item", name = "ammonium-oxalate", amount = 1},
     },
     --main_product = "sb-dust",
-}:add_unlock("thorium")
+}:add_unlock("ammonium-oxalate")
 
 RECIPE {
     type = "recipe",
@@ -95,7 +95,7 @@ RECIPE {
         {type = "item", name = "oxalic-acid", amount = 1},
     },
     --main_product = "sb-dust",
-}:add_unlock("thorium")
+}:add_unlock("ammonium-oxalate")
 
 RECIPE {
     type = "recipe",
@@ -944,14 +944,14 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "blood", amount = 100},
-        {type = "item", name = "plastic-bar", amount = 1},
+        {type = "fluid", name = "blood", amount = 1000},
+        {type = "item", name = "acrylic", amount = 1},
     },
     results = {
         {type = "item", name = "oxalic-acid", amount = 1},
     },
     --main_product = "sb-dust",
-}:add_unlock("carbon-fiber")
+}:add_unlock("biotech-mk04")
 
 RECIPE {
     type = "recipe",

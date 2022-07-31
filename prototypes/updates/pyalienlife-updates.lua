@@ -40,6 +40,11 @@ TECHNOLOGY("recombinant-ery"):add_pack("military-science-pack")
 TECHNOLOGY("vonix-mk02"):add_pack("military-science-pack")
 TECHNOLOGY("cottongut-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("organ-printing-mk03"):add_pack("military-science-pack")
+TECHNOLOGY("pharmagenomics"):add_pack("military-science-pack")
+TECHNOLOGY("starch-mk03"):add_pack("military-science-pack")
+TECHNOLOGY("production-science-pack"):add_pack("military-science-pack")
+TECHNOLOGY("cottongut-mk03"):add_pack("military-science-pack")
+TECHNOLOGY("yotoi-mk02"):add_pack("military-science-pack")
 
 
 RECIPE("mega-farm"):remove_ingredient("intelligent-unit"):replace_ingredient("superconductor-servomechanims", "small-parts-03")
@@ -295,7 +300,7 @@ RECIPE('dynemicin'):add_ingredient({type = "item", name = "acrylic", amount = 2}
 RECIPE("cellulose-00"):remove_unlock("cellulose-mk01"):add_unlock("vacuum-tube-electronics")
 RECIPE("bhoddos-mk02"):remove_ingredient("40-u-powder")
 RECIPE("bhoddos-mk03"):remove_ingredient("70-u-powder")
-RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
+--RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
 RECIPE('steam-heating'):remove_unlock('phytomining'):add_unlock('uranium-processing')
 RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amount = 2}):replace_ingredient("plastic-bar", "acrylic")
 RECIPE("py-science-pack-4"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
@@ -310,3 +315,4 @@ ITEM("simik-mk03"):set_fields{fuel_category = "simik", fuel_value = "1100MJ", bu
 ITEM("simik-mk04"):set_fields{fuel_category = "simik", fuel_value = "1500MJ", burnt_result = "used-simik-mk04"}
 
 RECIPE("nano-cellulose"):remove_ingredient('steam'):add_ingredient({type = 'fluid', name = 'pressured-steam', amount = 100})
+RECIPE("zymogens"):add_ingredient{type = "item", name = "zungror-cocoon", amount = 2}

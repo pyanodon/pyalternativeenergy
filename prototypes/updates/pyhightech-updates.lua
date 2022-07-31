@@ -39,6 +39,7 @@ RECIPE("particle-accelerator-mk02"):add_ingredient({type = "item", name = "self-
 RECIPE("electronics-factory-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 1})
 RECIPE("pulp-mill-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
 RECIPE("nano-assembler-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15})
+RECIPE("phosphate-mine-02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
 
 RECIPE("clay-pit-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 3})
 RECIPE("chipshooter-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
@@ -48,7 +49,6 @@ RECIPE("particle-accelerator-mk03"):add_ingredient({type = "item", name = "ns-ma
 RECIPE("electronics-factory-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 1})
 RECIPE("pulp-mill-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
 RECIPE("nano-assembler-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15})
-RECIPE("phosphate-mine-02"):add_ingredient({type = "item", name = "ns-material", amount = 15})
 
 RECIPE("clay-pit-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("chipshooter-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
@@ -99,7 +99,7 @@ RECIPE("py-logistic-robot-02"):add_ingredient({type = "item", name = "self-assem
 RECIPE("construction-robot-ht"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):replace_ingredient("py-construction-robot-02", "c-pynobot-mk03")
 RECIPE("logistic-robot-ht"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):replace_ingredient("py-logistic-robot-02", "l-pynobot-mk03")
 RECIPE('lithium-chloride'):remove_ingredient("reo"):add_ingredient({type = "item", name = "lithium-hydroxide", amount = 1})
-RECIPE("nexelit-battery"):remove_unlock('railway-mk03'):add_unlock({"battery-mk02"})
+RECIPE("nexelit-battery"):remove_unlock('py-accumulator-mk01'):add_unlock({"battery-mk02"})
 RECIPE("nanochip"):add_ingredient({type = "item", name = "milfe", amount = 1})
 RECIPE("carbon-nanotube"):add_ingredient({type = "item", name = "milfe", amount = 1}).results[1].amount = 5
 RECIPE("parametric-oscilator"):add_ingredient({type = "item", name = "milfe", amount = 1})
@@ -125,6 +125,7 @@ RECIPE("neutron-absorber-mk04"):add_ingredient({type = "item", name = "supercond
 
 table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 
+RECIPE("py-science-pack-3"):add_ingredient{type = "item", name = "re-magnet", amount = 1}
 
 ----EXCLUSIVE RECIPES----
 

@@ -34,18 +34,18 @@ RECIPE("impact-crusher-mk02"):add_ingredient({type = "item", name = "self-assemb
 RECIPE("leaching-station-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
 RECIPE("scrubber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
 RECIPE("wet-scrubber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("aluminium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("chromium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("coal-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("copper-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("iron-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("lead-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("nexelit-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("nickel-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("quartz-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("tin-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("uranium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("zinc-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
+RECIPE("aluminium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("chromium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("coal-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("copper-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("iron-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("lead-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("nexelit-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("nickel-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("quartz-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("tin-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("uranium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
+RECIPE("zinc-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
 RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','advanced-circuit'):remove_unlock('machines-mk05'):add_unlock('smelters-mk02'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
 RECIPE("sinter-unit"):replace_ingredient("advanced-foundry-mk03", "advanced-foundry-mk02"):replace_ingredient("super-alloy", "stainless-steel")
 RECIPE("drp"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):replace_ingredient("processing-unit", "advanced-circuit")
@@ -116,6 +116,7 @@ RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-m
 RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'u-235'):add_unlock('uranium-processing')
 RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):replace_ingredient("lead-container", "coated-container"):add_unlock('nuclear-power')
 RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'pu-239'):add_unlock('nuclear-power-mk02')
+RECIPE("fuelrod-mk03"):replace_ingredient("lead-conatiner", "coated-container")
 
 --need fuelrod mk04 and mk05 from thorium
 --fuelrod-mk04 with use curium-250 from califorium

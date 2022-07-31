@@ -245,7 +245,7 @@ RECIPE {
         {type = "item", name = "acrylic", amount = 1},
     },
     --main_product = "libr",
-}:add_unlock("carbon-fiber")
+}:add_unlock("acrylic")
 
 RECIPE {
     type = "recipe",

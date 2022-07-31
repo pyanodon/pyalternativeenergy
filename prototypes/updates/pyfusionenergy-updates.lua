@@ -13,9 +13,7 @@ TECHNOLOGY("boron-mk02"):remove_pack("production-science-pack")
 RECIPE("grease-table-mk01"):remove_unlock('diamond-mining'):add_unlock('machines-mk03')
 RECIPE("py-turbine"):remove_unlock('fusion-mk01')
 RECIPE("lead-container"):replace_ingredient("lead-plate", {"pbsb-alloy", 4})
-
-
-TECHNOLOGY("ethanolamine"):remove_pack('production-science-pack'):add_pack("py-science-pack-2")
+RECIPE("methyl-acrylate"):remove_unlock("ethanolamine"):add_unlock("acrylic")
 
 --BUILDINDS--
 RECIPE("particle-accelerator-mk01"):remove_ingredient('gasturbinemk02')
@@ -96,7 +94,7 @@ RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "wall-shield", a
 RECIPE("blanket"):add_ingredient({type = "item", name = "lithium", amount = 5})
 RECIPE("magnetic-core"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("sc-unit"):add_ingredient({type = "item", name = "hts-coil", amount = 1})
-RECIPE("production-science-pack"):add_ingredient({type = "item", name = "acrylic", amount = 5})
+RECIPE("production-science-pack"):add_ingredient{type = "item", name = "ns-material", amount = 1}
 
 RECIPE('purified-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 RECIPE('cool-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')

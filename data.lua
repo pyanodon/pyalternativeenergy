@@ -51,6 +51,8 @@ require("prototypes/technologies/lithium-niobate")
 require("prototypes/technologies/sc-engine")
 require("prototypes/technologies/machine-components")
 require("prototypes/technologies/tbp")
+require("prototypes/technologies/acrylic")
+require("prototypes/technologies/ammonium-oxalate")
 
 -- ))
 

@@ -101,7 +101,7 @@ RECIPE {
         {type = "fluid", name = "re-pulp-04", amount = 50},
     },
     --main_product = "sb-grade-02",
-}:add_unlock("thorium")
+}:add_unlock("rare-earth-tech-mk02")
 
 RECIPE {
     type = "recipe",

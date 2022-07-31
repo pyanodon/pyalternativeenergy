@@ -16,7 +16,7 @@ RECIPE {
         {type = "fluid", name = "cyanic-acid", amount = 20},
     },
     main_product = "acrylonitrile",
-}:add_unlock("carbon-fiber")
+}:add_unlock("acrylic")
 
 RECIPE {
     type = "recipe",
@@ -36,7 +36,7 @@ RECIPE {
         {type = "fluid", name = "cyanic-acid", amount = 20},
     },
     main_product = "acrylonitrile",
-}:add_unlock("carbon-fiber")
+}:add_unlock("acrylic")
 
 RECIPE {
     type = "recipe",
@@ -56,7 +56,25 @@ RECIPE {
         {type = "fluid", name = "cyanic-acid", amount = 20},
     },
     main_product = "acrylonitrile",
-}:add_unlock("carbon-fiber")
+}:add_unlock("acrylic")
+
+RECIPE {
+    type = "recipe",
+    name = "methyl-acrylate-2",
+    category = "methanol",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "cobalt-oxide", amount = 2},
+        {type = "fluid", name = "acetylene", amount = 100},
+        {type = "fluid", name = "carbon-dioxide", amount = 100},
+        {type = "fluid", name = "methanol", amount = 100}
+    },
+    results = {
+        {type = "item", name = "methyl-acrylate", amount = 1}
+    },
+}:add_unlock("acrylic")
+
 
 RECIPE {
     type = "recipe",
