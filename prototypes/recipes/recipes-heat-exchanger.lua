@@ -91,7 +91,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "geothermal-water", amount = 200, minimum_temperature = 950},
+        {type = "fluid", name = "geothermal-water", amount = 600, minimum_temperature = 950},
     },
     results = {
         {type = "fluid", name = "steam", amount = 300, temperature = 500},
@@ -108,7 +108,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "geothermal-water", amount = 200, minimum_temperature = 950},
+        {type = "fluid", name = "geothermal-water", amount = 600, minimum_temperature = 950},
         {type = "fluid", name = "pressured-water", amount = 300},
     },
     results = {
@@ -126,7 +126,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "geothermal-water", amount = 100, minimum_temperature = 1950},
+        {type = "fluid", name = "geothermal-water", amount = 600, minimum_temperature = 1950},
         {type = "fluid", name = "pressured-water", amount = 400},
     },
     results = {
@@ -144,7 +144,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "geothermal-water", amount = 100, minimum_temperature = 2950},
+        {type = "fluid", name = "geothermal-water", amount = 600, minimum_temperature = 2950},
         {type = "fluid", name = "pressured-water", amount = 500},
     },
     results = {
