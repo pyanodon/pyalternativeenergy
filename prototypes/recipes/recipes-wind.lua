@@ -23,7 +23,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "item", name = "iron-stick", amount = 1},
+        {type = "item", name = "shaft-mk01", amount = 1},
         {type = "item", name = "steel-plate", amount = 30},
         {type = "item", name = "duralumin", amount = 20},
         {type = "item", name = "rubber", amount = 15},
@@ -291,6 +291,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
+        {type = "item", name = "shaft-mk02", amount = 1},
         {type = "item", name = "engine-unit", amount = 1},
         {type = "item", name = "eva", amount = 20},
         {type = "item", name = "stainless-steel", amount = 40},
@@ -562,6 +563,7 @@ RECIPE {
         {type = "item", name = "super-steel", amount = 50},
         {type = "item", name = "nbti-alloy", amount = 30},
         {type = "item", name = "mositial-nx", amount = 5},
+        {type = "item", name = "shaft-mk03", amount = 1},
         {type = "fluid", name = "grease", amount = 300},
         {type = "item", name = "small-parts-03", amount = 100},
         {type = "item", name = "aramid", amount = 25},
@@ -865,6 +867,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = "item", name = "electric-engine-unit", amount = 2},
+        {type = "item", name = "shaft-mk04", amount = 1},
         {type = "item", name = "science-coating", amount = 10},
         {type = "item", name = "super-alloy", amount = 40},
         {type = "item", name = "nbti-alloy", amount = 30},
