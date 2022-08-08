@@ -14,6 +14,7 @@ RECIPE {
         {"superconductor-servomechanims", 10},
         {'metastable-quasicrystal', 10},
         {"metallic-glass", 40},
+        {"mechanical-parts-04", 5},
     },
     results = {
         {"py-oil-powerplant-mk04", 1}

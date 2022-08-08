@@ -19,6 +19,7 @@ RECIPE{
         {"electronics-mk03", 1},
 		{"biobattery", 5},
         {"cf", 200},
+		{"mechanical-parts-03", 1},
 		{type = "fluid", name = "helium", amount = 2000},
     },
     result = "aerial-blimp-mk03"

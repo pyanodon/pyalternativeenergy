@@ -14,6 +14,7 @@ RECIPE {
         {'electric-engine-unit', 20},
         {"aerogel", 100},
         {'ns-material', 30},
+        {"mechanical-parts-03", 5},
     },
     results = {
         {"py-oil-powerplant-mk03", 1}

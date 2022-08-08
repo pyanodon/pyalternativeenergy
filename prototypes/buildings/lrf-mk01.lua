@@ -12,6 +12,7 @@ RECIPE {
         {"steam-engine", 10},
         {"electronic-circuit", 100},
         {'intermetallics', 50},
+        {"mechanical-parts-01", 5},
     },
     results = {
         {"lrf-building-mk01", 1}

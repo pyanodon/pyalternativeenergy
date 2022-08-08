@@ -14,6 +14,7 @@ RECIPE {
         {"hyperelastic-material", 30},
         {"ti-n", 100},
         {"super-alloy", 500},
+        {"mechanical-parts-04", 5},
     },
     results = {
         {"py-gas-powerplant-mk04", 1}

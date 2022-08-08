@@ -14,6 +14,7 @@ RECIPE {
         {"metallic-glass", 40},
         {"carbon-aerogel", 100},
         {"cf", 500},
+        {"mechanical-parts-04", 5},
     },
     results = {
         {"nuclear-reactor-mk04", 1}

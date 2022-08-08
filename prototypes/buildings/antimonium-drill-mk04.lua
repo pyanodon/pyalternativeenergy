@@ -15,6 +15,7 @@ RECIPE {
         {"hyperelastic-material", 15},
         {'metastable-quasicrystal', 4},
         {"sc-engine", 3},
+        {"mechanical-parts-04", 1},
     },
     results = {
         {"antimonium-drill-mk04", 1}

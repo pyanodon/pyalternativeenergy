@@ -15,6 +15,8 @@ RECIPE {
         {'acrylic', 60},
         {"cf", 100},
         {"glass-fiber", 100},
+        {"mechanical-parts-03", 5},
+
     },
     results = {
         {"py-biomass-powerplant-mk03", 1}

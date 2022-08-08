@@ -12,6 +12,7 @@ RECIPE {
         {"self-assembly-monolayer", 20},
         {"nexelit-plate", 15},
         {"advanced-circuit", 10},
+        {"mechanical-parts-02", 1},
     },
     results = {
         {"ree-mining-drill-mk02", 1}

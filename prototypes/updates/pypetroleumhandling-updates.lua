@@ -23,58 +23,58 @@ RECIPE("upgrader-mk01"):add_ingredient({type = "item", name = "intermetallics", 
 RECIPE("guar-gum-plantation"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("oil-boiler-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 --RECIPE("rhe"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
-RECIPE("sulfur-mine"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+RECIPE("sulfur-mine"):add_ingredient({type = "item", name = "intermetallics", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
 
-RECIPE("natural-gas-seep-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
-RECIPE("bitumen-seep-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("oil-sand-extractor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("tar-seep-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("coalbed-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("cracker-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("gas-refinery-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15})
-RECIPE("heavy-oil-refinery-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15})
-RECIPE("lor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15})
-RECIPE("pumpjack-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("reformer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
-RECIPE("tholin-atm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("tholin-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("upgrader-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("guar-gum-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
+RECIPE("natural-gas-seep-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("bitumen-seep-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("oil-sand-extractor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("tar-seep-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("coalbed-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("cracker-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("gas-refinery-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("heavy-oil-refinery-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("lor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("pumpjack-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("reformer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("tholin-atm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("tholin-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("upgrader-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("guar-gum-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 
-RECIPE("natural-gas-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
-RECIPE("bitumen-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("oil-sand-extractor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("tar-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("coalbed-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
-RECIPE("cracker-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("gas-refinery-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15})
-RECIPE("heavy-oil-refinery-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15})
-RECIPE("lor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15})
-RECIPE("pumpjack-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("reformer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 20})
-RECIPE("tholin-atm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("tholin-plant-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("upgrader-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("guar-gum-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
+RECIPE("natural-gas-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("bitumen-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("oil-sand-extractor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("tar-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("coalbed-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("cracker-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("gas-refinery-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("heavy-oil-refinery-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("lor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("pumpjack-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("reformer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 20}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("tholin-atm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("tholin-plant-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("upgrader-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("guar-gum-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 
 
-RECIPE("natural-gas-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("bitumen-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("oil-sand-extractor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("tar-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("coalbed-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("cracker-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("gas-refinery-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4})
-RECIPE("heavy-oil-refinery-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4})
-RECIPE("lor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4})
-RECIPE("pumpjack-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("reformer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 5})
-RECIPE("tholin-atm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("tholin-plant-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("upgrader-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("retorter"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("fracking-rig"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 30}):add_ingredient({type = "item", name = "sc-engine", amount = 6})
-RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
+RECIPE("natural-gas-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("bitumen-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("oil-sand-extractor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("tar-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("coalbed-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("cracker-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("gas-refinery-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("heavy-oil-refinery-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("lor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("pumpjack-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("reformer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("tholin-atm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("tholin-plant-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("upgrader-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("retorter"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 4 }
+RECIPE("fracking-rig"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 30}):add_ingredient({type = "item", name = "sc-engine", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 5 }
+RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 
 RECIPE("guar-gum-plantation-mk01"):subgroup_order("py-alienlife-buildings-mk01", "a")
 RECIPE("guar-gum-plantation-mk02"):subgroup_order("py-alienlife-buildings-mk02", "a")

@@ -14,6 +14,7 @@ RECIPE {
         {"phosphate-glass", 100},
         {"pump", 5},
         {'self-assembly-monolayer', 15},
+        {"mechanical-parts-02", 1},
         {"nxsb-alloy", 50},
     },
     results = {

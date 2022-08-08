@@ -17,6 +17,7 @@ RECIPE {
         {'metastable-quasicrystal', 50},
         {"intelligent-unit", 10},
         {"low-density-structure", 400},
+        {"mechanical-parts-04", 10},
     },
     results = {
         {"solar-tower-building", 1}

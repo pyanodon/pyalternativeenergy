@@ -14,6 +14,8 @@ RECIPE {
         {"low-density-structure", 100},
         {'electric-engine-unit', 20},
         {"small-parts-03", 300},
+        {"mechanical-parts-03", 5},
+
     },
     results = {
         {"py-coal-powerplant-mk03", 1}

@@ -126,6 +126,18 @@ ITEM("productivity-module-3").effect.consumption.bonus = 2.0
 ENTITY("beacon", "beacon").energy_usage = "2MW"
 data.raw.furnace["steel-furnace"].energy_usage = "2MW"
 data.raw.furnace["steel-furnace"].crafting_speed = 4
+
+--mechanical-parts--
+RECIPE("train-stop"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("power-switch"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("electric-furnace"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("rocket-silo"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 4 }
+RECIPE("flying-robot-frame"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 2 }
+RECIPE("chemical-science-pack"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("space-science-pack"):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+
+
+
 --[[
 data.raw.furnace["steel-furnace"].energy_source = {
     type = "heat",

@@ -15,6 +15,7 @@ RECIPE{
         {"advanced-circuit", 30},
         {"nbti-alloy", 30},
         {"niobium-pipe", 50},
+        {"mechanical-parts-02", 2},
         {"plastic-bar", 200},
     },
     results = {{'numal-reef-mk02', 1}}

@@ -17,6 +17,7 @@ RECIPE {
         {'metastable-quasicrystal', 10},
         {"control-unit", 10},
         {"ti-n", 30},
+        {"mechanical-parts-04", 1},
     },
     results = {
         {"neutron-absorber-mk04", 1}

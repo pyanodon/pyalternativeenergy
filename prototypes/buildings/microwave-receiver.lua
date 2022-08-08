@@ -13,6 +13,7 @@ RECIPE {
         {'super-steel', 100},
         {'electric-engine-unit', 10},
         {'aerogel', 20},
+        {"mechanical-parts-03", 4},
     },
     results = {
         {"microwave-receiver", 1}

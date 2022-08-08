@@ -17,6 +17,7 @@ RECIPE {
         {"fes", 2},
         {"heating-system", 1},
         {"cooling-system", 3},
+        {"mechanical-parts-04", 1},
     },
     results = {
         {"neutron-moderator-mk04", 1}

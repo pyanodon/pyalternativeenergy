@@ -15,6 +15,7 @@ RECIPE {
         {"metallic-glass", 50},
         {"sc-engine", 8},
         {"nbti-alloy", 200},
+        {"mechanical-parts-04", 5},
     },
     results = {
         {"py-coal-powerplant-mk04", 1}

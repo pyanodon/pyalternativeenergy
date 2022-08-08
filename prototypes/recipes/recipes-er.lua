@@ -168,7 +168,9 @@ RECIPE {
         {type = "item", name = "vacuum-pump-mk01", amount = 1},
         {type = "item", name = "czts-plate", amount = 3},
         {type = "item", name = "stainless-steel", amount = 5},
+        {type = "item", name = "mechanical-parts-03", amount = 1},
         {type = "fluid", name = "liquid-nitrogen", amount = 100},
+
     },
     results = {
         {type = "item", name = "cryostat", amount = 1},

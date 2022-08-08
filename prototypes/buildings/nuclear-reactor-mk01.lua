@@ -13,6 +13,7 @@ RECIPE {
         {"pbsb-alloy", 50},
         {"niobium-pipe", 200},
         {'intermetallics', 50},
+        {"mechanical-parts-01", 10},
     },
     results = {
         {"nuclear-reactor-mk01", 1}

@@ -13,6 +13,7 @@ RECIPE {
         {'small-parts-02', 100},
         {'engine-unit', 20},
         {'advanced-circuit', 50},
+        {"mechanical-parts-02", 5},
     },
     results = {
         {"py-coal-powerplant-mk02", 1}

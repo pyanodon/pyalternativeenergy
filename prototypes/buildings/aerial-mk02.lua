@@ -19,6 +19,7 @@ RECIPE{
         {"aluminium-plate", 30},
 		{"battery", 30},
         {"eva", 40},
+		{"mechanical-parts-02", 1},
         {"electronics-mk02", 1},
 		{type = "fluid", name = "hydrogen", amount = 3000},
     },

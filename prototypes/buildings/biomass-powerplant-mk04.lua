@@ -15,6 +15,7 @@ RECIPE {
         {"sc-engine", 8},
         {"control-unit", 20},
         {"metallic-glass", 100},
+        {"mechanical-parts-04", 5},
     },
     results = {
         {"py-biomass-powerplant-mk04", 1}

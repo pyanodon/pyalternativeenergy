@@ -15,6 +15,8 @@ RECIPE {
         {"utility-box-mk03", 1},
         {"electronics-mk03", 1},
         {'ns-material', 15},
+        {"mechanical-parts-03", 1},
+
     },
     results = {
         {"neutron-absorber-mk03", 1}

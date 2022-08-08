@@ -13,6 +13,7 @@ RECIPE {
         {"steam-engine", 1},
         {"glass", 100},
         {"niobium-pipe", 10},
+        {"mechanical-parts-01", 2},
         {'intermetallics', 10},
     },
     results = {

@@ -102,179 +102,180 @@ RECIPE("plankton-farm-mk01"):add_ingredient({type = "item", name = "intermetalli
 RECIPE("generator-1"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("pyphoon-bay"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 -- RECIPE("collector"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
-RECIPE("zungror-lair-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+RECIPE("zungror-lair-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 5 }
 
-RECIPE("atomizer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("bio-printer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("bio-reactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("biofactory-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("creature-chamber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("genlab-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
-RECIPE("incubator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
-RECIPE("numal-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("slaughterhouse-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("spore-collector-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("cadaveric-arum-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2})
-RECIPE("fawogae-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2})
-RECIPE("moondrop-greenhouse-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 3})
-RECIPE("navens-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("yaedols-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("bhoddos-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("arqad-hive-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("arthurian-pen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("auog-paddock-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("compost-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("cridren-enclosure-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("dhilmos-pool-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("dingrits-pack-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("ez-ranch-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("fish-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2})
-RECIPE("kmauts-enclosure-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("mukmoux-pasture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
-RECIPE("phadai-enclosure-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("phagnot-corral-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 3})
-RECIPE("prandium-lab-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("scrondrix-pen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("simik-den-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("sponge-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("trits-reef-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("ulric-corral-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("xenopen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("xyhiphoe-pool-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("zipir-reef-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("fwf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
-RECIPE("grods-swamp-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("kicalk-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("ralesia-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("rennea-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("tuuphra-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("yotoi-aloe-orchard-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("vonix-den-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("plankton-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7})
-RECIPE("generator-2"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2})
-RECIPE("vat-brain"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("micro-mine-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("research-center-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("botanical-nursery-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("vrauks-paddock-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("moss-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7})
-RECIPE("sap-extractor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
-RECIPE("seaweed-crop-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("zungror-lair-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("fluid-drill-mk03"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
+RECIPE("atomizer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("bio-printer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("bio-reactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("biofactory-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("creature-chamber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("genlab-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("incubator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("numal-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("slaughterhouse-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("spore-collector-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("cadaveric-arum-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("fawogae-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("moondrop-greenhouse-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("navens-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("yaedols-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("bhoddos-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("arqad-hive-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("arthurian-pen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("auog-paddock-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("compost-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("cridren-enclosure-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("dhilmos-pool-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("dingrits-pack-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("ez-ranch-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("fish-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("kmauts-enclosure-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("mukmoux-pasture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("phadai-enclosure-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("phagnot-corral-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("prandium-lab-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("scrondrix-pen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("simik-den-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("sponge-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("trits-reef-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("ulric-corral-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("xenopen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("xyhiphoe-pool-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("zipir-reef-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("fwf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("grods-swamp-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("kicalk-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("ralesia-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("rennea-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("tuuphra-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("yotoi-aloe-orchard-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("vonix-den-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("plankton-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("generator-2"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("vat-brain"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("micro-mine-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("research-center-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("botanical-nursery-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("vrauks-paddock-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("moss-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("sap-extractor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("seaweed-crop-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("zungror-lair-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 5 }
+RECIPE("fluid-drill-mk03"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 
-RECIPE("atomizer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("bio-printer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("bio-reactor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("biofactory-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("creature-chamber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
-RECIPE("genlab-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("incubator-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
-RECIPE("numal-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("slaughterhouse-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
-RECIPE("spore-collector-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("cadaveric-arum-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2})
-RECIPE("fawogae-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2})
-RECIPE("moondrop-greenhouse-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 3})
-RECIPE("navens-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("yaedols-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("bhoddos-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("arqad-hive-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("arthurian-pen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("auog-paddock-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("compost-plant-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("cridren-enclosure-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6})
-RECIPE("dhilmos-pool-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("dingrits-pack-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("ez-ranch-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("fish-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("kmauts-enclosure-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6})
-RECIPE("mukmoux-pasture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
-RECIPE("phadai-enclosure-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("phagnot-corral-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 3})
-RECIPE("prandium-lab-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
-RECIPE("scrondrix-pen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("simik-den-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("sponge-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("trits-reef-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("ulric-corral-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("xenopen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("xyhiphoe-pool-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("zipir-reef-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
-RECIPE("fwf-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
-RECIPE("grods-swamp-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("kicalk-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("ralesia-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("rennea-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("tuuphra-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("yotoi-aloe-orchard-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("vonix-den-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("plankton-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7})
-RECIPE("micro-mine-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("research-center-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
-RECIPE("botanical-nursery-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40})
-RECIPE("vrauks-paddock-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("moss-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7})
-RECIPE("sap-extractor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
-RECIPE("seaweed-crop-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("zungror-lair-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("fluid-drill-mk04"):add_ingredient({type = "item", name = "ns-material", amount = 5}):replace_ingredient("electric-engine-unit", "sc-engine")
+RECIPE("atomizer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("bio-printer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("bio-reactor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("biofactory-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("creature-chamber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("genlab-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("incubator-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("numal-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("slaughterhouse-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("spore-collector-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("cadaveric-arum-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("fawogae-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("moondrop-greenhouse-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("navens-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("yaedols-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("bhoddos-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("arqad-hive-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("arthurian-pen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("auog-paddock-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("compost-plant-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("cridren-enclosure-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("dhilmos-pool-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("dingrits-pack-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("ez-ranch-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("fish-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("kmauts-enclosure-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("mukmoux-pasture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("phadai-enclosure-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("phagnot-corral-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("prandium-lab-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("scrondrix-pen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("simik-den-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("sponge-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("trits-reef-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("ulric-corral-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("xenopen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("xyhiphoe-pool-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("zipir-reef-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("fwf-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("grods-swamp-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("kicalk-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("ralesia-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("rennea-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("tuuphra-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("yotoi-aloe-orchard-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("vonix-den-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("plankton-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("micro-mine-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("research-center-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("botanical-nursery-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("vrauks-paddock-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("moss-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("sap-extractor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("seaweed-crop-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("zungror-lair-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 5 }
+RECIPE("fluid-drill-mk04"):add_ingredient({type = "item", name = "ns-material", amount = 5}):replace_ingredient("electric-engine-unit", "sc-engine"):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 
-RECIPE("atomizer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("bio-printer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("bio-reactor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("biofactory-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("creature-chamber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("genlab-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("incubator-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("numal-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("slaughterhouse-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("spore-collector-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("cadaveric-arum-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("fawogae-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("moondrop-greenhouse-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("navens-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("yaedols-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("bhoddos-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("arqad-hive-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("arthurian-pen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("auog-paddock-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("compost-plant-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("cridren-enclosure-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("dhilmos-pool-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("dingrits-pack-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("ez-ranch-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("fish-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("kmauts-enclosure-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("mukmoux-pasture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("phadai-enclosure-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("phagnot-corral-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("prandium-lab-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("scrondrix-pen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("simik-den-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("sponge-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("trits-reef-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("ulric-corral-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("xenopen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("xyhiphoe-pool-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("zipir-reef-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("fwf-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("grods-swamp-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("kicalk-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("ralesia-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("rennea-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("tuuphra-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("yotoi-aloe-orchard-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("vonix-den-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("plankton-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("micro-mine-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("research-center-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("botanical-nursery-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("vrauks-paddock-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("moss-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("sap-extractor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("seaweed-crop-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1})
-RECIPE("pydrive"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 5})
+RECIPE("atomizer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("bio-printer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("bio-reactor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("biofactory-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("creature-chamber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("genlab-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("incubator-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("numal-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("slaughterhouse-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("spore-collector-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("cadaveric-arum-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("fawogae-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("moondrop-greenhouse-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("navens-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("yaedols-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("bhoddos-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("arqad-hive-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("arthurian-pen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("auog-paddock-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("compost-plant-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("cridren-enclosure-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("dhilmos-pool-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("dingrits-pack-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("ez-ranch-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("fish-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("kmauts-enclosure-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("mukmoux-pasture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("phadai-enclosure-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("phagnot-corral-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("prandium-lab-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("scrondrix-pen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("simik-den-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("sponge-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("trits-reef-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("ulric-corral-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("xenopen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("xyhiphoe-pool-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("zipir-reef-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("fwf-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("grods-swamp-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("kicalk-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("ralesia-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("rennea-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("tuuphra-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("yotoi-aloe-orchard-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("vonix-den-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("plankton-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("micro-mine-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("research-center-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("botanical-nursery-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("vrauks-paddock-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("moss-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("sap-extractor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("seaweed-crop-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("pydrive"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("antelope-enclosure-mk01"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 10 }
 
 -----RECIPES-----
 RECIPE('sb-pulp-01'):replace_ingredient("naphtha", "fish-oil")
@@ -290,7 +291,7 @@ RECIPE('antiviral'):add_ingredient({type = "item", name = "nanocarrier", amount 
 RECIPE('antiviral-02'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 RECIPE('nanochondria'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 RECIPE('adam42-gen'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
-RECIPE("biobattery"):remove_unlock('chitin'):add_unlock({"battery-mk03"})
+RECIPE("biobattery"):remove_unlock('chitin'):add_unlock({"battery-mk03"}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE('hyaline'):add_ingredient({type = "fluid", name = "fatty-acids", amount = 30})
 RECIPE('zinc-finger-proteins'):add_ingredient({type = "fluid", name = "fatty-acids", amount = 30})
 RECIPE('pre-pesticide-02'):add_ingredient({type = "item", name = "dodecylamine", amount = 1})
@@ -316,3 +317,8 @@ ITEM("simik-mk04"):set_fields{fuel_category = "simik", fuel_value = "1500MJ", bu
 
 RECIPE("nano-cellulose"):remove_ingredient('steam'):add_ingredient({type = 'fluid', name = 'pressured-steam', amount = 100})
 RECIPE("zymogens"):add_ingredient{type = "item", name = "zungror-cocoon", amount = 2}
+
+--mechanical-parts--
+RECIPE("py-science-pack-2"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 5 }
+RECIPE("py-science-pack-3"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("py-science-pack-4"):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }

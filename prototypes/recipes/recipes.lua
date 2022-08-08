@@ -1144,3 +1144,99 @@ RECIPE {
     },
     main_product = "bio-ore",
 }:add_unlock("py-science-pack-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "mechanical-parts-01",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 12,
+    ingredients = {
+        {type = "item", name = "shaft-mk01", amount = 1},
+        {type = "item", name = "rubber", amount = 3},
+        {type = "item", name = "utility-box-mk01", amount = 1},
+        {type = "item", name = "small-parts-01", amount = 25},
+        {type = "item", name = "gearbox-mk01", amount = 1},
+        {type = "item", name = "controler-mk01", amount = 1},
+        {type = "item", name = "steel-plate", amount = 15},
+        {type = "item", name = "brake-mk01", amount = 1},
+    },
+    results = {
+        {type = "item", name = "mechanical-parts-01", amount = 3},
+    },
+}:add_unlock("machine-components-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "mechanical-parts-02",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 12,
+    ingredients = {
+        --{type = "item", name = "mechanical-parts-01", amount = 3},
+        --{type = "item", name = "shaft-mk02", amount = 1},
+        --{type = "item", name = "kevlar", amount = 3},
+        --{type = "item", name = "utility-box-mk02", amount = 1},
+        --{type = "item", name = "small-parts-02", amount = 25},
+        --{type = "item", name = "gearbox-mk02", amount = 1},
+        --{type = "item", name = "controler-mk02", amount = 1},
+        {type = "item", name = "steel-plate", amount = 20},
+        --{type = "item", name = "nxsb-alloy", amount = 3},
+        --{type = "item", name = "brake-mk02", amount = 1},
+        --{type = "item", name = "rayon", amount = 5},
+        --{type = "fluid", name = "heavy-oil", amount = 200},
+    },
+    results = {
+        {type = "item", name = "mechanical-parts-02", amount = 3},
+    },
+}:add_unlock("machine-components-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "mechanical-parts-03",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 12,
+    ingredients = {
+        {type = "item", name = "mechanical-parts-02", amount = 3},
+        {type = "item", name = "shaft-mk03", amount = 1},
+        {type = "item", name = "biopolymer", amount = 2},
+        {type = "item", name = "utility-box-mk03", amount = 1},
+        {type = "item", name = "small-parts-03", amount = 30},
+        {type = "item", name = "gearbox-mk03", amount = 1},
+        {type = "item", name = "electronics-mk03", amount = 1},
+        {type = "item", name = "steel-plate", amount = 30},
+        {type = "item", name = "hydraulic-system-mk01", amount = 1},
+        {type = "item", name = "brake-mk03", amount = 1},
+        {type = "item", name = "crco-alloy", amount = 2},
+        {type = "fluid", name = "lubricant", amount = 100},
+    },
+    results = {
+        {type = "item", name = "mechanical-parts-03", amount = 3},
+    },
+}:add_unlock("machine-components-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "mechanical-parts-04",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 12,
+    ingredients = {
+        {type = "item", name = "mechanical-parts-03", amount = 3},
+        {type = "item", name = "shaft-mk04", amount = 1},
+        {type = "item", name = "biopolymer", amount = 2},
+        {type = "item", name = "utility-box-mk04", amount = 1},
+        {type = "item", name = "nano-mesh", amount = 5},
+        {type = "item", name = "gearbox-mk04", amount = 1},
+        {type = "item", name = "electronics-mk04", amount = 1},
+        {type = "item", name = "steel-plate", amount = 30},
+        {type = "item", name = "hydraulic-system-mk02", amount = 1},
+        {type = "item", name = "brake-mk04", amount = 1},
+        {type = "item", name = "nxzngd", amount = 2},
+        {type = "fluid", name = "grease", amount = 100},
+    },
+    results = {
+        {type = "item", name = "mechanical-parts-04", amount = 3},
+    },
+}:add_unlock("machine-components-mk04")

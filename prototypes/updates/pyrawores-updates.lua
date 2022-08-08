@@ -23,57 +23,74 @@ RECIPE("wet-scrubber-mk01"):add_ingredient({type = "item", name = "intermetallic
 RECIPE("salt-mine"):add_ingredient({type = "item", name = "intermetallics", amount = 20})
 RECIPE("salt-mine"):remove_unlock("electrolysis"):add_unlock("energy-1")
 
-RECIPE("bof-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("smelter-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15})
-RECIPE("casting-unit-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("eaf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("electrolyzer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5})
-RECIPE("flotation-cell-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("hydroclassifier-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8})
-RECIPE("impact-crusher-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("leaching-station-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4})
-RECIPE("scrubber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10})
-RECIPE("wet-scrubber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6})
-RECIPE("aluminium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("chromium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("coal-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("copper-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("iron-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("lead-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("nexelit-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("nickel-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("quartz-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("tin-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("uranium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("zinc-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}
-RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','advanced-circuit'):remove_unlock('machines-mk05'):add_unlock('smelters-mk02'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20})
+RECIPE("bof-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("smelter-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("casting-unit-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("eaf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("electrolyzer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("flotation-cell-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("hydroclassifier-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("impact-crusher-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("leaching-station-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("scrubber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("wet-scrubber-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("aluminium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("chromium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("coal-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("copper-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("iron-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("lead-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("nexelit-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("nickel-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("quartz-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("tin-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("uranium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("zinc-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','advanced-circuit'):remove_unlock('machines-mk05'):add_unlock('smelters-mk02'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("sinter-unit"):replace_ingredient("advanced-foundry-mk03", "advanced-foundry-mk02"):replace_ingredient("super-alloy", "stainless-steel")
-RECIPE("drp"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):replace_ingredient("processing-unit", "advanced-circuit")
+RECIPE("drp"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):replace_ingredient("processing-unit", "advanced-circuit"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("drp"):remove_unlock("machines-mk04"):add_unlock("smelters-mk02")
 
-RECIPE("bof-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("smelter-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15})
-RECIPE("casting-unit-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
-RECIPE("eaf-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6})
-RECIPE("electrolyzer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5})
-RECIPE("flotation-cell-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("hydroclassifier-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8})
-RECIPE("impact-crusher-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6})
-RECIPE("leaching-station-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4})
-RECIPE("scrubber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10})
-RECIPE("wet-scrubber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6})
+RECIPE("bof-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("smelter-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("casting-unit-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("eaf-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("electrolyzer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("flotation-cell-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("hydroclassifier-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("impact-crusher-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("leaching-station-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("scrubber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("wet-scrubber-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 
-RECIPE("bof-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("smelter-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4})
-RECIPE("casting-unit-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("eaf-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("electrolyzer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("flotation-cell-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("hydroclassifier-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("impact-crusher-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("leaching-station-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
-RECIPE("scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
-RECIPE("wet-scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2})
+RECIPE("bof-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("smelter-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("casting-unit-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("eaf-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("electrolyzer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("flotation-cell-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("hydroclassifier-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("impact-crusher-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("leaching-station-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("wet-scrubber-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+
+--megamines--
+RECIPE("aluminium-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("chromium-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("coal-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("copper-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("iron-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("lead-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("nexelit-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("nickel-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("phosphate-mine-02"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("quartz-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("salt-mine"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 10 }
+RECIPE("tin-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("titanium-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("uranium-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
+RECIPE("zinc-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 10 }
 
 --RECIPES--
 RECIPE("plastic3"):replace_ingredient('nitrobenzene','aniline')

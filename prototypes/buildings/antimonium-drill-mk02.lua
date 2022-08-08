@@ -12,6 +12,7 @@ RECIPE {
         {"self-assembly-monolayer", 10},
         {"duralumin", 15},
         {"nexelit-plate", 20},
+        {"mechanical-parts-02", 1},
     },
     results = {
         {"antimonium-drill-mk02", 1}

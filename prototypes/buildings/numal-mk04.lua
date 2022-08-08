@@ -17,6 +17,7 @@ RECIPE{
         {"ti-n", 100},
         {"super-alloy", 500},
         {"low-density-structure", 10},
+        {"mechanical-parts-04", 2},
     },
     results = {{'numal-reef-mk04', 1}}
 }:add_unlock('numal-mk04')

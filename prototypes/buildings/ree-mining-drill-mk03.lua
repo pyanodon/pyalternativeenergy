@@ -10,7 +10,8 @@ RECIPE {
         {"nbti-alloy", 20},
         {"tin-plate", 20},
         {'ns-material', 20},
-        {"processing-unit", 10}
+        {"processing-unit", 10},
+        {"mechanical-parts-03", 2},
     },
     results = {
         {"ree-mining-drill-mk03", 1}

@@ -15,6 +15,7 @@ RECIPE {
         {"eva", 50},
         {"stainless-steel", 100},
         {"self-assembly-monolayer", 40},
+        {"mechanical-parts-02", 5},
     },
     results = {
         {"py-biomass-powerplant-mk02", 1}

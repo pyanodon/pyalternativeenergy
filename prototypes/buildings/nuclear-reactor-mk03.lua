@@ -16,6 +16,8 @@ RECIPE {
         {'ns-material', 50},
         {"py-heat-exchanger", 1},
         {"ticocr-alloy", 50},
+        {"mechanical-parts-03", 5},
+
     },
     results = {
         {"nuclear-reactor-mk03", 1}

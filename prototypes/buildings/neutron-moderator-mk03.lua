@@ -14,6 +14,7 @@ RECIPE {
         {"anti-reflex-glass", 100},
         {"utility-box-mk03", 1},
         {'ns-material', 10},
+        {"mechanical-parts-03", 1},
         {"alag-alloy", 30},
     },
     results = {

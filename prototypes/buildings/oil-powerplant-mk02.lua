@@ -13,6 +13,7 @@ RECIPE {
         {'engine-unit', 20},
         {"niobium-pipe", 200},
         {'self-assembly-monolayer', 20},
+        {"mechanical-parts-02", 5},
     },
     results = {
         {"py-oil-powerplant-mk02", 1}

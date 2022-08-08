@@ -12,6 +12,7 @@ RECIPE {
         {"aluminium-plate", 50},
         {"nexelit-plate", 50},
         {"niobium-pipe", 10},
+        {"mechanical-parts-01", 2},
         {'intermetallics', 20},
     },
     results = {

@@ -13,6 +13,7 @@ RECIPE {
         {'small-parts-02', 100},
         {'eva', 10},
         {'self-assembly-monolayer', 10},
+        {"mechanical-parts-02", 1},
         {'electric-engine-unit', 10},
     },
     results = {

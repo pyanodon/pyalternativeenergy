@@ -14,6 +14,8 @@ RECIPE {
         {'graphene-roll', 200},
         {'paramagnetic-material', 100},
         {'electric-engine-unit', 50},
+        {"mechanical-parts-03", 5},
+
     },
     results = {
         {"py-gas-powerplant-mk03", 1}

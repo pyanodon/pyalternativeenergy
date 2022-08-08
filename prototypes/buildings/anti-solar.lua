@@ -15,6 +15,8 @@ RECIPE {
         {'ns-material', 20},
         {'dsnc-cell', 16},
         {'anti-reflex-glass', 20},
+        {"mechanical-parts-04", 1},
+
     },
     results = {
         {"anti-solar", 1}

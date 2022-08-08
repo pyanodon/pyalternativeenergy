@@ -7,6 +7,7 @@ RECIPE {
         {"py-heat-exchanger", 1},
         {'nexelit-plate', 15},
         {'advanced-circuit', 30},
+        {"mechanical-parts-02", 1},
         {"engine-unit", 3},
     },
     results = {

@@ -12,6 +12,7 @@ RECIPE {
         {'ns-material', 20},
         {"processing-unit", 10},
         {"electric-engine-unit", 3},
+        {"mechanical-parts-03", 1},
     },
     results = {
         {"antimonium-drill-mk03", 1}

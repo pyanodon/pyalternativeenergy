@@ -12,6 +12,7 @@ RECIPE {
         {"ti-n", 100},
         {"low-density-structure", 20},
         {"nbfe-alloy", 10},
+        {"mechanical-parts-04", 1},
     },
     results = {
         {"centrifuge-mk04", 1}

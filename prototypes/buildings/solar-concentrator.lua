@@ -13,6 +13,7 @@ RECIPE {
         {'self-assembly-monolayer', 20},
         {'engine-unit', 30},
         {'solder', 50},
+        {"mechanical-parts-02", 5},
     },
     results = {
         {"solar-concentrator", 1}

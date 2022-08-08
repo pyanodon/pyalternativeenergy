@@ -706,6 +706,7 @@ RECIPE {
         {type = "item", name = "pcb3", amount = 2},
         {type = "item", name = "neuromorphic-chip", amount = 20},
         {type = "item", name = "processor", amount = 1},
+        {type = "item", name = "plasmonic-core", amount = 1},
         {type = "item", name = "aluminium-plate", amount = 10},
         {type = "item", name = "capacitor2", amount = 20},
         {type = "item", name = "capacitor3", amount = 40},
@@ -831,6 +832,7 @@ RECIPE {
         {type = "item", name = "niobium-pipe", amount = 45},
         {type = "item", name = "low-density-structure", amount = 40},
         {type = "item", name = "shaft-mk04", amount = 1},
+        {type = "item", name = "mechanical-parts-04", amount = 1},
     },
     results = {
         {type = "item", name = "inside-turbine", amount = 1},

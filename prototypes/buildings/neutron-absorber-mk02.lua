@@ -14,6 +14,7 @@ RECIPE {
         {"lithium", 30},
         {'eva', 20},
         {"electronics-mk02", 3},
+        {"mechanical-parts-02", 1},
         {'self-assembly-monolayer', 10},
     },
     results = {

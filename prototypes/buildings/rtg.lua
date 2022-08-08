@@ -12,6 +12,7 @@ RECIPE {
         {"graphene-roll", 30},
         {'ns-material', 20},
         {"small-parts-03", 100},
+        {"mechanical-parts-03", 1},
     },
     results = {
         {"rtg", 1}

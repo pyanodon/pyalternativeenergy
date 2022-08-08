@@ -15,6 +15,7 @@ RECIPE{
         {"small-parts-03", 200},
         {"neuromorphic-chip", 30},
         {"processing-unit", 50},
+        {"mechanical-parts-03", 2},
     },
     results = {{'numal-reef-mk03', 1}}
 }:add_unlock('numal-mk03')

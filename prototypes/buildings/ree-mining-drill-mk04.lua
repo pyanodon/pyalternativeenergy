@@ -15,6 +15,7 @@ RECIPE {
         {"intelligent-unit", 3},
         {"superconductor-servomechanims", 2},
         {"hyperelastic-material", 5},
+        {"mechanical-parts-04", 3},
     },
     results = {
         {"ree-mining-drill-mk04", 1}

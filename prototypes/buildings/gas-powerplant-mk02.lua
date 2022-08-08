@@ -13,6 +13,7 @@ RECIPE {
         {'small-parts-02', 200},
         {'self-assembly-monolayer', 20},
         {'engine-unit', 30},
+        {"mechanical-parts-02", 5},
     },
     results = {
         {"py-gas-powerplant-mk02", 1}

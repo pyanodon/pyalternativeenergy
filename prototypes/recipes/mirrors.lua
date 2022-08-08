@@ -200,6 +200,7 @@ RECIPE {
         {type = "item", name = "rubber", amount = 5},
         {type = "item", name = "plastic-bar", amount = 3},
         {type = "item", name = "fenxsb-alloy", amount = 20},
+        {type = "item", name = "mechanical-parts-02", amount = 1},
     },
     results = {
         {type = "item", name = "axis-tracker", amount = 1},

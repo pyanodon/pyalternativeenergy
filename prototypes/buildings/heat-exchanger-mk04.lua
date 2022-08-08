@@ -6,6 +6,7 @@ RECIPE {
     ingredients = {
         {"py-heat-exchanger-mk03", 1},
         {"low-density-structure", 10},
+        {"mechanical-parts-04", 1},
     },
     results = {
         {"py-heat-exchanger-mk04", 1}

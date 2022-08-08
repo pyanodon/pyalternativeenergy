@@ -11,6 +11,7 @@ RECIPE {
         {'ns-material', 20},
         {"advanced-circuit", 10},
         {"concrete", 100},
+        {"mechanical-parts-03", 1},
     },
     results = {
         {"sut", 1}
