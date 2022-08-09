@@ -1,6 +1,9 @@
 --TECHNOLOGY--
 TECHNOLOGY('filtration-mk02'):add_prereq('lithium-processing')
+
+TECHNOLOGY("nexelit-mk01"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
 --BUILDINDS--
+
 
 --RECIPE--
 RECIPE("equipment-chassi"):replace_ingredient("duralumin", { type = "item", name = "fenxsb-alloy", amount = 1})
@@ -15,7 +18,8 @@ RECIPE("gasturbinemk01"):remove_unlock('energy-1'):set_fields{hidden = true}
 RECIPE("gasturbinemk02"):remove_unlock('machines-mk03'):set_fields{hidden = true}
 RECIPE("gasturbinemk03"):remove_unlock('machines-mk04'):set_fields{hidden = true}
 
-RECIPE("evaporator"):remove_ingredient('chemical-plant-mk01')
+RECIPE("evaporator"):remove_ingredient('chemical-plant-mk01'):remove_unlock("fluid-processing-machines-2"):add_unlock("nexelit-mk01")
+RECIPE("quenching-tower"):remove_unlock("machines-mk01"):add_unlock("nexelit-mk01")
 RECIPE("methanol-reactor"):remove_ingredient('gasturbinemk01')
 RECIPE("co2-absorber"):remove_ingredient('gasturbinemk01')
 --RECIPE("bio-reactor"):remove_ingredient('gasturbinemk02')
@@ -37,7 +41,6 @@ RECIPE("methanol-reactor"):add_ingredient({type = "item", name = "intermetallics
 RECIPE("olefin-plant"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 --RECIPE("jaw-crusher"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("power-house"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
---RECIPE("quenching-tower"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("rectisol"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 -- RECIPE("solid-separator"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 --RECIPE("tar-processing-unit"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
