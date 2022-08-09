@@ -54,7 +54,7 @@ RECIPE("py-heat-exchanger-mk02"):add_ingredient({type = "item", name = "self-ass
 
 RECIPE("agitator-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("vacuum-pump-mk03"):add_ingredient({type = "item", name = "ns-material", amount =2}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
---RECIPE("mo-mine"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("mo-mine"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("nmf-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("secondary-crusher-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("thickener-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }

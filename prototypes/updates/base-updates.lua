@@ -132,7 +132,7 @@ RECIPE("train-stop"):add_ingredient { type = "item", name = "mechanical-parts-01
 RECIPE("power-switch"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("electric-furnace"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("rocket-silo"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 4 }
---RECIPE("flying-robot-frame"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 2 }
+RECIPE("flying-robot-frame"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
 RECIPE("chemical-science-pack"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("space-science-pack"):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 
