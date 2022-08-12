@@ -125,7 +125,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "sb-oxide", amount = 1},
-        {type = "fluid", name = "molten-glass", amount = 50},
+        {type = "fluid", name = "molten-glass", amount = 50, fluidbox_index = 2},
     },
     results = {
         {type = "item", name = "anti-reflex-glass", amount = 1},

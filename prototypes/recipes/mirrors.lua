@@ -218,7 +218,7 @@ RECIPE {
         {type = "item", name = "crude-mirror", amount = 1},
         {type = "item", name = "lead-plate", amount = 1},
         {type = "item", name = "copper-plate", amount = 3},
-        {type = "fluid", name = "sulfuric-acid", amount = 50},
+        {type = "fluid", name = "sulfuric-acid", amount = 50, fluidbox_index = 1},
     },
     results = {
         {type = "item", name = "mirror-mk02", amount = 1},
