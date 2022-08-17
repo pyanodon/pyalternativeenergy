@@ -162,6 +162,7 @@ RECIPE("sap-extractor-mk02"):add_ingredient({type = "item", name = "self-assembl
 RECIPE("seaweed-crop-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("zungror-lair-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 5 }
 RECIPE("fluid-drill-mk03"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("collector-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
 
 RECIPE("atomizer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("bio-printer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -219,6 +220,8 @@ RECIPE("sap-extractor-mk03"):add_ingredient({type = "item", name = "ns-material"
 RECIPE("seaweed-crop-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("zungror-lair-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 5 }
 RECIPE("fluid-drill-mk04"):add_ingredient({type = "item", name = "ns-material", amount = 5}):replace_ingredient("electric-engine-unit", "sc-engine"):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("collector-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient({type = "item", name = "acrylic", amount = 20}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 2 }
+
 
 RECIPE("atomizer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("bio-printer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
@@ -276,6 +279,8 @@ RECIPE("sap-extractor-mk04"):add_ingredient({type = "item", name = "metastable-q
 RECIPE("seaweed-crop-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("pydrive"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("antelope-enclosure-mk01"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 10 }
+RECIPE("collector-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 2 }
+
 
 -----RECIPES-----
 RECIPE('sb-pulp-01'):replace_ingredient("naphtha", "fish-oil")
