@@ -5,13 +5,13 @@ RECIPE {
     name = "eg-si",
     category = "advanced-foundry",
     enabled = false,
-    energy_required = 15,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "pure-trichlorosilane", amount = 50},
         {type = "fluid", name = "hydrogen", amount = 100},
     },
     results = {
-        {type = "item", name = "eg-si", amount = 1},
+        {type = "item", name = "eg-si", amount = 2},
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
     },
     main_product = "eg-si",
