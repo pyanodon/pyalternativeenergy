@@ -129,6 +129,7 @@ require("prototypes/fluids/crude-enzyme")
 require("prototypes/fluids/buffer-solution")
 require("prototypes/fluids/numal-ink")
 require('prototypes/fluids/void')
+require('prototypes/fluids/mukmoux-oil')
 
 require("prototypes/fluids/neutron")
 --require("prototypes/fluids/uranium")
