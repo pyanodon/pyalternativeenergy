@@ -15,6 +15,7 @@ RECIPE{
         {'graphene-roll', 5},
         {'electric-engine-unit', 3},
         {'aerogel', 5},
+        {"mechanical-parts-03", 1},
     },
     results = {{'solar-panel-mk03', 1}}
 

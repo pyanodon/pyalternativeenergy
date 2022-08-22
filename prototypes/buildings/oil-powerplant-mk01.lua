@@ -13,6 +13,7 @@ RECIPE {
         {"distilator", 1},
         {"intermetallics", 40},
         {'steam-engine', 20},
+        {"mechanical-parts-01", 3},
     },
     results = {
         {"py-oil-powerplant-mk01", 1}

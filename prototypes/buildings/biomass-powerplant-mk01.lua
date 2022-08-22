@@ -12,6 +12,7 @@ RECIPE {
         {"pipe", 50},
         {"steel-plate", 100},
         {"intermetallics", 20},
+        {"mechanical-parts-01", 4},
     },
     results = {
         {"py-biomass-powerplant-mk01", 1}

@@ -14,6 +14,7 @@ RECIPE {
       {'molybdenum-plate', 10},
       {'carbon-nanotube', 10},
       {'milfe', 5},
+      {"mechanical-parts-04", 1},
   },
   results = {{'solar-panel-mk04', 1}}
 

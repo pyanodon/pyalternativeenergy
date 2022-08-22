@@ -11,6 +11,7 @@ RECIPE {
         {"steel-plate", 200},
         {"steam-engine", 20},
         {'intermetallics', 50},
+        {"mechanical-parts-01", 3},
     },
     results = {
         {"py-coal-powerplant-mk01", 1}

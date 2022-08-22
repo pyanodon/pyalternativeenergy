@@ -11,6 +11,7 @@ RECIPE{
         {"intermetallics", 20},
         {'duralumin', 50},
         {'glass', 100},
+        {"mechanical-parts-01", 3},
         {'advanced-circuit', 35}
     },
     results = {{'numal-reef-mk01', 1}}

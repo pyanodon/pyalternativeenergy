@@ -16,6 +16,7 @@ RECIPE{
         {'self-assembly-monolayer', 10},
         {'electric-engine-unit', 1},
         {type = "fluid", name = "etching", amount = 50},
+        {"mechanical-parts-02", 1},
     },
     results = {
         {'solar-panel-mk02', 1}

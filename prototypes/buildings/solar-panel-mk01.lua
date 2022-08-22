@@ -14,6 +14,7 @@ RECIPE {
         {'copper-cable', 10},
         {'small-parts-01', 10},
         {'melamine', 10},
+        {"mechanical-parts-01", 1},
     },
     results = {
         {'solar-panel-mk01', 1}

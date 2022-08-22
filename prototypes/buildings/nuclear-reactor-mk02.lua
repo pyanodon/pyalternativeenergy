@@ -12,7 +12,7 @@ RECIPE {
         {"engine-unit", 10},
         {"pump", 10},
         {"nxsb-alloy", 50},
-        {"mechanical-parts-02", 5},
+        {"mechanical-parts-02", 10},
         {'self-assembly-monolayer', 50},
     },
     results = {

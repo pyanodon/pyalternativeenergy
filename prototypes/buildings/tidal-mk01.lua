@@ -15,6 +15,7 @@ RECIPE {
       {"utility-box-mk01", 2},
       {"gearbox-mk01", 3},
       {"electronic-circuit", 20},
+      {"mechanical-parts-01", 10},
   },
     results = {{'tidal-mk01', 1}}
 }:add_unlock("tidal-mk01")
