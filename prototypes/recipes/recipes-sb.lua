@@ -131,12 +131,12 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "sb-dust", amount = 1},
+        {type = "item", name = "sb-dust", amount = 2},
         {type = "item", name = "lead-acetate", amount = 1},
-        {type = "fluid", name = "naphtha", amount = 100},
+        {type = "fluid", name = "naphtha", amount = 25},
     },
     results = {
-        {type = "fluid", name = "sb-pulp-01", amount = 100},
+        {type = "fluid", name = "sb-pulp-01", amount = 200},
     },
     --main_product = "sb-dust",
 }:add_unlock("antimony-mk02")
