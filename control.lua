@@ -1,6 +1,8 @@
 local util = require('util')
 -- TODO: rewrite microwave sat code to have launched sats added to a pool and the code sorting the sat pool between recivers as seperate functions
 
+local aerial_power = 1000
+
 local function init_globals()
     global.windmills = global.windmills or {}
     global.reactor_tanks = global.reactor_tanks or {}
@@ -623,7 +625,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
             --log(dist)
             for b, base in pairs(bases) do
                 --log('hit')
-                base.energy = base.energy + (1000 * dist)
+                base.energy = base.energy + (aerial_power * dist)
                 break
             end
             --log('hit')
