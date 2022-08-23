@@ -127,8 +127,8 @@ ENTITY("beacon", "beacon").energy_usage = "2MW"
 data.raw.furnace["steel-furnace"].energy_usage = "2MW"
 data.raw.furnace["steel-furnace"].crafting_speed = 4
 
---mechanical-parts--
-RECIPE("train-stop"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+--mechanical-parts on vanilla stuff--
+--RECIPE("train-stop"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("power-switch"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("electric-furnace"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("rocket-silo"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 4 }
