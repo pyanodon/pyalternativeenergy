@@ -56,7 +56,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 shift = util.by_pixel(0, -48)
             },
             {
@@ -65,7 +65,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 draw_as_glow = true,
                 shift = util.by_pixel(0, -48)
             },
@@ -75,7 +75,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 shift = util.by_pixel(0, -48),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
             },
@@ -85,7 +85,7 @@ ENTITY {
                 height = 352,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 draw_as_shadow = true,
                 shift = util.by_pixel(16, -0)
             },
@@ -99,7 +99,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 shift = util.by_pixel(0, -48)
             },
             {
@@ -108,7 +108,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 draw_as_glow = true,
                 shift = util.by_pixel(0, -48)
             },
@@ -118,7 +118,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 shift = util.by_pixel(0, -48),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
             },
@@ -128,14 +128,14 @@ ENTITY {
                 height = 352,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 draw_as_shadow = true,
                 shift = util.by_pixel(16, -0)
             },
         },
     },
     charge_cooldown = 30,
-    charge_light = {intensity = 1, size = 12, color = {r = 0.219, g = 0.835, b = 0.188}},
+    charge_light = {intensity = 1, size = 20, color = {r = 0.219, g = 0.835, b = 0.188}},
     discharge_animation = {
         layers = {
             {
@@ -144,7 +144,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 shift = util.by_pixel(0, -48)
             },
             {
@@ -153,7 +153,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 draw_as_glow = true,
                 shift = util.by_pixel(0, -48)
             },
@@ -163,7 +163,7 @@ ENTITY {
                 height = 448,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 shift = util.by_pixel(0, -48),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
             },
@@ -173,14 +173,14 @@ ENTITY {
                 height = 352,
                 frame_count = 19,
                 line_length = 5,
-                animation_speed = 0.3,
+                animation_speed = 1/5,
                 draw_as_shadow = true,
                 shift = util.by_pixel(16, -0)
             },
         },
     },
     discharge_cooldown = 60,
-    discharge_light = {intensity = 1, size = 12, color = {r = 0.862, g = 0.117, b = 0.117}},
+    discharge_light = {intensity = 0.7, size = 20, color = {r = 0.862, g = 0.117, b = 0.117}},
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     circuit_wire_connection_point = {
         shadow = {

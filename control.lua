@@ -1,7 +1,7 @@
 local util = require('util')
 -- TODO: rewrite microwave sat code to have launched sats added to a pool and the code sorting the sat pool between recivers as seperate functions
 
-local aerial_power = 1000
+local aerial_power = 100000
 
 local function init_globals()
     global.windmills = global.windmills or {}
