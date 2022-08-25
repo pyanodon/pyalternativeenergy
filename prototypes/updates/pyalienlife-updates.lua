@@ -28,6 +28,8 @@ TECHNOLOGY("kerogen"):add_pack("py-science-pack-4")
 TECHNOLOGY("railway-mk04"):add_pack("py-science-pack-4")
 TECHNOLOGY("fracking"):add_pack("py-science-pack-4")
 
+TECHNOLOGY("coated-container"):add_pack("py-science-pack-3")
+
 -- The zungror effect
 TECHNOLOGY("water-animals-mk04"):add_pack("military-science-pack")
 TECHNOLOGY("water-invertebrates-mk04"):add_pack("military-science-pack")
