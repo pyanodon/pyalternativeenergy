@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/lithium-processing.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'geothermal-power-mk03'},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 500,
