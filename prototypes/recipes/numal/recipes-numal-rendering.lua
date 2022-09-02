@@ -2,6 +2,22 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 ------------------RENDERING------------------
 
+local INPUT_AMOUNT = 1
+
+local BASE_MEAT = 2
+local BASE_SKIN = 4
+local BASE_GUTS = 4
+local BASE_BLOOD = 50
+local BASE_BRAIN = 1
+local BASE_SPECIAL = 10		-- ink
+
+local IMP_MEAT = 4
+local IMP_SKIN = 8
+local IMP_GUTS = 10
+local IMP_BLOOD = 80
+local IMP_SPECIAL = 20
+
+
 FUN.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse-numal',
@@ -13,18 +29,16 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='numal', amount=1},
+					{name='numal', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='meat', amount = 2},
-					{name='chitin', amount = 4},
-					{name='mukmoux-fat', amount = 1},
-					{name='guts', amount = 4},
-					{name='arthropod-blood', amount =50},
-					{name='brain', amount = 1},
-					{name='numal-ink', amount = 10},
-					{name='cage', amount = 1}
+					{name='meat', amount = BASE_MEAT},
+					{name='chitin', amount = BASE_SKIN},
+					{name='guts', amount = BASE_GUTS},
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='brain', amount = BASE_BRAIN},
+					{name='numal-ink', amount = BASE_SPECIAL},
 				},
 			crafting_speed = 30,
 			tech = 'numal-mk01',
@@ -37,15 +51,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='numal',remove_item = true},
-					{name='guts-numal', amount=1},
+					{name='guts-numal', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name = 'aeroorgan', amount = 1},
-					{name='guts', amount =10},
-					{name='numal-ink', amount = 20},
+					{name='guts', amount = IMP_GUTS},
+					{name='numal-ink', amount = IMP_SPECIAL},
 				},
-			crafting_speed = 15,
 			tech = 'antitumor',
 			name = 'ex-gut-num',
 			icon = "__pyalternativeenergygraphics__/graphics/icons/guts-numal.png",
@@ -56,16 +68,14 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='guts-numal',remove_item = true},
-					{name='blood-numal', amount=1},
+					{name='blood-numal', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='aeroorgan',remove_item = true},
-					{name='guts', amount = 4},
-					{name='numal-ink', amount = 10},
-					{name='arthropod-blood', amount =80},
+					{name='guts', amount = BASE_GUTS},
+					{name='numal-ink', amount = BASE_SPECIAL},
+					{name='arthropod-blood', amount = IMP_BLOOD},
 				},
-			crafting_speed = 15,
 			tech = 'recombinant-ery',
 			name = 'ex-blo-num',
 			icon = "__pyalternativeenergygraphics__/graphics/icons/blood-numal.png",
@@ -76,14 +86,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='blood-numal',remove_item = true},
-					{name='chitin-numal', amount=1},
+					{name='chitin-numal', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='arthropod-blood', amount = 50},
-					{name='chitin', amount =8},
+					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name='chitin', amount = IMP_SKIN},
 				},
-			crafting_speed = 15,
 			tech = 'reca',
 			name = 'ex-ski-num',
 			icon = "__pyalternativeenergygraphics__/graphics/icons/chitin-numal.png",
@@ -94,14 +103,13 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='chitin-numal',remove_item = true},
-					{name='meat-numal', amount=1},
+					{name='meat-numal', amount = INPUT_AMOUNT},
 				},
 			results =
 				{
-					{name='chitin', amount = 4},
-					{name='meat', amount =4},
+					{name='chitin', amount = BASE_SKIN},
+					{name='meat', amount = IMP_MEAT},
 				},
-			crafting_speed = 15,
 			tech = 'anabolic-rna',
 			name = 'ex-me-num',
 			icon = "__pyalternativeenergygraphics__/graphics/icons/meat-numal.png",
