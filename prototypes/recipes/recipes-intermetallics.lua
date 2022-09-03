@@ -447,6 +447,7 @@ RECIPE {
         {type = "item", name = "mositial-nx", amount = 1},
         {type = "item", name = "gd-metal", amount = 1},
         {type = "item", name = "pbsb-alloy", amount = 5},
+        {type = "item", name = "simik-scales", amount = 4},
     },
     results = {
         {type = "item", name = "metastable-quasicrystal", amount = 1},
