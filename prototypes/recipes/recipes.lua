@@ -1200,7 +1200,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "mechanical-parts-02", amount = 3},
         {type = "item", name = "shaft-mk03", amount = 1},
-        {type = "item", name = "biopolymer", amount = 2},
+        {type = "item", name = "acrylic", amount = 2},
         {type = "item", name = "utility-box-mk03", amount = 1},
         {type = "item", name = "small-parts-03", amount = 30},
         {type = "item", name = "gearbox-mk03", amount = 1},
