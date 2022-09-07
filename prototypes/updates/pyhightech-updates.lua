@@ -111,7 +111,10 @@ RECIPE("paradiamatic-resistor"):add_ingredient({type = "item", name = "nano-mesh
 RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("volumetric-capacitor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("pa-proton"):replace_ingredient("uranium-235", "u-235")
-RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si")
+RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si"):set_fields{ results = {
+    {type = 'fluid', name = 'flue-gas', amount = 100},
+    {type = 'item', name = 'silicon-wafer', amount = 2}
+}}
 RECIPE("silicon"):remove_unlock("semiconductor-doping"):add_unlock("silicon-mk01")
 RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
 RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-niobate")

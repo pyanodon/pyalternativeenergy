@@ -119,3 +119,15 @@ for _, recipe in pairs(data.raw.recipe) do
         end
     end
 end
+
+--gather recipes for module changes
+local recipes_list =
+	{
+  "electronics-mk01",
+  "electronics-mk02",
+  "electronics-mk03",
+  "electronics-mk04"
+}
+
+--adding to module limitation list
+FUN.productivity(recipes_list)
