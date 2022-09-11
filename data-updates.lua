@@ -126,7 +126,13 @@ local recipes_list =
   "electronics-mk01",
   "electronics-mk02",
   "electronics-mk03",
-  "electronics-mk04"
+  "electronics-mk04",
+  "brake-mk01",
+  "controler-mk01",
+  "gearbox-mk01",
+  "shaft-mk01",
+  "utility-box-mk01",
+  "mechanical-parts-01",
 }
 
 --adding to module limitation list
