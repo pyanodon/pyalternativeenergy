@@ -326,6 +326,6 @@ RECIPE("nano-cellulose"):remove_ingredient('steam'):add_ingredient({type = 'flui
 RECIPE("zymogens"):add_ingredient{type = "item", name = "zungror-cocoon", amount = 2}
 
 --mechanical-parts--
-RECIPE("py-science-pack-2"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 5 }
+RECIPE("py-science-pack-2"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
 RECIPE("py-science-pack-3"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("py-science-pack-4"):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }

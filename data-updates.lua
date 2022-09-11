@@ -88,7 +88,7 @@ RECIPE('py-construction-robot-02'):add_ingredient({type = 'item', name = 'gearbo
 RECIPE('construction-robot-ht'):add_ingredient({type = 'item', name = 'gearbox-mk04', amount = 1}):replace_ingredient('py-construction-robot-01', 'c-pynobot-mk03'):add_ingredient({type = 'item', name = 'quantum-battery', amount = 1}):add_ingredient({type = 'item', name = 'nano-mesh', amount = 2}):add_ingredient({type = 'item', name = 'sc-engine', amount = 1})
 
 RECIPE('py-logistic-robot-01'):add_ingredient({type = 'item', name = 'gearbox-mk01', amount = 1})
-RECIPE('py-logistic-robot-02'):add_ingredient({type = 'item', name = 'rayon', amount = 3})
+RECIPE('py-logistic-robot-02'):add_ingredient({type = 'item', name = 'gearbox-mk02', amount = 1}):add_ingredient({type = 'item', name = 'rayon', amount = 3})
 RECIPE('logistic-robot-ht'):add_ingredient({type = 'item', name = 'gearbox-mk04', amount = 1}):replace_ingredient('py-logistic-robot-01', 'l-pynobot-mk03'):add_ingredient({type = 'item', name = 'quantum-battery', amount = 1}):add_ingredient({type = 'item', name = 'nano-mesh', amount = 2}):add_ingredient({type = 'item', name = 'sc-engine', amount = 1})
 
 RECIPE('py-construction-robot-01'):add_ingredient{'battery-mk01', 2}
@@ -126,7 +126,19 @@ local recipes_list =
   "electronics-mk01",
   "electronics-mk02",
   "electronics-mk03",
-  "electronics-mk04"
+  "electronics-mk04",
+  "brake-mk01",
+  "brake-mk02",
+  "controler-mk01",
+  "controler-mk02",
+  "gearbox-mk01",
+  "gearbox-mk02",
+  "shaft-mk01",
+  -- "shaft-mk02", casting unit doesn't use prod
+  "utility-box-mk01",
+  "utility-box-mk02",
+  "mechanical-parts-01",
+  "mechanical-parts-02",
 }
 
 --adding to module limitation list
