@@ -1171,9 +1171,9 @@ RECIPE {
     name = "mechanical-parts-02",
     category = "advanced-crafting",
     enabled = false,
-    energy_required = 12,
+    energy_required = 24,
     ingredients = {
-        {type = "item", name = "mechanical-parts-01", amount = 3},
+        {type = "item", name = "mechanical-parts-01", amount = 6},
         {type = "item", name = "shaft-mk02", amount = 1},
         {type = "item", name = "kevlar", amount = 3},
         {type = "item", name = "utility-box-mk02", amount = 1},
@@ -1187,7 +1187,7 @@ RECIPE {
         {type = "fluid", name = "heavy-oil", amount = 200},
     },
     results = {
-        {type = "item", name = "mechanical-parts-02", amount = 3},
+        {type = "item", name = "mechanical-parts-02", amount = 6},
     },
 }:add_unlock("machine-components-mk02")
 
