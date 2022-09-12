@@ -95,7 +95,7 @@ RECIPE("control-unit"):add_ingredient({type = "item", name = "mechanical-parts-0
 RECIPE("sc-unit"):add_ingredient({type = "item", name = "mechanical-parts-03", amount = 1})
 RECIPE("blanket"):add_ingredient({type = "item", name = "lithium", amount = 5})
 RECIPE("magnetic-core"):add_ingredient({type = "item", name = "battery", amount = 1})
-RECIPE("sc-unit"):add_ingredient({type = "item", name = "hts-coil", amount = 1})
+RECIPE("sc-unit"):add_ingredient({type = "item", name = "hts-coil", amount = 6})
 RECIPE("production-science-pack"):add_ingredient{type = "item", name = "ns-material", amount = 1}
 
 RECIPE('purified-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')

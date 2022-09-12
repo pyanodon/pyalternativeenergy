@@ -1196,13 +1196,13 @@ RECIPE {
     name = "mechanical-parts-03",
     category = "advanced-crafting",
     enabled = false,
-    energy_required = 12,
+    energy_required = 30,
     ingredients = {
-        {type = "item", name = "mechanical-parts-02", amount = 3},
+        {type = "item", name = "mechanical-parts-02", amount = 8},
         {type = "item", name = "shaft-mk03", amount = 1},
         {type = "item", name = "acrylic", amount = 2},
         {type = "item", name = "utility-box-mk03", amount = 1},
-        {type = "item", name = "small-parts-03", amount = 30},
+        {type = "item", name = "small-parts-03", amount = 25},
         {type = "item", name = "gearbox-mk03", amount = 1},
         {type = "item", name = "electronics-mk03", amount = 1},
         {type = "item", name = "steel-plate", amount = 30},
@@ -1212,7 +1212,7 @@ RECIPE {
         {type = "fluid", name = "lubricant", amount = 100},
     },
     results = {
-        {type = "item", name = "mechanical-parts-03", amount = 3},
+        {type = "item", name = "mechanical-parts-03", amount = 8},
     },
 }:add_unlock("machine-components-mk03")
 
