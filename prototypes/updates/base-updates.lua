@@ -19,6 +19,13 @@ TECHNOLOGY("advanced-material-processing-2"):set_fields{prerequisites = {}}:remo
 RECIPE("heat-pipe"):add_unlock("advanced-material-processing-2")
 RECIPE("heat-exchanger"):add_unlock("advanced-material-processing-2")
 
+--modify heat exchanger
+--data.raw.boiler['heat-exchanger'].target_temperature = 500
+--data.raw.boiler['heat-exchanger'].energy_consumption = "20GW"
+--data.raw.boiler['heat-exchanger'].energy_source.max_temperature = 2000
+data.raw.boiler['heat-exchanger'].energy_source.specific_heat = "500MJ"
+--data.raw.boiler['heat-exchanger'].energy_source.max_transfer = "8GW"
+
 RECIPE("electric-furnace"):remove_ingredient("super-steel")
 
 RECIPE("solar-panel-equipment"):remove_ingredient("solar-panel")

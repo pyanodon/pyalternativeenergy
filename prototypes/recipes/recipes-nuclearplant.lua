@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "molten-salt", amount = 1000},
+        {type = "fluid", name = "molten-salt", amount = 20000},
     },
     results = {
         {type = "fluid", name = "reactor-waste-1", amount = 200, --[[temperature = 1000]]},
