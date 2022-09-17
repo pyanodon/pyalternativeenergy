@@ -1,4 +1,21 @@
 
+RECIPE {
+    type = "recipe",
+    name = "hydrofluoric-acid",
+    category = "mixer",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "sulfuric-acid", amount = 100},
+        {type = "item", name = "powdered-phosphate-rock", amount = 5},
+        {type = "item", name = "purified-quartz", amount = 5},
+    },
+    results = {
+        {type = "fluid", name = "hydrofluoric-acid", amount = 150}
+    },
+    main_product = "hydrofluoric-acid",
+}:add_unlock("uranium-mk01")
+
 FLUID {
     type = "fluid",
     name = "hydrofluoric-acid",

@@ -190,11 +190,11 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "used-up-mox-fuel-cell", amount = 4},
+        {type = "item", name = "used-up-mox-fuel-cell", amount = 6},
     },
     results = {
         {type = "item", name = "u-238", amount = 12},
-        {type = "item", name = "plutonium-oxide", amount = 12}
+        {type = "item", name = "plutonium-oxide", amount = 10}
     },
     main_product = "plutonium-oxide",
     subgroup = "py-nuclear",
@@ -212,11 +212,11 @@ RECIPE {
         {type = "item", name = "plutonium-oxide", amount = 15},
     },
     results = {
-        {type = "item", name = "pu-238", amount = 30, probability = 0.02},
-        {type = "item", name = "pu-239", amount = 30, probability = 0.53},
-        {type = "item", name = "pu-240", amount = 30, probability = 0.25},
-        {type = "item", name = "pu-241", amount = 30, probability = 0.15},
-        {type = "item", name = "pu-242", amount = 30, probability = 0.5},
+        {type = "item", name = "pu-238", amount = 15, probability = 0.02},
+        {type = "item", name = "pu-239", amount = 15, probability = 0.53},
+        {type = "item", name = "pu-240", amount = 15, probability = 0.25},
+        {type = "item", name = "pu-241", amount = 15, probability = 0.15},
+        {type = "item", name = "pu-242", amount = 15, probability = 0.5},
     },
     main_product = "pu-239",
     subgroup = "py-nuclear",
@@ -288,7 +288,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item", name = "pu-241", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 750}
     },
     results = {
         {type = "item", name = "pu-241", amount = 6},

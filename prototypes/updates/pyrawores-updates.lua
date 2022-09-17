@@ -7,6 +7,9 @@ TECHNOLOGY("machines-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("machines-mk04"):add_pack("military-science-pack")
 
 TECHNOLOGY("uranium-mk01"):add_pack("chemical-science-pack")
+TECHNOLOGY("uranium-mk02"):add_pack("production-science-pack")
+TECHNOLOGY("uranium-mk03"):add_pack("utility-science-pack")
+TECHNOLOGY("uranium-mk04"):add_pack("space-science-pack")
 
 --BUILDINDS--
 --RECIPE("bof-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
@@ -129,7 +132,7 @@ RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessin
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-mk04')
 
-RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'u-235'):add_unlock('uranium-processing')
+RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'u-235'):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing')
 RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):replace_ingredient("lead-container", "coated-container"):add_unlock('nuclear-power')
 RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'pu-239'):add_unlock('nuclear-power-mk02')
 RECIPE("fuelrod-mk03"):replace_ingredient("lead-conatiner", "coated-container")
@@ -199,7 +202,7 @@ RECIPE {
   ingredients =
     {
       {"aluminium-plate", 5},
-      {"u-235", 2},
+      {"u-235", 3},
       {"u-238", 15}
     },
   results = {
