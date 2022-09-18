@@ -132,9 +132,27 @@ RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessin
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-mk04')
 
-RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'u-235'):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing')
-RECIPE("fuelrod-mk02"):replace_ingredient('20-u-powder', 'am-243'):replace_ingredient("lead-container", "coated-container"):add_unlock('nuclear-power')
-RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'pu-239'):add_unlock('nuclear-power-mk02')
+RECIPE("fuelrod-mk01-1"):replace_ingredient('20-u-powder', 'pu-239'):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing')
+
+RECIPE {
+  type = "recipe",
+  name = "fuelrod-mk02",
+  category = "crafting",
+  enabled = false,
+  energy_required = 4,
+  ingredients = {
+      {type = "item", name = "am-243", amount = 16},
+      {type = "item", name = "boron", amount = 1},
+      {type = "item", name = "coated-container", amount = 1},
+  },
+  results = {
+      {type = "item", name = "fuelrod-mk02", amount = 4},
+  },
+  main_product = "fuelrod-mk02",
+  subgroup = "py-rawores-uranium",
+}:add_unlock("nuclear-power")
+
+RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'u-235'):add_unlock('nuclear-power-mk02')
 RECIPE("fuelrod-mk03"):replace_ingredient("lead-conatiner", "coated-container")
 
 --need fuelrod mk04 and mk05 from thorium

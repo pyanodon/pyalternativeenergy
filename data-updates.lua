@@ -146,6 +146,7 @@ local recipes_list =
   "mechanical-parts-02",
   "mechanical-parts-03",
   "hydraulic-system-mk01",
+  "hydrofluoric-acid",
 }
 
 --adding to module limitation list
