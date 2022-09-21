@@ -130,23 +130,30 @@ local recipes_list =
   "brake-mk01",
   "brake-mk02",
   "brake-mk03",
+  "brake-mk04",
   "controler-mk01",
   "controler-mk02",
   "controler-mk03",
+  "controler-mk04",
   "gearbox-mk01",
   "gearbox-mk02",
   "gearbox-mk03",
+  "gearbox-mk04",
   "shaft-mk01",
   -- "shaft-mk02", casting unit doesn't use prod
-  -- "shaft-mk03", casting unit doesn't use prod
+  -- "shaft-mk03",
+  -- "shaft-mk04",
   "utility-box-mk01",
   "utility-box-mk02",
   "utility-box-mk03",
+  "utility-box-mk04",
   "mechanical-parts-01",
   "mechanical-parts-02",
   "mechanical-parts-03",
+  "mechanical-parts-04",
   "hydraulic-system-mk01",
   "hydrofluoric-acid",
+  "hydraulic-system-mk02",
 }
 
 --adding to module limitation list
