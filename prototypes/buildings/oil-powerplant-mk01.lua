@@ -48,7 +48,7 @@ ENTITY {
     module_specification = {
         module_slots = 1
     },
-    allowed_effects = {"speed", "consumption"},
+    allowed_effects = {},
     crafting_categories = {"oil-powerplant"},
     crafting_speed = 1,
     energy_source =
