@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 1
+        module_slots = 0
     },
     allowed_effects = {},
     crafting_categories = {"gas-powerplant"},
