@@ -50,7 +50,7 @@ RECIPE {
     name = "pressured-steam-2",
     category = "simik-boiler",
     enabled = false,
-    energy_required = 40,
+    energy_required = 20,
     ingredients = {
         {type = "fluid", name = "pressured-water", amount = 500},
     },
@@ -65,7 +65,7 @@ RECIPE {
     name = "pressured-steam-3",
     category = "simik-boiler",
     enabled = false,
-    energy_required = 60,
+    energy_required = 20,
     ingredients = {
         {type = "fluid", name = "pressured-water", amount = 500},
     },
@@ -80,7 +80,7 @@ RECIPE {
     name = "pressured-steam-4",
     category = "simik-boiler",
     enabled = false,
-    energy_required = 80,
+    energy_required = 20,
     ingredients = {
         {type = "fluid", name = "pressured-water", amount = 500},
     },

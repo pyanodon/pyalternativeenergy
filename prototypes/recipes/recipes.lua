@@ -1240,3 +1240,17 @@ RECIPE {
         {type = "item", name = "mechanical-parts-04", amount = 3},
     },
 }:add_unlock("machine-components-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "steam-into-pressured-steam",
+    category = "vacuum",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "steam", amount = 200, minimum_temperature = 200, maximum_temperature = 500 },
+    },
+    results = {
+        {type = "fluid", name = "pressured-steam", amount = 200, temperature = 500 },
+    },
+}:add_unlock("machine-components-mk04")
