@@ -1253,4 +1253,4 @@ RECIPE {
     results = {
         {type = "fluid", name = "pressured-steam", amount = 200, temperature = 500 },
     },
-}:add_unlock("machine-components-mk04")
+}:add_unlock("thermal-mk01")
