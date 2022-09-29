@@ -91,7 +91,7 @@ RECIPE("centrifuge-mk04"):add_ingredient({type = "item", name = "wall-shield", a
 
 --RECIPES
 
-RECIPE("control-unit"):add_ingredient({type = "item", name = "mechanical-parts-02", amount = 1})
+RECIPE("control-unit"):add_ingredient({type = "item", name = "mechanical-parts-02", amount = 1}):replace_ingredient("fuelrod-mk01", "fuelrod-mk02")
 RECIPE("sc-unit"):add_ingredient({type = "item", name = "mechanical-parts-03", amount = 1})
 RECIPE("blanket"):add_ingredient({type = "item", name = "lithium", amount = 5})
 RECIPE("magnetic-core"):add_ingredient({type = "item", name = "battery", amount = 1})
