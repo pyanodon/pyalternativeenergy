@@ -82,8 +82,9 @@ RECIPE {
     ingredients = {
         {type = "item", name = "pyridine", amount = 1},
         {type = "fluid", name = "benzene", amount = 150},
+        {type = "fluid", name = "phosphoric-acid", amount = 50},
         {type = "fluid", name = "butanol", amount = 100},
-        {type = "item", name = "empty-barrel", amount = 1},
+        {type = "item", name = "empty-barrel", amount = 3},
 
     },
     results = {
