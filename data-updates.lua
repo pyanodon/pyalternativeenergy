@@ -154,6 +154,18 @@ local recipes_list =
   "hydraulic-system-mk01",
   "hydraulic-system-mk02",
   "hydrofluoric-acid",
+  -- Carbon Fiber Chain
+  "acrylonitrile",
+  "acrylonitrile-2",
+  "acrylonitrile-3",
+  "methyl-acrylate-2",
+--   "pan",
+  "oxidized-pan-fiber",
+  "pre-carbon-fiber",
+--   "cf1",
+--   "cf2",
+--   "dry-cf",
+  "cf",
 }
 
 --adding to module limitation list
