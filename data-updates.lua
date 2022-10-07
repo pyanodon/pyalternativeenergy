@@ -166,6 +166,15 @@ local recipes_list =
 --   "cf2",
 --   "dry-cf",
   "cf",
+  -- Silicon Chain
+  -- "crucible",
+  -- "polycrystalline-slab",
+  "polycrystalline-plate",
+  "silicon-wafer-2",
+  -- "quartz-crucible",
+  -- "monocrystalline-slab",
+  "monocrystalline-plate",
+  "silicon-wafer-3",
 }
 
 --adding to module limitation list
