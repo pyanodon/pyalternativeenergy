@@ -53,7 +53,7 @@ ENTITY {
         module_slots = 0
     },
     --allowed_effects = {"speed", "consumption"},
-    crafting_categories = {"solar-tower"},
+    crafting_categories = {"neutron-moderator"},
     crafting_speed = 4,
     energy_source = {
         type = "electric",
