@@ -150,7 +150,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 10000, temperature = 5000},
         {type = "item", name = "high-energy-waste-1", amount = 10},
-        {type = "item", name = "lithium", amount = 10}
+        {type = "fluid", name = "salt-solution", amount = 400}
     },
     main_product = "high-energy-waste-1",
     subgroup = "py-nuclear-waste",

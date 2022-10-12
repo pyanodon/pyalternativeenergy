@@ -194,7 +194,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "u-238", amount = 12},
-        {type = "item", name = "plutonium-oxide", amount = 10}
+        {type = "item", name = "plutonium-oxide", amount = 12}
     },
     main_product = "plutonium-oxide",
     subgroup = "py-nuclear",
