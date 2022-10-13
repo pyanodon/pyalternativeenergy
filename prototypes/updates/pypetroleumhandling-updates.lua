@@ -2,7 +2,7 @@
 --TECHNOLOGY--
 TECHNOLOGY("oil-machines-mk03"):add_pack("military-science-pack")
 --TECHNOLOGY("fracking"):add_pack("military-science-pack")
-TECHNOLOGY("kerogen"):add_pack("military-science-pack")
+--TECHNOLOGY("kerogen"):add_pack("military-science-pack")
 TECHNOLOGY("petroleum-gas-mk03"):add_pack("military-science-pack")
 
 --BUILDINDS--

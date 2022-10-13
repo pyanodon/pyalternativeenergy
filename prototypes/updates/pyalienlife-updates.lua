@@ -24,7 +24,7 @@ TECHNOLOGY("tholin-mk01"):add_pack("py-science-pack-2")
 TECHNOLOGY("big-mines"):add_pack("py-science-pack-2")
 TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-2")
 
-TECHNOLOGY("kerogen"):add_pack("py-science-pack-4")
+--TECHNOLOGY("kerogen"):add_pack("py-science-pack-4")
 TECHNOLOGY("railway-mk04"):add_pack("py-science-pack-4")
 TECHNOLOGY("fracking"):add_pack("py-science-pack-4")
 
