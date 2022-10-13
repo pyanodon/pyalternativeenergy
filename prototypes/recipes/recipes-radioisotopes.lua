@@ -174,8 +174,8 @@ RECIPE {
     ingredients = {
         {type = "item", name = "niobium-plate", amount = 8},
         {type = "item", name = "molybdenum-plate", amount = 5},
-        {type = "item", name = "u-238", amount = 24},
-        {type = "item", name = "pu-239", amount = 6},
+        {type = "item", name = "u-238", amount = 28},
+        {type = "item", name = "pu-239", amount = 2},
     },
     results = {
         {type = "item", name = "mox-fuel-cell", amount = 2},
@@ -190,11 +190,11 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "used-up-mox-fuel-cell", amount = 6},
+        {type = "item", name = "used-up-mox-fuel-cell", amount = 4},
     },
     results = {
-        {type = "item", name = "u-238", amount = 12},
-        {type = "item", name = "plutonium-oxide", amount = 12}
+        {type = "item", name = "u-238", amount = 10},
+        {type = "item", name = "plutonium-oxide", amount = 14}
     },
     main_product = "plutonium-oxide",
     subgroup = "py-nuclear",
@@ -209,7 +209,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "plutonium-oxide", amount = 15},
+        {type = "item", name = "plutonium-oxide", amount = 5},
     },
     results = {
         {type = "item", name = "pu-238", amount = 15, probability = 0.02},
