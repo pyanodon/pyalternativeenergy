@@ -11,7 +11,7 @@ FUN.autorecipes {
 	main_product = "numal-egg",
     mats =
 	{
-		--py
+		--py3
 		{
 			ingredients =
 				{
@@ -22,12 +22,13 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'numal-egg', amount = 3},
+					{name = 'numal-egg', amount = 4},
 					{name='empty-barrel-milk', amount = 2},
 				},
 			crafting_speed = 150,
 			tech = 'numal-mk01'
 		},
+		--prod
 		{
 			ingredients =
 				{
@@ -45,7 +46,7 @@ FUN.autorecipes {
 			crafting_speed = 80,
 			tech = 'numal-mk02'
 		},
-		--prod
+		--py4
 		{
 			ingredients =
 				{
@@ -63,7 +64,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'numal', amount = 2},
+					{name = 'numal', amount = 4},
                     {name = 'trits', amount =1},
 					{name = 'cdna', amount =1},
 					{name = 'numal-food-02', amount =1},
@@ -71,7 +72,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name = 'numal-egg', amount = 7},
+					{name = 'numal-egg', amount = 14},
 					{name='empty-barrel-milk', amount = 2},
 				},
 			crafting_speed = 100,
