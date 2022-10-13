@@ -332,7 +332,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "1d-photonic-crystal", amount = 5},
-        {type = "item", name = "yag-laser-module", amount = 1, probability = 0.9},
+        {type = "item", name = "yag-laser-module", amount = 1, catalyst_amount = 1, probability = 0.9},
     },
     main_product = "1d-photonic-crystal",
 }:add_unlock("battery-mk04")
