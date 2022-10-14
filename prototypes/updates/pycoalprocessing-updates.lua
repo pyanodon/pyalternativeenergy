@@ -2,6 +2,8 @@
 TECHNOLOGY('filtration-mk02'):add_prereq('lithium-processing')
 
 TECHNOLOGY("nexelit-mk01"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
+
+TECHNOLOGY("energy-2"):remove_pack("chemical-science-pack")
 --BUILDINDS--
 
 
