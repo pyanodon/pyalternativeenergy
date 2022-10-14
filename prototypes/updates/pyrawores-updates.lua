@@ -132,7 +132,7 @@ RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessin
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-mk04')
 
-RECIPE("fuelrod-mk01-1"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "pu-239", amount = 1):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing')
+RECIPE("fuelrod-mk01-1"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "pu-239", amount = 1}):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing')
 
 RECIPE {
   type = "recipe",
