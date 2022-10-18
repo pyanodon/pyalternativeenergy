@@ -1,4 +1,4 @@
-local resource_autoplace = require("resource-autoplace")
+local noise = require("noise")
 
 DATA {
     type = "autoplace-control",
@@ -43,19 +43,23 @@ DATA {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     tree_removal_probability = 0.7,
     tree_removal_max_distance = 32 * 32,
-    autoplace = resource_autoplace.resource_autoplace_settings {
+    autoplace = {
         name = "geothermal-crack",
         order = "b",
-        base_density = 3,
-        base_spots_per_km2 = 1.25,
-        random_probability = 1 / 48,
-        has_starting_area_placement = false,
-        random_spot_size_minimum = 1,
-        random_spot_size_maximum = 2,
-        additional_richness = 50000,
-        regular_rq_factor_multiplier = 1.1
-        --starting_rq_factor_multiplier = 2,
-        --candidate_spot_count = 20
+        probability_expression = noise.define_noise_function( function(x, y, tile, map)
+            local frequency_multiplier = noise.var("control-setting:geothermal-crack:frequency:multiplier")
+            -- 0% chance of spawning in starting area (tier == 0)
+            local tier = noise.clamp(noise.var("tier"), 0, 1)
+            -- 1 in 64x64 chunks
+            local desired_frequency = 1 / (64 * 64^2)
+            return tier * desired_frequency * frequency_multiplier
+          end),
+        richness_expression = noise.define_noise_function( function(x, y, tile, map)
+            local richness_multiplier = noise.var("control-setting:geothermal-crack:size:multiplier")
+            local distance_value = noise.var("distance")
+            local scalar = 2^16
+            return distance_value * scalar * richness_multiplier
+        end)
     },
     stage_counts = {0},
     stages = {
