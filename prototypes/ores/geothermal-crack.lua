@@ -43,17 +43,19 @@ DATA {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     tree_removal_probability = 0.7,
     tree_removal_max_distance = 32 * 32,
+    collision_mask = {"resource-layer"},
     autoplace = {
         name = "geothermal-crack",
-        order = "b",
+        order = "b-geothermal-crac",
         -- We return the chance of spawning on any given tile here
         probability_expression = noise.define_noise_function( function(x, y, tile, map)
+
             -- This is the user's map setting for the frequency of this ore
             local frequency_multiplier = noise.var("control-setting:geothermal-crack:frequency:multiplier")
             -- 0% chance of spawning in starting area (tier == 0)
             -- Using this is equivalent to has_starting_area_placement = false
             local tier = noise.clamp(noise.var("tier"), 0, 1)
-            -- 1 in 64x64 chunks
+            -- 1 in 64 chunks (each chunk is 64x64 tiles)
             local desired_frequency = 1 / (64 * 64^2)
             -- Our final chance, likely a very, very small decimal
             return tier * desired_frequency * frequency_multiplier
