@@ -59,6 +59,11 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "rc-numal",
+        allowed_module_categories = { "numal" },
+    },
+    {
+        type = "recipe-category",
         name = "coal-powerplant"
     },
     {
