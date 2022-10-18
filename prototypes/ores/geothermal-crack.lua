@@ -46,18 +46,28 @@ DATA {
     autoplace = {
         name = "geothermal-crack",
         order = "b",
+        -- We return the chance of spawning on any given tile here
         probability_expression = noise.define_noise_function( function(x, y, tile, map)
+            -- This is the user's map setting for the frequency of this ore
             local frequency_multiplier = noise.var("control-setting:geothermal-crack:frequency:multiplier")
             -- 0% chance of spawning in starting area (tier == 0)
+            -- Using this is equivalent to has_starting_area_placement = false
             local tier = noise.clamp(noise.var("tier"), 0, 1)
             -- 1 in 64x64 chunks
             local desired_frequency = 1 / (64 * 64^2)
+            -- Our final chance, likely a very, very small decimal
             return tier * desired_frequency * frequency_multiplier
           end),
+        -- We return the richness here, which is just the quantity the resource tile yields
         richness_expression = noise.define_noise_function( function(x, y, tile, map)
-            local richness_multiplier = noise.var("control-setting:geothermal-crack:size:multiplier")
+            -- This is the user's map setting for richness of this ore
+            -- We ignore size here because we're always a single tile resource
+            local richness_multiplier = noise.var("control-setting:geothermal-crack:richness:multiplier")
+            -- This is the distance from the starting position, which is how vanilla scales ore yield
             local distance_value = noise.var("distance")
+            -- This is our multiplier for the above, determining the yield gains over distance
             local scalar = 2^16
+            -- Add it all together or what is likely a pretty big number
             return distance_value * scalar * richness_multiplier
         end)
     },
