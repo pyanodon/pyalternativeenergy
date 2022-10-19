@@ -25,7 +25,7 @@ FUN.autorecipes {
 					{name = 'numal-egg', amount = 4},
 					{name='empty-barrel-milk', amount = 2},
 				},
-			crafting_speed = 150,
+			crafting_speed = 30,
 			tech = 'numal-mk01'
 		},
 		--prod
@@ -43,7 +43,7 @@ FUN.autorecipes {
 					{name = 'numal-egg', amount = 5},
 					{name='empty-barrel-milk', amount = 2},
 				},
-			crafting_speed = 80,
+			crafting_speed = 25,
 			tech = 'numal-mk02'
 		},
 		--py4
@@ -58,7 +58,7 @@ FUN.autorecipes {
 				{
 					{name = 'numal-egg', add_amount = 5},
 				},
-			crafting_speed = 120,
+			crafting_speed = 20,
 			tech = 'numal-mk03'
 		},
 		{
@@ -75,7 +75,7 @@ FUN.autorecipes {
 					{name = 'numal-egg', amount = 14},
 					{name='empty-barrel-milk', amount = 2},
 				},
-			crafting_speed = 100,
+			crafting_speed = 18,
 			tech = 'numal-mk03'
 		},
 		--utility
@@ -90,7 +90,7 @@ FUN.autorecipes {
 				{
 					{name = 'numal-egg', add_amount = 9},
 				},
-			crafting_speed = 80,
+			crafting_speed = 15,
 			tech = 'numal-mk04'
 		},
 		--beyond
@@ -106,7 +106,7 @@ FUN.autorecipes {
 				{
 					{name = 'numal-egg', add_amount = 15},
 				},
-			crafting_speed = 80,
+			crafting_speed = 15,
 			tech = 'numal-mk04'
 		},
 	}
