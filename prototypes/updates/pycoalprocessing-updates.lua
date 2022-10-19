@@ -40,7 +40,7 @@ RECIPE("fluid-separator"):add_ingredient({type = "item", name = "intermetallics"
 RECIPE("fts-reactor"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 --RECIPE("gasifier"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("methanol-reactor"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
-RECIPE("olefin-plant"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+--RECIPE("olefin-plant"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 --RECIPE("jaw-crusher"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("power-house"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("rectisol"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
