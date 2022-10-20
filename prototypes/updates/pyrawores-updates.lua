@@ -391,3 +391,11 @@ RECIPE {
     subgroup = "py-rawores-uranium",
     order = "depleted-uranium-" .. recipe_num
 }:add_unlock("uranium-mk01")
+
+--gather recipes for module changes
+local recipes_list = {
+  "fuelrod-mk01-1",
+}
+
+--adding to module limitation list
+FUN.productivity(recipes_list)
