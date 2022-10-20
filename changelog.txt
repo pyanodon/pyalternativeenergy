@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2022-10-20
+  Changes:
+    - moved numal breeding to reproductive complex.
+    - adjustments to geo thermal spawning.
+    - changed oil power plant from tar to kerosene.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
   Changes:
     - Preparing for pyAE
