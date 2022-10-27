@@ -56,11 +56,15 @@ ENTITY {
     crafting_categories = {"neutron-moderator"},
     crafting_speed = 4,
     energy_source = {
-        type = "electric",
+        type = "burner",
+        fuel_category = "control-rod",
+        effectivity = 1,
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
         usage_priority = "secondary-input",
         emissions_per_minute = 0.0,
     },
-    energy_usage = "400kW",
+    energy_usage = "1600kW",
     animation = {
         layers = {
             {

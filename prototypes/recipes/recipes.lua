@@ -1254,3 +1254,51 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 200, temperature = 500 },
     },
 }:add_unlock("thermal-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "pressured-steam-into-steam-150",
+    category = "vacuum",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 1000},
+    },
+    results = {
+        {type = "fluid", name = "steam", amount = 400, temperature = 150 },
+    },
+    subgroup = "py-alternativeenergy-fluids",
+    order = "s"
+}:add_unlock("thermal-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "pressured-steam-into-steam-250",
+    category = "vacuum",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 1000},
+    },
+    results = {
+        {type = "fluid", name = "steam", amount = 250, temperature = 250 },
+    },
+    subgroup = "py-alternativeenergy-fluids",
+    order = "s"
+}:add_unlock("thermal-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "pressured-steam-into-steam-500",
+    category = "vacuum",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 1000},
+    },
+    results = {
+        {type = "fluid", name = "steam", amount = 200, temperature = 500 },
+    },
+    subgroup = "py-alternativeenergy-fluids",
+    order = "s"
+}:add_unlock("thermal-mk02")
