@@ -6,6 +6,8 @@ TECHNOLOGY("oil-machines-mk03"):add_pack("military-science-pack")
 TECHNOLOGY("petroleum-gas-mk03"):add_pack("military-science-pack")
 
 --BUILDINDS--
+
+RECIPE("retorter"):add_ingredient({type = "item", name = "mechanical-inserter", amount = 10})
 RECIPE("natural-gas-seep-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 RECIPE("bitumen-seep-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("oil-sand-extractor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
@@ -72,7 +74,6 @@ RECIPE("reformer-mk04"):add_ingredient({type = "item", name = "metastable-quasic
 RECIPE("tholin-atm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("tholin-plant-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("upgrader-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
---RECIPE("retorter"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 4 }
 RECIPE("fracking-rig"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 30}):add_ingredient({type = "item", name = "sc-engine", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 5 }
 RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 
