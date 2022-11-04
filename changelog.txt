@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.
+Date: 2022-11-03
+  Changes:
+    - fixed that neutron moderator mk2-mk-4 didnt require fuel.
+    - added steam depressuriziation recipes.
+    - added russsian translation.
+    - removed interrmetallics from reformer mk01.
+    - added mechanical parts to retorter.
+    - fixed that hydrofluoric acid and fluorine gas shared the same icon.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2022-10-20
   Changes:
