@@ -18,7 +18,7 @@ RECIPE("gas-refinery-mk01"):add_ingredient({type = "item", name = "intermetallic
 --RECIPE("heavy-oil-refinery-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 15})
 RECIPE("lor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 15})
 RECIPE("pumpjack-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
-RECIPE("reformer-mk01"):remove_unlock('oil-machines-mk01'):add_unlock('plastics')
+RECIPE("reformer-mk01"):remove_unlock('oil-machines-mk01'):add_unlock('scrude')
 RECIPE("tholin-atm-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("tholin-plant-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("upgrader-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
