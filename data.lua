@@ -54,8 +54,6 @@ require("prototypes/technologies/tbp")
 require("prototypes/technologies/acrylic")
 require("prototypes/technologies/ammonium-oxalate")
 
-require("prototypes/technologies/crusher")
-
 -- ))
 
 --(( RESOURCES ))--
