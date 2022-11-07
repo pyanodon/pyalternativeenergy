@@ -48,7 +48,7 @@ RECIPE('tar-to-nickel'):set_category("centrifuging")
 RECIPE('bitumen-to-nickel'):set_category("centrifuging")
 RECIPE('nickel-prepared-solution'):set_category("centrifuging")
 RECIPE('chromium-rejects'):set_category("centrifuging")
-RECIPE('extract-sulfur'):set_category("chemistry")
+--RECIPE('extract-sulfur'):set_category("chemistry")
 
 RECIPE('low-density-structure'):add_ingredient({type = "item", name = "nxsb-alloy", amount = 25})
 

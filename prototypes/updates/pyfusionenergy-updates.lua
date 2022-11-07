@@ -20,10 +20,10 @@ RECIPE("particle-accelerator-mk01"):remove_ingredient('gasturbinemk02')
 RECIPE("fusion-reactor-mk01"):remove_ingredient('gasturbinemk03')
 RECIPE("py-turbine"):remove_ingredient('gasturbinemk03') -- TODO: replace with something
 
-RECIPE("automated-screener-mk01"):remove_unlock("machines-mk01"):add_unlock("crusher")
+RECIPE("automated-screener-mk01"):remove_unlock("machines-mk01"):add_unlock("copper-mk01")
 RECIPE("agitator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("nmf-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
--- RECIPE("secondary-crusher-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
+RECIPE("secondary-crusher-mk01"):remove_unlock("machines-mk01"):add_unlock("crusher-2")--:add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("thickener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
 RECIPE("gas-separator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("hydrocyclone-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
