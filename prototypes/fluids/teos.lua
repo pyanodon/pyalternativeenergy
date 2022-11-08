@@ -21,7 +21,7 @@ FLUID {
     name = "teos",
     icon = "__pyalternativeenergygraphics__/graphics/icons/teos.png",
     icon_size = 64,
-    default_temperature = 15,
+    default_temperature = 10,
     --heat_capacity = "1KJ",
     base_color = {r = 1, g = 1, b = 1},
     flow_color = {r = 1, g = 1, b = 1},

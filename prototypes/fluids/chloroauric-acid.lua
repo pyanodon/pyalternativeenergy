@@ -20,7 +20,7 @@ FLUID {
     name = "chloroauric-acid",
     icon = "__pyalternativeenergygraphics__/graphics/icons/chloroauric-acid.png",
     icon_size = 64,
-    default_temperature = 15,
+    default_temperature = 10,
     --heat_capacity = "1KJ",
     base_color = {r = 0.996, g = 0.831, b = 0.313},
     flow_color = {r = 1, g = 1, b = 1},
