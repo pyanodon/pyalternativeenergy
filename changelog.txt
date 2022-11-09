@@ -6,7 +6,7 @@ Date: 2022-11-03
     - added steam depressuriziation recipes.
     - added russsian translation.
     - removed interrmetallics from reformer mk01.
-    - added mechanical parts to retorter.
+    - added mechanical inserters as parts to retorter recipe.
     - fixed that hydrofluoric acid and fluorine gas shared the same icon.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2

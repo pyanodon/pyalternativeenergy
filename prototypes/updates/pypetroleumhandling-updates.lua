@@ -7,7 +7,7 @@ TECHNOLOGY("petroleum-gas-mk03"):add_pack("military-science-pack")
 
 --BUILDINDS--
 
-RECIPE("retorter"):add_ingredient({type = "item", name = "mechanical-inserter", amount = 10})
+RECIPE("retorter"):add_ingredient({type = "item", name = "burner-inserter", amount = 10})
 RECIPE("natural-gas-seep-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 RECIPE("bitumen-seep-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("oil-sand-extractor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
