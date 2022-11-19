@@ -1183,6 +1183,7 @@ RECIPE {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "nxsb-alloy", amount = 3},
         {type = "item", name = "brake-mk02", amount = 1},
+        {type = "item", name = "electronics-mk02", amount = 1},
         {type = "item", name = "rayon", amount = 5},
         {type = "fluid", name = "heavy-oil", amount = 200},
     },

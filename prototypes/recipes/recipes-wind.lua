@@ -300,6 +300,7 @@ RECIPE {
         {type = "fluid", name = "heavy-oil", amount = 200},
         {type = "item", name = "small-parts-02", amount = 50},
         {type = "item", name = "rayon", amount = 15},
+        {type = "item", name = "yaw-drive-mk01", amount = 1},
     },
     results = {
         {type = "item", name = "yaw-drive-mk02", amount = 1},
@@ -333,6 +334,7 @@ RECIPE {
         {type = "item", name = "bakelite", amount = 30},
         {type = "item", name = "steel-plate", amount = 5},
         {type = "item", name = "small-parts-02", amount = 15},
+        {type = "item", name = "anemometer-mk01", amount = 1},
     },
     results = {
         {type = "item", name = "anemometer-mk02", amount = 1},
@@ -353,6 +355,7 @@ RECIPE {
         {type = "item", name = "small-parts-02", amount = 10},
         {type = "item", name = "red-wire", amount = 20},
         {type = "item", name = "glass", amount = 10},
+        {type = "item", name = "utility-box-mk01", amount = 1},
     },
     results = {
         {type = "item", name = "utility-box-mk02", amount = 1},
@@ -372,6 +375,7 @@ RECIPE {
         {type = "item", name = "stainless-steel", amount = 30},
         {type = "item", name = "small-parts-02", amount = 20},
         {type = "item", name = "solder", amount = 20},
+        {type = "item", name = "tower-mk01", amount = 1},
     },
     results = {
         {type = "item", name = "tower-mk02", amount = 1},
@@ -386,6 +390,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
+        {type = "item", name = "shaft-mk01", amount = 1},
         {type = "fluid", name = "molten-stainless-steel", amount = 100},
         {type = "item", name = "sand-casting", amount = 2},
     },
@@ -409,6 +414,7 @@ RECIPE {
         {type = "item", name = "titanium-plate", amount = 25},
         {type = "item", name = "belt", amount = 10},
         {type = "item", name = "nxsb-alloy", amount = 8},
+        {type = "item", name = "gearbox-mk01", amount = 1},
         {type = "fluid", name = "lubricant", amount = 200},
     },
     results = {
@@ -451,6 +457,7 @@ RECIPE {
     energy_required = 25,
     ingredients = {
         {type = "item", name = "advanced-circuit", amount = 3},
+        {type = "item", name = "controler-mk01", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
         {type = "item", name = "small-lamp", amount = 10},
         {type = "item", name = "nexelit-battery", amount = 5},
@@ -477,6 +484,7 @@ RECIPE {
         {type = "item", name = "stainless-steel", amount = 10},
         {type = "item", name = "aramid", amount = 20},
         {type = "item", name = "small-parts-02", amount = 10},
+        {type = "item", name = "brake-mk01", amount = 1},
     },
     results = {
         {type = "item", name = "brake-mk02", amount = 1},
@@ -567,6 +575,7 @@ RECIPE {
         {type = "fluid", name = "grease", amount = 300},
         {type = "item", name = "small-parts-03", amount = 100},
         {type = "item", name = "aramid", amount = 25},
+        {type = "item", name = "yaw-drive-mk02", amount = 1},
     },
     results = {
         {type = "item", name = "yaw-drive-mk03", amount = 1},
@@ -604,6 +613,7 @@ RECIPE {
         {type = "item", name = "advanced-circuit", amount = 10},
         {type = "item", name = "small-parts-03", amount = 40},
         {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "anemometer-mk02", amount = 1},
     },
     results = {
         {type = "item", name = "anemometer-mk03", amount = 1},
@@ -626,6 +636,7 @@ RECIPE {
         {type = "item", name = "green-wire", amount = 50},
         {type = "item", name = "titanium-plate", amount = 10},
         {type = "item", name = "battery", amount = 2},
+        {type = "item", name = "utility-box-mk02", amount = 1},
     },
     results = {
         {type = "item", name = "utility-box-mk03", amount = 1},
@@ -647,6 +658,7 @@ RECIPE {
         {type = "item", name = "concrete", amount = 30},
         {type = "item", name = "titanium-plate", amount = 50},
         {type = "item", name = "mositial-nx", amount = 3},
+        {type = "item", name = "tower-mk02", amount = 1},
     },
     results = {
         {type = "item", name = "tower-mk03", amount = 1},
@@ -662,6 +674,7 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = "fluid", name = "molten-super-steel", amount = 200},
+        {type = "item", name = "shaft-mk02", amount = 1},
         {type = "item", name = "mold", amount = 2},
         {type = "item", name = "boron-carbide", amount = 10},
     },
@@ -687,6 +700,7 @@ RECIPE {
         {type = "item", name = "belt", amount = 10},
         {type = "item", name = "boron-carbide", amount = 10},
         {type = "item", name = "nxsb-alloy", amount = 30},
+        {type = "item", name = "gearbox-mk02", amount = 1},
         {type = "fluid", name = "lubricant", amount = 200},
         {type = "fluid", name = "grease", amount = 100},
     },
@@ -738,6 +752,7 @@ RECIPE {
         {type = "item", name = "plastic-bar", amount = 20},
         {type = "item", name = "biobattery", amount = 3},
         {type = "item", name = "small-parts-03", amount = 50},
+        {type = "item", name = "controler-mk02", amount = 1},
     },
     results = {
         {type = "item", name = "controler-mk03", amount = 1},
@@ -759,6 +774,7 @@ RECIPE {
         {type = "item", name = "super-steel", amount = 10},
         {type = "item", name = "cyanoacrylate", amount = 15},
         {type = "item", name = "small-parts-03", amount = 20},
+        {type = "item", name = "brake-mk02", amount = 1},
     },
     results = {
         {type = "item", name = "brake-mk03", amount = 1},
@@ -854,6 +870,7 @@ RECIPE {
         {type = "item", name = "py-check-valve", amount = 8},
         {type = "item", name = "small-parts-03", amount = 50},
         {type = "item", name = "cf", amount = 30},
+        {type = "item", name = "hydraulic-system-mk01", amount = 1},
     },
     results = {
         {type = "item", name = "hydraulic-system-mk02", amount = 1},
@@ -878,6 +895,7 @@ RECIPE {
         {type = "item", name = "small-parts-03", amount = 100},
         {type = "item", name = "carbon-nanotube", amount = 25},
         {type = "item", name = "intelligent-unit", amount = 1},
+        {type = "item", name = "yaw-drive-mk03", amount = 1},
     },
     results = {
         {type = "item", name = "yaw-drive-mk04", amount = 1},
@@ -898,6 +916,7 @@ RECIPE {
         {type = "item", name = "small-parts-03", amount = 80},
         {type = "item", name = "stainless-steel", amount = 40},
         {type = "item", name = "nano-wires", amount = 20},
+        {type = "item", name = "utility-box-mk03", amount = 1},
     },
     results = {
         {type = "item", name = "utility-box-mk04", amount = 1},
@@ -919,6 +938,7 @@ RECIPE {
         {type = "item", name = "concrete", amount = 70},
         {type = "item", name = "hyperelastic-material", amount = 20},
         {type = "item", name = "harmonic-absorber", amount = 4},
+        {type = "item", name = "tower-mk03", amount = 1},
     },
     results = {
         {type = "item", name = "tower-mk04", amount = 1},
@@ -935,6 +955,7 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "molten-nxzngd", amount = 200},
         {type = "item", name = "mold", amount = 2},
+        {type = "item", name = "shaft-mk03", amount = 1},
         {type = "item", name = "crmoni", amount = 10},
     },
     results = {
@@ -959,6 +980,7 @@ RECIPE {
         {type = "item", name = "belt", amount = 12},
         {type = "item", name = "boron-carbide", amount = 20},
         {type = "item", name = "agzn-alloy", amount = 50},
+        {type = "item", name = "gearbox-mk03", amount = 1},
         {type = "fluid", name = "lubricant", amount = 500},
         {type = "fluid", name = "grease", amount = 200},
     },
@@ -1011,6 +1033,7 @@ RECIPE {
         {type = "item", name = "biopolymer", amount = 20},
         {type = "item", name = "quantum-battery", amount = 2},
         {type = "item", name = "small-parts-03", amount = 50},
+        {type = "item", name = "controler-mk03", amount = 1},
     },
     results = {
         {type = "item", name = "controler-mk04", amount = 1},
@@ -1032,6 +1055,7 @@ RECIPE {
         {type = "item", name = "super-alloy", amount = 10},
         {type = "item", name = "low-density-structure", amount = 10},
         {type = "item", name = "small-parts-03", amount = 20},
+        {type = "item", name = "brake-mk03", amount = 1},
     },
     results = {
         {type = "item", name = "brake-mk04", amount = 1},
@@ -1053,6 +1077,7 @@ RECIPE {
         {type = "item", name = "small-parts-03", amount = 50},
         {type = "item", name = "dieletric-mirror", amount = 2},
         {type = "item", name = "phosphate-glass", amount = 50},
+        {type = "item", name = "anemometer-mk03", amount = 1},
     },
     results = {
         {type = "item", name = "anemometer-mk04", amount = 1},
