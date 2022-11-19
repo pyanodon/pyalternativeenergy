@@ -77,5 +77,5 @@ ENTITY {
           }
         },
         vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-        production = "12MW"
+        production = "20MW"
 }
