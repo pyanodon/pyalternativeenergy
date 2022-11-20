@@ -324,6 +324,7 @@ ITEM("simik-mk04"):set_fields{fuel_category = "simik", fuel_value = "1500MJ", bu
 
 RECIPE("nano-cellulose"):remove_ingredient('steam'):add_ingredient({type = 'fluid', name = 'pressured-steam', amount = 100})
 RECIPE("zymogens"):add_ingredient{type = "item", name = "zungror-cocoon", amount = 2}
+RECIPE('brain-cartridge-02'):replace_ingredient("oleochemicals", "fatty-acids")
 
 --mechanical-parts--
 RECIPE("py-science-pack-2"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
