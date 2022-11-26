@@ -342,4 +342,4 @@ RECIPE("brain-cartridge-01"):add_ingredient({type = 'item', name = 'nbalti', amo
 
 RECIPE("brain-cartridge-03"):add_ingredient({type = 'item', name = 'eva', amount = 1})
 
-RECIPE("brain-cartridge-04"):add_ingredient({type = 'item', name = 'acrylic', amount = 2})
+RECIPE("brain-cartridge-04"):add_ingredient({type = 'item', name = 'acrylic', amount = 2}):add_ingredient({type = 'fluid', name = 'numal-ink', amount = 10})
