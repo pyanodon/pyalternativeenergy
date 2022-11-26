@@ -337,3 +337,5 @@ RECIPE("py-science-pack-4"):add_ingredient { type = "item", name = "mechanical-p
 RECIPE("grod-seeds-mk02-soaker"):set_fields{category = 'centrifuging'}
 RECIPE("grod-seeds-mk03-soaker"):set_fields{category = 'centrifuging'}
 RECIPE("grod-seeds-mk04-soaker"):set_fields{category = 'centrifuging'}
+
+RECIPE("brain-cartridge-01"):add_ingredient({type = 'item', name = 'nbalti', amount = 1})
