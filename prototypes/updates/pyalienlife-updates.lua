@@ -341,3 +341,5 @@ RECIPE("grod-seeds-mk04-soaker"):set_fields{category = 'centrifuging'}
 RECIPE("brain-cartridge-01"):add_ingredient({type = 'item', name = 'nbalti', amount = 1})
 
 RECIPE("brain-cartridge-03"):add_ingredient({type = 'item', name = 'eva', amount = 1})
+
+RECIPE("brain-cartridge-04"):add_ingredient({type = 'item', name = 'acrylic', amount = 2})
