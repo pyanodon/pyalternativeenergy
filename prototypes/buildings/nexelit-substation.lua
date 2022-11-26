@@ -11,7 +11,7 @@ RECIPE {
     {"nexelit-plate", 50},
 },
   results = {{'nexelit-substation', 1}}
-}:add_unlock("electric-energy-distribution-2")
+}:add_unlock("electric-energy-distribution-4")
 
 ITEM {
   type = 'item',

@@ -7,6 +7,8 @@ table.insert(data.raw["assembling-machine"]["slaughterhouse-mk02"].crafting_cate
 table.insert(data.raw["assembling-machine"]["slaughterhouse-mk03"].crafting_categories, "slaughterhouse-numal")
 table.insert(data.raw["assembling-machine"]["slaughterhouse-mk04"].crafting_categories, "slaughterhouse-numal")
 
+TECHNOLOGY("electric-energy-distribution-2"):remove_pack("py-science-pack-3")
+
 TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack")
 TECHNOLOGY("mega-farm"):remove_pack("utility-science-pack"):remove_pack("military-science-pack")
 

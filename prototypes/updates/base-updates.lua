@@ -110,6 +110,14 @@ RECIPE("stack-filter-inserter"):set_fields {
 RECIPE("filter-inserter"):replace_ingredient("duralumin", { "intermetallics", 1 }):replace_ingredient("electronic-circuit"
     , { "electronics-mk01", 1 })
 
+--RECIPE("small-electric-pole"):set_category("handcrafting")
+
+RECIPE("medium-electric-pole"):add_unlock("electric-energy-distribution-1"):remove_ingredient("niobium-plate"):remove_ingredient("nbfe-alloy"):add_ingredient({type = "item", name = "aluminium-plate", amount = 4}):add_ingredient({type = "item", name = "chromium", amount = 1})
+    
+RECIPE("big-electric-pole"):remove_unlock("electric-energy-distribution-1"):add_unlock("electric-energy-distribution-2")
+
+RECIPE("substation"):remove_unlock("electric-energy-distribution-2"):add_unlock("electric-energy-distribution-3")
+
 ITEM("uranium-235"):add_flag("hidden")
 ITEM("uranium-238"):add_flag("hidden")
 ITEM("battery"):add_flag("hidden")

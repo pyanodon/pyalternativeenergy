@@ -53,6 +53,7 @@ require("prototypes/technologies/machine-components")
 require("prototypes/technologies/tbp")
 require("prototypes/technologies/acrylic")
 require("prototypes/technologies/ammonium-oxalate")
+require("prototypes/technologies/electric-energy-distribution")
 
 -- ))
 
