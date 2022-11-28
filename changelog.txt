@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 2022-11-28
+  Changes:
+    - buff antisolar.
+    - tweaks for pew pew powder.
+    - major buff to all renewables.
+    - added yaw drive to wind turbines.
+    - added new techs for electric poles/substations and adjusted the recipes.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2022-11-03
   Changes:
