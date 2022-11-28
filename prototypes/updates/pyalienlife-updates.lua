@@ -7,7 +7,7 @@ table.insert(data.raw["assembling-machine"]["slaughterhouse-mk02"].crafting_cate
 table.insert(data.raw["assembling-machine"]["slaughterhouse-mk03"].crafting_categories, "slaughterhouse-numal")
 table.insert(data.raw["assembling-machine"]["slaughterhouse-mk04"].crafting_categories, "slaughterhouse-numal")
 
-TECHNOLOGY("electric-energy-distribution-2"):remove_pack("py-science-pack-3")
+TECHNOLOGY("electric-energy-distribution-2"):remove_pack("py-science-pack-3")--:add_pack("py-science-pack-2")
 
 TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack")
 TECHNOLOGY("mega-farm"):remove_pack("utility-science-pack"):remove_pack("military-science-pack")
@@ -17,7 +17,6 @@ TECHNOLOGY("helium-processing"):add_pack("py-science-pack-2")
 TECHNOLOGY("super-steel-mk01"):add_pack("py-science-pack-2")
 TECHNOLOGY("smelters-mk02"):add_pack("py-science-pack-2")
 TECHNOLOGY("advanced-material-processing-2"):add_pack("py-science-pack-2")
-TECHNOLOGY("electric-energy-distribution-2"):add_pack("py-science-pack-2")
 TECHNOLOGY("robotics"):add_pack("py-science-pack-2")
 TECHNOLOGY("small-parts-mk03"):add_pack("py-science-pack-2")
 TECHNOLOGY("low-density-structure"):add_pack("py-science-pack-2")

@@ -12,7 +12,7 @@ RECIPE {
     results = {
         {"nexelit-power-pole", 1},
     }
-}:add_unlock("electric-energy-distribution-2")
+}:add_unlock("electric-energy-distribution-3")
 
 ITEM {
     type = "item",

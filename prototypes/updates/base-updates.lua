@@ -114,9 +114,9 @@ RECIPE("filter-inserter"):replace_ingredient("duralumin", { "intermetallics", 1 
 
 RECIPE("medium-electric-pole"):add_unlock("electric-energy-distribution-1"):remove_ingredient("niobium-plate"):remove_ingredient("nbfe-alloy"):add_ingredient({type = "item", name = "aluminium-plate", amount = 4}):add_ingredient({type = "item", name = "chromium", amount = 1})
     
-RECIPE("big-electric-pole"):remove_unlock("electric-energy-distribution-1"):add_unlock("electric-energy-distribution-2")
+RECIPE("big-electric-pole"):remove_unlock("electric-energy-distribution-1"):add_unlock("electric-energy-distribution-2"):add_ingredient({type = "item", name = "concrete", amount = 4}):replace_ingredient("copper-cable", "tinned-cable")
 
-RECIPE("substation"):remove_unlock("electric-energy-distribution-2"):add_unlock("electric-energy-distribution-3")
+RECIPE("substation"):remove_unlock("electric-energy-distribution-2"):add_unlock("electric-energy-distribution-4")
 
 ITEM("uranium-235"):add_flag("hidden")
 ITEM("uranium-238"):add_flag("hidden")
