@@ -27,7 +27,7 @@ RECIPE("co2-absorber"):remove_ingredient('gasturbinemk01')
 --RECIPE("bio-reactor"):remove_ingredient('gasturbinemk02')
 
 --RECIPE("advanced-foundry-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
-RECIPE("automated-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
+RECIPE("automated-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2}):remove_ingredient("small-parts"):remove_ingredient("steam-engine"):add_ingredient({type = "item", name = "shaft-mk01", amount = 2}):add_ingredient({type = "item", name = "gearbox-mk01", amount = 2})
 RECIPE("ground-borer"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 -- RECIPE("wpu"):add_ingredient({type = "item", name = "intermetallics", amount = 1})
 RECIPE("ball-mill-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4}):remove_unlock("crusher-2"):add_unlock("machines-mk01")

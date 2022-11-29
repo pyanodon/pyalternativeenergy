@@ -94,14 +94,15 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = "item", name = "fenxsb-alloy", amount = 10},
-        {type = "item", name = "solder", amount = 15},
+        {type = "item", name = "fenxsb-alloy", amount = 5},
+        {type = "item", name = "solder", amount = 5},
+        {type = "item", name = "small-parts-01", amount = 5},
     },
     results = {
         {type = "item", name = "shaft-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("machine-components-mk01")
+}:add_unlock("automation-2")
 
 RECIPE {
     type = "recipe",
@@ -153,18 +154,17 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "small-parts-01", amount = 20},
+        {type = "item", name = "shaft-mk01", amount = 2},
         {type = "item", name = "duralumin", amount = 4},
         {type = "item", name = "steel-plate", amount = 5},
         {type = "item", name = "titanium-plate", amount = 4},
-        {type = "item", name = "fenxsb-alloy", amount = 4},
         {type = "fluid", name = "fish-oil", amount = 20},
     },
     results = {
         {type = "item", name = "gearbox-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("machine-components-mk01")
+}:add_unlock("automation-2")
 
 RECIPE {
     type = "recipe",
@@ -227,7 +227,7 @@ RECIPE {
         {type = "item", name = "brake-mk01", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("machine-components-mk01")
+}:add_unlock("automation-2")
 
 RECIPE {
     type = "recipe",
