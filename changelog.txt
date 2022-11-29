@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+Date: 2022-11-29
+  Changes:
+    - added small parts to shaft mk01 and adjusted other items in recipe.
+    - removed iron nexelit antimony alloy from gearbox mk01.
+    - replaced small parts with shaft mk01 in gearbox mk01.
+    - moved shaft mk01, gearbox mk01, and brakes mk01 to automation 2 tech.
+    - removed small parts, steam engine from automated factory mk01.
+    - added gearbox mk01 and shaft mk01 to automated factory mk01 recipe.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2022-11-28
   Changes:
