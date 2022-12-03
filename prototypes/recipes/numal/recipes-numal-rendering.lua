@@ -24,6 +24,7 @@ FUN.autorecipes {
 	--module_limitations = 'numal',
 	subgroup = 'py-alienlife-numal',
 	order = 'b',
+	crafting_speed = 30,
     mats =
 	{
 		{
