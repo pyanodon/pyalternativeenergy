@@ -102,6 +102,7 @@ RECIPE("generator-1"):add_ingredient({type = "item", name = "intermetallics", am
 RECIPE("pyphoon-bay"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 -- RECIPE("collector"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("zungror-lair-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 5 }
+RECIPE("outpost"):add_ingredient({type = "item", name = "intermetallics", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 5 }
 
 RECIPE("atomizer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("bio-printer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -163,6 +164,7 @@ RECIPE("zungror-lair-mk02"):add_ingredient({type = "item", name = "self-assembly
 RECIPE("fluid-drill-mk03"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("collector-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
 RECIPE("rc-mk02"):add_ingredient{"eva", 100}:add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 12}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 10 }
+RECIPE("outpost-aerial"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 5 }
 
 RECIPE("atomizer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("bio-printer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -313,6 +315,7 @@ RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amo
 RECIPE("py-science-pack-4"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}
 RECIPE('perfect-samples'):add_ingredient({type = "item", name = "aeroorgan", amount = 1})
+RECIPE('gastrocapacitor'):add_ingredient({type = "item", name = "sugar", amount = 1}):replace_ingredient("phytoplankton", "fatty-acids")
 
 ITEM("simik"):set_fields{fuel_category = "simik", fuel_value = "600MJ", burnt_result = "used-simik"}
 ITEM("simik-mk02"):set_fields{fuel_category = "simik", fuel_value = "800MJ", burnt_result = "used-simik-mk02"}
