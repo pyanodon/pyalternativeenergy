@@ -36,17 +36,17 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-base.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "aerial-base"},
+    minable = {mining_time = 1, result = "aerial-base"},
     max_health = 150,
     corpse = "big-remnants",
     collision_box = {{-5.4, -5.4}, {5.4, 5.4}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     energy_source = {
         type = "electric",
-        buffer_capacity = "10GJ",
+        buffer_capacity = "500MJ",
         usage_priority = "primary-output",
         input_flow_limit = "0kW",
-        output_flow_limit = "3000kW"
+        output_flow_limit = "5MW"
     },
     picture = {
         layers = {

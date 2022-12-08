@@ -24,15 +24,16 @@ RECIPE{
   }:add_unlock("renewable-mk03")
 
 ITEM{
-    type = "item",
-    name = "aerial-blimp-ht",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-ht.png",
-    icon_size = 64,
-    subgroup = "py-alternativeenergy-special-buildings",
-    order = "b",
-    place_result = "aerial-blimp-ht",
-    stack_size = 10
-  }
+	type = "item-with-tags",
+	name = "aerial-blimp-ht",
+	icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-ht.png",
+	icon_size = 64,
+	subgroup = "py-alternativeenergy-special-buildings",
+	order = "b",
+	place_result = "aerial-blimp-ht",
+	stack_size = 1,
+	flags = {'not-stackable'}
+}
 
 data:extend(
 {
@@ -58,14 +59,15 @@ data:extend(
     has_belt_immunity = true,
     immune_to_rock_impacts = true,
     collision_box = {{0,0}, {0,0}},
-    collision_mask = {},
+    collision_mask = {'not-colliding-with-itself'},
+	selection_priority = 51,
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     attack_parameters =
     {
       type = "projectile",
-      range = 0.5,
-      cooldown = 35,
-      ammo_type = _G.make_unit_melee_ammo_type(7),
+      range = 0,
+      cooldown = 0,
+      ammo_type = _G.make_unit_melee_ammo_type(0),
       --sound = make_biter_roars(0.4),
 	animation =
 	{

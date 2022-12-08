@@ -18,7 +18,6 @@ CODING:
 
 - Solar panels MK02 to MK04 to change rotation during day (simulate sun tracking)
 - Make all the thermo solar buildings working as intended
-- Make the aerials move around and back to base to "deposit" energy in the grid : NEEDS CHECKED
 
 FYI:
 

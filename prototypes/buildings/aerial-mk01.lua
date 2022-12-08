@@ -25,14 +25,15 @@ RECIPE{
   }:add_unlock("renewable-mk01")
 
 ITEM{
-    type = "item",
+    type = "item-with-tags",
     name = "aerial-blimp-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk01.png",
     icon_size = 64,
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "b",
     place_result = "aerial-blimp-mk01",
-    stack_size = 10
+	stack_size = 1,
+	flags = {'not-stackable'}
   }
 
 data:extend(
@@ -43,7 +44,7 @@ data:extend(
     icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk01.png",
     icon_size = 64,
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
-	minable = {mining_time = 0.1, result = "aerial-blimp-mk01"},
+	minable = {mining_time = 0.5, result = "aerial-blimp-mk01"},
     max_health = 25,
     order = "b-b-a",
     subgroup="enemies",
@@ -59,14 +60,15 @@ data:extend(
     has_belt_immunity = true,
     immune_to_rock_impacts = true,
     collision_box = {{0,0}, {0,0}},
-    collision_mask = {},
+    collision_mask = {'not-colliding-with-itself'},
+	selection_priority = 51,
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     attack_parameters =
     {
       type = "projectile",
-      range = 0.5,
-      cooldown = 35,
-      ammo_type = _G.make_unit_melee_ammo_type(7),
+      range = 0,
+      cooldown = 0,
+      ammo_type = _G.make_unit_melee_ammo_type(0),
       --sound = make_biter_roars(0.4),
 	animation =
 	{
