@@ -38,11 +38,12 @@ ITEM{
 data:extend(
 {
   {
+	ai_settings = {do_separation = false},
     type = "unit",
     name = "aerial-blimp-ht",
     icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-ht.png",
     icon_size = 64,
-    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid"},
 	minable = {mining_time = 0.1, result = "aerial-blimp-ht"},
     max_health = 25,
     order = "b-b-a",
@@ -58,7 +59,6 @@ data:extend(
     immune_to_tree_impacts = true,
     has_belt_immunity = true,
     immune_to_rock_impacts = true,
-    collision_box = {{0,0}, {0,0}},
     collision_mask = {'not-colliding-with-itself'},
 	selection_priority = 51,
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
