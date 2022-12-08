@@ -49,7 +49,7 @@ ENTITY {
     },
     allowed_effects = {"speed", "consumption"},
     crafting_categories = {"centrifuging"},
-    crafting_speed = 8,
+    crafting_speed = 4,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
