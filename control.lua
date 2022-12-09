@@ -1,11 +1,33 @@
 local util = require('util')
--- TODO: rewrite microwave sat code to have launched sats added to a pool and the code sorting the sat pool between recivers as seperate functions
+
+_G.gui_events = {
+	[defines.events.on_gui_click] = {},
+	[defines.events.on_gui_confirmed] = {},
+	[defines.events.on_gui_text_changed] = {},
+	[defines.events.on_gui_checked_state_changed] = {},
+	[defines.events.on_gui_selection_state_changed] = {},
+	[defines.events.on_gui_checked_state_changed] = {},
+	[defines.events.on_gui_elem_changed] = {},
+	[defines.events.on_gui_value_changed] = {},
+	[defines.events.on_gui_location_changed] = {},
+	[defines.events.on_gui_selected_tab_changed] = {},
+	[defines.events.on_gui_switch_state_changed] = {}
+}
+local function process_gui_event(event)
+	if event.element and event.element.valid then
+		for pattern, f in pairs(gui_events[event.name]) do
+			if event.element.name:match(pattern) then f(event); return end
+		end
+	end
+end
+
+require 'scripts/microwave-receiver'
 
 local function init_globals()
+    Microwave_Receiver.events.on_init()
+
     global.windmills = global.windmills or {}
     global.reactor_tanks = global.reactor_tanks or {}
-    global.microwave_satellites = global.microwave_satellites or {}
-    global.orphan_sats = global.orphan_sats or 0
     global.currently_selected_entity = global.currently_selected_entity or {}
     global.solar_panels = global.solar_panels or {}
     global.antisolar_panels = global.antisolar_panels or {}
@@ -19,14 +41,19 @@ end
 script.on_init(init_globals)
 script.on_configuration_changed(init_globals)
 
-local function distance ( x1, y1, x2, y2 )
+local function distance(x1, y1, x2, y2)
     local dx = x1 - x2
     local dy = y1 - y2
-    return math.sqrt ( dx * dx + dy * dy )
-  end
+    return math.sqrt(dx * dx + dy * dy)
+end
 
-script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
-    local E = event.created_entity
+local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_revive, defines.events.script_raised_built}
+script.on_event(on_built, function(event)
+    Microwave_Receiver.events.on_built(event)
+
+    local E = event.created_entity or event.entity
+    if not E.valid then return end
+
     if E.type == 'electric-energy-interface' then
         local turbine_type, mk = string.match(E.name, ('(%a+)%-turbine%-(mk%d+)'))
         if turbine_type ~= nil then
@@ -51,7 +78,9 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
                 -- log(serpent.block(global.windmills))
             end
         end
-    elseif E.name == "solar-tower-building" then
+    end
+    
+    if E.name == "solar-tower-building" then
         global.solar_tower[E.unit_number] = {tower = E, panels = {}, panel_count = 0}
     elseif E.name == "sut" then
         local base = game.surfaces[E.surface.name].create_entity{
@@ -168,28 +197,6 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
             -- moderator = moderator
         }
         --log(serpent.block(global.reactor_tanks))
-    elseif E.name == 'microwave-receiver' then
-        local mr = game.surfaces['nauvis'].create_entity{
-            name = "microwave-receiver-hidden",
-            position = E.position,
-            force = E.force
-        }
-        global.microwave_satellites[mr.unit_number] = {reciver = mr, satellites = 0, max = 10}
-        local ent_sats = global.microwave_satellites[mr.unit_number].satellites
-        if global.orphan_sats > 0 then
-            if global.orphan_sats > 10 then
-                ent_sats = 10
-                global.orphan_sats = global.orphan_sats - 10
-            elseif global.orphan_sats <= 10 then
-                ent_sats = global.orphan_sats
-                global.orphan_sats = 0
-            end
-        end
-        mr.power_production = ent_sats * 83333.34
-        mr.electric_buffer_size = ent_sats * 5000000
-        --log(serpent.block(global.microwave_satellites))
-        local ani = rendering.draw_animation{animation = E.name, surface = mr.surface, target = mr, render_layer = 129}
-        E.destroy()
     elseif string.match(E.name, 'tidal%-placer') then
       --log("hit")
         local direction = E.direction
@@ -385,9 +392,11 @@ script.on_nth_tick(55, function(event)
     end
 end)
 
-script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, function(event)
+local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.script_raised_destroy, defines.events.on_entity_died}
+script.on_event(on_destroyed, function(event)
+    Microwave_Receiver.events.on_destroyed(event)
+
     local E = event.entity
-    -- log('hit')
     if E.type == 'electric-energy-interface' then
         local turbine_type, mk = string.match(E.name, ('(%a+)%-turbine%-(mk%d+)'))
         if turbine_type ~= nil then
@@ -406,11 +415,8 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
                 global.windmills[E.unit_number] = nil
             end
         end
-    elseif E.name == 'microwave-receiver' then
-        global.orphan_sats = global.orphan_sats + global.microwave_satellites[E.unit_number].satellites
-        global.microwave_satellites[E.unit_number] = nil
-        --log(serpent.block(global.orphan_sats))
-    elseif string.match(E.name, "lrf%-panel") ~= nil then
+    end
+    if string.match(E.name, "lrf%-panel") ~= nil then
         global.lrf_panels[E.unit_number] = nil
     elseif E.name == 'anti-solar' then
         global.antisolar_panels[E.unit_number] = nil
@@ -476,70 +482,18 @@ script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     end
 end)
 
-script.on_event(defines.events.on_rocket_launched, function(event)
-
-    local r_inv = event.rocket.get_inventory(defines.inventory.rocket).get_contents()
-    local items = 0
-    --log(serpent.block(r_inv))
-    for s, sat in pairs(r_inv) do
-        --log(s)
-        --log(sat)
-        if s == 'microwave-satellite' then items = sat end
-    end
-    --log(items)
-
-    if items > 0 then
-        --log('hit')
-        if next(global.microwave_satellites) ~= nil then
-            for r, recivers in pairs(global.microwave_satellites) do
-                -- log('hit')
-                if items > 0 then
-                    -- log('hit')
-                    --log(serpent.block(recivers))
-                    local sats = recivers.satellites
-                    if sats < recivers.max then
-                        -- log('hit')
-                        sats = sats + items
-                        items = 0
-                    end
-                    if sats > recivers.max then
-                        -- log('hit')
-                        items = sats - recivers.max
-                        sats = recivers.max
-                    end
-                    -- log('hit')
-                    -- log(sats)
-                    recivers.satellites = sats
-                    -- log(serpent.block(global.microwave_satellites))
-                    recivers.reciver.power_production = sats * 83333.34
-                    recivers.reciver.electric_buffer_size = sats * 5000000
-                    -- log(serpent.block(recivers.reciver.power_production))
-                else
-                    break
-                end
-                --log(items)
-                global.orphan_sats = global.orphan_sats + items
-                --log(serpent.block(global.orphan_sats))
-            end
-        else
-            global.orphan_sats = global.orphan_sats + items
-        end
-        --log(serpent.block(global.orphan_sats))
-    end
-end)
-
 script.on_event(defines.events.on_gui_opened, function(event)
-
+    Microwave_Receiver.events.on_gui_opened(event)
 end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
 
 end)
 
-script.on_event(defines.events.on_entity_died, function(event)
-    local E = event.entity
-    if E.name == 'microwave-receiver' then
-        global.orphan_sats = global.orphan_sats + global.microwave_satellites[E.unit_number].satellites
-        global.microwave_satellites[E.unit_number] = nil
-    end
+script.on_event(defines.events.on_rocket_launched, function(event)
+    Microwave_Receiver.events.on_rocket_launched(event)
+end)
+
+script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
+    Microwave_Receiver.events.on_gui_closed(event)
 end)
