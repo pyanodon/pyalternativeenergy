@@ -47,7 +47,7 @@ ENTITY {
         starting_rq_factor_multiplier = 2,
         candidate_spot_count = 20
     },
-    stage_counts = {2500, 1700, 1500, 1200, 900, 450, 200, 40},
+    stage_counts = {20000, 13000, 10000, 5000, 3000, 1000, 500, 100},
     stages = {
         sheet = {
             filename = "__pyalternativeenergygraphics__/graphics/ore/ree/ree.png",
