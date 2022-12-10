@@ -47,23 +47,13 @@ end
 Microwave_Receiver.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
 	if entity.name ~= 'microwave-receiver' then return end
-	local position, force, surface = entity.position, entity.force, entity.surface
-	entity.destroy()
-
-	entity = surface.create_entity{
-		name = 'microwave-receiver-hidden',
-		position = position,
-		force = force
-	}
-	rendering.draw_animation{animation = 'microwave-receiver', surface = entity.surface, target = entity, render_layer = 129}
-
-	global.microwave_receivers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = force}
-	Microwave_Receiver.recalc_satellite_distribution(force)
+	global.microwave_receivers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force}
+	Microwave_Receiver.recalc_satellite_distribution(entity.force)
 end
 
 Microwave_Receiver.events.on_destroyed = function(event)
 	local entity = event.entity
-	if entity.name ~= 'microwave-receiver-hidden' then return end
+	if entity.name ~= 'microwave-receiver' then return end
 	global.microwave_receivers[entity.unit_number] = nil
 	Microwave_Receiver.recalc_satellite_distribution(entity.force)
 end
@@ -75,7 +65,7 @@ end
 Microwave_Receiver.events.on_gui_opened = function(event)
 	local player = game.get_player(event.player_index)
 	local entity = event.entity
-	if event.gui_type ~= defines.gui_type.entity or entity.name ~= 'microwave-receiver-hidden' then return end
+	if event.gui_type ~= defines.gui_type.entity or entity.name ~= 'microwave-receiver' then return end
 
 	local main_frame = player.gui.screen.add{type = 'frame', name = 'microwave_receiver_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
 	main_frame.style.width = 340
