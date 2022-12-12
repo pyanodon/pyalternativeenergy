@@ -11,7 +11,8 @@
     "pyalienlife >= 1.12.5",
     "pyhightech >= 1.7.7",
     "~ pyalternativeenergygraphics",
-    "! omnimatter_energy"
+    "! omnimatter_energy",
+    "(?) pyindustry"
   ],
   "package": {
     "ignore": [],
