@@ -4,10 +4,6 @@ Microwave_Receiver.events = {}
 Microwave_Receiver.max_satellites_per_receiver = 5
 Microwave_Receiver.power_production_per_satellite = 80000
 
-local function format_energy(energy)
-	return string.format('%.2f', energy * 60 / 1000000) .. 'MW'
-end
-
 local Table = require('__stdlib__/stdlib/utils/table')
 
 Microwave_Receiver.events.on_init = function()
@@ -115,7 +111,7 @@ function Microwave_Receiver.update_gui(gui)
 		'',
 		microwave_data.allocated_satellites .. '/' .. Microwave_Receiver.max_satellites_per_receiver,
 		'    ',
-		format_energy(microwave_data.allocated_satellites * Microwave_Receiver.power_production_per_satellite)
+		format_energy(microwave_data.allocated_satellites * Microwave_Receiver.power_production_per_satellite, 'W')
 	}
 	content_flow.total_launched.caption = {'microwave-receiver-gui.launched-satellites', force.get_item_launched('microwave-satellite')}
 

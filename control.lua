@@ -1,5 +1,34 @@
 local util = require('util')
 
+local si_prefixes = {
+    [0] = '',
+    'si-prefix-symbol-kilo',
+    'si-prefix-symbol-mega',
+    'si-prefix-symbol-giga',
+    'si-prefix-symbol-tera',
+    'si-prefix-symbol-peta',
+    'si-prefix-symbol-exa',
+    'si-prefix-symbol-zetta',
+    'si-prefix-symbol-yotta'
+}
+function _G.format_energy(energy, watts_or_joules)
+	if watts_or_joules == 'W' then
+        watts_or_joules = 'si-unit-symbol-watt'
+        energy = energy * 60
+    elseif watts_or_joules == 'J' then
+        watts_or_joules = 'si-unit-symbol-joule'
+    else
+        error()
+    end
+
+    local prefix = 0
+	while energy >= 1000 do
+        energy = energy / 1000
+        prefix = prefix + 1
+    end
+	return {'' , string.format('%.2f', energy), ' ', {si_prefixes[prefix]}, {watts_or_joules}}
+end
+
 _G.gui_events = {
 	[defines.events.on_gui_click] = {},
 	[defines.events.on_gui_confirmed] = {},
@@ -22,11 +51,13 @@ local function process_gui_event(event)
 end
 
 require 'scripts/microwave-receiver'
+require 'scripts/thermosolar/shared'
 require 'scripts/thermosolar/solar-updraft-tower'
+require 'scripts/thermosolar/heliostat'
 
 local function init_globals()
     Microwave_Receiver.events.on_init()
-    Solar_Updraft_Tower.events.on_init()
+    Thermosolar.events.on_init()
 
     global.windmills = global.windmills or {}
     global.reactor_tanks = global.reactor_tanks or {}
@@ -34,7 +65,6 @@ local function init_globals()
     global.solar_panels = global.solar_panels or {}
     global.antisolar_panels = global.antisolar_panels or {}
     global.lrf_panels = global.lrf_panels or {}
-    global.solar_tower = global.solar_tower or {}
     global.stirling = global.stirling or {}
 end
 
@@ -51,6 +81,7 @@ local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_
 script.on_event(on_built, function(event)
     Solar_Updraft_Tower.events.on_built(event)
     Microwave_Receiver.events.on_built(event)
+    Heliostat.events.on_built(event)
 
     local E = event.created_entity or event.entity
     if not E.valid then return end
@@ -80,46 +111,8 @@ script.on_event(on_built, function(event)
             end
         end
     end
-    
-    if E.name == "solar-tower-building" then
-        global.solar_tower[E.unit_number] = {tower = E, panels = {}, panel_count = 0}
-    elseif string.match(E.name, 'solar%-tower%-panel') ~= nil then
-        -- find solar tower and angle from it
-        local tower = game.surfaces[E.surface.name].find_entities_filtered{name = 'solar-tower-building'}
 
-        if next(tower) ~= nil then
-            local tower_x = tower[1].position.x
-            local tower_y = tower[1].position.y
-            local x = E.position.x
-            local y = E.position.y
-            if distance(tower_x, tower_y, x, y) <= 100 then
-                local zeroed_x = x - tower_x
-                local zeroed_y = y - tower_y
-                local angle = math.atan2(zeroed_y, zeroed_x)
-                -- log(serpent.block(angle))
-                local deg = math.deg(angle)
-                if deg < 0 then deg = deg + 360 end
-                -- log(serpent.block(deg))
-
-                local sprite_num = math.floor(deg / 11.25)
-
-                if sprite_num < 1 then sprite_num = 1 end
-
-                local panel = game.surfaces[E.surface.name].create_entity{
-                    name = 'solar-tower-panel' .. sprite_num,
-                    position = E.position,
-                    force = E.force
-                }
-                E.destroy()
-                global.solar_tower[tower[1].unit_number].panels[panel.unit_number] = panel
-                global.solar_tower[tower[1].unit_number].panel_count = global.solar_tower[tower[1].unit_number].panel_count + 1
-            else
-                game.show_message_dialog{
-                    text = {"warnings.solar-panel"}
-                }
-            end
-        end
-    elseif E.name == 'nuke-tank-input' then
+    if E.name == 'nuke-tank-input' then
         local out1 = game.surfaces['nauvis'].create_entity{
             name = 'nuke-tank-output',
             position = {E.position.x + 6, E.position.y},
@@ -225,6 +218,7 @@ end
 
 script.on_nth_tick(60, function(event)
     Solar_Updraft_Tower.events[60]()
+    Heliostat.events[60]()
 
     local wind_dir = game.surfaces['nauvis'].wind_orientation
     -- log(wind_dir)
@@ -253,20 +247,6 @@ script.on_nth_tick(60, function(event)
     elseif wind_dir > 0.8125 and wind_dir <= 0.9375 then
         dir = '-northwest'
         draw_windmill(dir)
-    end
-    for m, mill in pairs(global.windmills) do
-        -- log(serpent.block(mill.power_production))
-        -- mill.windmill.power_production = mill.max_power * wind_speed
-    end
-    if next(global.solar_tower) ~= nil then
-        for t,tower in pairs(global.solar_tower) do
-            if tower.panel_count ~= 0 then
-                local panel_count = tower.panel_count
-                local tt = tower.tower
-                local fluid = {name = "void", amount = 100, temperature = 4 * panel_count}
-                tt.fluidbox[3] = fluid
-            end
-        end
     end
 end)
 
@@ -325,6 +305,7 @@ local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_r
 script.on_event(on_destroyed, function(event)
     Microwave_Receiver.events.on_destroyed(event)
     Solar_Updraft_Tower.events.on_destroyed(event)
+    Heliostat.events.on_destroyed(event)
 
     local E = event.entity
     if E.type == 'electric-energy-interface' then
@@ -356,6 +337,7 @@ end)
 script.on_event(defines.events.on_gui_opened, function(event)
     Microwave_Receiver.events.on_gui_opened(event)
     Solar_Updraft_Tower.events.on_gui_opened(event)
+    Heliostat.events.on_gui_opened(event)
 end)
 
 script.on_event(defines.events.on_gui_elem_changed, function(event)
@@ -369,6 +351,7 @@ end)
 script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     Microwave_Receiver.events.on_gui_closed(event)
     Solar_Updraft_Tower.events.on_gui_closed(event)
+    Heliostat.events.on_gui_closed(event)
 end)
 
 script.on_event({defines.events.on_player_built_tile, defines.events.on_robot_built_tile}, function(event)
@@ -380,5 +363,5 @@ script.on_event({defines.events.on_player_mined_tile, defines.events.on_robot_mi
 end)
 
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
-    Solar_Updraft_Tower.events.on_player_cursor_stack_changed(event)
+    Thermosolar.events.on_player_cursor_stack_changed(event)
 end)

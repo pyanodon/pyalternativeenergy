@@ -47,6 +47,7 @@ data:extend{{
 }}
 
 local sut_placement_distance = collision_mask_util.get_first_unused_layer()
+_G.sut_placement_distance = sut_placement_distance
 
 RECIPE {
     type = 'recipe',
@@ -148,9 +149,7 @@ data:extend{{
         filename = '__core__/graphics/empty.png',
         width = 1,
         height = 1
-    },
-    localised_name = {'entity-name.sut'},
-    localised_description = {'entity-description.sut'}
+    }
 }}
 
 data:extend{{

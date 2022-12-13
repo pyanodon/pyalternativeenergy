@@ -1,6 +1,54 @@
-local shared = {}
+Thermosolar = {}
+Thermosolar.events = {}
 
-function shared.calc_daylight(surface)
+Thermosolar.tower_range = 100
+
+Thermosolar.events.on_init = function(event)
+    global.solar_updraft_towers = global.solar_updraft_towers or {}
+    global.glass_covers = global.glass_covers or {}
+    global.tower_circles = global.tower_circles or {}
+	global.heliostat_towers = global.heliostat_towers or {}
+	global.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * game.entity_prototypes['steam-turbine-mk04'].max_power_output
+	global.energy_per_heliostat = global.heliostat_tower_max_power_output / Heliostat.max_heliostats
+end
+
+local tower_circle_render_items = {
+	['sut'] = true,
+	['sut-panel'] = true,
+	['solar-tower-building'] = true,
+	['solar-tower-panel'] = true
+}
+
+local function draw_circle(tower_data)
+	if not global.tower_circles[tower_data.unit_number] then
+		global.tower_circles[tower_data.unit_number] = rendering.draw_circle{
+			draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = Thermosolar.tower_range,
+			target = tower_data.entity, filled = true, surface = tower_data.entity.surface
+		}
+	end
+end
+
+Thermosolar.events.on_player_cursor_stack_changed = function(event)
+    for _, player in pairs(game.connected_players) do
+        local stack = player.cursor_stack
+        if stack.valid_for_read and tower_circle_render_items[stack.name] then
+            for _, tower_data in pairs(global.solar_updraft_towers) do
+                draw_circle(tower_data)
+            end
+			for _, tower_data in pairs(global.heliostat_towers) do
+                draw_circle(tower_data)
+            end
+            return
+        end
+    end
+
+    for _, circle in pairs(global.tower_circles) do
+        rendering.destroy(circle)
+    end
+    global.tower_circles = {}
+end
+
+function Thermosolar.calc_daylight(surface)
 	local time = surface.daytime
 	local day_start = surface.dawn
 	local sunset_start = surface.dusk
@@ -20,7 +68,7 @@ function shared.calc_daylight(surface)
 	return time_multiplier
 end
 
-function shared.calc_average_daylight(surface)
+function Thermosolar.calc_average_daylight(surface)
 	local day_start = surface.dawn
 	local sunset_start = surface.dusk
 	local night_start = surface.evening
@@ -33,5 +81,3 @@ function shared.calc_average_daylight(surface)
 
 	return (day_length + sunset_length/2 + sunrise_length/2) / surface.ticks_per_day
 end
-
-return shared

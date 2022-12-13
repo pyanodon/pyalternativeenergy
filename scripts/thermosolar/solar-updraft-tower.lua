@@ -2,13 +2,6 @@ Solar_Updraft_Tower = {}
 Solar_Updraft_Tower.events = {}
 
 Solar_Updraft_Tower.power_generated_per_cover = 4000/3
-Solar_Updraft_Tower.tower_range = 100
-
-local shared = require 'shared'
-
-local function format_energy(energy)
-	return string.format('%.2f', energy * 60 / 1000000)
-end
 
 function Solar_Updraft_Tower.update_power_generation(tower)
     if not tower then
@@ -21,9 +14,9 @@ function Solar_Updraft_Tower.update_power_generation(tower)
     local tower_data = global.solar_updraft_towers[tower.unit_number]
     if not tower_data then return end
 
-    tower_data.glass_covers = tower.surface.count_tiles_filtered{position = tower.position, radius = Solar_Updraft_Tower.tower_range, name = 'sut-panel'}
+    tower_data.glass_covers = tower.surface.count_tiles_filtered{position = tower.position, radius = Thermosolar.tower_range, name = 'sut-panel'}
     tower_data.max_production = (tower_data.glass_covers * Solar_Updraft_Tower.power_generated_per_cover + tower.prototype.max_energy_production) * tower.surface.solar_power_multiplier
-    tower.power_production = tower_data.max_production * shared.calc_daylight(tower.surface)
+    tower.power_production = tower_data.max_production * Thermosolar.calc_daylight(tower.surface)
 	tower.electric_buffer_size = tower.power_production * 60
 
     Solar_Updraft_Tower.update_all_guis()
@@ -119,7 +112,7 @@ Solar_Updraft_Tower.events[60] = function()
     for _, tower_data in pairs(global.solar_updraft_towers) do
         local entity = tower_data.entity
         local surface = entity.surface
-        local activity = shared.calc_daylight(surface)
+        local activity = Thermosolar.calc_daylight(surface)
 
         if activity == 0 then
             entity.active = false
@@ -136,34 +129,6 @@ Solar_Updraft_Tower.events[60] = function()
     if global.update_sut_guis then
         Solar_Updraft_Tower.update_all_guis()
     end
-end
-
-Solar_Updraft_Tower.events.on_init = function(event)
-    global.solar_updraft_towers = global.solar_updraft_towers or {}
-    global.glass_covers = global.glass_covers or {}
-    global.tower_circles = global.tower_circles or {}
-end
-
-Solar_Updraft_Tower.events.on_player_cursor_stack_changed = function(event)
-    for _, player in pairs(game.connected_players) do
-        local stack = player.cursor_stack
-        if stack.valid_for_read and (stack.name == 'sut-panel' or stack.name == 'sut') then
-            for _, tower_data in pairs(global.solar_updraft_towers) do
-                if not global.tower_circles[tower_data.unit_number] then
-                    global.tower_circles[tower_data.unit_number] = rendering.draw_circle{
-                        draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = Solar_Updraft_Tower.tower_range,
-                        target = tower_data.entity, filled = true, surface = tower_data.entity.surface
-                    }
-                end
-            end
-            return
-        end
-    end
-
-    for _, circle in pairs(global.tower_circles) do
-        rendering.destroy(circle)
-    end
-    global.tower_circles = {}
 end
 
 Solar_Updraft_Tower.events.on_destroyed = function(event)
@@ -208,7 +173,7 @@ Solar_Updraft_Tower.events.on_gui_opened = function(event)
 	content_flow.add{type = 'label', name = 'total_covers'}
 	content_flow.add{type = 'label', name = 'average_generation'}
 	content_flow.add{type = 'label', name = 'daylight'}
-	content_flow.add{type = 'label', caption = {'sut-gui.range', Solar_Updraft_Tower.tower_range}}
+	content_flow.add{type = 'label', caption = {'sut-gui.range', Thermosolar.tower_range}}
 	content_flow.add{type = 'label', caption = {'sut-gui.energy-per-cover', Solar_Updraft_Tower.power_generated_per_cover * 0.06}}
 
 	Solar_Updraft_Tower.update_gui(main_frame)
@@ -227,12 +192,12 @@ function Solar_Updraft_Tower.update_gui(gui)
 	if not tower_data then gui.destroy(); return end
 	local content_flow = gui.content_frame.content_flow
     local surface = tower_data.entity.surface
-    local daylight = shared.calc_daylight(surface)
+    local daylight = Thermosolar.calc_daylight(surface)
 
 	content_flow.progressbar.value = daylight
-	content_flow.progressbar.caption = {'sut-gui.energy', format_energy(tower_data.entity.power_production), format_energy(tower_data.max_production)}
+	content_flow.progressbar.caption = {'sut-gui.energy', format_energy(tower_data.entity.power_production, 'W'), format_energy(tower_data.max_production, 'W')}
     content_flow.total_covers.caption = {'sut-gui.total-covers', tower_data.glass_covers}
-    content_flow.average_generation.caption = {'sut-gui.average-generation', format_energy(tower_data.max_production * shared.calc_average_daylight(surface))}
+    content_flow.average_generation.caption = {'sut-gui.average-generation', format_energy(tower_data.max_production * Thermosolar.calc_average_daylight(surface), 'W')}
     content_flow.daylight.caption = {'sut-gui.daylight', math.floor(daylight * 100)}
 end
 
