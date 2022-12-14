@@ -54,13 +54,10 @@ ENTITY{
     energy_source = {
         type = 'electric',
         usage_priority = 'primary-output',
-        buffer_capacity = '500MJ',
-        output_flow_limit = "50MW",
-        input_flow_limit = "0W",
+        buffer_capacity = '5MJ',
         render_no_power_icon = false
     },
     energy_production = '5MW',
-    energy_usage = '0kW',
     animation =
     {
         layers = {

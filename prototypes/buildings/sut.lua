@@ -172,9 +172,9 @@ RECIPE{
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'small-parts-02', 5},
-        {'py-asphalt', 1},
-        {'glass', 2},
+        {'small-parts-02', 1},
+        {'py-asphalt', 2},
+        {'glass', 20},
     },
     results = {{'sut-panel', 1}}
 }:add_unlock('thermal-mk03')

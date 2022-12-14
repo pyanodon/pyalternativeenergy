@@ -54,16 +54,15 @@ require 'scripts/microwave-receiver'
 require 'scripts/thermosolar/shared'
 require 'scripts/thermosolar/solar-updraft-tower'
 require 'scripts/thermosolar/heliostat'
+require 'scripts/solar'
 
 local function init_globals()
+    Solar.events.on_init()
     Microwave_Receiver.events.on_init()
     Thermosolar.events.on_init()
 
     global.windmills = global.windmills or {}
     global.reactor_tanks = global.reactor_tanks or {}
-    global.currently_selected_entity = global.currently_selected_entity or {}
-    global.solar_panels = global.solar_panels or {}
-    global.antisolar_panels = global.antisolar_panels or {}
     global.lrf_panels = global.lrf_panels or {}
     global.stirling = global.stirling or {}
 end
@@ -71,14 +70,9 @@ end
 script.on_init(init_globals)
 script.on_configuration_changed(init_globals)
 
-local function distance(x1, y1, x2, y2)
-    local dx = x1 - x2
-    local dy = y1 - y2
-    return math.sqrt(dx * dx + dy * dy)
-end
-
 local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_revive, defines.events.script_raised_built}
 script.on_event(on_built, function(event)
+    Solar.events.on_built(event)
     Solar_Updraft_Tower.events.on_built(event)
     Microwave_Receiver.events.on_built(event)
     Heliostat.events.on_built(event)
@@ -98,7 +92,7 @@ script.on_event(on_built, function(event)
                 create_build_effect_smoke = false,
             }
 
-            if turbine_type == "multiblade" or turbine_type == "hawt" then
+            if turbine_type == 'multiblade' or turbine_type == 'hawt' then
                 --log(HE.name)
                 local ani = rendering.draw_animation{
                     animation = base_name .. '-north',
@@ -144,7 +138,7 @@ script.on_event(on_built, function(event)
         }
         --log(serpent.block(global.reactor_tanks))
     elseif string.match(E.name, 'tidal%-placer') then
-      --log("hit")
+      --log('hit')
         local direction = E.direction
         local x = 0
         local y = 0
@@ -168,7 +162,7 @@ script.on_event(on_built, function(event)
             direction = E.direction
         }
         E.destroy()
-    elseif string.match(E.name, "numal%-reef") and string.match(E.name, "placer") then
+    elseif string.match(E.name, 'numal%-reef') and string.match(E.name, 'placer') then
         local direction = E.direction
         local x = 0
         local y = 0
@@ -193,12 +187,10 @@ script.on_event(on_built, function(event)
             raise_built = true
         }
         E.destroy()
-    elseif E.name == 'anti-solar' then
-        global.antisolar_panels[E.unit_number] = E
-    elseif string.match(E.name, "lrf%-panel") ~= nil then
+    elseif string.match(E.name, 'lrf%-panel') ~= nil then
         --log('hit')
         global.lrf_panels[E.unit_number] = E
-    elseif E.name == "stirling-concentrator" then
+    elseif E.name == 'stirling-concentrator' then
         global.stirling[E.unit_number] = E
     end
 end)
@@ -259,11 +251,6 @@ script.on_nth_tick(55, function(event)
                 panel.active = false
             end
         end
-        for a,anti in pairs(global.antisolar_panels) do
-            if anti.valid == true then
-                anti.active = true
-            end
-        end
         for p,panel in pairs(global.stirling) do
             if panel.valid == true then
                 panel.active = false
@@ -278,11 +265,6 @@ script.on_nth_tick(55, function(event)
                 panel = nil
             end
         end
-        for a,anti in pairs(global.antisolar_panels) do
-            if anti.valid == true then
-                anti.active = false
-            end
-        end
         for p,panel in pairs(global.stirling) do
             if panel.valid == true then
                 panel.active = true
@@ -293,6 +275,7 @@ end)
 
 local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.script_raised_destroy, defines.events.on_entity_died}
 script.on_event(on_destroyed, function(event)
+    Solar.events.on_destroyed(event)
     Microwave_Receiver.events.on_destroyed(event)
     Solar_Updraft_Tower.events.on_destroyed(event)
     Heliostat.events.on_destroyed(event)
@@ -303,13 +286,13 @@ script.on_event(on_destroyed, function(event)
         if turbine_type ~= nil then
             local base_name = turbine_type .. '-turbine-' .. mk
             local collisions = game.surfaces[E.surface.name].find_entities_filtered{
-                name = base_name .. "-collision",
+                name = base_name .. '-collision',
                 position = E.position,
             }
             for _, collision_entity in pairs(collisions) do
                 if collision_entity.valid then collision_entity.destroy() end
             end
-            if turbine_type == "multiblade" or turbine_type == "hawt" then
+            if turbine_type == 'multiblade' or turbine_type == 'hawt' then
                 --log('hit')
                 local mill = global.windmills[E.unit_number]
                 rendering.destroy(mill.animation)
@@ -317,10 +300,10 @@ script.on_event(on_destroyed, function(event)
             end
         end
     end
-    if string.match(E.name, "lrf%-panel") ~= nil then
+    if string.match(E.name, 'lrf%-panel') ~= nil then
         global.lrf_panels[E.unit_number] = nil
-    elseif E.name == 'anti-solar' then
-        global.antisolar_panels[E.unit_number] = nil
+    elseif E.name == 'stirling-concentrator' then
+        global.stirling[E.unit_number] = nil
     end
 end)
 
@@ -355,3 +338,5 @@ end)
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     Thermosolar.events.on_player_cursor_stack_changed(event)
 end)
+
+script.on_nth_tick(61, Solar.events[61])

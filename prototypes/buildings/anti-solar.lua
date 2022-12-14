@@ -41,25 +41,18 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/anti-solar.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "anti-solar"},
-    max_health = 200,
+    minable = {mining_time = 1, result = "anti-solar"},
+    max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
     selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 0
-    },
     --allowed_effects = {"speed", "consumption"},
-    crafting_categories = {"solar-tower"},
-    crafting_speed = 1,
     energy_source = {
         type = 'electric',
         usage_priority = 'primary-output',
-        buffer_capacity = "500MJ",
-        output_flow_limit = "50MW",
-        input_flow_limit = "0W",
+        buffer_capacity = "100MJ",
         render_no_power_icon = false
     },
     energy_production = '100MW',
@@ -110,9 +103,8 @@ ENTITY {
                 --blend_mode = "additive",
                 draw_as_shadow = true,
                 shift = util.by_pixel(16, -0)
-            },
+            }
         }
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    production = "60kW",
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65}
   }

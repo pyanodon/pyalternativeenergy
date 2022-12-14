@@ -50,13 +50,10 @@ ENTITY{
     energy_source = {
         type = 'electric',
         usage_priority = 'primary-output',
-        buffer_capacity = '500MJ',
-        output_flow_limit = "50MW",
-        input_flow_limit = "0W",
+        buffer_capacity = '10MJ',
         render_no_power_icon = false
     },
     energy_production = '10MW',
-    energy_usage = '0kW',
     animation =
     {
         layers = {
@@ -67,7 +64,7 @@ ENTITY{
                 line_length = 5,
                 frame_count = 10,
                 shift = util.by_pixel(32, -48),
-                animation_speed = 0.0001
+                animation_speed = 0.001
             },
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/sh.png',
@@ -77,7 +74,7 @@ ENTITY{
                 frame_count = 10,
                 shift = util.by_pixel(32, -48),
                 draw_as_shadow = true,
-                animation_speed = 0.0001
+                animation_speed = 0.001
             },
         }
     },
