@@ -65,6 +65,7 @@ local function init_globals()
     global.solar_panels = global.solar_panels or {}
     global.antisolar_panels = global.antisolar_panels or {}
     global.lrf_panels = global.lrf_panels or {}
+    global.stirling = global.stirling or {}
 end
 
 script.on_init(init_globals)
@@ -263,6 +264,11 @@ script.on_nth_tick(55, function(event)
                 anti.active = true
             end
         end
+        for p,panel in pairs(global.stirling) do
+            if panel.valid == true then
+                panel.active = false
+            end
+        end
     else
         --log('hit')
         for p, panel in pairs(global.lrf_panels) do
@@ -275,6 +281,11 @@ script.on_nth_tick(55, function(event)
         for a,anti in pairs(global.antisolar_panels) do
             if anti.valid == true then
                 anti.active = false
+            end
+        end
+        for p,panel in pairs(global.stirling) do
+            if panel.valid == true then
+                panel.active = true
             end
         end
     end
