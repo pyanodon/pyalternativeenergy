@@ -16,8 +16,6 @@ GRAPHICS (feel free to insert any requierements here):
 
 CODING:
 
-- Solar panels MK02 to MK04 to change rotation during day (simulate sun tracking)
-- Make all the thermo solar buildings working as intended
 
 FYI:
 
@@ -27,9 +25,6 @@ FYI:
 KING TODO:
 
  - setup molten salt loops on all the power plants
-      - thermal solar
-      - solar updraft tower
-      - solar concentrator
       - mdh at 3000 degrees
  - convert all non electric buildings to heat based energy source
  - setup energy converter building with 4 variants
@@ -41,7 +36,6 @@ KING TODO:
 
 
       - Check lfr temps to match between panel and building.
-      - fix the solar panel mk2 and mk3 animations
 
 need to add lithium fluoride salt.
       - LiF is prepared from lithium hydroxide or lithium carbonate with hydrogen fluoride.
