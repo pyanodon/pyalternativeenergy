@@ -37,7 +37,7 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-concentrator.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "solar-concentrator"},
+    minable = {mining_time = 1, result = "solar-concentrator"},
     fast_replaceable_group = "solar-concentrator",
     max_health = 100,
     corpse = "big-remnants",
