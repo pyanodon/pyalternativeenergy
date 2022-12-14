@@ -21,18 +21,6 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "lrf-panel2"
-    },
-    {
-        type = "recipe-category",
-        name = "lrf-panel3"
-    },
-    {
-        type = "recipe-category",
-        name = "lrf-panel4"
-    },
-    {
-        type = "recipe-category",
         name = "simik-boiler"
     },
     {
