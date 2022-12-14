@@ -243,33 +243,12 @@ script.on_nth_tick(60, function(event)
 end)
 
 script.on_nth_tick(55, function(event)
-    --log('hit')
-    if game.surfaces['nauvis'].daytime >= 0.25 and game.surfaces['nauvis'].daytime < 0.75 then
-        --log('hit')
-        for p, panel in pairs(global.lrf_panels) do
-            if panel.valid == true then
-                panel.active = false
-            end
-        end
-        for p,panel in pairs(global.stirling) do
-            if panel.valid == true then
-                panel.active = false
-            end
-        end
-    else
-        --log('hit')
-        for p, panel in pairs(global.lrf_panels) do
-            if panel.valid == true then
-                panel.active = true
-            elseif panel.valid == false then
-                panel = nil
-            end
-        end
-        for p,panel in pairs(global.stirling) do
-            if panel.valid == true then
-                panel.active = true
-            end
-        end
+    local active = Thermosolar.calc_daylight(game.surfaces['nauvis']) > 0.5
+    for _, panel in pairs(global.lrf_panels) do
+        if panel.valid then panel.active = active end
+    end
+    for _, panel in pairs(global.stirling) do
+        if panel.valid then panel.active = active end
     end
 end)
 
