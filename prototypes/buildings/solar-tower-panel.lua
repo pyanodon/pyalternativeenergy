@@ -19,7 +19,7 @@ RECIPE{
         {'aerogel', 2},
     },
     results = {
-        {'solar-tower-panel', 2}
+        {'solar-tower-panel', 1}
     }
 }:add_unlock('thermal-mk04')
 
