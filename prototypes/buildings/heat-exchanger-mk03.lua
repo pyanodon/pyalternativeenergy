@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "py-heat-exchanger-mk03",
-    icon = "__pyfusionenergygraphics__/graphics/icons/py-heat-exchanger.png",
+    icon = "__pyfusionenergygraphics__/graphics/icons/py-heat-exchanger-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "py-heat-exchanger-mk03"},
