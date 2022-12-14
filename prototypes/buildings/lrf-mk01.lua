@@ -25,8 +25,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk01",
-    order = "a",
+    subgroup = "py-alternativeenergy-thermosolar",
+    order = "aa",
     place_result = "lrf-building-mk01",
     stack_size = 10
 }

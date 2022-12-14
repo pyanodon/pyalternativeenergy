@@ -29,10 +29,10 @@ ITEM{
     icon = '__pyalternativeenergygraphics__/graphics/icons/heliostats.png',
     icon_size = 64,
     flags = {},
-    subgroup = 'py-alternativeenergy-buildings-mk04',
-    order = 'a',
+    subgroup = 'py-alternativeenergy-thermosolar',
+    order = 'db',
     place_result = 'solar-tower-panel0',
-    stack_size = 10
+    stack_size = 100
 }
 
 

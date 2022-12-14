@@ -5,6 +5,8 @@ Date: ?
     - readded aerials
     - fixed the microwave transmitter
     - solar updraft tower rework
+    - solar tower megastructure rework
+    - solar concentrator rework
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 2022-11-29

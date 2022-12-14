@@ -4,7 +4,6 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"lrf-building-mk01", 1},
         {"small-parts-02", 200},
         {'niobium-plate', 100},
         {'advanced-circuit', 30},
@@ -26,8 +25,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-concentrator.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-buildings-mk02",
-    order = "a",
+    subgroup = "py-alternativeenergy-thermosolar",
+    order = "ba",
     place_result = "solar-concentrator",
     stack_size = 10
 }

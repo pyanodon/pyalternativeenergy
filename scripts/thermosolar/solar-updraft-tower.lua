@@ -1,7 +1,7 @@
 Solar_Updraft_Tower = {}
 Solar_Updraft_Tower.events = {}
 
-Solar_Updraft_Tower.power_generated_per_cover = 4000/3
+Solar_Updraft_Tower.power_generated_per_cover = 8000/3
 
 function Solar_Updraft_Tower.update_power_generation(tower)
     if not tower then
@@ -174,7 +174,7 @@ Solar_Updraft_Tower.events.on_gui_opened = function(event)
 	content_flow.add{type = 'label', name = 'average_generation'}
 	content_flow.add{type = 'label', name = 'daylight'}
 	content_flow.add{type = 'label', caption = {'sut-gui.range', Thermosolar.tower_range}}
-	content_flow.add{type = 'label', caption = {'sut-gui.energy-per-cover', Solar_Updraft_Tower.power_generated_per_cover * 0.06}}
+	content_flow.add{type = 'label', caption = {'sut-gui.energy-per-cover', format_energy(Solar_Updraft_Tower.power_generated_per_cover, 'W')}}
 
 	Solar_Updraft_Tower.update_gui(main_frame)
 end

@@ -24,8 +24,8 @@ ITEM{
     icon = '__pyalternativeenergygraphics__/graphics/icons/stirling-concentrator.png',
     icon_size = 64,
     flags = {},
-    subgroup = 'py-alternativeenergy-buildings-mk02',
-    order = 'd',
+    subgroup = 'py-alternativeenergy-thermosolar',
+    order = 'bb',
     place_result = 'stirling-concentrator',
     stack_size = 10
 }

@@ -75,8 +75,8 @@ ITEM {
     icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png',
     icon_size = 64,
     flags = {},
-    subgroup = 'py-alternativeenergy-buildings-mk03',
-    order = 'a',
+    subgroup = 'py-alternativeenergy-thermosolar',
+    order = 'ca',
     place_result = 'sut',
     stack_size = 10
 }
@@ -185,8 +185,8 @@ ITEM{
     icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png',
     icon_size = 64,
     flags = {},
-    subgroup = 'py-alternativeenergy-buildings-mk03',
-    order = 'a',
+    subgroup = 'py-alternativeenergy-thermosolar',
+    order = 'cb',
     place_as_tile = {result = 'sut-panel', condition = {mask}, condition_size = 1},
     stack_size = 1000,
     localised_name = {'tile-name.sut-panel'},

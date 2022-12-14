@@ -30,8 +30,8 @@ ITEM {
   icon = '__pyalternativeenergygraphics__/graphics/icons/solar-tower.png',
   icon_size = 64,
   flags = {},
-  subgroup = 'py-alternativeenergy-buildings-mk04',
-  order = 'a',
+  subgroup = 'py-alternativeenergy-thermosolar',
+  order = 'da',
   place_result = 'solar-tower-building',
   stack_size = 10
 }
@@ -162,7 +162,7 @@ ENTITY {
   icon = '__pyalternativeenergygraphics__/graphics/icons/solar-tower.png',
   icon_size = 64,
   flags = {'placeable-neutral', 'player-creation'},
-  minable = {mining_time = 0.2, result = 'solar-tower-building'},
+  minable = {mining_time = 20, result = 'solar-tower-building'},
   max_health = 5500,
   corpse = 'boiler-remnants',
   vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
@@ -213,7 +213,8 @@ ENTITY {
       effectivity = 1,
       burns_fluid = false,
       scale_fluid_usage = false,
-      fluid_usage_per_tick = 1
+      fluid_usage_per_tick = 1,
+      render_no_power_icon = false
   },
   working_sound = {
       sound = {

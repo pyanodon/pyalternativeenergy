@@ -85,6 +85,12 @@ data:extend {
         type = "item-subgroup",
         name = "py-alternativeenergy-special-buildings",
         group = "py-alternativeenergy",
+        order = "af"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-thermosolar",
+        group = "py-alternativeenergy",
         order = "ae"
     },
     {
