@@ -27,6 +27,7 @@ function Heliostat.update_power_generation(tower, excluded_heliostat)
 	end
     tower_data.max_production = (global.energy_per_heliostat * tower_data.heliostats) * tower.surface.solar_power_multiplier
 	tower_data.efficiency = tower_data.heliostats / Heliostat.max_heliostats * tower.surface.solar_power_multiplier
+	tower_data.max_salt_production = tower_data.efficiency * 960
 
     Heliostat.update_all_guis()
 end
@@ -114,7 +115,7 @@ Heliostat.events.on_gui_opened = function(event)
 	content_flow.style.vertical_spacing = 8
     content_flow.style.left_margin = 4
 	content_flow.style.vertical_align = 'center'
-	content_flow.style.width = 220
+	content_flow.style.width = 250
 
 	content_flow.add{type = 'progressbar', name = 'progressbar', style = 'electric_satisfaction_statistics_progressbar'}.style.horizontally_stretchable = true
 
@@ -122,6 +123,7 @@ Heliostat.events.on_gui_opened = function(event)
 
 	content_flow.add{type = 'label', name = 'total_heliostats'}
 	content_flow.add{type = 'label', name = 'average_generation'}
+	content_flow.add{type = 'label', name = 'effective_generation'}
 	content_flow.add{type = 'label', name = 'daylight'}
 	content_flow.add{type = 'label', caption = {'heliostat-gui.range', Thermosolar.tower_range}}
 	content_flow.add{type = 'label', caption = {'heliostat-gui.energy-per-heliostat', format_energy(global.energy_per_heliostat, 'W')}}
@@ -146,9 +148,10 @@ function Heliostat.update_gui(gui)
     local daylight = Thermosolar.calc_daylight(surface)
 
 	content_flow.progressbar.value = daylight
-	content_flow.progressbar.caption = {'sut-gui.energy', format_energy(tower_data.max_production * daylight, 'W'), format_energy(tower_data.max_production, 'W')}
+	content_flow.progressbar.caption = {'heliostat-gui.salt-generation', math.floor(tower_data.max_salt_production * daylight), math.floor(tower_data.max_salt_production)}
     content_flow.total_heliostats.caption = {'heliostat-gui.total-heliostats', tower_data.heliostats}
-    content_flow.average_generation.caption = {'sut-gui.average-generation', format_energy(tower_data.max_production * Thermosolar.calc_average_daylight(surface), 'W')}
+    content_flow.average_generation.caption = {'heliostat-gui.average-generation', math.floor(tower_data.max_salt_production * Thermosolar.calc_average_daylight(surface))}
+    content_flow.effective_generation.caption = {'heliostat-gui.effective-generation', format_energy(tower_data.max_production * daylight, 'W'), format_energy(tower_data.max_production, 'W')}
     content_flow.daylight.caption = {'sut-gui.daylight', math.floor(daylight * 100)}
 end
 
