@@ -50,5 +50,7 @@ Solar.events.on_built = function(event)
 end
 
 Solar.events.on_destroyed = function(event)
-	global.solarpanels[event.entity.unit_number] = nil
+	if Solar.animated_solarpanels[event.entity.name] then
+		global.solarpanels[event.entity.unit_number] = nil
+	end
 end
