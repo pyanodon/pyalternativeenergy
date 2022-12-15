@@ -9,26 +9,6 @@ Solar.animated_solarpanels = {
 
 Solar.events.on_init = function()
 	global.solarpanels = global.solarpanels or {}
-	global.unsynced_solarpanels = global.unsynced_solarpanels or {}
-end
-
-function Solar.sync_solarpanel_animations(name)
-	local new = {}
-	for _, panel in pairs(global.solarpanels) do
-		if panel.name == name then
-			local old_panel = panel
-			panel = panel.surface.create_entity{
-				name = name,
-				force = panel.force,
-				position = panel.position,
-				player = panel.last_user,
-				create_build_effect_smoke = false
-			}
-			old_panel.destroy()
-		end
-		new[panel.unit_number] = panel
-	end
-	global.solarpanels = new
 end
 
 Solar.events[61] = function()
@@ -46,19 +26,27 @@ Solar.events[61] = function()
 			panel.active = true
 		end
 	end
-
-	for name, _ in pairs(global.unsynced_solarpanels) do
-		Solar.sync_solarpanel_animations(name)
-	end
-	global.unsynced_solarpanels = {}
 end
 
 Solar.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
-	if Solar.animated_solarpanels[entity.name] then
-		global.solarpanels[entity.unit_number] = entity
-		global.unsynced_solarpanels[entity.name] = true
+	if not Solar.animated_solarpanels[entity.name] then return end
+
+	local new = {}
+	for _, panel in pairs(global.solarpanels) do
+		local old_panel = panel
+		panel = panel.surface.create_entity{
+			name = panel.name,
+			force = panel.force,
+			position = panel.position,
+			player = panel.last_user,
+			create_build_effect_smoke = false
+		}
+		old_panel.destroy()
+		new[panel.unit_number] = panel
 	end
+	global.solarpanels = new
+	global.solarpanels[entity.unit_number] = entity
 end
 
 Solar.events.on_destroyed = function(event)
