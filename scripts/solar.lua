@@ -61,6 +61,7 @@ Solar.events.on_built = function(event)
 	if not Solar.animated_solarpanels[entity.name] then return end
 	global.solarpanels[entity.unit_number] = entity
 	global.unsynced_solarpanels[entity.unit_number] = entity
+	entity.operable = false
 end
 
 Solar.events.on_destroyed = function(event)
