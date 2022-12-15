@@ -64,8 +64,7 @@ ENTITY{
                 height = 416,
                 line_length = 5,
                 frame_count = 10,
-                shift = util.by_pixel(32, -48),
-                animation_speed = 0.001
+                shift = util.by_pixel(32, -48)
             },
             {
                 filename = '__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/sh.png',
@@ -74,11 +73,17 @@ ENTITY{
                 line_length = 5,
                 frame_count = 10,
                 shift = util.by_pixel(32, -48),
-                draw_as_shadow = true,
-                animation_speed = 0.001
+                draw_as_shadow = true
             },
         }
     },
 
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
 }
+
+local entity = data.raw['electric-energy-interface']['solar-panel-mk03']
+local day_length = 12500 + 5000 + 5000
+local frame_count = entity.animation.layers[1].frame_count
+local animation_speed = 1 / day_length * frame_count
+entity.animation.layers[1].animation_speed = animation_speed
+entity.animation.layers[2].animation_speed = animation_speed

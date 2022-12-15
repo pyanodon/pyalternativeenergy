@@ -318,4 +318,4 @@ script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     Thermosolar.events.on_player_cursor_stack_changed(event)
 end)
 
-script.on_nth_tick(61, Solar.events[61])
+script.on_nth_tick(100, Solar.events[100])

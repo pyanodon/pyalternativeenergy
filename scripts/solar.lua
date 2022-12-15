@@ -9,9 +9,33 @@ Solar.animated_solarpanels = {
 
 Solar.events.on_init = function()
 	global.solarpanels = global.solarpanels or {}
+	global.unsynced_solarpanels = global.solarpanels or {}
 end
 
-Solar.events[61] = function()
+Solar.sync_solarpanels = function()
+	local new = {}
+	for _, panel in pairs(global.unsynced_solarpanels) do
+		local surface = panel.surface
+		local time = surface.daytime
+		if surface.morning <= time and time < (surface.morning + 100 / surface.ticks_per_day) then
+			local new_panel = surface.create_entity{
+				name = panel.name,
+				force = panel.force,
+				position = panel.position,
+				player = panel.last_user,
+				create_build_effect_smoke = false
+			}
+			global.solarpanels[panel.unit_number] = nil
+			global.solarpanels[new_panel.unit_number] = new_panel
+			panel.destroy()
+		else
+			new[panel.unit_number] = panel
+		end
+	end
+	global.unsynced_solarpanels = new
+end
+
+Solar.events[100] = function()
 	for _, panel in pairs(global.solarpanels) do
 		local daylight = Thermosolar.calc_daylight(panel.surface)
 		if panel.name == 'anti-solar' then daylight = 1 - daylight end
@@ -26,31 +50,22 @@ Solar.events[61] = function()
 			panel.active = true
 		end
 	end
+
+	if next(global.unsynced_solarpanels) then
+		Solar.sync_solarpanels()
+	end
 end
 
 Solar.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
 	if not Solar.animated_solarpanels[entity.name] then return end
-
-	local new = {}
-	for _, panel in pairs(global.solarpanels) do
-		local old_panel = panel
-		panel = panel.surface.create_entity{
-			name = panel.name,
-			force = panel.force,
-			position = panel.position,
-			player = panel.last_user,
-			create_build_effect_smoke = false
-		}
-		old_panel.destroy()
-		new[panel.unit_number] = panel
-	end
-	global.solarpanels = new
 	global.solarpanels[entity.unit_number] = entity
+	global.unsynced_solarpanels[entity.unit_number] = entity
 end
 
 Solar.events.on_destroyed = function(event)
-	if Solar.animated_solarpanels[event.entity.name] then
-		global.solarpanels[event.entity.unit_number] = nil
-	end
+	local entity = event.created_entity or event.entity
+	if not Solar.animated_solarpanels[entity.name] then return end
+	global.solarpanels[entity.unit_number] = nil
+	global.unsynced_solarpanels[entity.unit_number] = nil
 end
