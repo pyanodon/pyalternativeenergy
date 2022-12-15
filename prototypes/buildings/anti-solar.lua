@@ -53,7 +53,8 @@ ENTITY {
         type = 'electric',
         usage_priority = 'primary-output',
         buffer_capacity = "100MJ",
-        render_no_power_icon = false
+        render_no_power_icon = false,
+        input_flow_limit = '0W'
     },
     energy_production = '100MW',
     energy_usage = '0kW',
