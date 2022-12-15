@@ -115,7 +115,7 @@ Heliostat.events.on_gui_opened = function(event)
 	content_flow.style.vertical_spacing = 8
     content_flow.style.left_margin = 4
 	content_flow.style.vertical_align = 'center'
-	content_flow.style.width = 250
+	content_flow.style.width = 260
 
 	content_flow.add{type = 'progressbar', name = 'progressbar', style = 'electric_satisfaction_statistics_progressbar'}.style.horizontally_stretchable = true
 

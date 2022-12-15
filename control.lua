@@ -26,7 +26,7 @@ function _G.format_energy(energy, watts_or_joules)
         energy = energy / 1000
         prefix = prefix + 1
     end
-	return {'' , string.format('%.2f', energy), ' ', {si_prefixes[prefix]}, {watts_or_joules}}
+	return {'' , string.format('%.1f', energy), ' ', {si_prefixes[prefix]}, {watts_or_joules}}
 end
 
 _G.gui_events = {
