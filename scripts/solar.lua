@@ -25,6 +25,7 @@ Solar.sync_solarpanels = function()
 				player = panel.last_user,
 				create_build_effect_smoke = false
 			}
+			new_panel.operable = false
 			global.solarpanels[panel.unit_number] = nil
 			global.solarpanels[new_panel.unit_number] = new_panel
 			panel.destroy()
