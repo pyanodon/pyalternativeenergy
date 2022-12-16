@@ -4,9 +4,8 @@ Date: ?
   Changes:
     - readded aerials
     - fixed the microwave transmitter
-    - solar updraft tower rework
-    - solar tower megastructure rework
-    - solar concentrator rework
+    - thermosolar mk1-4 rework
+    - fixed animations for mk02 solar, mk03 solar, antisolar
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 2022-11-29
