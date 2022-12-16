@@ -73,7 +73,6 @@ RECIPE {
     },
     results = {
         {type = "item", name = "animal-eye", amount = 4},
-        {type = "item", name = "cage", amount = 1},
     },
     main_product = "animal-eye",
 }:add_unlock("photonics")
