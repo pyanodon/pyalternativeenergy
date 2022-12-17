@@ -120,6 +120,16 @@ for _, recipe in pairs(data.raw.recipe) do
     end
 end
 
+--ENERGY COSTS--
+
+
+
+
+
+
+
+
+
 --gather recipes for module changes
 local recipes_list =
 	{
