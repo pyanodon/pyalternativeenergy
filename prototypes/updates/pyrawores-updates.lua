@@ -391,3 +391,30 @@ RECIPE {
     subgroup = "py-rawores-uranium",
     order = "depleted-uranium-" .. recipe_num
 }:add_unlock("uranium-mk01")
+
+
+--pyRO
+
+data.raw['assembling-machine']['casting-unit-mk01'].energy_usage = "0.5MW"
+data.raw['assembling-machine']['casting-unit-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['casting-unit-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['casting-unit-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['hydroclassifier-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['hydroclassifier-mk03'].energy_usage = "1MW"
+data.raw['assembling-machine']['hydroclassifier-mk04'].energy_usage = "2MW"
+data.raw['assembling-machine']['impact-crusher-mk01'].energy_usage = "0.5MW"
+data.raw['assembling-machine']['impact-crusher-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['impact-crusher-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['impact-crusher-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['leaching-station-mk01'].energy_usage = "0.5MW"
+data.raw['assembling-machine']['leaching-station-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['leaching-station-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['leaching-station-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['scrubber-mk01'].energy_usage = "1MW"
+data.raw['assembling-machine']['scrubber-mk02'].energy_usage = "2MW"
+data.raw['assembling-machine']['scrubber-mk03'].energy_usage = "3MW"
+data.raw['assembling-machine']['scrubber-mk04'].energy_usage = "4MW"
+data.raw['assembling-machine']['wet-scrubber-mk01'].energy_usage = "1MW"
+data.raw['assembling-machine']['wet-scrubber-mk02'].energy_usage = "2MW"
+data.raw['assembling-machine']['wet-scrubber-mk03'].energy_usage = "3MW"
+data.raw['assembling-machine']['wet-scrubber-mk04'].energy_usage = "4MW"

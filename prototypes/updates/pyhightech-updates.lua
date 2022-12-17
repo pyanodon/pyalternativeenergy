@@ -185,3 +185,29 @@ RECIPE {
     },
     main_product = 'p-dope'
 }:add_unlock('semiconductor-doping-mk02')
+
+--pyHT--
+data.raw['assembling-machine']['chipshooter-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['chipshooter-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['chipshooter-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['clay-pit-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['clay-pit-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['clay-pit-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['electronics-factory-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['electronics-factory-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['electronics-factory-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['fbreactor-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['fbreactor-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['fbreactor-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['moondrop-greenhouse-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['moondrop-greenhouse-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['moondrop-greenhouse-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['nano-assembler-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['nano-assembler-mk03'].energy_usage = "2MW"
+--data.raw['assembling-machine']['nano-assembler-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['pcb-factory-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['pcb-factory-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['pcb-factory-mk04'].energy_usage = "3MW"
+data.raw['assembling-machine']['pulp-mill-mk02'].energy_usage = "1MW"
+data.raw['assembling-machine']['pulp-mill-mk03'].energy_usage = "2MW"
+data.raw['assembling-machine']['pulp-mill-mk04'].energy_usage = "3MW"
