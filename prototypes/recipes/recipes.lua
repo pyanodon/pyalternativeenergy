@@ -813,7 +813,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "lead-plate", amount = 5},
+        {type = "item", name = "lead-plate", amount = 6},
         {type = "item", name = "sb-oxide", amount = 1},
     },
     results = {
@@ -829,7 +829,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "molten-lead", amount = 100},
+        {type = "fluid", name = "molten-lead", amount = 50},
         {type = "item", name = "sb-oxide", amount = 4},
     },
     results = {
