@@ -34,7 +34,7 @@ for r, _ in pairs(data.raw.recipe) do
     RECIPE(r):replace_ingredient("solar-panel", "solar-panel-mk01")
 end
 
-RECIPE('chemical-science-pack'):add_ingredient({ type = 'item', name = 'nuclear-sample', amount = 1 })
+RECIPE('chemical-science-pack'):add_ingredient({ type = 'item', name = 'nuclear-sample', amount = 1 }):add_ingredient({ type = 'fluid', name = 'organic-acid-anhydride', amount = 50 })
 RECIPE("chemical-science-pack"):replace_ingredient("nexelit-plate", { type = "item", name = "self-assembly-monolayer", amount = 2 })
 RECIPE("chemical-science-pack"):replace_ingredient("tinned-cable", { type = "item", name = "small-parts-02", amount = 3 })
 RECIPE("chemical-science-pack"):set_fields {
@@ -113,7 +113,7 @@ RECIPE("filter-inserter"):replace_ingredient("duralumin", { "intermetallics", 1 
 --RECIPE("small-electric-pole"):set_category("handcrafting")
 
 RECIPE("medium-electric-pole"):add_unlock("electric-energy-distribution-1"):remove_ingredient("niobium-plate"):remove_ingredient("nbfe-alloy"):add_ingredient({type = "item", name = "aluminium-plate", amount = 4}):add_ingredient({type = "item", name = "chromium", amount = 1})
-    
+
 RECIPE("big-electric-pole"):remove_unlock("electric-energy-distribution-1"):add_unlock("electric-energy-distribution-2"):add_ingredient({type = "item", name = "concrete", amount = 4}):replace_ingredient("copper-cable", "tinned-cable")
 
 RECIPE("substation"):remove_unlock("electric-energy-distribution-2"):add_unlock("electric-energy-distribution-4")
