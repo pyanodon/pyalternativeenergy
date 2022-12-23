@@ -243,6 +243,7 @@ data:extend{{
     maximum_lifetime = 60,
     icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png',
     icon_size = 64,
+    localised_name = ''
 }}
 
 data:extend{{
@@ -259,4 +260,5 @@ data:extend{{
     maximum_lifetime = 60,
     icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png',
     icon_size = 64,
+    localised_name = ''
 }}
