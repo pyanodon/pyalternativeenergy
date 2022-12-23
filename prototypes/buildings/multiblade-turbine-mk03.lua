@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"multiblade-turbine-mk03", 1}
     }
-}:add_unlock("renewable-mk04")
+}:add_unlock("wind-mk03")
 
 ITEM {
     type = "item",
@@ -24,8 +24,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-special-buildings",
-    order = "d",
+    subgroup = "py-alternativeenergy-buildings-mk03",
+    order = "z",
     place_result = "multiblade-turbine-mk03",
     stack_size = 10
 }
@@ -48,12 +48,11 @@ ENTITY {
     energy_source = {
         type = "electric",
         usage_priority = "primary-output",
-        buffer_capacity = "500MJ",
-        output_flow_limit = "50MW",
+        buffer_capacity = "34MJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '15MW',
+    energy_production = '34MW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
@@ -99,15 +98,6 @@ data:extend(
         name = 'multiblade-turbine-mk03-north',
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
-                width = 288,
-                height = 288,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -0),
-                animation_speed = 0.25,
-            },
-            {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s5.png",
                 width = 320,
                 height = 224,
@@ -148,15 +138,6 @@ data:extend(
         type = 'animation',
         name = 'multiblade-turbine-mk03-northeast',
         layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
-                width = 288,
-                height = 288,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -0),
-                animation_speed = 0.25,
-            },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s6.png",
                 width = 320,
@@ -199,15 +180,6 @@ data:extend(
         name = 'multiblade-turbine-mk03-east',
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
-                width = 288,
-                height = 288,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -0),
-                animation_speed = 0.25,
-            },
-            {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s7.png",
                 width = 320,
                 height = 224,
@@ -247,15 +219,6 @@ data:extend(
         type = 'animation',
         name = 'multiblade-turbine-mk03-southeast',
         layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
-                width = 288,
-                height = 288,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -0),
-                animation_speed = 0.25,
-            },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s8.png",
                 width = 320,
@@ -297,15 +260,6 @@ data:extend(
         name = 'multiblade-turbine-mk03-south',
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
-                width = 288,
-                height = 288,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -0),
-                animation_speed = 0.25,
-            },
-            {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s1.png",
                 width = 320,
                 height = 224,
@@ -345,15 +299,6 @@ data:extend(
         type = 'animation',
         name = 'multiblade-turbine-mk03-southwest',
         layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
-                width = 288,
-                height = 288,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -0),
-                animation_speed = 0.25,
-            },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s2.png",
                 width = 320,
@@ -395,15 +340,6 @@ data:extend(
         name = 'multiblade-turbine-mk03-west',
         layers = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
-                width = 288,
-                height = 288,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, 0),
-                animation_speed = 0.25,
-            },
-            {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s3.png",
                 width = 320,
                 height = 224,
@@ -443,15 +379,6 @@ data:extend(
         type = 'animation',
         name = 'multiblade-turbine-mk03-northwest',
         layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
-                width = 288,
-                height = 288,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -0),
-                animation_speed = 0.25,
-            },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s4.png",
                 width = 320,

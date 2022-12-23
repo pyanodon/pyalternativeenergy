@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.7
+Date: ?
+  Changes:
+    - buffed multiblade turbine generation from 0.4kW to 4MW
+    - buffed multiblade turbine mk2 generation from 15MW to 34MW
+    - fixed animations for multiblade turbines mk1 and mk2
+---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2022-12-19
   Changes:
@@ -8,7 +15,7 @@ Date: 2022-12-19
     - fixed animations for mk02 solar, mk03 solar, antisolar.
     - adjusted crafting speed and energy usage on centrifuge mk01-mk04.
     - adjusted molten salt output on coal, gas, and oil power plants.
-  Increased energy usage:
+    - Increased energy usage:
     - advanced-foundry-mk02 to 5.4MW.
     - advanced-foundry-mk03 to 8MW.
     - advanced-foundry-mk04 to 10MW.

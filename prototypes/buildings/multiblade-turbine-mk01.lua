@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {"multiblade-turbine-mk01", 1}
     }
-}:add_unlock("renewable-mk02")
+}:add_unlock("wind-mk01")
 
 ITEM {
     type = "item",
@@ -24,8 +24,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-special-buildings",
-    order = "d",
+    subgroup = "py-alternativeenergy-buildings-mk01",
+    order = "z",
     place_result = "multiblade-turbine-mk01",
     stack_size = 10
 }
@@ -49,12 +49,11 @@ ENTITY {
     energy_source = {
         type = "electric",
         usage_priority = "primary-output",
-        buffer_capacity = "500MJ",
-        output_flow_limit = "50MW",
+        buffer_capacity = "4MJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '0.4MW',
+    energy_production = '4MW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     picture = {
