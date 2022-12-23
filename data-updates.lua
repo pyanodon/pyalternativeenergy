@@ -76,7 +76,7 @@ RECIPE("arithmetic-combinator"):add_ingredient({type = "item", name = "battery",
 RECIPE("decider-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("constant-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("spidertron"):add_ingredient({type = "item", name = "sc-engine", amount = 25})
-RECIPE("artillery-wagon"):add_ingredient({type = "item", name = "sc-engine", amount = 8})
+--RECIPE("artillery-wagon"):add_ingredient({type = "item", name = "sc-engine", amount = 8})
 RECIPE("satellite"):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "solar-panel-mk04", amount = 2}):replace_ingredient("fusion-reactor-mk01", "rtg"):add_ingredient({type = "item", name = "fuelrod-mk04", amount = 2})
 RECIPE("utility-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 1})
 RECIPE("space-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 1}):add_ingredient({type = "item", name = "milfe", amount = 1})
