@@ -5,6 +5,7 @@ Date: ?
     - buffed multiblade turbine generation from 0.4kW to 4MW
     - buffed multiblade turbine mk2 generation from 15MW to 34MW
     - fixed animations for multiblade turbines mk1 and mk2
+    - fixed crashes when placing turbines/tidal plants on a diffrent surface
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2022-12-19

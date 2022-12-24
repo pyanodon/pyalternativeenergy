@@ -79,6 +79,7 @@ script.on_event(on_built, function(event)
 
     local E = event.created_entity or event.entity
     if not E.valid then return end
+    local surface = E.surface
 
     if E.type == 'electric-energy-interface' then
         local turbine_type, mk = string.match(E.name, ('(%a+)%-turbine%-(mk%d+)'))
@@ -96,7 +97,7 @@ script.on_event(on_built, function(event)
                 --log(HE.name)
                 local ani = rendering.draw_animation{
                     animation = base_name .. '-north',
-                    surface = 'nauvis',
+                    surface = surface,
                     target = E,
                     render_layer = 129
                 }
@@ -107,23 +108,23 @@ script.on_event(on_built, function(event)
     end
 
     if E.name == 'nuke-tank-input' then
-        local out1 = game.surfaces['nauvis'].create_entity{
+        local out1 = surface.create_entity{
             name = 'nuke-tank-output',
             position = {E.position.x + 6, E.position.y},
             force = game.players.force
         }
-        local out2 = game.surfaces['nauvis'].create_entity{
+        local out2 = surface.create_entity{
             name = 'nuke-tank-output',
             position = {E.position.x + 6, E.position.y + 6},
             force = game.players.force
         }
-        local in2 = game.surfaces['nauvis'].create_entity{
+        local in2 = surface.create_entity{
             name = 'nuke-tank-input',
             position = {E.position.x, E.position.y + 6},
             force = game.players.force
         }
         --[[
-        local moderator = game.surfaces['nauvis'].create_entity{
+        local moderator = surface.create_entity{
             name = 'control-rod',
             position = {E.position.x + 3, E.position.y + 6},
             force = game.players.force
@@ -155,7 +156,7 @@ script.on_event(on_built, function(event)
             --log('hit')
             x = -1
         end
-        game.surfaces[E.surface.name].create_entity{
+        surface.create_entity{
             name = 'tidal-mk'.. string.match(E.name, '%d+'),
             position = {E.position.x + x, E.position.y + y},
             force = E.force,
@@ -179,7 +180,7 @@ script.on_event(on_built, function(event)
             --log('hit')
             x = -4
         end
-        game.surfaces[E.surface.name].create_entity{
+        surface.create_entity{
             name = 'numal-reef-mk' .. string.match(E.name, '%d+'),
             position = {E.position.x + x, E.position.y + y},
             force = E.force,
@@ -200,7 +201,7 @@ local function draw_windmill(direction)
         rendering.destroy(mill.animation)
         local ani = rendering.draw_animation{
             animation = mill.base_name .. direction,
-            surface = 'nauvis',
+            surface = mill.windmill.surface,
             target = mill.windmill,
             render_layer = 129
         }
