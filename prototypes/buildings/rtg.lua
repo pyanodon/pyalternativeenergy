@@ -47,19 +47,19 @@ ENTITY {
     energy_source =
 		{
 				type = "electric",
-				usage_priority = "primary-output",
+				usage_priority = "secondary-output",
+                input_flow_limit = "0kW",
 		},
 	burner =
 		{
 			type = "burner",
 			fuel_category = "fuelrod",
-			effectivity = 1,
+			effectivity = 50,
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,
 			emissions_per_minute = 0,
 		},
-	effectivity = 1,
-	max_power_output = "80MW",
+	max_power_output = "40MW",
     animation = {
         layers = {
             {

@@ -7,6 +7,8 @@ Date: ?
     - fixed animations for multiblade turbines mk1 and mk2
     - fixed crashes when placing turbines/tidal plants on a diffrent surface
     - fixed geothermal plant pipe output being in the same tile as the pipe input
+    - increase usefulness of rtg
+    - all steam turbines are moved to secondary-output
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2022-12-19

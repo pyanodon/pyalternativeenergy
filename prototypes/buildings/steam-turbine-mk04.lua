@@ -80,8 +80,7 @@ ENTITY {
     },
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
-        emissions_per_minute = 0.0,
+        usage_priority = "secondary-output",
     },
     horizontal_animation = {
         layers = {
