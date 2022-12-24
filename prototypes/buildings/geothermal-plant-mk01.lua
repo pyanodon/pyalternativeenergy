@@ -48,7 +48,6 @@ ENTITY {
       usage_priority = "secondary-input"
     },
     input_fluid_box = {
-      production_type = "input",
       pipe_picture = _G.assembler2pipepictures(),
       pipe_covers = _G.pipecoverspictures(),
       base_area = 1,
@@ -58,7 +57,9 @@ ENTITY {
           {position = {-6, 0}},
           {position = {6, 0}},
           {position = {0, 6}},
-      }
+      },
+      filter = 'pressured-water',
+      production_type = "input-output",
   },
     output_fluid_box =
     {
@@ -67,10 +68,9 @@ ENTITY {
       pipe_covers = DATA.Pipes.covers(false, true, true, true),
       pipe_connections =
       {
-        {
-          positions = { {0, -6}, {6, -0}, {-0, 6}, {-6, 0}}
-        }
-      }
+        {position = {0, -6}, type = 'output'}
+      },
+      production_type = "output",
     },
     energy_usage = "1MW",
     mining_speed = 2.5,
