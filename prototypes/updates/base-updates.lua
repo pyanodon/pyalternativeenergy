@@ -141,6 +141,15 @@ ENTITY("beacon", "beacon").energy_usage = "2MW"
 data.raw.furnace["steel-furnace"].energy_usage = "2MW"
 data.raw.furnace["steel-furnace"].crafting_speed = 4
 
+data.raw['roboport']['py-ze'].energy_usage = "1MW"
+data.raw['roboport']['py-ze-mk02'].energy_usage = "2MW"
+data.raw['roboport']['py-ze-mk03'].energy_usage = "3MW"
+data.raw['roboport']['py-ze-mk04'].energy_usage = "4MW"
+
+RECIPE('py-ze-mk02'):remove_unlock("py-accumulator-mk02"):add_unlock("robotics"):replace_ingredient('iron-gear-wheel', 'small-parts-02'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }:add_ingredient({type = "item", name = "eva", amount = 20})
+RECIPE('py-ze-mk03'):remove_unlock("py-accumulator-mk03"):add_unlock("advanced-robotics"):replace_ingredient('iron-gear-wheel', 'small-parts-03'):add_ingredient({type = "item", name = "ns-material", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }:replace_ingredient('plastic-bar', 'biopolymer'):add_ingredient({type = "item", name = "super-steel", amount = 15}):add_ingredient({type = "item", name = "cf", amount = 10}):add_ingredient({type = "item", name = "heavy-fermion", amount = 5}):add_ingredient({type = "item", name = "superconductor", amount = 3})
+RECIPE('py-ze-mk04'):remove_unlock("kevlar-mk02"):add_unlock("ht-robotics"):add_ingredient({type = "item", name = "harmonic-absorber", amount = 4}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 2}):add_ingredient({type = "item", name = "intelligent-unit", amount = 1}):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 1}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+
 --mechanical-parts on vanilla stuff--
 --RECIPE("train-stop"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("power-switch"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
