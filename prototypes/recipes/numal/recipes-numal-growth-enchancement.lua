@@ -2,7 +2,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 	FUN.autorecipes {
     name = 'numal-improved',
-	category = 'creature-chamber',
+	category = 'numal',
 	--module_limitations = 'numal',
 	subgroup = 'py-alienlife-numal',
 	order = 'b',
