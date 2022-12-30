@@ -9,6 +9,8 @@ Date: ?
     - fixed geothermal plant pipe output being in the same tile as the pipe input
     - increase usefulness of rtg
     - all steam turbines are moved to secondary-output
+    - HAWT, VAWT, and Tidal Plants no longer have huge internal energy buffers
+    - tidal plants now support smart cursor (Q)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2022-12-19

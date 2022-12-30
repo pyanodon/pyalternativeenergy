@@ -37,8 +37,9 @@ ENTITY {
     name = 'tidal-mk01',
     icon = '__pyalternativeenergygraphics__/graphics/icons/tidal-mk01.png',
     icon_size = 64,
-    flags = {'placeable-neutral', 'player-creation', "not-rotatable"},
+    flags = {'placeable-neutral', 'player-creation', "not-rotatable", 'not-blueprintable'},
     minable = {mining_time = 0.5, result = "tidal-mk01"},
+    placeable_by = {item = 'tidal-mk01', count = 1},
     fast_replaceable_group = 'tidal-mk01',
     max_health = 400,
     corpse = 'big-remnants',
@@ -49,12 +50,12 @@ ENTITY {
     energy_source = {
         type = 'electric',
         usage_priority = 'primary-output',
-        buffer_capacity = '500MJ',
-        output_flow_limit = '50MW',
+        
+        buffer_capacity = "9MJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '5MW',
+    energy_production = '9MW',
     energy_usage = '0kW',
     continuous_animation = true,
     animations = {

@@ -48,8 +48,7 @@ ENTITY {
     energy_source = {
         type = "electric",
         usage_priority = "primary-output",
-        buffer_capacity = "500MJ",
-        output_flow_limit = "50MW",
+        buffer_capacity = "80MJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
