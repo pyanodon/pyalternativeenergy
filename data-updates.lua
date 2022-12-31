@@ -122,13 +122,39 @@ end
 
 --ENERGY COSTS--
 
+--ENERGY PRODUCTION DESCRIPTION --
+local electric_energy_interfaces = {
+  'hawt-turbine-mk01',
+  'hawt-turbine-mk02',
+  'hawt-turbine-mk03',
+  'hawt-turbine-mk04',
+  'vawt-turbine-mk01',
+  'vawt-turbine-mk02',
+  'vawt-turbine-mk03',
+  'vawt-turbine-mk04',
+  'tidal-mk01',
+  'tidal-mk02',
+  'tidal-mk03',
+  'tidal-mk04',
+  'multiblade-turbine-mk01',
+  'multiblade-turbine-mk03',
+  'solar-panel-mk02',
+  'solar-panel-mk03',
+  'anti-solar'
+}
 
-
-
-
-
-
-
+for _, name in pairs(electric_energy_interfaces) do
+  local item = data.raw.item[name]
+  local entity = data.raw['electric-energy-interface'][name]
+  local output = {'entity-description.max-output', entity.energy_production}
+  if item.localised_description then
+    item.localised_description = {'', item.localised_description, '\n', output}
+  elseif entity.localised_description then
+    item.localised_description = {'', entity.localised_description, '\n', output}
+  else
+    item.localised_description = {'?', {'', {'entity-description.' .. name}, '\n', output}, output}
+  end
+end
 
 --gather recipes for module changes
 local recipes_list =

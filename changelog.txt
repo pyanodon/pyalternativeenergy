@@ -12,6 +12,7 @@ Date: ?
     - all steam turbines are moved to secondary-output
     - HAWT, VAWT, and Tidal Plants no longer have huge internal energy buffers
     - tidal plants now support smart cursor (Q)
+    - Added max energy generation text to hawt,vwat,solar mk2 mk3,antisolar,multiblade
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2022-12-19
