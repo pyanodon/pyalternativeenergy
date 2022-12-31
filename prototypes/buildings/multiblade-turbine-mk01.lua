@@ -5,18 +5,17 @@ RECIPE {
     type = "recipe",
     name = "multiblade-turbine-mk01",
     energy_required = 0.5,
-    enabled = false,
+    enabled = true,
     ingredients = {
-        {"aerial-base", 1},
-        {"rotor-mk01", 3},
-        {"plastic-bar", 100},
-        {"vane-mk01", 1},
-        {"tower-mk01", 1},
+        {"small-electric-pole", 2},
+        {"small-parts-01", 8},
+        {"stone-brick", 6},
+        {'inductor1', 6}
     },
     results = {
         {"multiblade-turbine-mk01", 1}
     }
-}:add_unlock("wind-mk01")
+}
 
 ITEM {
     type = "item",
@@ -49,11 +48,11 @@ ENTITY {
     energy_source = {
         type = "electric",
         usage_priority = "primary-output",
-        buffer_capacity = "4MJ",
+        buffer_capacity = "800kJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '4MW',
+    energy_production = '800kW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     picture = {
