@@ -81,7 +81,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "mpa", amount = 1},
-        {type = "item", name = "glass", amount = 2},
+        {type = "item", name = "prepared-glass", amount = 2},
         {type = "item", name = "stainless-steel", amount = 1},
         {type = "item", name = "milfe", amount = 1},
         {type = "item", name = "xeno-egg", amount = 5},

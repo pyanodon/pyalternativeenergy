@@ -14,6 +14,7 @@ RECIPE {
         {type = "item", name = "lithium-niobate", amount = 5},
         {type = "item", name = "colloidal-silica", amount = 2},
         {type = "item", name = "transparent-anode", amount = 1},
+        {type = "item", name = "conductive-sheet", amount = 1},
         {type = "fluid", name = "vacuum", amount = 500},
     },
     results = {
@@ -31,6 +32,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "laser-module", amount = 1},
         {type = "item", name = "cladded-core", amount = 1},
+        {type = "item", name = "prepared-glass", amount = 1},
         {type = "item", name = "dbr", amount = 4},
         {type = "item", name = "gaas", amount = 2},
         {type = "item", name = "acrylic", amount = 3},

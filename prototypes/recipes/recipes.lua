@@ -651,6 +651,7 @@ RECIPE {
         {type = "item", name = "processor-core", amount = 1},
         {type = "item", name = "heavy-n", amount = 5},
         {type = "item", name = "photonic-crystal", amount = 1},
+        {type = "item", name = "clean-glass-sheet", amount = 1},
         {type = "fluid", name = "helium", amount = 50},
         {type = "item", name = "ingap", amount = 1},
         {type = "item", name = "ingaas", amount = 1},
