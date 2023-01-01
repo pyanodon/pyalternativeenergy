@@ -45,7 +45,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'numal', amount = 2},
+        {type = 'item', name = 'numal-mk02', amount = 2},
         {type = 'item', name = 'alien-sample-03', amount = 1},
         {type = 'item', name = 'caged-mukmoux', amount = 1},
         {type = 'item', name = 'guts', amount = 5},
@@ -55,7 +55,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'numal-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'empty-barrel', amount = 15},
-        {type = 'item', name = 'numal', amount = 1, probability = 0.6},
+        {type = 'item', name = 'numal-mk02', amount = 1, probability = 0.6},
     },
     main_product = "numal-mk03",
     icons =
@@ -78,7 +78,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = 'item', name = 'numal', amount = 2},
+        {type = 'item', name = 'numal-mk03', amount = 2},
         {type = 'item', name = 'zinc-finger-proteins', amount = 1},
         {type = 'item', name = 'caged-mukmoux', amount = 1},
         {type = 'item', name = 'guts', amount = 5},
@@ -88,7 +88,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'numal-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'empty-barrel', amount = 15},
-        {type = 'item', name = 'numal', amount = 1, probability = 0.7},
+        {type = 'item', name = 'numal-mk03', amount = 1, probability = 0.7},
     },
     main_product = "numal-mk04",
     icons =
