@@ -64,9 +64,8 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'numal', amount = 4},
-                    {name = 'trits', amount =1},
-					{name = 'cdna', amount =1},
+					{name = 'numal', add_amount = 2},
+					{name = 'numal-food-01',remove_item = true},
 					{name = 'numal-food-02', amount =1},
 					{name = 'barrel-milk', amount = 2},
 				},
@@ -98,9 +97,9 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name = 'numal', add_amount = 3},
-					{name = 'dhilmos', amount = 5},
-					{name = 'vrauks', amount =2},
-					{name = 'numal-food-02', amount =1},
+					{name = 'dhilmos', add_amount = 3},
+					{name = 'vrauks', add_amount = 2},
+					{name = 'numal-food-02', add_amount = 2},
 				},
 			results =
 				{
@@ -273,6 +272,7 @@ RECIPE {
 			ingredients =
 				{
 					{name = 'numal-egg', add_amount = 4},
+					{name = 'numal-food-01',remove_item = true},
 					{name = 'bedding', amount = 3},
 					{name = 'caged-auog', amount = 1},
 					{name = 'numal-food-02', amount =1},
@@ -289,6 +289,8 @@ RECIPE {
 			ingredients =
 				{
 					{name = 'numal-egg', add_amount = 4},
+					{name = 'numal-food-02',remove_item = true},
+					{name = 'numal-food-01', amount =2},
 					{name = 'arthurian-egg', amount = 5},
 					{name = 'navens', amount =5},
 				},
@@ -304,13 +306,14 @@ RECIPE {
 			ingredients =
 				{
 					{name = 'numal-egg', add_amount = 5},
-					{name = 'arthurian-egg', amount = 5},
-					{name = 'navens', amount =5},
-					{name = 'numal-food-02', amount =1},
+					{name = 'numal-food-01',remove_item = true},
+					{name = 'arthurian-egg', add_amount = 4},
+					{name = 'navens', add_amount =3},
+					{name = 'numal-food-02', amount =2},
 				},
 			results =
 				{
-					{name = 'numal-egg', add_amount = 20},
+					{name = 'numal-egg', amount_min = 12, amount_max = 20},
 				},
 			crafting_speed = 80,
 			tech = 'numal-mk04'
