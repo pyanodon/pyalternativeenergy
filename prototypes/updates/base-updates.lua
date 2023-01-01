@@ -159,7 +159,14 @@ RECIPE("flying-robot-frame"):add_ingredient { type = "item", name = "mechanical-
 RECIPE("chemical-science-pack"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("space-science-pack"):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 
-RECIPE("light-armor"):add_ingredient{type = 'item', name = 'small-parts-01', amount = 20}:add_ingredient{type = 'item', name = 'inductor1', amount = 20}
+RECIPE("light-armor"):set_fields {
+    ingredients = {
+        { 'small-parts-01', 20},
+        { 'inductor1', 4},
+        { 'steel-plate', 20},
+    },
+    enabled = false
+}:add_unlock('steel-axe')
 RECIPE("heavy-armor"):set_fields {
     ingredients = {
         { "duralumin", 20 },
@@ -182,6 +189,7 @@ RECIPE("modular-armor"):set_fields {
         { 'small-parts-02', 20},
         { "stainless-steel", 10 },
         { "filtration-media", 2 },
+        { "kevlar", 80 },
         { type = "fluid", name ="molten-titanium", amount=400 },
     },
     category = 'crafting-with-fluid'
@@ -201,6 +209,7 @@ RECIPE("power-armor"):set_fields {
         { "hydraulic-system-mk01", 2 },
         { "cooling-tower-mk02", 1 },
         { "mositial-nx", 20 },
+        { "kevlar", 100 },
         { type = "fluid", name ="molten-nexelit", amount=600 },
     },
     category = 'crafting-with-fluid'
@@ -223,12 +232,14 @@ RECIPE("power-armor-mk2"):set_fields {
         { "metallic-glass", 20 },
         { "nxzngd", 40 },
         { "reduced-nexelit", 20 },
-        { "biopolymer", 5 },
+        { "biopolymer", 115 },
         { "beacon", 1 },
+        { "kevlar", 120 },
         { type = "fluid", name ="molten-super-steel", amount=800 },
     },
     category = 'crafting-with-fluid'
 }
+
 
 --[[
 data.raw.furnace["steel-furnace"].energy_source = {
