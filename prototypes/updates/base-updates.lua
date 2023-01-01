@@ -159,7 +159,76 @@ RECIPE("flying-robot-frame"):add_ingredient { type = "item", name = "mechanical-
 RECIPE("chemical-science-pack"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("space-science-pack"):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 
-
+RECIPE("light-armor"):add_ingredient{type = 'item', name = 'small-parts-01', amount = 20}:add_ingredient{type = 'item', name = 'inductor1', amount = 20}
+RECIPE("heavy-armor"):set_fields {
+    ingredients = {
+        { "duralumin", 20 },
+        { "titanium-plate", 40 },
+        { "electronic-circuit", 25 },
+        { "plastic-bar", 10 },
+        { 'small-parts-01', 20},
+        { 'latex-slab', 4},
+        { 'intermetallics', 5}
+    },
+}
+RECIPE("modular-armor"):set_fields {
+    ingredients = {
+        { "advanced-circuit", 55 },
+        { "electronics-mk02", 10 },
+        { "self-assembly-monolayer", 10 },
+        { "mechanical-parts-02", 10 },
+        { "utility-box-mk02", 1 },
+        { 'small-parts-01', 40},
+        { 'small-parts-02', 20},
+        { "stainless-steel", 10 },
+        { "filtration-media", 2 },
+        { type = "fluid", name ="molten-titanium", amount=400 },
+    },
+    category = 'crafting-with-fluid'
+}
+RECIPE("power-armor"):set_fields {
+    ingredients = {
+        { "processing-unit", 80 },
+        { "biobattery", 12 },
+        { 'small-parts-01', 120},
+        { 'small-parts-02', 100},
+        { 'small-parts-03', 80},
+        { "super-steel", 20 },
+        { "nanofibrils", 6 },
+        { "electronics-mk03", 20 },
+        { "mechanical-parts-03", 20 },
+        { "utility-box-mk03", 1 },
+        { "hydraulic-system-mk01", 2 },
+        { "cooling-tower-mk02", 1 },
+        { "mositial-nx", 20 },
+        { type = "fluid", name ="molten-nexelit", amount=600 },
+    },
+    category = 'crafting-with-fluid'
+}
+RECIPE("power-armor-mk2"):set_fields {
+    ingredients = {
+        { "intelligent-unit", 115 },
+        { "quantum-battery", 12 },
+        { "supercapacitor", 12 },
+        { 'small-parts-02', 100},
+        { 'small-parts-03', 120},
+        { "electronics-mk04", 30 },
+        { "mechanical-parts-04", 30 },
+        { "utility-box-mk04", 1 },
+        { "hydraulic-system-mk02", 2 },
+        { "cooling-tower-mk02", 1 },
+        { "sc-engine", 6 },
+        { "vacuum-pump-mk04", 2 },
+        { "ht-pipes", 10 },
+        { "metallic-glass", 20 },
+        { "nxzngd", 40 },
+        { "reduced-nexelit", 20 },
+        { "biopolymer", 5 },
+        { "beacon", 1 },
+        { type = "fluid", name ="molten-super-steel", amount=800 },
+    },
+    category = 'crafting-with-fluid'
+}
 
 --[[
 data.raw.furnace["steel-furnace"].energy_source = {

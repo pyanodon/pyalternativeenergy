@@ -51,11 +51,11 @@ ENTITY {
         type = 'electric',
         usage_priority = 'primary-output',
         
-        buffer_capacity = "9MJ",
+        buffer_capacity = "6MJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '9MW',
+    energy_production = '6MW',
     energy_usage = '0kW',
     continuous_animation = true,
     animations = {
