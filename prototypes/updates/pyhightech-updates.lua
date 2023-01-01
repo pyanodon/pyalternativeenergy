@@ -85,7 +85,7 @@ RECIPE("electronic-circuit"):add_ingredient({type = "item", name = "battery-mk00
 RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "quantum-battery", amount = 2}):add_ingredient({type = "item", name = "photonic-chip", amount = 1}):add_ingredient({type = "item", name = "biofet", amount = 3})
 RECIPE("nanochip"):add_ingredient({type = "item", name = "quantum-dots", amount = 2}):add_ingredient({type = "item", name = "quantum-well", amount = 2}):add_ingredient({type = "item", name = "nano-wires", amount = 2})
 RECIPE("kondo-processor"):add_ingredient({type = "item", name = "nano-wires", amount = 3})
-RECIPE("pi-josephson-junction"):add_ingredient({type = "item", name = "mqdc", amount = 1}):add_ingredient({type = "item", name = "time-crystal", amount = 1})
+RECIPE("pi-josephson-junction"):add_ingredient({type = "item", name = "mqdc", amount = 1}):add_ingredient({type = "item", name = "time-crystal", amount = 1}):add_ingredient{type = 'item', name = 'conductive-sheet', amount = 4}
 RECIPE("kondo-core"):add_ingredient({type = "item", name = "gaas", amount = 1}):add_ingredient({type = "item", name = "heavy-p-type", amount = 10}):add_ingredient({type = "item", name = "light-n", amount = 10})
 RECIPE("nanocrystaline-core"):remove_unlock("nano-tech"):add_unlock("battery-mk04")
 RECIPE('crco-alloy'):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
