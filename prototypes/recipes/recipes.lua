@@ -597,7 +597,7 @@ RECIPE {
         {type = "item", name = "conductive-sheet", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("solar-mk03")
+}:add_unlock("solar-mk02")
 
 RECIPE {
     type = "recipe",

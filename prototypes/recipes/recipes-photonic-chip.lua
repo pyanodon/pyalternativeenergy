@@ -14,7 +14,7 @@ RECIPE {
         {type = "item", name = "lithium-niobate", amount = 5},
         {type = "item", name = "colloidal-silica", amount = 2},
         {type = "item", name = "transparent-anode", amount = 1},
-        {type = "item", name = "monocrystalline-cell", amount = 1},
+        {type = "item", name = "conductive-sheet", amount = 1},
         {type = "fluid", name = "vacuum", amount = 500},
     },
     results = {
