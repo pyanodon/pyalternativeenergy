@@ -2900,3 +2900,50 @@ ITEM {
     order = "ga",
     stack_size = 100
 }
+
+ITEM {
+    type = "item",
+    name = "numal-codex-mk02",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
+         {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk02",
+    order = "k",
+    stack_size = 50
+}
+
+
+ITEM {
+    type = "item",
+    name = "numal-codex-mk03",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
+         {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk03",
+    order = "k",
+    stack_size = 50
+}
+
+
+ITEM {
+    type = "item",
+    name = "numal-codex-mk04",
+    icons =
+    {
+         {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
+         {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22},
+    },
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-alienlife-codex-mk04",
+    order = "k",
+    stack_size = 50
+}
