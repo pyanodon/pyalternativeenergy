@@ -80,6 +80,12 @@ data:extend {
         group = "py-alternativeenergy",
         order = "z"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-engine-units",
+        group = "py-alternativeenergy",
+        order = "zz"
+    },
     --SPECIALS--
     {
         type = "item-subgroup",
@@ -106,3 +112,6 @@ data:extend {
         order = 'bma'
     },
 }
+
+data.raw.item['engine-unit'].subgroup = 'py-alternativeenergy-engine-units'
+data.raw.item['electric-engine-unit'].subgroup = 'py-alternativeenergy-engine-units'

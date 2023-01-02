@@ -1873,7 +1873,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/rotor.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "intermediate-product",
+    subgroup = "py-alternativeenergy-engine-units",
     order = "i[electric-engine-unit]",
     stack_size = 100
 }
@@ -1884,7 +1884,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/stator.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "intermediate-product",
+    subgroup = "py-alternativeenergy-engine-units",
     order = "i[electric-engine-unit]",
     stack_size = 100
 }
@@ -1983,7 +1983,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/rotor-m.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "intermediate-product",
+    subgroup = "py-alternativeenergy-engine-units",
     order = "j[electric-engine-unit]",
     stack_size = 100
 }
@@ -1994,7 +1994,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/sc-engine.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "intermediate-product",
+    subgroup = "py-alternativeenergy-engine-units",
     order = "j[electric-engine-unit]",
     stack_size = 100
 }
@@ -2005,7 +2005,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/sc-stator.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "intermediate-product",
+    subgroup = "py-alternativeenergy-engine-units",
     order = "j[electric-engine-unit]",
     stack_size = 100
 }
