@@ -31,7 +31,7 @@ end
 Thermosolar.events.on_player_cursor_stack_changed = function(event)
     for _, player in pairs(game.connected_players) do
         local stack = player.cursor_stack
-        if stack.valid_for_read and tower_circle_render_items[stack.name] then
+        if stack and stack.valid_for_read and tower_circle_render_items[stack.name] then
             for _, tower_data in pairs(global.solar_updraft_towers) do
                 draw_circle(tower_data)
             end
