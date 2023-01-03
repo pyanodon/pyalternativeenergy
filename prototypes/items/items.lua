@@ -825,16 +825,41 @@ ITEM {
     stack_size = 100
 }
 
+data.raw['battery-equipment']['battery-equipment'].take_result = 'battery-mk01'
+data.raw['battery-equipment']['battery-equipment'].localised_name = {'item-name.battery-mk01'}
+data.raw['battery-equipment']['battery-equipment'].energy_source.buffer_capacity = '10MJ'
+
 ITEM {
     type = "item",
     name = "battery-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk01.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-hightech-items",
-    order = "aae",
-    stack_size = 100
+    subgroup = "py-battery-equipment",
+    order = "aa",
+    stack_size = 100,
+    placed_as_equipment_result = 'battery-equipment',
+    localised_name = {'item-name.battery-mk01'},
+    localised_description = {'item-description.battery-mk01'}
 }
+
+data:extend{{
+    type = 'battery-equipment',
+    categories = {'armor'},
+    shape = {width = 1, height = 1, type = 'full'},
+    name = 'battery-mk00',
+    sprite = {
+        width = 64,
+        height = 64,
+        filename = '__pyalternativeenergygraphics__/graphics/icons/battery-mk00.png',
+    },
+    energy_source = {
+        type = 'electric',
+        buffer_capacity = '800kJ',
+        usage_priority = 'tertiary'
+    },
+    localised_name = {'item-name.battery-mk00'},
+}}
 
 ITEM {
     type = "item",
@@ -842,9 +867,11 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk00.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-hightech-items",
-    order = "aae",
-    stack_size = 100
+    subgroup = "py-battery-equipment",
+    order = "a",
+    stack_size = 100,
+    localised_name = {'item-name.battery-mk00'},
+    placed_as_equipment_result = 'battery-mk00'
 }
 
 ITEM {
@@ -891,6 +918,23 @@ ITEM {
     stack_size = 100
 }
 
+data:extend{{
+    type = 'battery-equipment',
+    categories = {'armor'},
+    shape = {width = 2, height = 2, type = 'full'},
+    name = 'quantum-battery',
+    sprite = {
+        width = 64,
+        height = 64,
+        filename = '__pyalternativeenergygraphics__/graphics/icons/quantum-battery.png'
+    },
+    energy_source = {
+        type = 'electric',
+        buffer_capacity = '4GJ',
+        usage_priority = 'tertiary'
+    }
+}}
+
 ITEM {
     type = "item",
     name = "quantum-battery",
@@ -902,9 +946,10 @@ ITEM {
     fuel_acceleration_multiplier = 3.5,
     fuel_top_speed_multiplier = 2.5,
     burnt_result = "used-quantum-battery",
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
-    stack_size = 10
+    subgroup = "py-battery-equipment",
+    order = "d",
+    stack_size = 10,
+    placed_as_equipment_result = 'quantum-battery'
 }
 
 ITEM {
@@ -913,8 +958,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/used-quantum-battery.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-battery-equipment",
+    order = "db",
     stack_size = 10
 }
 

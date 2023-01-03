@@ -239,7 +239,91 @@ RECIPE("power-armor-mk2"):set_fields {
     },
     category = 'crafting-with-fluid'
 }
+RECIPE("fusion-reactor-equipment"):set_fields {
+    ingredients = {
+        {'sc-unit', 2},
+        {'reinforced-wall-shield', 1},
+        {'cryocooler', 1},
+        {'hts-coil', 8},
+        {'super-alloy', 10},
+        {'bioreceptor', 1},
+        {'iron-nanoparticles', 2},
+        { 'small-parts-03', 10},
+        { 'kondo-processor', 1},
+        { 'medium-electric-pole', 1 },
+        { type = "fluid", name ="deuterium", amount=150 },
+        { type = "fluid", name ="tritium", amount=200 },
+    },
+    category = 'crafting-with-fluid'
+}
+RECIPE("belt-immunity-equipment"):set_fields {
+    ingredients = {
+        {'brake-mk01', 1},
+        {'intermetallics', 5},
+        {'electronic-circuit', 5},
+    },
+    category = 'crafting'
+}
+RECIPE("night-vision-equipment"):set_fields {
+    ingredients = {
+        {'lens', 2},
+        {'small-parts-01', 10},
+        {'electronic-circuit', 5},
+        {'plastic-bar', 5},
+    },
+    category = 'crafting'
+}
+RECIPE("personal-roboport-mk2-equipment"):set_fields {
+    ingredients = {
+        {'py-ze', 1},
+        {'small-parts-01', 10},
+        {'advanced-circuit', 5},
+        {'mechanical-parts-01', 2},
+        {'personal-roboport-equipment', 5},
+        {'aluminium-plate', 20},
+    },
+    category = 'crafting'
+}
+RECIPE("solar-panel-equipment"):set_fields {
+    ingredients = {
+        {'solar-panel-mk01', 1},
+        {'plastic-bar', 5},
+        {'lithium', 10},
+        {'medium-electric-pole', 1}
+    },
+    category = 'crafting'
+}
+RECIPE("exoskeleton-equipment"):set_fields {
+    ingredients = {
+        {'neuromorphic-chip', 1},
+        {'gh', 20},
+        {'cbp', 20},
+        {'antiviral', 20},
+        {'sc-engine', 6},
+        {'brake-mk04', 2},
+        {'gearbox-mk04', 2},
+        {'super-steel', 80},
+        {'processing-unit', 60},
+        {'metastable-quasicrystal', 40},
+        {'small-parts-03', 300},
+    },
+    category = 'crafting'
+}
 
+data.raw.technology['solar-panel-equipment'].prerequisites = {'solar-mk01', 'modular-armor'}
+data.raw.technology['night-vision-equipment'].prerequisites = {'personal-roboport-equipment'}
+data.raw.technology['belt-immunity-equipment'].prerequisites = {'personal-roboport-equipment'}
+data.raw.technology['exoskeleton-equipment'].prerequisites = {'bio-implants', 'power-armor'}
+data.raw.technology['fusion-reactor-equipment'].prerequisites = {'power-armor', 'fusion-mk02'}
+data.raw.technology['personal-roboport-mk2-equipment'].prerequisites = {'solar-panel-equipment', 'modular-armor', 'personal-roboport-equipment'}
+
+TECHNOLOGY('solar-panel-equipment'):add_pack('py-science-pack-2'):add_pack('chemical-science-pack')
+TECHNOLOGY('night-vision-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
+TECHNOLOGY('belt-immunity-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
+TECHNOLOGY("personal-roboport-mk2-equipment"):remove_pack("military-science-pack"):remove_pack("production-science-pack")
+
+data.raw['movement-bonus-equipment']['exoskeleton-equipment'].movement_bonus = 2
+data.raw['movement-bonus-equipment']['exoskeleton-equipment'].energy_consumption = '750kW'
 
 --[[
 data.raw.furnace["steel-furnace"].energy_source = {
