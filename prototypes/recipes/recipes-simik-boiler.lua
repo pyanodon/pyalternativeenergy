@@ -12,7 +12,7 @@ RECIPE {
     },
     subgroup = "py-fluid-handling",
     order = "o2"
-}:add_unlock("domesitication-mk03")
+}:add_unlock("domestication-mk03")
 
 RECIPE {
     type = "recipe",
@@ -28,7 +28,7 @@ RECIPE {
     },
     subgroup = "py-fluid-handling",
     order = "o2"
-}:add_unlock("domesitication-mk03")
+}:add_unlock("simik-mk02")
 
 RECIPE {
     type = "recipe",
@@ -43,7 +43,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 500, temperature = 1000},
     },
     --main_product = "eg-si",
-}:add_unlock("domesitication-mk03")
+}:add_unlock("simik-mk01")
 
 RECIPE {
     type = "recipe",
@@ -58,7 +58,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 500, temperature = 2000},
     },
     --main_product = "eg-si",
-}:add_unlock("domesitication-mk03")
+}:add_unlock("simik-mk02")
 
 RECIPE {
     type = "recipe",
@@ -73,7 +73,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 500, temperature = 3000},
     },
     --main_product = "eg-si",
-}:add_unlock("domesitication-mk03")
+}:add_unlock("simik-mk03")
 
 RECIPE {
     type = "recipe",
@@ -103,4 +103,4 @@ RECIPE {
         {type = "fluid", name = "hot-air", amount = 200},
     },
     --main_product = "eg-si",
-}:add_unlock("domesitication-mk03")
+}:add_unlock("domestication-mk03")

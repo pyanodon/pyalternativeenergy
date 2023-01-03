@@ -520,6 +520,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item", name = "nickel-plate", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 1},
         {type = "fluid", name = "aniline", amount = 100},
     },
     results = {
