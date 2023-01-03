@@ -836,14 +836,14 @@ ITEM {
 	icon_size = 64,
     flags = {},
     subgroup = "py-battery-equipment",
-    order = "aa",
+    order = "a",
     stack_size = 100,
     placed_as_equipment_result = 'battery-equipment',
     localised_name = {'item-name.battery-mk01'},
     localised_description = {'item-description.battery-mk01'}
 }
 
-data:extend{{
+--[[data:extend{{
     type = 'battery-equipment',
     categories = {'armor'},
     shape = {width = 1, height = 1, type = 'full'},
@@ -859,7 +859,7 @@ data:extend{{
         usage_priority = 'tertiary'
     },
     localised_name = {'item-name.battery-mk00'},
-}}
+}}--]]
 
 ITEM {
     type = "item",
@@ -867,11 +867,12 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk00.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-battery-equipment",
-    order = "a",
+    --subgroup = "py-battery-equipment",
+    subgroup = 'py-alternativeenergy-items',
+    order = "aae",
     stack_size = 100,
     localised_name = {'item-name.battery-mk00'},
-    placed_as_equipment_result = 'battery-mk00'
+    --placed_as_equipment_result = 'battery-mk00'
 }
 
 ITEM {

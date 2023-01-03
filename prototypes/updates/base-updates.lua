@@ -241,6 +241,20 @@ RECIPE("power-armor-mk2"):set_fields {
 }
 RECIPE("fusion-reactor-equipment"):set_fields {
     ingredients = {
+        {'low-density-structure', 40},
+        {'gastrocapacitor', 10},
+        {'intelligent-unit', 20},
+        {'mechanical-parts-03', 10},
+        {'effectivity-module-3', 2},
+        {'blanket', 1},
+        {'divertor', 2},
+        { 'big-electric-pole', 1 },
+        { "biopolymer", 135 },
+    },
+    category = 'crafting'
+}
+RECIPE("personal-fusion-cell"):set_fields {
+    ingredients = {
         {'sc-unit', 2},
         {'reinforced-wall-shield', 1},
         {'cryocooler', 1},
@@ -251,6 +265,14 @@ RECIPE("fusion-reactor-equipment"):set_fields {
         { 'small-parts-03', 10},
         { 'kondo-processor', 1},
         { 'medium-electric-pole', 1 },
+        { type = "fluid", name ="deuterium", amount=150 },
+        { type = "fluid", name ="tritium", amount=200 },
+    },
+    category = 'crafting-with-fluid'
+}
+RECIPE("personal-fusion-cell-refuel"):set_fields {
+    ingredients = {
+        {'personal-fusion-cell-used', 1},
         { type = "fluid", name ="deuterium", amount=150 },
         { type = "fluid", name ="tritium", amount=200 },
     },
@@ -296,9 +318,9 @@ RECIPE("solar-panel-equipment"):set_fields {
 RECIPE("exoskeleton-equipment"):set_fields {
     ingredients = {
         {'neuromorphic-chip', 1},
-        {'gh', 20},
-        {'cbp', 20},
-        {'antiviral', 20},
+        {'low-density-structure', 20},
+        {'hydraulic-system-mk02', 4},
+        {'mechanical-parts-04', 4},
         {'sc-engine', 6},
         {'brake-mk04', 2},
         {'gearbox-mk04', 2},
