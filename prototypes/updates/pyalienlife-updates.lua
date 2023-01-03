@@ -53,6 +53,7 @@ RECIPE("vonix-mk03r"):replace_ingredient("chelator", "numal-ink")
 RECIPE("scrondrix-mk04r"):replace_ingredient("gta", "numal-ink")
 RECIPE("zipir-mk04r"):replace_ingredient("gta", "numal-ink")
 RECIPE("trits-mk04r"):replace_ingredient("gta", "numal-ink")
+RECIPE("simik-mk04"):add_ingredient({type = "item", name = "triphenylanime", amount = 1})
 
 RECIPE("atomizer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("bio-printer-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
