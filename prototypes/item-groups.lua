@@ -46,6 +46,24 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-intermetallics-1",
+        group = "py-alternativeenergy",
+        order = "bd"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-intermetallics-2",
+        group = "py-alternativeenergy",
+        order = "be"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-intermetallics-3",
+        group = "py-alternativeenergy",
+        order = "bf"
+    },
+    {
+        type = "item-subgroup",
         name = "py-rawores-thorium",
         group = "py-rawores",
         order = "br"
