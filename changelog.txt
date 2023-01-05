@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
-Date: ?
+Date: 2023-1-5
   Changes:
     - buffed multiblade turbine generation from 400kW to 800kW
     - multiblade turbine is now available from the start of the game.
@@ -14,6 +14,7 @@ Date: ?
     - tidal plants now support smart cursor (Q)
     - Added max energy generation text to hawt,vwat,solar mk2 mk3,antisolar,multiblade
     - Added more uses for thermosolar intermediates
+    - moved simik boiler steam recipes from domestication techs to simik techs
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2022-12-19
