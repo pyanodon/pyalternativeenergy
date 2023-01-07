@@ -9,7 +9,8 @@
 RECIPE {
     type = 'recipe',
     name = 'numal-mk02',
-    category = 'rc-numal',
+    category = 'rc',
+	allowed_module_categories = {'numal'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -41,7 +42,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'numal-mk03',
-    category = 'rc-numal',
+    category = 'rc',
+	allowed_module_categories = {'numal'},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -74,7 +76,8 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'numal-mk04',
-    category = 'rc-numal',
+    category = 'rc',
+	allowed_module_categories = {'numal'},
     enabled = false,
     energy_required = 30,
     ingredients = {

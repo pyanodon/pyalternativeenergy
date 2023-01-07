@@ -20,7 +20,7 @@ local IMP_SPECIAL = 20
 
 FUN.autorecipes {
     name = 'rendering',
-	category = 'slaughterhouse-numal',
+	category = 'slaughterhouse',
 	--module_limitations = 'numal',
 	subgroup = 'py-alienlife-numal',
 	order = 'b',

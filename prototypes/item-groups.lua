@@ -76,12 +76,6 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-numal",
-        group = "py-alienlife",
-        order = "e-u"
-    },
-    {
-        type = "item-subgroup",
         name = "py-nuclear-waste",
         group = "py-alternativeenergy",
         order = "nw"

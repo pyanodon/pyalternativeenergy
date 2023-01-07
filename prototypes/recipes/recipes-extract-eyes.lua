@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "extract-auog-eye",
-    category = "slaughterhouse-auog",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -11,13 +11,14 @@ RECIPE {
         {type = "item", name = "animal-eye", amount = 2},
         {type = "item", name = "cage", amount = 1},
     },
+    subgroup = 'py-alienlife-auog',
     main_product = "animal-eye",
 }:add_unlock("photonics")
 
 RECIPE {
     type = "recipe",
     name = "extract-ulric-eye",
-    category = "slaughterhouse-ulric",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -27,13 +28,14 @@ RECIPE {
         {type = "item", name = "animal-eye", amount = 2},
         {type = "item", name = "cage", amount = 1},
     },
+    subgroup = 'py-alienlife-ulric',
     main_product = "animal-eye",
 }:add_unlock("photonics")
 
 RECIPE {
     type = "recipe",
     name = "extract-mukmoux-eye",
-    category = "slaughterhouse-mukmoux",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -43,13 +45,14 @@ RECIPE {
         {type = "item", name = "animal-eye", amount = 2},
         {type = "item", name = "cage", amount = 1},
     },
+    subgroup = 'py-alienlife-mukmoux',
     main_product = "animal-eye",
 }:add_unlock("photonics")
 
 RECIPE {
     type = "recipe",
     name = "extract-scrondrix-eye",
-    category = "slaughterhouse-scrondrix",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -59,13 +62,14 @@ RECIPE {
         {type = "item", name = "animal-eye", amount = 2},
         {type = "item", name = "cage", amount = 1},
     },
+    subgroup = 'py-alienlife-scrondrix',
     main_product = "animal-eye",
 }:add_unlock("photonics")
 
 RECIPE {
     type = "recipe",
     name = "extract-dhilmos-eye",
-    category = "slaughterhouse-dhilmos",
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -74,5 +78,6 @@ RECIPE {
     results = {
         {type = "item", name = "animal-eye", amount = 4},
     },
+    subgroup = 'py-alienlife-dhilmos',
     main_product = "animal-eye",
 }:add_unlock("photonics")

@@ -157,7 +157,7 @@ end
 
 script.on_event('open-gui', function(event)
 	local player = game.players[event.player_index]
-	if player.cursor_stack.valid_for_read then return end
+	if player.cursor_stack and player.cursor_stack.valid_for_read then return end
 	local entity = player.selected
 	if not entity or not Heliostat.is_heliostat(entity) then return end
 	local tower = Heliostat.find_tower(entity)

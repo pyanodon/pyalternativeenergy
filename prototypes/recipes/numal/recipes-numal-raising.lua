@@ -4,7 +4,8 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 FUN.autorecipes {
     name = 'numal-egg',
-	category = 'rc-numal',
+	category = 'rc',
+	allowed_module_categories = {'numal'},
 	module_limitations = 'numal',
 	subgroup = 'py-alienlife-numal',
 	order = 'c',
