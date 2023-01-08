@@ -29,7 +29,7 @@ function Microwave_Receiver.recalc_satellite_distribution(force)
 
 		local entity = microwave_data.entity
 		entity.power_production = microwave_data.allocated_satellites * Microwave_Receiver.power_production_per_satellite
-		entity.electric_buffer_size = entity.power_production * 60
+		entity.electric_buffer_size = entity.power_production
 	end
 
 	for _, player in pairs(game.connected_players) do

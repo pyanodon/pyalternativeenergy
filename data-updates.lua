@@ -154,6 +154,7 @@ for _, name in pairs(electric_energy_interfaces) do
   else
     item.localised_description = {'?', {'', {'entity-description.' .. name}, '\n', output}, output}
   end
+  entity.energy_source.buffer_capacity = entity.energy_production
 end
 
 --gather recipes for module changes
