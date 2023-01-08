@@ -30,7 +30,7 @@ ITEM{
     icon = '__pyalternativeenergygraphics__/graphics/icons/numal-mk02.png',
     icon_size = 64,
     flags = {},
-    subgroup = 'py-alienlife-buildings-mk02',
+    subgroup = 'py-alienlife-farm-buildings-mk02',
     order = 'a',
     place_result = 'numal-reef-mk02-placer',
     stack_size = 10

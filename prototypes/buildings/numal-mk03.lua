@@ -29,7 +29,7 @@ ITEM{
     icon = '__pyalternativeenergygraphics__/graphics/icons/numal-mk03.png',
     icon_size = 64,
     flags = {},
-    subgroup = 'py-alienlife-buildings-mk03',
+    subgroup = 'py-alienlife-farm-buildings-mk03',
     order = 'a',
     place_result = 'numal-reef-mk03-placer',
     stack_size = 10
