@@ -5,6 +5,7 @@ Date: ?
     - fixed crash with thermosolar
     - fixed lying multiblade turbines
     - fixed that SUT tiles could be placed on water
+    - nerfed t1 multiblade. 800kW->550kW. recipe ingredient count increased. footprint expanded. steel added to recipe
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2023-1-5

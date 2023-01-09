@@ -5,17 +5,18 @@ RECIPE {
     type = "recipe",
     name = "multiblade-turbine-mk01",
     energy_required = 0.5,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"small-electric-pole", 2},
-        {"small-parts-01", 8},
-        {"stone-brick", 6},
-        {'inductor1', 6}
+        {"small-parts-01", 4},
+        {"stone-brick", 20},
+        {'inductor1', 18},
+        {'steel-plate', 10}
     },
     results = {
         {"multiblade-turbine-mk01", 1}
     }
-}
+}:add_unlock('steel-processing')
 
 ITEM {
     type = "item",
@@ -48,11 +49,10 @@ ENTITY {
     energy_source = {
         type = "electric",
         usage_priority = "primary-output",
-        buffer_capacity = "800kJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '800kW',
+    energy_production = '550kW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     picture = {
@@ -72,7 +72,7 @@ data:extend(
         icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
         icon_size = 64,
         flags = {"placeable-neutral", "player-creation", "not-on-map"},
-        collision_box = {{-11.4, -11.4}, {11.4, 11.4}},
+        collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
         collision_mask = { wind_layer },
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
         selectable_in_game = false,
