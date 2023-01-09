@@ -43,7 +43,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 500, temperature = 1000},
     },
     --main_product = "eg-si",
-}:add_unlock("simik-mk01")
+}:add_unlock("domestication-mk03")
 
 RECIPE {
     type = "recipe",
