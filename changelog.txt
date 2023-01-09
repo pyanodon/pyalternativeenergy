@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - fixed crash with thermosolar
     - fixed lying multiblade turbines
+    - fixed that SUT tiles could be placed on water
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2023-1-5

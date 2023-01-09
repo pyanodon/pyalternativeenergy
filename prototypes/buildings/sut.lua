@@ -187,7 +187,7 @@ ITEM{
     flags = {},
     subgroup = 'py-alternativeenergy-thermosolar',
     order = 'cb',
-    place_as_tile = {result = 'sut-panel', condition = {mask}, condition_size = 1},
+    place_as_tile = {result = 'sut-panel', condition = {mask, 'water-tile'}, condition_size = 1},
     stack_size = 1000,
     localised_name = {'tile-name.sut-panel'},
     localised_description = {'tile-description.sut-panel'}
