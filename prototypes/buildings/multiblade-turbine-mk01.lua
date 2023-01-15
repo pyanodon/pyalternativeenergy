@@ -49,17 +49,48 @@ ENTITY {
     energy_source = {
         type = "electric",
         usage_priority = "primary-output",
+        buffer_capacity = "550KJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
     energy_production = '550kW',
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    picture = {
-        filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/base-fishturbine.png',
-        width = 224,
-        height = 224,
-    },
+    continuous_animation = true,
+    animations =
+        {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/base-fishturbine.png",
+                    width = 224,
+                    height = 224,
+                    line_length = 1,
+                    frame_count = 1,
+                    repeat_count = 30,
+                    --shift = util.by_pixel(0, -64),
+                    animation_speed = 0.5,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r5.png",
+                    width = 288,
+                    height = 352,
+                    line_length = 6,
+                    frame_count = 30,
+                    shift = util.by_pixel(0, -64),
+                    animation_speed = 0.5,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s5.png",
+                    width = 288,
+                    height = 352,
+                    line_length = 6,
+                    frame_count = 30,
+                    shift = util.by_pixel(0, -64),
+                    animation_speed = 0.5,
+                    draw_as_shadow = true
+                },
+            }
+        }
 }
 
 
@@ -85,193 +116,44 @@ data:extend(
 })
 
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'multiblade-turbine-mk01-north',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r5.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -64),
-                animation_speed = 0.5,
-            },
-        }
-    }
-}
-)
+local fish = table.deepcopy(data.raw["electric-energy-interface"]["multiblade-turbine-mk01"])
+fish.name = 'multiblade-turbine-mk01-northeast'
+fish.animations.layers[2].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r6.png"
+fish.animations.layers[3].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s6.png"
+data:extend({fish})
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'multiblade-turbine-mk01-northeast',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s6.png",
-                width = 64,
-                height = 224,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(144, 0),
-                animation_speed = 0.5,
-                draw_as_shadow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r6.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -64),
-                animation_speed = 0.5,
-            },
+local fish = table.deepcopy(data.raw["electric-energy-interface"]["multiblade-turbine-mk01"])
+fish.name = 'multiblade-turbine-mk01-east'
+fish.animations.layers[2].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r7.png"
+fish.animations.layers[3].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s7.png"
+data:extend({fish})
 
-        }
-    }
-}
-)
+local fish = table.deepcopy(data.raw["electric-energy-interface"]["multiblade-turbine-mk01"])
+fish.name = 'multiblade-turbine-mk01-southeast'
+fish.animations.layers[2].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r8.png"
+fish.animations.layers[3].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s8.png"
+data:extend({fish})
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'multiblade-turbine-mk01-east',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s7.png",
-                width = 64,
-                height = 224,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(144, 0),
-                animation_speed = 0.5,
-                draw_as_shadow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r7.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -64),
-                animation_speed = 0.5,
-            },
-        }
-    }
-}
-)
+local fish = table.deepcopy(data.raw["electric-energy-interface"]["multiblade-turbine-mk01"])
+fish.name = 'multiblade-turbine-mk01-south'
+fish.animations.layers[2].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r1.png"
+fish.animations.layers[3].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s1.png"
+data:extend({fish})
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'multiblade-turbine-mk01-southeast',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s8.png",
-                width = 64,
-                height = 224,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(144, 0),
-                animation_speed = 0.5,
-                draw_as_shadow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r8.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -64),
-                animation_speed = 0.5,
-            },
-        }
-    }
-}
-)
+local fish = table.deepcopy(data.raw["electric-energy-interface"]["multiblade-turbine-mk01"])
+fish.name = 'multiblade-turbine-mk01-southwest'
+fish.animations.layers[2].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r2.png"
+fish.animations.layers[3].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s2.png"
+data:extend({fish})
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'multiblade-turbine-mk01-south',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r1.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -64),
-                animation_speed = 0.5,
-            },
-        }
-    }
-}
-)
+local fish = table.deepcopy(data.raw["electric-energy-interface"]["multiblade-turbine-mk01"])
+fish.name = 'multiblade-turbine-mk01-west'
+fish.animations.layers[2].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r3.png"
+fish.animations.layers[3].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s3.png"
+data:extend({fish})
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'multiblade-turbine-mk01-southwest',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r2.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -64),
-                animation_speed = 0.5,
-            },
-        }
-    }
-}
-)
-
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'multiblade-turbine-mk01-west',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r3.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -64),
-                animation_speed = 0.5,
-            },
-        }
-    }
-}
-)
-
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'multiblade-turbine-mk01-northwest',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r4.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -64),
-                animation_speed = 0.5,
-            },
-        }
-    }
-}
-)
+local fish = table.deepcopy(data.raw["electric-energy-interface"]["multiblade-turbine-mk01"])
+fish.name = 'multiblade-turbine-mk01-northwest'
+fish.animations.layers[2].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r4.png"
+fish.animations.layers[3].filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s4.png"
+data:extend({fish})

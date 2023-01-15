@@ -93,7 +93,9 @@ script.on_event(on_built, function(event)
                 create_build_effect_smoke = false,
             }
 
-            if turbine_type == 'multiblade' or turbine_type == 'hawt' then
+            if turbine_type == 'multiblade' then
+                global.windmills[E.unit_number] = {windmill = E, max_power = 50, base_name = base_name}
+            elseif turbine_type == 'hawt' then
                 --log(HE.name)
                 local ani = rendering.draw_animation{
                     animation = base_name .. '-north',
@@ -197,15 +199,28 @@ script.on_event(on_built, function(event)
 end)
 
 local function draw_windmill(direction)
-    for m, mill in pairs(global.windmills) do
-        rendering.destroy(mill.animation)
-        local ani = rendering.draw_animation{
-            animation = mill.base_name .. direction,
-            surface = mill.windmill.surface,
-            target = mill.windmill,
-            render_layer = 129
-        }
-        mill.animation = ani
+    local mill_table = table.deepcopy(global.windmills)
+    for m, mill in pairs(mill_table) do
+        if mill.animation ~= nil then
+            rendering.destroy(mill.animation)
+            local ani = rendering.draw_animation{
+                animation = mill.base_name .. direction,
+                surface = mill.windmill.surface,
+                target = mill.windmill,
+                render_layer = 129
+            }
+            mill.animation = ani
+        else
+            local new_mill = game.surfaces[mill.windmill.surface.name].create_entity{
+                name = mill.base_name .. direction,
+                position = mill.windmill.position,
+                force = mill.windmill.force,
+                create_build_effect_smoke = false
+            }
+            global.windmills[new_mill.unit_number] = {windmill = new_mill, max_power = 50, base_name = global.windmills[mill.windmill.unit_number].base_name}
+            global.windmills[mill.windmill.unit_number] = nil
+            mill.windmill.destroy()
+        end
     end
 end
 
@@ -217,7 +232,7 @@ script.on_nth_tick(60, function(event)
     -- log(wind_dir)
     local dir = ''
     if wind_dir > 0.9375 and wind_dir <= 0.0625 then
-        dir = '-north'
+        dir = ''
         draw_windmill(dir)
     elseif wind_dir > 0.0625 and wind_dir <= 0.1875 then
         dir = '-northeast'
@@ -272,7 +287,10 @@ script.on_event(on_destroyed, function(event)
             for _, collision_entity in pairs(collisions) do
                 if collision_entity.valid then collision_entity.destroy() end
             end
-            if turbine_type == 'multiblade' or turbine_type == 'hawt' then
+            if turbine_type == "multiblade" then
+                local mill = global.windmills[E.unit_number]
+                global.windmills[E.unit_number] = nil
+            elseif turbine_type == 'hawt' then
                 --log('hit')
                 local mill = global.windmills[E.unit_number]
                 rendering.destroy(mill.animation)
