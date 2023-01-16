@@ -3,9 +3,11 @@ Version: 1.1.8
 Date: ?
   Changes:
     - fixed crash with thermosolar
-    - fixed lying multiblade turbines
+    - fixed multiblade turbines lying about their max power output
     - fixed that SUT tiles could be placed on water
     - nerfed t1 multiblade. 800kW->550kW. recipe ingredient count increased. footprint expanded. steel added to recipe
+    - multiblade turbines can now be walked/driven on
+    - fixed render layer issues with multiblade turbines
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2023-1-5

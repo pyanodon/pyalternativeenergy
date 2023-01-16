@@ -70,6 +70,69 @@ end
 script.on_init(init_globals)
 script.on_configuration_changed(init_globals)
 
+local wind_update_rate = 251
+
+local function draw_windmill(mill, direction)
+    local animation_name = mill.base_name .. direction
+
+    if mill.animation and not mill.base_name:find('multiblade') then
+        local ani = rendering.draw_animation{
+            animation = animation_name,
+            surface = mill.windmill.surface,
+            target = mill.windmill,
+            render_layer = 129,
+            time_to_live = wind_update_rate + 1
+        }
+        mill.animation = ani
+        return
+    end
+
+    if mill.windmill.name == animation_name then return end
+
+    local new_mill = mill.windmill.surface.create_entity{
+        name = animation_name,
+        position = mill.windmill.position,
+        force = mill.windmill.force,
+        create_build_effect_smoke = false
+    }
+    global.windmills[new_mill.unit_number] = {windmill = new_mill, base_name = global.windmills[mill.windmill.unit_number].base_name}
+    global.windmills[mill.windmill.unit_number] = nil
+
+    mill.windmill.destroy()
+end
+
+local function calculate_wind_direction(surface)
+    local wind_dir = surface.wind_orientation
+    local dir = '-north'
+    if wind_dir > 0.0625 and wind_dir <= 0.1875 then
+        dir = '-northeast'
+    elseif wind_dir > 0.1875 and wind_dir <= 0.3125 then
+        dir = '-east'
+    elseif wind_dir > 0.3125 and wind_dir <= 0.4375 then
+        dir = '-southeast'
+    elseif wind_dir > 0.4375 and wind_dir <= 0.5625 then
+        dir = '-south'
+    elseif wind_dir > 0.5625 and wind_dir <= 0.6875 then
+        dir = '-southwest'
+    elseif wind_dir > 0.6875 and wind_dir <= 0.8125 then
+        dir = '-west'
+    elseif wind_dir > 0.8125 and wind_dir <= 0.9375 then
+        dir = '-northwest'
+    end
+    return dir
+end
+
+script.on_nth_tick(wind_update_rate, function()
+    local direction = calculate_wind_direction(game.surfaces['nauvis'])
+
+    local copy = {}
+    for k, v in pairs(global.windmills) do copy[k] = v end
+
+    for _, windmill_data in pairs(copy) do
+        draw_windmill(windmill_data, direction)
+    end
+end)
+
 local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_revive, defines.events.script_raised_built}
 script.on_event(on_built, function(event)
     Solar.events.on_built(event)
@@ -82,11 +145,11 @@ script.on_event(on_built, function(event)
     local surface = E.surface
 
     if E.type == 'electric-energy-interface' then
-        local turbine_type, mk = string.match(E.name, ('(%a+)%-turbine%-(mk%d+)'))
-        if turbine_type ~= nil then
+        local turbine_type, mk = string.match(E.name, ('^(%a+)%-turbine%-(mk%d+)'))
+        if turbine_type then
             local base_name = turbine_type .. '-turbine-' .. mk
             -- Create wind collision boxes for vawt,hawt,multiblade
-            game.surfaces[E.surface.name].create_entity{
+            surface.create_entity{
                 name = base_name .. '-collision',
                 position = E.position,
                 force = E.force,
@@ -94,18 +157,20 @@ script.on_event(on_built, function(event)
             }
 
             if turbine_type == 'multiblade' then
-                global.windmills[E.unit_number] = {windmill = E, max_power = 50, base_name = base_name}
+                global.windmills[E.unit_number] = {windmill = E, base_name = base_name}
+                local direction = calculate_wind_direction(game.surfaces['nauvis'])
+                draw_windmill(global.windmills[E.unit_number], direction)
             elseif turbine_type == 'hawt' then
-                --log(HE.name)
                 local ani = rendering.draw_animation{
                     animation = base_name .. '-north',
                     surface = surface,
                     target = E,
-                    render_layer = 129
+                    render_layer = 129,
+                    time_to_live = wind_update_rate - (game.tick % wind_update_rate)
                 }
-                global.windmills[E.unit_number] = {windmill = E, animation = ani, max_power = 50, base_name = base_name}
-                -- log(serpent.block(global.windmills))
+                global.windmills[E.unit_number] = {windmill = E, animation = ani, base_name = base_name}
             end
+            return
         end
     end
 
@@ -198,64 +263,9 @@ script.on_event(on_built, function(event)
     end
 end)
 
-local function draw_windmill(direction)
-    local mill_table = table.deepcopy(global.windmills)
-    for m, mill in pairs(mill_table) do
-        if mill.animation ~= nil then
-            rendering.destroy(mill.animation)
-            local ani = rendering.draw_animation{
-                animation = mill.base_name .. direction,
-                surface = mill.windmill.surface,
-                target = mill.windmill,
-                render_layer = 129
-            }
-            mill.animation = ani
-        else
-            local new_mill = game.surfaces[mill.windmill.surface.name].create_entity{
-                name = mill.base_name .. direction,
-                position = mill.windmill.position,
-                force = mill.windmill.force,
-                create_build_effect_smoke = false
-            }
-            global.windmills[new_mill.unit_number] = {windmill = new_mill, max_power = 50, base_name = global.windmills[mill.windmill.unit_number].base_name}
-            global.windmills[mill.windmill.unit_number] = nil
-            mill.windmill.destroy()
-        end
-    end
-end
-
 script.on_nth_tick(60, function(event)
     Solar_Updraft_Tower.events[60]()
     Heliostat.events[60]()
-
-    local wind_dir = game.surfaces['nauvis'].wind_orientation
-    -- log(wind_dir)
-    local dir = ''
-    if wind_dir > 0.9375 and wind_dir <= 0.0625 then
-        dir = ''
-        draw_windmill(dir)
-    elseif wind_dir > 0.0625 and wind_dir <= 0.1875 then
-        dir = '-northeast'
-        draw_windmill(dir)
-    elseif wind_dir > 0.1875 and wind_dir <= 0.3125 then
-        dir = '-east'
-        draw_windmill(dir)
-    elseif wind_dir > 0.3125 and wind_dir <= 0.4375 then
-        dir = '-southeast'
-        draw_windmill(dir)
-    elseif wind_dir > 0.4375 and wind_dir <= 0.5625 then
-        dir = '-south'
-        draw_windmill(dir)
-    elseif wind_dir > 0.5625 and wind_dir <= 0.6875 then
-        dir = '-southwest'
-        draw_windmill(dir)
-    elseif wind_dir > 0.6875 and wind_dir <= 0.8125 then
-        dir = '-west'
-        draw_windmill(dir)
-    elseif wind_dir > 0.8125 and wind_dir <= 0.9375 then
-        dir = '-northwest'
-        draw_windmill(dir)
-    end
 end)
 
 script.on_nth_tick(55, function(event)
