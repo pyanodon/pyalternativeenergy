@@ -55,13 +55,14 @@ require 'scripts/thermosolar/shared'
 require 'scripts/thermosolar/solar-updraft-tower'
 require 'scripts/thermosolar/heliostat'
 require 'scripts/solar'
+require 'scripts/wind/wind'
 
 local function init_globals()
     Solar.events.on_init()
     Microwave_Receiver.events.on_init()
     Thermosolar.events.on_init()
-
-    global.windmills = global.windmills or {}
+    Wind.events.on_init()
+    
     global.reactor_tanks = global.reactor_tanks or {}
     global.lrf_panels = global.lrf_panels or {}
     global.stirling = global.stirling or {}
@@ -70,109 +71,17 @@ end
 script.on_init(init_globals)
 script.on_configuration_changed(init_globals)
 
-local wind_update_rate = 251
-
-local function draw_windmill(mill, direction)
-    local animation_name = mill.base_name .. direction
-
-    if mill.animation and not mill.base_name:find('multiblade') then
-        local ani = rendering.draw_animation{
-            animation = animation_name,
-            surface = mill.windmill.surface,
-            target = mill.windmill,
-            render_layer = 129,
-            time_to_live = wind_update_rate + 1
-        }
-        mill.animation = ani
-        return
-    end
-
-    if mill.windmill.name == animation_name then return end
-
-    local new_mill = mill.windmill.surface.create_entity{
-        name = animation_name,
-        position = mill.windmill.position,
-        force = mill.windmill.force,
-        create_build_effect_smoke = false
-    }
-    global.windmills[new_mill.unit_number] = {windmill = new_mill, base_name = global.windmills[mill.windmill.unit_number].base_name}
-    global.windmills[mill.windmill.unit_number] = nil
-
-    mill.windmill.destroy()
-end
-
-local function calculate_wind_direction(surface)
-    local wind_dir = surface.wind_orientation
-    local dir = '-north'
-    if wind_dir > 0.0625 and wind_dir <= 0.1875 then
-        dir = '-northeast'
-    elseif wind_dir > 0.1875 and wind_dir <= 0.3125 then
-        dir = '-east'
-    elseif wind_dir > 0.3125 and wind_dir <= 0.4375 then
-        dir = '-southeast'
-    elseif wind_dir > 0.4375 and wind_dir <= 0.5625 then
-        dir = '-south'
-    elseif wind_dir > 0.5625 and wind_dir <= 0.6875 then
-        dir = '-southwest'
-    elseif wind_dir > 0.6875 and wind_dir <= 0.8125 then
-        dir = '-west'
-    elseif wind_dir > 0.8125 and wind_dir <= 0.9375 then
-        dir = '-northwest'
-    end
-    return dir
-end
-
-script.on_nth_tick(wind_update_rate, function()
-    local direction = calculate_wind_direction(game.surfaces['nauvis'])
-
-    local copy = {}
-    for k, v in pairs(global.windmills) do copy[k] = v end
-
-    for _, windmill_data in pairs(copy) do
-        draw_windmill(windmill_data, direction)
-    end
-end)
-
 local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_revive, defines.events.script_raised_built}
 script.on_event(on_built, function(event)
     Solar.events.on_built(event)
     Solar_Updraft_Tower.events.on_built(event)
     Microwave_Receiver.events.on_built(event)
     Heliostat.events.on_built(event)
+    Wind.events.on_built(event)
 
     local E = event.created_entity or event.entity
     if not E.valid then return end
     local surface = E.surface
-
-    if E.type == 'electric-energy-interface' then
-        local turbine_type, mk = string.match(E.name, ('^(%a+)%-turbine%-(mk%d+)'))
-        if turbine_type then
-            local base_name = turbine_type .. '-turbine-' .. mk
-            -- Create wind collision boxes for vawt,hawt,multiblade
-            surface.create_entity{
-                name = base_name .. '-collision',
-                position = E.position,
-                force = E.force,
-                create_build_effect_smoke = false,
-            }
-
-            if turbine_type == 'multiblade' then
-                global.windmills[E.unit_number] = {windmill = E, base_name = base_name}
-                local direction = calculate_wind_direction(game.surfaces['nauvis'])
-                draw_windmill(global.windmills[E.unit_number], direction)
-            elseif turbine_type == 'hawt' then
-                local ani = rendering.draw_animation{
-                    animation = base_name .. '-north',
-                    surface = surface,
-                    target = E,
-                    render_layer = 129,
-                    time_to_live = wind_update_rate - (game.tick % wind_update_rate)
-                }
-                global.windmills[E.unit_number] = {windmill = E, animation = ani, base_name = base_name}
-            end
-            return
-        end
-    end
 
     if E.name == 'nuke-tank-input' then
         local out1 = surface.create_entity{
@@ -278,36 +187,19 @@ script.on_nth_tick(55, function(event)
     end
 end)
 
+script.on_nth_tick(100, Solar.events[100])
+script.on_nth_tick(501, Wind.events[501])
+script.on_nth_tick(123, Wind.events[123])
+
 local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.script_raised_destroy, defines.events.on_entity_died}
 script.on_event(on_destroyed, function(event)
     Solar.events.on_destroyed(event)
     Microwave_Receiver.events.on_destroyed(event)
     Solar_Updraft_Tower.events.on_destroyed(event)
     Heliostat.events.on_destroyed(event)
+    Wind.events.on_destroyed(event)
 
     local E = event.entity
-    if E.type == 'electric-energy-interface' then
-        local turbine_type, mk = string.match(E.name, ('(%a+)%-turbine%-(mk%d+)'))
-        if turbine_type ~= nil then
-            local base_name = turbine_type .. '-turbine-' .. mk
-            local collisions = game.surfaces[E.surface.name].find_entities_filtered{
-                name = base_name .. '-collision',
-                position = E.position,
-            }
-            for _, collision_entity in pairs(collisions) do
-                if collision_entity.valid then collision_entity.destroy() end
-            end
-            if turbine_type == "multiblade" then
-                local mill = global.windmills[E.unit_number]
-                global.windmills[E.unit_number] = nil
-            elseif turbine_type == 'hawt' then
-                --log('hit')
-                local mill = global.windmills[E.unit_number]
-                rendering.destroy(mill.animation)
-                global.windmills[E.unit_number] = nil
-            end
-        end
-    end
     if string.match(E.name, 'lrf%-panel') ~= nil then
         global.lrf_panels[E.unit_number] = nil
     elseif E.name == 'stirling-concentrator' then
@@ -346,5 +238,3 @@ end)
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     Thermosolar.events.on_player_cursor_stack_changed(event)
 end)
-
-script.on_nth_tick(100, Solar.events[100])

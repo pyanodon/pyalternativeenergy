@@ -134,7 +134,6 @@ fish.name = 'multiblade-turbine-mk03-south'
 fish.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/r1.png'
 fish.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s1.png'
 fish.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/l1.png'
-fish.animations.layers[3] = nil
 data:extend{fish}
 
 fish = table.deepcopy(data.raw['electric-energy-interface']['multiblade-turbine-mk03'])
@@ -143,7 +142,6 @@ fish.name = 'multiblade-turbine-mk03-southwest'
 fish.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/r2.png'
 fish.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s2.png'
 fish.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/l2.png'
-fish.animations.layers[3] = nil
 data:extend{fish}
 
 fish = table.deepcopy(data.raw['electric-energy-interface']['multiblade-turbine-mk03'])
@@ -152,7 +150,6 @@ fish.name = 'multiblade-turbine-mk03-west'
 fish.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/r3.png'
 fish.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s3.png'
 fish.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/l3.png'
-fish.animations.layers[3] = nil
 data:extend{fish}
 
 fish = table.deepcopy(data.raw['electric-energy-interface']['multiblade-turbine-mk03'])
@@ -161,7 +158,6 @@ fish.name = 'multiblade-turbine-mk03-northwest'
 fish.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/r4.png'
 fish.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s4.png'
 fish.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/l4.png'
-fish.animations.layers[3] = nil
 data:extend{fish}
 
 fish = table.deepcopy(data.raw['electric-energy-interface']['multiblade-turbine-mk03'])
@@ -170,7 +166,6 @@ fish.name = 'multiblade-turbine-mk03-north'
 fish.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/r5.png'
 fish.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s5.png'
 fish.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/l5.png'
-fish.animations.layers[3] = nil
 data:extend{fish}
 
 fish = table.deepcopy(data.raw['electric-energy-interface']['multiblade-turbine-mk03'])

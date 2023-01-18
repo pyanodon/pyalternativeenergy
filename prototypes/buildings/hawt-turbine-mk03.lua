@@ -62,14 +62,43 @@ ENTITY {
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk03.ogg", volume = 0.6},
         apparent_volume = 2.5
     },
-    picture =
-        {
-            filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/base-mk03.png',
-            width = 192,
-            height = 416,
-            shift = util.by_pixel(0, -112),
-        },
-    }
+    continuous_animation = true,
+    animations = {
+        layers = {
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r4.png",
+                width = 192,
+                height = 416,
+                line_length = 10,
+                frame_count = 20,
+                shift = util.by_pixel(0, -112),
+                animation_speed = 1,
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s4.png",
+                width = 287,
+                height = 160,
+                line_length = 5,
+                frame_count = 20,
+                shift = util.by_pixel(44, 16),
+                animation_speed = 1,
+                draw_as_shadow = true,
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l4.png",
+                width = 192,
+                height = 416,
+                line_length = 10,
+                frame_count = 20,
+                shift = util.by_pixel(0, -112),
+                animation_speed = 1,
+                draw_as_glow = true,
+            },
+        }
+    },
+    localised_name = {'entity-name.hawt-turbine-mk03'},
+    localised_description = {'entity-description.hawt-turbine-mk03'}
+}
 
 data:extend(
     {
@@ -92,322 +121,60 @@ data:extend(
     }
 })
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'hawt-turbine-mk03-north',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r5.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l5.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s5.png",
-                width = 287,
-                height = 160,
-                line_length = 5,
-                frame_count = 20,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 1,
-                draw_as_shadow = true,
-            },
-        }
-    }
-}
-)
+local hawt
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'hawt-turbine-mk03-northeast',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r6.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l6.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s6.png",
-                width = 287,
-                height = 160,
-                line_length = 5,
-                frame_count = 20,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 1,
-                draw_as_shadow = true,
-            },
-        }
-    }
-}
-)
+hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
+hawt.name = 'hawt-turbine-mk03-south'
+hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r1.png'
+hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s1.png'
+hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l1.png'
+data:extend{hawt}
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'hawt-turbine-mk03-east',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r7.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l7.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s7.png",
-                width = 287,
-                height = 160,
-                line_length = 5,
-                frame_count = 20,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 1,
-                draw_as_shadow = true,
-            },
-        }
-    }
-}
-)
+hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
+hawt.name = 'hawt-turbine-mk03-southwest'
+hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r2.png'
+hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s2.png'
+hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l2.png'
+data:extend{hawt}
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'hawt-turbine-mk03-southeast',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r8.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l8.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s8.png",
-                width = 287,
-                height = 160,
-                line_length = 5,
-                frame_count = 20,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 1,
-                draw_as_shadow = true,
-            },
-        }
-    }
-}
-)
+hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
+hawt.name = 'hawt-turbine-mk03-west'
+hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r3.png'
+hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s3.png'
+hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l3.png'
+data:extend{hawt}
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'hawt-turbine-mk03-south',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r1.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l1.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s1.png",
-                width = 287,
-                height = 160,
-                line_length = 5,
-                frame_count = 20,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 1,
-                draw_as_shadow = true,
-            },
-        }
-    }
-}
-)
+hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
+hawt.name = 'hawt-turbine-mk03-northwest'
+hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r4.png'
+hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s4.png'
+hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l4.png'
+data:extend{hawt}
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'hawt-turbine-mk03-southwest',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r2.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l2.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s2.png",
-                width = 287,
-                height = 160,
-                line_length = 5,
-                frame_count = 20,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 1,
-                draw_as_shadow = true,
-            },
-        }
-    }
-}
-)
+hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
+hawt.name = 'hawt-turbine-mk03-north'
+hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r5.png'
+hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s5.png'
+hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l5.png'
+data:extend{hawt}
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'hawt-turbine-mk03-west',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r3.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l3.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s3.png",
-                width = 287,
-                height = 160,
-                line_length = 5,
-                frame_count = 20,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 1,
-                draw_as_shadow = true,
-            },
-        }
-    }
-}
-)
+hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
+hawt.name = 'hawt-turbine-mk03-northeast'
+hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r6.png'
+hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s6.png'
+hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l6.png'
+data:extend{hawt}
 
-data:extend(
-    {
-        {
-        type = 'animation',
-        name = 'hawt-turbine-mk03-northwest',
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r4.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l4.png",
-                width = 192,
-                height = 416,
-                line_length = 10,
-                frame_count = 20,
-                shift = util.by_pixel(0, -112),
-                animation_speed = 1,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s4.png",
-                width = 287,
-                height = 160,
-                line_length = 5,
-                frame_count = 20,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 1,
-                draw_as_shadow = true,
-            },
-        }
-    }
-}
-)
+hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
+hawt.name = 'hawt-turbine-mk03-east'
+hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r7.png'
+hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s7.png'
+hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l7.png'
+data:extend{hawt}
+
+hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
+hawt.name = 'hawt-turbine-mk03-southeast'
+hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r8.png'
+hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s8.png'
+hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l8.png'
+data:extend{hawt}

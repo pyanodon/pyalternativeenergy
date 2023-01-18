@@ -123,6 +123,16 @@ end
 --ENERGY COSTS--
 
 --ENERGY PRODUCTION DESCRIPTION --
+for name, variance in pairs(require('scripts/wind/variation')) do
+  local entity = data.raw['electric-energy-interface'][name]
+  variance = {'entity-description.variance', variance * 100}
+  if entity.localised_description then
+    entity.localised_description = {'', entity.localised_description, '\n', variance}
+  else
+    entity.localised_description = {'?', {'', {'entity-description.' .. name}, '\n', variance}, variance}
+  end
+end
+
 local electric_energy_interfaces = {
   'hawt-turbine-mk01',
   'hawt-turbine-mk02',

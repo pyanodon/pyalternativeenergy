@@ -7,11 +7,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'small-electric-pole', 2},
+        {'small-electric-pole', 6},
         {'small-parts-01', 4},
         {'stone-brick', 20},
         {'inductor1', 18},
-        {'steel-plate', 10}
+        {'steel-plate', 10},
+        {'fish', 5},
     },
     results = {
         {'multiblade-turbine-mk01', 1}
