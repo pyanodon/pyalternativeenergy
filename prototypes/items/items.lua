@@ -933,7 +933,10 @@ data:extend{{
         type = 'electric',
         buffer_capacity = '4GJ',
         usage_priority = 'tertiary'
-    }
+    },
+    localised_name = {'item-name.quantum-battery'},
+    localised_description = {'item-description.used-quantum-battery'},
+    take_result = 'used-quantum-battery'
 }}
 
 ITEM {
@@ -950,7 +953,6 @@ ITEM {
     subgroup = "py-battery-equipment",
     order = "d",
     stack_size = 10,
-    placed_as_equipment_result = 'quantum-battery'
 }
 
 ITEM {
@@ -961,7 +963,9 @@ ITEM {
     flags = {},
     subgroup = "py-battery-equipment",
     order = "db",
-    stack_size = 10
+    stack_size = 10,
+    placed_as_equipment_result = 'quantum-battery',
+    localised_name = {'item-name.used-quantum-battery'},
 }
 
 ITEM {
