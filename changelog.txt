@@ -8,7 +8,10 @@ Date: ?
     - nerfed t1 multiblade. 800kW->550kW. recipe ingredient count increased. footprint expanded. steel+fish added to recipe
     - multiblade turbines can now be walked/driven on
     - fixed render layer issues with multiblade turbines
-    - added variance to wind. hawt->20% vawt->40% fish->70% multiblade->60% 
+    - added variance to wind. hawt->20% vawt->40% fish->70% multiblade->60%
+    - aerial turbines now have a penalty if their travel distance is too short
+    - aerial turbines output buffed
+    - removed limit on aerial base discharging speed
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2023-1-5

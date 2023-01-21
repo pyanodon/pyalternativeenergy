@@ -43,10 +43,9 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     energy_source = {
         type = "electric",
-        buffer_capacity = "500MJ",
+        buffer_capacity = "2GJ",
         usage_priority = "primary-output",
-        input_flow_limit = "0kW",
-        output_flow_limit = "5MW"
+        input_flow_limit = "0kW"
     },
     picture = {
         layers = {
