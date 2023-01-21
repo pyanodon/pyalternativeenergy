@@ -23,15 +23,15 @@ data:extend(
 	},
 	{
 		type = "tips-and-tricks-item",
-		name = "nuclear-research",
+		name = "lfr-stirling",
 		category = "wiki-py",
 		indent = 2,
 		order = "hb",
-        tag = '[item=pu-238]',
+        tag = '[item=solar-concentrator]',
         trigger =
         {
             type = "unlock-recipe",
-            recipe = "nuclear-reactor"
+            recipe = "lrf-building-mk01"
         },
 	},
 })
