@@ -300,6 +300,9 @@ require("prototypes/buildings/heat-exchanger-mk04")
 
 -- ))
 
+--(( TIPS AND TRICKS ))--
+require('prototypes/tips-and-tricks')
+
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
 
 data.raw.fluid["crude-oil"].subgroup = "test"
