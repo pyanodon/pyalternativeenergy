@@ -1,7 +1,16 @@
 Wind = {}
 Wind.events = {}
 
+local animated_wind_turbines = {
+	['hawt'] = true,
+	['multiblade'] = true
+}
+
 local variation = require 'variation'
+local draw_animation = rendering.draw_animation
+local set_animation = rendering.set_animation
+local valid_anim = rendering.is_valid
+local set_animation_speed = rendering.set_animation_speed
 
 Wind.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
@@ -18,20 +27,37 @@ Wind.events.on_built = function(event)
 		create_build_effect_smoke = false,
 	}
 
-    local windmill_data = {entity = entity, base_name = base_name, collision = collision, turbine_type = turbine_type}
-	global.windmill[entity.unit_number] = windmill_data
+    local windmill_data = {
+        entity = entity,
+        base_name = base_name,
+        collision = collision,
+        turbine_type = turbine_type
+    }
 
-	if turbine_type == 'multiblade' or turbine_type == 'hawt' then
+    local wind_speed = Wind.calculate_wind_speed()
+	if animated_wind_turbines[turbine_type] then
+        -- Destroy and replace with turbine-less base
+        local new_entity = entity.surface.create_entity{
+            name = base_name .. '-blank',
+            position = entity.position,
+            force = entity.force,
+            create_build_effect_smoke = false
+        }
+        entity.destroy()
+        -- Update our entry
+        windmill_data.entity = new_entity
+        global.windmill[new_entity.unit_number] = windmill_data
 		local direction = Wind.calculate_wind_direction(game.surfaces['nauvis'])
-		Wind.draw_windmill(windmill_data, direction)
+		Wind.draw_windmill(windmill_data, direction, wind_speed)
     else
-        Wind.update_power_generation(windmill_data, Wind.calculate_wind_speed())
+        global.windmill[entity.unit_number] = windmill_data
     end
+    Wind.update_power_generation(windmill_data, wind_speed)
 end
 
 Wind.events.on_destroyed = function(event)
 	local entity = event.entity
-    if not entity.valid or entity.type ~= 'electric-energy-interface' then return end
+    if entity.type ~= 'electric-energy-interface' then return end
 	local windmill_data = global.windmill[entity.unit_number]
 	if not windmill_data then return end
 
@@ -43,25 +69,25 @@ end
 
 Wind.events.on_init = function(event)
 	global.windmill = global.windmill or {}
+    global.last_windmill = nil
 end
 
-function Wind.draw_windmill(windmill_data, direction)
-    local animation_name = windmill_data.base_name .. direction
-	local entity = windmill_data.entity
-    if entity.name == animation_name then return end
-
-    local new_mill = entity.surface.create_entity{
-        name = animation_name,
-        position = entity.position,
-        force = entity.force,
-        create_build_effect_smoke = false
-    }
-	windmill_data.entity = new_mill
-    global.windmill[new_mill.unit_number] = windmill_data
-    global.windmill[entity.unit_number] = nil
-    Wind.update_power_generation(windmill_data, Wind.calculate_wind_speed())
-
-    entity.destroy()
+function Wind.draw_windmill(windmill_data, direction, wind_speed)
+    local anim_id = windmill_data.anim_id
+    local new_anim = windmill_data.base_name .. direction
+    if not anim_id or not valid_anim(anim_id) then
+        anim_id = draw_animation({
+            animation = new_anim,
+            surface = windmill_data.entity.surface,
+            target = windmill_data.collision
+        })
+        windmill_data.anim_id = anim_id
+    elseif windmill_data.direction ~= direction then
+        set_animation(anim_id, new_anim)
+        windmill_data.direction = direction
+    end
+    -- Update to follow the rough wind speed
+    set_animation_speed(anim_id, math.abs(wind_speed))
 end
 
 function Wind.calculate_wind_direction(surface)
@@ -99,32 +125,29 @@ function Wind.update_power_generation(windmill_data, wind_speed)
     entity.electric_buffer_size = power_output
 end
 
-local animated_wind_turbines = {
-	['hawt'] = true,
-	['multiblade'] = true
-}
-
-Wind.events[501] = function()
+Wind.events[61] = function()
+    local wind_speed = Wind.calculate_wind_speed()
     local direction = Wind.calculate_wind_direction(game.surfaces['nauvis'])
 
-    local copy = {}
-    for k, windmill_data in pairs(global.windmill) do
-		if animated_wind_turbines[windmill_data.turbine_type] then
-			copy[k] = windmill_data
-		end
-	end
-
-    for _, windmill_data in pairs(copy) do
-        Wind.draw_windmill(windmill_data, direction)
-    end
-end
-
-Wind.events[123] = function()
-    local wind_speed = Wind.calculate_wind_speed()
-
-	for _, windmill_data in pairs(global.windmill) do
-		if windmill_data.entity.valid then
-            Wind.update_power_generation(windmill_data, wind_speed)
+    local key, details = global.last_windmill, nil
+    local max_iter = 0
+    repeat
+        max_iter = max_iter + 1
+        key, details = next(global.windmill, key)
+        -- Empty table or end of list
+        if not key or not details then
+            break
         end
-    end
+        if details.entity.valid then
+            if animated_wind_turbines[details.turbine_type] then
+                Wind.draw_windmill(details, direction, wind_speed)
+            end
+            Wind.update_power_generation(details, wind_speed)
+        else
+            _ = details.collision.valid and details.collision.destroy()
+            _ = details.anim_id and rendering.destroy(details.anim_id)
+            global.windmill[key] = nil
+        end
+    until max_iter > 101
+    global.last_windmill = key
 end

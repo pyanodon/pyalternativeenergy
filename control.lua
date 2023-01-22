@@ -188,8 +188,7 @@ script.on_nth_tick(55, function(event)
 end)
 
 script.on_nth_tick(100, Solar.events[100])
-script.on_nth_tick(501, Wind.events[501])
-script.on_nth_tick(123, Wind.events[123])
+script.on_nth_tick(61, Wind.events[61])
 
 local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.script_raised_destroy, defines.events.on_entity_died}
 script.on_event(on_destroyed, function(event)
