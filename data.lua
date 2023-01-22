@@ -303,6 +303,14 @@ require("prototypes/buildings/heat-exchanger-mk04")
 --(( TIPS AND TRICKS ))--
 require('prototypes/tips-and-tricks')
 
+--(( ANIMATIONS ))
+require('prototypes/animations/multiblade-turbine-mk01.lua')
+require('prototypes/animations/multiblade-turbine-mk03.lua')
+require("prototypes/animations/hawt-turbine-mk01")
+require("prototypes/animations/hawt-turbine-mk02")
+require("prototypes/animations/hawt-turbine-mk03")
+require("prototypes/animations/hawt-turbine-mk04")
+
 --data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__/graphics/pycp-wall.jpg'
 
 data.raw.fluid["crude-oil"].subgroup = "test"
