@@ -1,89 +1,89 @@
 Wind = {}
 Wind.events = {}
 
-local animated_wind_turbines = {
-	['hawt'] = true,
-	['multiblade'] = true
+local managed_turbines = {
+    ['hawt-turbine-mk01'] = 'hawt',
+    ['hawt-turbine-mk02'] = 'hawt',
+    ['hawt-turbine-mk03'] = 'hawt',
+    ['hawt-turbine-mk04'] = 'hawt',
+    ['vawt-turbine-mk01'] = 'vawt',
+    ['vawt-turbine-mk02'] = 'vawt',
+    ['vawt-turbine-mk03'] = 'vawt',
+    ['vawt-turbine-mk04'] = 'vawt',
+    ['multiblade-turbine-mk01'] = 'multiblade',
+    ['multiblade-turbine-mk03'] = 'multiblade'
+}
+
+local animated_turbines = {
+    ['hawt'] = true,
+    ['multiblade'] = true
 }
 
 local variation = require 'variation'
-local draw_animation = rendering.draw_animation
-local set_animation = rendering.set_animation
-local valid_anim = rendering.is_valid
-local set_animation_speed = rendering.set_animation_speed
+local draw_animation, set_animation, valid_animation, set_animation_speed = rendering.draw_animation, rendering.set_animation, rendering.is_valid, rendering.set_animation_speed
 
 Wind.events.on_built = function(event)
-	local entity = event.created_entity or event.entity
-    if not entity.valid or entity.type ~= 'electric-energy-interface' then return end
-	local turbine_type, mk = string.match(entity.name, ('^(%a+)%-turbine%-(mk%d+)'))
-	if not turbine_type then return end
-    local surface = entity.surface
-	local base_name = turbine_type .. '-turbine-' .. mk
+    local entity = event.created_entity or event.entity
+    local turbine_type = entity.valid and managed_turbines[entity.name]
+    if not turbine_type then return end
 
-	local collision = surface.create_entity{
-		name = base_name .. '-collision',
-		position = entity.position,
-		force = entity.force,
-		create_build_effect_smoke = false,
-	}
+    -- Invisible collision entity prevents nearby turbine placement
+    local collision = entity.surface.create_entity{
+        name = entity.name .. '-collision',
+        position = entity.position,
+        force = entity.force,
+        create_build_effect_smoke = false,
+    }
 
-    local windmill_data = {
+    local entry = {
         entity = entity,
-        base_name = base_name,
+        base_name = entity.name,
         collision = collision,
         turbine_type = turbine_type
     }
 
     local wind_speed = Wind.calculate_wind_speed()
-	if animated_wind_turbines[turbine_type] then
-        -- Destroy and replace with turbine-less base
-        local new_entity = entity.surface.create_entity{
-            name = base_name .. '-blank',
+
+    -- Animated turbines are destroyed and replaced with a base graphic
+    if animated_turbines[turbine_type] then
+        local replacement_entity = entity.surface.create_entity{
+            name = entity.name .. '-blank',
             position = entity.position,
             force = entity.force,
             create_build_effect_smoke = false
         }
         entity.destroy()
-        -- Update our entry
-        windmill_data.entity = new_entity
-        global.windmill[new_entity.unit_number] = windmill_data
-		local direction = Wind.calculate_wind_direction(game.surfaces['nauvis'])
-		Wind.draw_windmill(windmill_data, direction, wind_speed)
-    else
-        global.windmill[entity.unit_number] = windmill_data
+        entry.entity = replacement_entity
+        Wind.draw_windmill(entry, Wind.calculate_wind_direction(game.surfaces['nauvis']), wind_speed)
     end
-    Wind.update_power_generation(windmill_data, wind_speed)
+
+    global.windmill[entry.entity.unit_number] = entry
+    Wind.update_power_generation(entry, wind_speed)
 end
 
 Wind.events.on_destroyed = function(event)
-	local entity = event.entity
-    if entity.type ~= 'electric-energy-interface' then return end
-	local windmill_data = global.windmill[entity.unit_number]
-	if not windmill_data then return end
-
-	local collision = windmill_data.collision
-	if collision.valid then collision.destroy() end
-
-	global.windmill[entity.unit_number] = nil
+    local entity = event.entity
+    if not managed_turbines[entity.name] then return end
+    local entry = global.windmill[entity.unit_number]
+    _ = entry and entry.collision and entry.collision.valid and entry.collision.destroy()
+    global.windmill[entity.unit_number] = nil
 end
 
 Wind.events.on_init = function(event)
-	global.windmill = global.windmill or {}
-    global.last_windmill = nil
+    global.windmill = global.windmill or {}
 end
 
 function Wind.draw_windmill(windmill_data, direction, wind_speed)
     local anim_id = windmill_data.anim_id
-    local new_anim = windmill_data.base_name .. direction
-    if not anim_id or not valid_anim(anim_id) then
+    if not anim_id or not valid_animation(anim_id) then
         anim_id = draw_animation({
-            animation = new_anim,
+            animation = windmill_data.base_name .. direction,
             surface = windmill_data.entity.surface,
             target = windmill_data.collision
         })
         windmill_data.anim_id = anim_id
     elseif windmill_data.direction ~= direction then
-        set_animation(anim_id, new_anim)
+        set_animation(anim_id, windmill_data.base_name .. direction)
         windmill_data.direction = direction
     end
     -- Update to follow the rough wind speed
@@ -139,7 +139,7 @@ Wind.events[61] = function()
             break
         end
         if details.entity.valid then
-            if animated_wind_turbines[details.turbine_type] then
+            if animated_turbines[details.turbine_type] then
                 Wind.draw_windmill(details, direction, wind_speed)
             end
             Wind.update_power_generation(details, wind_speed)
