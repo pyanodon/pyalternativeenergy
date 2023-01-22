@@ -12,8 +12,12 @@ for _, turbine_type in pairs({'hawt', 'vawt', 'multiblade'}) do
     end
 end
 
+-- Clear out the existing global state
+-- global.windmills is 2 versions ago
+global.windmill = {}
+global.windmills = nil
+
 for _, surface in pairs(game.surfaces) do
-    global.windmill = {}
     -- Yeet the collision boxes
     for _, airbox in pairs(surface.find_entities_filtered{name = collision_targets}) do
         airbox.destroy()
