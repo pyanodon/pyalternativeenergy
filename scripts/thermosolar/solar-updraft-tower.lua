@@ -103,6 +103,7 @@ Solar_Updraft_Tower.events.on_built = function(event)
     }
 
     local placement_restriction = surface.create_entity{name = 'sut-placement-distance', position = entity.position, force = entity.force}
+    placement_restriction.destructible = false
     global.solar_updraft_towers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0}
     Solar_Updraft_Tower.update_power_generation(entity)
     global.update_sut_guis = true

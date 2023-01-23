@@ -34,6 +34,7 @@ Wind.events.on_built = function(event)
         force = entity.force,
         create_build_effect_smoke = false,
     }
+    collision.destructible = false
 
     local entry = {
         entity = entity,

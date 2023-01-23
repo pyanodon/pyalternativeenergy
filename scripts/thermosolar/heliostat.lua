@@ -69,6 +69,7 @@ Heliostat.events.on_built = function(event)
 		if tower then Heliostat.update_power_generation(tower) end
 	elseif entity.name == 'solar-tower-building' then
 		local placement_restriction = entity.surface.create_entity{name = 'sut-placement-distance', position = entity.position, force = entity.force}
+		placement_restriction.destructible = false
 		global.heliostat_towers[entity.unit_number] = {entity = entity, unit_number = entity.unit_number, placement_restriction = placement_restriction, heliostats = 0}
 		Heliostat.update_power_generation(entity)
 		global.update_heliostat_guis = true
