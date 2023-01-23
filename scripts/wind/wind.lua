@@ -80,7 +80,7 @@ function Wind.draw_windmill(windmill_data, direction, wind_speed)
         anim_id = draw_animation({
             animation = windmill_data.base_name .. direction,
             surface = windmill_data.entity.surface,
-            target = windmill_data.collision
+            target = windmill_data.entity
         })
         windmill_data.anim_id = anim_id
     elseif windmill_data.direction ~= direction then

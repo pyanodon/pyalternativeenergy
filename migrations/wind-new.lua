@@ -1,3 +1,5 @@
+if global.windmill then return end -- Make sure not to run this twice
+
 local targets = {}
 local collision_targets = {}
 
