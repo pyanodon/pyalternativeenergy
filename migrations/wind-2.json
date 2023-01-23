@@ -1,0 +1,58 @@
+{
+    "entity":
+    [
+        ["multiblade-turbine-mk01-south", "multiblade-turbine-mk01-blank"],
+        ["multiblade-turbine-mk01-southwest", "multiblade-turbine-mk01-blank"],
+        ["multiblade-turbine-mk01-west", "multiblade-turbine-mk01-blank"],
+        ["multiblade-turbine-mk01-northwest", "multiblade-turbine-mk01-blank"],
+        ["multiblade-turbine-mk01-north", "multiblade-turbine-mk01-blank"],
+        ["multiblade-turbine-mk01-northeast", "multiblade-turbine-mk01-blank"],
+        ["multiblade-turbine-mk01-east", "multiblade-turbine-mk01-blank"],
+        ["multiblade-turbine-mk01-southeast", "multiblade-turbine-mk01-blank"],
+
+        ["multiblade-turbine-mk03-south", "multiblade-turbine-mk03-blank"],
+        ["multiblade-turbine-mk03-southwest", "multiblade-turbine-mk03-blank"],
+        ["multiblade-turbine-mk03-west", "multiblade-turbine-mk03-blank"],
+        ["multiblade-turbine-mk03-northwest", "multiblade-turbine-mk03-blank"],
+        ["multiblade-turbine-mk03-north", "multiblade-turbine-mk03-blank"],
+        ["multiblade-turbine-mk03-northeast", "multiblade-turbine-mk03-blank"],
+        ["multiblade-turbine-mk03-east", "multiblade-turbine-mk03-blank"],
+        ["multiblade-turbine-mk03-southeast", "multiblade-turbine-mk03-blank"],
+
+        ["hawt-turbine-mk01-south", "hawt-turbine-mk01-blank"],
+        ["hawt-turbine-mk01-southwest", "hawt-turbine-mk01-blank"],
+        ["hawt-turbine-mk01-west", "hawt-turbine-mk01-blank"],
+        ["hawt-turbine-mk01-northwest", "hawt-turbine-mk01-blank"],
+        ["hawt-turbine-mk01-north", "hawt-turbine-mk01-blank"],
+        ["hawt-turbine-mk01-northeast", "hawt-turbine-mk01-blank"],
+        ["hawt-turbine-mk01-east", "hawt-turbine-mk01-blank"],
+        ["hawt-turbine-mk01-southeast", "hawt-turbine-mk01-blank"],
+
+        ["hawt-turbine-mk02-south", "hawt-turbine-mk02-blank"],
+        ["hawt-turbine-mk02-southwest", "hawt-turbine-mk02-blank"],
+        ["hawt-turbine-mk02-west", "hawt-turbine-mk02-blank"],
+        ["hawt-turbine-mk02-northwest", "hawt-turbine-mk02-blank"],
+        ["hawt-turbine-mk02-north", "hawt-turbine-mk02-blank"],
+        ["hawt-turbine-mk02-northeast", "hawt-turbine-mk02-blank"],
+        ["hawt-turbine-mk02-east", "hawt-turbine-mk02-blank"],
+        ["hawt-turbine-mk02-southeast", "hawt-turbine-mk02-blank"],
+
+        ["hawt-turbine-mk03-south", "hawt-turbine-mk03-blank"],
+        ["hawt-turbine-mk03-southwest", "hawt-turbine-mk03-blank"],
+        ["hawt-turbine-mk03-west", "hawt-turbine-mk03-blank"],
+        ["hawt-turbine-mk03-northwest", "hawt-turbine-mk03-blank"],
+        ["hawt-turbine-mk03-north", "hawt-turbine-mk03-blank"],
+        ["hawt-turbine-mk03-northeast", "hawt-turbine-mk03-blank"],
+        ["hawt-turbine-mk03-east", "hawt-turbine-mk03-blank"],
+        ["hawt-turbine-mk03-southeast", "hawt-turbine-mk03-blank"],
+
+        ["hawt-turbine-mk04-south", "hawt-turbine-mk04-blank"],
+        ["hawt-turbine-mk04-southwest", "hawt-turbine-mk04-blank"],
+        ["hawt-turbine-mk04-west", "hawt-turbine-mk04-blank"],
+        ["hawt-turbine-mk04-northwest", "hawt-turbine-mk04-blank"],
+        ["hawt-turbine-mk04-north", "hawt-turbine-mk04-blank"],
+        ["hawt-turbine-mk04-northeast", "hawt-turbine-mk04-blank"],
+        ["hawt-turbine-mk04-east", "hawt-turbine-mk04-blank"],
+        ["hawt-turbine-mk04-southeast", "hawt-turbine-mk04-blank"]
+    ]
+}

@@ -98,7 +98,16 @@ ENTITY {
     },
     localised_name = {'entity-name.hawt-turbine-mk03'},
     localised_description = {'entity-description.hawt-turbine-mk03'}
-}
+}:run_function(function(proto)
+    -- Make a copy with only the base animation
+    local new_proto = table.deepcopy(proto)
+    new_proto.name = proto.name .. '-blank'
+    new_proto.picture = table.deepcopy(proto.animations.layers[1])
+    new_proto.picture.filename = new_proto.picture.filename:gsub('r4', 'base-mk03')
+    new_proto.animations = nil
+    new_proto.render_layer = 'lower-object-above-shadow'
+    new_proto:extend(true)
+end)
 
 data:extend(
     {
@@ -120,61 +129,3 @@ data:extend(
         },
     }
 })
-
-local hawt
-
-hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
-hawt.name = 'hawt-turbine-mk03-south'
-hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r1.png'
-hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s1.png'
-hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l1.png'
-data:extend{hawt}
-
-hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
-hawt.name = 'hawt-turbine-mk03-southwest'
-hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r2.png'
-hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s2.png'
-hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l2.png'
-data:extend{hawt}
-
-hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
-hawt.name = 'hawt-turbine-mk03-west'
-hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r3.png'
-hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s3.png'
-hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l3.png'
-data:extend{hawt}
-
-hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
-hawt.name = 'hawt-turbine-mk03-northwest'
-hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r4.png'
-hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s4.png'
-hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l4.png'
-data:extend{hawt}
-
-hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
-hawt.name = 'hawt-turbine-mk03-north'
-hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r5.png'
-hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s5.png'
-hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l5.png'
-data:extend{hawt}
-
-hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
-hawt.name = 'hawt-turbine-mk03-northeast'
-hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r6.png'
-hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s6.png'
-hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l6.png'
-data:extend{hawt}
-
-hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
-hawt.name = 'hawt-turbine-mk03-east'
-hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r7.png'
-hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s7.png'
-hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l7.png'
-data:extend{hawt}
-
-hawt = table.deepcopy(data.raw['electric-energy-interface']['hawt-turbine-mk03'])
-hawt.name = 'hawt-turbine-mk03-southeast'
-hawt.animations.layers[1].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r8.png'
-hawt.animations.layers[2].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s8.png'
-hawt.animations.layers[3].filename = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l8.png'
-data:extend{hawt}
