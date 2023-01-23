@@ -482,6 +482,7 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "helium", amount = 100},
         {type = "item", name = "nxzngd", amount = 1},
+        {type = "item", name = "lfo", amount = 1},
         {type = "item", name = "metallic-glass", amount = 2},
     },
     results = {
@@ -536,9 +537,11 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "fluid", name = "perylene", amount = 100},
+        {type = "fluid", name = "allylamine", amount = 100},
         {type = "fluid", name = "high-grade-quartz-pulp", amount = 50},
         {type = "item", name = "silver-plate", amount = 2},
+        {type = "item", name = "rhodamine-b", amount = 1},
+        {type = "item", name = "flo", amount = 1},
     },
     results = {
         {type = "item", name = "photon-deposited-quartz", amount = 1},

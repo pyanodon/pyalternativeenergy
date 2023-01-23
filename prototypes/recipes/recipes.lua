@@ -346,7 +346,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "super-alloy", amount = 6},
         {type = "item", name = "biopolymer", amount = 4},
-        {type = "item", name = "flo", amount = 3},
+        {type = "item", name = "lfo", amount = 3},
         {type = "item", name = "nexelit-matrix", amount = 5},
         {type = "item", name = "nxsb-alloy", amount = 3},
         {type = "item", name = "small-parts-03", amount = 10},
@@ -765,6 +765,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "item", name = "alag-alloy", amount = 1},
+        {type = "item", name = "silver-nitrate", amount = 1},
         {type = "fluid", name = "vacuum", amount = 200},
     },
     results = {
