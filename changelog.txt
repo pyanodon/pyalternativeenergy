@@ -9,6 +9,7 @@ Date: ?
     - multiblade turbines can now be walked/driven on
     - fixed render layer issues with multiblade turbines
     - added variance to wind. hawt->20% vawt->40% fish->70% multiblade->60%
+    - performance penalty from large turbine counts largely mitigated
     - aerial turbines now have a penalty if their travel distance is too short
     - aerial turbines output buffed
     - removed limit on aerial base discharging speed
