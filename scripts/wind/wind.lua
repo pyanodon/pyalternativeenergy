@@ -50,7 +50,8 @@ Wind.events.on_built = function(event)
             name = entity.name .. '-blank',
             position = entity.position,
             force = entity.force,
-            create_build_effect_smoke = false
+            create_build_effect_smoke = false,
+            player = entity.last_user
         }
         entity.destroy()
         entry.entity = replacement_entity
