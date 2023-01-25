@@ -56,6 +56,11 @@ FUN.autorecipes {
 				},
 			results =
 				{
+					{name = 'meat', remove_item = true},
+					{name = 'chitin', remove_item = true},
+					{name = 'guts', remove_item = true},
+					{name = 'brain', remove_item = true},
+					{name = 'arthropod-blood', remove_item = true},
 					{name='guts', amount = IMP_GUTS},
 					{name='numal-ink', amount = IMP_SPECIAL},
 				},
@@ -73,9 +78,9 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='guts', amount = BASE_GUTS},
-					{name='numal-ink', amount = BASE_SPECIAL},
-					{name='arthropod-blood', amount = IMP_BLOOD},
+					{name = 'guts', remove_item = true},
+					{name = 'numal-ink', remove_item = true},
+					{name= 'arthropod-blood', amount = IMP_BLOOD},
 				},
 			tech = 'recombinant-ery',
 			name = 'ex-blo-num',
@@ -91,7 +96,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='arthropod-blood', amount = BASE_BLOOD},
+					{name = 'arthropod-blood', remove_item = true},
 					{name='chitin', amount = IMP_SKIN},
 				},
 			tech = 'reca',
@@ -108,7 +113,7 @@ FUN.autorecipes {
 				},
 			results =
 				{
-					{name='chitin', amount = BASE_SKIN},
+					{name = 'chitin', remove_item = true},
 					{name='meat', amount = IMP_MEAT},
 				},
 			tech = 'anabolic-rna',
