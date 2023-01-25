@@ -35,7 +35,7 @@ for r, _ in pairs(data.raw.recipe) do
 end
 
 RECIPE('chemical-science-pack'):add_ingredient({ type = 'item', name = 'nuclear-sample', amount = 1 }):add_ingredient({ type = 'fluid', name = 'organic-acid-anhydride', amount = 50 })
-RECIPE("chemical-science-pack"):replace_ingredient("nexelit-plate", { type = "item", name = "self-assembly-monolayer", amount = 2 })
+RECIPE("chemical-science-pack"):add_ingredient({ type = 'item', name = 'self-assembly-monolayer', amount = 2 })
 RECIPE("chemical-science-pack"):replace_ingredient("tinned-cable", { type = "item", name = "small-parts-02", amount = 3 })
 RECIPE("chemical-science-pack"):set_fields {
     results = {

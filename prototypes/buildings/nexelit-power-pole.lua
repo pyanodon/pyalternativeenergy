@@ -7,7 +7,7 @@ RECIPE {
     ingredients = {
         {"refined-concrete", 5},
         {"stainless-steel", 1},
-        {"nexelit-plate", 2},
+        {"nexelit-plate", 3},
     },
     results = {
         {"nexelit-power-pole", 1},
