@@ -13,6 +13,10 @@ Date: ?
     - aerial turbines now have a penalty if their travel distance is too short
     - aerial turbines output buffed
     - removed limit on aerial base discharging speed
+    - added Lumogen F to quasicrystal and micro-cavity-core recipes
+    - added silver-nitrate to aluminium grid recipe
+    - added allylamine, rhodamine-b, basolite c300 to photon-deposited-quartz recipe (removed perylene)
+    - added several wiki pages: Big Mines, Bitumen Seeps, Tholins, Farming, Automated Smart Farms, Logistic Stations, Aerial Turbines, Thermosolar, Ocula
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2023-1-5
