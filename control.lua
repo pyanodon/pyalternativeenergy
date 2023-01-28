@@ -50,6 +50,7 @@ local function process_gui_event(event)
 	end
 end
 
+require 'scripts/wiki/text-pages'
 require 'scripts/microwave-receiver'
 require 'scripts/thermosolar/shared'
 require 'scripts/thermosolar/solar-updraft-tower'
@@ -62,6 +63,7 @@ local function init_globals()
     Microwave_Receiver.events.on_init()
     Thermosolar.events.on_init()
     Wind.events.on_init()
+    Wiki.events.on_init()
     
     global.reactor_tanks = global.reactor_tanks or {}
     global.lrf_panels = global.lrf_panels or {}

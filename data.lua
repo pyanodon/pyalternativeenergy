@@ -300,9 +300,6 @@ require("prototypes/buildings/heat-exchanger-mk04")
 
 -- ))
 
---(( TIPS AND TRICKS ))--
-require('prototypes/tips-and-tricks')
-
 --(( ANIMATIONS ))
 require('prototypes/animations/multiblade-turbine-mk01.lua')
 require('prototypes/animations/multiblade-turbine-mk03.lua')
