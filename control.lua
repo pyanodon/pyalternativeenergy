@@ -1,55 +1,5 @@
 local util = require('util')
 
-local si_prefixes = {
-    [0] = '',
-    'si-prefix-symbol-kilo',
-    'si-prefix-symbol-mega',
-    'si-prefix-symbol-giga',
-    'si-prefix-symbol-tera',
-    'si-prefix-symbol-peta',
-    'si-prefix-symbol-exa',
-    'si-prefix-symbol-zetta',
-    'si-prefix-symbol-yotta'
-}
-function _G.format_energy(energy, watts_or_joules)
-	if watts_or_joules == 'W' then
-        watts_or_joules = 'si-unit-symbol-watt'
-        energy = energy * 60
-    elseif watts_or_joules == 'J' then
-        watts_or_joules = 'si-unit-symbol-joule'
-    else
-        error()
-    end
-
-    local prefix = 0
-	while energy >= 1000 do
-        energy = energy / 1000
-        prefix = prefix + 1
-    end
-	return {'' , string.format('%.1f', energy), ' ', {si_prefixes[prefix]}, {watts_or_joules}}
-end
-
-_G.gui_events = {
-	[defines.events.on_gui_click] = {},
-	[defines.events.on_gui_confirmed] = {},
-	[defines.events.on_gui_text_changed] = {},
-	[defines.events.on_gui_checked_state_changed] = {},
-	[defines.events.on_gui_selection_state_changed] = {},
-	[defines.events.on_gui_checked_state_changed] = {},
-	[defines.events.on_gui_elem_changed] = {},
-	[defines.events.on_gui_value_changed] = {},
-	[defines.events.on_gui_location_changed] = {},
-	[defines.events.on_gui_selected_tab_changed] = {},
-	[defines.events.on_gui_switch_state_changed] = {}
-}
-local function process_gui_event(event)
-	if event.element and event.element.valid then
-		for pattern, f in pairs(gui_events[event.name]) do
-			if event.element.name:match(pattern) then f(event); return end
-		end
-	end
-end
-
 require 'scripts/wiki/text-pages'
 require 'scripts/microwave-receiver'
 require 'scripts/thermosolar/shared'
@@ -64,7 +14,7 @@ local function init_globals()
     Thermosolar.events.on_init()
     Wind.events.on_init()
     Wiki.events.on_init()
-    
+
     global.reactor_tanks = global.reactor_tanks or {}
     global.lrf_panels = global.lrf_panels or {}
     global.stirling = global.stirling or {}
@@ -115,23 +65,17 @@ script.on_event(on_built, function(event)
             dirty_fuel_tank = out1
             -- moderator = moderator
         }
-        --log(serpent.block(global.reactor_tanks))
     elseif string.match(E.name, 'tidal%-placer') then
-      --log('hit')
         local direction = E.direction
         local x = 0
         local y = 0
         if direction == defines.direction.north then
-            --log('hit')
             y = -2
         elseif direction == defines.direction.south then
-            --log('hit')
             y = 2
         elseif direction == defines.direction.east then
-            --log('hit')
             x = 1
         elseif direction == defines.direction.west then
-            --log('hit')
             x = -1
         end
         surface.create_entity{
@@ -146,16 +90,12 @@ script.on_event(on_built, function(event)
         local x = 0
         local y = 0
         if direction == defines.direction.north then
-            --log('hit')
             y = -4
         elseif direction == defines.direction.south then
-            --log('hit')
             y = 4
         elseif direction == defines.direction.east then
-            --log('hit')
             x = 4
         elseif direction == defines.direction.west then
-            --log('hit')
             x = -4
         end
         surface.create_entity{
@@ -167,7 +107,6 @@ script.on_event(on_built, function(event)
         }
         E.destroy()
     elseif string.match(E.name, 'lrf%-panel') ~= nil then
-        --log('hit')
         global.lrf_panels[E.unit_number] = E
     elseif E.name == 'stirling-concentrator' then
         global.stirling[E.unit_number] = E

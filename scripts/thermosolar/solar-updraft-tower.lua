@@ -1,3 +1,5 @@
+local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
+
 Solar_Updraft_Tower = {}
 Solar_Updraft_Tower.events = {}
 
@@ -175,7 +177,7 @@ Solar_Updraft_Tower.events.on_gui_opened = function(event)
 	content_flow.add{type = 'label', name = 'average_generation'}
 	content_flow.add{type = 'label', name = 'daylight'}
 	content_flow.add{type = 'label', caption = {'sut-gui.range', Thermosolar.tower_range}}
-	content_flow.add{type = 'label', caption = {'sut-gui.energy-per-cover', format_energy(Solar_Updraft_Tower.power_generated_per_cover, 'W')}}
+	content_flow.add{type = 'label', caption = {'sut-gui.energy-per-cover', FUN.format_energy(Solar_Updraft_Tower.power_generated_per_cover, 'W')}}
 
 	Solar_Updraft_Tower.update_gui(main_frame)
 end
@@ -196,9 +198,9 @@ function Solar_Updraft_Tower.update_gui(gui)
     local daylight = Thermosolar.calc_daylight(surface)
 
 	content_flow.progressbar.value = daylight
-	content_flow.progressbar.caption = {'sut-gui.energy', format_energy(tower_data.entity.power_production, 'W'), format_energy(tower_data.max_production, 'W')}
+	content_flow.progressbar.caption = {'sut-gui.energy', FUN.format_energy(tower_data.entity.power_production, 'W'), FUN.format_energy(tower_data.max_production, 'W')}
     content_flow.total_covers.caption = {'sut-gui.total-covers', tower_data.glass_covers}
-    content_flow.average_generation.caption = {'sut-gui.average-generation', format_energy(tower_data.max_production * Thermosolar.calc_average_daylight(surface), 'W')}
+    content_flow.average_generation.caption = {'sut-gui.average-generation', FUN.format_energy(tower_data.max_production * Thermosolar.calc_average_daylight(surface), 'W')}
     content_flow.daylight.caption = {'sut-gui.daylight', math.floor(daylight * 100)}
 end
 
