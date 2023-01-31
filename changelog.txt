@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.8
-Date: ?
+Date: 2023-1-31
   Changes:
     - fixed crash with thermosolar
     - fixed multiblade turbines lying about their max power output
