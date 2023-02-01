@@ -1,7 +1,7 @@
 Microwave_Receiver = {}
 Microwave_Receiver.events = {}
 
-Microwave_Receiver.max_satellites_per_receiver = 20
+Microwave_Receiver.max_satellites_per_receiver = 15
 Microwave_Receiver.power_production_per_satellite = 80000
 
 local Table = require('__stdlib__/stdlib/utils/table')
