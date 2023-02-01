@@ -15,4 +15,10 @@ Wiki.events.on_init = function()
         section = 'alternativeenergy',
         text_only = true
     })
+
+    remote.call('pywiki', 'add_page', {
+        name = 'microwave-receiver',
+        section = 'alternativeenergy',
+        text_only = true
+    })
 end

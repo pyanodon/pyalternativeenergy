@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.9
+Date: ?
+  Changes:
+    - added wiki page for microwave receiver
+    - microwave receiver max satellites buffed from 5->20
+---------------------------------------------------------------------------------------------------
 Version: 1.1.8
 Date: 2023-1-31
   Changes:
