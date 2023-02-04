@@ -76,10 +76,6 @@ ENTITY {
     mining_speed = 2.5,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    module_specification =
-    {
-      module_slots = 4
-    },
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
