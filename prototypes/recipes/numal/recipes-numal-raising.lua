@@ -53,7 +53,7 @@ FUN.autorecipes {
 				{
 					{name = 'numal', add_amount = 2},
 					{name = 'bedding', amount = 3},
-					{name = 'water-barrel', add_amount = 5, return_barrel = true},
+					--{name = 'water-barrel', add_amount = 5, return_barrel = true},
 				},
 			results =
 				{
@@ -230,7 +230,7 @@ RECIPE {
 			ingredients =
 				{
 					{name = 'numal-egg', amount = 4},
-                    {name = 'caged-mukmoux', amount = 1},
+                    {name = 'caged-auog', amount = 1},
 					{name = 'meat', amount = 10},
 					{name = 'guts', amount = 10},
 					{name = 'arqad-honey-barrel', amount = 1, return_barrel = true},
@@ -260,7 +260,8 @@ RECIPE {
 				{
 					{name = 'numal-egg', add_amount = 4},
 					{name = 'bedding', amount = 3},
-					{name = 'caged-auog', amount = 1},
+					{name = 'caged-auog',remove_item = true},
+					{name = 'caged-mukmoux', amount = 1},
 				},
 			results =
 				{
@@ -275,7 +276,7 @@ RECIPE {
 					{name = 'numal-egg', add_amount = 4},
 					{name = 'numal-food-01',remove_item = true},
 					{name = 'bedding', amount = 3},
-					{name = 'caged-auog', amount = 1},
+					--{name = 'caged-auog', amount = 1},
 					{name = 'numal-food-02', amount =1},
 				},
 			results =
