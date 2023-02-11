@@ -61,6 +61,7 @@ RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "intermetallics
 --RECIPE("slaughterhouse-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("spore-collector-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("cadaveric-arum-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
+RECIPE("cadaveric-arum-mk01-with-nanofibrils"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("fawogae-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 -- RECIPE("moondrop-greenhouse-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("navens-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
