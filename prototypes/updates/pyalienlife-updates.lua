@@ -89,6 +89,7 @@ RECIPE("ulric-corral-mk01"):add_ingredient({type = "item", name = "intermetallic
 RECIPE("xenopen-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("xyhiphoe-pool-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
 RECIPE("zipir-reef-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
+RECIPE("zipir-reef-mk01-with-rc"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 --RECIPE("fwf-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 RECIPE("grods-swamp-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("kicalk-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
