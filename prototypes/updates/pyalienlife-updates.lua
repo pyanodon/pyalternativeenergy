@@ -68,6 +68,7 @@ RECIPE("navens-culture-mk01"):add_ingredient({type = "item", name = "intermetall
 RECIPE("yaedols-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("bhoddos-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("arqad-hive-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+RECIPE("arqad-hive-mk01-with-cags"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("arthurian-pen-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
 RECIPE("auog-paddock-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("compost-plant-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})

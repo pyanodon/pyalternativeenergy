@@ -28,6 +28,7 @@ ITEM("space-science-pack", "tool"):set("icon_mipmaps", nil)
 --MOVED RECIPES CATEGORIES
 RECIPE('aromatic-organic'):set_category("centrifuging")
 RECIPE('honey-comb'):set_category("centrifuging")
+RECIPE('honey-comb-buffed'):set_category("centrifuging")
 RECIPE('nickel-tailings'):set_category("centrifuging")
 RECIPE('xylenol-2'):set_category("centrifuging")
 RECIPE('coal-slurry'):set_category("centrifuging")
