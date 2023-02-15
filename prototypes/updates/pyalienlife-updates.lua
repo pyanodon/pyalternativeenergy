@@ -63,6 +63,7 @@ RECIPE("spore-collector-mk01"):add_ingredient({type = "item", name = "intermetal
 RECIPE("cadaveric-arum-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("cadaveric-arum-mk01-with-nanofibrils"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("fawogae-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
+RECIPE("fawogae-plantation-mk01-with-pressure-pump"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 -- RECIPE("moondrop-greenhouse-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("navens-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("yaedols-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -125,6 +126,7 @@ RECIPE("spore-collector-mk02"):add_ingredient({type = "item", name = "self-assem
 RECIPE("cadaveric-arum-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("cadaveric-arum-mk02-with-nanofibrils"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("fawogae-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("fawogae-plantation-mk02-with-pressure-pump"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("moondrop-greenhouse-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("navens-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("yaedols-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -194,6 +196,7 @@ RECIPE("spore-collector-mk03"):add_ingredient({type = "item", name = "ns-materia
 RECIPE("cadaveric-arum-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("cadaveric-arum-mk03-with-nanofibrils"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("fawogae-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("fawogae-plantation-mk03-with-pressure-pump"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("moondrop-greenhouse-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("navens-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("yaedols-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -260,6 +263,7 @@ RECIPE("spore-collector-mk04"):add_ingredient({type = "item", name = "metastable
 RECIPE("cadaveric-arum-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("cadaveric-arum-mk04-with-nanofibrils"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("fawogae-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("fawogae-plantation-mk04-with-pressure-pump"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("moondrop-greenhouse-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("navens-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("yaedols-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
