@@ -345,7 +345,9 @@ RECIPE("bhoddos-mk03"):remove_ingredient("70-u-powder")
 --RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
 RECIPE('steam-heating'):remove_unlock('phytomining'):add_unlock('uranium-processing')
 RECIPE('py-science-pack-3'):add_ingredient({type = "item", name = "bio-ore", amount = 2}):replace_ingredient("plastic-bar", "acrylic")
+RECIPE('py-science-pack-3-turd'):add_ingredient({type = "item", name = "bio-ore", amount = 2}):replace_ingredient("plastic-bar", "acrylic")
 RECIPE("py-science-pack-4"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
+RECIPE("py-science-pack-4-turd"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
 RECIPE("perfect-samples"):add_ingredient{type = 'item', name = 'vsk', amount = 1}
 RECIPE('perfect-samples'):add_ingredient({type = "item", name = "aeroorgan", amount = 1})
 RECIPE('gastrocapacitor'):add_ingredient({type = "item", name = "sugar", amount = 1}):replace_ingredient("phytoplankton", "fatty-acids")
@@ -361,8 +363,11 @@ RECIPE('brain-cartridge-02'):replace_ingredient("oleochemicals", "fatty-acids")
 
 --mechanical-parts--
 RECIPE("py-science-pack-2"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
+RECIPE("py-science-pack-2-turd"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
 RECIPE("py-science-pack-3"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("py-science-pack-3-turd"):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("py-science-pack-4"):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("py-science-pack-4-turd"):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 
 
 RECIPE("grod-seeds-mk02-soaker"):set_fields{category = 'centrifuging'}
