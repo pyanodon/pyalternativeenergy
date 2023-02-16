@@ -172,6 +172,7 @@ RECIPE("research-center-mk02"):add_ingredient({type = "item", name = "self-assem
 RECIPE("botanical-nursery-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("vrauks-paddock-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("moss-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("moss-farm-mk02-with-bioreactor"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("sap-extractor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("seaweed-crop-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("seaweed-crop-mk02-with-ai"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -240,6 +241,7 @@ RECIPE("research-center-mk03"):add_ingredient({type = "item", name = "ns-materia
 RECIPE("botanical-nursery-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("vrauks-paddock-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("moss-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("moss-farm-mk03-with-bioreactor"):add_ingredient({type = "item", name = "ns-material", amount = 7}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("sap-extractor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("seaweed-crop-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("seaweed-crop-mk03-with-ai"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -307,6 +309,7 @@ RECIPE("research-center-mk04"):add_ingredient({type = "item", name = "metastable
 RECIPE("botanical-nursery-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("vrauks-paddock-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("moss-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("moss-farm-mk04-with-bioreactor"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("sap-extractor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("seaweed-crop-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("seaweed-crop-mk04-with-ai"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
