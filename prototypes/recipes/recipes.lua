@@ -645,7 +645,7 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = "item", name = "alag-grid", amount = 2},
-        {type = "item", name = "quantum-dots", amount = 3},
+        {type = "item", name = "quantum-dots", amount = 10},
         {type = "item", name = "quantum-well", amount = 3},
         {type = "item", name = "eg-si", amount = 5},
         {type = "item", name = "supercapacitor-shell", amount = 1},
