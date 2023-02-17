@@ -68,6 +68,7 @@ RECIPE("fawogae-plantation-mk01-with-pressure-pump"):add_ingredient({type = "ite
 RECIPE("navens-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("yaedols-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("bhoddos-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+RECIPE("bhoddos-culture-mk01-with-pybot"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("arqad-hive-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("arqad-hive-mk01-with-cags"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("arthurian-pen-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
@@ -132,6 +133,7 @@ RECIPE("moondrop-greenhouse-mk02"):add_ingredient({type = "item", name = "self-a
 RECIPE("navens-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("yaedols-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("bhoddos-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("bhoddos-culture-mk02-with-pybot"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("arqad-hive-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("arthurian-pen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("auog-paddock-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -204,6 +206,7 @@ RECIPE("moondrop-greenhouse-mk03"):add_ingredient({type = "item", name = "ns-mat
 RECIPE("navens-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("yaedols-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("bhoddos-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("bhoddos-culture-mk03-with-pybot"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("arqad-hive-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("arthurian-pen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("auog-paddock-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -273,6 +276,7 @@ RECIPE("moondrop-greenhouse-mk04"):add_ingredient({type = "item", name = "metast
 RECIPE("navens-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("yaedols-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("bhoddos-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("bhoddos-culture-mk04-with-pybot"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("arqad-hive-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("arthurian-pen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("auog-paddock-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
