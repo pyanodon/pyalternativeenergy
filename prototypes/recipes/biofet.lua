@@ -215,6 +215,7 @@ RECIPE {
         {type = "item", name = "dynemicin", amount = 1},
         {type = "item", name = "p-dope", amount = 2},
         {type = "item", name = "heavy-n", amount = 2},
+        {type = "item", name = "pvp", amount = 1},
     },
     results = {
         {type = "item", name = "biofet", amount = 5},
