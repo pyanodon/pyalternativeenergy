@@ -16,7 +16,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'numal', amount = 2},
+					--{name = 'numal', amount = 2},
                     {name = 'trits', amount =1},
 					{name = 'cdna', amount =1},
 					{name = 'barrel-milk', amount = 2},
@@ -33,7 +33,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'numal', amount = 2},
+					--{name = 'numal', amount = 2},
                     {name = 'trits', amount =1},
 					{name = 'cdna', amount =1},
 					{name = 'numal-food-01', amount =1},
@@ -51,7 +51,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'numal', add_amount = 2},
+					--{name = 'numal', add_amount = 2},
 					{name = 'bedding', amount = 3},
 					--{name = 'water-barrel', add_amount = 5, return_barrel = true},
 				},
@@ -65,7 +65,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'numal', add_amount = 2},
+					--{name = 'numal', add_amount = 2},
 					{name = 'numal-food-01',remove_item = true},
 					{name = 'numal-food-02', amount =1},
 					{name = 'barrel-milk', amount = 2},
@@ -82,7 +82,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'numal', add_amount = 3},
+					--{name = 'numal', add_amount = 3},
 					{name = 'dhilmos', amount = 5},
 					{name = 'vrauks', amount =2},
 				},
@@ -97,7 +97,7 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name = 'numal', add_amount = 3},
+					--{name = 'numal', add_amount = 3},
 					{name = 'dhilmos', add_amount = 3},
 					{name = 'vrauks', add_amount = 2},
 					{name = 'numal-food-02', add_amount = 2},
