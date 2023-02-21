@@ -365,6 +365,7 @@ local recipes_list =
   "perylene",
   "phosphorus-tricloride",
   "silicate-solution",
+  "liquid-manure-oxygen"
 }
 
 --adding to module limitation list
