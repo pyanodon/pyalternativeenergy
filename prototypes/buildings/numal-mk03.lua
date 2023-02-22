@@ -711,7 +711,7 @@ ENTITY{
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = 'input', position = {0, -6}}}
+            pipe_connections = {{type = 'input', position = {0, 6}}}
         },
         off_when_no_fluid_recipe = true
     },

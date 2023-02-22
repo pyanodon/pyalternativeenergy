@@ -106,7 +106,7 @@ FUN.autorecipes {
 				{
 					{name = 'numal-egg', add_amount = 15},
 				},
-			crafting_speed = 15,
+			crafting_speed = 14,
 			tech = 'numal-mk04'
 		},
 	}
@@ -239,7 +239,7 @@ RECIPE {
 				{
 					{name = 'numal', amount_min = 1, amount_max = 4},
 				},
-			crafting_speed = 250,
+			crafting_speed = 350,
 			tech = 'numal-mk01'
 		},
 		{
@@ -251,7 +251,7 @@ RECIPE {
 				{
 					{name = 'numal', amount_min = 1, amount_max = 6},
 				},
-			crafting_speed = 200,
+			crafting_speed = 300,
 			tech = 'numal-mk02'
 		},
 		--prod
