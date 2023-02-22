@@ -238,6 +238,7 @@ RECIPE {
 			results =
 				{
 					{name = 'numal', amount_min = 1, amount_max = 4},
+					{name = 'cage', amount = 1}
 				},
 			crafting_speed = 350,
 			tech = 'numal-mk01'
