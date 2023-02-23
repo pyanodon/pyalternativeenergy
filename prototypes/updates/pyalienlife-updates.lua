@@ -105,6 +105,7 @@ RECIPE("grods-swamp-mk01"):add_ingredient({type = "item", name = "intermetallics
 RECIPE("kicalk-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("kicalk-plantation-mk01-with-mesh"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("ralesia-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+RECIPE("ralesia-plantation-mk01-with-ceramic"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("rennea-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("tuuphra-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("yotoi-aloe-orchard-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -173,6 +174,7 @@ RECIPE("grods-swamp-mk02"):add_ingredient({type = "item", name = "self-assembly-
 RECIPE("kicalk-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("kicalk-plantation-mk02-with-mesh"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("ralesia-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("ralesia-plantation-mk02-with-ceramic"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("rennea-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("tuuphra-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("yotoi-aloe-orchard-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -252,6 +254,7 @@ RECIPE("grods-swamp-mk03"):add_ingredient({type = "item", name = "ns-material", 
 RECIPE("kicalk-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("kicalk-plantation-mk03-with-mesh"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("ralesia-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("ralesia-plantation-mk03-with-ceramic"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("rennea-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("tuuphra-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("yotoi-aloe-orchard-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -328,6 +331,7 @@ RECIPE("grods-swamp-mk04"):add_ingredient({type = "item", name = "metastable-qua
 RECIPE("kicalk-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("kicalk-plantation-mk04-with-mesh"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("ralesia-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("ralesia-plantation-mk04-with-ceramic"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("rennea-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("tuuphra-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("yotoi-aloe-orchard-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
