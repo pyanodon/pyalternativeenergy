@@ -95,6 +95,7 @@ RECIPE("scrondrix-pen-mk01"):add_ingredient({type = "item", name = "intermetalli
 RECIPE("simik-den-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("sponge-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("trits-reef-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+RECIPE("trits-reef-mk01-with-nexelit"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("ulric-corral-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("xenopen-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("xyhiphoe-pool-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
@@ -164,6 +165,7 @@ RECIPE("scrondrix-pen-mk02"):add_ingredient({type = "item", name = "self-assembl
 RECIPE("simik-den-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("sponge-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("trits-reef-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("trits-reef-mk02-with-nexelit"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("ulric-corral-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("xenopen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("xyhiphoe-pool-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -244,6 +246,7 @@ RECIPE("scrondrix-pen-mk03"):add_ingredient({type = "item", name = "ns-material"
 RECIPE("simik-den-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("sponge-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("trits-reef-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("trits-reef-mk03-with-nexelit"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("ulric-corral-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("xenopen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("xyhiphoe-pool-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -321,6 +324,7 @@ RECIPE("scrondrix-pen-mk04"):add_ingredient({type = "item", name = "metastable-q
 RECIPE("simik-den-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("sponge-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("trits-reef-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("trits-reef-mk04-with-nexelit"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("ulric-corral-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("xenopen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("xyhiphoe-pool-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
