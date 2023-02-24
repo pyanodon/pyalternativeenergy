@@ -195,6 +195,7 @@ local recipes_list =
   "hexafluoroacetone",
   "hfip",
   "pre-fiber-1",
+  "pre-fiber-1-buffed",
   "nano-mesh",
   "acrylonitrile",
   "acrylonitrile-2",
