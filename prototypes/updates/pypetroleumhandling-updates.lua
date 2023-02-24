@@ -22,6 +22,7 @@ RECIPE("tholin-atm-mk01"):add_ingredient({type = "item", name = "intermetallics"
 RECIPE("tholin-plant-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("upgrader-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("guar-gum-plantation"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+RECIPE("guar-gum-plantation-with-bots"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("oil-boiler-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 --RECIPE("rhe"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("sulfur-mine"):add_ingredient({type = "item", name = "intermetallics", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
@@ -41,6 +42,7 @@ RECIPE("tholin-atm-mk02"):add_ingredient({type = "item", name = "self-assembly-m
 RECIPE("tholin-plant-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("upgrader-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("guar-gum-plantation-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("guar-gum-plantation-mk02-with-bots"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 
 RECIPE("natural-gas-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 RECIPE("bitumen-seep-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
@@ -57,6 +59,7 @@ RECIPE("tholin-atm-mk03"):add_ingredient({type = "item", name = "ns-material", a
 RECIPE("tholin-plant-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 RECIPE("upgrader-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 RECIPE("guar-gum-plantation-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+RECIPE("guar-gum-plantation-mk03-with-bots"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 
 
 RECIPE("natural-gas-seep-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
@@ -75,6 +78,7 @@ RECIPE("tholin-plant-mk04"):add_ingredient({type = "item", name = "metastable-qu
 RECIPE("upgrader-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("fracking-rig"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 30}):add_ingredient({type = "item", name = "sc-engine", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 5 }
 RECIPE("guar-gum-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("guar-gum-plantation-mk04-with-bots"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 
 --RECIPES --
 
