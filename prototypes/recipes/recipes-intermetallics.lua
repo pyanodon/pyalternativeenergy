@@ -435,7 +435,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "metastable-quasicrystal",
-    category = "vat",
+    category = "pa",
     enabled = false,
     energy_required = 15,
     ingredients = {
