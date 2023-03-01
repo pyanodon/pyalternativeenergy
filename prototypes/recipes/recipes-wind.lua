@@ -431,7 +431,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "item", name = "pcb2", amount = 2},
-        {type = "item", name = "mosfet", amount = 50},
+        {type = "item", name = "mosfet", amount = 40},
         {type = "item", name = "aluminium-plate", amount = 10},
         {type = "item", name = "capacitor2", amount = 30},
         {type = "item", name = "resistor2", amount = 15},
@@ -444,7 +444,7 @@ RECIPE {
 
     },
     results = {
-        {type = "item", name = "electronics-mk02", amount = 1},
+        {type = "item", name = "electronics-mk02", amount = 3},
     },
     --main_product = "eg-si",
 }:add_unlock("machine-components-mk02")
@@ -1002,7 +1002,7 @@ RECIPE {
         {type = "item", name = "superconductor", amount = 1},
         {type = "item", name = "alag-alloy", amount = 10},
         {type = "item", name = "supercapacitor", amount = 20},
-        {type = "item", name = "inductor3", amount = 40},
+        {type = "item", name = "inductor3", amount = 20},
         {type = "item", name = "paradiamatic-resistor", amount = 5},
         {type = "item", name = "solder", amount = 10},
         {type = "item", name = "eva", amount = 10},
@@ -1015,7 +1015,7 @@ RECIPE {
 
     },
     results = {
-        {type = "item", name = "electronics-mk04", amount = 1},
+        {type = "item", name = "electronics-mk04", amount = 2},
     },
     --main_product = "eg-si",
 }:add_unlock("machine-components-mk04")
