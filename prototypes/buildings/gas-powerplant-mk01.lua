@@ -67,7 +67,7 @@ ENTITY {
           pipe_covers = DATA.Pipes.covers(false, true, true, true),
           pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
           production_type = "input",
-          filter = "raw-gas"
+          filter = "natural-gas"
           },
       effectivity = 1,
       burns_fluid = true,
@@ -79,7 +79,7 @@ ENTITY {
         light_intensity_to_size_coefficient = 0,
         color = {0,0,0},
       },
-      fluid_usage_per_tick = 20,
+      fluid_usage_per_tick = 10,
         smoke =
         {
             {
@@ -108,7 +108,7 @@ ENTITY {
             },
         }
       },
-    energy_usage = "10MW",
+    energy_usage = "6MW",
     animation = {
         layers = {
             {
