@@ -2,6 +2,7 @@ Wind = {}
 Wind.events = {}
 
 local managed_turbines = {}
+local base_names = {}
 for turbine, type in pairs{
     ['hawt-turbine-mk01'] = 'hawt',
     ['hawt-turbine-mk02'] = 'hawt',
@@ -16,6 +17,8 @@ for turbine, type in pairs{
 } do
     managed_turbines[turbine] = type
     managed_turbines[turbine..'-blank'] = type
+    base_names[turbine] = turbine
+    base_names[turbine..'-blank'] = turbine
 end
 
 local animated_turbines = {
@@ -33,7 +36,7 @@ Wind.events.on_built = function(event)
 
     -- Invisible collision entity prevents nearby turbine placement
     local collision = entity.surface.create_entity{
-        name = entity.name .. '-collision',
+        name = base_names[entity.name]..'-collision',
         position = entity.position,
         force = entity.force,
         create_build_effect_smoke = false,
@@ -42,7 +45,7 @@ Wind.events.on_built = function(event)
 
     local entry = {
         entity = entity,
-        base_name = entity.name,
+        base_name = base_names[entity.name],
         collision = collision,
         turbine_type = turbine_type
     }
@@ -52,7 +55,7 @@ Wind.events.on_built = function(event)
     -- Animated turbines are destroyed and replaced with a base graphic
     if animated_turbines[turbine_type] then
         local replacement_entity = entity.surface.create_entity{
-            name = entity.name .. '-blank',
+            name = base_names[entity.name]..'-blank',
             position = entity.position,
             force = entity.force,
             create_build_effect_smoke = false,
