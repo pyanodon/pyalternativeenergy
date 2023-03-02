@@ -1,7 +1,8 @@
 Wind = {}
 Wind.events = {}
 
-local managed_turbines = {
+local managed_turbines = {}
+for turbine, type in pairs{
     ['hawt-turbine-mk01'] = 'hawt',
     ['hawt-turbine-mk02'] = 'hawt',
     ['hawt-turbine-mk03'] = 'hawt',
@@ -12,7 +13,10 @@ local managed_turbines = {
     ['vawt-turbine-mk04'] = 'vawt',
     ['multiblade-turbine-mk01'] = 'multiblade',
     ['multiblade-turbine-mk03'] = 'multiblade'
-}
+} do
+    managed_turbines[turbine] = type
+    managed_turbines[turbine..'-blank'] = type
+end
 
 local animated_turbines = {
     ['hawt'] = true,
