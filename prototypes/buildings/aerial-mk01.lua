@@ -148,3 +148,35 @@ data:extend(
 
   }
   )
+
+
+data:extend{
+	{
+		type = 'virtual-signal',
+		icons = {{icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk01.png', scale = 0.25, icon_size = 64}},
+		name = 'aerial-blimp-mk01',
+		subgroup = 'py-alienlife-special-creatures',
+		localised_name = {'virtual-signal-name.caravan-map-tag'}
+	},
+	{
+		type = 'virtual-signal',
+		icons = {{icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk02.png', scale = 0.25, icon_size = 64}},
+		name = 'aerial-blimp-mk02',
+		subgroup = 'py-alienlife-special-creatures',
+		localised_name = {'virtual-signal-name.caravan-map-tag'}
+	},
+	{
+		type = 'virtual-signal',
+		icons = {{icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk03.png', scale = 0.25, icon_size = 64}},
+		name = 'aerial-blimp-mk03',
+		subgroup = 'py-alienlife-special-creatures',
+		localised_name = {'virtual-signal-name.caravan-map-tag'}
+	},
+	{
+		type = 'virtual-signal',
+		icons = {{icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk04.png', scale = 0.25, icon_size = 64}},
+		name = 'aerial-blimp-mk04',
+		subgroup = 'py-alienlife-special-creatures',
+		localised_name = {'virtual-signal-name.caravan-map-tag'}
+	},
+}
