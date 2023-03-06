@@ -125,20 +125,19 @@ local sin = math.sin
 local pi = math.pi
 function Wind.calculate_wind_speed()
     local x = game.tick / 10000
-    return (sin(2 * x) + sin(pi * x)) / 2
+    return 1 + ((sin(2 * x) + sin(pi * x)) / 2)
 end
 
 function Wind.update_power_generation(windmill_data, wind_speed)
     local entity = windmill_data.entity
-    local power_output = entity.prototype.max_energy_production * (1 + variation[windmill_data.base_name] * wind_speed)
+    local variation_amount = (math.random() * (2 * variation[windmill_data.base_name])) - variation[windmill_data.base_name]
+    local surface_wind_speed = entity.surface.wind_speed
+    local power_output = entity.prototype.max_energy_production * surface_wind_speed * (1 + (1 + variation_amount) * wind_speed)
     entity.power_production = power_output
     entity.electric_buffer_size = power_output
 end
 
 Wind.events[61] = function()
-    local wind_speed = Wind.calculate_wind_speed()
-    local direction = Wind.calculate_wind_direction(game.surfaces['nauvis'])
-
     local key, details = global.last_windmill, nil
     local max_iter = 0
     repeat
@@ -149,6 +148,8 @@ Wind.events[61] = function()
             break
         end
         if details.entity.valid then
+            local wind_speed = Wind.calculate_wind_speed()
+            local direction = Wind.calculate_wind_direction(details.entity.surface)
             if animated_turbines[details.turbine_type] then
                 Wind.draw_windmill(details, direction, wind_speed)
             end
