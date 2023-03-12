@@ -54,11 +54,11 @@ ENTITY{
     energy_source = {
         type = 'electric',
         usage_priority = 'primary-output',
-        buffer_capacity = '5MJ',
+        buffer_capacity = '7MJ',
         render_no_power_icon = false,
         input_flow_limit = '0W'
     },
-    energy_production = '5MW',
+    energy_production = '7MW',
     animation =
     {
         layers = {
