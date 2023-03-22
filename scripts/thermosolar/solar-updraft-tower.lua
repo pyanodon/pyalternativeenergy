@@ -3,7 +3,7 @@ local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 Solar_Updraft_Tower = {}
 Solar_Updraft_Tower.events = {}
 
-Solar_Updraft_Tower.power_generated_per_cover = 8000/3
+Solar_Updraft_Tower.power_generated_per_cover = 16000/3
 
 function Solar_Updraft_Tower.update_power_generation(tower)
     if not tower then
