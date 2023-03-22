@@ -76,7 +76,7 @@ ENTITY {
     mode = 'heat-water-inside',
     target_temperature = 5000,
     energy_source = {type = 'void'},
-    energy_consumption = '800kW',
+    energy_consumption = '1.6MW',
     structure = {
         north = structure,
         east = structure,
