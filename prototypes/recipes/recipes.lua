@@ -112,7 +112,7 @@ RECIPE {
         {type = "fluid", name = "vacuum", amount = 50},
     },
     results = {
-        {type = "item", name = "diamond-wire", amount = 1},
+        {type = "item", name = "diamond-wire", amount = 3},
     },
     --main_product = "eg-si",
 }:add_unlock("diamond-mining")
