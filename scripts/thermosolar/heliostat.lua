@@ -15,7 +15,7 @@ function Heliostat.find_tower(heliostat)
 end
 
 local min_void_temp = 0
-local max_void_temp = 2000
+local max_void_temp = 8333.33333333
 function Heliostat.update_power_generation(tower, excluded_heliostat)
     local tower_data = global.heliostat_towers[tower.unit_number]
     if not tower_data then return end
@@ -29,7 +29,7 @@ function Heliostat.update_power_generation(tower, excluded_heliostat)
 	end
     tower_data.max_production = (global.energy_per_heliostat * tower_data.heliostats) * tower.surface.solar_power_multiplier
 	tower_data.efficiency = tower_data.heliostats / Heliostat.max_heliostats * tower.surface.solar_power_multiplier
-	tower_data.max_salt_production = tower_data.efficiency * 960
+	tower_data.max_salt_production = tower_data.efficiency * 4000
 
     Heliostat.update_all_guis()
 end

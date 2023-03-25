@@ -197,7 +197,7 @@ ENTITY {
       production_type = 'output',
       filter = 'hot-molten-salt'
   },
-  energy_consumption = '3840MW',
+  energy_consumption = '16GW',
   energy_source = {
       type = 'fluid',
       emissions_per_minute = 0,
