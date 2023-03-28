@@ -1,12 +1,19 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.9
-Date: 2023-2-3
+Version: 1.2.0
+Date: 2023-3-28
   Changes:
     - added wiki page for microwave receiver
     - microwave receiver max satellites buffed from 5->20
     - removed module slots from geothermal plants
     - thermosolar 3 buffed from 160kW/tile -> 320kW/tile
     - thermosolar 4 buffed from 14.9MW/heliostat -> 61.8MW/heliostat
+    - changed gas plant mk1 to use natural gas
+    - tweaked wind variation numbers
+    - solar panel mk01 buffed 1MW TO 1.5MW
+    - solar panel mk02 buffed 5MW TO 7MW
+    - solar panel mk01 buffed 10MW TO 14MW
+    - solar panel mk01 buffed 20MW TO 35MW
+    - buffed diamond wire
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.8
 Date: 2023-1-31
