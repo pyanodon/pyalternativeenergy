@@ -318,16 +318,16 @@ RECIPE("solar-panel-equipment"):set_fields {
 RECIPE("exoskeleton-equipment"):set_fields {
     ingredients = {
         {'neuromorphic-chip', 1},
-        {'low-density-structure', 20},
-        {'hydraulic-system-mk02', 4},
-        {'mechanical-parts-04', 4},
-        {'sc-engine', 6},
-        {'brake-mk04', 2},
-        {'gearbox-mk04', 2},
-        {'super-steel', 80},
-        {'processing-unit', 60},
-        {'metastable-quasicrystal', 40},
-        {'small-parts-03', 300},
+        {'low-density-structure', 4},
+        {'hydraulic-system-mk02', 2},
+        {'mechanical-parts-04', 1},
+        {'sc-engine', 2},
+        {'brake-mk04', 1},
+        {'gearbox-mk04', 1},
+        {'super-steel', 10},
+        {'processing-unit', 10},
+        {'metastable-quasicrystal', 2},
+        {'small-parts-03', 30},
     },
     category = 'crafting'
 }

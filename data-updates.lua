@@ -352,6 +352,7 @@ local recipes_list =
   "mechanical-parts-02",
   "mechanical-parts-03",
   "mechanical-parts-04",
+  "exoskeleton-equipment",
 
   -- Fluids
   "allylamine",

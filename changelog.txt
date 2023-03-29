@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: ?
+  Changes:
+    - reduced the cost of exoskeleton equipment
+    - allowed exoskeleton equipment to use productivity modules
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2023-3-28
   Changes:
