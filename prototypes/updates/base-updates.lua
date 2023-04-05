@@ -18,10 +18,11 @@ TECHNOLOGY("advanced-material-processing-2"):set_fields{prerequisites = {}}:remo
 
 RECIPE("heat-pipe"):add_unlock("advanced-material-processing-2")
 RECIPE("heat-exchanger"):add_unlock("advanced-material-processing-2")
+RECIPE("steam-turbine"):add_unlock("advanced-material-processing-2")
 
 --modify heat exchanger
 --data.raw.boiler['heat-exchanger'].target_temperature = 500
---data.raw.boiler['heat-exchanger'].energy_consumption = "20GW"
+data.raw.boiler['heat-exchanger'].energy_consumption = "122.22MW"
 --data.raw.boiler['heat-exchanger'].energy_source.max_temperature = 2000
 data.raw.boiler['heat-exchanger'].energy_source.specific_heat = "500MJ"
 --data.raw.boiler['heat-exchanger'].energy_source.max_transfer = "8GW"
@@ -121,9 +122,6 @@ RECIPE("substation"):remove_unlock("electric-energy-distribution-2"):add_unlock(
 ITEM("uranium-235"):add_flag("hidden")
 ITEM("uranium-238"):add_flag("hidden")
 ITEM("battery"):add_flag("hidden")
-
-data.raw.boiler['heat-exchanger'].target_temperature = 500
-data.raw.boiler['heat-exchanger'].energy_consumption = "122.22MW"
 
 RECIPE("centrifuge"):remove_unlock("filtration"):set_fields { hidden = true }
 ITEM("centrifuge"):add_flag("hidden")
