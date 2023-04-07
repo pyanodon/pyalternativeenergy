@@ -163,7 +163,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dry-cf",
-    category = "washer",
+    category = "evaporator",
     enabled = false,
     energy_required = 20,
     ingredients = {
