@@ -345,6 +345,7 @@ local recipes_list =
   "yellow-dextrine",
   "oxalic-acid-2",
   "denatured-seismite-2",
+  "denatured-seismite-2-80-20",
   "enriched-ash",
   "advanced-substrate",
   "bio-ore",
