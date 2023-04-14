@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - reduced the cost of exoskeleton equipment
     - allowed exoskeleton equipment to use productivity modules
+    - fixed that mk2,mk3,mk4 solid separator was using less energy than mk1
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2023-3-28

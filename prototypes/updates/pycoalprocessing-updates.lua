@@ -174,6 +174,9 @@ RECIPE {
 FLUID("dirty-water-light"):subgroup_order("py-alternativeenergy-fluids", "c")
 
 --pycp
+data.raw['assembling-machine']['solid-separator-mk02'].energy_usage = "3MW"
+data.raw['assembling-machine']['solid-separator-mk03'].energy_usage = "4.5MW"
+data.raw['assembling-machine']['solid-separator-mk04'].energy_usage = "6MW"
 data.raw['assembling-machine']['advanced-foundry-mk02'].energy_usage = "5.4MW"
 data.raw['assembling-machine']['advanced-foundry-mk03'].energy_usage = "8MW"
 data.raw['assembling-machine']['advanced-foundry-mk04'].energy_usage = "10MW"
