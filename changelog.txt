@@ -6,6 +6,7 @@ Date: 2023-4-16
     - allowed exoskeleton equipment to use productivity modules
     - fixed that mk2,mk3,mk4 solid separator was using less energy than mk1
     - changed all vanilla module recipes
+    - fixed that the vanilla steam turbine wasnt unlockable
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2023-3-28
