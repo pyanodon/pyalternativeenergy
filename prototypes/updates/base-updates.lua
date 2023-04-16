@@ -136,6 +136,136 @@ ITEM("productivity-module-2").effect.consumption.bonus = 1.5
 ITEM("productivity-module-3").effect.consumption.bonus = 2.0
 
 ENTITY("beacon", "beacon").energy_usage = "2MW"
+
+RECIPE{
+    type = "recipe",
+    name = "speed-module",
+    enabled = false,
+    ingredients =
+    {
+      {"utility-box-mk02", 1},
+      {"controler-mk02", 1},
+      {"electronics-mk02", 2}
+    },
+    energy_required = 15,
+    result = "speed-module"
+  }
+  
+RECIPE{
+    type = "recipe",
+    name = "speed-module-2",
+    enabled = false,
+    ingredients =
+    {
+        {"utility-box-mk03", 1},
+        {"controler-mk03", 1},
+        {"electronics-mk03", 2}
+    },
+    energy_required = 30,
+    result = "speed-module-2"
+  }
+
+RECIPE{
+    type = "recipe",
+    name = "speed-module-3",
+    enabled = false,
+    ingredients =
+    {
+        {"utility-box-mk04", 1},
+        {"controler-mk04", 1},
+        {"electronics-mk04", 2},
+        {"fes", 1}
+    },
+    energy_required = 60,
+    result = "speed-module-3"
+  }
+
+  RECIPE{
+    type = "recipe",
+    name = "effectivity-module",
+    enabled = false,
+    ingredients =
+    {
+      {"utility-box-mk02", 1},
+      {"controler-mk02", 1},
+      {"electronics-mk02", 2}
+    },
+    energy_required = 15,
+    result = "effectivity-module"
+  }
+  
+RECIPE{
+    type = "recipe",
+    name = "effectivity-module-2",
+    enabled = false,
+    ingredients =
+    {
+        {"utility-box-mk03", 1},
+        {"controler-mk03", 1},
+        {"electronics-mk03", 2}
+    },
+    energy_required = 30,
+    result = "effectivity-module-2"
+  }
+
+RECIPE{
+    type = "recipe",
+    name = "effectivity-module-3",
+    enabled = false,
+    ingredients =
+    {
+        {"utility-box-mk04", 1},
+        {"controler-mk04", 1},
+        {"electronics-mk04", 2},
+        {"fes", 1}
+    },
+    energy_required = 60,
+    result = "effectivity-module-3"
+  }
+
+  RECIPE{
+    type = "recipe",
+    name = "productivity-module",
+    enabled = false,
+    ingredients =
+    {
+      {"utility-box-mk02", 1},
+      {"controler-mk02", 1},
+      {"electronics-mk02", 2}
+    },
+    energy_required = 15,
+    result = "productivity-module"
+  }
+  
+RECIPE{
+    type = "recipe",
+    name = "productivity-module-2",
+    enabled = false,
+    ingredients =
+    {
+        {"utility-box-mk03", 1},
+        {"controler-mk03", 1},
+        {"electronics-mk03", 2}
+    },
+    energy_required = 30,
+    result = "productivity-module-2"
+  }
+
+RECIPE{
+    type = "recipe",
+    name = "productivity-module-3",
+    enabled = false,
+    ingredients =
+    {
+        {"utility-box-mk04", 1},
+        {"controler-mk04", 1},
+        {"electronics-mk04", 2},
+        {"fes", 1}
+    },
+    energy_required = 60,
+    result = "productivity-module-3"
+  }
+
 data.raw.furnace["steel-furnace"].energy_usage = "2MW"
 data.raw.furnace["steel-furnace"].crafting_speed = 4
 
