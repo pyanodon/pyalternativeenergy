@@ -468,7 +468,7 @@ data.raw.technology['exoskeleton-equipment'].prerequisites = {'bio-implants', 'p
 data.raw.technology['fusion-reactor-equipment'].prerequisites = {'power-armor', 'fusion-mk02'}
 data.raw.technology['personal-roboport-mk2-equipment'].prerequisites = {'solar-panel-equipment', 'modular-armor', 'personal-roboport-equipment'}
 
-TECHNOLOGY('solar-panel-equipment'):add_pack('py-science-pack-2'):add_pack('chemical-science-pack')
+TECHNOLOGY('solar-panel-equipment'):add_pack('chemical-science-pack')
 TECHNOLOGY('night-vision-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
 TECHNOLOGY('belt-immunity-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
 TECHNOLOGY("personal-roboport-mk2-equipment"):remove_pack("military-science-pack"):remove_pack("production-science-pack")
