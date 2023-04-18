@@ -21,6 +21,9 @@ if mods["pypetroleumhandling"] then
     require("prototypes/updates/pypetroleumhandling-updates")
 end
 
+--needs organized better. zone extender unlocks are all over the place
+RECIPE("py-ze-mk04"):add_unlock('kevlar-mk02')
+
 ITEM("space-science-pack", "tool"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
 ITEM("space-science-pack", "tool"):set("icon_size", 64)
 ITEM("space-science-pack", "tool"):set("icon_mipmaps", nil)
