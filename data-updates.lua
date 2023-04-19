@@ -128,12 +128,17 @@ end
 
 --ENERGY PRODUCTION DESCRIPTION --
 for name, variance in pairs(require('scripts/wind/variation')) do
-  local entity = data.raw['electric-energy-interface'][name]
   variance = {'entity-description.variance', variance * 100}
-  if entity.localised_description then
-    entity.localised_description = {'', entity.localised_description, '\n', variance}
-  else
-    entity.localised_description = {'?', {'', {'entity-description.' .. name}, '\n', variance}, variance}
+  -- Handle the surrogate items that show in electric stats, too
+  for _, suffix in pairs({'', '-blank'}) do
+    local entity = data.raw['electric-energy-interface'][name .. suffix]
+    if entity then
+      if entity.localised_description then
+        entity.localised_description = {'', entity.localised_description, '\n', variance}
+      else
+        entity.localised_description = {'?', {'', {'entity-description.' .. name}, '\n', variance}, variance}
+      end
+    end
   end
 end
 
