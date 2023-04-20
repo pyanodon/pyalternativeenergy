@@ -13,7 +13,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 300, temperature = 1000},
     },
     main_product = "pressured-steam",
-}:add_unlock("coalplant-mk01"):add_unlock("oilplant-mk01")
+}:add_unlock("coalplant-mk01"):add_unlock("oilplant-mk01"):add_unlock("biomassplant-mk01")
 
 RECIPE {
     type = "recipe",
@@ -30,7 +30,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 300, temperature = 2000},
     },
     main_product = "pressured-steam",
-}:add_unlock("nonrenewable-mk02")
+}:add_unlock("coalplant-mk02"):add_unlock("oilplant-mk02"):add_unlock("biomassplant-mk02")
 
 RECIPE {
     type = "recipe",
@@ -47,7 +47,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 300, temperature = 3000},
     },
     main_product = "pressured-steam",
-}:add_unlock("nonrenewable-mk03")
+}:add_unlock("coalplant-mk03"):add_unlock("oilplant-mk03"):add_unlock("biomassplant-mk03")
 
 RECIPE {
     type = "recipe",
@@ -64,7 +64,7 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 300, temperature = 4000},
     },
     main_product = "pressured-steam",
-}:add_unlock("nonrenewable-mk04")
+}:add_unlock("coalplant-mk04"):add_unlock("oilplant-mk04"):add_unlock("biomassplant-mk04")
 
 RECIPE {
     type = "recipe",
