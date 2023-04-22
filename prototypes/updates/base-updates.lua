@@ -18,14 +18,19 @@ TECHNOLOGY("advanced-material-processing-2"):set_fields{prerequisites = {}}:remo
 
 RECIPE("heat-pipe"):add_unlock("advanced-material-processing-2")
 RECIPE("heat-exchanger"):add_unlock("advanced-material-processing-2")
-RECIPE("steam-turbine"):add_unlock("advanced-material-processing-2")
+RECIPE("steam-turbine"):add_unlock("advanced-material-processing-2"):replace_ingredient("super-steel", "stainless-steel")
+
+RECIPE("assembling-machine-3"):remove_ingredient("small-parts-02"):add_ingredient({type = "item", name = "mechanical-parts-02", amount = 5})
 
 --modify heat exchanger
 --data.raw.boiler['heat-exchanger'].target_temperature = 500
-data.raw.boiler['heat-exchanger'].energy_consumption = "122.22MW"
+data.raw.boiler['heat-exchanger'].energy_consumption = "125MW"
 --data.raw.boiler['heat-exchanger'].energy_source.max_temperature = 2000
 data.raw.boiler['heat-exchanger'].energy_source.specific_heat = "500MJ"
 --data.raw.boiler['heat-exchanger'].energy_source.max_transfer = "8GW"
+
+data.raw.generator['steam-turbine'].effectivity = 1
+data.raw.generator['steam-turbine'].fluid_usage_per_tick = 1
 
 RECIPE("electric-furnace"):remove_ingredient("super-steel")
 
