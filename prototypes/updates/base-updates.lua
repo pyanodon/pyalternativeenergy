@@ -474,9 +474,10 @@ data.raw.technology['fusion-reactor-equipment'].prerequisites = {'power-armor', 
 data.raw.technology['personal-roboport-mk2-equipment'].prerequisites = {'solar-panel-equipment', 'modular-armor', 'personal-roboport-equipment'}
 
 TECHNOLOGY('solar-panel-equipment'):add_pack('chemical-science-pack')
-TECHNOLOGY('night-vision-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
-TECHNOLOGY('belt-immunity-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
+--TECHNOLOGY('night-vision-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
+--TECHNOLOGY('belt-immunity-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
 TECHNOLOGY("personal-roboport-mk2-equipment"):remove_pack("military-science-pack"):remove_pack("production-science-pack")
+TECHNOLOGY("energy-shield-equipment"):add_pack("chemical-science-pack")
 
 data.raw['movement-bonus-equipment']['exoskeleton-equipment'].movement_bonus = 2
 data.raw['movement-bonus-equipment']['exoskeleton-equipment'].energy_consumption = '750kW'
