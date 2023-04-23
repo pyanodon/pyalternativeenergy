@@ -45,7 +45,7 @@ ENTITY {
     collision_box = {{-2.8, -7.8}, {2.8, 7.8}},
     selection_box = {{-3.0, -8.0}, {3.0, 8.0}},
     fluid_input = {
-        name = "combustion-mixture1",
+        name = "neutron",
         amount = 0.0,
         minimum_temperature = 500.0
     },
@@ -55,7 +55,7 @@ ENTITY {
         pipe_covers = DATA.Pipes.covers(true, true, true, true),
         pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         production_type = "input-output",
-        filter = "combustion-mixture1",
+        filter = "neutron",
         minimum_temperature = 500.0,
         pipe_connections = {
             {type = "input-output", position = {3.5, 5}},

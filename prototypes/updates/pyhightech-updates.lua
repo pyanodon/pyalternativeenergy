@@ -76,7 +76,13 @@ RECIPE("dbr"):add_ingredient({type = "item", name = "nanocrystaline-core", amoun
 RECIPE("yag-laser-module"):add_ingredient({type = "item", name = "erbium", amount = 1})
 RECIPE("nems"):add_ingredient({type = "item", name = "nanozymes", amount = 1})
 RECIPE("heavy-n"):add_ingredient({type = "fluid", name = "sb-pulp-02", amount = 200})
+
 RECIPE("pa-uranium-235"):remove_unlock('nucleo-mk03')
+RECIPE("pa-aromatics"):remove_unlock("nucleo")
+RECIPE("pa-benzene"):remove_unlock("nucleo")
+RECIPE("pa-propene"):remove_unlock("nucleo")
+RECIPE("pa-coal"):remove_unlock("nucleo")
+
 RECIPE("sodium-silicate"):remove_unlock('colloidal-silica'):add_unlock({"silicon-mk01"})
 RECIPE("quantum-dots"):remove_unlock('quantum'):add_unlock({"nano-tech"})
 RECIPE("silica-powder"):remove_unlock('colloidal-silica'):add_unlock({"silicon-mk01"})
