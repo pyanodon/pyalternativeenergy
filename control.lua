@@ -1,4 +1,5 @@
 local util = require('util')
+local farms = require 'scripts/farming'
 
 require 'scripts/wiki/text-pages'
 require 'scripts/microwave-receiver'
@@ -18,6 +19,9 @@ local function init_globals()
     global.reactor_tanks = global.reactor_tanks or {}
     global.lrf_panels = global.lrf_panels or {}
     global.stirling = global.stirling or {}
+    for farm, domain in pairs(farms) do
+        remote.call('pyfarm', 'register', farm, domain)
+    end
 end
 
 script.on_init(init_globals)
