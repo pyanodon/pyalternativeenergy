@@ -227,27 +227,6 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "battery-mk01",
-    category = "chemistry",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = "item", name = "glass", amount = 1},
-        {type = "item", name = "melamine", amount = 2},
-        {type = "item", name = "pbsb-alloy", amount = 1},
-        {type = "item", name = "bolts", amount = 3},
-        {type = "item", name = "graphite", amount = 3},
-        {type = "item", name = "zinc-plate", amount = 3},
-        {type = "fluid", name = "cyanic-acid", amount = 30},
-    },
-    results = {
-        {type = "item", name = "battery-mk01", amount = 1},
-    },
-    --main_product = "eg-si",
-}:add_unlock("battery-mk01")
-
-RECIPE {
-    type = "recipe",
     name = "battery-mk00",
     category = "crafting-with-fluid",
     enabled = false,

@@ -88,6 +88,13 @@ RECIPE("quantum-dots"):remove_unlock('quantum'):add_unlock({"nano-tech"})
 RECIPE("silica-powder"):remove_unlock('colloidal-silica'):add_unlock({"silicon-mk01"})
 RECIPE("saline-water"):remove_unlock("electrolysis"):add_unlock("vacuum-tube-electronics")
 RECIPE("electronic-circuit"):add_ingredient({type = "item", name = "battery-mk00", amount = 1})
+RECIPE("electronic-circuit"):set_fields { results = {{type = "item", name = "electronic-circuit", amount = 3}}}
+local recipe = table.deepcopy(data.raw.recipe["electronic-circuit"])
+recipe.name = "electronic-circuit-2"
+recipe.results = {{type = "item", name = "electronic-circuit", amount = 5}}
+data:extend({recipe})
+RECIPE("electronic-circuit-2"):replace_ingredient("battery-mk00", "battery-mk01"):add_unlock("battery-mk01")
+
 RECIPE("intelligent-unit"):add_ingredient({type = "item", name = "quantum-battery", amount = 2}):add_ingredient({type = "item", name = "photonic-chip", amount = 1}):add_ingredient({type = "item", name = "biofet", amount = 3})
 RECIPE("nanochip"):add_ingredient({type = "item", name = "quantum-dots", amount = 2}):add_ingredient({type = "item", name = "quantum-well", amount = 2}):add_ingredient({type = "item", name = "nano-wires", amount = 2})
 RECIPE("kondo-processor"):add_ingredient({type = "item", name = "nano-wires", amount = 3})

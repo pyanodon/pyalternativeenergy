@@ -413,6 +413,7 @@ RECIPE("py-science-pack-3-turd"):add_ingredient { type = "item", name = "mechani
 RECIPE("py-science-pack-4"):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 RECIPE("py-science-pack-4-turd"):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 
+RECIPE("battery-mk01"):remove_unlock("electric-energy-accumulators"):add_unlock("battery-mk01"):replace_ingredient("lead-plate", "pbsb-alloy")
 
 RECIPE("grod-seeds-mk02-soaker"):set_fields{category = 'centrifuging'}
 RECIPE("grod-seeds-mk03-soaker"):set_fields{category = 'centrifuging'}
