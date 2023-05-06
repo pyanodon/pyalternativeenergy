@@ -84,6 +84,13 @@ ENTITY {
     },
     monitor_visualization_tint = {r=78, g=173, b=255},
     --base_render_layer = "lower-object-above-shadow",
+
+    require ("__pyalternativeenergy__/prototypes/circuit-connector-definitions-pyae"),
+
+    circuit_wire_connection_points = geothermal_plant_connector_definitions.points,
+    circuit_connector_sprites = geothermal_plant_connector_definitions.sprites,
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+
     animations = {
       layers = {
           {
