@@ -10,6 +10,10 @@ require('prototypes/fuel-categories')
 require("prototypes/module-categories")
 -- ))
 
+-- (( Circuit Connector Definitions )) --
+require('prototypes/circuit-connector-definitions')
+-- ))
+
 -- (( Technology ))--
 require("prototypes.technologies.antimony")
 require("prototypes.technologies.silicon")

@@ -71,13 +71,9 @@ ENTITY {
         width = 12,
         height = 12
     },
-
-    require ("__pyalternativeenergy__/prototypes/circuit-connector-definitions-pyae"),
-
-    circuit_wire_connection_points = antimonium_drill_connector_definitions.points,
-    circuit_connector_sprites = antimonium_drill_connector_definitions.sprites,
+    circuit_wire_connection_points = circuit_connector_definitions["antimonium-drill-mkxx"].points,
+    circuit_connector_sprites = circuit_connector_definitions["antimonium-drill-mkxx"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-
     animations = {
         layers = {
             {
