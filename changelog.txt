@@ -3,6 +3,7 @@ Version: 1.2.2
 Date: ???
   Bugfixes:
     - Fixed missing variance description for fish & HAWT turbines
+    - Fixed a gui crash with microwave recivers, heliostats, and SUT
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 2023-4-16
