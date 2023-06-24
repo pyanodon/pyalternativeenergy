@@ -81,7 +81,7 @@ RECIPE {
     name = "pan",
     category = "centrifuging",
     enabled = false,
-    energy_required = 20,
+    energy_required = 200,
     ingredients = {
         {type = "item", name = "acrylonitrile", amount = 1},
         {type = "item", name = "methyl-acrylate", amount = 1},

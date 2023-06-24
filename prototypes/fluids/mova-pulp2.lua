@@ -3,7 +3,7 @@ RECIPE {
     name = "mova-pulp2",
     category = "centrifuging",
     enabled = false,
-    energy_required = 20,
+    energy_required = 200,
     ingredients = {
         {type = "fluid", name = "mova-pulp1", amount = 100},
         {type = "fluid", name = "liquid-nitrogen", amount = 10},
