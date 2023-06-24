@@ -1,9 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
-Date: ???
+Date: 2023-6-23
   Bugfixes:
     - Fixed missing variance description for fish & HAWT turbines
     - Fixed a gui crash with microwave recivers, heliostats, and SUT
+    - decreased centrifudge energy usuage and increased most centrifudge recipes crafting time. will need less power per machine but more machines. should see reduced energy needs in recipes up thru logistic science
+    - removed steam to presurrized steam recipe
+    - added circuit connections to geothermal and antimony drill
+    - fixed crash with gui
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 2023-4-16
