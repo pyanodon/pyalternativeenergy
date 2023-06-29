@@ -409,6 +409,9 @@ local recipes_list =
   "liquid-manure-oxygen",
   "jacket-bio-ore",
   "jacket-bio-oil",
+
+  --new circuit recipe
+  "electronic-circuit-2"
 }
 
 --adding to module limitation list
