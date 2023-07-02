@@ -38,6 +38,7 @@ RECIPE("desulfurizator-unit"):add_ingredient({type = "item", name = "intermetall
 --RECIPE("evaporator"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 RECIPE("fluid-separator"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("fts-reactor"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+RECIPE("fts-reactor-with-centrifuge"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 --RECIPE("gasifier"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("methanol-reactor"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 --RECIPE("olefin-plant"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -62,6 +63,7 @@ RECIPE("desulfurizator-unit-mk02"):add_ingredient({type = "item", name = "self-a
 RECIPE("evaporator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("fluid-separator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("fts-reactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("fts-reactor-mk02-with-centrifuge"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("niobium-mine"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("gasifier-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("methanol-reactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -94,6 +96,7 @@ RECIPE("desulfurizator-unit-mk03"):add_ingredient({type = "item", name = "ns-mat
 RECIPE("evaporator-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("fluid-separator-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("fts-reactor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("fts-reactor-mk03-with-centrifuge"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("gasifier-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("methanol-reactor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("olefin-plant-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -126,6 +129,7 @@ RECIPE("desulfurizator-unit-mk04"):add_ingredient({type = "item", name = "metast
 RECIPE("evaporator-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("fluid-separator-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("fts-reactor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("fts-reactor-mk04-with-centrifuge"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("gasifier-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("methanol-reactor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("olefin-plant-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
