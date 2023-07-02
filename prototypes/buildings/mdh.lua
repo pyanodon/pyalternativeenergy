@@ -8,8 +8,9 @@ RECIPE {
     },
     results = {
         {"mdh", 1}
-    }
-}:add_unlock("energy-3")
+    },
+    hidden = true
+}--:add_unlock("energy-3")
 
 ITEM {
     type = "item",
