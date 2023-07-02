@@ -4,6 +4,7 @@ Date: 2023-6-28
   Bugfixes:
     - add electronic circuit 2 recipe to prod module allowed list
     - update chinese translation. credit sdqwo
+    - fixed that the thermosolar wiki page incorrectly said t2 sterling concentrator generated 600kW when the real output was 1.6MW
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 2023-6-23
