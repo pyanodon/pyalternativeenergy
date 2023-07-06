@@ -1,6 +1,3 @@
-require("prototypes/buildings/aerial-ht")
-require("prototypes/buildings/multiblade-turbine-mk03")
-
 --TECHNOLOGY--
 TECHNOLOGY('quantum'):add_prereq('machines-mk02')
 TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04'):add_prereq('mof'):add_prereq('nano-mesh'):add_prereq('biofet')
@@ -143,7 +140,6 @@ RECIPE("neutron-absorber-mk04"):add_ingredient({type = "item", name = "supercond
 table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 
 RECIPE("py-science-pack-3"):add_ingredient{type = "item", name = "re-magnet", amount = 1}
-RECIPE("py-science-pack-3-turd"):add_ingredient{type = "item", name = "re-magnet", amount = 1}
 RECIPE("quantum-computer"):add_ingredient({type = "item", name = "mechanical-parts-04", amount = 10})
 
 ----EXCLUSIVE RECIPES----

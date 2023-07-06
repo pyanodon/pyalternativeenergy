@@ -1,30 +1,5 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
-require("prototypes/updates/base-updates")
-
-if mods["pycoalprocessing"] then
-    require("prototypes/updates/pycoalprocessing-updates")
-end
-if mods["pyalienlife"] then
-    require("prototypes/updates/pyalienlife-updates")
-end
-if mods["pyfusionenergy"] then
-    require("prototypes/updates/pyfusionenergy-updates")
-end
-if mods["pyhightech"] then
-    require("prototypes/updates/pyhightech-updates")
-end
-if mods["pyrawores"] then
-    require("prototypes/updates/pyrawores-updates")
-end
-if mods["pypetroleumhandling"] then
-    require("prototypes/updates/pypetroleumhandling-updates")
-end
-
-ITEM("space-science-pack", "tool"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
-ITEM("space-science-pack", "tool"):set("icon_size", 64)
-ITEM("space-science-pack", "tool"):set("icon_mipmaps", nil)
-
 --MOVED RECIPES CATEGORIES
 RECIPE('aromatic-organic'):set_category("centrifuging")
 RECIPE('honey-comb'):set_category("centrifuging")
