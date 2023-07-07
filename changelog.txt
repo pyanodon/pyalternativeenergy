@@ -3,7 +3,8 @@ Version: 1.2.4
 Date: ?
   Bugfixes:
     - fixed that the thermosolar wiki page incorrectly said t2 sterling concentrator generated 600kW when the real output was 1.6MW. added additional information about the solar ratios
-    - fixed that the unfinished MDH generator was researchable. disabled for now. 
+    - fixed that the unfinished MDH generator was researchable. disabled for now.
+    - allow many entities to work with the upgrade planner
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2023-6-28

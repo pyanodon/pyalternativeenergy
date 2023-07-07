@@ -142,5 +142,6 @@ ENTITY {
         sound = {filename = "__pyfusionenergygraphics__/sounds/heat-exchanger.ogg"},
         idle_sound = {filename = "__pyfusionenergygraphics__/sounds/heat-exchanger.ogg", volume = 0.3},
         apparent_volume = 2.5
-    }
+    },
+    next_upgrade = 'py-heat-exchanger-mk03'
 }
