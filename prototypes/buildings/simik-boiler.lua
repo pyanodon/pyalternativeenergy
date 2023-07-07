@@ -18,7 +18,7 @@ RECIPE {
     results = {
         {"simik-boiler", 1}
     }
-}:add_unlock("domestication-mk03")
+}:add_unlock("domestication-mk04")
 
 ITEM {
     type = "item",
