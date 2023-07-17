@@ -391,3 +391,6 @@ local recipes_list =
 
 --adding to module limitation list
 FUN.productivity(recipes_list)
+
+data.raw.fluid['hydrogen'].fuel_value = '100kJ'
+data.raw.fluid['pressured-hydrogen'].fuel_value = '1.25MJ'
