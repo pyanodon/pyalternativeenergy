@@ -50,8 +50,6 @@ Wind.events.on_built = function(event)
         turbine_type = turbine_type
     }
 
-    local wind_speed = Wind.calculate_wind_speed()
-
     -- Animated turbines are destroyed and replaced with a base graphic
     if animated_turbines[turbine_type] then
         local replacement_entity = entity.surface.create_entity{
@@ -63,11 +61,11 @@ Wind.events.on_built = function(event)
         }
         entity.destroy()
         entry.entity = replacement_entity
-        Wind.draw_windmill(entry, Wind.calculate_wind_direction(game.surfaces['nauvis']), wind_speed)
+        Wind.draw_windmill(entry, Wind.calculate_wind_direction(game.surfaces['nauvis']))
     end
 
     global.windmill[entry.entity.unit_number] = entry
-    Wind.update_power_generation(entry, wind_speed)
+    Wind.update_power_generation(entry, Wind.calculate_wind_speed())
 end
 
 Wind.events.on_destroyed = function(event)
@@ -82,7 +80,7 @@ Wind.events.on_init = function(event)
     global.windmill = global.windmill or {}
 end
 
-function Wind.draw_windmill(windmill_data, direction, wind_speed)
+function Wind.draw_windmill(windmill_data, direction)
     local anim_id = windmill_data.anim_id
     if not anim_id or not valid_animation(anim_id) then
         anim_id = draw_animation({
@@ -96,29 +94,27 @@ function Wind.draw_windmill(windmill_data, direction, wind_speed)
         set_animation(anim_id, windmill_data.base_name .. direction)
         windmill_data.direction = direction
     end
-    -- Update to follow the rough wind speed
-    set_animation_speed(anim_id, math.abs(wind_speed))
 end
 
 function Wind.calculate_wind_direction(surface)
     local wind_dir = surface.wind_orientation
-    local dir = '-north'
     if wind_dir > 0.0625 and wind_dir <= 0.1875 then
-        dir = '-northeast'
+        return '-northeast'
     elseif wind_dir > 0.1875 and wind_dir <= 0.3125 then
-        dir = '-east'
+        return '-east'
     elseif wind_dir > 0.3125 and wind_dir <= 0.4375 then
-        dir = '-southeast'
+        return '-southeast'
     elseif wind_dir > 0.4375 and wind_dir <= 0.5625 then
-        dir = '-south'
+        return '-south'
     elseif wind_dir > 0.5625 and wind_dir <= 0.6875 then
-        dir = '-southwest'
+        return '-southwest'
     elseif wind_dir > 0.6875 and wind_dir <= 0.8125 then
-        dir = '-west'
+        return '-west'
     elseif wind_dir > 0.8125 and wind_dir <= 0.9375 then
-        dir = '-northwest'
+        return '-northwest'
+    else
+        return '-north'
     end
-    return dir
 end
 
 local sin = math.sin
@@ -150,7 +146,7 @@ Wind.events[61] = function()
         end
         if details.entity.valid then
             if animated_turbines[details.turbine_type] then
-                Wind.draw_windmill(details, direction, wind_speed)
+                Wind.draw_windmill(details, direction)
             end
             Wind.update_power_generation(details, wind_speed)
         else
