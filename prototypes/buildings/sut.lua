@@ -198,18 +198,27 @@ do
     for y = 0, 128 - 64, 64 do
         for x = 0, 1920 - 64, 64 do
             data:extend{{
-                type = 'sprite',
+                type = 'simple-entity',
                 name = 'sut-panel-' .. i,
-                filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/tile/glass.png',
-                priority = 'high',
-                flags = {'terrain'},
-                width = 64,
-                height = 64,
-                x = x,
-                y = y,
-                scale = 0.5,
-                shift = util.by_pixel(16, 16),
-                tint = {1, 1, 1, 0.7}
+                picture = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/tile/glass.png',
+                    priority = 'high',
+                    flags = {'terrain'},
+                    width = 64,
+                    height = 64,
+                    x = x,
+                    y = y,
+                    scale = 0.5,
+                    shift = util.by_pixel(16, 16),
+                    tint = {1, 1, 1, 0.7}
+                },
+                icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png',
+                icon_size = 64,
+                collision_mask = {},
+                collision_box = {{0, 0}, {0, 0}},
+                flags = {'not-on-map', 'not-flammable', 'not-rotatable', 'not-in-kill-statistics', 'hidden'},
+                selectable_in_game = false,
+                render_layer = 'wires'
             }}
             i = i + 1
         end

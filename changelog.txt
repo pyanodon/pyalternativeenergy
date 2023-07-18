@@ -9,6 +9,7 @@ Date: ?
     - fixed extreme high energy use of construction zone extender. 1mW,2mW,3mW,4mW -> 350kW,700kW,1mW,2mW
     - increased the fluid fuel value of hydrogen 20kW -> 100kW. added fuel value for compressed hydrogen 1.25mW
     - fix rendering issues with wind turbines
+    - large UPS improvement to thermosolar stage 3
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2023-6-28

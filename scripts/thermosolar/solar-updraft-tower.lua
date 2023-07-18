@@ -29,7 +29,9 @@ function Solar_Updraft_Tower.break_glass_cover(tile)
 
     local row = global.glass_covers[x]
     if row and row[y] then
-        rendering.destroy(row[y].sprite)
+        if row[y].entity and row[y].entity.valid then
+            row[y].entity.destroy()
+        end
         row[y] = nil
         if not next(row) then
             global.glass_covers[x] = nil
@@ -60,15 +62,15 @@ Solar_Updraft_Tower.events.on_build_tile = function(event)
             sprite_num = 31 - sprite_num
         end
 
-        local sprite = rendering.draw_sprite{
-            sprite = 'sut-panel-' .. sprite_num,
-            render_layer = 136,
-            surface = surface,
-            target = tile.position
+        local entity = surface.create_entity{
+            name = 'sut-panel-' .. sprite_num,
+            position = tile.position
         }
+        entity.destructible = false
+        entity.minable = false
 
         global.glass_covers[x] = global.glass_covers[x] or {}
-        global.glass_covers[x][y] = {position = tile.position, sprite = sprite}
+        global.glass_covers[x][y] = {position = tile.position, entity = entity}
 
         ::continue::
 	end
