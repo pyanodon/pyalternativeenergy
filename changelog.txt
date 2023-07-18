@@ -10,6 +10,7 @@ Date: ?
     - increased the fluid fuel value of hydrogen 20kW -> 100kW. added fuel value for compressed hydrogen 1.25mW
     - fix rendering issues with wind turbines
     - large UPS improvement to thermosolar stage 3
+    - increase numbers on mova smart farm recipes to match actual output
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2023-6-28
