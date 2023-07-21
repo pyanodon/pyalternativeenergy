@@ -222,3 +222,8 @@ data.raw['assembling-machine']['pcb-factory-mk04'].energy_usage = "3MW"
 data.raw['assembling-machine']['pulp-mill-mk02'].energy_usage = "1MW"
 data.raw['assembling-machine']['pulp-mill-mk03'].energy_usage = "2MW"
 data.raw['assembling-machine']['pulp-mill-mk04'].energy_usage = "3MW"
+
+RECIPE("nexelit-battery-recharge"):remove_unlock('railway-mk03'):add_unlock("battery-mk02")
+data.raw.recipe["nexelit-battery"].results = {{'used-nexelit-battery', 1}}
+RECIPE("quantum-battery-recharge"):remove_unlock('railway-mk04'):add_unlock("battery-mk04")
+data.raw.recipe["quantum-battery"].results = {{'used-quantum-battery', 1}}

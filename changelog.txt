@@ -11,6 +11,7 @@ Date: ?
     - fix rendering issues with wind turbines
     - large UPS improvement to thermosolar stage 3
     - increase numbers on mova smart farm recipes to match actual output
+    - fixed that nexelit & quantum batteries could not be used in armor until railways mk03/mk04
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2023-6-28
