@@ -56,7 +56,7 @@ RECIPE("honey-comb"):set_fields{energy_required = 10}
 RECIPE("simik-blood-to-oleochemicals"):set_fields{energy_required = 100}
 RECIPE("bitumen-to-nickel"):set_fields{energy_required = 30}
 RECIPE("tar-to-nickel"):set_fields{energy_required = 40}
-RECIPE("fiber-dry-storage-2"):set_fields{energy_required = 24}
+RECIPE("fiber-dry-storage-2"):set_fields{energy_required = 6}
 RECIPE("honey-comb-buffed"):set_fields{energy_required = 15}
 
 RECIPE('low-density-structure'):add_ingredient({type = "item", name = "nxsb-alloy", amount = 25})
