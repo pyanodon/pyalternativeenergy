@@ -498,3 +498,9 @@ data.raw['assembling-machine']['yotoi-aloe-orchard-mk04'].energy_usage = "4MW"
 data.raw['assembling-machine']['zipir-reef-mk02'].energy_usage = "2MW"
 data.raw['assembling-machine']['zipir-reef-mk03'].energy_usage = "3MW"
 data.raw['assembling-machine']['zipir-reef-mk04'].energy_usage = "4MW"
+
+--pySE
+data.raw['assembling-machine']['arqad-hive-mk01-with-cags'].energy_usage = "1MW"
+data.raw['assembling-machine']['arqad-hive-mk02-with-cags'].energy_usage = "2MW"
+data.raw['assembling-machine']['arqad-hive-mk03-with-cags'].energy_usage = "3MW"
+data.raw['assembling-machine']['arqad-hive-mk04-with-cags'].energy_usage = "4MW"
