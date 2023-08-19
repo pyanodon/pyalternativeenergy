@@ -2,7 +2,8 @@
 Version: 1.2.6
 Date: ?
   Bugfixes:
-    - added missing compressed hydrogen barrel
+    - added missing compressed hydrogen barrel (https://github.com/pyanodon/pybugreports/issues/315)
+    - fixed that mirror mk3 had no uses. added to solarthermal mk03 recipes (https://github.com/pyanodon/pybugreports/issues/302)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.5
 Date: 2023-7-27

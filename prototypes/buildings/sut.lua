@@ -175,8 +175,9 @@ RECIPE{
         {'small-parts-02', 1},
         {'py-asphalt', 2},
         {'glass', 20},
+        {'mirror-mk03', 1}
     },
-    results = {{'sut-panel', 1}}
+    results = {{'sut-panel', 2}}
 }:add_unlock('thermal-mk03')
 
 ITEM{
