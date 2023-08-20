@@ -227,3 +227,5 @@ RECIPE("nexelit-battery-recharge"):remove_unlock('railway-mk03'):add_unlock("bat
 data.raw.recipe["nexelit-battery"].results = {{'used-nexelit-battery', 1}}
 RECIPE("quantum-battery-recharge"):remove_unlock('railway-mk04'):add_unlock("battery-mk04")
 data.raw.recipe["quantum-battery"].results = {{'used-quantum-battery', 1}}
+
+RECIPE('random-science-pack'):remove_unlock('quantum').hidden = true
