@@ -12,7 +12,7 @@ RECIPE {
     results = {
         {"ree-mining-drill-mk01", 1}
     }
-}:add_unlock("machines-mk01")
+}:add_unlock("rare-earth-tech")
 
 ITEM {
     type = "item",
@@ -71,6 +71,9 @@ ENTITY {
         width = 12,
         height = 12
     },
+    circuit_wire_connection_points = circuit_connector_definitions["ree-mining-drill-mkxx"].points,
+    circuit_connector_sprites = circuit_connector_definitions["ree-mining-drill-mkxx"].sprites,
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     animations = {
         layers = {
             {

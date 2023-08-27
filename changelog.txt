@@ -5,6 +5,8 @@ Date: ?
     - added missing compressed hydrogen barrel (https://github.com/pyanodon/pybugreports/issues/315)
     - fixed that mirror mk3 had no uses. added to solarthermal mk03 recipes (https://github.com/pyanodon/pybugreports/issues/302)
     - removed recipe that gives all sciences
+    - added circuit connectivity to Rare-Earth Mining Drills (credit: JStMorgan)
+    - Rare-Earth Mining Drill Mk. I unlock pushed back to Rare-earth technology
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.5
 Date: 2023-7-27
