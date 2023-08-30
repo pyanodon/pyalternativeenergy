@@ -43,7 +43,7 @@ data:extend{{
             count = 1
         }
     },
-    walking_speed_modifier = 1.4
+    walking_speed_modifier = 3.5
 }}
 
 local sut_placement_distance = collision_mask_util.get_first_unused_layer()
