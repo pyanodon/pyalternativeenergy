@@ -258,3 +258,39 @@ data.raw['assembling-machine']['washer-mk04'].energy_usage = "4MW"
 data.raw['assembling-machine']['wpu-mk02'].energy_usage = "2MW"
 data.raw['assembling-machine']['wpu-mk03'].energy_usage = "3MW"
 data.raw['assembling-machine']['wpu-mk04'].energy_usage = "4MW"
+
+ITEM {
+    name = 'py-logo-15tiles',
+    type = 'item',
+    stack_size = 10,
+    icon = '__pycoalprocessinggraphics__/graphics/icons/py-logo-15tiles.png',
+    icon_size = 64, icon_mipmaps = 4,
+    place_result = 'py-logo-15tiles',
+    flags = {},
+    subgroup = 'py-walls',
+    order = 'zz'
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'py-logo-15tiles',
+    energy_required = 0.5,
+    enabled = false,
+    ingredients = {
+        {type = 'fluid', name = 'flue-gas', amount = 200},
+        {type = 'item', name = 'small-parts-01', amount = 10},
+        {type = 'item', name = 'py-iron-oxide', amount = 45},
+        {type = 'item', name = 'iron-chest', amount = 1},
+    },
+    category = 'crafting-with-fluid',
+    results = {
+        {'py-logo-15tiles', 1}
+    }
+}:add_unlock('py-asphalt-mk03')
+
+data.raw['container']['py-logo-15tiles'].minable = {mining_time = 0.5, result = 'py-logo-15tiles'}
+data.raw['container']['py-logo-15tiles'].inventory_type = 'with_filters_and_bar'
+data.raw['container']['py-logo-15tiles'].scale_info_icons = true
+data.raw['container']['py-logo-15tiles'].icon_mipmaps = nil
+data.raw['container']['py-logo-15tiles'].icon_size = 64
+data.raw['container']['py-logo-15tiles'].icon = '__pycoalprocessinggraphics__/graphics/icons/py-logo-15tiles.png'
