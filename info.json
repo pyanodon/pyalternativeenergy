@@ -12,6 +12,7 @@
     "pyhightech >= 1.7.7",
     "~ pyalternativeenergygraphics",
     "! omnimatter_energy",
+    "! Concrete-Tints",
     "(?) pyindustry"
   ],
   "package": {
