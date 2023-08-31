@@ -39,7 +39,6 @@ RECIPE("heavy-water"):set_fields{energy_required = 60}
 RECIPE("chromite-concentrate"):set_fields{energy_required = 30}
 RECIPE("chromium-rejects"):set_fields{energy_required = 30}
 RECIPE("outlet-gas-02"):set_fields{energy_required = 10}
-RECIPE("xylenol-2"):set_fields{energy_required = 30}
 RECIPE("nickel-tailings"):set_fields{energy_required = 30}
 RECIPE("nickel-prepared-solution"):set_fields{energy_required = 30}
 RECIPE("unslimed-iron-2"):set_fields{energy_required = 15}
