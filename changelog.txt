@@ -9,7 +9,6 @@ Date: ?
     - Rare-Earth Mining Drill Mk. I unlock pushed back to Rare-earth technology
     - adjusted the colors for sut tile
     - sut tile walk speed buffed from 140% -> 350%
-    - added incompatiblity with Concrete-Tints mod
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.5
 Date: 2023-7-27
