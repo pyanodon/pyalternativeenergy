@@ -62,7 +62,7 @@ RECIPE {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/neutron.png",
     icon_size = 64,
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 50,
     ingredients = {
         {type = "fluid", name = "neutron", amount = 50}
     },

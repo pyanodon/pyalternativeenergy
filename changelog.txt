@@ -3,6 +3,11 @@ Version: 1.2.7
 Date: ?
   Bugfixes:
     - fixed that neutron absorber mk2,mk3,mk4 didn't consume boric acid
+    - fixed that neutron absorber had an effective crafting speed of 0
+    - removed module slots in neutron absorber
+    - removing voiding recipe for neutrons in py sinkhole. use neutron absorber instead
+    - neutron voiding recipe slowed down from 0.5s -> 50s
+    - adjusted pipe connections for neutron absorber
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
 Date: 2023-9-3

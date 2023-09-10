@@ -45,10 +45,6 @@ ENTITY {
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 1
-    },
-    allowed_effects = {"speed", "consumption"},
     crafting_categories = {"neutron-absorber"},
     crafting_speed = 1,
     energy_source = {
@@ -58,13 +54,13 @@ ENTITY {
         destroy_non_fuel_fluid = false,
         fluid_box =
         {
-          base_area = 1,
-          height = 2,
-          base_level = -1,
+          base_area = 2,
+          height = 1,
+          base_level = 0,
           pipe_connections =
           {
-            --{type = "input-output", position = {0, 6}},
-            {type = "input-output", position = {0, -2}}
+            {type = "input-output", position = {0, -2}},
+            {type = "input-output", position = {0, 2}}
           },
           pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
           pipe_covers = DATA.Pipes.covers(false, true, true, true),
@@ -74,9 +70,9 @@ ENTITY {
         burns_fluid = false,
         scale_fluid_usage = false,
         fluid_usage_per_tick = (2/60),
-        --maximum_temperature = 2500,
+        maximum_temperature = 10,
       },
-    energy_usage = "400kW",
+    energy_usage = "1W",
     animation = {
         layers = {
             {
@@ -127,26 +123,20 @@ ENTITY {
         },
     },
     fluid_boxes = {
-        --1
         {
-            production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            production_type = 'input',
+            pipe_picture = DATA.Pipes.pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            base_area = 10,
-            base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, 2.0}}}
+            base_area = 1,
+            base_level = 0,
+            pipe_connections = {{type = 'input-output', position = {2.0, 0.0}}, {type = 'input-output', position = {-2.0, 0.0}}}
         },
-        --[[
-        {
-            production_type = "output",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            base_level = 1,
-            pipe_connections = {{type = "output", position = {0.0, -2.0}}}
-        },
-        ]]--
         off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-absorber"
   }
+
+  data.raw.fluid['boric-acid'].default_temperature = 0
+  data.raw.fluid['boric-acid'].max_temperature = 10
+  data.raw.recipe['boric-acid'].results[1].temperature = 10

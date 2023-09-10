@@ -47,14 +47,10 @@ ENTITY {
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 1
-    },
-    allowed_effects = {"speed", "consumption"},
     crafting_categories = {"neutron-absorber"},
     crafting_speed = 2,
     energy_source = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].energy_source),
-    energy_usage = "800kW",
+    energy_usage = "1W",
     animation = {
         layers = {
             {

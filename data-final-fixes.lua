@@ -15,3 +15,5 @@ end
 
 log(serpent.block(cent_recipes))
 ]]--
+
+data.raw.recipe['neutron-pyvoid-fluid'] = nil

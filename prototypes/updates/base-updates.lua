@@ -610,3 +610,5 @@ data.raw.furnace["electric-furnace"].energy_source = {
 ITEM("space-science-pack", "tool"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
 ITEM("space-science-pack", "tool"):set("icon_size", 64)
 ITEM("space-science-pack", "tool"):set("icon_mipmaps", nil)
+
+data.raw.recipe['empty-boric-acid-barrel'].results[1].temperature = 10
