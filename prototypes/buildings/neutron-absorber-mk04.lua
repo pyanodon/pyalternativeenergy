@@ -55,12 +55,8 @@ ENTITY {
     allowed_effects = {"speed", "consumption"},
     crafting_categories = {"neutron-absorber"},
     crafting_speed = 4,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.0,
-    },
-    energy_usage = "400kW",
+    energy_source = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].energy_source),
+    energy_usage = "1.6MW",
     animation = {
         layers = {
             {
@@ -110,25 +106,9 @@ ENTITY {
             }
         },
     },
-    fluid_boxes = {
-        --1
-        {
-            production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            base_area = 10,
-            base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, 2.0}}}
-        },
-        {
-            production_type = "output",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            base_level = 1,
-            pipe_connections = {{type = "output", position = {0.0, -2.0}}}
-        },
-        off_when_no_fluid_recipe = true
-    },
+    fluid_boxes = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].fluid_boxes),
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-absorber"
   }
+
+data.raw['assembling-machine']['neutron-absorber-mk04'].energy_source.fluid_usage_per_tick = 8/60
