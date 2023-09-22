@@ -8,6 +8,7 @@ Date: ?
     - removing voiding recipe for neutrons in py sinkhole. use neutron absorber instead
     - neutron voiding recipe slowed down from 0.5s -> 50s
     - adjusted pipe connections for neutron absorber
+    - expanded output fluid box for Geothermal Plant (https://github.com/pyanodon/pybugreports/issues/323) (credit: JStMorgan)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
 Date: 2023-9-3
