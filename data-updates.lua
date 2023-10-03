@@ -390,3 +390,7 @@ local recipes_list =
 
 --adding to module limitation list
 FUN.productivity(recipes_list)
+
+if register_cache_file ~= nil then
+    register_cache_file({"pycoalprocessing","pyfusionenergy","pyindustry","pyrawores","pyhightech","pypetroleumhandling","pyalienlife","pyalternativeenergy"}, "__pyalternativeenergy__/cached-configs/pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
+end
