@@ -16,7 +16,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "biomass-molten-salt-02",
-    category = "biomass-powerplant",
+    category = "biomass-powerplant-mk02",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -30,7 +30,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "biomass-molten-salt-03",
-    category = "biomass-powerplant",
+    category = "biomass-powerplant-mk03",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -44,7 +44,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "biomass-molten-salt-04",
-    category = "biomass-powerplant",
+    category = "biomass-powerplant-mk04",
     enabled = false,
     energy_required = 20,
     ingredients = {

@@ -51,7 +51,31 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "coal-powerplant-mk02"
+    },
+    {
+        type = "recipe-category",
+        name = "coal-powerplant-mk03"
+    },
+    {
+        type = "recipe-category",
+        name = "coal-powerplant-mk04"
+    },
+    {
+        type = "recipe-category",
         name = "biomass-powerplant"
+    },
+    {
+        type = "recipe-category",
+        name = "biomass-powerplant-mk02"
+    },
+    {
+        type = "recipe-category",
+        name = "biomass-powerplant-mk03"
+    },
+    {
+        type = "recipe-category",
+        name = "biomass-powerplant-mk04"
     },
     {
         type = "recipe-category",

@@ -51,7 +51,7 @@ ENTITY {
         module_slots = 0
     },
     allowed_effects = {},
-    crafting_categories = {"biomass-powerplant"},
+    crafting_categories = {"biomass-powerplant-mk04"},
     crafting_speed = 4,
     energy_source =
     {

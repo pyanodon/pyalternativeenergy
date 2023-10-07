@@ -51,7 +51,7 @@ ENTITY {
         module_slots = 0
     },
     allowed_effects = {},
-    crafting_categories = {"coal-powerplant"},
+    crafting_categories = {"coal-powerplant-mk03"},
     crafting_speed = 3,
     energy_source =
     {
