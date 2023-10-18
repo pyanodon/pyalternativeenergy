@@ -3,7 +3,7 @@ FLUID {
     name = "molten-nxzngd",
     icon = "__pyalternativeenergygraphics__/graphics/icons/molten-nxzngd.png",
     icon_size = 64,
-    default_temperature = 15,
+    default_temperature = 10,
     --heat_capacity = "1KJ",
     base_color = {r = 0.168, g = 0.525, b = 0.509},
     flow_color = {r = 1, g = 1, b = 1},
