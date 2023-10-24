@@ -39,6 +39,7 @@ TECHNOLOGY("starch-mk03"):add_pack("military-science-pack")
 TECHNOLOGY("production-science-pack"):add_pack("military-science-pack")
 TECHNOLOGY("cottongut-mk03"):add_pack("military-science-pack")
 TECHNOLOGY("yotoi-mk02"):add_pack("military-science-pack")
+TECHNOLOGY("biofluid-mk02"):add_pack("military-science-pack")
 
 
 RECIPE("mega-farm"):remove_ingredient("intelligent-unit"):replace_ingredient("superconductor-servomechanims", "small-parts-03")
