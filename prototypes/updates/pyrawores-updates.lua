@@ -286,6 +286,9 @@ local enrichment = starting_enrichment
 local multiplier = (100 / starting_enrichment)^(1 / total_recipes)
 -- log("Multiplier: " .. multiplier)
 
+local t = 1
+local l = 1
+
 while enrichment < 100 do
 
     local u235 = enrichment * multiplier
@@ -297,6 +300,16 @@ while enrichment < 100 do
 
     local name = string.format( "%.2f", tostring(u235))
     local recipe_name = "uf6-" .. string.gsub(name, "%.", ",") .. "%"
+    
+    if u235 < 2.5 then
+      t = 1
+    elseif u235 >= 2.5 and u235 < 10 then
+      t = 2
+    elseif u235 >= 10 and u235 < 30 then
+      t = 3
+    elseif u235 >= 30 then
+      t = 4
+    end
 
     RECIPE {
         type = "recipe",
@@ -314,19 +327,29 @@ while enrichment < 100 do
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
         order = string.format("uranium-%02u", recipe_num),
-        localised_name = {"recipe-name.uf6", name}
+        localised_name = {"recipe-name.uf6", name},
+        icon = "__pyalternativeenergygraphics__/graphics/icons/ut" .. t .. "-" .. l .. ".png",
+        icon_size = 64
     }--:add_unlock("uranium-mk01")
 
     -- log(serpent.block(data.raw.recipe[recipe_name]))
+    l = l+1
+    if l > 5 then
+      l = 1
+    end
 
     if u235 < 2.5 then
         RECIPE(recipe_name):add_unlock('uranium-mk01')
+        t = 1
     elseif u235 >= 2.5 and u235 < 10 then
         RECIPE(recipe_name):add_unlock('uranium-mk02')
+        t = 2
     elseif u235 >= 10 and u235 < 30 then
         RECIPE(recipe_name):add_unlock('uranium-mk03')
+        t = 3
     elseif u235 >= 30 then
         RECIPE(recipe_name):add_unlock('uranium-mk04')
+        t = 4
     end
 
     enrichment = u235
@@ -339,6 +362,8 @@ local depleted_multiplier = (starting_enrichment / duf_min)^(1 / math.floor(depl
 -- log("Depleted multiplier: " .. multiplier)
 local duf = starting_enrichment / multiplier
 recipe_num = 1
+
+local l = 1
 
 while duf > duf_min do
     local u235 = duf * depleted_multiplier
@@ -368,11 +393,15 @@ while duf > duf_min do
         main_product = "uf6",
         subgroup = "py-rawores-uranium-depleted",
         order = string.format("depleted-uranium-%02u", recipe_num),
-        localised_name = {"recipe-name.depleted-uf6", name}
+        localised_name = {"recipe-name.depleted-uf6", name},
+        icon = "__pyalternativeenergygraphics__/graphics/icons/dut1-" .. l .. ".png",
+        icon_size = 64
     }:add_unlock("uranium-mk01")
 
     duf = u238
     recipe_num = recipe_num + 1
+
+    l = l + 1
 end
 
 RECIPE {
