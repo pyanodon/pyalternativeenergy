@@ -310,7 +310,7 @@ while enrichment < 100 do
     elseif u235 >= 30 then
       t = 4
     end
-    
+
     RECIPE {
         type = "recipe",
         name = recipe_name,
@@ -363,6 +363,8 @@ local depleted_multiplier = (starting_enrichment / duf_min)^(1 / math.floor(depl
 local duf = starting_enrichment / multiplier
 recipe_num = 1
 
+local l = 1
+
 while duf > duf_min do
     local u235 = duf * depleted_multiplier
     local u238 = duf / depleted_multiplier
@@ -391,11 +393,15 @@ while duf > duf_min do
         main_product = "uf6",
         subgroup = "py-rawores-uranium-depleted",
         order = string.format("depleted-uranium-%02u", recipe_num),
-        localised_name = {"recipe-name.depleted-uf6", name}
+        localised_name = {"recipe-name.depleted-uf6", name},
+        icon = "__pyalternativeenergygraphics__/graphics/icons/dut1-" .. l .. ".png",
+        icon_size = 64
     }:add_unlock("uranium-mk01")
 
     duf = u238
     recipe_num = recipe_num + 1
+
+    l = l + 1
 end
 
 RECIPE {
