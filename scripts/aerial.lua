@@ -115,15 +115,17 @@ local function find_target(aerial_data)
     local surface = acculumator.surface
     local previous_target = aerial_data.target
     local entity = aerial_data.entity
-    if previous_target and previous_target.valid then
-        local previous_target_position = previous_target.position
-        previous_target_position = {previous_target_position.x + 4, previous_target_position.y + 5}
-        local distance = distance(previous_target_position, entity.position)
-        local energy = distance * energy_per_distance[entity.name]
-        acculumator.energy = acculumator.energy + energy
-    else
+    if not (previous_target and previous_target.valid) then
         previous_target = nil
     end
+
+    local previous_position = aerial_data.previous_position
+    if previous_position then
+        local distance = distance(previous_position, entity.position)
+        local energy = distance * energy_per_distance[entity.name]
+        acculumator.energy = acculumator.energy + energy
+    end
+    aerial_data.previous_position = entity.position
 
     local id = (previous_target or acculumator).electric_network_id
     if not id then return end
