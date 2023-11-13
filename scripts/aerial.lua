@@ -49,19 +49,11 @@ local function cancel_creation(entity, player_index, message)
 	end
 end
 
-local turbines = {
-    ['aerial-blimp-mk01'] = {
-        energy_per_distance = 10000,
-    },
-    ['aerial-blimp-mk02'] = {
-        energy_per_distance = 20000,
-    },
-    ['aerial-blimp-mk03'] = {
-        energy_per_distance = 30000,
-    },
-    ['aerial-blimp-mk04'] = {
-        energy_per_distance = 40000,
-    },
+local energy_per_distance = {
+    ['aerial-blimp-mk01'] = 12000000,
+    ['aerial-blimp-mk02'] = 24000000,
+    ['aerial-blimp-mk03'] = 36000000,
+    ['aerial-blimp-mk04'] = 48000000,
 }
 
 local function refresh_electric_networks(surface)
@@ -122,7 +114,14 @@ local function find_target(aerial_data)
     end
     local surface = acculumator.surface
     local previous_target = aerial_data.target
-    if previous_target and not previous_target.valid then
+    local entity = aerial_data.entity
+    if previous_target and previous_target.valid then
+        local previous_target_position = previous_target.position
+        previous_target_position = {previous_target_position.x + 4, previous_target_position.y + 5}
+        local distance = distance(previous_target_position, entity.position)
+        local energy = distance * energy_per_distance[entity.name]
+        acculumator.energy = acculumator.energy + energy
+    else
         previous_target = nil
     end
 
@@ -143,7 +142,7 @@ local function find_target(aerial_data)
 
     aerial_data.target = target
     local position = target.position
-    aerial_data.entity.set_command{
+    entity.set_command{
         type = defines.command.go_to_location,
         destination = {target.position.x - 4, target.position.y - 5},
         distraction = defines.distraction.none,
@@ -158,10 +157,7 @@ end
 Aerial.events.on_built = function(event)
     local entity = event.created_entity or event.entity
     if not entity.valid or not entity.unit_number then return end
-    local aerial_data = turbines[entity.name]
-    if aerial_data then
-        aerial_data = table.deepcopy(aerial_data)
-
+    if energy_per_distance[entity.name] then
         local acculumator = create_interface(entity)
         if not acculumator.is_connected_to_electric_network() then
             acculumator.destroy()
@@ -169,10 +165,11 @@ Aerial.events.on_built = function(event)
             return
         end
 
-        aerial_data.acculumator = acculumator
-        aerial_data.entity = entity
+        local aerial_data = {
+            acculumator = acculumator,
+            entity = entity,
+        }   
         global.aerial_data[entity.unit_number] = aerial_data
-
         find_target(aerial_data)
     elseif entity.type == 'electric-pole' then
         refresh_electric_networks(entity.surface)

@@ -1,38 +1,39 @@
 local util = require('util')
 
 RECIPE{
-    type = "recipe",
-    name = "aerial-blimp-mk03",
+    type = 'recipe',
+    name = 'aerial-blimp-mk03',
 	energy_required = 50,
 	category = 'advanced-crafting',
     enabled = false,
     ingredients =
     {
+		{'aerial-blimp-mk02', 1},
         {'processing-unit', 10},
         {'ns-material', 10},
         {'small-parts-03', 100},
         {'acrylic', 100},
         {'aerogel', 20},
-		{"shaft-mk03", 1},
-        {"anemometer-mk03", 1},
-        {"controler-mk03", 1},
-        {"electronics-mk03", 1},
-		{"biobattery", 5},
-        {"cf", 200},
-		{"mechanical-parts-03", 1},
-		{type = "fluid", name = "helium", amount = 2000},
+		{'shaft-mk03', 1},
+        {'anemometer-mk03', 1},
+        {'controler-mk03', 1},
+        {'electronics-mk03', 1},
+		{'biobattery', 100},
+        {'cf', 200},
+		{'mechanical-parts-03', 1},
+		{type = 'fluid', name = 'helium', amount = 2000},
     },
-    result = "aerial-blimp-mk03"
-  }:add_unlock("renewable-mk03")
+    result = 'aerial-blimp-mk03'
+  }:add_unlock('renewable-mk03')
 
 ITEM{
-    type = "item-with-tags",
-    name = "aerial-blimp-mk03",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk03.png",
+    type = 'item-with-tags',
+    name = 'aerial-blimp-mk03',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk03.png',
     icon_size = 64,
-    subgroup = "py-alternativeenergy-buildings-mk03",
-    order = "b",
-    place_result = "aerial-blimp-mk03",
+    subgroup = 'py-alternativeenergy-buildings-mk03',
+    order = 'b',
+    place_result = 'aerial-blimp-mk03',
 	stack_size = 1,
 	flags = {'not-stackable'}
   }
@@ -41,20 +42,20 @@ data:extend(
 {
   {
 	ai_settings = {do_separation = false, path_resolution_modifier = -3},
-    type = "unit",
+    type = 'unit',
 	additional_pastable_entities = {'aerial-blimp-mk01', 'aerial-blimp-mk02', 'aerial-blimp-mk03', 'aerial-blimp-mk04'},
-    name = "aerial-blimp-mk03",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk03.png",
+    name = 'aerial-blimp-mk03',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk03.png',
     icon_size = 64,
-    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid"},
-	minable = {mining_time = 0.5, result = "aerial-blimp-mk03"},
+    flags = {'placeable-player', 'placeable-enemy', 'placeable-off-grid'},
+	minable = {mining_time = 0.5, result = 'aerial-blimp-mk03'},
     max_health = 25,
-    order = "b-b-a",
-    subgroup="enemies",
+    order = 'b-b-a',
+    subgroup='enemies',
     resistances =
 		{
 			{
-				type = "physical",
+				type = 'physical',
 				percent = 100
 			},
 		},
@@ -67,7 +68,7 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     attack_parameters =
     {
-      type = "projectile",
+      type = 'projectile',
       range = 0,
       cooldown = 0,
       ammo_type = _G.make_unit_melee_ammo_type(0),
@@ -75,14 +76,14 @@ data:extend(
 	  animation = DATA.Sprites.empty_animation()
 	},
 	vision_distance = 30,
-	movement_speed = 0.04,
+	movement_speed = 0.06,
 	distance_per_frame = 0.18,
 	pollution_to_join_attack = 4,
 	distraction_cooldown = 300,
 	min_pursue_time = 10 * 60,
 	max_pursue_distance = 50,
-	--corpse = "arthurian-corpse",
-	dying_explosion = "blood-explosion-small",
+	--corpse = 'arthurian-corpse',
+	dying_explosion = 'blood-explosion-small',
 	run_animation =
 	{
 		layers =
@@ -90,8 +91,8 @@ data:extend(
 			{
 				filenames =
 				{
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/r1.png",
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/r2.png",
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/r1.png',
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/r2.png',
 				},
 			slice = 6,
 			lines_per_file = 6,
@@ -106,8 +107,8 @@ data:extend(
 			{
 				filenames =
 				{
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/s1.png",
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/s2.png",
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/s1.png',
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/s2.png',
 				},
                 slice = 6,
                 lines_per_file = 6,

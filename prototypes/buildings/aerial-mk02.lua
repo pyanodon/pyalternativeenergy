@@ -8,6 +8,7 @@ RECIPE{
 	enabled = false,
 	ingredients =
 	{
+		{'aerial-blimp-mk01', 1},
 		{'shaft-mk02', 1},
 		{'anemometer-mk02', 4},
 		{'advanced-circuit', 10},
@@ -17,7 +18,7 @@ RECIPE{
 		{'controler-mk02', 1},
 		{'rubber', 30},
 		{'aluminium-plate', 30},
-		{'battery', 30},
+		{'nexelit-battery', 100},
 		{'eva', 40},
 		{'mechanical-parts-02', 1},
 		{'electronics-mk02', 1},
@@ -89,8 +90,8 @@ data:extend(
 			{
 				filenames =
 				{
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/r1.png",
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/r2.png",
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/r1.png',
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/r2.png',
 				},
 			slice = 8,
 			lines_per_file = 4,
@@ -105,8 +106,8 @@ data:extend(
 			{
 				filenames =
 				{
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/s1.png",
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/s2.png",
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/s1.png',
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk02/s2.png',
 				},
                 slice = 8,
                 lines_per_file = 4,

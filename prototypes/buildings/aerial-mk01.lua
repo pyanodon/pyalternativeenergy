@@ -16,7 +16,7 @@ RECIPE{
         {'small-parts-01', 50},
         {'intermetallics', 5},
         {'utility-box-mk01', 1},
-		{'battery-mk01', 25},
+		{'battery-mk01', 100},
         {'plastic-bar', 30},
         {'copper-cable', 50},
 		{type = 'fluid', name = 'hot-air', amount = 800},

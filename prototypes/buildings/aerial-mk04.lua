@@ -1,40 +1,41 @@
 local util = require('util')
 
 RECIPE{
-    type = "recipe",
-    name = "aerial-blimp-mk04",
+    type = 'recipe',
+    name = 'aerial-blimp-mk04',
 	energy_required = 50,
 	category = 'advanced-crafting',
     enabled = false,
     ingredients =
     {
-		{"shaft-mk04", 1},
-        {"anemometer-mk04", 1},
-		{"solar-panel-mk02", 1},
-        {"intelligent-unit", 20},
-        {"small-parts-03", 100},
-        {"metastable-quasicrystal", 5},
-        {"low-density-structure", 50},
-        {"hyperelastic-material", 10},
+		{'aerial-blimp-mk03', 1},
+		{'shaft-mk04', 1},
+        {'anemometer-mk04', 1},
+		{'solar-panel-mk02', 1},
+        {'intelligent-unit', 10},
+        {'small-parts-03', 100},
+        {'metastable-quasicrystal', 5},
+        {'low-density-structure', 50},
+        {'hyperelastic-material', 10},
         {'carbon-aerogel', 20},
-		{"quantum-battery", 5},
-        {"cf", 200},
-        {"electronics-mk04", 1},
-        {"controler-mk04", 1},
-		{"mechanical-parts-04", 1},
-		-- {"bose-einstein-superfluid", 10},
+		{'quantum-battery', 10},
+        {'cf', 200},
+        {'electronics-mk04', 1},
+        {'controler-mk04', 1},
+		{'mechanical-parts-04', 1},
+		{type = 'fluid', name = 'helium3', amount = 2000},
     },
-    result = "aerial-blimp-mk04"
-  }:add_unlock("renewable-mk04")
+    result = 'aerial-blimp-mk04'
+  }:add_unlock('renewable-mk04')
 
 ITEM{
-    type = "item-with-tags",
-    name = "aerial-blimp-mk04",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk04.png",
+    type = 'item-with-tags',
+    name = 'aerial-blimp-mk04',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk04.png',
     icon_size = 64,
-    subgroup = "py-alternativeenergy-buildings-mk04",
-    order = "b",
-    place_result = "aerial-blimp-mk04",
+    subgroup = 'py-alternativeenergy-buildings-mk04',
+    order = 'b',
+    place_result = 'aerial-blimp-mk04',
 	stack_size = 1,
 	flags = {'not-stackable'}
   }
@@ -43,20 +44,20 @@ data:extend(
 {
   {
 	ai_settings = {do_separation = false, path_resolution_modifier = -3},
-    type = "unit",
+    type = 'unit',
 	additional_pastable_entities = {'aerial-blimp-mk01', 'aerial-blimp-mk02', 'aerial-blimp-mk03', 'aerial-blimp-mk04'},
-    name = "aerial-blimp-mk04",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk04.png",
+    name = 'aerial-blimp-mk04',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk04.png',
     icon_size = 64,
-    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid"},
-	minable = {mining_time = 0.5, result = "aerial-blimp-mk04"},
+    flags = {'placeable-player', 'placeable-enemy', 'placeable-off-grid'},
+	minable = {mining_time = 0.5, result = 'aerial-blimp-mk04'},
     max_health = 25,
-    order = "b-b-a",
-    subgroup="enemies",
+    order = 'b-b-a',
+    subgroup='enemies',
     resistances =
 		{
 			{
-				type = "physical",
+				type = 'physical',
 				percent = 100
 			},
 		},
@@ -69,7 +70,7 @@ data:extend(
     selection_box = {{-1.5, -3.5}, {1.5, 3.5}},
     attack_parameters =
     {
-      type = "projectile",
+      type = 'projectile',
       range = 0,
       cooldown = 0,
       ammo_type = _G.make_unit_melee_ammo_type(0),
@@ -83,8 +84,8 @@ data:extend(
 	distraction_cooldown = 300,
 	min_pursue_time = 10 * 60,
 	max_pursue_distance = 50,
-	--corpse = "arthurian-corpse",
-	dying_explosion = "blood-explosion-small",
+	--corpse = 'arthurian-corpse',
+	dying_explosion = 'blood-explosion-small',
 	run_animation =
 	{
 		layers =
@@ -92,10 +93,10 @@ data:extend(
 			{
 				filenames =
 				{
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/r1.png",
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/r2.png",
-                      "__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/r3.png",
-                      "__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/r4.png",
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/r1.png',
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/r2.png',
+                      '__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/r3.png',
+                      '__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/r4.png',
 				},
 			slice = 4,
 			lines_per_file = 4,
@@ -110,10 +111,10 @@ data:extend(
 			{
 				filenames =
 				{
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/s1.png",
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/s2.png",
-                      "__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/s3.png",
-                      "__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/s4.png",
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/s1.png',
+					  '__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/s2.png',
+                      '__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/s3.png',
+                      '__pyalternativeenergygraphics__/graphics/entity/aerial-mk04/s4.png',
 				},
                 slice = 4,
                 lines_per_file = 4,
