@@ -15,7 +15,9 @@ for i = 1, 4 do
             type = 'electric',
             buffer_capacity = (i*50) .. 'MJ',
             usage_priority = 'primary-output',
-            input_flow_limit = '0kW'
+            input_flow_limit = '0kW',
+            render_no_network_icon = false,
+            render_no_power_icon = false
         },
         collision_mask = {},
         charge_cooldown = 0,
