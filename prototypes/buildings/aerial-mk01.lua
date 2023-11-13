@@ -39,7 +39,7 @@ ITEM{
 data:extend(
 {
   {
-	ai_settings = {do_separation = false},
+	ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = 'unit',
 	additional_pastable_entities = {'aerial-blimp-mk01', 'aerial-blimp-mk02', 'aerial-blimp-mk03', 'aerial-blimp-mk04'},
     name = 'aerial-blimp-mk01',
