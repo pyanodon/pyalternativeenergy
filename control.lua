@@ -8,6 +8,7 @@ require 'scripts/thermosolar/solar-updraft-tower'
 require 'scripts/thermosolar/heliostat'
 require 'scripts/solar'
 require 'scripts/wind/wind'
+require 'scripts/aerial'
 
 local function init_globals()
     Solar.events.on_init()
@@ -15,6 +16,7 @@ local function init_globals()
     Thermosolar.events.on_init()
     Wind.events.on_init()
     Wiki.events.on_init()
+    Aerial.events.on_init()
 
     global.reactor_tanks = global.reactor_tanks or {}
     global.lrf_panels = global.lrf_panels or {}
@@ -34,42 +36,13 @@ script.on_event(on_built, function(event)
     Microwave_Receiver.events.on_built(event)
     Heliostat.events.on_built(event)
     Wind.events.on_built(event)
+    Aerial.events.on_built(event)
 
     local E = event.created_entity or event.entity
     if not E.valid then return end
     local surface = E.surface
 
-    if E.name == 'nuke-tank-input' then
-        local out1 = surface.create_entity{
-            name = 'nuke-tank-output',
-            position = {E.position.x + 6, E.position.y},
-            force = game.players.force
-        }
-        local out2 = surface.create_entity{
-            name = 'nuke-tank-output',
-            position = {E.position.x + 6, E.position.y + 6},
-            force = game.players.force
-        }
-        local in2 = surface.create_entity{
-            name = 'nuke-tank-input',
-            position = {E.position.x, E.position.y + 6},
-            force = game.players.force
-        }
-        --[[
-        local moderator = surface.create_entity{
-            name = 'control-rod',
-            position = {E.position.x + 3, E.position.y + 6},
-            force = game.players.force
-        }
-        ]] --
-        global.reactor_tanks[E.unit_number] = {
-            input_tank = E,
-            output_neutron_tank = out2,
-            input_neutron_tank = in2,
-            dirty_fuel_tank = out1
-            -- moderator = moderator
-        }
-    elseif string.match(E.name, 'tidal%-placer') then
+    if string.match(E.name, 'tidal%-placer') then
         local direction = E.direction
         local x = 0
         local y = 0
@@ -142,6 +115,7 @@ script.on_event(on_destroyed, function(event)
     Solar_Updraft_Tower.events.on_destroyed(event)
     Heliostat.events.on_destroyed(event)
     Wind.events.on_destroyed(event)
+    Aerial.events.on_destroyed(event)
 
     local E = event.entity
     if string.match(E.name, 'lrf%-panel') ~= nil then
@@ -157,13 +131,9 @@ script.on_event(defines.events.on_gui_opened, function(event)
     Heliostat.events.on_gui_opened(event)
 end)
 
-script.on_event(defines.events.on_gui_elem_changed, function(event)
-
-end)
-
-script.on_event(defines.events.on_rocket_launched, function(event)
-    Microwave_Receiver.events.on_rocket_launched(event)
-end)
+script.on_event(defines.events.on_rocket_launched,
+    Microwave_Receiver.events.on_rocket_launched
+)
 
 script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     Microwave_Receiver.events.on_gui_closed(event)
@@ -171,14 +141,18 @@ script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_
     Heliostat.events.on_gui_closed(event)
 end)
 
-script.on_event({defines.events.on_player_built_tile, defines.events.on_robot_built_tile}, function(event)
-    Solar_Updraft_Tower.events.on_build_tile(event)
-end)
+script.on_event({defines.events.on_player_built_tile, defines.events.on_robot_built_tile},
+    Solar_Updraft_Tower.events.on_build_tile
+)
 
-script.on_event({defines.events.on_player_mined_tile, defines.events.on_robot_mined_tile}, function(event)
-    Solar_Updraft_Tower.events.on_destroyed_tile(event)
-end)
+script.on_event({defines.events.on_player_mined_tile, defines.events.on_robot_mined_tile},
+    Solar_Updraft_Tower.events.on_destroyed_tile
+)
 
-script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
-    Thermosolar.events.on_player_cursor_stack_changed(event)
-end)
+script.on_event(defines.events.on_player_cursor_stack_changed,
+    Thermosolar.events.on_player_cursor_stack_changed
+)
+
+script.on_event(defines.events.on_ai_command_completed,
+    Aerial.events.on_ai_command_completed
+)

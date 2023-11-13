@@ -42,7 +42,7 @@ data:extend(
   {
 	ai_settings = {do_separation = false},
     type = "unit",
-	additional_pastable_entities = {'aerial-blimp-ht', 'aerial-blimp-mk01', 'aerial-blimp-mk02', 'aerial-blimp-mk03', 'aerial-blimp-mk04'},
+	additional_pastable_entities = {'aerial-blimp-mk01', 'aerial-blimp-mk02', 'aerial-blimp-mk03', 'aerial-blimp-mk04'},
     name = "aerial-blimp-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk03.png",
     icon_size = 64,
@@ -72,45 +72,7 @@ data:extend(
       cooldown = 0,
       ammo_type = _G.make_unit_melee_ammo_type(0),
       --sound = make_biter_roars(0.4),
-	animation =
-	{
-		layers =
-		{
-			{
-				filenames =
-				{
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/r1.png",
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/r2.png",
-				},
-			slice = 6,
-			lines_per_file = 6,
-			line_length = 6,
-			width = 320,
-			height = 320,
-			frame_count = 1,
-			direction_count = 64,
-			shift = util.mul_shift(util.by_pixel(-0, -0)),
-			scale = 0.7,
-			},
-			{
-				filenames =
-				{
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/s1.png",
-					  "__pyalternativeenergygraphics__/graphics/entity/aerial-mk03/s2.png",
-				},
-                slice = 6,
-                lines_per_file = 6,
-                line_length = 6,
-				width = 160,
-				height = 127,
-				frame_count = 1,
-				direction_count = 64,
-				--draw_as_shadow = true,
-				shift = util.mul_shift(util.by_pixel(128, 224)),
-				scale = 0.55,
-			},
-		}
-	},
+	  animation = DATA.Sprites.empty_animation()
 	},
 	vision_distance = 30,
 	movement_speed = 0.04,
