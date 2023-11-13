@@ -156,3 +156,5 @@ script.on_event(defines.events.on_player_cursor_stack_changed,
 script.on_event(defines.events.on_ai_command_completed,
     Aerial.events.on_ai_command_completed
 )
+
+script.on_nth_tick(1117, Aerial.events[1117])

@@ -98,6 +98,46 @@ local pathfind_flags = {
     low_priority = true
 }
 
+local function discharge(aerial_data)
+    local entity = aerial_data.entity
+    local acculumator = aerial_data.acculumator
+    local previous_position = aerial_data.previous_position
+    if previous_position then
+        local distance = distance(previous_position, entity.position)
+        local energy = distance * energy_per_distance[entity.name]
+        acculumator.energy = acculumator.energy + energy
+    end
+    aerial_data.previous_position = entity.position
+end
+
+Aerial.events[1117] = function()
+    local key, aerial_data = global.last_aerial, nil
+    local max_iter = 0
+    repeat
+        max_iter = max_iter + 1
+        key, aerial_data = next(global.aerial_data, key)
+        -- Empty table or end of list
+        if not key or not aerial_data then
+            break
+        end
+        local entity = aerial_data.entity
+        if not entity.valid then
+            if aerial_data.acculumator.valid then
+                aerial_data.acculumator.destroy()
+            end
+            global.aerial_data[key] = nil
+            break
+        end
+        local acculumator = aerial_data.acculumator
+        if not acculumator.valid then
+            acculumator = create_interface(entity)
+            aerial_data.acculumator = acculumator
+        end
+        discharge(aerial_data)
+    until max_iter > 51
+    global.last_aerial = key
+end
+
 local function find_target(aerial_data)
     if next(global.surfaces_to_refresh) then
         for surface_index, _ in pairs(global.surfaces_to_refresh) do
@@ -119,13 +159,7 @@ local function find_target(aerial_data)
         previous_target = nil
     end
 
-    local previous_position = aerial_data.previous_position
-    if previous_position then
-        local distance = distance(previous_position, entity.position)
-        local energy = distance * energy_per_distance[entity.name]
-        acculumator.energy = acculumator.energy + energy
-    end
-    aerial_data.previous_position = entity.position
+    discharge(aerial_data)
 
     local id = (previous_target or acculumator).electric_network_id
     if not id then return end
