@@ -112,6 +112,7 @@ end
 
 Aerial.events[1117] = function()
     local key, aerial_data = global.last_aerial, nil
+    if not global.aerial_data[key] then key = nil end
     local max_iter = 0
     repeat
         max_iter = max_iter + 1
