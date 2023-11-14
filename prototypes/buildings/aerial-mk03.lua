@@ -9,19 +9,19 @@ RECIPE{
     ingredients =
     {
 		{'aerial-blimp-mk02', 1},
-        {'processing-unit', 10},
-        {'ns-material', 10},
+        {'processing-unit', 5},
+        {'ns-material', 20},
         {'small-parts-03', 100},
-        {'acrylic', 100},
-        {'aerogel', 20},
-		{'shaft-mk03', 1},
-        {'anemometer-mk03', 1},
-        {'controler-mk03', 1},
-        {'electronics-mk03', 1},
+        {'acrylic', 200},
+        {'aerogel', 40},
+		{'shaft-mk03', 2},
+        {'anemometer-mk03', 4},
+        {'controler-mk03', 2},
+        {'electronics-mk03', 2},
 		{'biobattery', 100},
         {'cf', 200},
 		{'mechanical-parts-03', 1},
-		{type = 'fluid', name = 'helium', amount = 2000},
+		{type = 'fluid', name = 'helium', amount = 6000},
     },
     result = 'aerial-blimp-mk03'
   }:add_unlock('renewable-mk03')

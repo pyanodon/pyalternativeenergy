@@ -157,4 +157,4 @@ script.on_event(defines.events.on_ai_command_completed,
     Aerial.events.on_ai_command_completed
 )
 
-script.on_nth_tick(1117, Aerial.events[1117])
+script.on_nth_tick(117, Aerial.events[117])

@@ -50,10 +50,10 @@ local function cancel_creation(entity, player_index, message)
 end
 
 local energy_per_distance = {
-    ['aerial-blimp-mk01'] = 12000000,
-    ['aerial-blimp-mk02'] = 24000000,
-    ['aerial-blimp-mk03'] = 36000000,
-    ['aerial-blimp-mk04'] = 48000000,
+    ['aerial-blimp-mk01'] = 4500000 * 1.2,
+    ['aerial-blimp-mk02'] = 9000000 * 1.2,
+    ['aerial-blimp-mk03'] = 13500000 * 1.2,
+    ['aerial-blimp-mk04'] = 18000000 * 1.2,
 }
 
 local function refresh_electric_networks(surface)
@@ -102,22 +102,27 @@ local function discharge(aerial_data)
     local entity = aerial_data.entity
     local acculumator = aerial_data.acculumator
     local previous_position = aerial_data.previous_position
+    local starting_position = aerial_data.starting_position
+    local distance_bonus = 1
+    if starting_position then
+        local distance = distance(starting_position, entity.position)
+        distance_bonus = 2 - (1 / (distance ^ 0.5 / 30 + 1))
+    end
     if previous_position then
         local distance = distance(previous_position, entity.position)
-        local energy = distance * energy_per_distance[entity.name]
+        local energy = distance * energy_per_distance[entity.name] * distance_bonus
         acculumator.energy = acculumator.energy + energy
     end
     aerial_data.previous_position = entity.position
 end
 
-Aerial.events[1117] = function()
+Aerial.events[117] = function()
     local key, aerial_data = global.last_aerial, nil
     if not global.aerial_data[key] then key = nil end
     local max_iter = 0
     repeat
         max_iter = max_iter + 1
         key, aerial_data = next(global.aerial_data, key)
-        -- Empty table or end of list
         if not key or not aerial_data then
             break
         end
@@ -135,7 +140,7 @@ Aerial.events[1117] = function()
             aerial_data.acculumator = acculumator
         end
         discharge(aerial_data)
-    until max_iter > 51
+    until max_iter > 30
     global.last_aerial = key
 end
 
@@ -186,8 +191,10 @@ local function find_target(aerial_data)
         radius = 2,
         pathfind_flags = pathfind_flags
     }
-    if acculumator.electric_network_id ~= target.electric_network_id then
+    aerial_data.starting_position = entity.position
+    if aerial_data.zoop or acculumator.electric_network_id ~= target.electric_network_id then
         acculumator.teleport(position)
+        aerial_data.zoop = nil
     end
 end
 
@@ -205,6 +212,7 @@ Aerial.events.on_built = function(event)
         local aerial_data = {
             acculumator = acculumator,
             entity = entity,
+            zoop = true
         }   
         global.aerial_data[entity.unit_number] = aerial_data
         find_target(aerial_data)
