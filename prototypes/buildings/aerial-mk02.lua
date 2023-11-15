@@ -22,7 +22,7 @@ RECIPE{
 		{'eva', 80},
 		{'mechanical-parts-02', 1},
 		{'electronics-mk02', 2},
-		{type = 'fluid', name = 'hydrogen', amount = 6000},
+		{type = 'fluid', name = 'hydrogen', amount = 4000},
 	},
 	result = 'aerial-blimp-mk02'
   }:add_unlock('renewable-mk02')

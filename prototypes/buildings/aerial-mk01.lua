@@ -19,7 +19,7 @@ RECIPE{
 		{'battery-mk01', 100},
         {'plastic-bar', 60},
         {'copper-cable', 100},
-		{type = 'fluid', name = 'hot-air', amount = 6000},
+		{type = 'fluid', name = 'hot-air', amount = 4000},
     },
     result = 'aerial-blimp-mk01'
   }:add_unlock('renewable-mk01')

@@ -21,7 +21,7 @@ RECIPE{
 		{'biobattery', 100},
         {'cf', 200},
 		{'mechanical-parts-03', 1},
-		{type = 'fluid', name = 'helium', amount = 6000},
+		{type = 'fluid', name = 'helium', amount = 4000},
     },
     result = 'aerial-blimp-mk03'
   }:add_unlock('renewable-mk03')
