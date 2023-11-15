@@ -46,6 +46,7 @@ data:extend(
 	type = 'unit',
 	additional_pastable_entities = {'aerial-blimp-mk01', 'aerial-blimp-mk02', 'aerial-blimp-mk03', 'aerial-blimp-mk04'},
 	name = 'aerial-blimp-mk02',
+	selection_priority = 49,
 	icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-mk02.png',
 	icon_size = 64,
 	flags = {'placeable-player', 'placeable-enemy', 'placeable-off-grid'},
@@ -65,7 +66,6 @@ data:extend(
 	has_belt_immunity = true,
 	immune_to_rock_impacts = true,
 	collision_mask = {'not-colliding-with-itself'},
-	selection_priority = 51,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	attack_parameters = {
 		type = 'projectile',
