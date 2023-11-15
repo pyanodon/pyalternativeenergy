@@ -320,8 +320,8 @@ Aerial.events.on_open_gui = function(event)
     if not (entity and entity.valid and entity.unit_number) then return end
     local aerial_data = global.aerial_data[entity.unit_number]
     if not aerial_data then return end
-    if player.gui.screen.aerial_gui then
-        player.gui.screen.aerial_gui.destroy()
+    if player.opened then
+        player.opened.destroy()
     end
 
     local main_frame = player.gui.screen.add{
