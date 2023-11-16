@@ -275,6 +275,10 @@ Aerial.events.on_built = function(event)
             return
         end
 
+        entity.destructible = false
+        acculumator.destructible = false
+        acculumator.operable = false
+
         find_target(aerial_data)
     elseif entity.type == 'electric-pole' then
         refresh_electric_networks(entity.surface)
