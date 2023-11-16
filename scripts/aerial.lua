@@ -145,7 +145,7 @@ Aerial.events[117] = function()
             aerial_data.acculumator = acculumator
         end
         discharge(aerial_data)
-    until max_iter > 30
+    until max_iter > 60
     global.last_aerial = key
 end
 
