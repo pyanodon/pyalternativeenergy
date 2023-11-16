@@ -13,6 +13,7 @@ Date: ?
     - added new recipe icons for uranium hexaflouride chain
     - fixed hot molten salt, nexelit slurry, combustion mixture, molten nexelit-zinc-gadolinium being labed as gases when they should have been labeled as fluids (https://github.com/pyanodon/pybugreports/issues/319)
     - reworked the aerial turbines from scratch. see py codex for more information
+    - added mk numbers to tidal plants
     - removed beans
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
