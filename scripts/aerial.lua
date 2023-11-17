@@ -9,6 +9,10 @@ local function distance(a, b)
     return ((ax - bx) ^ 2 + (ay - by) ^ 2) ^ 0.5
 end
 
+local function exists_and_valid(x)
+    return x and x.valid
+end
+
 local function cancel_creation(entity, player_index, message)
 	local inserted = 0
 	local item_to_place = entity.prototype.items_to_place_this[1]
@@ -72,6 +76,7 @@ end
 
 Aerial.events.on_init = function()
     global.aerial_data = global.aerial_data or {}
+    global.aerial_base_data = global.aerial_base_data or {}
     if not global.electric_networks then
         global.electric_networks = {}
         for _, surface in pairs(game.surfaces) do
@@ -147,6 +152,116 @@ Aerial.events[117] = function()
         discharge(aerial_data)
     until max_iter > 60
     global.last_aerial = key
+end
+
+local function aerial_base_validity_check(aerial_base_data)
+    local combinator = aerial_base_data.combinator
+    local animation = aerial_base_data.animation
+    local chest = aerial_base_data.chest
+
+    local valid = exists_and_valid(combinator) and exists_and_valid(animation) and exists_and_valid(chest)
+
+    if not valid then
+        if exists_and_valid(combinator) then
+            combinator.destroy()
+        end
+        if exists_and_valid(animation) then
+            animation.destroy()
+        end
+        if exists_and_valid(chest) then
+            chest.destroy()
+        end
+        global.aerial_base_data[aerial_base_data.unit_number] = nil
+    end
+
+    return valid
+end
+
+local function zoop_turbine_to_base(aerial_base_data, surface_index, electric_network_id, name)
+    for key, aerial_data in pairs(global.aerial_data) do
+        local acculumator = aerial_data.acculumator
+        local entity = aerial_data.entity
+        if acculumator.valid
+        and acculumator.surface_index == surface_index
+        and acculumator.electric_network_id == electric_network_id
+        and entity.valid
+        and entity.name == name then
+            discharge(aerial_data)
+            acculumator.destroy()
+            entity.destroy()
+            global.aerial_data[key] = nil
+            return true
+        end
+    end
+    return false
+end
+
+local function release_turbine(aerial_base_data, name, stack)
+    local chest = aerial_base_data.combinator
+    local position = combinator.position
+    combinator.surface.create_entity{
+        name = name,
+        position = {position.x, position.y - 5},
+        force = combinator.force_index,
+        create_build_effect_smoke = false,
+        item = stack,
+        raise_built = true
+    }
+    stack.clear()
+end
+
+Aerial.events[66] = function()
+    for _, aerial_base_data in pairs(global.aerial_base_data) do
+        if not aerial_base_validity_check(aerial_base_data) then break end
+        local combinator = aerial_base_data.combinator
+        local animation = aerial_base_data.animation
+        local chest = aerial_base_data.chest
+
+        if animation.energy == 0 then goto continue end
+
+        local electric_network_id = animation.electric_network_id
+        if not electric_network_id then goto continue end
+        local surface_index = animation.surface_index
+        local all_poles = global.electric_networks[surface_index][electric_network_id]
+        if not all_poles or #all_poles < 2 then goto continue end
+
+        local existing_turbines = {}
+        for _, aerial_data in pairs(global.aerial_data) do
+            local acculumator = aerial_data.acculumator
+            if acculumator.valid and acculumator.surface_index == surface_index and acculumator.electric_network_id == electric_network_id then
+                local name = aerial_data.entity.name
+                existing_turbines[name] = (existing_turbines[name] or 0) + 1
+            end
+        end
+
+        local inventory = chest.get_inventory(defines.inventory.chest)
+        local is_empty = inventory.is_empty()
+        local is_full = (not is_empty) and inventory.is_full()
+        for _, signal in pairs(combinator.get_merged_signals() or {}) do
+            signal = signal.signal
+            local name = signal.name
+            local desired_count = signal.count
+            local existing_count = existing_turbines[name] or 0
+            if desired_count ~= existing_count and energy_per_distance[name] and signal.type == 'item' then
+                if not is_empty and desired_count > existing_count then
+                    local stack = inventory.find_item_stack(name)
+                    if stack then
+                        release_turbine(aerial_base_data, name, stack)
+                        existing_turbines[name] = (existing_turbines[name] or 0) + 1
+                        goto continue
+                    end
+                end
+                if not is_full and desired_count < existing_count then
+                    if zoop_turbine_to_base(aerial_base_data, surface_index, electric_network_id, name) then
+                        existing_turbines[name] = existing_turbines[name] - 1
+                        goto continue
+                    end
+                end
+            end
+        end
+
+        ::continue::
+    end
 end
 
 local function draw_error_sprite(entity)
@@ -282,6 +397,38 @@ Aerial.events.on_built = function(event)
         find_target(aerial_data)
     elseif entity.type == 'electric-pole' then
         refresh_electric_networks(entity.surface)
+    elseif entity.name == 'aerial-base' then
+        local animation = entity.surface.create_entity{
+            name = 'aerial-base-animation',
+            position = entity.position,
+            force = entity.force,
+            create_build_effect_smoke = false
+        }
+        animation.destructible = false
+        animation.operable = false
+        local electric_network_id = animation.electric_network_id
+        if electric_network_id then
+            for _, aerial_base_data in pairs(global.aerial_base_data) do
+                if aerial_base_data.animation.valid and aerial_base_data.animation.electric_network_id == electric_network_id then
+                    animation.destroy()
+                    cancel_creation(entity, event.player_index, {'aerial-gui.only-one-aerial-base'})
+                    return
+                end
+            end
+        end
+        local chest = entity.surface.create_entity{
+            name = 'aerial-base-chest',
+            position = entity.position,
+            force = entity.force,
+            create_build_effect_smoke = false
+        }
+        chest.destructible = false
+        chest.operable = false
+        global.aerial_base_data[entity.unit_number] = {
+            combinator = entity,
+            animation = animation,
+            chest = chest
+        }
     end
 end
 
@@ -309,6 +456,18 @@ Aerial.events.on_destroyed = function(event)
         stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
     elseif entity.type == 'electric-pole' then
         global.surfaces_to_refresh[entity.surface.index] = true
+    elseif entity.name == 'aerial-base' then
+        local unit_number = entity.unit_number
+        local aerial_base_data = global.aerial_base_data[unit_number]
+        if not aerial_base_data then return end
+        for _, entity in pairs{
+            aerial_base_data.combinator,
+            aerial_base_data.animation,
+            aerial_base_data.chest
+        } do
+            if exists_and_valid(entity) then entity.destroy() end
+        end
+        global.aerial_base_data[unit_number] = nil
     end
 end
 
@@ -321,7 +480,7 @@ end
 Aerial.events.on_open_gui = function(event)
     local player = game.get_player(event.player_index)
     local entity = player.selected
-    if not (entity and entity.valid and entity.unit_number) then return end
+    if not exists_and_valid(entity) or not entity.unit_number then return end
     local aerial_data = global.aerial_data[entity.unit_number]
     if not aerial_data then return end
     if player.opened then
