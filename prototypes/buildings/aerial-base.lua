@@ -65,8 +65,7 @@ ENTITY {
     localised_description = {'entity-description.aerial-base'},
     icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-base.png',
     icon_size = 64,
-    collision_box = {{-5.4, -5.4}, {5.4, 5.4}},
-    flags = {'hidden', 'not-on-map'},
+    flags = {'hidden', 'not-on-map', 'placeable-off-grid'},
     selectable_in_game = false,
     animation = {
         layers = {
@@ -160,7 +159,7 @@ ENTITY {
     },
     circuit_wire_max_distance = 9,
     circuit_connector_sprites = _G.circuit_connector_definitions['accumulator'].sprites,
-    item_slot_count = 4,
+    item_slot_count = 8,
     integration_patch_render_layer = 'lower-object-above-shadow',
     integration_patch = {
         filename = '__pyalternativeenergygraphics__/graphics/entity/aerial-base/r.png',
