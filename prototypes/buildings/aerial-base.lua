@@ -31,14 +31,15 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {'iron-plate', 100},
+		{'self-assembly-monolayer', 40},
         {'glass', 50},
-        {'automated-factory-mk01', 2},
+        {'automated-factory-mk01', 1},
         {'aluminium-plate', 50},
-        {'steel-plate', 50},
-        {'iron-gear-wheel', 100},
-        {'pipe', 25},
-        {'intermetallics', 10},
+		{'small-parts-02', 30},
+		{'anemometer-mk02', 2},
+		{'utility-box-mk02', 2},
+		{'controler-mk02', 3},
+		{'advanced-circuit', 5},
     },
     results = {
         {type = 'item', name = 'aerial-base', amount = 1}
@@ -53,7 +54,7 @@ ITEM {
     flags = {},
     subgroup = 'py-alternativeenergy-special-buildings',
     order = 'f',
-    place_result = 'aerial-base',
+    place_result = 'aerial-base-combinator',
     stack_size = 10
 }
 
@@ -123,20 +124,24 @@ ENTITY {
     energy_production = '0W',
 }
 
+local x = 3.42
+local y = 3.42
 local circuit_wire_connection_point = {
     shadow = {
-        red = {0.984375, 1.10938},
-        green = {0.890625, 1.10938}
+        red = {0.984375+x, 1.10938+y},
+        green = {0.890625+x, 1.10938+y}
     },
     wire = {
-        red = {0.6875, 0.59375},
-        green = {0.6875, 0.71875}
+        red = {0.6875+x, 0.59375+y},
+        green = {0.6875+x, 0.71875+y}
     }
 }
 
 ENTITY {
     type = 'constant-combinator',
-    name = 'aerial-base',
+    name = 'aerial-base-combinator',
+    localised_name = {'entity-name.aerial-base'},
+    localised_description = {'entity-description.aerial-base'},
     activity_led_light_offsets = {{0, 0}, {0, 0}, {0, 0}, {0, 0}},
     icon = '__pyalternativeenergygraphics__/graphics/icons/aerial-base.png',
     icon_size = 64,
@@ -181,8 +186,8 @@ ENTITY {
         height = 1
     },
     collision_box = {{-5.4, -5.4}, {5.4, 5.4}},
-    inventory_size = 60,
+    inventory_size = 40,
     enable_inventory_bar = false,
     scale_info_icons = true,
-    inventory_type = 'with_bar'
+    inventory_type = 'with_filters_and_bar'
 }
