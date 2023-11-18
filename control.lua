@@ -119,6 +119,7 @@ script.on_event(on_destroyed, function(event)
     Aerial.events.on_destroyed(event)
 
     local E = event.entity
+    if not E.valid or not E.unit_number then return end
     if string.match(E.name, 'lrf%-panel') ~= nil then
         global.lrf_panels[E.unit_number] = nil
     elseif E.name == 'stirling-concentrator' then
