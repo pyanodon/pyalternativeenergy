@@ -77,6 +77,7 @@ local function refresh_electric_networks(surface)
         end
     end
     global.electric_networks[surface.index] = networks
+    global.existing_turbines_invalid = true
 end
 
 Aerial.events.on_init = function()
@@ -89,6 +90,8 @@ Aerial.events.on_init = function()
         end
     end
     global.surfaces_to_refresh = {}
+    global.existing_turbines = {}
+    global.existing_turbines_invalid = true
 end
 
 local function create_interface(entity)
@@ -105,6 +108,29 @@ local pathfind_flags = {
     allow_paths_through_own_entities = true,
     low_priority = true
 }
+
+local function refresh_existing_turbines()
+    local result = {}
+    for _, aerial_data in pairs(global.aerial_data) do
+        local acculumator = aerial_data.acculumator
+        if acculumator.valid then
+            local surface_index = acculumator.surface_index
+            if not result[surface_index] then
+                result[surface_index] = {}
+            end
+            local existing_turbines = result[surface_index]
+            local electric_network_id = acculumator.electric_network_id
+            if not existing_turbines[electric_network_id] then
+                existing_turbines[electric_network_id] = {}
+            end
+            local name = aerial_data.entity.name
+            local per_network = existing_turbines[electric_network_id]
+            per_network[name] = (per_network[name] or 0) + 1
+        end
+    end
+    global.existing_turbines = result
+    global.existing_turbines_invalid = false
+end
 
 local function calc_stored_energy(aerial_data)
     local entity = aerial_data.entity
@@ -132,14 +158,18 @@ local function discharge(aerial_data)
 end
 
 local function calc_number_of_aerial_turbines_per_network(surface_index, electric_network_id)
-    local result = 0
-    for _, aerial_data in pairs(global.aerial_data) do
-        local acculumator = aerial_data.acculumator
-        if acculumator.valid and acculumator.surface_index == surface_index and acculumator.electric_network_id == electric_network_id then
-            result = result + 1
-        end
+    if global.existing_turbines_invalid then
+        refresh_existing_turbines()
     end
-    return result
+    local per_surface = global.existing_turbines[surface_index]
+    if not per_surface then return 0 end
+    local per_network = per_surface[electric_network_id]
+    if not per_network then return 0 end
+    local sum = 0
+    for _, count in pairs(per_network) do
+        sum = sum + count
+    end
+    return sum
 end
 
 local function calc_number_of_electric_poles_per_network(surface_index, electric_network_id)
@@ -298,14 +328,10 @@ Aerial.events[66] = function()
         local all_poles = global.electric_networks[surface_index][electric_network_id]
         if not all_poles then control.enabled = false; goto continue end
 
-        local existing_turbines = {}
-        for _, aerial_data in pairs(global.aerial_data) do
-            local acculumator = aerial_data.acculumator
-            if acculumator.valid and acculumator.surface_index == surface_index and acculumator.electric_network_id == electric_network_id then
-                local name = aerial_data.entity.name
-                existing_turbines[name] = (existing_turbines[name] or 0) + 1
-            end
+        if global.existing_turbines_invalid then
+            refresh_existing_turbines()
         end
+        local existing_turbines = (global.existing_turbines[surface_index] or {})[electric_network_id] or {}
 
         local desired_turbines = {}
         for _, signal in pairs(combinator.get_merged_signals() or {}) do
@@ -326,7 +352,6 @@ Aerial.events[66] = function()
                     local stack = inventory.find_item_stack(name)
                     if stack then
                         if release_turbine(aerial_base_data, name, stack) then
-                            existing_turbines[name] = (existing_turbines[name] or 0) + 1
                             inventory.sort_and_merge()
                         end
                         break
@@ -340,7 +365,7 @@ Aerial.events[66] = function()
                 local desired_count = desired_turbines[name] or 0
                 if desired_count < existing_count and inventory.can_insert(name) then
                     if zoop_turbine_to_base(aerial_base_data, surface_index, electric_network_id, name, inventory) then
-                        existing_turbines[name] = existing_turbines[name] - 1
+                        existing_turbines[name] = existing_count - 1
                         inventory.sort_and_merge()
                         break
                     end
@@ -432,7 +457,8 @@ end
 Aerial.events.on_built = function(event)
     local entity = event.created_entity or event.entity
     if not entity.valid or not entity.unit_number then return end
-    if all_turbines[entity.name] then
+    local name = entity.name
+    if all_turbines[name] then
         local unit_number = entity.unit_number
         local acculumator = create_interface(entity)
 
@@ -474,10 +500,13 @@ Aerial.events.on_built = function(event)
         acculumator.destructible = false
         acculumator.operable = false
 
+        local existing_turbines = global.existing_turbines[entity.surface_index][acculumator.electric_network_id]
+        existing_turbines[name] = (existing_turbines[name] or 0) + 1
+
         find_target(aerial_data)
     elseif entity.type == 'electric-pole' then
         refresh_electric_networks(entity.surface)
-    elseif entity.name == 'aerial-base-combinator' then
+    elseif name == 'aerial-base-combinator' then
         entity.operable = false
         local animation = entity.surface.create_entity{
             name = 'aerial-base-animation',
@@ -528,6 +557,8 @@ Aerial.events.on_destroyed = function(event)
         local stack = buffer[1]
         stack.tags = {lifetime_generation = aerial_data.lifetime_generation}
         stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
+
+        global.existing_turbines_invalid = true
     elseif entity.type == 'electric-pole' then
         global.surfaces_to_refresh[entity.surface.index] = true
     elseif entity.name == 'aerial-base-combinator' then
