@@ -500,7 +500,16 @@ Aerial.events.on_built = function(event)
         acculumator.destructible = false
         acculumator.operable = false
 
-        local existing_turbines = global.existing_turbines[entity.surface_index][acculumator.electric_network_id]
+        local per_surface = global.existing_turbines[entity.surface_index]
+        if not per_surface then
+            per_surface = {}
+            global.existing_turbines[entity.surface_index] = per_surface
+        end
+        local existing_turbines = per_surface[acculumator.electric_network_id]
+        if not existing_turbines then
+            existing_turbines = {}
+            per_surface[acculumator.electric_network_id] = existing_turbines
+        end
         existing_turbines[name] = (existing_turbines[name] or 0) + 1
 
         find_target(aerial_data)
@@ -558,7 +567,12 @@ Aerial.events.on_destroyed = function(event)
         stack.tags = {lifetime_generation = aerial_data.lifetime_generation}
         stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
 
-        global.existing_turbines_invalid = true
+        local per_surface = global.existing_turbines[entity.surface_index]
+        if not per_surface then return end
+        local existing_turbines = per_surface[acculumator.electric_network_id]
+        if not existing_turbines then return end
+        local name = entity.name
+        existing_turbines[name] = (existing_turbines[name] or 0) - 1
     elseif entity.type == 'electric-pole' then
         global.surfaces_to_refresh[entity.surface.index] = true
     elseif entity.name == 'aerial-base-combinator' then
