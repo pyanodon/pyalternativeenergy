@@ -550,6 +550,7 @@ Aerial.events.on_destroyed = function(event)
     local aerial_data = global.aerial_data[entity.unit_number]
     if aerial_data then
         local acculumator = aerial_data.acculumator
+        local electric_network_id = acculumator.electric_network_id
         if acculumator.valid then acculumator.destroy() end
         global.aerial_data[entity.unit_number] = nil
 
@@ -569,7 +570,7 @@ Aerial.events.on_destroyed = function(event)
 
         local per_surface = global.existing_turbines[entity.surface_index]
         if not per_surface then return end
-        local existing_turbines = per_surface[acculumator.electric_network_id]
+        local existing_turbines = per_surface[electric_network_id]
         if not existing_turbines then return end
         local name = entity.name
         existing_turbines[name] = (existing_turbines[name] or 0) - 1
