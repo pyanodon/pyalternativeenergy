@@ -575,6 +575,7 @@ Aerial.events.on_destroyed = function(event)
         existing_turbines[name] = (existing_turbines[name] or 0) - 1
     elseif entity.type == 'electric-pole' then
         global.surfaces_to_refresh[entity.surface.index] = true
+        global.existing_turbines_invalid = true
     elseif entity.name == 'aerial-base-combinator' then
         local unit_number = entity.unit_number
         local aerial_base_data = global.aerial_base_data[unit_number]
