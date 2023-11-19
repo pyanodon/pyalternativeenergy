@@ -309,8 +309,19 @@ local function release_turbine(aerial_base_data, name, stack)
     return true
 end
 
+local function clear_surfaces_to_refresh()
+    if next(global.surfaces_to_refresh) then
+        for surface_index, _ in pairs(global.surfaces_to_refresh) do
+            local surface = game.get_surface(surface_index)
+            if surface then refresh_electric_networks(surface) end
+        end
+        global.surfaces_to_refresh = {}
+    end
+end
+
 local letters = {'A', 'B', 'C', 'D'}
 Aerial.events[66] = function()
+    clear_surfaces_to_refresh()
     for _, aerial_base_data in pairs(global.aerial_base_data) do
         if not aerial_base_validity_check(aerial_base_data) then break end
         local combinator = aerial_base_data.combinator
@@ -400,13 +411,7 @@ local function draw_error_sprite(entity)
 end
 
 local function find_target(aerial_data)
-    if next(global.surfaces_to_refresh) then
-        for surface_index, _ in pairs(global.surfaces_to_refresh) do
-            local surface = game.get_surface(surface_index)
-            if surface then refresh_electric_networks(surface) end
-        end
-        global.surfaces_to_refresh = {}
-    end
+    clear_surfaces_to_refresh()
 
     local acculumator = aerial_data.acculumator
     if not acculumator.valid then
