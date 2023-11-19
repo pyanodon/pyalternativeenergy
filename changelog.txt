@@ -14,6 +14,7 @@ Date: ?
     - fixed hot molten salt, nexelit slurry, combustion mixture, molten nexelit-zinc-gadolinium being labed as gases when they should have been labeled as fluids (https://github.com/pyanodon/pybugreports/issues/319)
     - reworked the aerial turbines from scratch. see py codex for more information
     - added mk numbers to tidal plants
+    - improved the look of the microwave receiver GUI
     - removed beans
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6

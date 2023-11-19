@@ -76,6 +76,14 @@ Microwave_Receiver.events.on_gui_opened = function(event)
 	content_flow.style.margin = {-4, 0, -4, 0}
 	content_flow.style.vertical_align = 'center'
 
+	local status_flow = content_flow.add{type = 'flow', name = 'status_flow', direction = 'horizontal'}
+	status_flow.style.vertical_align = 'center'
+	local status_sprite = status_flow.add{type = 'sprite', name = 'status_sprite'}
+	status_sprite.resize_to_sprite = false
+	status_sprite.style.size = {16, 16}
+	status_sprite.sprite = 'utility/status_working'
+	status_flow.add{type = 'label', name = 'status_text'}.caption = {'entity-status.working'}
+
 	local camera_frame = content_flow.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
 	local camera = camera_frame.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = {entity.position.x, entity.position.y - 2}, surface_index = entity.surface.index}
 	camera.visible = true
