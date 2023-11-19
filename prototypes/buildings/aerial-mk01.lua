@@ -39,7 +39,7 @@ ITEM{
 data:extend(
 {
   {
-	ai_settings = {do_separation = false, path_resolution_modifier = -2},
+	ai_settings = {do_separation = false, path_resolution_modifier = -3},
     type = 'unit',
 	additional_pastable_entities = {'aerial-blimp-mk01', 'aerial-blimp-mk02', 'aerial-blimp-mk03', 'aerial-blimp-mk04'},
     name = 'aerial-blimp-mk01',
@@ -97,7 +97,7 @@ data:extend(
 				direction_count = 1,
 				shift = util.mul_shift(util.by_pixel(-0, -0)),
 				scale = 0.4,
-				animation_speed = 10
+				animation_speed = 5
 			},
 			{
 				filename = '__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/sh.png',
@@ -111,7 +111,7 @@ data:extend(
 				--draw_as_shadow = true,
 				shift = util.mul_shift(util.by_pixel(128, 224)),
 				scale = 0.45,
-				animation_speed = 10
+				animation_speed = 5
 			},
 		}
 	},

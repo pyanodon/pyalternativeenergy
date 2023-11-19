@@ -103,12 +103,6 @@ local function create_interface(entity)
     }
 end
 
-local pathfind_flags = {
-    allow_destroy_friendly_entities = true,
-    allow_paths_through_own_entities = true,
-    low_priority = true
-}
-
 local function refresh_existing_turbines()
     local result = {}
     for _, aerial_data in pairs(global.aerial_data) do
@@ -204,7 +198,7 @@ Aerial.events[117] = function()
             aerial_data.acculumator = acculumator
         end
         discharge(aerial_data)
-    until max_iter > 60
+    until max_iter > 120
     global.last_aerial = key
 end
 
@@ -336,7 +330,7 @@ Aerial.events[66] = function()
         local electric_network_id = animation.electric_network_id
         if not electric_network_id then control.enabled = false; goto continue end
         local surface_index = animation.surface_index
-        local all_poles = global.electric_networks[surface_index][electric_network_id]
+        local all_poles = (global.electric_networks[surface_index] or {})[electric_network_id]
         if not all_poles then control.enabled = false; goto continue end
 
         if global.existing_turbines_invalid then
@@ -374,12 +368,12 @@ Aerial.events[66] = function()
             for name, _ in pairs(all_turbines) do
                 local existing_count = existing_turbines[name] or 0
                 local desired_count = desired_turbines[name] or 0
-                if desired_count < existing_count and inventory.can_insert(name) then
-                    if zoop_turbine_to_base(aerial_base_data, surface_index, electric_network_id, name, inventory) then
-                        existing_turbines[name] = existing_count - 1
-                        inventory.sort_and_merge()
-                        break
-                    end
+                if desired_count < existing_count 
+                and inventory.can_insert(name)
+                and zoop_turbine_to_base(aerial_base_data, surface_index, electric_network_id, name, inventory) then
+                    existing_turbines[name] = existing_count - 1
+                    inventory.sort_and_merge()
+                    break
                 end
             end
         end
@@ -409,6 +403,13 @@ local function draw_error_sprite(entity)
         render_layer = 'air-entity-info-icon'
     }
 end
+
+local pathfind_flags = {
+    allow_destroy_friendly_entities = true,
+    allow_paths_through_own_entities = true,
+    low_priority = true,
+    prefer_straight_paths = true
+}
 
 local function find_target(aerial_data)
     clear_surfaces_to_refresh()
@@ -716,8 +717,9 @@ function Aerial.update_gui(player)
     local fake_energy = calc_stored_energy(aerial_data)
     local stored_energy = acculumator.energy + fake_energy
     local max_energy = acculumator.prototype.electric_energy_source_prototype.buffer_capacity
-    stored_energy = math.min(stored_energy, max_energy + 1)
-    content_flow.progressbar.value = stored_energy / max_energy
+    stored_energy = math.min(stored_energy, max_energy)
+    local progress = stored_energy / max_energy
+    content_flow.progressbar.value = progress > 0.99 and 1 or progress
     content_flow.progressbar.caption = {'sut-gui.energy', FUN.format_energy(stored_energy, 'J'), FUN.format_energy(max_energy, 'J')}
 
     local starting_position = aerial_data.starting_position
