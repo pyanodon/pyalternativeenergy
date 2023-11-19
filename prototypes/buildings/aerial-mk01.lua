@@ -97,7 +97,7 @@ data:extend(
 				direction_count = 1,
 				shift = util.mul_shift(util.by_pixel(-0, -0)),
 				scale = 0.4,
-				animation_speed = 5
+				animation_speed = 10
 			},
 			{
 				filename = '__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/sh.png',
@@ -111,7 +111,7 @@ data:extend(
 				--draw_as_shadow = true,
 				shift = util.mul_shift(util.by_pixel(128, 224)),
 				scale = 0.45,
-				animation_speed = 5
+				animation_speed = 10
 			},
 		}
 	},

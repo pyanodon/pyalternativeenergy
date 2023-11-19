@@ -518,8 +518,8 @@ Aerial.events.on_built = function(event)
         existing_turbines[name] = (existing_turbines[name] or 0) + 1
 
         find_target(aerial_data)
-    elseif entity.type == 'electric-pole' then
-        refresh_electric_networks(entity.surface)
+    elseif entity.type == 'electric-pole' or entity.type == 'power-switch' then
+        global.surfaces_to_refresh[entity.surface_index] = true
     elseif name == 'aerial-base-combinator' then
         entity.operable = false
         local animation = entity.surface.create_entity{
