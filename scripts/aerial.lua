@@ -618,7 +618,7 @@ local function build_aerial_gui(player, aerial_data)
         caption = entity.prototype.localised_name,
         direction = 'vertical'
     }
-    main_frame.style.width = 436
+    main_frame.style.width = 336
     main_frame.tags = {unit_number = entity.unit_number}
     main_frame.auto_center = true
     player.opened = main_frame
@@ -630,7 +630,13 @@ local function build_aerial_gui(player, aerial_data)
 	content_flow.style.margin = {-4, 0, -4, 0}
 	content_flow.style.vertical_align = 'center'
 
-    content_flow.add{type = 'progressbar', name = 'progressbar', style = 'electric_satisfaction_statistics_progressbar'}.style.horizontally_stretchable = true
+    local status_flow = content_flow.add{type = 'flow', name = 'status_flow', direction = 'horizontal'}
+	status_flow.style.vertical_align = 'center'
+	local status_sprite = status_flow.add{type = 'sprite', name = 'status_sprite'}
+	status_sprite.resize_to_sprite = false
+	status_sprite.style.size = {16, 16}
+	status_sprite.sprite = 'utility/status_working'
+	status_flow.add{type = 'label', name = 'status_text'}.caption = {'entity-status.working'}
 
     local camera_frame = content_flow.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
 	local camera = camera_frame.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = entity.position, surface_index = entity.surface_index}
@@ -638,6 +644,9 @@ local function build_aerial_gui(player, aerial_data)
     camera.entity = entity
 	camera.style.height = 180
 	camera.zoom = 0.7
+
+    content_flow.add{type = 'progressbar', name = 'progressbar', style = 'electric_satisfaction_statistics_progressbar'}.style.horizontally_stretchable = true
+    content_flow.add{type = 'line'}
 
 	content_flow.add{type = 'label', name = 'distance_bonus'}
     content_flow.add{type = 'label', name = 'lifetime_generation'}
