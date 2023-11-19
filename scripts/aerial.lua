@@ -550,8 +550,11 @@ Aerial.events.on_destroyed = function(event)
     local aerial_data = global.aerial_data[entity.unit_number]
     if aerial_data then
         local acculumator = aerial_data.acculumator
-        local electric_network_id = acculumator.electric_network_id
-        if acculumator.valid then acculumator.destroy() end
+        local electric_network_id
+        if acculumator.valid then
+            electric_network_id = acculumator.electric_network_id
+            acculumator.destroy()
+        end
         global.aerial_data[entity.unit_number] = nil
 
         if event.player_index then
@@ -568,12 +571,14 @@ Aerial.events.on_destroyed = function(event)
         stack.tags = {lifetime_generation = aerial_data.lifetime_generation}
         stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
 
-        local per_surface = global.existing_turbines[entity.surface_index]
-        if not per_surface then return end
-        local existing_turbines = per_surface[electric_network_id]
-        if not existing_turbines then return end
-        local name = entity.name
-        existing_turbines[name] = (existing_turbines[name] or 0) - 1
+        if electric_network_id then
+            local per_surface = global.existing_turbines[entity.surface_index]
+            if not per_surface then return end
+            local existing_turbines = per_surface[electric_network_id]
+            if not existing_turbines then return end
+            local name = entity.name
+            existing_turbines[name] = (existing_turbines[name] or 0) - 1
+        end
     elseif entity.type == 'electric-pole' then
         global.surfaces_to_refresh[entity.surface.index] = true
         global.existing_turbines_invalid = true
@@ -650,7 +655,7 @@ Aerial.events.on_open_gui = function(event)
     local entity = player.selected
     if not exists_and_valid(entity) or not entity.unit_number then return end
     if entity.type == 'power-switch' or entity.type == 'electric-pole' then
-        surfaces_to_refresh[entity.surface.index] = true
+        global.surfaces_to_refresh[entity.surface.index] = true
         return
     end
     local aerial_data = global.aerial_data[entity.unit_number]
