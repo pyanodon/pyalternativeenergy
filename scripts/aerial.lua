@@ -114,12 +114,14 @@ local function refresh_existing_turbines()
             end
             local existing_turbines = result[surface_index]
             local electric_network_id = acculumator.electric_network_id
-            if not existing_turbines[electric_network_id] then
-                existing_turbines[electric_network_id] = {}
+            if electric_network_id then
+                if not existing_turbines[electric_network_id] then
+                    existing_turbines[electric_network_id] = {}
+                end
+                local name = aerial_data.entity.name
+                local per_network = existing_turbines[electric_network_id]
+                per_network[name] = (per_network[name] or 0) + 1
             end
-            local name = aerial_data.entity.name
-            local per_network = existing_turbines[electric_network_id]
-            per_network[name] = (per_network[name] or 0) + 1
         end
     end
     global.existing_turbines = result
