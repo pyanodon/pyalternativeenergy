@@ -95,12 +95,15 @@ Aerial.events.on_init = function()
 end
 
 local function create_interface(entity)
-    return entity.surface.create_entity{
+    local acculumator = entity.surface.create_entity{
         name = entity.name .. '-interface',
         position = entity.position,
         force = entity.force,
         create_build_effect_smoke = false
     }
+    acculumator.destructible = false
+    acculumator.operable = false
+    return acculumator
 end
 
 local function refresh_existing_turbines()
