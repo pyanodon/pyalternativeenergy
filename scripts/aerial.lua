@@ -649,6 +649,10 @@ Aerial.events.on_open_gui = function(event)
     local player = game.get_player(event.player_index)
     local entity = player.selected
     if not exists_and_valid(entity) or not entity.unit_number then return end
+    if entity.type == 'power-switch' or entity.type == 'electric-pole' then
+        surfaces_to_refresh[entity.surface.index] = true
+        return
+    end
     local aerial_data = global.aerial_data[entity.unit_number]
     if aerial_data then
         build_aerial_gui(player, aerial_data)
