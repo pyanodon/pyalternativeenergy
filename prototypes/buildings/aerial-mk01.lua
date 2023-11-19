@@ -87,16 +87,17 @@ data:extend(
 		layers =
 		{
 			{
-			filename = '__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/raw.png',
-			--slice = 8,
-			--lines_per_file = 4,
-			line_length = 16,
-			width = 127,
-			height = 287,
-			frame_count = 1,
-			direction_count = 64,
-			shift = util.mul_shift(util.by_pixel(-0, -0)),
-			scale = 0.4,
+				filename = '__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/raw.png',
+				--slice = 8,
+				--lines_per_file = 4,
+				line_length = 16,
+				width = 127,
+				height = 287,
+				frame_count = 64,
+				direction_count = 1,
+				shift = util.mul_shift(util.by_pixel(-0, -0)),
+				scale = 0.4,
+				animation_speed = 5
 			},
 			{
 				filename = '__pyalternativeenergygraphics__/graphics/entity/aerial-mk01/sh.png',
@@ -105,11 +106,12 @@ data:extend(
 				line_length = 16,
 				width = 96,
 				height = 64,
-				frame_count = 1,
-				direction_count = 64,
+				frame_count = 64,
+				direction_count = 1,
 				--draw_as_shadow = true,
 				shift = util.mul_shift(util.by_pixel(128, 224)),
 				scale = 0.45,
+				animation_speed = 5
 			},
 		}
 	},
