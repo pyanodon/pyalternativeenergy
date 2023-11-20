@@ -258,3 +258,16 @@ data.raw['assembling-machine']['washer-mk04'].energy_usage = "4MW"
 data.raw['assembling-machine']['wpu-mk02'].energy_usage = "2MW"
 data.raw['assembling-machine']['wpu-mk03'].energy_usage = "3MW"
 data.raw['assembling-machine']['wpu-mk04'].energy_usage = "4MW"
+
+data.raw['assembling-machine']['power-house'] = nil
+data.raw['assembling-machine']['power-house-mk02'] = nil
+data.raw['assembling-machine']['power-house-mk03'] = nil
+data.raw['assembling-machine']['power-house-mk04'] = nil
+data.raw['item']['power-house'] = nil
+data.raw['item']['power-house-mk02'] = nil
+data.raw['item']['power-house-mk03'] = nil
+data.raw['item']['power-house-mk04'] = nil
+data.raw['recipe']['power-house'] = nil
+data.raw['recipe']['power-house-mk02'] = nil
+data.raw['recipe']['power-house-mk03'] = nil
+data.raw['recipe']['power-house-mk04'] = nil

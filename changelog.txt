@@ -15,6 +15,7 @@ Date: ?
     - reworked the aerial turbines from scratch. see py codex for more information
     - added mk numbers to tidal plants
     - improved the look of the microwave receiver GUI
+    - removed unused power house entities from pyCP (https://github.com/pyanodon/pybugreports/issues/121)
     - removed beans
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
