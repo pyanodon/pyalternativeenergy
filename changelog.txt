@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
-Date: ?
+Date: 2023-11-21
   Bugfixes:
     - fixed that neutron absorber mk2,mk3,mk4 didn't consume boric acid
     - fixed that neutron absorber had an effective crafting speed of 0
