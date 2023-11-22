@@ -67,6 +67,7 @@ ENTITY {
     icon_size = 64,
     flags = {'hidden', 'not-on-map', 'placeable-off-grid'},
     selectable_in_game = false,
+    collision_box = {{-5.4, -5.4}, {5.4, 5.4}},
     animation = {
         layers = {
             {

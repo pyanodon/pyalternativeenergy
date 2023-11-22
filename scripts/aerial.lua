@@ -314,6 +314,7 @@ local function release_turbine(aerial_base_data, name, stack)
         return false
     end
 
+    global.electric_network_id_override = electric_network_id
     surface.create_entity{
         name = name,
         position = position,
@@ -322,6 +323,7 @@ local function release_turbine(aerial_base_data, name, stack)
         item = stack,
         raise_built = true
     }
+    global.electric_network_id_override = nil
     stack.clear()
     return true
 end
@@ -451,8 +453,9 @@ local function find_target(aerial_data)
 
     discharge(aerial_data)
 
-    local id = previous_target and previous_target.electric_network_id
-    if not id then id = acculumator.electric_network_id end
+    local id = global.electric_network_id_override
+        or (previous_target and previous_target.electric_network_id)
+        or acculumator.electric_network_id
     if not id then draw_error_sprite(entity); return end
     local all_poles = (global.electric_networks[surface.index] or {})[id]
     if not all_poles or #all_poles < 2 then draw_error_sprite(entity); return end
@@ -508,10 +511,10 @@ Aerial.events.on_built = function(event)
         global.aerial_data[unit_number] = aerial_data
 
         local fail_msg = false
-        if not acculumator.is_connected_to_electric_network() then
+        local electric_network_id = global.electric_network_id_override or acculumator.electric_network_id
+        if not electric_network_id then
             fail_msg = {'aerial-gui.must-be-placed-in-electric-network'}
         else
-            local electric_network_id = acculumator.electric_network_id
             local aerial_turbines = calc_number_of_aerial_turbines_per_network(surface_index, electric_network_id)
             local electric_poles = calc_number_of_electric_poles_per_network(surface_index, electric_network_id)
             if aerial_turbines * 3 > electric_poles then
@@ -535,10 +538,10 @@ Aerial.events.on_built = function(event)
             per_surface = {}
             global.existing_turbines[surface_index] = per_surface
         end
-        local existing_turbines = per_surface[acculumator.electric_network_id]
+        local existing_turbines = per_surface[electric_network_id]
         if not existing_turbines then
             existing_turbines = {}
-            per_surface[acculumator.electric_network_id] = existing_turbines
+            per_surface[electric_network_id] = existing_turbines
         end
         existing_turbines[name] = (existing_turbines[name] or 0) + 1
 
