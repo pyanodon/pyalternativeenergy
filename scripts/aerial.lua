@@ -737,7 +737,7 @@ Aerial.events.on_gui_closed = function(event)
 		if gui then gui.destroy() end
     elseif gui_type == defines.gui_type.entity then
         local entity = event.entity
-        if entity.name == 'aerial-base-chest' then
+        if entity and entity.name == 'aerial-base-chest' then
             local inventory = entity.get_inventory(defines.inventory.chest)
             set_aerial_base_inventory_filters(inventory)
         end
