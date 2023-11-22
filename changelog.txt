@@ -5,6 +5,7 @@ Date: ?
     - fixed crash with factorissimo 2 and aerial turbines
     - optimized aerial turbine UPS even further
     - required factorio version 1.1.93 or greater
+    - updated aerial turbine GUI to include a 2ed camera foucused on the destination pole
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
 Date: 2023-11-21

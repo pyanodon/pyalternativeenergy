@@ -687,6 +687,8 @@ local function build_aerial_gui(player, aerial_data)
 	status_sprite.sprite = 'utility/status_working'
 	status_flow.add{type = 'label', name = 'status_text'}.caption = {'entity-status.working'}
 
+    content_flow.add{type = 'progressbar', name = 'progressbar', style = 'electric_satisfaction_statistics_progressbar'}.style.horizontally_stretchable = true
+
     local camera_frame = content_flow.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
 	local camera = camera_frame.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = entity.position, surface_index = entity.surface_index}
 	camera.visible = true
@@ -694,8 +696,12 @@ local function build_aerial_gui(player, aerial_data)
 	camera.style.height = 180
 	camera.zoom = 0.7
 
-    content_flow.add{type = 'progressbar', name = 'progressbar', style = 'electric_satisfaction_statistics_progressbar'}.style.horizontally_stretchable = true
-    content_flow.add{type = 'line'}
+    local camera_frame_2 = content_flow.add{type = 'frame', name = 'camera_frame_2', style = 'py_nice_frame'}
+    camera = camera_frame_2.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = entity.position, surface_index = entity.surface_index}
+	camera.visible = true
+    camera.entity = entity
+	camera.style.height = 180
+	camera.zoom = 0.7
 
 	content_flow.add{type = 'label', name = 'distance_bonus'}
     content_flow.add{type = 'label', name = 'lifetime_generation'}
@@ -780,6 +786,13 @@ function Aerial.update_gui(player)
     content_flow.distance_bonus.caption = {'aerial-gui.rpm-bonus', math.ceil(distance_bonus * 1000) / 10}
     
     content_flow.lifetime_generation.caption = {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation + fake_energy, 'J')}
+
+    local target = aerial_data.target
+    if target and target.valid then
+        local camera = content_flow.camera_frame_2.camera
+        camera.position = target.position
+        camera.entity = target
+    end
 
     local surface_index = entity.surface_index
     local electric_network_id = acculumator.electric_network_id
