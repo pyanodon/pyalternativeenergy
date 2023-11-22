@@ -339,9 +339,14 @@ local function clear_surfaces_to_refresh()
 end
 
 local letters = {'A', 'B', 'C', 'D'}
-Aerial.events[66] = function()
-    clear_surfaces_to_refresh()
+Aerial.events[116] = function()
+    local first = true
     for _, aerial_base_data in pairs(global.aerial_base_data) do
+        if first then
+            clear_surfaces_to_refresh()
+            first = false
+        end
+
         if not aerial_base_validity_check(aerial_base_data) then break end
         local combinator = aerial_base_data.combinator
         local control = combinator.get_or_create_control_behavior()

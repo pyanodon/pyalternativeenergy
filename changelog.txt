@@ -3,6 +3,7 @@ Version: 1.2.9
 Date: ?
   Changes:
     - fixed crash with factorissimo 2 and aerial turbines
+    - optimized aerial turbine UPS even further
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
 Date: 2023-11-21
