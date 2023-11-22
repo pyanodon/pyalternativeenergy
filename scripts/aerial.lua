@@ -161,17 +161,18 @@ local function calc_stored_energy(aerial_data)
     end
     if previous_position then
         local distance = distance(previous_position, entity.position)
-        return distance * energy_per_distance[entity.name] * distance_bonus
+        return distance * energy_per_distance[entity.name] * distance_bonus, distance_bonus
     end
-    return 0
+    return 0, distance_bonus
 end
 
 local function discharge(aerial_data)
-    local energy = calc_stored_energy(aerial_data)
+    local energy, distance_bonus = calc_stored_energy(aerial_data)
     local acculumator = aerial_data.acculumator
     acculumator.energy = acculumator.energy + energy
     aerial_data.previous_position = aerial_data.entity.position
     aerial_data.lifetime_generation = aerial_data.lifetime_generation + energy
+    return distance_bonus
 end
 
 local function calc_number_of_aerial_turbines_per_network(surface_index, electric_network_id)
@@ -437,8 +438,7 @@ end
 local pathfind_flags = {
     allow_destroy_friendly_entities = true,
     allow_paths_through_own_entities = true,
-    low_priority = true,
-    prefer_straight_paths = true
+    low_priority = true
 }
 
 local function find_target(aerial_data)
@@ -456,7 +456,15 @@ local function find_target(aerial_data)
         previous_target = nil
     end
 
-    discharge(aerial_data)
+    local distance_bonus = discharge(aerial_data)
+    local last_20 = aerial_data.last_20
+    if last_20 then
+        table.insert(last_20, 1, distance_bonus)
+        last_20[21] = nil
+    else
+        aerial_data.last_20 = {distance_bonus}
+    end
+    game.print(serpent.block(aerial_data.last_20))
 
     local id = global.electric_network_id_override
         or (previous_target and previous_target.electric_network_id)
@@ -769,7 +777,7 @@ function Aerial.update_gui(player)
         return
     end
 
-    local fake_energy = calc_stored_energy(aerial_data)
+    local fake_energy, distance_bonus = calc_stored_energy(aerial_data)
     local stored_energy = acculumator.energy + fake_energy
     local max_energy = acculumator.prototype.electric_energy_source_prototype.buffer_capacity
     stored_energy = math.min(stored_energy, max_energy)
@@ -777,14 +785,21 @@ function Aerial.update_gui(player)
     content_flow.progressbar.value = progress > 0.99 and 1 or progress
     content_flow.progressbar.caption = {'sut-gui.energy', FUN.format_energy(stored_energy, 'J'), FUN.format_energy(max_energy, 'J')}
 
-    local starting_position = aerial_data.starting_position
-    local distance_bonus = 1
-    if starting_position then
-        local distance = distance(starting_position, entity.position)
-        distance_bonus = 2 - (1 / (distance ^ 0.5 / 30 + 1))
+    local last_20 = aerial_data.last_20
+    distance_bonus = math.ceil(distance_bonus * 1000) / 10
+    if last_20 then
+        distance_bonus = tostring(distance_bonus)
+        if not distance_bonus:find('%.') then
+            distance_bonus = distance_bonus .. '.0'
+        end
+        local sum = 0
+        for _, n in pairs(last_20) do sum = sum + n end
+        local average = math.ceil(sum / #last_20 * 1000) / 10
+        content_flow.distance_bonus.caption = {'aerial-gui.rpm-bonus-avg', distance_bonus, #last_20, average}
+    else
+        content_flow.distance_bonus.caption = {'aerial-gui.rpm-bonus', distance_bonus}
     end
-    content_flow.distance_bonus.caption = {'aerial-gui.rpm-bonus', math.ceil(distance_bonus * 1000) / 10}
-    
+
     content_flow.lifetime_generation.caption = {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation + fake_energy, 'J')}
 
     local target = aerial_data.target
