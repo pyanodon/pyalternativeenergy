@@ -464,7 +464,6 @@ local function find_target(aerial_data)
     else
         aerial_data.last_20 = {distance_bonus}
     end
-    game.print(serpent.block(aerial_data.last_20))
 
     local id = global.electric_network_id_override
         or (previous_target and previous_target.electric_network_id)
