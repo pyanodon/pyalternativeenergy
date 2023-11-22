@@ -65,16 +65,28 @@ end
 
 local function refresh_electric_networks(surface)
     local networks = {}
-    for _, pole in pairs(surface.find_entities_filtered{type = 'electric-pole'}) do
-        local id = pole.electric_network_id
-        if id then
-            local all_poles = networks[id]
-            if not all_poles then
-                networks[id] = {pole}
-            else
-                all_poles[#all_poles + 1] = pole
+    local invalid = false
+    for _, pole in pairs(global.all_electric_poles[surface.index] or {}) do
+        if pole.valid then
+            local id = pole.electric_network_id
+            if id then
+                local all_poles = networks[id]
+                if not all_poles then
+                    networks[id] = {pole}
+                else
+                    all_poles[#all_poles + 1] = pole
+                end
+            end
+        else invalid = true end        
+    end
+    if invalid then
+        local all_electric_poles = {}
+        for _, pole in pairs(global.all_electric_poles[surface.index]) do
+            if pole.valid then
+                all_electric_poles[pole.unit_number] = pole
             end
         end
+        global.all_electric_poles[surface.index] = all_electric_poles
     end
     global.electric_networks[surface.index] = networks
     global.existing_turbines_invalid = true
@@ -83,6 +95,12 @@ end
 Aerial.events.on_init = function()
     global.aerial_data = global.aerial_data or {}
     global.aerial_base_data = global.aerial_base_data or {}
+    if not global.all_electric_poles then
+        global.all_electric_poles = {}
+        for _, surface in pairs(game.surfaces) do
+            global.all_electric_poles[surface.index] = surface.find_entities_filtered{type = 'electric-pole'}
+        end
+    end
     if not global.electric_networks then
         global.electric_networks = {}
         for _, surface in pairs(game.surfaces) do
@@ -443,6 +461,7 @@ local function find_target(aerial_data)
         target = all_poles[math.random(#all_poles)]
         if not target.valid then
             refresh_electric_networks(surface)
+            global.surfaces_to_refresh[surface.index] = nil
             all_poles = (global.electric_networks[surface.index] or {})[id]
             if not all_poles then draw_error_sprite(entity); return end
             target = nil
@@ -469,6 +488,7 @@ Aerial.events.on_built = function(event)
     local entity = event.created_entity or event.entity
     if not entity.valid or not entity.unit_number then return end
     local name = entity.name
+    local surface_index = entity.surface_index
     if all_turbines[name] then
         local unit_number = entity.unit_number
         local acculumator = create_interface(entity)
@@ -491,7 +511,6 @@ Aerial.events.on_built = function(event)
         if not acculumator.is_connected_to_electric_network() then
             fail_msg = {'aerial-gui.must-be-placed-in-electric-network'}
         else
-            local surface_index = entity.surface_index
             local electric_network_id = acculumator.electric_network_id
             local aerial_turbines = calc_number_of_aerial_turbines_per_network(surface_index, electric_network_id)
             local electric_poles = calc_number_of_electric_poles_per_network(surface_index, electric_network_id)
@@ -511,10 +530,10 @@ Aerial.events.on_built = function(event)
         acculumator.destructible = false
         acculumator.operable = false
 
-        local per_surface = global.existing_turbines[entity.surface_index]
+        local per_surface = global.existing_turbines[surface_index]
         if not per_surface then
             per_surface = {}
-            global.existing_turbines[entity.surface_index] = per_surface
+            global.existing_turbines[surface_index] = per_surface
         end
         local existing_turbines = per_surface[acculumator.electric_network_id]
         if not existing_turbines then
@@ -525,7 +544,16 @@ Aerial.events.on_built = function(event)
 
         find_target(aerial_data)
     elseif entity.type == 'electric-pole' or entity.type == 'power-switch' then
+        if entity.type == 'electric-pole' then
+            local all_electric_poles = global.all_electric_poles[surface_index]
+            if not all_electric_poles then
+                all_electric_poles = {}
+                global.all_electric_poles[surface_index] = all_electric_poles
+            end
+            all_electric_poles[entity.unit_number] = entity
+        end
         global.surfaces_to_refresh[entity.surface_index] = true
+        global.existing_turbines_invalid = true
     elseif name == 'aerial-base-combinator' then
         entity.operable = false
         local animation = entity.surface.create_entity{
@@ -559,6 +587,7 @@ Aerial.events.on_destroyed = function(event)
     local entity = event.entity
     if not entity.valid or not entity.unit_number then return end
     local aerial_data = global.aerial_data[entity.unit_number]
+    local surface_index = entity.surface_index
     if aerial_data then
         local acculumator = aerial_data.acculumator
         local electric_network_id
@@ -583,7 +612,7 @@ Aerial.events.on_destroyed = function(event)
         stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
 
         if electric_network_id then
-            local per_surface = global.existing_turbines[entity.surface_index]
+            local per_surface = global.existing_turbines[surface_index]
             if not per_surface then return end
             local existing_turbines = per_surface[electric_network_id]
             if not existing_turbines then return end
@@ -591,7 +620,13 @@ Aerial.events.on_destroyed = function(event)
             existing_turbines[name] = (existing_turbines[name] or 0) - 1
         end
     elseif entity.type == 'electric-pole' then
-        global.surfaces_to_refresh[entity.surface.index] = true
+        local all_electric_poles = global.all_electric_poles[surface_index]
+        if not all_electric_poles then
+            all_electric_poles = {}
+            global.all_electric_poles[surface_index] = all_electric_poles
+        end
+        all_electric_poles[entity.unit_number] = entity
+        global.surfaces_to_refresh[surface_index] = true
         global.existing_turbines_invalid = true
     elseif entity.name == 'aerial-base-combinator' then
         local unit_number = entity.unit_number
@@ -676,6 +711,7 @@ Aerial.events.on_open_gui = function(event)
     if not exists_and_valid(entity) or not entity.unit_number then return end
     if entity.type == 'power-switch' or entity.type == 'electric-pole' then
         global.surfaces_to_refresh[entity.surface.index] = true
+        global.existing_turbines_invalid = true
         return
     end
     local aerial_data = global.aerial_data[entity.unit_number]
