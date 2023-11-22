@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.8
+Date: ?
+  Changes:
+    - optimized aerial turbines on maps with an excessive # of entities (such as dangoreus)
+---------------------------------------------------------------------------------------------------
 Version: 1.2.7
 Date: 2023-11-21
   Bugfixes:
