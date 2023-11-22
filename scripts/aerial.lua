@@ -517,7 +517,7 @@ Aerial.events.on_built = function(event)
         else
             local aerial_turbines = calc_number_of_aerial_turbines_per_network(surface_index, electric_network_id)
             local electric_poles = calc_number_of_electric_poles_per_network(surface_index, electric_network_id)
-            if aerial_turbines * 3 > electric_poles then
+            if aerial_turbines * 3 > electric_poles - 3 then
                 fail_msg = {'aerial-gui.airspace-too-crowded'}
             end
         end
