@@ -8,6 +8,7 @@ Date: ?
     - updated aerial turbine GUI to include a 2ed camera foucused on the destination pole
     - updated Russian translation
     - added greentext to aerial turbine gui showing the 20-trip efficency average for your turbine setup
+    - added Δt of arrival to aerial turbine GUI
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
 Date: 2023-11-21

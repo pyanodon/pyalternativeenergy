@@ -58,6 +58,13 @@ local energy_per_distance = {
     ['aerial-blimp-mk04'] = 18000000 * 1.2,
 }
 
+local travel_speeds = {
+    ['aerial-blimp-mk01'] = 1.2,
+    ['aerial-blimp-mk02'] = 2.4,
+    ['aerial-blimp-mk03'] = 3.6,
+    ['aerial-blimp-mk04'] = 4.8,
+}
+
 local all_turbines = {}
 for name, _ in pairs(energy_per_distance) do
     all_turbines[name] = true
@@ -713,6 +720,7 @@ local function build_aerial_gui(player, aerial_data)
 	content_flow.add{type = 'label', name = 'distance_bonus'}
     content_flow.add{type = 'label', name = 'lifetime_generation'}
     content_flow.add{type = 'label', name = 'airspace_traffic_flow'}
+    content_flow.add{type = 'label', name = 'arrival'}
     
     Aerial.update_gui(player)
 end
@@ -806,6 +814,13 @@ function Aerial.update_gui(player)
         local camera = content_flow.camera_frame_2.camera
         camera.position = target.position
         camera.entity = target
+
+        local distance = math.max(0, distance(target.position, entity.position) - 5)
+        local seconds = distance / travel_speeds[entity.name]
+        local minutes = math.floor(seconds / 60)
+        seconds = tostring(math.floor(seconds % 60))
+        if #seconds == 1 then seconds = '0' .. seconds end
+        content_flow.arrival.caption = {'aerial-gui.eta', minutes, seconds}
     end
 
     local surface_index = entity.surface_index
