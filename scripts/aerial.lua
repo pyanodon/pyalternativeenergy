@@ -475,7 +475,7 @@ local function find_target(aerial_data)
     local position = target.position
     entity.set_command{
         type = defines.command.go_to_location,
-        destination = {target.position.x - 4, target.position.y - 5},
+        destination = {target.position.x, target.position.y - 5},
         distraction = defines.distraction.none,
         radius = 2,
         pathfind_flags = pathfind_flags

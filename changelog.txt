@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
-Date: ?
+Date: 2023-11-21
   Changes:
     - optimized aerial turbines on maps with an excessive # of entities (such as dangoreus)
+    - fixed that aerial bases didn't work with small/medium power poles
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
 Date: 2023-11-21
