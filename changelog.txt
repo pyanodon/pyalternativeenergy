@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
-Date: ?
+Date: 2023-11-23
   Changes:
     - fixed crash with factorissimo 2 and aerial turbines
     - optimized aerial turbine UPS even further
@@ -9,6 +9,7 @@ Date: ?
     - updated Russian translation
     - added greentext to aerial turbine gui showing the 20-trip efficency average for your turbine setup
     - added Δt of arrival to aerial turbine GUI
+    - added previous tier of module to module recipes
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
 Date: 2023-11-21
