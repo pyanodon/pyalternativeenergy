@@ -162,6 +162,7 @@ RECIPE{
     enabled = false,
     ingredients =
     {
+        {"speed-module", 1},
         {"utility-box-mk03", 1},
         {"controler-mk03", 1},
         {"electronics-mk03", 2}
@@ -176,6 +177,7 @@ RECIPE{
     enabled = false,
     ingredients =
     {
+        {"speed-module-2", 1},
         {"utility-box-mk04", 1},
         {"controler-mk04", 1},
         {"electronics-mk04", 2},
@@ -205,6 +207,7 @@ RECIPE{
     enabled = false,
     ingredients =
     {
+        {"effectivity-module", 1},
         {"utility-box-mk03", 1},
         {"controler-mk03", 1},
         {"electronics-mk03", 2}
@@ -219,6 +222,7 @@ RECIPE{
     enabled = false,
     ingredients =
     {
+        {"effectivity-module-2", 1},
         {"utility-box-mk04", 1},
         {"controler-mk04", 1},
         {"electronics-mk04", 2},
@@ -248,6 +252,7 @@ RECIPE{
     enabled = false,
     ingredients =
     {
+        {"productivity-module", 1},
         {"utility-box-mk03", 1},
         {"controler-mk03", 1},
         {"electronics-mk03", 2}
@@ -262,6 +267,7 @@ RECIPE{
     enabled = false,
     ingredients =
     {
+        {"productivity-module-2", 1},
         {"utility-box-mk04", 1},
         {"controler-mk04", 1},
         {"electronics-mk04", 2},
