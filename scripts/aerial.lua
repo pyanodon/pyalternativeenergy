@@ -72,7 +72,6 @@ end
 
 local function refresh_electric_networks(surface)
     local networks = {}
-    local invalid = false
     for _, pole in pairs(global.all_electric_poles[surface.index] or {}) do
         if pole.valid then
             local id = pole.electric_network_id
@@ -84,16 +83,17 @@ local function refresh_electric_networks(surface)
                     all_poles[#all_poles + 1] = pole
                 end
             end
-        else invalid = true end        
-    end
-    if invalid then
-        local all_electric_poles = {}
-        for _, pole in pairs(global.all_electric_poles[surface.index]) do
-            if pole.valid then
-                all_electric_poles[pole.unit_number] = pole
+        else
+            local all_electric_poles = {}
+            for _, pole in pairs(global.all_electric_poles[surface.index]) do
+                if pole.valid then
+                    all_electric_poles[pole.unit_number] = pole
+                end
             end
-        end
-        global.all_electric_poles[surface.index] = all_electric_poles
+            global.all_electric_poles[surface.index] = all_electric_poles
+            refresh_electric_networks(surface)
+            return
+        end        
     end
     global.electric_networks[surface.index] = networks
     global.existing_turbines_invalid = true
@@ -198,6 +198,10 @@ local function calc_number_of_aerial_turbines_per_network(surface_index, electri
 end
 
 local function calc_number_of_electric_poles_per_network(surface_index, electric_network_id)
+    if global.surfaces_to_refresh[surface_index] then
+        refresh_electric_networks(game.get_surface(surface_index))
+        global.surfaces_to_refresh[surface_index] = nil
+    end
     local per_surface = global.electric_networks[surface_index]
     if not per_surface then return 0 end
     local all_poles = per_surface[electric_network_id]
@@ -440,6 +444,8 @@ local function draw_error_sprite(entity)
         surface = entity.surface,
         render_layer = 'air-entity-info-icon'
     }
+    game.print{'aerial-gui.stranded', entity.name, entity.position.x, entity.position.y}
+    Aerial.events.on_destroyed{entity = entity}
 end
 
 local pathfind_flags = {
@@ -449,8 +455,6 @@ local pathfind_flags = {
 }
 
 local function find_target(aerial_data)
-    clear_surfaces_to_refresh()
-
     local acculumator = aerial_data.acculumator
     if not acculumator.valid then
         acculumator = create_interface(entity)
@@ -512,6 +516,7 @@ Aerial.events.on_built = function(event)
     local name = entity.name
     local surface_index = entity.surface_index
     if all_turbines[name] then
+        clear_surfaces_to_refresh()
         local unit_number = entity.unit_number
         local acculumator = create_interface(entity)
 
@@ -520,14 +525,6 @@ Aerial.events.on_built = function(event)
             local stack = event.stack
             tags = stack and stack.tags or {}
         end
-
-        local aerial_data = {
-            acculumator = acculumator,
-            entity = entity,
-            zoop = true,
-            lifetime_generation = tags.lifetime_generation or 0
-        }
-        global.aerial_data[unit_number] = aerial_data
 
         local fail_msg = false
         local electric_network_id = global.electric_network_id_override or acculumator.electric_network_id
@@ -540,13 +537,19 @@ Aerial.events.on_built = function(event)
                 fail_msg = {'aerial-gui.airspace-too-crowded'}
             end
         end
-
         if fail_msg then
             acculumator.destroy()
             cancel_creation(entity, event.player_index, fail_msg)
-            global.aerial_data[unit_number] = nil
             return
         end
+
+        local aerial_data = {
+            acculumator = acculumator,
+            entity = entity,
+            zoop = true,
+            lifetime_generation = tags.lifetime_generation or 0
+        }
+        global.aerial_data[unit_number] = aerial_data
 
         entity.destructible = false
         acculumator.destructible = false
@@ -627,12 +630,6 @@ Aerial.events.on_destroyed = function(event)
             end
         end
 
-        local buffer = event.buffer
-        if not buffer then return end
-        local stack = buffer[1]
-        stack.tags = {lifetime_generation = aerial_data.lifetime_generation}
-        stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
-
         if electric_network_id then
             local per_surface = global.existing_turbines[surface_index]
             if not per_surface then return end
@@ -641,6 +638,12 @@ Aerial.events.on_destroyed = function(event)
             local name = entity.name
             existing_turbines[name] = (existing_turbines[name] or 0) - 1
         end
+
+        local buffer = event.buffer
+        if not buffer then return end
+        local stack = buffer[1]
+        stack.tags = {lifetime_generation = aerial_data.lifetime_generation}
+        stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
     elseif entity.type == 'electric-pole' then
         local all_electric_poles = global.all_electric_poles[surface_index]
         if not all_electric_poles then
@@ -668,6 +671,7 @@ end
 Aerial.events.on_ai_command_completed = function(event)
     local aerial_data = global.aerial_data[event.unit_number]
     if not aerial_data then return end
+    clear_surfaces_to_refresh()
     find_target(aerial_data)
 end
 
@@ -776,12 +780,11 @@ function Aerial.update_gui(player)
     
     local unit_number = main_frame.tags.unit_number
     local aerial_data = global.aerial_data[unit_number]
-    if not aerial_data then return end
+    if not aerial_data then main_frame.destroy(); return end
     local entity = aerial_data.entity
     local acculumator = aerial_data.acculumator
     if not entity.valid or not acculumator.valid then
-        main_frame.destroy()
-        return
+        main_frame.destroy(); return
     end
 
     local fake_energy, distance_bonus = calc_stored_energy(aerial_data)
