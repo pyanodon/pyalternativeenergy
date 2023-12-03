@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - fixed some one-off errors where aerial traffic flow % was slightly off
     - added an error message in chat if an aerial turbine becomes invalid for whatever reason
+    - fixed issue where breaking an aerial base did not return contained aerial turbines
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
 Date: 2023-11-23

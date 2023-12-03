@@ -262,6 +262,13 @@ local function aerial_base_validity_check(aerial_base_data)
             animation.destroy()
         end
         if exists_and_valid(chest) then
+            local inventory = chest.get_inventory(defines.inventory.chest)
+            for i = 1, #inventory do
+                local stack = inventory[i]
+                if stack.valid_for_read then
+                    chest.surface.spill_item_stack(chest.position, stack, true, chest.force_index, false)
+                end
+            end
             chest.destroy()
         end
         global.aerial_base_data[aerial_base_data.unit_number] = nil
@@ -657,13 +664,30 @@ Aerial.events.on_destroyed = function(event)
         local unit_number = entity.unit_number
         local aerial_base_data = global.aerial_base_data[unit_number]
         if not aerial_base_data then return end
-        for _, entity in pairs{
-            aerial_base_data.combinator,
-            aerial_base_data.animation,
-            aerial_base_data.chest
-        } do
-            if exists_and_valid(entity) then entity.destroy() end
+        local chest = aerial_base_data.chest
+        if exists_and_valid(chest) then
+            local inventory = chest.get_inventory(defines.inventory.chest)
+            local player = event.player_index and game.get_player(event.player_index)
+            for i = 1, #inventory do
+                local stack = inventory[i]
+                if stack.valid_for_read then
+                    if player then
+                        local inserted = player.insert(stack)
+                        if inserted == stack.count then
+                            stack.clear()
+                        else
+                            stack.count = stack.count - inserted
+                        end
+                    end
+                    if stack.valid_for_read then
+                        chest.surface.spill_item_stack(chest.position, stack, true, chest.force_index, false)
+                    end
+                end
+            end
+            chest.destroy()
         end
+        if exists_and_valid(aerial_base_data.combinator) then aerial_base_data.combinator.destroy() end
+        if exists_and_valid(aerial_base_data.animation) then aerial_base_data.animation.destroy() end
         global.aerial_base_data[unit_number] = nil
     end
 end
