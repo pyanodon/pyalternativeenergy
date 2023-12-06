@@ -5,7 +5,6 @@ table.insert(data.raw["mining-drill"]["harvester"].resource_categories, "mova")
 TECHNOLOGY("electric-energy-distribution-2"):remove_pack("py-science-pack-3")--:add_pack("py-science-pack-2")
 
 TECHNOLOGY("ethanol"):remove_pack("chemical-science-pack")
-TECHNOLOGY("mega-farm"):remove_pack("utility-science-pack"):remove_pack("military-science-pack")
 
 TECHNOLOGY("semiconductor-doping-mk02"):add_pack("py-science-pack-2")
 TECHNOLOGY("helium-processing"):add_pack("py-science-pack-2")
@@ -42,9 +41,6 @@ TECHNOLOGY("yotoi-mk02"):add_pack("military-science-pack")
 TECHNOLOGY("biofluid-mk02"):add_pack("military-science-pack")
 
 
-RECIPE("mega-farm"):remove_ingredient("intelligent-unit"):replace_ingredient("superconductor-servomechanims", "small-parts-03")
-RECIPE("mega-farm"):remove_ingredient("blanket"):replace_ingredient("divertor", "ns-material"):remove_ingredient("harmonic-absorber")
-RECIPE("harvester"):replace_ingredient("botanical-nursery-mk03", "botanical-nursery-mk02"):replace_ingredient("soil-extractormk03", "soil-extractormk02")
 RECIPE("vonix-mk03r"):replace_ingredient("chelator", "numal-ink")
 RECIPE("scrondrix-mk04r"):replace_ingredient("gta", "numal-ink")
 RECIPE("zipir-mk04r"):replace_ingredient("gta", "numal-ink")
