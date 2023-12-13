@@ -24,6 +24,8 @@ FYI:
 
 KING TODO:
 
+ - Look into Heavy water seperation and fix sulfur seperation
+
  - setup molten salt loops on all the power plants
       - mdh at 3000 degrees
  - convert all non electric buildings to heat based energy source
