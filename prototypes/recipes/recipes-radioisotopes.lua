@@ -181,7 +181,7 @@ RECIPE {
         {type = "item", name = "mox-fuel-cell", amount = 2},
     },
     main_product = "mox-fuel-cell",
-}:add_unlock("nuclear-power")
+}:add_unlock("uranium-processing")
 
 RECIPE {
     type = "recipe",
@@ -199,7 +199,7 @@ RECIPE {
     main_product = "plutonium-oxide",
     subgroup = "py-nuclear",
     order = "t",
-}:add_unlock("nuclear-power")
+}:add_unlock("uranium-processing")
 
 
 RECIPE {
