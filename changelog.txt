@@ -6,6 +6,7 @@ Date: ?
     - added an error message in chat if an aerial turbine becomes invalid for whatever reason
     - fixed issue where breaking an aerial base did not return contained aerial turbines
     - changed the steel furnace energy source to fluid fuel. renamed to gas furnace
+    - updated chinese translation (翻译：aotix，基于咸鱼拓展而来。)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
 Date: 2023-11-23
