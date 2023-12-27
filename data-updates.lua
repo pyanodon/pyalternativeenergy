@@ -242,7 +242,7 @@ local recipes_list =
   "dodecanoic-acid",
   "dodecylamine",
   "dsnc-cell",
-  "electronic-circuit-2"
+  "electronic-circuit-2",
   "electronics-mk01",
   "electronics-mk02",
   "electronics-mk03",
