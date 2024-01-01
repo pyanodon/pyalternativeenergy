@@ -421,16 +421,16 @@ RECIPE('personal-fusion-cell'):set_fields {
 		{ 'small-parts-03', 10},
 		{ 'kondo-processor', 1},
 		{ 'medium-electric-pole', 1 },
-		{ type = 'fluid', name ='deuterium', amount=150 },
-		{ type = 'fluid', name ='tritium', amount=200 },
+		{ type = 'fluid', name ='deuterium', amount=100 },
+		{ type = 'fluid', name ='tritium', amount=100 },
 	},
 	category = 'crafting-with-fluid'
 }
 RECIPE('personal-fusion-cell-refuel'):set_fields {
 	ingredients = {
 		{'personal-fusion-cell-used', 1},
-		{ type = 'fluid', name ='deuterium', amount=150 },
-		{ type = 'fluid', name ='tritium', amount=200 },
+		{ type = 'fluid', name ='deuterium', amount=100 },
+		{ type = 'fluid', name ='tritium', amount=100 },
 	},
 	category = 'crafting-with-fluid'
 }
