@@ -8,6 +8,7 @@ Date: ?
     - changed the steel furnace energy source to fluid fuel. renamed to gas furnace
     - updated chinese translation (翻译：aotix，基于咸鱼拓展而来。)
     - reduced tritium and deuterium requirements for crafting personal fusion reactors
+    - added fish mk3 to fish turbine mk3 recipe
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
 Date: 2023-11-23

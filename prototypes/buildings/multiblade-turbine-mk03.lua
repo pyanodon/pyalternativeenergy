@@ -12,6 +12,7 @@ RECIPE {
         {"anemometer-mk03", 1},
         {"vane-mk03", 1},
         {"tower-mk03", 1},
+        {"fish-mk03", 5}
     },
     results = {
         {"multiblade-turbine-mk03", 1}
