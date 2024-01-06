@@ -69,7 +69,7 @@ RECIPE {
     results = {},
     subgroup = "py-nuclear",
     order = "g"
-}:add_unlock("nuclear-power-mk03")
+}:add_unlock("nuclear-power")
 
 RECIPE {
     type = "recipe",

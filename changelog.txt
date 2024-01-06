@@ -9,6 +9,7 @@ Date: ?
     - updated chinese translation (翻译：aotix，基于咸鱼拓展而来。)
     - reduced tritium and deuterium requirements for crafting personal fusion reactors
     - added fish mk3 to fish turbine mk3 recipe
+    - fixed that neutron absorbtion was unlocked at nuclear mk3. moved down to nuclear mk1
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
 Date: 2023-11-23
