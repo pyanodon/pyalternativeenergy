@@ -10,6 +10,7 @@ Date: ?
     - reduced tritium and deuterium requirements for crafting personal fusion reactors
     - added fish mk3 to fish turbine mk3 recipe
     - fixed that neutron absorbtion was unlocked at nuclear mk3. moved down to nuclear mk1
+    - added new signal outputs to the aerial turbine base showing the total energy stored and max energy capacity
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
 Date: 2023-11-23
