@@ -452,6 +452,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-u-concentrate-3", amount = 50},
         {type = "fluid", name = "purex-raffinate", amount = 20},
+        {type = "item", name = "tbp", amount = 1, probability = 0.5},
     },
     main_product = "purex-u-concentrate-3",
     subgroup = "py-nuclear-waste",
@@ -694,7 +695,7 @@ RECIPE {
         {type = "fluid", name = "sb-phosphate-2", amount = 200},
         {type = "item", name = "sb-oxide", amount = 5},
         {type = "fluid", name = "phosphoric-acid", amount = 250},
-        {type = "item", name = "ammonium-mixture", amount = 10},
+        {type = "item", name = "ammonium-mixture", amount = 3},
       },
     results = {
         {type = "fluid", name = "plutonium-peroxide", amount = 100},
@@ -713,7 +714,7 @@ RECIPE {
     ingredients =
       {
         {type = "fluid", name = "sb-phosphate-3", amount = 200},
-        {type = "item", name = "oxalic-acid", amount = 20},
+        {type = "item", name = "oxalic-acid", amount = 8},
       },
     results = {
         {type = "fluid", name = "plutonium-peroxide", amount = 100},
