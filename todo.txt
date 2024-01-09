@@ -48,3 +48,6 @@ add yellow cake and hf to make uf6
 
 POST RELEASE ADDITIONS:
 geothermal from spent bitumen seeps
+
+
+12847 - nuke tech

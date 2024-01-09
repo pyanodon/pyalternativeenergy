@@ -8,7 +8,7 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "sulfuric-acid", amount = 100},
         {type = "item", name = "powdered-phosphate-rock", amount = 5},
-        {type = "item", name = "purified-quartz", amount = 5},
+        {type = "fluid", name = "prepared-quartz", amount = 50},
     },
     results = {
         {type = "fluid", name = "hydrofluoric-acid", amount = 150}
