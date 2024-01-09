@@ -209,7 +209,8 @@ RECIPE("space-science-pack"):replace_ingredient("yellow-cake", "pu-238")
 RECIPE("casting-lead-container"):add_ingredient{"sb-oxide", 4}
 RECIPE("hotair-casting-lead-container"):add_ingredient{"sb-oxide", 4}
 
-FUN.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 15)
+--rewrite the u pulp recipes to use way more uranium
+FUN.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 5)
 RECIPE("u-rich-pulp"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
 
 RECIPE {
