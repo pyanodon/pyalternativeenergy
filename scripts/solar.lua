@@ -9,7 +9,7 @@ Solar.animated_solarpanels = {
 
 Solar.events.on_init = function()
 	global.solarpanels = global.solarpanels or {}
-	global.unsynced_solarpanels = global.solarpanels or {}
+	global.unsynced_solarpanels = global.unsynced_solarpanels or {}
 end
 
 Solar.sync_solarpanels = function()
