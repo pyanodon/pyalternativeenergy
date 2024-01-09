@@ -3,6 +3,14 @@ Version: 1.2.11
 Date: ?
   Changes:
     - fixed a crash with solar (https://github.com/pyanodon/pyalternativeenergy/issues/38)
+  Nuclear:
+    - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
+    - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
+    - polonium-210 recipe moved from nuclear mk03 -> nuclear mk04
+    - u234 -> u235 recipe moved from nuclear mk04 -> nuclear mk03
+    - increased crafting time of pa-233-seperation from 5s -> 50s in order to match other centrifudge recipes
+    - replaced purified-quartz with prepared-quartz in the hydrofluoric-acid recipe
+    - nerfed yellowcake output from 15 -> 5
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2024-1-8

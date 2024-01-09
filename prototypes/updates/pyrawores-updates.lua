@@ -260,7 +260,7 @@ RECIPE {
     results = {
         {"uranium-fuel-cell-mk03", 1}
     },
-  }:add_unlock('nuclear-power-mk04')--returns 2
+  }:add_unlock('nuclear-power-mk03')--returns 2
 
   RECIPE {
     type = "recipe",

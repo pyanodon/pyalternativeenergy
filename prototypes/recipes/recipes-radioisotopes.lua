@@ -63,7 +63,7 @@ RECIPE {
     -- main_product = "u-233",
     subgroup = "py-nuclear",
     order = "b"
-}:add_unlock("nuclear-power-mk04")
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -120,7 +120,7 @@ RECIPE {
     main_product = "po-210",
     subgroup = "py-nuclear",
     order = "b"
-}:add_unlock("nuclear-power-mk02")
+}:add_unlock("nuclear-power-mk04")
 
 RECIPE {
     type = "recipe",
@@ -138,7 +138,7 @@ RECIPE {
     results = {
         {type = "item", name = "u-234", amount = 20}
     },
-  }:add_unlock('nuclear-power-mk04')
+  }:add_unlock('nuclear-power-mk03')
 
   RECIPE {
     type = "recipe",
