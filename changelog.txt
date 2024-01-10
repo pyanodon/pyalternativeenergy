@@ -17,7 +17,7 @@ Date: ?
     - nerfed uranium pulp 2. input of uranium pulp 1 increased from 100 -> 150
     - nerfed uranium pulp 3. input of uranium pulp 2 increased from 100 -> 150
     - fixed that used control rods had no uses. added a recycling recipe.
-    - reduced metallic glass output from purex-waste-vitrification 5 -> 1. reduced recipe time from 0.5s -> 10s
+    - reduced metallic glass output from purex-waste-vitrification 5 -> 1. increased recipe time from 0.5s -> 10s (https://github.com/pyanodon/pybugreports/issues/115)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2024-1-8
