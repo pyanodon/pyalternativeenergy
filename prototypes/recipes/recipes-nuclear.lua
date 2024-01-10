@@ -319,7 +319,7 @@ RECIPE {
     name = "purex-waste-vitrification",
     category = "nano",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-waste-3", amount = 200},
         {type = 'item', name = 'titanium-plate', amount = 2},
@@ -331,7 +331,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-5", amount = 40},
         {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
         {type = "item", name = "molybdenum-ore", amount = 5},
-        {type = "item", name = "metallic-glass", amount = 5},
+        {type = "item", name = "metallic-glass", amount = 1},
     },
     main_product = "metallic-glass",
     subgroup = "py-nuclear-waste",
