@@ -287,7 +287,7 @@ data.raw.furnace['steel-furnace'].energy_source.fluid_usage_per_tick = 2
 data.raw.furnace['steel-furnace'].energy_source.fluid_box = {
 	base_area = 1,
 	height = 1,
-	base_level = -1,
+	base_level = 0,
 	pipe_connections = {
 		{type = 'input-output', position = {0.5, 1.5}},
 		{type = 'input-output', position = {0.5, -1.5}}
