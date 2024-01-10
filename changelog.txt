@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - fixed a crash with solar (https://github.com/pyanodon/pyalternativeenergy/issues/38)
     - fixed that the fluidboxes from the new gas furnace did not flow directly into standard pipes (https://github.com/pyanodon/pybugreports/issues/368)
+    - gas furnace energy usage increased from 2MW -> 4MW
   Nuclear:
     - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
     - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
