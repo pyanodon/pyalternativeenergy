@@ -14,6 +14,7 @@ Date: ?
     - nerfed uranium pulp 1. input of powder uranium increased from 1 -> 10
     - nerfed uranium pulp 2. input of uranium pulp 1 increased from 100 -> 150
     - nerfed uranium pulp 3. input of uranium pulp 2 increased from 100 -> 150
+    - fixed that used control rods had no uses. added a recycling recipe.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2024-1-8

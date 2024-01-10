@@ -56,6 +56,25 @@ RECIPE {
 }:add_unlock("nuclear-power")
 
 RECIPE {
+    type = 'recipe',
+    name = 'used-control-rod-to-iron-oxide',
+    category = 'electrolyzer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'used-control-rod', amount = 1},
+        {type = 'fluid', name = 'hot-molten-salt', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'iron-oxide', amount = 1},
+        {type = 'item', name = 'control-rod', amount = 1, probability = 0.5},
+        {type = 'fluid', name = 'neutron', amount = 50},
+        {type = 'fluid', name = 'molten-salt', amount = 50},
+    },
+    main_product = 'iron-oxide'
+}:add_unlock('nuclear-power')
+
+RECIPE {
     type = "recipe",
     name = "neutron-absorbston",
     category = "neutron-absorber",
