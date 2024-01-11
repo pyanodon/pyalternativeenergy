@@ -229,3 +229,5 @@ RECIPE("quantum-battery-recharge"):remove_unlock('railway-mk04'):add_unlock("bat
 data.raw.recipe["quantum-battery"].results = {{'used-quantum-battery', 1}}
 
 RECIPE('random-science-pack'):remove_unlock('quantum').hidden = true
+
+RECIPE('pa-diamond'):remove_unlock('nucleo-mk02'):add_unlock('nucleo-mk03').energy_required = data.raw.recipe['pa-diamond'].energy_required * 2
