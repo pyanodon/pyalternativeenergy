@@ -194,10 +194,82 @@ RECIPE("40-u-powder"):remove_unlock("uranium-mk02"):set_fields{hidden = true, en
 RECIPE("70-u-powder"):remove_unlock("uranium-mk03"):set_fields{hidden = true, enabled = false}
 --RECIPE("u-pulp-01"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "powdered-u", amount = 5}):replace_ingredient('sulfuric-acid','hydrogen-peroxide'):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 --TODO:look into uranium issues with pyro changes
-RECIPE("u-pulp-01"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
+
+RECIPE {
+  type = "recipe",
+  name = "u-pulp-01",
+  category = "leaching",
+  enabled = false,
+  energy_required = 4,
+  ingredients = {
+      {type = "item", name = "powdered-u", amount = 10},
+      {type = "fluid", name = "steam", amount = 300},
+      {type = "fluid", name = "sulfuric-acid", amount = 50}
+  },
+  results = {
+      {type = "fluid", name = "u-pulp-01", amount = 100}
+  },
+  main_product = "u-pulp-01",
+  subgroup = "py-rawores-uranium",
+  order = "q-2"
+}:remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
+
+RECIPE {
+  type = "recipe",
+  name = "u-pulp-02",
+  category = "leaching", --pyfe agitator
+  enabled = false,
+  energy_required = 4,
+  ingredients = {
+      {type = "fluid", name = "u-pulp-01", amount = 150},
+      {type = "fluid", name = "steam", amount = 300},
+  },
+  results = {
+      {type = "fluid", name = "u-pulp-02", amount = 100},
+  },
+  main_product = "u-pulp-02",
+  subgroup = "py-rawores-uranium",
+  order = "q-2"
+}:remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+
+RECIPE {
+  type = "recipe",
+  name = "u-pulp-03",
+  category = "leaching",
+  enabled = false,
+  energy_required = 4,
+  ingredients = {
+      {type = "fluid", name = "u-pulp-02", amount = 150},
+      {type = "fluid", name = "sulfuric-acid", amount = 100},
+  },
+  results = {
+      {type = "fluid", name = "u-pulp-03", amount = 100},
+  },
+  main_product = "u-pulp-03",
+  subgroup = "py-rawores-uranium",
+  order = "q-2"
+}:remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+
+RECIPE {
+  type = "recipe",
+  name = "u-rich-pulp",
+  category = "chemistry", --agitator
+  enabled = false,
+  energy_required = 4,
+  ingredients = {
+      {type = "fluid", name = "u-pulp-03", amount = 150},
+      {type = "item", name = "iron-ore-dust", amount = 3},
+      {type = "fluid", name = "steam", amount = 200},
+  },
+  results = {
+      {type = "item", name = "yellow-cake", amount = 5},
+  },
+  main_product = "yellow-cake",
+  subgroup = "py-rawores-uranium",
+  order = "q-2"
+}:remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+
 RECIPE("u235-pulp-01"):remove_unlock('uranium-mk01')
-RECIPE("u-pulp-02"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
-RECIPE("u-pulp-03"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
 
 RECIPE("pregnant-solution-01"):remove_unlock('uranium-mk04')
 RECIPE("vanadium-mixture"):remove_unlock('uranium-mk04')
@@ -208,9 +280,6 @@ RECIPE("space-science-pack"):replace_ingredient("yellow-cake", "pu-238")
 
 RECIPE("casting-lead-container"):add_ingredient{"sb-oxide", 4}
 RECIPE("hotair-casting-lead-container"):add_ingredient{"sb-oxide", 4}
-
-FUN.results_replacer("u-rich-pulp","u-rich-pulp", "yellow-cake", 15)
-RECIPE("u-rich-pulp"):remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
 
 RECIPE {
   type = "recipe",
@@ -259,7 +328,7 @@ RECIPE {
     results = {
         {"uranium-fuel-cell-mk03", 1}
     },
-  }:add_unlock('nuclear-power-mk04')--returns 2
+  }:add_unlock('nuclear-power-mk03')--returns 2
 
   RECIPE {
     type = "recipe",
@@ -321,8 +390,8 @@ while enrichment < 100 do
             {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238*100)},
+            {type = "fluid", name = "uf6", amount = 150, temperature = math.floor(u235*100)},
+            {type = "fluid", name = "uf6", amount = 250, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
@@ -387,8 +456,8 @@ while duf > duf_min do
             {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 1}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238*100)},
+            {type = "fluid", name = "uf6", amount = 250, temperature = math.floor(u235*100)},
+            {type = "fluid", name = "uf6", amount = 150, temperature = math.floor(u238*100)},
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium-depleted",
@@ -411,10 +480,10 @@ RECIPE {
     enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "fluid", name = "uf6", amount = 400, maximum_temperature = math.floor(duf_min*100)}
+        {type = "fluid", name = "uf6", amount = 40, maximum_temperature = math.floor(duf_min*100)}
     },
     results = {
-        {type = "item", name = "u-238", amount = 20},
+        {type = "item", name = "u-238", amount = 40},
     },
     -- main_product = "u-238",
     subgroup = "py-rawores-uranium",

@@ -6,12 +6,12 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "sulfuric-acid", amount = 100},
+        {type = "fluid", name = "sulfuric-acid", amount = 75},
         {type = "item", name = "powdered-phosphate-rock", amount = 5},
-        {type = "item", name = "purified-quartz", amount = 5},
+        {type = "fluid", name = "prepared-quartz", amount = 50},
     },
     results = {
-        {type = "fluid", name = "hydrofluoric-acid", amount = 150}
+        {type = "fluid", name = "hydrofluoric-acid", amount = 200}
     },
     main_product = "hydrofluoric-acid",
 }:add_unlock("uranium-mk01")

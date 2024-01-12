@@ -63,7 +63,7 @@ RECIPE {
     -- main_product = "u-233",
     subgroup = "py-nuclear",
     order = "b"
-}:add_unlock("nuclear-power-mk04")
+}:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
@@ -73,11 +73,11 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "u-236", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 10}
     },
     results = {
-        {type = "item", name = "u-236", amount = 10, probability = 0.999},
-        {type = "item", name = "u-237", amount = 1, probability = 0.001}
+        {type = "item", name = "u-236", amount = 10, probability = 0.99},
+        {type = "item", name = "u-237", amount = 1, probability = 0.01}
     },
     main_product = "u-237",
     subgroup = "py-nuclear",
@@ -120,7 +120,7 @@ RECIPE {
     main_product = "po-210",
     subgroup = "py-nuclear",
     order = "b"
-}:add_unlock("nuclear-power-mk02")
+}:add_unlock("nuclear-power-mk04")
 
 RECIPE {
     type = "recipe",
@@ -138,7 +138,7 @@ RECIPE {
     results = {
         {type = "item", name = "u-234", amount = 20}
     },
-  }:add_unlock('nuclear-power-mk04')
+  }:add_unlock('nuclear-power-mk03')
 
   RECIPE {
     type = "recipe",

@@ -12,7 +12,7 @@ RECIPE{
 		{'shaft-mk04', 2},
         {'anemometer-mk04', 4},
 		{'solar-panel-mk02', 1},
-        {'intelligent-unit', 5},
+        {'intelligent-unit', 1},
         {'metastable-quasicrystal', 10},
         {'low-density-structure', 100},
         {'hyperelastic-material', 20},
@@ -22,7 +22,7 @@ RECIPE{
         {'electronics-mk04', 2},
         {'controler-mk04', 2},
 		{'mechanical-parts-04', 1},
-		{type = 'fluid', name = 'helium3', amount = 4000},
+		{type = 'fluid', name = 'helium3', amount = 400},
     },
     result = 'aerial-blimp-mk04'
   }:add_unlock('renewable-mk04')

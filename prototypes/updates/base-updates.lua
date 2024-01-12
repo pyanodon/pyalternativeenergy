@@ -277,7 +277,7 @@ RECIPE{
 	result = 'productivity-module-3'
   }
 
-data.raw.furnace['steel-furnace'].energy_usage = '2MW'
+data.raw.furnace['steel-furnace'].energy_usage = '4MW'
 data.raw.furnace['steel-furnace'].crafting_speed = 4
 data.raw.furnace['steel-furnace'].energy_source.type = 'fluid'
 data.raw.furnace['steel-furnace'].energy_source.destroy_non_fuel_fluid = false
@@ -287,7 +287,7 @@ data.raw.furnace['steel-furnace'].energy_source.fluid_usage_per_tick = 2
 data.raw.furnace['steel-furnace'].energy_source.fluid_box = {
 	base_area = 1,
 	height = 1,
-	base_level = -1,
+	base_level = 0,
 	pipe_connections = {
 		{type = 'input-output', position = {0.5, 1.5}},
 		{type = 'input-output', position = {0.5, -1.5}}

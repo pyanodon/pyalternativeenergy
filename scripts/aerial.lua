@@ -115,7 +115,7 @@ Aerial.events.on_init = function()
         end
     end
     global.surfaces_to_refresh = {}
-    global.existing_turbines = {}
+    global.existing_turbines = {} -- a map of surface_index -> electric_network_id -> turbine_name -> count
     global.existing_turbines_invalid = true
 end
 
@@ -360,6 +360,8 @@ end
 local letters = {'A', 'B', 'C', 'D'}
 Aerial.events[116] = function()
     local first = true
+    local stored_energy_per_network = {}
+    local max_energy_per_network = {}
     for _, aerial_base_data in pairs(global.aerial_base_data) do
         if first then
             clear_surfaces_to_refresh()
@@ -426,6 +428,28 @@ Aerial.events[116] = function()
                 end
             end
         end
+        
+        -- sum stored energy of all turbine acculumators
+        local stored_energy = 0
+        local max_energy = 0
+        if stored_energy_per_network[electric_network_id] then
+            stored_energy = stored_energy_per_network[electric_network_id]
+            max_energy = max_energy_per_network[electric_network_id]
+        else
+            for _, aerial_data in pairs(global.aerial_data) do
+                local acculumator = aerial_data.acculumator
+                if acculumator.valid
+                and acculumator.surface_index == surface_index
+                and acculumator.electric_network_id == electric_network_id then
+                    stored_energy = stored_energy + acculumator.energy
+                    max_energy = max_energy + acculumator.prototype.electric_energy_source_prototype.buffer_capacity
+                end
+            end
+            max_energy = math.floor(max_energy / 1000000)
+            stored_energy =  math.min(max_energy, math.floor(stored_energy / 1000000 * 1.01))
+            stored_energy_per_network[electric_network_id] = stored_energy
+            max_energy_per_network[electric_network_id] = max_energy
+        end
 
         control.enabled = true
         for i, letter in pairs(letters) do
@@ -439,6 +463,14 @@ Aerial.events[116] = function()
                 count = inventory.get_item_count(name)
             })
         end
+        control.set_signal(9, {
+            signal = {type = 'virtual', name = 'signal-yellow'},
+            count = stored_energy
+        })
+        control.set_signal(10, {
+            signal = {type = 'virtual', name = 'signal-green'},
+            count = max_energy
+        })
 
         ::continue::
     end

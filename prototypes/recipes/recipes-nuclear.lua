@@ -56,6 +56,25 @@ RECIPE {
 }:add_unlock("nuclear-power")
 
 RECIPE {
+    type = 'recipe',
+    name = 'used-control-rod-to-iron-oxide',
+    category = 'electrolyzer',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'used-control-rod', amount = 1},
+        {type = 'fluid', name = 'hot-molten-salt', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'iron-oxide', amount = 1},
+        {type = 'item', name = 'control-rod', amount = 1, probability = 0.5},
+        {type = 'fluid', name = 'neutron', amount = 50},
+        {type = 'fluid', name = 'molten-salt', amount = 50},
+    },
+    main_product = 'iron-oxide'
+}:add_unlock('nuclear-power')
+
+RECIPE {
     type = "recipe",
     name = "neutron-absorbston",
     category = "neutron-absorber",
@@ -249,7 +268,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-4", amount = 40},
         {type = "fluid", name = "purex-waste-1", amount = 40},
     },
-    main_product = "purex-u-concentrate-1",
+    main_product = "purex-concentrate-4",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power")
@@ -300,7 +319,7 @@ RECIPE {
     name = "purex-waste-vitrification",
     category = "nano",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-waste-3", amount = 200},
         {type = 'item', name = 'titanium-plate', amount = 2},
@@ -312,7 +331,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-5", amount = 40},
         {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
         {type = "item", name = "molybdenum-ore", amount = 5},
-        {type = "item", name = "metallic-glass", amount = 5},
+        {type = "item", name = "metallic-glass", amount = 1},
     },
     main_product = "metallic-glass",
     subgroup = "py-nuclear-waste",
@@ -452,6 +471,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-u-concentrate-3", amount = 50},
         {type = "fluid", name = "purex-raffinate", amount = 20},
+        {type = "item", name = "tbp", amount = 1, probability = 0.5},
     },
     main_product = "purex-u-concentrate-3",
     subgroup = "py-nuclear-waste",
@@ -694,7 +714,7 @@ RECIPE {
         {type = "fluid", name = "sb-phosphate-2", amount = 200},
         {type = "item", name = "sb-oxide", amount = 5},
         {type = "fluid", name = "phosphoric-acid", amount = 250},
-        {type = "item", name = "ammonium-mixture", amount = 10},
+        {type = "item", name = "ammonium-mixture", amount = 3},
       },
     results = {
         {type = "fluid", name = "plutonium-peroxide", amount = 100},
@@ -713,7 +733,7 @@ RECIPE {
     ingredients =
       {
         {type = "fluid", name = "sb-phosphate-3", amount = 200},
-        {type = "item", name = "oxalic-acid", amount = 20},
+        {type = "item", name = "oxalic-acid", amount = 8},
       },
     results = {
         {type = "fluid", name = "plutonium-peroxide", amount = 100},
@@ -730,8 +750,8 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = "item", name = "yellow-cake", amount = 5},
-        {type = "fluid", name = "hydrofluoric-acid", amount = 100},
-        {type = "fluid", name = "fluorine-gas", amount = 100}
+        {type = "fluid", name = "hydrofluoric-acid", amount = 50},
+        {type = "fluid", name = "fluorine-gas", amount = 50}
     },
     results = {
         {type = "fluid", name = "uf6", amount = 100, temperature = 70},
