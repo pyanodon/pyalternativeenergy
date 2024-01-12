@@ -51,3 +51,5 @@ geothermal from spent bitumen seeps
 
 
 12847 - nuke tech
+
+12838 - deal with u238 and plutoium by making it into more uf6
