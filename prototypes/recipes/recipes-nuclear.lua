@@ -268,7 +268,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-4", amount = 40},
         {type = "fluid", name = "purex-waste-1", amount = 40},
     },
-    main_product = "purex-u-concentrate-1",
+    main_product = "purex-concentrate-4",
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power")
