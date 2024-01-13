@@ -142,6 +142,8 @@ ITEM('productivity-module-3').effect.consumption.bonus = 2.0
 
 ENTITY('beacon', 'beacon').energy_usage = '2MW'
 
+data.raw.tool['space-science-pack'].stack_size = 200
+
 RECIPE{
 	type = 'recipe',
 	name = 'speed-module',

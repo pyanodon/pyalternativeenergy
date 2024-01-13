@@ -7,6 +7,7 @@ Date: ?
     - gas furnace energy usage increased from 2MW -> 4MW
     - moved diamond nucleosynthesis from nucleosynthesis mk02 -> nucleosynthesis mk03. recipe time increased 30 -> 60
     - decreased helium3 requirement in mk4 aerial turbines by 10X. decrease intelligent unit amount by 5X
+    - reduced space science pack stack size from 2000 to 200 in order to match other science packs
   Nuclear:
     - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
     - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
