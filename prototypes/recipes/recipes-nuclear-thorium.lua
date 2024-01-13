@@ -79,9 +79,9 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u233-uf6",
-    category = "neutron-absorber",
+    category = "centrifuging",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 40,
     ingredients = {
         {type = "item", name = "u-233", amount = 10},
     },
