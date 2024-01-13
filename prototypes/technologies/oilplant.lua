@@ -22,8 +22,8 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/oilplant-mk02.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'nonrenewable-mk02','oilplant-mk01'},
-    dependencies = {"oilplant-mk01"},
+    prerequisites = {'nonrenewable-mk02','oilplant-mk01','moondrop-mk03'},
+    dependencies = {'oilplant-mk01'},
     effects = {},
     unit = {
         count = 500,
