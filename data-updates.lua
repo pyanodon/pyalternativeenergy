@@ -13,7 +13,6 @@ RECIPE('simik-blood-to-oleochemicals'):set_category("centrifuging")
 RECIPE('chromite-concentrate'):set_category("centrifuging")
 RECIPE('vanabins'):set_category("centrifuging")
 RECIPE('clean-rf-gel'):set_category("centrifuging")
-RECIPE('heavy-water'):set_category("centrifuging")
 RECIPE('gold-precipitate'):set_category("centrifuging")
 RECIPE('unslimed-iron-2'):set_category("centrifuging")
 RECIPE('serine'):set_category("centrifuging")
@@ -35,7 +34,6 @@ RECIPE("coal-slurry"):set_fields{energy_required = 5}
 RECIPE("solvent-separation"):set_fields{energy_required = 100}
 RECIPE("serine"):set_fields{energy_required = 300}
 RECIPE("vanabins"):set_fields{energy_required = 20}
-RECIPE("heavy-water"):set_fields{energy_required = 60}
 RECIPE("chromite-concentrate"):set_fields{energy_required = 30}
 RECIPE("chromium-rejects"):set_fields{energy_required = 30}
 RECIPE("outlet-gas-02"):set_fields{energy_required = 10}

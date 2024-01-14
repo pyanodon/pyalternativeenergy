@@ -117,6 +117,21 @@ RECIPE("steam-exchange3"):remove_unlock("fusion-mk03")
 RECIPE("steam-exchange4"):remove_unlock("fusion-mk04")
 RECIPE("steam-exchange5"):remove_unlock("fusion-mk04")
 
+RECIPE {
+    type = "recipe",
+    name = "heavy-water",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "item", name = "sulfur", amount = 20},
+        {type = "fluid", name = "pressured-water", amount = 4000}
+    },
+    results = {
+        {type = "fluid", name = "heavy-water", amount = 40}
+    }
+}
+
 --pyFE--
 data.raw['assembling-machine']['agitator-mk01'].energy_usage = "1MW"
 data.raw['assembling-machine']['agitator-mk02'].energy_usage = "2MW"
