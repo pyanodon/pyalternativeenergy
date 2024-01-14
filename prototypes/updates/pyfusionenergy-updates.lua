@@ -115,6 +115,7 @@ FUN.remove_ingredient("antimatter-fusion", "pressured-water")
 RECIPE("steam-exchange2"):remove_unlock("fusion-mk02")
 RECIPE("steam-exchange3"):remove_unlock("fusion-mk03")
 RECIPE("steam-exchange4"):remove_unlock("fusion-mk04")
+RECIPE("steam-exchange5"):remove_unlock("fusion-mk04")
 
 --pyFE--
 data.raw['assembling-machine']['agitator-mk01'].energy_usage = "1MW"
