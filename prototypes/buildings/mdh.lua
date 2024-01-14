@@ -10,7 +10,7 @@ RECIPE {
         {"mdh", 1}
     },
     hidden = true
-}--:add_unlock("energy-3")
+}:add_unlock("fusion-mk02")
 
 ITEM {
     type = "item",
@@ -34,8 +34,8 @@ ENTITY {
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 1,
-    fluid_usage_per_tick = 1,
-    maximum_temperature = 1000,
+    fluid_usage_per_tick = 50,
+    maximum_temperature = 5000,
     destroy_non_fuel_fluid = false,
     resistances = {
         {

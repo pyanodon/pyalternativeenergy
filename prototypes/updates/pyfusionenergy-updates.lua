@@ -103,6 +103,12 @@ RECIPE('cool-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium
 RECIPE('cold-clean-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 RECIPE('liquid-pure-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 
+FUN.results_replacer("dt-fusion", "critical-steam", "neutron", 1000)
+FUN.remove_ingredient("dt-fusion", "pressured-water")
+FUN.results_replacer("dt-he3", "critical-steam", "neutron", 1000)
+FUN.results_replacer("b-h", "critical-steam", "neutron", 1000)
+FUN.results_replacer("antimatter-fusion", "critical-steam", "neutron", 1000)
+
 --pyFE--
 data.raw['assembling-machine']['agitator-mk01'].energy_usage = "1MW"
 data.raw['assembling-machine']['agitator-mk02'].energy_usage = "2MW"
