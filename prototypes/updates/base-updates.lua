@@ -61,6 +61,7 @@ TECHNOLOGY('atomic-bomb'):add_prereq('uranium-processing')
 data.raw.technology["atomic-bomb"].unit.ingredients = {
 	{"automation-science-pack", 1},
 	{"logistic-science-pack", 1},
+	{"py-science-pack-2", 1}
 }
 
 log(serpent.block(data.raw.technology['atomic-bomb']))
