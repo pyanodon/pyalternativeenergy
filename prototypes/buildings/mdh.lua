@@ -9,7 +9,6 @@ RECIPE {
     results = {
         {"mdh", 1}
     },
-    hidden = true
 }:add_unlock("fusion-mk02")
 
 ITEM {
