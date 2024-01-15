@@ -23,6 +23,7 @@ Date: ?
     - reduced metallic glass output from purex-waste-vitrification 5 -> 1. increased recipe time from 0.5s -> 10s (https://github.com/pyanodon/pybugreports/issues/115)
     - buffed u236-u237 conversion chances from 0.1% to 1%. neutron use nerfed from 20 -> 10
     - changed the recipe icon of purex-washing-4 to be purex concentrate 4
+    - fixed that uranium-washing-2 would duplicate your purex by 10X. increased uranium oxide output by 10X to compensate. (https://github.com/pyanodon/pybugreports/issues/270)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2024-1-8

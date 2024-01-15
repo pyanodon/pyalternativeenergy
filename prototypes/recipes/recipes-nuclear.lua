@@ -462,14 +462,14 @@ RECIPE {
     name = "uranium-washing-2",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 5,
     ingredients = {
         {type = "fluid", name = "purex-u-concentrate-2", amount = 5},
         {type = "item", name = "tbp", amount = 1},
         {type = "fluid", name = "kerosene", amount = 100},
     },
     results = {
-        {type = "fluid", name = "purex-u-concentrate-3", amount = 50},
+        {type = "fluid", name = "purex-u-concentrate-3", amount = 5},
         {type = "fluid", name = "purex-raffinate", amount = 20},
         {type = "item", name = "tbp", amount = 1, probability = 0.5},
     },
@@ -483,9 +483,9 @@ RECIPE {
     name = "uranium",
     category = "evaporator",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 1,
     ingredients = {
-        {type = "fluid", name = "purex-u-concentrate-3", amount = 100},
+        {type = "fluid", name = "purex-u-concentrate-3", amount = 10},
     },
     results = {
         {type = "item", name = "uranium-oxide", amount = 1}
