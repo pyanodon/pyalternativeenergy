@@ -24,6 +24,7 @@ Date: ?
     - buffed u236-u237 conversion chances from 0.1% to 1%. neutron use nerfed from 20 -> 10
     - changed the recipe icon of purex-washing-4 to be purex concentrate 4
     - fixed that uranium-washing-2 would duplicate your purex by 10X. increased uranium oxide output by 10X to compensate. (https://github.com/pyanodon/pybugreports/issues/270)
+    - slowed u234 -> po210 from 0.5s to 4s
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2024-1-8

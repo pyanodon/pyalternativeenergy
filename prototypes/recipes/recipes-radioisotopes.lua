@@ -108,7 +108,7 @@ RECIPE {
     name = "u234-po210",
     category = "neutron-moderator",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 4,
     ingredients = {
         {type = "item", name = "u-234", amount = 10},
         {type = "fluid", name = "neutron", amount = 20}
