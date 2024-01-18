@@ -37,7 +37,7 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "u-232", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "u-233", amount = 3, probability = 0.999},
@@ -55,7 +55,7 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "u-234", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "u-235", amount = 8, probability = 0.999},
@@ -73,7 +73,7 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "u-236", amount = 10},
-        {type = "fluid", name = "neutron", amount = 10}
+        {type = "fluid", name = "neutron", amount = 10, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "u-236", amount = 10, probability = 0.99},
@@ -92,7 +92,7 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "u-237", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "pu-238", amount = 10, probability = 0.999},
@@ -111,7 +111,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = "item", name = "u-234", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "po-210", amount = 10, probability = 0.999},
@@ -231,7 +231,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "pu-238", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "pu-239", amount = 9},
@@ -252,7 +252,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "pu-239", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "pu-240", amount = 10},
@@ -270,7 +270,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "pu-240", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "pu-241", amount = 10},
@@ -288,7 +288,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item", name = "pu-241", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 750}
+        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 499}
     },
     results = {
         {type = "item", name = "pu-241", amount = 6},
