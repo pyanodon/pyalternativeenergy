@@ -50,18 +50,18 @@ ENTITY {
         minimum_temperature = 500.0
     },
     fluid_box = {
-        base_area = 1,
-        base_level = -1,
+        base_area = 30,
+        base_level = 0,
         pipe_covers = DATA.Pipes.covers(true, true, true, true),
         pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         production_type = "input-output",
         filter = "neutron",
         minimum_temperature = 500.0,
         pipe_connections = {
-            {type = "input-output", position = {3.5, 5}},
-            {type = "input-output", position = {-3.5, 5}},
-            {type = "input-output", position = {3.5, -5}},
-            {type = "input-output", position = {-3.5, -5}},
+            {type = "input-output", position = {3.5, 5.5}},
+            {type = "input-output", position = {-3.5, 5.5}},
+            {type = "input-output", position = {3.5, -5.5}},
+            {type = "input-output", position = {-3.5, -5.5}},
         }
     },
     energy_source = {
@@ -137,8 +137,8 @@ ENTITY {
             },
         },
     },
-    min_perceived_performance = 0.1,
-    performance_to_sound_speedup = 0.3,
+    min_perceived_performance = 1,
+    performance_to_sound_speedup = 1,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pypetroleumhandlinggraphics__/sounds/gas-extractor.ogg", volume = 0.45},

@@ -57,7 +57,7 @@ ENTITY {
         filter = "pressured-steam",
         minimum_temperature = 500,
         base_area = 1,
-        base_level = -1,
+        base_level = 0,
         pipe_covers = DATA.Pipes.covers(false, true, true, true),
         --pipe_picture = pipe_pictures({0, 3}),
         production_type = "input-output",
