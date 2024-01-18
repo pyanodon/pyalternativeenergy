@@ -90,25 +90,6 @@ RECIPE {
     order = "g"
 }:add_unlock("nuclear-power")
 
-RECIPE {
-    type = "recipe",
-    name = "neutron-moderation",
-    category = "neutron-moderator",
-    --icon = '__base__/graphics/icons/assembling-machine-2.png',
-    --icon_size = 64,
-    enabled = false,
-    energy_required = 1,
-    ingredients = {
-        {type = "fluid", name = "neutron", amount = 100}
-    },
-    results = {
-        {type = "fluid", name = "neutron", amount = 100, temperature = 500}
-    },
-    subgroup = "py-nuclear",
-    order = "g"
-}
-
-
 --PUREX
 
 --uranium and plutonium + fission products are seperated using tributyl-phosphate and kerosene in multistep process of washing and cleaning
