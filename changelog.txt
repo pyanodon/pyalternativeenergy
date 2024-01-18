@@ -9,6 +9,14 @@ Date: ?
     - decreased helium3 requirement in mk4 aerial turbines by 10X. decrease intelligent unit amount by 5X
     - reduced space science pack stack size from 2000 to 200 in order to match other science packs
     - updated Russian locale (by Shadow_Man)
+    - buffed steam turbine steam consumption speed from 60,120,180,240 -> 60,600,6000,60000. the MK04 can now output up to 598 GW. this change should save you tons of UPS in the late game and put the focus back on fuel production instead of fuel consumption (aka the interesting part). NOTE: if you are having trouble keeping up with the huge fluid thoroputs required, the biofluid network has much higher thoroput than normal pipes
+    - greatly increased the recipe costs of MK02+ steam turbines in order to match the higher consumption speeds. should feel like a proper megastructure.
+    - added a new wiki page for steam turbine mechanics
+    - added a new wiki page for thermosolar mk03,mk04 mechanics
+    - reworked fusion energy to be highly power positive and implemented many pyAE concepts into the recipe chains
+    - added a new endgame generator building: the magnetohydrodynamic generator. runs off pure neutrons and generates up to 1.5TW. unlocked at production science as part of the tritium fusion chain
+    - fixed locale errors for entity names and entity descriptions
+    - renamed the vanilla nuclear reactor to "Breeder reactor"
   Nuclear:
     - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
     - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
