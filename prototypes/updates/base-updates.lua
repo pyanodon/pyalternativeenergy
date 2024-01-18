@@ -56,10 +56,17 @@ RECIPE('nuclear-reactor'):add_unlock('uranium-processing'):remove_ingredient('su
 --data.raw.reactor['nuclear-reactor'].energy_source.effectivity = 0.2
 --data.raw.reactor['nuclear-reactor'].heat_buffer.connections = nil
 
-TECHNOLOGY('atomic-bomb'):remove_prereq('domestication-mk02'):remove_prereq('uranium-mk03'):add_prereq('nucleo'):
-	remove_pack('space-science-pack')
+data.raw.technology['atomic-bomb'].prerequisites = {} 
+TECHNOLOGY('atomic-bomb'):add_prereq('uranium-processing')
+data.raw.technology["atomic-bomb"].unit.ingredients = {
+	{"automation-science-pack", 1},
+	{"logistic-science-pack", 1},
+	{"py-science-pack-2", 1}
+}
 
-RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingredient('neuromorphic-chip', 'control-unit')
+log(serpent.block(data.raw.technology['atomic-bomb']))
+
+RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingredient('neuromorphic-chip', 'controler-mk02')
 RECIPE('uranium-rounds-magazine'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('uranium-cannon-shell'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('explosive-uranium-cannon-shell'):replace_ingredient('uranium-238', 'u-238')
@@ -104,20 +111,6 @@ RECIPE('stack-inserter'):set_fields {
 	},
 }
 
-RECIPE('stack-filter-inserter'):set_fields {
-	ingredients = {
-		{ 'stack-inserter', 1 },
-		{ 'advanced-circuit', 1 },
-		{ 'electronics-mk01', 5 },
-		{ 'stainless-steel', 10 },
-	},
-}
-
-RECIPE('filter-inserter'):replace_ingredient('duralumin', { 'intermetallics', 1 }):replace_ingredient('electronic-circuit'
-	, { 'electronics-mk01', 1 })
-
---RECIPE('small-electric-pole'):set_category('handcrafting')
-
 RECIPE('medium-electric-pole'):add_unlock('electric-energy-distribution-1'):remove_ingredient('niobium-plate'):remove_ingredient('nbfe-alloy'):add_ingredient({type = 'item', name = 'aluminium-plate', amount = 4}):add_ingredient({type = 'item', name = 'chromium', amount = 1})
 
 RECIPE('big-electric-pole'):remove_unlock('electric-energy-distribution-1'):add_unlock('electric-energy-distribution-2'):add_ingredient({type = 'item', name = 'concrete', amount = 4}):replace_ingredient('copper-cable', 'tinned-cable')
@@ -141,6 +134,8 @@ ITEM('productivity-module-2').effect.consumption.bonus = 1.5
 ITEM('productivity-module-3').effect.consumption.bonus = 2.0
 
 ENTITY('beacon', 'beacon').energy_usage = '2MW'
+
+data.raw.tool['space-science-pack'].stack_size = 200
 
 RECIPE{
 	type = 'recipe',

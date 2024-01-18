@@ -13,7 +13,6 @@ RECIPE('simik-blood-to-oleochemicals'):set_category("centrifuging")
 RECIPE('chromite-concentrate'):set_category("centrifuging")
 RECIPE('vanabins'):set_category("centrifuging")
 RECIPE('clean-rf-gel'):set_category("centrifuging")
-RECIPE('heavy-water'):set_category("centrifuging")
 RECIPE('gold-precipitate'):set_category("centrifuging")
 RECIPE('unslimed-iron-2'):set_category("centrifuging")
 RECIPE('serine'):set_category("centrifuging")
@@ -35,7 +34,6 @@ RECIPE("coal-slurry"):set_fields{energy_required = 5}
 RECIPE("solvent-separation"):set_fields{energy_required = 100}
 RECIPE("serine"):set_fields{energy_required = 300}
 RECIPE("vanabins"):set_fields{energy_required = 20}
-RECIPE("heavy-water"):set_fields{energy_required = 60}
 RECIPE("chromite-concentrate"):set_fields{energy_required = 30}
 RECIPE("chromium-rejects"):set_fields{energy_required = 30}
 RECIPE("outlet-gas-02"):set_fields{energy_required = 10}
@@ -83,7 +81,6 @@ RECIPE("low-density-structure"):add_ingredient({type = "item", name = "cf", amou
 RECIPE("arithmetic-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("decider-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
 RECIPE("constant-combinator"):add_ingredient({type = "item", name = "battery", amount = 1})
-RECIPE("spidertron"):add_ingredient({type = "item", name = "sc-engine", amount = 25})
 --RECIPE("artillery-wagon"):add_ingredient({type = "item", name = "sc-engine", amount = 8})
 RECIPE("satellite"):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "solar-panel-mk04", amount = 2}):replace_ingredient("fusion-reactor-mk01", "rtg"):add_ingredient({type = "item", name = "fuelrod-mk04", amount = 2})
 RECIPE("utility-science-pack"):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient({type = "item", name = "photosensitive-dye", amount = 1})

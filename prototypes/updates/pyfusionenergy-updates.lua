@@ -103,6 +103,35 @@ RECIPE('cool-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium
 RECIPE('cold-clean-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 RECIPE('liquid-pure-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 
+FUN.results_replacer("dt-fusion", "critical-steam", "neutron", 1000)
+FUN.remove_ingredient("dt-fusion", "pressured-water")
+FUN.results_replacer("dt-he3", "critical-steam", "neutron", 1000)
+FUN.remove_ingredient("dt-he3", "pressured-water")
+FUN.results_replacer("b-h", "critical-steam", "neutron", 1000)
+FUN.remove_ingredient("b-h", "pressured-water")
+FUN.results_replacer("antimatter-fusion", "critical-steam", "neutron", 1000)
+FUN.remove_ingredient("antimatter-fusion", "pressured-water")
+
+RECIPE("steam-exchange2"):remove_unlock("fusion-mk02")
+RECIPE("steam-exchange3"):remove_unlock("fusion-mk03")
+RECIPE("steam-exchange4"):remove_unlock("fusion-mk04")
+RECIPE("steam-exchange5"):remove_unlock("fusion-mk04")
+
+RECIPE {
+    type = "recipe",
+    name = "heavy-water",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "item", name = "sulfur", amount = 20},
+        {type = "fluid", name = "pressured-water", amount = 4000}
+    },
+    results = {
+        {type = "fluid", name = "heavy-water", amount = 40}
+    }
+}
+
 --pyFE--
 data.raw['assembling-machine']['agitator-mk01'].energy_usage = "1MW"
 data.raw['assembling-machine']['agitator-mk02'].energy_usage = "2MW"
