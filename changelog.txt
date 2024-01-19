@@ -61,7 +61,7 @@ Date: 2023-11-23
     - fixed crash with factorissimo 2 and aerial turbines
     - optimized aerial turbine UPS even further
     - required factorio version 1.1.93 or greater
-    - updated aerial turbine GUI to include a 2ed camera foucused on the destination pole
+    - updated aerial turbine GUI to include a 2nd camera foucused on the destination pole
     - updated Russian translation
     - added greentext to aerial turbine gui showing the 20-trip efficency average for your turbine setup
     - added Δt of arrival to aerial turbine GUI
