@@ -19,7 +19,6 @@ Date: ?
     - fixed locale errors for entity names and entity descriptions
     - renamed the vanilla nuclear reactor to "Breeder reactor"
     - removed the mechanical parts MK04 requirement for crafting the antelope enclosure. replaced with mechanical parts MK03
-    - capped the animation speed of all mining drills so that they are no longer effected by speed modules
   Nuclear:
     - added two tiers of specialized uranium mining drills. these consume hydrofluoric acid to create uranium ore.
     - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
