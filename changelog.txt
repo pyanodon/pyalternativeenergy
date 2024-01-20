@@ -4,7 +4,7 @@ Date: ?
   Changes:
     - fixed a crash with solar (https://github.com/pyanodon/pyalternativeenergy/issues/38)
     - fixed that the fluidboxes from the new gas furnace did not flow directly into standard pipes (https://github.com/pyanodon/pybugreports/issues/368)
-    - gas furnace energy usage increased from 2MW -> 4MW
+    - gas furnace energy usage increased from 2MW -> 3MW
     - moved diamond nucleosynthesis from nucleosynthesis mk02 -> nucleosynthesis mk03. recipe time increased 30 -> 60
     - decreased helium3 requirement in mk4 aerial turbines by 10X. decrease intelligent unit amount by 5X
     - reduced space science pack stack size from 2000 to 200 in order to match other science packs
@@ -19,7 +19,9 @@ Date: ?
     - fixed locale errors for entity names and entity descriptions
     - renamed the vanilla nuclear reactor to "Breeder reactor"
     - removed the mechanical parts MK04 requirement for crafting the antelope enclosure. replaced with mechanical parts MK03
+    - capped the animation speed of all mining drills so that they are no longer effected by speed modules
   Nuclear:
+    - added two tiers of specialized uranium mining drills. these consume hydrofluoric acid to create uranium ore.
     - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
     - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
     - polonium-210 recipe moved from nuclear mk03 -> nuclear mk04

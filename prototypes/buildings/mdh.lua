@@ -50,8 +50,9 @@ ENTITY {
         minimum_temperature = 500.0
     },
     fluid_box = {
-        base_area = 30,
-        base_level = 0,
+        base_area = 15,
+        height = 2,
+        base_level = -1,
         pipe_covers = DATA.Pipes.covers(true, true, true, true),
         pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         production_type = "input-output",
