@@ -18,6 +18,7 @@ Date: ?
     - added a new endgame generator building: the magnetohydrodynamic generator. runs off pure neutrons and generates up to 1.5TW. unlocked at production science as part of the tritium fusion chain
     - fixed locale errors for entity names and entity descriptions
     - renamed the vanilla nuclear reactor to "Breeder reactor"
+    - removed the mechanical parts MK04 requirement for crafting the antelope enclosure. replaced with mechanical parts MK03
   Nuclear:
     - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
     - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
