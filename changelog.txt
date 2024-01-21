@@ -19,8 +19,9 @@ Date: ?
     - fixed locale errors for entity names and entity descriptions
     - renamed the vanilla nuclear reactor to "Breeder reactor"
     - removed the mechanical parts MK04 requirement for crafting the antelope enclosure. replaced with mechanical parts MK03
+    - buffed the coal+coarse fraction into tar recipe. coarse fraction reduced from 20->1. output increased from 50->70. recipe craft time 6s->1s
   Nuclear:
-    - added two tiers of specialized uranium mining drills. these consume hydrofluoric acid to create uranium ore.
+    - added two tiers of specialized uranium mining drills.
     - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
     - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
     - polonium-210 recipe moved from nuclear mk03 -> nuclear mk04

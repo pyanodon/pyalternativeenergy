@@ -54,19 +54,6 @@ ENTITY {
     dying_explosion = 'big-explosion',
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    input_fluid_box = {
-        production_type = 'input-output',
-        pipe_picture = _G.assembler2pipepictures(),
-        pipe_covers = _G.pipecoverspictures(),
-        base_area = 1,
-        height = 2,
-        base_level = -1,
-        pipe_connections = {
-            {position = {-2.8, 0}},
-            {position = {2.8, 0}},
-        },
-        filter = 'hydrofluoric-acid'
-    },
     module_specification = {
         module_slots = 6
     },

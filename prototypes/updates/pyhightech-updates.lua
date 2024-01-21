@@ -231,3 +231,6 @@ data.raw.recipe["quantum-battery"].results = {{'used-quantum-battery', 1}}
 RECIPE('random-science-pack'):remove_unlock('quantum').hidden = true
 
 RECIPE('pa-diamond'):remove_unlock('nucleo-mk02'):add_unlock('nucleo-mk03').energy_required = data.raw.recipe['pa-diamond'].energy_required * 2
+
+RECIPE('coarse-tar'):remove_ingredient('coarse'):add_ingredient{'coarse', 1}.energy_required = 3
+RECIPE('coarse-tar').results = {{type = 'fluid', name = 'tar', amount = 70}}

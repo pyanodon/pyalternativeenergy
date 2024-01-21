@@ -517,10 +517,10 @@ data.raw['assembling-machine']['wet-scrubber-mk02'].energy_usage = "2MW"
 data.raw['assembling-machine']['wet-scrubber-mk03'].energy_usage = "3MW"
 data.raw['assembling-machine']['wet-scrubber-mk04'].energy_usage = "4MW"
 
-data.raw.resource['uranium-ore'].minable.required_fluid = 'hydrofluoric-acid'
-data.raw.resource['uranium-ore'].minable.fluid_amount = 100
-data.raw.resource['uranium-rock'].minable.required_fluid = 'hydrofluoric-acid'
-data.raw.resource['uranium-rock'].minable.fluid_amount = 100
+data.raw.resource['uranium-ore'].minable.required_fluid = nil
+data.raw.resource['uranium-ore'].minable.fluid_amount = nil
+data.raw.resource['uranium-rock'].minable.required_fluid = nil
+data.raw.resource['uranium-rock'].minable.fluid_amount = nil
 data.raw.resource['uranium-rock'].minable.mining_time = 2
 data.raw['mining-drill']['uranium-mine'].module_specification = {
 	module_slots = 10
@@ -541,5 +541,4 @@ RECIPE('uranium-mine'):remove_ingredient('electric-mining-drill'):add_ingredient
 for _, layer in pairs(data.raw['mining-drill']['uranium-mine'].animations.layers) do
 	layer.animation_speed = 0.3
 end
-table.insert(data.raw['mining-drill']['uranium-mine'].input_fluid_box.pipe_connections, {position = {-5.99, 0}})
-data.raw['mining-drill']['uranium-mine'].input_fluid_box.filter = 'hydrofluoric-acid'
+data.raw['mining-drill']['uranium-mine'].input_fluid_box = nil
