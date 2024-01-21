@@ -519,10 +519,10 @@ data.raw['assembling-machine']['wet-scrubber-mk04'].energy_usage = "4MW"
 
 data.raw.resource['uranium-ore'].minable.required_fluid = nil
 data.raw.resource['uranium-ore'].minable.fluid_amount = nil
-data.raw.resource['uranium-ore'].minable.mining_time = nil
+data.raw.resource['uranium-ore'].minable.mining_time = 1
 data.raw.resource['uranium-rock'].minable.required_fluid = nil
 data.raw.resource['uranium-rock'].minable.fluid_amount = nil
-data.raw.resource['uranium-rock'].minable.mining_time = nil
+data.raw.resource['uranium-rock'].minable.mining_time = 1
 data.raw['mining-drill']['uranium-mine'].module_specification = {
 	module_slots = 10
 }
