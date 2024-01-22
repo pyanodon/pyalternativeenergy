@@ -4,8 +4,16 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 1},
-    },
+        {"fusion-reactor-mk01", 1},
+        {"re-magnet", 100},
+        {"intelligent-unit", 50},
+        {"nano-wires", 400},
+        {"super-alloy", 50},
+        {"super-steel", 100},
+        {"metastable-quasicrystal", 5},
+        {"sc-engine", 2},
+        {"mechanical-parts-04", 5}
+      },
     results = {
         {"mdh", 1}
     },
