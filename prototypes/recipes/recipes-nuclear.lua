@@ -149,7 +149,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 10000, temperature = 5000},
-        {type = "item", name = "high-energy-waste-1", amount = 10},
+        {type = "item", name = "high-energy-waste-1", amount = 40},
         {type = "fluid", name = "salt-solution", amount = 400}
     },
     main_product = "high-energy-waste-1",
@@ -162,13 +162,13 @@ RECIPE {
     name = "waste-uranium-disolving",
     category = "chemistry",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "item", name = "high-energy-waste-1", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 50}
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-1", amount = 50}
+        {type = "fluid", name = "purex-concentrate-1", amount = 100}
     },
     subgroup = "py-nuclear-waste",
     order = "b"
@@ -180,14 +180,14 @@ RECIPE {
     name = "purex-washing-1",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-concentrate-1", amount = 60},
         {type = "item", name = "tbp", amount = 1},
         {type = "fluid", name = "kerosene", amount = 100},
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-2", amount = 40},
+        {type = "fluid", name = "purex-concentrate-2", amount = 60},
         {type = "fluid", name = "purex-waste-1", amount = 40},
     },
     main_product = "purex-concentrate-2",
@@ -200,14 +200,14 @@ RECIPE {
     name = "purex-washing-2",
     category = "fluid-separator",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-concentrate-2", amount = 80},
         {type = "fluid", name = "acetone", amount = 100},
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-3", amount = 40},
-        {type = "fluid", name = "purex-concentrate-4", amount = 40},
+        {type = "fluid", name = "purex-concentrate-3", amount = 50},
+        {type = "fluid", name = "purex-concentrate-4", amount = 50},
         {type = "fluid", name = "purex-waste-1", amount = 40},
     },
     main_product = "purex-concentrate-3",
@@ -220,14 +220,14 @@ RECIPE {
     name = "purex-washing-3",
     category = "compressor",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-concentrate-4", amount = 100},
         {type = "fluid", name = "naphtha", amount = 100},
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-5", amount = 40},
-        {type = "fluid", name = "purex-pu-concentrate-2", amount = 40},
+        {type = "fluid", name = "purex-concentrate-5", amount = 50},
+        {type = "fluid", name = "purex-pu-concentrate-2", amount = 50},
         {type = "fluid", name = "purex-waste-1", amount = 40},
     },
     main_product = "purex-concentrate-5",
@@ -240,13 +240,13 @@ RECIPE {
     name = "purex-washing-4",
     category = "fluid-separator",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-concentrate-3", amount = 80},
     },
     results = {
         {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
-        {type = "fluid", name = "purex-concentrate-4", amount = 40},
+        {type = "fluid", name = "purex-concentrate-4", amount = 60},
         {type = "fluid", name = "purex-waste-1", amount = 40},
     },
     main_product = "purex-concentrate-4",
@@ -261,7 +261,7 @@ RECIPE {
     name = "purex-waste-washing-1",
     category = "fluid-separator",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-waste-1", amount = 100},
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
@@ -281,7 +281,7 @@ RECIPE {
     name = "purex-waste-washing-2",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-waste-2", amount = 50},
         {type = "fluid", name = "chlorine", amount = 100},
@@ -327,7 +327,7 @@ RECIPE {
     name = "plutonium-washing-1",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-concentrate-5", amount = 100},
         {type = "fluid", name = "sulfuric-acid", amount = 100},
@@ -347,7 +347,7 @@ RECIPE {
     name = "plutonium-washing-2",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-pu-concentrate-1", amount = 100},
         {type = "fluid", name = "sulfuric-acid", amount = 100},
@@ -367,7 +367,7 @@ RECIPE {
     name = "plutonium-washing-3",
     category = "flotation",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-pu-concentrate-2", amount = 100},
         {type = "fluid", name = "sulfuric-acid", amount = 100},
@@ -387,7 +387,7 @@ RECIPE {
     name = "plutonium-peroxide",
     category = "chemistry",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-pu-concentrate-3", amount = 100},
         {type = "fluid", name = "hydrogen-peroxide", amount = 100}
@@ -425,7 +425,7 @@ RECIPE {
     name = "uranium-washing-1",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-u-concentrate-1", amount = 100},
     },
@@ -482,7 +482,7 @@ RECIPE {
     name = "purex-raffinate-1",
     category = "pan",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-raffinate", amount = 100},
         {type = "fluid", name = "ammonia", amount = 50}
@@ -501,7 +501,7 @@ RECIPE {
     name = "purex-raffinate-2",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-raffinate-2", amount = 100},
         {type = "fluid", name = "acid-strip-solution", amount = 40}
@@ -520,7 +520,7 @@ RECIPE {
     name = "purex-raffinate-3",
     category = "pan",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "purex-raffinate-3", amount = 75},
         {type = "item", name = "sodium-carbonate", amount = 4}
@@ -539,7 +539,7 @@ RECIPE {
     name = "ac-oxygenated",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "ac", amount = 60},
         {type = "fluid", name = "oxygen", amount = 200}
@@ -556,7 +556,7 @@ RECIPE {
     name = "americium-reduction",
     category = "pan",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "ac-oxygenated", amount = 50},
         {type = "item", name = "th-oxide", amount = 10}
@@ -575,7 +575,7 @@ RECIPE {
     name = "curium-reduction",
     category = "hpf",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "c-oxygenated", amount = 50},
         {type = "item", name = "lithium", amount = 3}
@@ -592,7 +592,7 @@ RECIPE {
     name = "sb-chloride-to-ore",
     category = "hpf",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 10,
     ingredients = {
         {type = "item", name = "sb-chloride", amount = 10},
         {type = "fluid", name = "water", amount = 200}
@@ -742,3 +742,22 @@ RECIPE {
     icon_size = 32,
     subgroup = "py-nuclear",
 }:add_unlock("uranium-mk01")
+
+--[[
+RECIPE {
+    type = "recipe",
+    name = "pu239-uf6",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "item", name = "pu-239", amount = 5},
+    },
+    results = {
+        {type = "fluid", name = "uf6", amount = 100, temperature = 114}
+    },
+    main_product = "uf6",
+    subgroup = "py-nuclear",
+    order = "g"
+}:add_unlock("nuclear-power")
+]]--
