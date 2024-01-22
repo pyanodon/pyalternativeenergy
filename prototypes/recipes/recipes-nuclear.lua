@@ -743,7 +743,6 @@ RECIPE {
     subgroup = "py-nuclear",
 }:add_unlock("uranium-mk01")
 
---[[
 RECIPE {
     type = "recipe",
     name = "pu239-uf6",
@@ -754,10 +753,9 @@ RECIPE {
         {type = "item", name = "pu-239", amount = 5},
     },
     results = {
-        {type = "fluid", name = "uf6", amount = 100, temperature = 114}
+        {type = "fluid", name = "uf6", amount = 100, temperature = 188}
     },
     main_product = "uf6",
     subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power")
-]]--
