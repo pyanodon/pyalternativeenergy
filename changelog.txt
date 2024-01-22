@@ -39,6 +39,8 @@ Date: ?
     - fixed that uranium-washing-2 would duplicate your purex by 10X. increased uranium oxide output by 10X to compensate. (https://github.com/pyanodon/pybugreports/issues/270)
     - slowed u234 -> po210 from 0.5s to 4s
     - all neutron-based isotope conversion recipes in the particle accelerator now require a fluid temp >=499
+  Fusion:
+    - Added MHD generator for fusion based energy production
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2024-1-8
