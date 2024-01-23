@@ -297,7 +297,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-waste-vitrification",
-    category = "hpf",
+    category = "bof",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -321,7 +321,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-raffinate-vitrification",
-    category = "hpf",
+    category = "bof",
     enabled = false,
     energy_required = 20,
     ingredients = {
