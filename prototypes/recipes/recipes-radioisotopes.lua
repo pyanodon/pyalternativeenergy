@@ -105,7 +105,7 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "u237-pu238",
+    name = "u238-pu239",
     category = "pa",
     enabled = false,
     energy_required = 0.5,

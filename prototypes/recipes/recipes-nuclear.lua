@@ -273,7 +273,7 @@ RECIPE {
     main_product = "purex-waste-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03")
+}:add_unlock("nuclear-power")
 
 RECIPE {
     type = "recipe",
@@ -292,7 +292,7 @@ RECIPE {
     main_product = "purex-waste-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03")
+}:add_unlock("nuclear-power")
 
 RECIPE {
     type = "recipe",
@@ -301,7 +301,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "purex-waste-1", amount = 200},
+        {type = "fluid", name = "purex-waste-3", amount = 200},
         {type = 'item', name = 'stainless-steel', amount = 2},
         {type = 'item', name = 'sugar', amount = 5},
         {type = "fluid", name = "molten-glass", amount = 50}

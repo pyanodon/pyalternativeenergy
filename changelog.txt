@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.13
+Date: 2024-1-23
+  Fixes:
+    - fixed that purex waste vitrification required waste 1 instead of 3
+    - fixed that u238 to pu239 recipe wasnt incorrectly named and overriding u237
+---------------------------------------------------------------------------------------------------
 Version: 1.2.12
 Date: 2024-1-23
   Changes:
