@@ -315,7 +315,7 @@ RECIPE {
     main_product = "vitrified-glass",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk01")
+}:add_unlock("nuclear-power")
 
 
 RECIPE {
@@ -325,7 +325,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "purex-raffinate-1", amount = 200},
+        {type = "fluid", name = "purex-raffinate", amount = 200},
         {type = 'item', name = 'stainless-steel', amount = 2},
         {type = 'item', name = 'sugar', amount = 5},
         {type = "fluid", name = "molten-glass", amount = 50}
@@ -339,7 +339,7 @@ RECIPE {
     main_product = "vitrified-glass",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk01")
+}:add_unlock("nuclear-power")
 
 
 --plutonium washing
