@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.11
-Date: ?
+Date: 2024-1-23
   Changes:
     - fixed a crash with solar (https://github.com/pyanodon/pyalternativeenergy/issues/38)
     - fixed that the fluidboxes from the new gas furnace did not flow directly into standard pipes (https://github.com/pyanodon/pybugreports/issues/368)
@@ -21,24 +21,24 @@ Date: ?
     - removed the mechanical parts MK04 requirement for crafting the antelope enclosure. replaced with mechanical parts MK03
     - buffed the coal+coarse fraction into tar recipe. coarse fraction reduced from 20->1. output increased from 50->70. recipe craft time 6s->1s
   Nuclear:
-    - added two tiers of specialized uranium mining drills.
-    - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
-    - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
-    - polonium-210 recipe moved from nuclear mk03 -> nuclear mk04
-    - u234 -> u235 recipe moved from nuclear mk04 -> nuclear mk03
-    - increased crafting time of pa-233-seperation from 5s -> 50s in order to match other centrifudge recipes
+    - added new uranium mining drill.
     - replaced purified-quartz with prepared-quartz in the hydrofluoric-acid recipe
     - nerfed yellowcake. input of uranium pulp 3 from 100 -> 150, output from 15 -> 5
     - nerfed uranium pulp 1. input of powder uranium increased from 1 -> 10
     - nerfed uranium pulp 2. input of uranium pulp 1 increased from 100 -> 150
     - nerfed uranium pulp 3. input of uranium pulp 2 increased from 100 -> 150
+    - fixed that nuclear-molten-thorium-reactor would duplicate molten salt due to an unbalanced loop (https://github.com/pyanodon/pyalternativeenergy/issues/31)
+    - fixed that protactinum-233 had no uses until space science. uranium fuel cells mk3 moved from nuclear mk4 to nuclear mk3
+    - polonium-210 recipe moved from nuclear mk03 -> nuclear mk04
+    - u234 -> u235 recipe moved from nuclear mk04 -> nuclear mk03
+    - increased crafting time of pa-233-seperation from 5s -> 50s in order to match other centrifudge recipes
     - fixed that used control rods had no uses. added a recycling recipe.
-    - reduced metallic glass output from purex-waste-vitrification 5 -> 1. increased recipe time from 0.5s -> 10s (https://github.com/pyanodon/pybugreports/issues/115)
+    - removed metallic glass output from purex-waste-vitrification. increased recipe time from 0.5s -> 20s
+    - added purex raffinate vitrification
     - buffed u236-u237 conversion chances from 0.1% to 1%. neutron use nerfed from 20 -> 10
     - changed the recipe icon of purex-washing-4 to be purex concentrate 4
     - fixed that uranium-washing-2 would duplicate your purex by 10X. increased uranium oxide output by 10X to compensate. (https://github.com/pyanodon/pybugreports/issues/270)
     - slowed u234 -> po210 from 0.5s to 4s
-    - all neutron-based isotope conversion recipes in the particle accelerator now require a fluid temp >=499
   Fusion:
     - Added MHD generator for fusion based energy production
 ---------------------------------------------------------------------------------------------------

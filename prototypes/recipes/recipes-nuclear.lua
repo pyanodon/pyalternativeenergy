@@ -41,7 +41,7 @@ RECIPE {
     name = "control-rod",
     category = "crafting",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 1,
     ingredients = {
         {type = "item", name = "lithium", amount = 10},
         {type = "item", name = "lead-plate", amount = 5},
@@ -57,7 +57,7 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
-    name = 'used-control-rod-to-iron-oxide',
+    name = 'used-control-rod',
     category = 'electrolyzer',
     enabled = false,
     energy_required = 10,
@@ -66,12 +66,11 @@ RECIPE {
         {type = 'fluid', name = 'hot-molten-salt', amount = 50},
     },
     results = {
-        {type = 'item', name = 'iron-oxide', amount = 1},
+        {type = 'fluid', name = 'tritium', amount = 100},
         {type = 'item', name = 'control-rod', amount = 1, probability = 0.5},
-        {type = 'fluid', name = 'neutron', amount = 50},
         {type = 'fluid', name = 'molten-salt', amount = 50},
     },
-    main_product = 'iron-oxide'
+    main_product = 'tritium'
 }:add_unlock('nuclear-power')
 
 RECIPE {
@@ -298,26 +297,49 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-waste-vitrification",
-    category = "nano",
+    category = "hpf",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "purex-waste-3", amount = 200},
-        {type = 'item', name = 'titanium-plate', amount = 2},
-        {type = 'item', name = 'boron', amount = 3},
-        {type = 'item', name = 'nickel-plate', amount = 6},
-        {type = "fluid", name = "oxygen", amount = 50}
+        {type = "fluid", name = "purex-waste-1", amount = 200},
+        {type = 'item', name = 'stainless-steel', amount = 2},
+        {type = 'item', name = 'sugar', amount = 5},
+        {type = "fluid", name = "molten-glass", amount = 50}
     },
     results = {
         {type = "fluid", name = "purex-concentrate-5", amount = 40},
         {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
         {type = "item", name = "molybdenum-ore", amount = 5},
-        {type = "item", name = "metallic-glass", amount = 1},
+        {type = "item", name = "vitrified-glass", amount = 1},
     },
-    main_product = "metallic-glass",
+    main_product = "vitrified-glass",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03")--TODO: replace metallic glass with a different process and rocket launches to get rid of the waste in space
+}:add_unlock("nuclear-power-mk01")
+
+
+RECIPE {
+    type = "recipe",
+    name = "purex-raffinate-vitrification",
+    category = "hpf",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "purex-raffinate-1", amount = 200},
+        {type = 'item', name = 'stainless-steel', amount = 2},
+        {type = 'item', name = 'sugar', amount = 5},
+        {type = "fluid", name = "molten-glass", amount = 50}
+    },
+    results = {
+        {type = "fluid", name = "purex-concentrate-5", amount = 40},
+        {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
+        {type = "item", name = "molybdenum-ore", amount = 5},
+        {type = "item", name = "vitrified-glass", amount = 1},
+    },
+    main_product = "vitrified-glass",
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power-mk01")
 
 
 --plutonium washing

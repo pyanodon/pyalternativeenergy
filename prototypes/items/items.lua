@@ -346,6 +346,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "vitrified-glass",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/vitrified-glass.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-nuclear",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "sb-hpo-pu",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/sb-hpo-pu.png",
     icon_size = 64,

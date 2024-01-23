@@ -33,7 +33,6 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 1000},
-        {type = "fluid", name = "reactor-waste-1", amount = 100}
     },
     main_product = "molten-fluoride-thorium-pa233",
     subgroup = "py-nuclear",
@@ -52,6 +51,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "molten-fluoride-thorium", amount = 900},
+        {type = "fluid", name = "hot-molten-salt", amount = 10000, temperature = 5000},
         {type = "item", name = "pa-233", amount = 10}
     },
     main_product = "pa-233",

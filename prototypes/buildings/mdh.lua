@@ -55,7 +55,7 @@ ENTITY {
     fluid_input = {
         name = "neutron",
         amount = 0.0,
-        minimum_temperature = 500.0
+        minimum_temperature = 900.0
     },
     fluid_box = {
         base_area = 15,
