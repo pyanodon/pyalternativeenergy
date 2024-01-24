@@ -6,6 +6,7 @@ Date: 2024-1-??
     - fixed that the mk04 thermosolar GUI was displaying some incorrect values
     - fixed missing item description for vitrified glass
     - fixed a crash with the aerial turbine GUI
+    - fixed that the new thermosolar mk03/mk04 wiki page from v1.2.11 was not showing up in-game (https://github.com/pyanodon/pybugreports/issues/384)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.13
 Date: 2024-1-23
