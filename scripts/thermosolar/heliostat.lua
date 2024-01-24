@@ -4,7 +4,7 @@ Heliostat = {}
 Heliostat.events = {}
 
 Heliostat.max_heliostats = 1936
-Heliostat.mk04_turbines_supported_per_maxed_tower = 50
+Heliostat.mk04_turbines_supported_per_maxed_tower = 0.2
 
 function Heliostat.is_heliostat(heliostat)
 	return not not (string.match(heliostat.name, 'solar%-tower%-panel%d+'))

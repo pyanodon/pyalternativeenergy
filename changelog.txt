@@ -3,6 +3,7 @@ Version: 1.2.14
 Date: 2024-1-??
   Fixes:
     - fixed that sinter unit and direct reduction plant were unlocked way earlier than needed
+    - fixed that the mk04 thermosolar GUI was displaying some incorrect values
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.13
 Date: 2024-1-23
