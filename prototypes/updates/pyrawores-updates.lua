@@ -517,9 +517,11 @@ data.raw['assembling-machine']['wet-scrubber-mk02'].energy_usage = "2MW"
 data.raw['assembling-machine']['wet-scrubber-mk03'].energy_usage = "3MW"
 data.raw['assembling-machine']['wet-scrubber-mk04'].energy_usage = "4MW"
 
-data.raw.resource['uranium-ore'].minable.required_fluid = nil
-data.raw.resource['uranium-ore'].minable.fluid_amount = nil
-data.raw.resource['uranium-ore'].minable.mining_time = 1
+if data.raw.resource['uranium-ore'] then
+	data.raw.resource['uranium-ore'].minable.required_fluid = nil
+	data.raw.resource['uranium-ore'].minable.fluid_amount = nil
+	data.raw.resource['uranium-ore'].minable.mining_time = 1
+end
 data.raw.resource['uranium-rock'].minable.required_fluid = nil
 data.raw.resource['uranium-rock'].minable.fluid_amount = nil
 data.raw.resource['uranium-rock'].minable.mining_time = 1
