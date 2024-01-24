@@ -150,6 +150,7 @@ Solar_Updraft_Tower.events.on_gui_opened = function(event)
 	local entity = event.entity
 	if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= 'sut' then return end
 
+    if player.gui.screen.sut_gui then player.gui.screen.sut_gui.destroy() end
 	local main_frame = player.gui.screen.add{type = 'frame', name = 'sut_gui', caption = entity.prototype.localised_name, direction = 'vertical'}
 	main_frame.tags = {unit_number = entity.unit_number}
 	main_frame.auto_center = true
