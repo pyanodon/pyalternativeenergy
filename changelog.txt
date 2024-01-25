@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.16
+Date: 2024-1-??
+  Fixes:
+    - fixed purex waste was creating a positive feed back loop. adjusted a number purex recipes to better balance the process
+---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: 2024-1-24
   Fixes:
