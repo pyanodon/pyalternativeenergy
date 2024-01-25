@@ -34,13 +34,13 @@ RECIPE {
     name = "u232-u233",
     category = "pa",
     enabled = false,
-    energy_required = 0.5,
+    energy_required = 5,
     ingredients = {
         {type = "item", name = "u-232", amount = 10},
         {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item", name = "u-233", amount = 3, probability = 0.999},
+        {type = "item", name = "u-233", amount = 5, probability = 0.999},
     },
     main_product = "u-233",
     subgroup = "py-nuclear",
@@ -253,7 +253,7 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item", name = "pu-239", amount = 9},
+        {type = "item", name = "pu-239", amount = 8},
     },
     main_product = "pu-239",
     subgroup = "py-nuclear",
@@ -351,8 +351,8 @@ RECIPE {
         {type = "item", name = "americium-oxide", amount = 5},
     },
     results = {
-        {type = "item", name = "am-241", amount = 10, probability = 0.5},
-        {type = "item", name = "am-243", amount = 10, probability = 0.5},
+        {type = "item", name = "am-241", amount = 5, probability = 0.5},
+        {type = "item", name = "am-243", amount = 5, probability = 0.5},
     },
     main_product = "am-241",
     subgroup = "py-nuclear",
