@@ -64,8 +64,6 @@ data.raw.technology["atomic-bomb"].unit.ingredients = {
 	{"py-science-pack-2", 1}
 }
 
-log(serpent.block(data.raw.technology['atomic-bomb']))
-
 RECIPE('atomic-bomb'):replace_ingredient('fuelrod-mk01', 'pu-239'):replace_ingredient('neuromorphic-chip', 'controler-mk02')
 RECIPE('uranium-rounds-magazine'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('uranium-cannon-shell'):replace_ingredient('uranium-238', 'u-238')
