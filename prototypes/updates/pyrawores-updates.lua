@@ -49,10 +49,10 @@ RECIPE("quartz-mine"):add_ingredient({type = "item", name = "self-assembly-monol
 RECIPE("tin-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("uranium-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("zinc-mine"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient{type = "item", name = "crco-alloy", amount = 10}:add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
-RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','advanced-circuit'):remove_unlock('machines-mk05'):add_unlock('smelters-mk02'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("sinter-unit"):replace_ingredient('intelligent-unit','advanced-circuit'):remove_unlock('machines-mk05'):add_unlock('smelters-mk03'):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("sinter-unit"):replace_ingredient("advanced-foundry-mk03", "advanced-foundry-mk02"):replace_ingredient("super-alloy", "stainless-steel")
 RECIPE("drp"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):replace_ingredient("processing-unit", "advanced-circuit"):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
-RECIPE("drp"):remove_unlock("machines-mk04"):add_unlock("smelters-mk02")
+RECIPE("drp"):remove_unlock("machines-mk04"):add_unlock("mof")
 
 RECIPE("bof-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("smelter-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 15}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }

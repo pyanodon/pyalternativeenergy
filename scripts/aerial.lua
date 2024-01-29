@@ -732,6 +732,7 @@ Aerial.events.on_ai_command_completed = function(event)
 end
 
 local function build_aerial_gui(player, aerial_data)
+    if player.gui.screen.aerial_gui then player.gui.screen.aerial_gui.destroy() end
     player.opened = nil
     local entity = aerial_data.entity
 
