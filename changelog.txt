@@ -1,8 +1,35 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
-Date: 2024-1-??
+Date: 2024-1-29
   Fixes:
     - fixed purex waste was creating a positive feed back loop. adjusted a number purex recipes to better balance the process
+    - reduced purex waste 1 output in purex concentrate 2 (40-> 30)
+    - reduced purex waste 1 output in purex concentrate 3 (40-> 20)
+    - reduced purex waste 1 output in purex concentrate 4 (40-> 5)
+    - reduced purex waste 1 output in purex concentrate 5 (40-> 10)
+    - reduced purex waste 1 output in purex PU concentrate 1 (40-> 5)
+    - increased purex waste 1 input in purex waste 2 (100 -> 200)
+    - increased purex waste 1 input in purex waste 3 (50 -> 100)
+    - increased purex waste 1 input in vitrified glass (200 -> 250)
+    - reduced purex concentrate 5 output in vitrified glass (40 -> 15)
+    - reduced purex U concentrate 1 output in vitrified glass (40 -> 20)
+    - increased purex raffinate 1 output in purex PU concentrate 2 (20-> 30)
+    - increased purex raffinate 1 output in purex U concentrate 2 (20-> 30)
+    - increased purex U concentrate 2 input in purex U concentrate 3 (5 -> 50)
+    - increased purex U concentrate 3 output in purex U concentrate 3 (5 -> 10)
+    - reduced purex raffinate 1 output in purex U concentrate 3 (20 -> 10)
+    - increased purex raffinate 1 input in purex raffinate 2 (100 -> 150)
+    - increased purex raffinate 2 input in purex raffinate 3 (100 -> 150)
+    - increased purex raffinate 3 input in Americum curium waste stream (75 -> 100)
+    - increased Americum curium waste stream input in Americum oxide waste stream (60 -> 80)
+    - increased Americum oxide waste stream input in Curium oxide waste stream (50 -> 60)
+    - reduced Curium oxide waste stream output in Curium oxide waste stream (25 -> 20)
+    - increased Curium oxide waste stream input in Curium-250 (50 -> 60)
+    - increased crafting time in Uranium-233
+    - increased Uranium-233 output in Uranium-233 (3 -> 5)
+    - reduced Plutonium-239 output in Plutonium-239 (9 -> 8)
+    - reduced Americium-241 output in Americium-241 (10 -> 5)
+    - reduced Americium-243 output in Americium-241 (10 -> 5)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: 2024-1-24
