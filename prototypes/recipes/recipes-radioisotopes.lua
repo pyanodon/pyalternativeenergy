@@ -408,7 +408,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "cm-250", amount = 8},
-        {type = "fluid", name = "neutron", amount = 200},
+        {type = "fluid", name = "neutron", amount = 200, temperature = 100},
     },
     main_product = "cm-250",
     subgroup = "py-nuclear",
