@@ -33,6 +33,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 1000},
+        {type = "fluid", name = "neutron", amount = 250, temperature = 100},
     },
     main_product = "molten-fluoride-thorium-pa233",
     subgroup = "py-nuclear",
