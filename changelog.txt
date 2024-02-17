@@ -4,6 +4,7 @@ Date: ???
   Fixes:
     - buffed # of pipe connections on mk3 turbine from 4->8    (https://github.com/pyanodon/pybugreports/issues/407)
     - buffed # of pipe connections on mk4 turbine from 4->16   (https://github.com/pyanodon/pybugreports/issues/407)
+    - fixed a typo in Yellowcake isotope seperation -> separation
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
 Date: 2024-1-29
