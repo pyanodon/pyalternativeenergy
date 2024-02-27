@@ -390,8 +390,8 @@ while enrichment < 100 do
 						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1}
 				},
 				results = {
-						{type = "fluid", name = "uf6", amount = 150, temperature = math.floor(u235*100)},
-						{type = "fluid", name = "uf6", amount = 250, temperature = math.floor(u238*100)},
+						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
+						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238*100)},
 				},
 				main_product = "uf6",
 				subgroup = "py-rawores-uranium",
@@ -456,8 +456,8 @@ while duf > duf_min do
 						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 1}
 				},
 				results = {
-						{type = "fluid", name = "uf6", amount = 250, temperature = math.floor(u235*100)},
-						{type = "fluid", name = "uf6", amount = 150, temperature = math.floor(u238*100)},
+						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
+						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238*100)},
 				},
 				main_product = "uf6",
 				subgroup = "py-rawores-uranium-depleted",
