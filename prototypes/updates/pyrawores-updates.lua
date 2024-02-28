@@ -152,6 +152,12 @@ RECIPE {
 	subgroup = "py-rawores-uranium",
 }:add_unlock("nuclear-power")
 
+RECIPE("molten-stainless-steel"):remove_ingredient("fuelrod-mk02")
+RECIPE("molten-super-steel"):remove_ingredient("fuelrod-mk02")
+RECIPE("full-molten-super-steel-1"):remove_ingredient("fuelrod-mk04")
+RECIPE("full-molten-stainless-steel-4"):remove_ingredient("fuelrod-mk03")
+
+
 RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'u-235'):add_unlock('nuclear-power-mk02')
 RECIPE("fuelrod-mk03"):replace_ingredient("lead-conatiner", "coated-container")
 
