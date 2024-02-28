@@ -81,6 +81,12 @@ ENTITY {
             {type = "input-output", position = {-3.5, 5}},
             {type = "input-output", position = {3.5, -5}},
             {type = "input-output", position = {-3.5, -5}},
+
+            
+            {type = "input-output", position = {3.5, 4}},
+            {type = "input-output", position = {-3.5, 4}},
+            {type = "input-output", position = {3.5, -4}},
+            {type = "input-output", position = {-3.5, -4}},
         }
     },
     energy_source = {

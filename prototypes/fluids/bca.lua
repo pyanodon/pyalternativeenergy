@@ -21,7 +21,7 @@ FLUID {
     name = "bca",
     icon = "__pyalternativeenergygraphics__/graphics/icons/bca.png",
     icon_size = 64,
-    default_temperature = 15,
+    default_temperature = 10,
     --heat_capacity = "1KJ",
     base_color = {r = 0.6, g = 0.6, b = 0.65},
     flow_color = {r = 1, g = 1, b = 1},
