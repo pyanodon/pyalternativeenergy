@@ -655,8 +655,8 @@ data:extend({
 	{
 		type = "ammo",
 		name = "nuclear-artillery-shell",
-		icon = "__base__/graphics/icons/artillery-shell.png",
-		icon_size = 64, icon_mipmaps = 4,
+		icon = "__pyalternativeenergygraphics__/graphics/icons/fatmanbomb_64.png",
+		icon_size = 64,
 		ammo_type =
 		{
 		  category = "artillery-shell",
