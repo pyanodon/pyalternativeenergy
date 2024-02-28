@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.18
+Date: 2024-2-28
+  Fixes:
+    - added project viking
+    - removed fuelrods from all stainless and super steel recipes
+    - removed pu 239 to uf6 recipe
+---------------------------------------------------------------------------------------------------
 Version: 1.2.17
 Date: ???
   Fixes:
