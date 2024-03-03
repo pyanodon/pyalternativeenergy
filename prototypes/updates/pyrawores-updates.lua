@@ -132,7 +132,7 @@ RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessin
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-mk04')
 
-RECIPE("fuelrod-mk01-1"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "pu-239", amount = 1}):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing')
+RECIPE("fuelrod-mk01-1"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "pu-239", amount = 1}):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing'):set_fields{category = "crafting"}
 
 RECIPE {
 	type = "recipe",
@@ -151,6 +151,12 @@ RECIPE {
 	main_product = "fuelrod-mk02",
 	subgroup = "py-rawores-uranium",
 }:add_unlock("nuclear-power")
+
+RECIPE("molten-stainless-steel"):remove_ingredient("fuelrod-mk02")
+RECIPE("molten-super-steel"):remove_ingredient("fuelrod-mk02")
+RECIPE("full-molten-super-steel-1"):remove_ingredient("fuelrod-mk04")
+RECIPE("full-molten-stainless-steel-4"):remove_ingredient("fuelrod-mk03")
+
 
 RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'u-235'):add_unlock('nuclear-power-mk02')
 RECIPE("fuelrod-mk03"):replace_ingredient("lead-conatiner", "coated-container")
@@ -390,8 +396,8 @@ while enrichment < 100 do
 						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1}
 				},
 				results = {
-						{type = "fluid", name = "uf6", amount = 150, temperature = math.floor(u235*100)},
-						{type = "fluid", name = "uf6", amount = 250, temperature = math.floor(u238*100)},
+						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
+						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238*100)},
 				},
 				main_product = "uf6",
 				subgroup = "py-rawores-uranium",
@@ -456,8 +462,8 @@ while duf > duf_min do
 						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 1}
 				},
 				results = {
-						{type = "fluid", name = "uf6", amount = 250, temperature = math.floor(u235*100)},
-						{type = "fluid", name = "uf6", amount = 150, temperature = math.floor(u238*100)},
+						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
+						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238*100)},
 				},
 				main_product = "uf6",
 				subgroup = "py-rawores-uranium-depleted",

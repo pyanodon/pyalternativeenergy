@@ -187,7 +187,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "purex-concentrate-2", amount = 60},
-        {type = "fluid", name = "purex-waste-1", amount = 40},
+        {type = "fluid", name = "purex-waste-1", amount = 30},
     },
     main_product = "purex-concentrate-2",
     subgroup = "py-nuclear-waste",
@@ -207,7 +207,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-concentrate-3", amount = 50},
         {type = "fluid", name = "purex-concentrate-4", amount = 50},
-        {type = "fluid", name = "purex-waste-1", amount = 40},
+        {type = "fluid", name = "purex-waste-1", amount = 20},
     },
     main_product = "purex-concentrate-3",
     subgroup = "py-nuclear-waste",
@@ -227,7 +227,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-concentrate-5", amount = 50},
         {type = "fluid", name = "purex-pu-concentrate-2", amount = 50},
-        {type = "fluid", name = "purex-waste-1", amount = 40},
+        {type = "fluid", name = "purex-waste-1", amount = 10},
     },
     main_product = "purex-concentrate-5",
     subgroup = "py-nuclear-waste",
@@ -246,7 +246,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
         {type = "fluid", name = "purex-concentrate-4", amount = 60},
-        {type = "fluid", name = "purex-waste-1", amount = 40},
+        {type = "fluid", name = "purex-waste-1", amount = 5},
     },
     main_product = "purex-concentrate-4",
     subgroup = "py-nuclear-waste",
@@ -262,7 +262,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-waste-1", amount = 100},
+        {type = "fluid", name = "purex-waste-1", amount = 200},
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
     },
     results = {
@@ -282,7 +282,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-waste-2", amount = 50},
+        {type = "fluid", name = "purex-waste-2", amount = 100},
         {type = "fluid", name = "chlorine", amount = 100},
     },
     results = {
@@ -301,14 +301,14 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "purex-waste-3", amount = 200},
+        {type = "fluid", name = "purex-waste-3", amount = 250},
         {type = 'item', name = 'stainless-steel', amount = 2},
         {type = 'item', name = 'sugar', amount = 5},
         {type = "fluid", name = "molten-glass", amount = 50}
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-5", amount = 40},
-        {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
+        {type = "fluid", name = "purex-concentrate-5", amount = 15},
+        {type = "fluid", name = "purex-u-concentrate-1", amount = 20},
         {type = "item", name = "molybdenum-ore", amount = 5},
         {type = "item", name = "vitrified-glass", amount = 1},
     },
@@ -357,7 +357,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-pu-concentrate-1", amount = 40},
         {type = "fluid", name = "purex-concentrate-3", amount = 40},
-        {type = "fluid", name = "purex-waste-1", amount = 40},
+        {type = "fluid", name = "purex-waste-1", amount = 5},
     },
     main_product = "purex-pu-concentrate-1",
     subgroup = "py-nuclear-waste",
@@ -377,7 +377,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-pu-concentrate-2", amount = 40},
         {type = "fluid", name = "purex-concentrate-4", amount = 40},
-        {type = "fluid", name = "purex-raffinate", amount = 20},
+        {type = "fluid", name = "purex-raffinate", amount = 30},
     },
     main_product = "purex-pu-concentrate-2",
     subgroup = "py-nuclear-waste",
@@ -453,7 +453,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "purex-u-concentrate-2", amount = 50},
-        {type = "fluid", name = "purex-raffinate", amount = 20},
+        {type = "fluid", name = "purex-raffinate", amount = 30},
     },
     main_product = "purex-u-concentrate-2",
     subgroup = "py-nuclear-waste",
@@ -467,13 +467,13 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "purex-u-concentrate-2", amount = 5},
+        {type = "fluid", name = "purex-u-concentrate-2", amount = 50},
         {type = "item", name = "tbp", amount = 1},
         {type = "fluid", name = "kerosene", amount = 100},
     },
     results = {
-        {type = "fluid", name = "purex-u-concentrate-3", amount = 5},
-        {type = "fluid", name = "purex-raffinate", amount = 20},
+        {type = "fluid", name = "purex-u-concentrate-3", amount = 10},
+        {type = "fluid", name = "purex-raffinate", amount = 10},
         {type = "item", name = "tbp", amount = 1, probability = 0.5},
     },
     main_product = "purex-u-concentrate-3",
@@ -506,7 +506,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-raffinate", amount = 100},
+        {type = "fluid", name = "purex-raffinate", amount = 150},
         {type = "fluid", name = "ammonia", amount = 50}
     },
     results = {
@@ -525,7 +525,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-raffinate-2", amount = 100},
+        {type = "fluid", name = "purex-raffinate-2", amount = 150},
         {type = "fluid", name = "acid-strip-solution", amount = 40}
     },
     results = {
@@ -544,7 +544,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-raffinate-3", amount = 75},
+        {type = "fluid", name = "purex-raffinate-3", amount = 100},
         {type = "item", name = "sodium-carbonate", amount = 4}
     },
     results = {
@@ -563,7 +563,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "ac", amount = 60},
+        {type = "fluid", name = "ac", amount = 80},
         {type = "fluid", name = "oxygen", amount = 200}
     },
     results = {
@@ -580,11 +580,11 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "ac-oxygenated", amount = 50},
+        {type = "fluid", name = "ac-oxygenated", amount = 60},
         {type = "item", name = "th-oxide", amount = 10}
     },
     results = {
-        {type = "fluid", name = "c-oxygenated", amount = 25},
+        {type = "fluid", name = "c-oxygenated", amount = 20},
         {type = "item", name = "americium-oxide", amount = 5},
     },
     main_product = "americium-oxide",
@@ -599,7 +599,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "c-oxygenated", amount = 50},
+        {type = "fluid", name = "c-oxygenated", amount = 60},
         {type = "item", name = "lithium", amount = 3}
     },
     results = {
@@ -765,6 +765,7 @@ RECIPE {
     subgroup = "py-nuclear",
 }:add_unlock("uranium-mk01")
 
+--[[
 RECIPE {
     type = "recipe",
     name = "pu239-uf6",
@@ -781,3 +782,4 @@ RECIPE {
     subgroup = "py-nuclear",
     order = "g"
 }:add_unlock("nuclear-power")
+]]--
