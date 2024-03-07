@@ -96,20 +96,25 @@ function Wind.draw_windmill(windmill_data, direction)
     end
 end
 
-local wind_dir_names = {
-    '-north',
-    '-northeast',
-    '-east',
-    '-southeast',
-    '-south',
-    '-southwest',
-    '-west',
-    '-northwest',
-}
-
 function Wind.calculate_wind_direction(surface)
-    local wind_dir = math.ceil((surface.wind_orientation + 1/16) % 1 * 8)
-    return wind_dir_names[wind_dir]
+    local wind_dir = surface.wind_orientation
+    if wind_dir > 0.0625 and wind_dir <= 0.1875 then
+        return '-northeast'
+    elseif wind_dir > 0.1875 and wind_dir <= 0.3125 then
+        return '-east'
+    elseif wind_dir > 0.3125 and wind_dir <= 0.4375 then
+        return '-southeast'
+    elseif wind_dir > 0.4375 and wind_dir <= 0.5625 then
+        return '-south'
+    elseif wind_dir > 0.5625 and wind_dir <= 0.6875 then
+        return '-southwest'
+    elseif wind_dir > 0.6875 and wind_dir <= 0.8125 then
+        return '-west'
+    elseif wind_dir > 0.8125 and wind_dir <= 0.9375 then
+        return '-northwest'
+    else
+        return '-north'
+    end
 end
 
 local sin = math.sin
