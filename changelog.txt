@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.21
-Date: 2024-??
+Date: 2024-3-13
   Fixes:
     - fixed rare crash with wind energy (https://github.com/pyanodon/pybugreports/issues/440)
+    - fixed that several doping recipes were missing productivity
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.20
 Date: 2024-2-28
