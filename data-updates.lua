@@ -365,6 +365,9 @@ local recipes_list =
   "yaw-drive-mk04",
   "yellow-dextrine",
 
+  "light-n2",
+  "p-dope2",
+
   -- Fluids
   "allylamine",
   "aniline-01",
