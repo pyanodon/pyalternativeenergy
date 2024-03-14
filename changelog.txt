@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.22
+Date: ?
+  Fixes:
+    - fixed rare crash with wind energy (https://github.com/pyanodon/pybugreports/issues/440)
+    - allowed productivity in numal food (https://github.com/pyanodon/pybugreports/issues/417)
+    - Deacronymized item names for EVA and NdFeB. Should be easier to search.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.21
 Date: 2024-3-13
   Fixes:

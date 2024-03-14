@@ -249,6 +249,8 @@ local recipes_list =
   "erbium",
   "exoskeleton-equipment",
   "fan",
+  "numal-food-01",
+  "numal-food-02",
   "fbg",
   "fes",
   "flo",
