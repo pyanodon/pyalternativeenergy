@@ -1,25 +1,28 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.20
+Version: 1.2.22
 Date: ?
   Fixes:
     - fixed rare crash with wind energy (https://github.com/pyanodon/pybugreports/issues/440)
     - allowed productivity in numal food (https://github.com/pyanodon/pybugreports/issues/417)
     - Deacronymized item names for EVA and NdFeB. Should be easier to search.
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.19
+Version: 1.2.21
+Date: 2024-3-13
+  Fixes:
+    - fixed rare crash with wind energy (https://github.com/pyanodon/pybugreports/issues/440)
+    - fixed that several doping recipes were missing productivity
+---------------------------------------------------------------------------------------------------
+Version: 1.2.20
 Date: 2024-2-28
   Fixes:
     - buffed # of pipe connections on mk3 turbine from 4->8 (https://github.com/pyanodon/pybugreports/issues/407)
     - buffed # of pipe connections on mk4 turbine from 4->16 (https://github.com/pyanodon/pybugreports/issues/407)
     - fixed a typo in Yellowcake isotope seperation -> separation
     - fixed Benzene-Cyanoacrlic Acid being labeled as a gas at default temp. changed to a liquid. (https://github.com/pyanodon/pybugreports/issues/390)
----------------------------------------------------------------------------------------------------
-Version: 1.2.18
-Date: 2024-2-28
-  Fixes:
     - added project viking
     - removed fuelrods from all stainless and super steel recipes
     - removed pu 239 to uf6 recipe
+    - updated tech tree cache
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
 Date: 2024-1-29
