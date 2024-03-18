@@ -47,6 +47,7 @@ DATA {
     autoplace = {
         name = "geothermal-crack",
         order = "b-geothermal-crac",
+        control = "geothermal-crack",
         -- We return the chance of spawning on any given tile here
         probability_expression = noise.define_noise_function( function(x, y, tile, map)
 
