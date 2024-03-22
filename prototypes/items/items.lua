@@ -225,6 +225,17 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "plutonium-oxide-mox",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/plutonium-oxide-mox.png",
+    icon_size = 64,
+    flags = {},
+    subgroup = "py-nuclear",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "pu-238",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-238.png",
     icon_size = 64,

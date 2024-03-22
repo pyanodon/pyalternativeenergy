@@ -49,9 +49,9 @@ ENTITY {
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 0
+        module_slots = 3
     },
-    allowed_effects = {},
+    allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"biomass-powerplant-mk03"},
     crafting_speed = 3,
     energy_source =
