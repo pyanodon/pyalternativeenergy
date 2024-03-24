@@ -73,7 +73,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item", name = "pu-239", amount = 8},
-        {type = "item", name = "u-238", amount = 10},
+        {type = "item", name = "u-238", amount = 25},
     },
     results = {
         {type = "fluid", name = "puo2", amount = 250, temperature = 9999}

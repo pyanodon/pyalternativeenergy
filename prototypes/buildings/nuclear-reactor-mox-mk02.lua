@@ -1,40 +1,31 @@
 RECIPE {
     type = "recipe",
-    name = "nuclear-reactor-mk02",
-    energy_required = 5,
+    name = "nuclear-reactor-mox-mk02",
+    energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nuclear-reactor-mk01", 1},
-        {"advanced-circuit", 150},
-        {"small-parts-02", 700},
-        {"refined-concrete", 500},
-        {"stainless-steel", 1000},
-        {"engine-unit", 10},
-        {"pump", 10},
-        {"nxsb-alloy", 50},
-        {"mechanical-parts-02", 10},
-        {'self-assembly-monolayer', 50},
+        {"nuclear-reactor-mk02", 1},
     },
     results = {
-        {"nuclear-reactor-mk02", 1}
+        {"nuclear-reactor-mox-mk02", 1}
     }
 }:add_unlock("nuclear-power-mk02")
 
 ITEM {
     type = "item",
-    name = "nuclear-reactor-mk02",
+    name = "nuclear-reactor-mox-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk02.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk02",
     order = "a",
-    place_result = "nuclear-reactor-mk02",
+    place_result = "nuclear-reactor-mox-mk02",
     stack_size = 10
 }
 
 ENTITY {
     type = "assembling-machine",
-    name = "nuclear-reactor-mk02",
+    name = "nuclear-reactor-mox-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
@@ -49,7 +40,7 @@ ENTITY {
         module_slots = 0
     },
     allowed_effects = {},
-    crafting_categories = {"nuclear-fission"},
+    crafting_categories = {"nuclear-mox-fission"},
     crafting_speed = 5,
     source_inventory_size = 1,
     result_inventory_size = 1,
