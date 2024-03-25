@@ -29,7 +29,7 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk02.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "nuclear-reactor-mk02"},
+    minable = {mining_time = 0.1, result = "nuclear-reactor-mox-mk02"},
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
