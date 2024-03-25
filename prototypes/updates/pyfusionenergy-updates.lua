@@ -1,6 +1,6 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
-data.raw.fluid["pressured-steam"].heat_capacity = "2KJ"
+data.raw.fluid["pressured-steam"].heat_capacity = "8KJ"
 
 RECIPE("nuclear-sample"):replace_ingredient('plutonium', {'pu-238', 1}):remove_unlock('production-science-pack'):add_unlock('chemical-science-pack')
 

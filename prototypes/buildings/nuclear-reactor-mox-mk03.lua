@@ -42,7 +42,7 @@ ENTITY {
     },
     allowed_effects = {},
     crafting_categories = {"nuclear-mox-fission"},
-    crafting_speed = 10,
+    crafting_speed = 3,
     source_inventory_size = 1,
     result_inventory_size = 1,
     energy_source =
@@ -71,7 +71,7 @@ ENTITY {
     --   fluid_usage_per_tick = (2/60),
       maximum_temperature = 3000,
     },
-    energy_usage = "300kW",
+    energy_usage = "1500kW",
     animation = {
         layers = {
             {
