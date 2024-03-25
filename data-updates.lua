@@ -249,6 +249,8 @@ local recipes_list =
   "erbium",
   "exoskeleton-equipment",
   "fan",
+  "numal-food-01",
+  "numal-food-02",
   "fbg",
   "fes",
   "flo",
@@ -364,6 +366,9 @@ local recipes_list =
   "yaw-drive-mk03",
   "yaw-drive-mk04",
   "yellow-dextrine",
+
+  "light-n2",
+  "p-dope2",
 
   -- Fluids
   "allylamine",
