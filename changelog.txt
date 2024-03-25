@@ -1,10 +1,19 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.22
-Date: ?
+Date: 2024-3-24
   Fixes:
     - fixed rare crash with wind energy (https://github.com/pyanodon/pybugreports/issues/440)
     - allowed productivity in numal food (https://github.com/pyanodon/pybugreports/issues/417)
     - Deacronymized item names for EVA and NdFeB. Should be easier to search.
+    - fixed an issue with some resources not being able to be disabled on map setup screen
+    - enabled modules for biomass, coal, gas, and oil power plants
+  Nuclear:
+    - reenabled mox cycle for molten salt nuclear reactors
+    - added nuclear mox reactor mk01-mk04
+    - added plutonium dioxide for mox reactor fuel
+    - added mox reactor waste and recycling
+    - adjusted recipe times and item amounts in particle accelerator recipes to reduce amount of required entities
+    - adjusted pressurized steam numbers to reduce fluid volume and entity count of heat exchangers by 4. should output more or less the same amount of power
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.21
 Date: 2024-3-13
