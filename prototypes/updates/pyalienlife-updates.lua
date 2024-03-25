@@ -324,7 +324,7 @@ ITEM("simik-mk02"):set_fields{fuel_category = "simik", fuel_value = "800MJ", bur
 ITEM("simik-mk03"):set_fields{fuel_category = "simik", fuel_value = "1100MJ", burnt_result = "used-simik-mk03"}
 ITEM("simik-mk04"):set_fields{fuel_category = "simik", fuel_value = "1500MJ", burnt_result = "used-simik-mk04"}
 
-RECIPE("nano-cellulose"):remove_ingredient('steam'):add_ingredient({type = 'fluid', name = 'pressured-steam', amount = 100})
+RECIPE("nano-cellulose"):remove_ingredient('steam'):add_ingredient({type = 'fluid', name = 'pressured-steam', amount = 50})
 RECIPE("zymogens"):add_ingredient{type = "item", name = "zungror-cocoon", amount = 2}
 RECIPE('brain-cartridge-02'):replace_ingredient("oleochemicals", "fatty-acids")
 
