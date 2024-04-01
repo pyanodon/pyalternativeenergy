@@ -5,7 +5,19 @@ Wiki.events.on_init = function()
     remote.call('pywiki', 'add_section', 'alternativeenergy')
 
     remote.call('pywiki', 'add_page', {
-        name = 'turbines',
+        name = 'steam-engine',
+        section = 'alternativeenergy',
+        text_only = true
+    })
+
+    remote.call('pywiki', 'add_page', {
+        name = 'steam-turbine',
+        section = 'alternativeenergy',
+        text_only = true
+    })
+
+    remote.call('pywiki', 'add_page', {
+        name = 'hp-steam-turbines',
         section = 'alternativeenergy',
         text_only = true
     })
@@ -36,6 +48,12 @@ Wiki.events.on_init = function()
 
     remote.call('pywiki', 'add_page', {
         name = 'microwave-receiver',
+        section = 'alternativeenergy',
+        text_only = true
+    })
+
+    remote.call('pywiki', 'add_page', {
+        name = 'nuclear-fission',
         section = 'alternativeenergy',
         text_only = true
     })
