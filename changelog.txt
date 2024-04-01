@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.24
+Date: 2024-4-1
+  Fixes:
+    - updated steam power codex pages
+    - added nuclear power codex page
+    - changed mox reactor to return mox reactor on pickup instead of normal reactor
+---------------------------------------------------------------------------------------------------
 Version: 1.2.23
 Date: 2024-3-24
   Fixes:
