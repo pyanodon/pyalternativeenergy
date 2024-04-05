@@ -43,6 +43,7 @@ ENTITY{
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation'},
     minable = {mining_time = 0.5, result = 'numal-reef-mk02'},
+    placeable_by = {item = "numal-reef-mk02", count = 1},
     fast_replaceable_group = 'numal',
     next_upgrade = "numal-reef-mk03-placer",
     max_health = 100,

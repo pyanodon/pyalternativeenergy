@@ -44,6 +44,7 @@ ENTITY{
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation'},
     minable = {mining_time = 0.5, result = 'numal-reef-mk04'},
+    placeable_by = {item = "numal-reef-mk04", count = 1},
     fast_replaceable_group = 'numal',
     max_health = 100,
     corpse = 'big-remnants',
