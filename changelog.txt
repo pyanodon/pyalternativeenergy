@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.24
-Date: 2024-4-1
+Date: ?
   Fixes:
     - Buffed grod mk02+ recipes from 400 second recipe time down to 40 seconds. (https://github.com/pyanodon/pybugreports/issues/424)
     - Changed the power output priority of the mdh generator from primary to secondary. (https://github.com/pyanodon/pybugreports/issues/462)
+    - Removed metastable quasicrystals from the antelope enclosure recipe
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.24
 Date: 2024-4-1
