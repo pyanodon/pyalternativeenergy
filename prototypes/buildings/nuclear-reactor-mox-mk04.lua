@@ -11,6 +11,19 @@ RECIPE {
     }
 }:add_unlock("nuclear-power-mk04")
 
+RECIPE {
+    type = "recipe",
+    name = "nuclear-reactor-mox-mk04-uncraft",
+    energy_required = 1,
+    enabled = false,
+    ingredients = {
+        {"nuclear-reactor-mox-mk04", 1}
+    },
+    results = {
+        {"nuclear-reactor-mk04", 1},
+    }
+}:add_unlock("nuclear-power-mk04")
+
 ITEM {
     type = "item",
     name = "nuclear-reactor-mox-mk04",
