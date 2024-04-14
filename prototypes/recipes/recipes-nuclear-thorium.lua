@@ -3,8 +3,6 @@ RECIPE {
     type = "recipe",
     name = "molten-thorium",
     category = "mixer",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/molten-thorium.png",
-    icon_size = 64,
     enabled = false,
     energy_required = 0.5,
     ingredients = {
