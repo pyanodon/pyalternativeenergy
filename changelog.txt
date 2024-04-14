@@ -6,6 +6,7 @@ Date: ?
     - Changed the power output priority of the mdh generator from primary to secondary. (https://github.com/pyanodon/pybugreports/issues/462)
     - Removed metastable quasicrystals from the antelope enclosure recipe
     - Added an uncrafting recipe from mox nuclear reactors back into standard reactors.
+    - Fixed clipping in the solar panel MK01 and MK04 graphics. (https://github.com/pyanodon/pybugreports/issues/373)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.24
 Date: 2024-4-1
