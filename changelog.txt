@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.24
-Date: ?
+Version: 1.2.25
+Date: 2024-4-15
   Fixes:
     - Buffed grod mk02+ recipes from 400 second recipe time down to 40 seconds. (https://github.com/pyanodon/pybugreports/issues/424)
     - Changed the power output priority of the mdh generator from primary to secondary. (https://github.com/pyanodon/pybugreports/issues/462)
