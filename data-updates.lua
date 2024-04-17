@@ -263,6 +263,7 @@ local recipes_list =
   "gd-mixture",
   "gd-oxalate",
   "gd-stripped-solution",
+  "microwave-satellite",
   "gearbox-mk01",
   "gearbox-mk02",
   "gearbox-mk03",
