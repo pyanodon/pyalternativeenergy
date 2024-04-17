@@ -1715,8 +1715,6 @@ ITEM {
     subgroup = "py-alternativeenergy-special-buildings",
     order = "fa",
     stack_size = 1,
-    fuel_category = 'microwave',
-    fuel_value = "5MJ"
 }
 
 ITEM {

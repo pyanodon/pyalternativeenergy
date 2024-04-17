@@ -6,10 +6,6 @@ data:extend(
   },
   {
     type = "fuel-category",
-    name = "microwave"
-  },
-  {
-    type = "fuel-category",
     name = "quantum"
   },
 }
