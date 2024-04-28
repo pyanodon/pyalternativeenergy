@@ -140,4 +140,4 @@ RECIPE {
     main_product = "pu-242",
     subgroup = "py-nuclear",
     order = "b"
-}:add_unlock("uranium-processing")
+}:add_unlock("nuclear-power")
