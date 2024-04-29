@@ -1,9 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.26
-Date: 2024-4-??
+Date: 2024-4-29
   Changes:
     - The microwave satellite now outputs 4 instead of 1 per craft. It is also affected by productivity modules.
     - The microwave satellite no longer has a fuel value.
+    - Changed the internal name of the rtg to "py-rtg" in order to prevent conflicts with other mods.
+    - Regenerated pyPP cache files.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.25
 Date: 2024-4-15

@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "rtg",
+    name = "py-rtg",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -15,29 +15,29 @@ RECIPE {
         {"mechanical-parts-03", 1},
     },
     results = {
-        {"rtg", 1}
+        {"py-rtg", 1}
     }
 }:add_unlock("nuclear-power-mk02")
 
 ITEM {
     type = "item",
-    name = "rtg",
+    name = "py-rtg",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rtg.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
     order = "a",
-    place_result = "rtg",
+    place_result = "py-rtg",
     stack_size = 10
 }
 
 ENTITY {
     type = "burner-generator",
-    name = "rtg",
+    name = "py-rtg",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rtg.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "rtg"},
+    minable = {mining_time = 0.1, result = "py-rtg"},
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "solar-panel-explosion",
