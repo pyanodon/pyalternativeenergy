@@ -283,7 +283,7 @@ RECIPE("moss-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasi
 RECIPE("sap-extractor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("seaweed-crop-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("pydrive"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 20}):add_ingredient({type = "item", name = "sc-engine", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
-RECIPE("antelope-enclosure-mk01"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 10 }
+RECIPE("antelope-enclosure-mk01"):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 10 }
 RECIPE("collector-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 2 }
 RECIPE("rc-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 12 }
 
@@ -324,7 +324,7 @@ ITEM("simik-mk02"):set_fields{fuel_category = "simik", fuel_value = "800MJ", bur
 ITEM("simik-mk03"):set_fields{fuel_category = "simik", fuel_value = "1100MJ", burnt_result = "used-simik-mk03"}
 ITEM("simik-mk04"):set_fields{fuel_category = "simik", fuel_value = "1500MJ", burnt_result = "used-simik-mk04"}
 
-RECIPE("nano-cellulose"):remove_ingredient('steam'):add_ingredient({type = 'fluid', name = 'pressured-steam', amount = 100})
+RECIPE("nano-cellulose"):remove_ingredient('steam'):add_ingredient({type = 'fluid', name = 'pressured-steam', amount = 50})
 RECIPE("zymogens"):add_ingredient{type = "item", name = "zungror-cocoon", amount = 2}
 RECIPE('brain-cartridge-02'):replace_ingredient("oleochemicals", "fatty-acids")
 
@@ -335,9 +335,9 @@ RECIPE("py-science-pack-4"):add_ingredient { type = "item", name = "mechanical-p
 
 RECIPE("battery-mk01"):remove_unlock("electric-energy-accumulators"):add_unlock("battery-mk01"):replace_ingredient("lead-plate", "pbsb-alloy")
 
-RECIPE("grod-seeds-mk02-soaker"):set_fields{category = 'centrifuging'}:set_fields{energy_required = 400}
-RECIPE("grod-seeds-mk03-soaker"):set_fields{category = 'centrifuging'}:set_fields{energy_required = 400}
-RECIPE("grod-seeds-mk04-soaker"):set_fields{category = 'centrifuging'}:set_fields{energy_required = 400}
+RECIPE("grod-seeds-mk02-soaker"):set_fields{category = 'centrifuging'}:set_fields{energy_required = 40}
+RECIPE("grod-seeds-mk03-soaker"):set_fields{category = 'centrifuging'}:set_fields{energy_required = 40}
+RECIPE("grod-seeds-mk04-soaker"):set_fields{category = 'centrifuging'}:set_fields{energy_required = 40}
 
 RECIPE("brain-cartridge-01"):add_ingredient({type = 'item', name = 'nbalti', amount = 1})
 

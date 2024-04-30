@@ -16,6 +16,22 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "mox-molten-salt-01",
+    category = "nuclear-mox-fission",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "molten-salt", amount = 20000},
+    },
+    results = {
+        {type = "fluid", name = "reactor-waste-2", amount = 200},
+        {type = "fluid", name = "neutron", amount = 200, temperature = 100},
+    },
+    main_product = "reactor-waste-2"
+}:add_unlock("nuclear-power")
+
+RECIPE {
+    type = "recipe",
     name = "thermal-neutron",
     category = "neutron-moderator",
     enabled = false,

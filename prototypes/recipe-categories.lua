@@ -33,6 +33,10 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "nuclear-mox-fission"
+    },
+    {
+        type = "recipe-category",
         name = "neutron-absorber"
     },
     {

@@ -247,7 +247,7 @@ RECIPE {
     name = "pu-238-transmutation",
     category = "pa",
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
         {type = "item", name = "pu-238", amount = 10},
         {type = "fluid", name = "neutron", amount = 20}
@@ -268,13 +268,13 @@ RECIPE {
     name = "pu-239-transmutation",
     category = "pa",
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
-        {type = "item", name = "pu-239", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "item", name = "pu-239", amount = 20},
+        {type = "fluid", name = "neutron", amount = 40}
     },
     results = {
-        {type = "item", name = "pu-240", amount = 10},
+        {type = "item", name = "pu-240", amount = 20},
     },
     main_product = "pu-240",
     subgroup = "py-nuclear",
@@ -288,11 +288,11 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "pu-240", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20}
+        {type = "item", name = "pu-240", amount = 40},
+        {type = "fluid", name = "neutron", amount = 80}
     },
     results = {
-        {type = "item", name = "pu-241", amount = 10},
+        {type = "item", name = "pu-241", amount = 40},
     },
     main_product = "pu-241",
     subgroup = "py-nuclear",
@@ -306,13 +306,13 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "pu-241", amount = 10},
-        {type = "fluid", name = "neutron", amount = 20, minimum_temperature = 750}
+        {type = "item", name = "pu-241", amount = 40},
+        {type = "fluid", name = "neutron", amount = 80, minimum_temperature = 750}
     },
     results = {
-        {type = "item", name = "pu-241", amount = 6},
-        {type = "item", name = "pu-242", amount = 3},
-        {type = "item", name = "am-241", amount = 1},
+        {type = "item", name = "pu-241", amount = 24},
+        {type = "item", name = "pu-242", amount = 12},
+        {type = "item", name = "am-241", amount = 4},
     },
     main_product = "pu-242",
     subgroup = "py-nuclear",
@@ -326,11 +326,11 @@ RECIPE {
     enabled = false,
     energy_required = 2.5,
     ingredients = {
-        {type = "item", name = "pu-242", amount = 10},
+        {type = "item", name = "pu-242", amount = 12},
     },
     results = {
-        {type = "item", name = "am-243", amount = 6},
-        {type = "item", name = "u-238", amount = 3},
+        {type = "item", name = "am-243", amount = 4},
+        {type = "item", name = "u-238", amount = 1},
         {type = "fluid", name = "helium", amount = 10},
     },
     main_product = "am-243",
@@ -411,6 +411,23 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 200, temperature = 100},
     },
     main_product = "cm-250",
+    subgroup = "py-nuclear",
+    order = "b"
+}:add_unlock("nuclear-power-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "cm-250-neutrons",
+    category = "pa",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "item", name = "cm-250", amount = 20},
+    },
+    results = {
+        {type = "fluid", name = "neutron", amount = 2000, temperature = 100},
+    },
+    main_product = "neutron",
     subgroup = "py-nuclear",
     order = "b"
 }:add_unlock("nuclear-power-mk02")

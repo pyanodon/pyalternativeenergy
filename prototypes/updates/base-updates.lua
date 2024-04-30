@@ -38,8 +38,10 @@ RECIPE('electric-furnace'):remove_ingredient('super-steel')
 
 RECIPE('solar-panel-equipment'):remove_ingredient('solar-panel')
 
-for r, _ in pairs(data.raw.recipe) do
-	RECIPE(r):replace_ingredient('solar-panel', 'solar-panel-mk01')
+if not mods.pystellarexpedition then
+	for r, _ in pairs(data.raw.recipe) do
+		RECIPE(r):replace_ingredient('solar-panel', 'solar-panel-mk01')
+	end
 end
 
 RECIPE('chemical-science-pack'):add_ingredient({ type = 'item', name = 'nuclear-sample', amount = 1 }):add_ingredient({ type = 'fluid', name = 'organic-acid-anhydride', amount = 50 })
