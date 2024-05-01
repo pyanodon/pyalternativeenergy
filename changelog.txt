@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.27
-Date: 2024-4-??
+Date: 2024-4-30
   Changes:
     - Fixed that RTG had an unknown key error (https://github.com/pyanodon/pybugreports/issues/477)
+    - Buffed electric boilers from 0 module slots to 3. Allowed electric boilers to be effected by AM:FM beacons.
+    - Electric boilers now have a glow layer in the dark.
+    - Note: the above two changes are only effective if you break and rebuild the boiler.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.26
 Date: 2024-4-29

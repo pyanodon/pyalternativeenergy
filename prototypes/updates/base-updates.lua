@@ -973,3 +973,10 @@ data:extend({
 		height_from_ground = 280 / 64
 	  }
 })
+
+for name, module in pairs(data.raw.module) do
+	if name:find('effectivity%-module') then
+		module.limitation_blacklist = module.limitation_blacklist or {}
+		module.limitation_blacklist[#module.limitation_blacklist+1] = 'electric-boiler-water-to-steam'
+	end
+end
