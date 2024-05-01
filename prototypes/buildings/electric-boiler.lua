@@ -260,12 +260,12 @@ RECIPE {
     ingredients = {{
         type = 'fluid',
         name = 'water',
-        amount = 120 * 5
+        amount = 60 * 5
     }},
     results = {{
         type = 'fluid',
         name = 'steam',
-        amount = 120 * 5,
+        amount = 60 * 5,
         temperature = 250
     }},
     main_product = 'steam'
