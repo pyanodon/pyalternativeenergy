@@ -128,7 +128,7 @@ end
 --ENERGY COSTS--
 
 --ENERGY PRODUCTION DESCRIPTION --
-for name, variance in pairs(require('scripts/wind/variation')) do
+for name, variance in pairs(require('scripts.wind.variation')) do
   variance = {'entity-description.variance', variance * 100}
   -- Handle the surrogate items that show in electric stats, too
   for _, suffix in pairs({'', '-blank'}) do

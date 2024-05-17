@@ -26,7 +26,7 @@ local animated_turbines = {
     ['multiblade'] = true
 }
 
-local variation = require 'variation'
+local variation = require 'scripts.wind.variation'
 local draw_animation, set_animation, valid_animation, set_animation_speed = rendering.draw_animation, rendering.set_animation, rendering.is_valid, rendering.set_animation_speed
 
 Wind.events.on_built = function(event)
