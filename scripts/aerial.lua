@@ -3,7 +3,7 @@ local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 Aerial = {}
 Aerial.events = {}
 
-local function distance(a, b)
+local function calc_distance(a, b)
     local ax, ay = a.x or a[1], a.y or a[2]
     local bx, by = b.x or b[1], b.y or b[2]
     return ((ax - bx) ^ 2 + (ay - by) ^ 2) ^ 0.5
@@ -83,17 +83,17 @@ local function refresh_electric_networks(surface)
                     all_poles[#all_poles + 1] = pole
                 end
             end
-        else
+        else -- Rebuild our pole list and try again next tick
             local all_electric_poles = {}
-            for _, pole in pairs(global.all_electric_poles[surface.index]) do
-                if pole.valid then
-                    all_electric_poles[pole.unit_number] = pole
+            for _, new_pole in pairs(global.all_electric_poles[surface.index]) do
+                if new_pole.valid then
+                    all_electric_poles[new_pole.unit_number] = new_pole
                 end
             end
             global.all_electric_poles[surface.index] = all_electric_poles
             refresh_electric_networks(surface)
             return
-        end        
+        end
     end
     global.electric_networks[surface.index] = networks
     global.existing_turbines_invalid = true
@@ -162,11 +162,11 @@ local function calc_stored_energy(aerial_data)
     local starting_position = aerial_data.starting_position
     local distance_bonus = 1
     if starting_position then
-        local distance = distance(starting_position, entity.position)
+        local distance = calc_distance(starting_position, entity.position)
         distance_bonus = 2 - (1 / (distance ^ 0.5 / 30 + 1))
     end
     if previous_position then
-        local distance = distance(previous_position, entity.position)
+        local distance = calc_distance(previous_position, entity.position)
         return distance * energy_per_distance[entity.name] * distance_bonus, distance_bonus
     end
     return 0, distance_bonus
@@ -237,11 +237,9 @@ Aerial.events[117] = function()
 end
 
 local function set_aerial_base_inventory_filters(inventory)
-    local i = 1
     for turbine, _ in pairs(all_turbines) do
-        for j = 1, math.floor(#inventory / 4) do
+        for i = 1, math.floor(#inventory / 4) do
             inventory.set_filter(i, turbine)
-            i = i + 1
         end
     end
 end
@@ -293,7 +291,7 @@ local function insert_with_tags(inventory, name, aerial_data)
     end
 end
 
-local function zoop_turbine_to_base(aerial_base_data, surface_index, electric_network_id, name, inventory)
+local function zoop_turbine_to_base(surface_index, electric_network_id, name, inventory)
     for key, aerial_data in pairs(global.aerial_data) do
         local acculumator = aerial_data.acculumator
         local entity = aerial_data.entity
@@ -420,14 +418,14 @@ Aerial.events[116] = function()
                 local desired_count = desired_turbines[name] or 0
                 if desired_count < existing_count 
                 and inventory.can_insert(name)
-                and zoop_turbine_to_base(aerial_base_data, surface_index, electric_network_id, name, inventory) then
+                and zoop_turbine_to_base(surface_index, electric_network_id, name, inventory) then
                     existing_turbines[name] = existing_count - 1
                     inventory.sort_and_merge()
                     break
                 end
             end
         end
-        
+
         -- sum stored energy of all turbine acculumators
         local stored_energy = 0
         local max_energy = 0
@@ -494,13 +492,13 @@ local pathfind_flags = {
 
 local function find_target(aerial_data)
     local acculumator = aerial_data.acculumator
+    local entity = aerial_data.entity
     if not acculumator.valid then
         acculumator = create_interface(entity)
         aerial_data.acculumator = acculumator
     end
     local surface = acculumator.surface
     local previous_target = aerial_data.target
-    local entity = aerial_data.entity
     if not (previous_target and previous_target.valid) then
         previous_target = nil
     end
@@ -781,13 +779,11 @@ local function build_aerial_gui(player, aerial_data)
     content_flow.add{type = 'label', name = 'lifetime_generation'}
     content_flow.add{type = 'label', name = 'airspace_traffic_flow'}
     content_flow.add{type = 'label', name = 'arrival'}
-    
+
     Aerial.update_gui(player)
 end
 
 local function build_aerial_base_gui(player, aerial_base_data)
-    local combinator = aerial_base_data.combinator
-    local animation = aerial_base_data.animation
     local chest = aerial_base_data.chest
     player.opened = chest
     local inventory = chest.get_inventory(defines.inventory.chest)
@@ -833,7 +829,7 @@ end
 function Aerial.update_gui(player)
     local main_frame = player.gui.screen.aerial_gui
     local content_flow = main_frame.content_frame.content_flow
-    
+
     local unit_number = main_frame.tags.unit_number
     local aerial_data = global.aerial_data[unit_number]
     if not aerial_data then main_frame.destroy(); return end
@@ -874,7 +870,7 @@ function Aerial.update_gui(player)
         camera.position = target.position
         camera.entity = target
 
-        local distance = math.max(0, distance(target.position, entity.position) - 5)
+        local distance = math.max(0, calc_distance(target.position, entity.position) - 5)
         local seconds = distance / travel_speeds[entity.name]
         local minutes = math.floor(seconds / 60)
         seconds = tostring(math.floor(seconds % 60))
