@@ -23,10 +23,15 @@ end
 ---@param position {x: integer, y: integer} the position to check against the radius
 ---@param cover_count integer the number of glass covers to add or remove from the power generated
 local function update_parent_tower(position, cover_count)
-    local parent
-    for _, tower_data in pairs(global.solar_updraft_towers) do
+    local parent = (global.solar_updraft_towers[Solar_Updraft_Tower.last_unit or -1] or {}).entity
+    -- Check our last-used tower
+    if parent and is_in_radius(parent.position, position, Thermosolar.tower_range) then
+        goto continue
+    end
+    for unit_id, tower_data in pairs(global.solar_updraft_towers) do
         if is_in_radius(tower_data.entity.position, position, Thermosolar.tower_range) then
             parent = tower_data.entity
+            Solar_Updraft_Tower.last_unit = unit_id
             goto continue
         end
     end
