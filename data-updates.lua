@@ -99,8 +99,8 @@ RECIPE('py-logistic-robot-01'):add_ingredient{'battery-mk01', 2}
 
 ITEM("simik"):set_field{fuel_category = 'simik'}:set_field{fuel_value = '800MJ'}
 
-RECIPE("subcritical-water-01"):change_category("heat-exchanger")
-RECIPE("subcritical-water-02"):change_category("heat-exchanger")
+RECIPE("subcritical-water-01").category = 'heat-exchanger'
+RECIPE("subcritical-water-02").category = 'heat-exchanger'
 
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)

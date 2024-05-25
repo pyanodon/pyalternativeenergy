@@ -74,7 +74,7 @@ data:extend(
       cooldown = 0,
       ammo_type = _G.make_unit_melee_ammo_type(0),
       --sound = make_biter_roars(0.4),
-	  animation = DATA.Sprites.empty_animation()
+	  animation = py.empty_image()
 	},
 	vision_distance = 30,
 	movement_speed = 0.08,
