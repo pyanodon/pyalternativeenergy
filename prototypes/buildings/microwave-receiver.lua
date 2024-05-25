@@ -118,7 +118,6 @@ ENTITY {
                 height = 224,
                 repeat_count = 200,
                 --frame_count = 100,
-                --line_length = 5,
                 animation_speed = 0.15,
                 --run_mode = "forward-then-backward",
                 draw_as_shadow = true,

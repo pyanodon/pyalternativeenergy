@@ -56,7 +56,6 @@ ENTITY {
                 height = 287,
                 frame_count = 1,
                 line_length = 1,
-                --animation_speed = 0.45,
                 --blend_mode = "additive",
                 --draw_as_glow = true,
                 shift = util.by_pixel(0, -64)
@@ -67,7 +66,6 @@ ENTITY {
                 height = 256,
                 frame_count = 1,
                 line_length = 1,
-                --animation_speed = 0.45,
                 --blend_mode = "additive",
                 draw_as_glow = true,
                 shift = util.by_pixel(0, -112)
@@ -78,7 +76,6 @@ ENTITY {
               height = 160,
               frame_count = 1,
               line_length = 1,
-              --animation_speed = 0.45,
               --blend_mode = "multiplicative",
               draw_as_shadow = true,
               shift = util.by_pixel(16, -0)

@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 Aerial = {}
 Aerial.events = {}
 
@@ -11,44 +9,6 @@ end
 
 local function exists_and_valid(x)
     return x and x.valid
-end
-
-local function cancel_creation(entity, player_index, message)
-	local inserted = 0
-	local item_to_place = entity.prototype.items_to_place_this[1]
-	local surface = entity.surface
-	local position = entity.position
-
-	if player_index then
-		local player = game.get_player(player_index)
-		if player.mine_entity(entity, false) then
-			inserted = 1
-		elseif item_to_place then
-			inserted = player.insert(item_to_place)
-		end
-	end
-
-	if inserted == 0 and item_to_place then
-		surface.spill_item_stack(
-			position,
-			item_to_place,
-			true,
-			entity.force_index,
-			false
-		)
-	end
-
-	entity.destroy{raise_destroy = true}
-
-	if not message then return end
-
-    surface.create_entity{
-        name = 'flying-text',
-        position = position,
-        text = message,
-        render_player_index = player_index,
-        color = {255,60,60}
-    }
 end
 
 local energy_per_distance = {
@@ -578,7 +538,7 @@ Aerial.events.on_built = function(event)
         end
         if fail_msg then
             acculumator.destroy()
-            cancel_creation(entity, event.player_index, fail_msg)
+            py.cancel_creation(entity, event.player_index, fail_msg, {255, 60, 60})
             return
         end
 

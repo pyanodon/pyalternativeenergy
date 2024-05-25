@@ -65,7 +65,7 @@ ENTITY {
     {
       base_area = 10,
       base_level = 1,
-      pipe_covers = DATA.Pipes.covers(false, true, true, true),
+      pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_connections =
       {
         {position = {0, -6}, type = 'output'}

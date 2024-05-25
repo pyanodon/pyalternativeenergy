@@ -1,4 +1,4 @@
-local collision_data = require('prototypes.functions.collision-mask')
+local collision_data = require 'prototypes.functions.collision-mask'
 local wind_layer = collision_data and collision_data.wind_layer or 'layer-50' -- make YAFC happy
 
 RECIPE {

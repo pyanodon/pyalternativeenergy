@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 Solar_Updraft_Tower = {}
 Solar_Updraft_Tower.events = {}
 

@@ -1,4 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 8
 local FULL_CRAFTING_SPEED = 3 -- crafting speed when full of mk01 modules
 
@@ -55,7 +54,7 @@ ENTITY{
     module_specification = {module_slots = MODULE_SLOTS},
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {'numal'},
-    crafting_speed = FUN.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
+    crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {type = 'electric', usage_priority = 'secondary-input', emissions_per_minute = 1},
     energy_usage = '400kW',
     animation = {
@@ -706,8 +705,8 @@ ENTITY{
         -- 1
         {
             production_type = 'input',
-            pipe_picture = DATA.Pipes.pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = 'input', position = {0, 6}}}

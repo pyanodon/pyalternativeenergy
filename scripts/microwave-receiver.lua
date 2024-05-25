@@ -4,9 +4,6 @@ Microwave_Receiver.events = {}
 Microwave_Receiver.max_satellites_per_receiver = 15
 Microwave_Receiver.power_production_per_satellite = 80000
 
-local Table = require('__stdlib__/stdlib/utils/table')
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 Microwave_Receiver.events.on_init = function()
 	global.microwave_receivers = global.microwave_receivers or {}
 end

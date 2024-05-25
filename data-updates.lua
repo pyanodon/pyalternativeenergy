@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --MOVED RECIPES CATEGORIES
 RECIPE('aromatic-organic'):set_category("centrifuging")
 RECIPE('honey-comb'):set_category("centrifuging")
@@ -128,7 +126,7 @@ end
 --ENERGY COSTS--
 
 --ENERGY PRODUCTION DESCRIPTION --
-for name, variance in pairs(require('scripts/wind/variation')) do
+for name, variance in pairs(require 'scripts.wind.variation') do
   variance = {'entity-description.variance', variance * 100}
   -- Handle the surrogate items that show in electric stats, too
   for _, suffix in pairs({'', '-blank'}) do
@@ -389,7 +387,7 @@ local recipes_list =
 }
 
 --adding to module limitation list
-FUN.productivity(recipes_list)
+py.allow_productivity(recipes_list)
 
 if register_cache_file ~= nil then
     register_cache_file({"pycoalprocessing","pyfusionenergy","pyindustry","pyrawores","pyhightech","pypetroleumhandling","pyalienlife","pyalternativeenergy"}, "__pyalternativeenergy__/cached-configs/pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")

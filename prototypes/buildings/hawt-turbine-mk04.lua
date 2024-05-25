@@ -1,4 +1,4 @@
-local collision_data = require("prototypes.functions.collision-mask")
+local collision_data = require 'prototypes.functions.collision-mask'
 local wind_layer = collision_data and collision_data.wind_layer or "layer-50" -- make YAFC happy
 
 RECIPE {
@@ -67,38 +67,30 @@ ENTITY {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/r4.png",
                 width = 352,
                 height = 416,
-                --line_length = 10,
                 frame_count = 1,
                 shift = util.by_pixel(0, -64),
-                --animation_speed = 1,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/a4.png",
                 width = 352,
                 height = 416,
-                --line_length = 10,
                 frame_count = 1,
                 shift = util.by_pixel(0, -64),
-                --animation_speed = 1,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/s4.png",
                 width = 352,
                 height = 256,
-                --line_length = 10,
                 frame_count = 1,
                 shift = util.by_pixel(50, 25),
-                --animation_speed = 1,
                 draw_as_shadow = true,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/l4.png",
                 width = 352,
                 height = 416,
-                --line_length = 10,
                 frame_count = 1,
                 shift = util.by_pixel(0, -64),
-                --animation_speed = 1,
                 draw_as_glow = true,
             },
         }

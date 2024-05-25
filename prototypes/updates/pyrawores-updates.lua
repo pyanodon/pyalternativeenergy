@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --TECHNOLOGY--
 TECHNOLOGY("fluid-processing-machines-1"):remove_pack('logistic-science-pack'):remove_prereq('electric-engine')
 TECHNOLOGY("plastics"):remove_pack('logistic-science-pack')
