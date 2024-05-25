@@ -1,8 +1,8 @@
 for i = 1, 4 do
     local turbine_name = 'aerial-blimp-mk0' .. i
     data:extend{{
-        type = 'accumulator',
-        name = turbine_name .. '-interface',
+        type = 'electric-energy-interface',
+        name = turbine_name .. '-accumulator',
         localised_name = {'entity-name.' .. turbine_name},
         localised_description = {'entity-description.' .. turbine_name},
         icon = data.raw['item-with-tags'][turbine_name].icon,
