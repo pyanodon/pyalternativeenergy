@@ -101,13 +101,13 @@ RECIPE('cool-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium
 RECIPE('cold-clean-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 RECIPE('liquid-pure-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 
-FUN.results_replacer("dt-fusion", "critical-steam", "neutron", 1000)
+RECIPE('dt-fusion'):replace_result("critical-steam", "neutron", 1000)
 RECIPE('dt-fusion'):remove_ingredient("pressured-water")
-FUN.results_replacer("dt-he3", "critical-steam", "neutron", 1000)
+RECIPE('dt-he3'):replace_result("critical-steam", "neutron", 1000)
 RECIPE('dt-he3'):remove_ingredient("pressured-water")
-FUN.results_replacer("b-h", "critical-steam", "neutron", 1000)
+RECIPE('b-h'):replace_result("critical-steam", "neutron", 1000)
 RECIPE('b-h'):remove_ingredient("pressured-water")
-FUN.results_replacer("antimatter-fusion", "critical-steam", "neutron", 1000)
+RECIPE('antimatter-fusion'):replace_result("critical-steam", "neutron", 1000)
 RECIPE('antimatter-fusion'):remove_ingredient("pressured-water")
 
 RECIPE("steam-exchange1"):remove_unlock("fusion-mk01")
