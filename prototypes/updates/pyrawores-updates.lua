@@ -118,7 +118,6 @@ RECIPE("fuelrod-mk01"):remove_unlock('fuel-production')
 RECIPE("fuelrod-mk01-1"):remove_unlock('uranium-mk01')
 RECIPE("fuelrod-mk01-2"):remove_unlock('uranium-mk02')
 RECIPE("fuelrod-mk01-3"):remove_unlock('uranium-mk03')
-RECIPE("fuelrod-mk01-4"):remove_unlock('uranium-mk01')
 
 --tweaked by pyal from fuel production to uranium techs. now removing completely
 RECIPE('fuelrod-mk02'):remove_unlock('uranium-mk01')
@@ -167,25 +166,24 @@ RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('n
 RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power-mk04')
 
 --removing old enrichement recipes
-RECIPE("u-15"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-15-2"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-20"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-23"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-30"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-33"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-40"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-50"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-65"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-70"):remove_unlock('uranium-mk03'):set_fields{hidden = true, enabled = false}
-RECIPE("u-73"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
-RECIPE("u-75"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
-RECIPE("u-79"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
-RECIPE("u-79-2"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
-RECIPE("u-81"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
-RECIPE("u-83"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+RECIPE("u-15"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-15-2"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-20"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-23"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-30"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-33"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-40"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-50"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-65"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-70"):remove_unlock('uranium-mk03'):delete()
+RECIPE("u-73"):remove_unlock('uranium-mk04'):delete()
+RECIPE("u-75"):remove_unlock('uranium-mk04'):delete()
+RECIPE("u-79"):remove_unlock('uranium-mk04'):delete()
+RECIPE("u-81"):remove_unlock('uranium-mk04'):delete()
+RECIPE("u-83"):remove_unlock('uranium-mk04'):delete()
 
-RECIPE("yellow-cake"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
-RECIPE("yellow-cake-u235"):remove_unlock('uranium-mk04'):set_fields{hidden = true, enabled = false}
+RECIPE("yellow-cake"):remove_unlock('uranium-mk04'):delete()
+RECIPE("yellow-cake-u235"):remove_unlock('uranium-mk04'):delete()
 
 
 --move uranium ore processing recipes
@@ -193,9 +191,9 @@ RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing
 RECIPE("grade-1-u-recrush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
 RECIPE("grade-2-u-crush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
 
-RECIPE("20-u-powder"):remove_unlock("uranium-mk01"):set_fields{hidden = true, enabled = false}
-RECIPE("40-u-powder"):remove_unlock("uranium-mk02"):set_fields{hidden = true, enabled = false}
-RECIPE("70-u-powder"):remove_unlock("uranium-mk03"):set_fields{hidden = true, enabled = false}
+RECIPE("20-u-powder"):remove_unlock("uranium-mk01"):delete()
+RECIPE("40-u-powder"):remove_unlock("uranium-mk02"):delete()
+RECIPE("70-u-powder"):remove_unlock("uranium-mk03"):delete()
 --RECIPE("u-pulp-01"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "powdered-u", amount = 5}):replace_ingredient('sulfuric-acid','hydrogen-peroxide'):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 --TODO:look into uranium issues with pyro changes
 

@@ -1,26 +1,26 @@
 --MOVED RECIPES CATEGORIES
-RECIPE('aromatic-organic'):set_category("centrifuging")
-RECIPE('honey-comb'):set_category("centrifuging")
-RECIPE('honey-comb-buffed'):set_category("centrifuging")
-RECIPE('nickel-tailings'):set_category("centrifuging")
-RECIPE('xylenol-2'):set_category("centrifuging")
-RECIPE('coal-slurry'):set_category("centrifuging")
-RECIPE('solvent-separation'):set_category("centrifuging")
-RECIPE('al-tailings-separation'):set_category("centrifuging")
-RECIPE('simik-blood-to-oleochemicals'):set_category("centrifuging")
-RECIPE('chromite-concentrate'):set_category("centrifuging")
-RECIPE('vanabins'):set_category("centrifuging")
-RECIPE('clean-rf-gel'):set_category("centrifuging")
-RECIPE('gold-precipitate'):set_category("centrifuging")
-RECIPE('unslimed-iron-2'):set_category("centrifuging")
-RECIPE('serine'):set_category("centrifuging")
-RECIPE('albumin-1'):set_category("centrifuging")
-RECIPE('outlet-gas-02'):set_category("centrifuging")
-RECIPE('serine'):set_category("centrifuging")
-RECIPE('tar-to-nickel'):set_category("centrifuging")
-RECIPE('bitumen-to-nickel'):set_category("centrifuging")
-RECIPE('nickel-prepared-solution'):set_category("centrifuging")
-RECIPE('chromium-rejects'):set_category("centrifuging")
+RECIPE('aromatic-organic').category = 'centrifuging'
+RECIPE('honey-comb').category = 'centrifuging'
+RECIPE('honey-comb-buffed').category = 'centrifuging'
+RECIPE('nickel-tailings').category = 'centrifuging'
+RECIPE('xylenol-2').category = 'centrifuging'
+RECIPE('coal-slurry').category = 'centrifuging'
+RECIPE('solvent-separation').category = 'centrifuging'
+RECIPE('al-tailings-separation').category = 'centrifuging'
+RECIPE('simik-blood-to-oleochemicals').category = 'centrifuging'
+RECIPE('chromite-concentrate').category = 'centrifuging'
+RECIPE('vanabins').category = 'centrifuging'
+RECIPE('clean-rf-gel').category = 'centrifuging'
+RECIPE('gold-precipitate').category = 'centrifuging'
+RECIPE('unslimed-iron-2').category = 'centrifuging'
+RECIPE('serine').category = 'centrifuging'
+RECIPE('albumin-1').category = 'centrifuging'
+RECIPE('outlet-gas-02').category = 'centrifuging'
+RECIPE('serine').category = 'centrifuging'
+RECIPE('tar-to-nickel').category = 'centrifuging'
+RECIPE('bitumen-to-nickel').category = 'centrifuging'
+RECIPE('nickel-prepared-solution').category = 'centrifuging'
+RECIPE('chromium-rejects').category = 'centrifuging'
 
 --adjusting all centrifudge recipe speeds
 RECIPE("uranium-processing"):set_fields{energy_required = 120}
@@ -105,7 +105,7 @@ RECIPE("subcritical-water-02").category = 'heat-exchanger'
 for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient("battery", "battery-mk01")
-    FUN.results_replacer(r.name, "battery", "battery-mk01")
+    r:replace_result("battery", "battery-mk01")
 
     if recipe.category == "combustion" then
         recipe.hidden = true
