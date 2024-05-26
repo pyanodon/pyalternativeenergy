@@ -73,7 +73,6 @@ RECIPE('uranium-rounds-magazine'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('uranium-cannon-shell'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('explosive-uranium-cannon-shell'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('logistic-science-pack'):add_ingredient { type = 'item', name = 'battery-mk01', amount = 3 }
-RECIPE('heat-exchange'):add_unlock('uranium-processing')
 
 RECIPE('inserter'):clear_ingredients():add_ingredient { 'burner-inserter', 1 }:add_ingredient { 'electronic-circuit', 2 }
 	:add_ingredient { 'small-parts-01', 3 }:add_ingredient { 'duralumin', 1 }

@@ -97,7 +97,7 @@ RECIPE('logistic-robot-ht'):add_ingredient({type = 'item', name = 'gearbox-mk04'
 RECIPE('py-construction-robot-01'):add_ingredient{'battery-mk01', 2}
 RECIPE('py-logistic-robot-01'):add_ingredient{'battery-mk01', 2}
 
-ITEM("simik"):set_field{fuel_category = 'simik'}:set_field{fuel_value = '800MJ'}
+ITEM("simik"):set_fields{fuel_category = 'simik'}:set_fields{fuel_value = '800MJ'}
 
 RECIPE("subcritical-water-01").category = 'heat-exchanger'
 RECIPE("subcritical-water-02").category = 'heat-exchanger'
