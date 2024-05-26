@@ -30,9 +30,6 @@ ITEM {
     stack_size = 10
 }
 
-ITEM('uranium-mine').subgroup = 'py-alternativeenergy-special-buildings'
-ITEM('uranium-mine').order = 's[uranium]b'
-
 data:extend{{
     type = 'resource-category',
     name = 'uranium',

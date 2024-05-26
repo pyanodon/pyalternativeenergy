@@ -1,4 +1,4 @@
-	FUN.autorecipes {
+	py.autorecipes {
     name = 'numal-improved',
 	category = 'numal',
 	--module_limitations = 'numal',

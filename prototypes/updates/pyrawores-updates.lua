@@ -549,3 +549,5 @@ for _, layer in pairs(data.raw['mining-drill']['uranium-mine'].animations.layers
 	layer.animation_speed = 0.3
 end
 data.raw['mining-drill']['uranium-mine'].input_fluid_box = nil
+ITEM('uranium-mine').subgroup = 'py-alternativeenergy-special-buildings'
+ITEM('uranium-mine').order = 's[uranium]b'

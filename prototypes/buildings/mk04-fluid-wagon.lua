@@ -33,7 +33,7 @@ ITEM {
     stack_size = 5
 }
 
-{
+ENTITY {
     type = "fluid-wagon",
     name = "mk04-fluid-wagon",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mk04-fluid-wagon.png",

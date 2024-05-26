@@ -31,7 +31,7 @@ ITEM {
     stack_size = 10
 }
 
-ENTITY {
+local proto = ENTITY {
     type = "electric-energy-interface",
     name = "multiblade-turbine-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk03.png",
@@ -106,16 +106,15 @@ ENTITY {
     },
     localised_name = {'entity-name.multiblade-turbine-mk03'},
     localised_description = {'entity-description.multiblade-turbine-mk03'}
-}:run_function(function(proto)
-    -- Make a copy with only the base animation
-    local new_proto = table.deepcopy(proto)
-    new_proto.name = proto.name .. '-blank'
-    new_proto.picture = proto.animations.layers[1]
-    new_proto.animations = nil
-    new_proto.render_layer = 'floor-mechanics'
-    new_proto:extend(true)
-end)
+}
 
+-- Make a copy with only the base animation
+local new_proto = table.deepcopy(proto)
+new_proto.name = proto.name .. '-blank'
+new_proto.picture = proto.animations.layers[1]
+new_proto.animations = nil
+new_proto.render_layer = 'floor-mechanics'
+data:extend{new_proto}
 
 data:extend{{
     type = 'simple-entity-with-force',

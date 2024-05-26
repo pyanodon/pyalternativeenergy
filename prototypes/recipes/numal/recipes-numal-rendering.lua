@@ -16,7 +16,7 @@ local IMP_BLOOD = 80
 local IMP_SPECIAL = 20
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'numal',

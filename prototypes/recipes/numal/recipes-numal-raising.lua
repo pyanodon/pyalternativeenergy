@@ -1,6 +1,6 @@
 ------------------EGG MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'numal-egg',
 	category = 'rc',
 	allowed_module_categories = {'numal'},
@@ -214,7 +214,7 @@ RECIPE {
 ]]--
 --Raising
 
-	FUN.autorecipes {
+	py.autorecipes {
     name = 'numal-raising',
 	category = 'numal',
 	module_limitations = 'numal',
