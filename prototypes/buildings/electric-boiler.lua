@@ -1,55 +1,55 @@
 RECIPE {
-    type = "recipe",
-    name = "electric-boiler",
+    type = 'recipe',
+    name = 'electric-boiler',
     energy_required = 2,
     enabled = false,
     ingredients = {
-        {"lab", 1},
-        {"iron-plate", 100},
-        {"electric-mining-drill", 3},
-        {"gasifier", 1},
-        {"small-parts-01", 20},
+        {'lab', 1},
+        {'iron-plate', 100},
+        {'electric-mining-drill', 3},
+        {'gasifier', 1},
+        {'small-parts-01', 20},
     },
     results = {
-        {"electric-boiler", 1}
+        {'electric-boiler', 1}
     }
-}:add_unlock("energy-1")
+}:add_unlock('energy-1')
 
 ITEM {
-    type = "item",
-    name = "electric-boiler",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/electric-boiler.png",
+    type = 'item',
+    name = 'electric-boiler',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/electric-boiler.png',
     icon_size = 64,
     flags = {},
-    subgroup = "py-petroleum-handling-buildings-extras",
-    order = "b",
-    place_result = "electric-boiler",
+    subgroup = 'py-petroleum-handling-buildings-extras',
+    order = 'b',
+    place_result = 'electric-boiler',
     stack_size = 10
 }
 
 ENTITY {
-    type = "boiler",
-    name = "electric-boiler",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/electric-boiler.png",
+    type = 'boiler',
+    name = 'electric-boiler',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/electric-boiler.png',
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.2, result = "electric-boiler"},
+    flags = {'placeable-neutral', 'player-creation'},
+    minable = {mining_time = 0.2, result = 'electric-boiler'},
     max_health = 200,
-    corpse = "big-remnants",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    mode = "output-to-separate-pipe",
+    corpse = 'big-remnants',
+    vehicle_impact_sound =  { filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65 },
+    mode = 'output-to-separate-pipe',
     resistances =
     {
       {
-        type = "fire",
+        type = 'fire',
         percent = 90
       },
       {
-        type = "explosion",
+        type = 'explosion',
         percent = 30
       },
       {
-        type = "impact",
+        type = 'impact',
         percent = 30
       }
     },
@@ -83,18 +83,18 @@ ENTITY {
         production_type = 'output',
         filter = 'steam'
     },
-    energy_consumption = "25MW",
+    energy_consumption = '25MW',
     energy_source =
     {
-        type = "electric",
-        usage_priority = "secondary-input",
+        type = 'electric',
+        usage_priority = 'secondary-input',
         emissions_per_minute = 4
     },
     working_sound =
     {
       sound =
       {
-        filename = "__base__/sound/boiler.ogg",
+        filename = '__base__/sound/boiler.ogg',
         volume = 0.8
       },
       max_sounds_per_type = 3
@@ -107,15 +107,15 @@ ENTITY {
         layers =
         {
           {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png",
-            priority = "extra-high",
+            filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png',
+            priority = 'extra-high',
             width = 96,
             height = 224,
             shift = util.by_pixel(0, -64),
           },
           {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png",
-            priority = "extra-high",
+            filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png',
+            priority = 'extra-high',
             width = 160,
             height = 64,
             draw_as_shadow = true,
@@ -128,15 +128,15 @@ ENTITY {
         layers =
         {
           {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png",
-            priority = "extra-high",
+            filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png',
+            priority = 'extra-high',
             width = 96,
             height = 224,
             shift = util.by_pixel(0, -64),
           },
           {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png",
-            priority = "extra-high",
+            filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png',
+            priority = 'extra-high',
             width = 160,
             height = 64,
             draw_as_shadow = true,
@@ -149,15 +149,15 @@ ENTITY {
         layers =
         {
           {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png",
-            priority = "extra-high",
+            filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png',
+            priority = 'extra-high',
             width = 96,
             height = 224,
             shift = util.by_pixel(0, -64),
           },
           {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png",
-            priority = "extra-high",
+            filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png',
+            priority = 'extra-high',
             width = 160,
             height = 64,
             draw_as_shadow = true,
@@ -170,15 +170,15 @@ ENTITY {
         layers =
         {
           {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png",
-            priority = "extra-high",
+            filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png',
+            priority = 'extra-high',
             width = 96,
             height = 224,
             shift = util.by_pixel(0, -64),
           },
           {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png",
-            priority = "extra-high",
+            filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png',
+            priority = 'extra-high',
             width = 160,
             height = 64,
             draw_as_shadow = true,
@@ -193,8 +193,8 @@ ENTITY {
     {
       north =
       {
-        filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png",
-        priority = "low",
+        filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png',
+        priority = 'low',
         frame_count = 40,
         line_length = 8,
         width = 96,
@@ -205,8 +205,8 @@ ENTITY {
       },
       east =
       {
-        filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png",
-        priority = "low",
+        filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png',
+        priority = 'low',
         frame_count = 40,
         line_length = 8,
         width = 96,
@@ -217,8 +217,8 @@ ENTITY {
       },
       south =
       {
-        filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png",
-        priority = "low",
+        filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png',
+        priority = 'low',
         frame_count = 40,
         line_length = 8,
         width = 96,
@@ -229,8 +229,8 @@ ENTITY {
       },
       west =
       {
-        filename = "__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png",
-        priority = "low",
+        filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png',
+        priority = 'low',
         frame_count = 40,
         line_length = 8,
         width = 96,
@@ -247,43 +247,43 @@ fire_glow =
 {
   north =
   {
-    filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-    priority = "extra-high",
+    filename = '__pyalternativeenergygraphics__/graphics/icons/filler.png',
+    priority = 'extra-high',
     frame_count = 1,
     width = 4,
     height = 4,
     shift = util.by_pixel(-1, -6.5),
-    --blend_mode = "additive",
+    --blend_mode = 'additive',
   },
   east =
   {
-    filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-    priority = "extra-high",
+    filename = '__pyalternativeenergygraphics__/graphics/icons/filler.png',
+    priority = 'extra-high',
     frame_count = 1,
     width = 4,
     height = 4,
     shift = util.by_pixel(-1, -6.5),
-    --blend_mode = "additive",
+    --blend_mode = 'additive',
   },
   south =
   {
-    filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-    priority = "extra-high",
+    filename = '__pyalternativeenergygraphics__/graphics/icons/filler.png',
+    priority = 'extra-high',
     frame_count = 1,
     width = 4,
     height = 4,
     shift = util.by_pixel(-1, -6.5),
-    --blend_mode = "additive",
+    --blend_mode = 'additive',
   },
   west =
   {
-    filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-    priority = "extra-high",
+    filename = '__pyalternativeenergygraphics__/graphics/icons/filler.png',
+    priority = 'extra-high',
     frame_count = 1,
     width = 4,
     height = 4,
     shift = util.by_pixel(-1, -6.5),
-    --blend_mode = "additive",
+    --blend_mode = 'additive',
   },
 },
 
@@ -313,6 +313,8 @@ RECIPE {
 ENTITY {
     name = 'py-electric-boiler',
     type = 'assembling-machine',
+    icon = '__pyalternativeenergygraphics__/graphics/icons/electric-boiler.png',
+    icon_size = 64,
     localised_name = {'entity-name.electric-boiler'},
     flags = {'placeable-neutral', 'player-creation'},
     minable = {
