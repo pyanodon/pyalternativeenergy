@@ -768,7 +768,7 @@ RECIPE {
         {type = "item", name = "control-unit", amount = 5},
     },
     results = {
-        {type = "item", name = "microwave-satellite", amount = 1},
+        {type = "item", name = "microwave-satellite", amount = 4},
     },
     --main_product = "eg-si",
 }:add_unlock("microwave-receiver")

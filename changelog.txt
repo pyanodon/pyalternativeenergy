@@ -1,17 +1,56 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.24
+Version: 1.2.29
 Date: 2024-??-??
-  Updates:
-    - RU locale updated
+  Bugfixes:
+    - Resolved performance issues with most thermosolar/solar updraft setups
+    - Added glow layers to geothermal vents
+---------------------------------------------------------------------------------------------------
+Version: 1.2.28
+Date: 2024-5-1
+  Changes:
+    - Fixed that the new electric boiler was 2x faster at base than the old one.
+---------------------------------------------------------------------------------------------------
+Version: 1.2.27
+Date: 2024-4-30
+  Changes:
+    - Fixed that RTG had an unknown key error (https://github.com/pyanodon/pybugreports/issues/477)
+    - Buffed electric boilers from 0 module slots to 3. Allowed electric boilers to be effected by AM:FM beacons.
+    - Electric boilers now have a glow layer in the dark.
+    - Note: the above two changes are only effective if you break and rebuild the boiler.
+---------------------------------------------------------------------------------------------------
+Version: 1.2.26
+Date: 2024-4-29
+  Changes:
+    - The microwave satellite now outputs 4 instead of 1 per craft. It is also affected by productivity modules.
+    - The microwave satellite no longer has a fuel value.
+    - Changed the internal name of the rtg to "py-rtg" in order to prevent conflicts with other mods.
+    - Regenerated pyPP cache files.
+---------------------------------------------------------------------------------------------------
+Version: 1.2.25
+Date: 2024-4-15
+  Changes:
+    - Buffed grod mk02+ recipes from 400 second recipe time down to 40 seconds. (https://github.com/pyanodon/pybugreports/issues/424)
+    - Changed the power output priority of the mdh generator from primary to secondary. (https://github.com/pyanodon/pybugreports/issues/462)
+    - Removed metastable quasicrystals from the antelope enclosure recipe
+    - Added an uncrafting recipe from mox nuclear reactors back into standard reactors.
+    - Fixed clipping in the solar panel MK01 and MK04 graphics. (https://github.com/pyanodon/pybugreports/issues/373)
+    - Fixed recipe icons for molten thorium (https://github.com/pyanodon/pybugreports/issues/435)
+---------------------------------------------------------------------------------------------------
+Version: 1.2.24
+Date: 2024-4-1
+  Changes:
+    - updated steam power codex pages
+    - added nuclear power codex page
+    - changed mox reactor to return mox reactor on pickup instead of normal reactor
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.23
 Date: 2024-3-24
-  Fixes:
+  Changes:
     - reduced nanocellulose from 100 to 50 pressurized steams
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.22
 Date: 2024-3-24
-  Fixes:
+  Changes:
     - fixed rare crash with wind energy (https://github.com/pyanodon/pybugreports/issues/440)
     - allowed productivity in numal food (https://github.com/pyanodon/pybugreports/issues/417)
     - Deacronymized item names for EVA and NdFeB. Should be easier to search.
@@ -27,13 +66,13 @@ Date: 2024-3-24
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.21
 Date: 2024-3-13
-  Fixes:
+  Changes:
     - fixed rare crash with wind energy (https://github.com/pyanodon/pybugreports/issues/440)
     - fixed that several doping recipes were missing productivity
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.20
 Date: 2024-2-28
-  Fixes:
+  Changes:
     - buffed # of pipe connections on mk3 turbine from 4->8 (https://github.com/pyanodon/pybugreports/issues/407)
     - buffed # of pipe connections on mk4 turbine from 4->16 (https://github.com/pyanodon/pybugreports/issues/407)
     - fixed a typo in Yellowcake isotope seperation -> separation
@@ -45,7 +84,7 @@ Date: 2024-2-28
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
 Date: 2024-1-29
-  Fixes:
+  Changes:
     - fixed purex waste was creating a positive feed back loop. adjusted a number purex recipes to better balance the process
     - reduced purex waste 1 output in purex concentrate 2 (40-> 30)
     - reduced purex waste 1 output in purex concentrate 3 (40-> 20)
@@ -77,12 +116,12 @@ Date: 2024-1-29
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: 2024-1-24
-  Fixes:
+  Changes:
     - fixed crash with py coal touched by an angel due to new uranium miners
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
 Date: 2024-1-24
-  Fixes:
+  Changes:
     - fixed that sinter unit and direct reduction plant were unlocked way earlier than needed
     - fixed smelter mk02 tech had unnecessary prereq on supersteel
     - fixed that the mk04 thermosolar GUI was displaying some incorrect values
@@ -92,7 +131,7 @@ Date: 2024-1-24
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.13
 Date: 2024-1-23
-  Fixes:
+  Changes:
     - fixed that purex waste vitrification required waste 1 instead of 3
     - fixed that u238 to pu239 recipe wasnt incorrectly named and overriding u237
 ---------------------------------------------------------------------------------------------------
@@ -182,7 +221,7 @@ Date: 2023-11-21
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
 Date: 2023-11-21
-  Bugfixes:
+  Changes:
     - fixed that neutron absorber mk2,mk3,mk4 didn't consume boric acid
     - fixed that neutron absorber had an effective crafting speed of 0
     - removed module slots in neutron absorber
@@ -201,7 +240,7 @@ Date: 2023-11-21
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
 Date: 2023-9-3
-  Bugfixes:
+  Changes:
     - added missing compressed hydrogen barrel (https://github.com/pyanodon/pybugreports/issues/315)
     - fixed that mirror mk3 had no uses. added to solarthermal mk03 recipes (https://github.com/pyanodon/pybugreports/issues/302)
     - removed recipe that gives all sciences
@@ -212,12 +251,12 @@ Date: 2023-9-3
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.5
 Date: 2023-7-27
-  Bugfixes:
+  Changes:
     - fixed fiber-dry-storage-2 was slower than expected (24s -> 6s) (boldviking)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.4
 Date: 2023-7-25
-  Bugfixes:
+  Changes:
     - fixed that the thermosolar wiki page incorrectly said t2 sterling concentrator generated 600kW when the real output was 1.6MW. added additional information about the solar ratios
     - fixed that the unfinished MHD generator was researchable. disabled for now.
     - allow many entities to work with the upgrade planner
@@ -232,13 +271,13 @@ Date: 2023-7-25
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2023-6-28
-  Bugfixes:
+  Changes:
     - add electronic circuit 2 recipe to prod module allowed list
     - update chinese translation. credit sdqwo
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 2023-6-23
-  Bugfixes:
+  Changes:
     - Fixed missing variance description for fish & HAWT turbines
     - Fixed a gui crash with microwave recivers, heliostats, and SUT
     - decreased centrifudge energy usuage and increased most centrifudge recipes crafting time. will need less power per machine but more machines. should see reduced energy needs in recipes up thru logistic science

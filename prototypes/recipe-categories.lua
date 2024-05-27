@@ -97,6 +97,10 @@ data:extend {
         type = "recipe-category",
         name = "slaughterhouse"
     },
+    {
+        type = "recipe-category",
+        name = "electric-boiler"
+    },
     --resources
     {
         type = "resource-category",

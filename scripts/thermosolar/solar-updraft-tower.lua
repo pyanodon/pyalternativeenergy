@@ -5,7 +5,46 @@ Solar_Updraft_Tower.events = {}
 
 Solar_Updraft_Tower.power_generated_per_cover = 16000/3
 
-function Solar_Updraft_Tower.update_power_generation(tower)
+---returns whether the distance between two positions is greater than the specified circular radius
+---@param origin {x:number, y:number}
+---@param position {x:number, y:number}
+---@param radius number
+---@return boolean
+local function is_in_radius(origin, position, radius)
+    local delta_x = math.abs(origin.x - position.x)
+    local delta_y = math.abs(origin.y - position.y)
+
+    if delta_x > radius or delta_y > radius then return false end
+
+    return math.sqrt(delta_x ^ 2 + delta_y ^ 2) < radius
+end
+
+---Adds or removes `cover_count` glass covers worth of generation for the tower with a radius covering `position`
+---@param position {x: integer, y: integer} the position to check against the radius
+---@param cover_count integer the number of glass covers to add or remove from the power generated
+local function update_parent_tower(position, cover_count)
+    local parent = (global.solar_updraft_towers[Solar_Updraft_Tower.last_unit or -1] or {}).entity
+    -- Check our last-used tower
+    if parent and is_in_radius(parent.position, position, Thermosolar.tower_range) then
+        goto continue
+    end
+    for unit_id, tower_data in pairs(global.solar_updraft_towers) do
+        if is_in_radius(tower_data.entity.position, position, Thermosolar.tower_range) then
+            parent = tower_data.entity
+            Solar_Updraft_Tower.last_unit = unit_id
+            goto continue
+        end
+    end
+    if not parent then return end
+    ::continue::
+    Solar_Updraft_Tower.update_power_generation(parent, cover_count)
+end
+
+---Updates power generation for the tower provided, or all towers if none provided.<br />
+---If additional_cover_count is used, the power production is adjusted by that number of additional covers.
+---@param tower entity? the tower to update, if <i>nil</i>, all towers are updated
+---@param additional_cover_count integer? the amount of covers to add or remove from the power the tower generated. If <i>nil</i>, the radius is searched and the tiles are re-counted
+function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_count)
     if not tower then
         for _, tower_data in pairs(global.solar_updraft_towers) do
             Solar_Updraft_Tower.update_power_generation(tower_data.entity)
@@ -16,38 +55,28 @@ function Solar_Updraft_Tower.update_power_generation(tower)
     local tower_data = global.solar_updraft_towers[tower.unit_number]
     if not tower_data then return end
 
-    tower_data.glass_covers = tower.surface.count_tiles_filtered{position = tower.position, radius = Thermosolar.tower_range, name = 'sut-panel'}
+    if additional_cover_count then
+        tower_data.glass_covers = tower_data.glass_covers + additional_cover_count
+    else
+        tower_data.glass_covers = tower.surface.count_tiles_filtered{position = tower.position, radius = Thermosolar.tower_range, name = 'sut-panel'}
+    end
     tower_data.max_production = (tower_data.glass_covers * Solar_Updraft_Tower.power_generated_per_cover + tower.prototype.max_energy_production) * tower.surface.solar_power_multiplier
     tower.power_production = tower_data.max_production * Thermosolar.calc_daylight(tower.surface)
 	tower.electric_buffer_size = tower.power_production
 
-    Solar_Updraft_Tower.update_all_guis()
-end
-
-function Solar_Updraft_Tower.break_glass_cover(tile)
-    local x, y = tile.position.x, tile.position.y
-
-    local row = global.glass_covers[x]
-    if row and row[y] then
-        if row[y].entity and row[y].entity.valid then
-            row[y].entity.destroy()
-        end
-        row[y] = nil
-        if not next(row) then
-            global.glass_covers[x] = nil
-        end
-    end
+    global.update_sut_guis = true
 end
 
 Solar_Updraft_Tower.events.on_build_tile = function(event)
     local surface = game.surfaces[event.surface_index]
-    local broken_glass = event.tile.name == 'sut-panel'
+
 	for _, tile in pairs(event.tiles) do
         if tile.old_tile.name == 'sut-panel' then
-            Solar_Updraft_Tower.break_glass_cover(tile)
-            broken_glass = true
+            update_parent_tower(tile.position, -1)
         end
         if event.tile.name ~= 'sut-panel' then goto continue end
+
+        update_parent_tower(tile.position, 1)
 
         local x, y = tile.position.x, tile.position.y
 
@@ -69,28 +98,34 @@ Solar_Updraft_Tower.events.on_build_tile = function(event)
         entity.destructible = false
         entity.minable = false
 
-        global.glass_covers[x] = global.glass_covers[x] or {}
-        global.glass_covers[x][y] = {position = tile.position, entity = entity}
-
         ::continue::
 	end
-
-    if broken_glass then
-        Solar_Updraft_Tower.update_power_generation()
-    end
 end
 
 Solar_Updraft_Tower.events.on_destroyed_tile = function(event)
-    local broken_glass = false
+    local surface = game.surfaces[event.surface_index]
     for _, tile in pairs(event.tiles) do
         if tile.old_tile.name == 'sut-panel' then
-            Solar_Updraft_Tower.break_glass_cover(tile)
-            broken_glass = true
-        end
-    end
+            update_parent_tower(tile.position, -1)
 
-    if broken_glass then
-        Solar_Updraft_Tower.update_power_generation()
+            local x, y = tile.position.x, tile.position.y
+
+            local a, b = math.floor(x / 2), y
+            a = a * (-1) ^ math.floor(a / 30)
+            b = b * (-1) ^ math.floor(b / 30)
+            local sprite_num = (a + b) % 60 + 1
+    
+            if sprite_num >= 30 then
+                sprite_num = 90 - sprite_num
+            else
+                sprite_num = 31 - sprite_num
+            end
+
+            local proxy = surface.find_entity('sut-panel-' .. sprite_num, tile.position)
+            if proxy and proxy.valid then
+                proxy.destroy({raise_destroy = true})
+            end
+        end
     end
 end
 
@@ -110,7 +145,6 @@ Solar_Updraft_Tower.events.on_built = function(event)
     placement_restriction.destructible = false
     global.solar_updraft_towers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0}
     Solar_Updraft_Tower.update_power_generation(entity)
-    global.update_sut_guis = true
 end
 
 Solar_Updraft_Tower.events[60] = function()

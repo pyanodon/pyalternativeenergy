@@ -11,6 +11,19 @@ RECIPE {
     }
 }:add_unlock("nuclear-power")
 
+RECIPE {
+    type = "recipe",
+    name = "nuclear-reactor-mox-mk01-uncraft",
+    energy_required = 1,
+    enabled = false,
+    ingredients = {
+        {"nuclear-reactor-mox-mk01", 1}
+    },
+    results = {
+        {"nuclear-reactor-mk01", 1},
+    }
+}:add_unlock("nuclear-power")
+
 ITEM {
     type = "item",
     name = "nuclear-reactor-mox-mk01",
@@ -29,7 +42,7 @@ ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-reactor-mk01.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "nuclear-reactor-mk01"},
+    minable = {mining_time = 0.1, result = "nuclear-reactor-mox-mk01"},
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",

@@ -112,10 +112,11 @@ FUN.remove_ingredient("b-h", "pressured-water")
 FUN.results_replacer("antimatter-fusion", "critical-steam", "neutron", 1000)
 FUN.remove_ingredient("antimatter-fusion", "pressured-water")
 
+RECIPE("steam-exchange1"):remove_unlock("fusion-mk01")
 RECIPE("steam-exchange2"):remove_unlock("fusion-mk02")
 RECIPE("steam-exchange3"):remove_unlock("fusion-mk03")
 RECIPE("steam-exchange4"):remove_unlock("fusion-mk04")
-RECIPE("steam-exchange5"):remove_unlock("fusion-mk04")
+RECIPE("steam-exchange5"):remove_unlock("fusion-mk04"):add_unlock("fusion-mk01")
 
 RECIPE {
     type = "recipe",
@@ -130,6 +131,39 @@ RECIPE {
     results = {
         {type = "fluid", name = "heavy-water", amount = 40}
     }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "deuterium-fusion",
+    category = "fusion-01",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "fluid", name = "deuterium", amount = 100},
+        {type = "fluid", name = "pressured-water", amount = 10000},
+        {type = "item", name = "blanket", amount = 1},
+        {type = "item", name = "divertor", amount = 2},
+        {type = "item", name = "wall-shield", amount = 5},
+        {type = "item", name = "sc-unit", amount = 4},
+        {type = "fluid", name = "liquid-helium", amount = 30},
+    },
+    results = {
+        {type = "fluid", name = "critical-steam", amount = 20000, temperature = 5000},
+        {type = "fluid", name = "helium", amount = 150},
+        {type = "fluid", name = "tritium", amount = 20},
+        {type = "fluid", name = "helium3", amount = 30},
+        {type = "item", name = "blanket", amount = 1, probability = 0.5},
+        {type = "item", name = "divertor", amount = 1, probability = 0.5},
+        {type = "item", name = "wall-shield", amount = 3, probability = 0.5},
+        {type = "item", name = "sc-unit", amount = 3, probability = 0.5},
+    },
+    --main_product= "blanket",
+    icon = "__pyfusionenergygraphics__/graphics/icons/fusion-deuterium.png",
+	icon_size = 32,
+    subgroup = "py-fusion-items",
+    order = "e",
+    show_details_in_recipe_tooltip = false
 }
 
 --pyFE--
