@@ -63,7 +63,7 @@ RECIPE("pulp-mill-mk04"):add_ingredient({type = "item", name = "metastable-quasi
 RECIPE("nano-assembler-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 RECIPE("blackhole"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 
-RECIPE("solar-panel-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotubes", amount = 20})
+RECIPE("solar-panel-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
 RECIPE("solar-panel-mk04"):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "quantum-dots", amount = 10}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 20})
 
 RECIPE('centrifuge-mk03'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
@@ -134,7 +134,7 @@ RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si"):set_fields{ resul
 RECIPE("silicon"):remove_unlock("semiconductor-doping"):add_unlock("silicon-mk01")
 RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
 RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
-RECIPE("regenerator"):add_ingredient({type = "item", name = "ceramics", amount = 5})
+RECIPE("regenerator"):add_ingredient({type = "item", name = "ceramic", amount = 5})
 RECIPE("nuclear-reactor-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 50}):add_ingredient({type = "item", name = "aerogel", amount = 50})
 RECIPE("nuclear-reactor-mk04"):add_ingredient({type = "item", name = "control-unit", amount = 20}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 40})
 RECIPE("neutron-moderator-mk03"):add_ingredient({type = "item", name = "heavy-fermion", amount = 40}):add_ingredient({type = "item", name = "re-magnet", amount = 30}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 10})
