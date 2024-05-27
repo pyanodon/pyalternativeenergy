@@ -157,7 +157,7 @@ function Heliostat.update_gui(gui)
     content_flow.daylight.caption = {'sut-gui.daylight', math.floor(daylight * 100)}
 end
 
-script.on_event('open-gui', function(event)
+py.on_event('open-gui', function(event)
 	local player = game.players[event.player_index]
 	if player.cursor_stack and player.cursor_stack.valid_for_read then return end
 	local entity = player.selected

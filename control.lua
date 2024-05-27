@@ -28,7 +28,7 @@ py.on_event('on_init', function()
     end
 end)
 
-py.on_event('on-built', function(event)
+py.on_event('on_built', function(event)
     Solar.events.on_built(event)
     Solar_Updraft_Tower.events.on_built(event)
     Microwave_Receiver.events.on_built(event)
