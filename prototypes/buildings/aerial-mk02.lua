@@ -74,13 +74,11 @@ data:extend(
 		ammo_type = _G.make_unit_melee_ammo_type(0),
 		animation = DATA.Sprites.empty_animation()
 	},
-	vision_distance = 30,
+	vision_distance = 0,
 	movement_speed = 0.04,
 	distance_per_frame = 0.18,
-	pollution_to_join_attack = 4,
-	distraction_cooldown = 300,
-	min_pursue_time = 10 * 60,
-	max_pursue_distance = 50,
+	pollution_to_join_attack = 0,
+	distraction_cooldown = 0,
 	--corpse = 'arthurian-corpse',
 	dying_explosion = 'blood-explosion-small',
 	run_animation =
