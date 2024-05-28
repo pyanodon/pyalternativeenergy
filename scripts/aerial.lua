@@ -1273,6 +1273,6 @@ function Aerial.update_gui(player)
         local traffic = math.min(1, aerial_turbines / math.floor(electric_poles / 3))
         -- Convert to percentage, rounded to one decimal place
         traffic = math.ceil(traffic * 1000) / 10
-        content_flow.airspace_traffic_flow.caption = {"", aerial_turbines .. " / " .. math.floor(electric_poles / 3)}--{'aerial-gui.airspace-traffic-flow', math.ceil(traffic * 1000) / 10}
+        content_flow.airspace_traffic_flow.caption = {'aerial-gui.airspace-traffic-flow', traffic}
     end
 end
