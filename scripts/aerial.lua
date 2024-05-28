@@ -474,7 +474,7 @@ end
 
 local function accumulate(aerial)
     local energy, distance_bonus = calc_stored_energy(aerial)
-    local accumulator = get_or_create_accumulator(aerial.entity)
+    local accumulator = get_or_create_accumulator(aerial.entity, aerial.network_id)
     if accumulator and accumulator.valid then
         accumulator.energy = accumulator.energy + energy
         aerial.previous_position = aerial.entity.position
@@ -497,25 +497,23 @@ local function set_aerial_base_inventory_filters(inventory)
 end
 
 local function validate_base(base, unit_number)
+    local invalid = false
+
     local combinator = base.combinator
+    if not combinator.valid then
+        combinator.destroy()
+        invalid = true
+    end
+
     local animation = base.animation
+    if invalid or not animation.valid then
+        animation.destroy()
+        invalid = true
+    end
+
     local chest = base.chest
-
-    local combinator_valid = exists_and_valid(combinator)
-    local animation_valid = exists_and_valid(animation)
-    local chest_valid = exists_and_valid(chest)
-
-    local valid = combinator_valid and animation_valid and chest_valid
-
-    if not valid then
-        -- Clean up any remaining portions of the compound entity
-        if not combinator_valid then
-            combinator.destroy()
-        end
-        if not animation_valid then
-            animation.destroy()
-        end
-        if chest and not chest_valid then
+    if invalid then
+        if chest.valid then
             local inventory = chest.get_inventory(defines.inventory.chest)
             local position = chest.position
             local force = chest.force
@@ -534,10 +532,14 @@ local function validate_base(base, unit_number)
         global.aerials.base_data[unit_number] = nil
     end
 
-    return valid
+    return not invalid
 end
 
 local function store_turbine(electric_network_id, name, inventory)
+    -- If we have none in the network, return early
+    if (global.aerials.aerial_counts[electric_network_id][name] or 0) < 1 then
+        return false
+    end
     -- If our inventory is full, return early
     local stack = inventory.find_empty_stack(name)
     if not stack then
@@ -621,17 +623,47 @@ Aerial.events[116] = function()
 
     for unit_number, aerial_base in pairs(global.aerials.base_data) do
         -- If the base components aren't valid, remove it and try again in the next event
-        if not validate_base(aerial_base, unit_number) then
+        local invalid = false
+
+        local combinator = aerial_base.combinator
+        if not combinator.valid then
+            combinator.destroy()
+            invalid = true
+        end
+
+        local animation = aerial_base.animation
+        if invalid or not animation.valid then
+            animation.destroy()
+            invalid = true
+        end
+
+        local chest = aerial_base.chest
+        if invalid then
+            if chest.valid then
+                local inventory = chest.get_inventory(defines.inventory.chest)
+                local position = chest.position
+                local force = chest.force
+                -- Spill the inventory and mark the items on the ground for deconstruction
+                for i = 1, #inventory do
+                    local stack = inventory[i]
+                    if stack.valid_for_read then
+                        local spilled_results = chest.surface.spill_item_stack(position, stack, true, force, false)
+                        for ii = 1,  #spilled_results do
+                            spilled_results[ii].order_deconstruction(force)
+                        end
+                    end
+                end
+                chest.destroy()
+            end
+            global.aerials.base_data[unit_number] = nil
             break
         end
 
-        local combinator = aerial_base.combinator
+
         local control = combinator.get_or_create_control_behavior()
-        local animation = aerial_base.animation
-        local chest = aerial_base.chest
 
         -- I guess we do this to make the combinator not use power and thus not flicker at low power? Seems weird...
-        if  animation.energy == 0 then
+        if animation.energy == 0 then
             control.enabled = false
             goto continue
         end
@@ -675,7 +707,7 @@ Aerial.events[116] = function()
         for name in pairs(turbine_names) do
             -- Diff the signals from our active turbine counts and rectify any differences
             local delta = (desired_turbines[name] or 0) - (existing_turbines[name] or 0)
-            if not is_empty and delta > 0 then -- Release blimps                
+            if not is_empty and delta > 0 then -- Release blimps
                 for _ = 1, math.min(delta, 10) do -- ~5/s release rate
                     local stack = inventory.find_item_stack(name)
                     if stack then
@@ -719,9 +751,7 @@ Aerial.events[116] = function()
             max_energy = max_energy_per_network[electric_network_id]
         end
 
-        if not control.enabled then
-            control.enabled = true
-        end
+        control.enabled = true
         -- The first arg here is just what order it shows in the output, 1-8 are reserved for the item counts
         control.set_signal(9, {
             signal = {type = 'virtual', name = 'signal-yellow'},
