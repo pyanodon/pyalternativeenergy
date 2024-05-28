@@ -3,6 +3,50 @@ local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 Aerial = {}
 Aerial.events = {}
 
+---@diagnostic disable-next-line: unknown-cast-variable
+---@cast global.aerials AerialsGlobalData
+
+---@class AerialsGlobalData Global data for the Aerials system
+---@field poles AerialPolesTable
+---@field poles_by_network AerialsPolesByNetworkArray
+---@field accumulators AerialsAccumulatorsByNetworkTable
+---@field aerial_data AerialsTurbineDataTable
+---@field aerial_counts AerialsTurbineCountsByNetworkTable
+---@field base_data AerialsBaseDataTable
+---@field refresh_networks boolean Triggers a network refresh on the next event tick
+---@field electric_network_id_override integer Overrides the electric network ID of the next aerial turbine to be created
+
+---@alias AerialsTurbineDataTable table<integer, AerialsTurbineDataTableEntry>
+---@class AerialsTurbineDataTableEntry Entry with the properties for a given aerial turbine
+---@field entity LuaEntity the turbine entity
+---@field target LuaEntity the flight target entity
+---@field starting_position MapPosition the position where the turbine originally launched
+---@field previous_position MapPosition the starting position of the current flight
+---@field network_id integer the electric network ID the turbine is associated with
+---@field last_20 integer[] an array of the efficiency bonus of the last 20 trips, used to create an average. Has up to but never more than 20 entries.
+---@field lifetime_generation number the liftime generation of this turbine, in J
+
+---@alias AerialPolesTable table<integer, AerialPolesTableEntry> Table of AerialPolesTableEntry indexed by the entity unit number
+---@class AerialPolesTableEntry Table containing the metadata for a specific electric pole
+---@field entity LuaEntity The pole entity
+---@field list_index integer Position in the AerialPolesByNetworkArray
+---@field network_id integer Electric network ID of the pole entity
+---@field unit_number integer Unit number of the pole entity (used when indexing AerialPolesTable)
+
+---@alias AerialsPolesByNetworkArray table<integer, AerialPolesTableEntry[]> Table of AerialsPolesTableEntry[] indexed by electric network ID
+
+---@alias AerialsAccumulatorsByNetworkTable table<integer, AerialsAccumulatorsByNetworkTableEntry> Table of AerialsAccumulatorsByNetworkTableEntry indexed by electric network ID
+---@alias AerialsAccumulatorsByNetworkTableEntry table<string, LuaEntity> Table of accumulator entities indexed by the parent turbine's entity name
+
+---@alias AerialsTurbineCountsByNetworkTable table<integer, AerialsTurbineCountsByNetworkTableEntry> Table of AerialsTurbineCountsByNetworkTableEntry indexed by electric network ID
+---@alias AerialsTurbineCountsByNetworkTableEntry table<string, integer> Table of aerials counts for this network indexed by the turbine's entity name
+
+---@alias AerialsBaseDataTable table<integer, AerialsBaseDataTableEntry>
+---@class AerialsBaseDataTableEntry Entry with the entities forming the Aerial Base compound-entity
+---@field animation LuaEntity animation entity portion of the Aerial Base
+---@field chest LuaEntity chest entity portion of the Aerial Base
+---@field combinator LuaEntity combinator entity of the Aerial Base. This is the place_result of the item.
+
 --[[ 
     GLOBALS:
 
@@ -46,8 +90,7 @@ Aerial.events = {}
                 combinator = base_entity -- the actual place result
             }
         },
-        refresh_poles = false,
-        refresh_turbines = false
+        refresh_networks = false,
     }
 
 ]]--
@@ -93,16 +136,28 @@ for name in pairs(energy_per_distance) do
     turbine_names[name] = true
 end
 
+---Calculates the distance between two positions
+---@param a MapPosition
+---@param b MapPosition
+---@return float
 local function calc_distance(a, b)
     local ax, ay = a.x or a[1], a.y or a[2]
     local bx, by = b.x or b[1], b.y or b[2]
     return ((ax - bx) ^ 2 + (ay - by) ^ 2) ^ 0.5
 end
 
+---Returns if an entity exists and is valid
+---@param x LuaEntity?
+---@return boolean
 local function exists_and_valid(x)
+    ---@type boolean
     return x and x.valid
 end
 
+---Increments the turbine count in global.aerials.turbine_count
+---@param network_id integer network ID of the turbine
+---@param turbine_name string entity name of the turbine
+---@param increment integer? amount to increment the count by (can be negative to decrement)
 local function increment_turbine_count(network_id, turbine_name, increment)
     increment = increment or 1
     local network_turbines = global.aerials.aerial_counts[network_id]
@@ -115,6 +170,12 @@ local function increment_turbine_count(network_id, turbine_name, increment)
         accumulator.electric_buffer_size = buffer_capacities[turbine_name] * new_count
     end
 end
+
+---Cancels creation of an entity
+---This is only used for turbine entities
+---@param entity LuaEntity
+---@param player_index integer This player's index in LuaGameScript::players (unique ID)
+---@param message LocalisedString? the failure message to display as flying text
 local function cancel_creation(entity, player_index, message)
 	local inserted = 0
 	local item_to_place = entity.prototype.items_to_place_this[1]
@@ -155,6 +216,8 @@ local function cancel_creation(entity, player_index, message)
     }
 end
 
+---Verify the neighbours of a given electric pole. Sets the network to be refreshed if any fail.
+---@param pole_entity LuaEntity electric pole entity
 local function verify_neighbours(pole_entity)
     local neighbours = pole_entity.neighbours and pole_entity.neighbours.copper
     if not neighbours then
@@ -180,6 +243,8 @@ local function verify_neighbours(pole_entity)
     end
 end
 
+---Adds a pole to the relevant global data tables and updates networks if there's inconsistencies
+---@param pole_entity LuaEntity electric pole entity
 local function add_pole(pole_entity)
     local network_id = pole_entity.electric_network_id
     if not network_id then
@@ -197,6 +262,9 @@ local function add_pole(pole_entity)
     verify_neighbours(pole_entity)
 end
 
+---Removes a pole from the relevant global data tables and updates networks if there's inconsistencies.
+---Removes any orphaned accumulators if the electric network is now empty.
+---@param pole_data AerialPolesTableEntry the data structure of the pole to be removed
 local function remove_pole(pole_data)
     local network_poles = global.aerials.poles_by_network[pole_data.network_id]
     local target_index = pole_data.list_index
@@ -239,6 +307,10 @@ local function remove_pole(pole_data)
     end
 end
 
+---Gets or creates an accumulator 
+---@param aerial_entity LuaEntity the aerial looking for a sexy accumulator in their area (network)
+---@param network_override integer? the electric network ID to check instead of the one at the aerial's position
+---@return LuaEntity? # the accumulator we found or created, if successful
 local function get_or_create_accumulator(aerial_entity, network_override)
     local name = aerial_entity.name
     if network_override then
@@ -348,10 +420,13 @@ local function get_or_create_accumulator(aerial_entity, network_override)
     end
 end
 
+---Returns a table where indexing always succeeds (initializes and returns an empty table if indexing would normally return nil)
+---@return table # the table with our special metatable
 local function solid_table()
     return setmetatable({}, dynamic_index)
 end
 
+---Rebuilds/verifies the the global aerial pole, turbine, and accumulator data
 local function refresh_networks()
     log("refreshing networks")
     global.aerials.refresh_networks = false
@@ -433,9 +508,12 @@ local function refresh_networks()
     end
 end
 
+---Just initializes the global data and rebuilds the network. There's additional checks for existing turbines in the migrations/aerial-1.2.29.lua
+---@source ../migrations/aerial-1.2.29.lua
 Aerial.events.on_init = function()
-    log("on init")
-    -- Create or import our global structure
+    -- Create or import our global structure. Newline below because otherwise luals thinks this is a description for the global var :/
+
+    ---@type AerialsGlobalData Global data structure for Aerials
     global.aerials = global.aerials or {
         poles = {},
         poles_by_network = solid_table(),
@@ -447,6 +525,9 @@ Aerial.events.on_init = function()
     refresh_networks()
 end
 
+---Counts the turbines of all types for a given electric network
+---@param electric_network_id integer electric network ID to count for
+---@return integer # total turbine count
 local function count_turbines_for_network(electric_network_id)
     local per_network = global.aerials.aerial_counts[electric_network_id]
     local sum = 0
@@ -456,6 +537,10 @@ local function count_turbines_for_network(electric_network_id)
     return sum
 end
 
+---Sums the distance a turbine has travelled and returns the energy it would generate if stopping at its current position
+---@param aerial LuaEntity
+---@return number energy amount of energy generated in J
+---@return number distance_bonus generation multiplier based on distance travelled
 local function calc_stored_energy(aerial)
     local entity = aerial.entity
     local previous_position = aerial.previous_position
@@ -472,6 +557,9 @@ local function calc_stored_energy(aerial)
     return 0, distance_bonus
 end
 
+---Calculates and stores the energy generated by the current trip of the given turbine
+---@param aerial LuaEntity
+---@return number #
 local function accumulate(aerial)
     local energy, distance_bonus = calc_stored_energy(aerial)
     local accumulator = get_or_create_accumulator(aerial.entity, aerial.network_id)
@@ -587,7 +675,7 @@ local function release_turbine(aerial_base_data, name, stack)
         return false
     end
 
-    global.electric_network_id_override = electric_network_id
+    global.aerials.electric_network_id_override = electric_network_id
     surface.create_entity{
         name = name,
         position = position,
@@ -596,7 +684,7 @@ local function release_turbine(aerial_base_data, name, stack)
         item = stack,
         raise_built = true
     }
-    global.electric_network_id_override = nil
+    global.aerials.electric_network_id_override = nil
     stack.clear()
     return true
 end
@@ -779,6 +867,8 @@ Aerial.events[116] = function()
     end
 end
 
+---Parks the given turbine, prints an error in chat, and removes it from the global data tables
+---@param entity LuaEntity the turbine to park
 local function park_and_error(entity)
     rendering.draw_sprite{
         sprite = 'utility.electricity_icon',
@@ -790,6 +880,8 @@ local function park_and_error(entity)
     Aerial.events.on_destroyed{entity = entity}
 end
 
+---Finds a target electric pole for the given turbine and issues the AI command to travel to it, if found
+---@param aerial AerialsTurbineDataTableEntry the data table of the turbine to command
 local function find_target(aerial)
     local entity = aerial.entity
     local name = entity.name
@@ -811,7 +903,7 @@ local function find_target(aerial)
     end
 
     -- Our ID is overridden here in case we create an entity and want it on a new network
-    local network_id = global.electric_network_id_override
+    local network_id = global.aerials.electric_network_id_override
         or (previous_target and previous_target.electric_network_id)
         or aerial.network_id
 
@@ -899,7 +991,7 @@ Aerial.events.on_built = function(event)
     -- Turbine?
     if turbine_names[entity_name] then
         -- Build or find the relevant accumulator
-        local accumulator = get_or_create_accumulator(entity, global.electric_network_id_override)
+        local accumulator = get_or_create_accumulator(entity, global.aerials.electric_network_id_override)
 
         if not accumulator or not accumulator.valid then
             cancel_creation(entity, event.player_index, {'aerial-gui.must-be-placed-in-electric-network'})
