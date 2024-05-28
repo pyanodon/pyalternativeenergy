@@ -1133,6 +1133,7 @@ local function build_aerial_gui(player, aerial)
 
     local entity = aerial.entity
 
+    player.opened = nil
     local main_frame = player.gui.screen.add{
         type = 'frame',
         name = 'aerial_gui',
@@ -1143,7 +1144,6 @@ local function build_aerial_gui(player, aerial)
     main_frame.tags = {unit_number = entity.unit_number}
     main_frame.auto_center = true
     -- "I think that was needed to fix some weird error" --notnotmelon
-    player.opened = nil
     player.opened = main_frame
 
     local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
