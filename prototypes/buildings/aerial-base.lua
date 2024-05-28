@@ -1,8 +1,8 @@
 for i = 1, 4 do
     local turbine_name = 'aerial-blimp-mk0' .. i
     data:extend{{
-        type = 'accumulator',
-        name = turbine_name .. '-interface',
+        type = 'electric-energy-interface',
+        name = turbine_name .. '-accumulator',
         localised_name = {'entity-name.' .. turbine_name},
         localised_description = {'entity-description.' .. turbine_name},
         icon = data.raw['item-with-tags'][turbine_name].icon,
@@ -14,7 +14,7 @@ for i = 1, 4 do
         energy_source = {
             type = 'electric',
             buffer_capacity = (100*2^i) .. 'MJ',
-            usage_priority = 'primary-output',
+            usage_priority = 'tertiary',
             input_flow_limit = '0kW',
             render_no_network_icon = false,
             render_no_power_icon = false
