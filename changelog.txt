@@ -1,8 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.29
+Date: 2024-??-??
+  Bugfixes:
+    - Resolved performance issues with most thermosolar/solar updraft setups
+    - Added glow layers to geothermal vents
+---------------------------------------------------------------------------------------------------
+Version: 1.2.28
+Date: 2024-5-1
+  Changes:
+    - Fixed that the new electric boiler was 2x faster at base than the old one.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.27
-Date: 2024-4-??
+Date: 2024-4-30
   Changes:
     - Fixed that RTG had an unknown key error (https://github.com/pyanodon/pybugreports/issues/477)
+    - Buffed electric boilers from 0 module slots to 3. Allowed electric boilers to be effected by AM:FM beacons.
+    - Electric boilers now have a glow layer in the dark.
+    - Note: the above two changes are only effective if you break and rebuild the boiler.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.26
 Date: 2024-4-29

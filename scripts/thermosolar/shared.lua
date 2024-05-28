@@ -5,7 +5,6 @@ Thermosolar.tower_range = 100
 
 Thermosolar.events.on_init = function(event)
     global.solar_updraft_towers = global.solar_updraft_towers or {}
-    global.glass_covers = global.glass_covers or {}
     global.tower_circles = global.tower_circles or {}
 	global.heliostat_towers = global.heliostat_towers or {}
 	global.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * game.entity_prototypes['steam-turbine-mk04'].max_power_output

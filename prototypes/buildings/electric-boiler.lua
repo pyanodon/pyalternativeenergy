@@ -313,9 +313,10 @@ RECIPE {
 ENTITY {
     name = 'py-electric-boiler',
     type = 'assembling-machine',
+    localised_name = {'entity-name.electric-boiler'},
+    localised_description = {'entity-description.electric-boiler'},
     icon = '__pyalternativeenergygraphics__/graphics/icons/electric-boiler.png',
     icon_size = 64,
-    localised_name = {'entity-name.electric-boiler'},
     flags = {'placeable-neutral', 'player-creation'},
     minable = {
         mining_time = 0.5,

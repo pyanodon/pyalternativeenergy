@@ -76,14 +76,26 @@ data:extend{{
     },
     stage_counts = {0},
     stages = {
-        sheet = {
-            filename = "__pyalternativeenergygraphics__/graphics/ore/geothermal-crack/geothermal-crack.png",
-            priority = "extra-high",
-            width = 352,
-            height = 352,
-            frame_count = 1,
-            variation_count = 1,
-            shift = util.by_pixel(0, 0)
+        layers = {
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/ore/geothermal-crack/geothermal-crack.png",
+                priority = "extra-high",
+                width = 352,
+                height = 352,
+                frame_count = 1,
+                variation_count = 1,
+                shift = util.by_pixel(0, 0)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/ore/geothermal-crack/glow.png",
+                priority = "extra-high",
+                draw_as_glow = true,
+                width = 352,
+                height = 352,
+                frame_count = 1,
+                variation_count = 1,
+                shift = util.by_pixel(0, 0)
+            }
         }
     }
 }}

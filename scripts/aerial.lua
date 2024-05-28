@@ -118,7 +118,6 @@ end
 
 local function calc_stored_energy(aerial_data)
     local entity = aerial_data.entity
-    local acculumator = aerial_data.acculumator
     local previous_position = aerial_data.previous_position
     local starting_position = aerial_data.starting_position
     local distance_bonus = 1
