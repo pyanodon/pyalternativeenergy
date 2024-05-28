@@ -1,4 +1,4 @@
-local collision_data = require("prototypes.functions.collision-mask")
+local collision_data = require 'prototypes.functions.collision-mask'
 local wind_layer = collision_data and collision_data.wind_layer or "layer-50" -- make YAFC happy
 
 RECIPE {
@@ -29,7 +29,7 @@ ITEM {
     stack_size = 10
 }
 
-ENTITY {
+local proto = ENTITY {
     type = "electric-energy-interface",
     name = "hawt-turbine-mk04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk04.png",
@@ -67,54 +67,46 @@ ENTITY {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/r4.png",
                 width = 352,
                 height = 416,
-                --line_length = 10,
                 frame_count = 1,
                 shift = util.by_pixel(0, -64),
-                --animation_speed = 1,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/a4.png",
                 width = 352,
                 height = 416,
-                --line_length = 10,
                 frame_count = 1,
                 shift = util.by_pixel(0, -64),
-                --animation_speed = 1,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/s4.png",
                 width = 352,
                 height = 256,
-                --line_length = 10,
                 frame_count = 1,
                 shift = util.by_pixel(50, 25),
-                --animation_speed = 1,
                 draw_as_shadow = true,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/l4.png",
                 width = 352,
                 height = 416,
-                --line_length = 10,
                 frame_count = 1,
                 shift = util.by_pixel(0, -64),
-                --animation_speed = 1,
                 draw_as_glow = true,
             },
         }
     },
     localised_name = {'entity-name.hawt-turbine-mk04'},
     localised_description = {'entity-description.hawt-turbine-mk04'}
-}:run_function(function(proto)
-    -- Make a copy with only the base animation
-    local new_proto = table.deepcopy(proto)
-    new_proto.name = proto.name .. '-blank'
-    new_proto.picture = table.deepcopy(proto.animations.layers[1])
-    new_proto.picture.filename = new_proto.picture.filename:gsub('r4', 'base-mk04')
-    new_proto.animations = nil
-    new_proto.render_layer = 'lower-object-above-shadow'
-    new_proto:extend(true)
-end)
+}
+
+-- Make a copy with only the base animation
+local new_proto = table.deepcopy(proto)
+new_proto.name = proto.name .. '-blank'
+new_proto.picture = table.deepcopy(proto.animations.layers[1])
+new_proto.picture.filename = new_proto.picture.filename:gsub('r4', 'base-mk04')
+new_proto.animations = nil
+new_proto.render_layer = 'lower-object-above-shadow'
+data:extend{new_proto}
 
 data:extend(
     {

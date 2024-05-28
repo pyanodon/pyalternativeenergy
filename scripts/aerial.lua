@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 Aerial = {}
 Aerial.events = {}
 
@@ -11,44 +9,6 @@ end
 
 local function exists_and_valid(x)
     return x and x.valid
-end
-
-local function cancel_creation(entity, player_index, message)
-	local inserted = 0
-	local item_to_place = entity.prototype.items_to_place_this[1]
-	local surface = entity.surface
-	local position = entity.position
-
-	if player_index then
-		local player = game.get_player(player_index)
-		if player.mine_entity(entity, false) then
-			inserted = 1
-		elseif item_to_place then
-			inserted = player.insert(item_to_place)
-		end
-	end
-
-	if inserted == 0 and item_to_place then
-		surface.spill_item_stack(
-			position,
-			item_to_place,
-			true,
-			entity.force_index,
-			false
-		)
-	end
-
-	entity.destroy{raise_destroy = true}
-
-	if not message then return end
-
-    surface.create_entity{
-        name = 'flying-text',
-        position = position,
-        text = message,
-        render_player_index = player_index,
-        color = {255,60,60}
-    }
 end
 
 local energy_per_distance = {
@@ -287,7 +247,7 @@ local function insert_with_tags(inventory, name, aerial_data)
                     count = 1
                 }
                 stack.tags = {lifetime_generation = aerial_data.lifetime_generation}
-                stack.custom_description = {'', aerial_data.entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
+                stack.custom_description = {'', aerial_data.entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', py.format_energy(aerial_data.lifetime_generation, 'J')}}
                 return
             end
         end
@@ -578,7 +538,7 @@ Aerial.events.on_built = function(event)
         end
         if fail_msg then
             acculumator.destroy()
-            cancel_creation(entity, event.player_index, fail_msg)
+            py.cancel_creation(entity, event.player_index, fail_msg, {255, 60, 60})
             return
         end
 
@@ -682,7 +642,7 @@ Aerial.events.on_destroyed = function(event)
         if not buffer then return end
         local stack = buffer[1]
         stack.tags = {lifetime_generation = aerial_data.lifetime_generation}
-        stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation, 'J')}}
+        stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', py.format_energy(aerial_data.lifetime_generation, 'J')}}
     elseif entity.type == 'electric-pole' then
         local all_electric_poles = global.all_electric_poles[surface_index]
         if not all_electric_poles then
@@ -850,7 +810,7 @@ function Aerial.update_gui(player)
     stored_energy = math.min(stored_energy, max_energy)
     local progress = stored_energy / max_energy
     content_flow.progressbar.value = progress > 0.99 and 1 or progress
-    content_flow.progressbar.caption = {'sut-gui.energy', FUN.format_energy(stored_energy, 'J'), FUN.format_energy(max_energy, 'J')}
+    content_flow.progressbar.caption = {'sut-gui.energy', py.format_energy(stored_energy, 'J'), py.format_energy(max_energy, 'J')}
 
     local last_20 = aerial_data.last_20
     distance_bonus = math.ceil(distance_bonus * 1000) / 10
@@ -867,7 +827,7 @@ function Aerial.update_gui(player)
         content_flow.distance_bonus.caption = {'aerial-gui.rpm-bonus', distance_bonus}
     end
 
-    content_flow.lifetime_generation.caption = {'aerial-gui.lifetime-generation', FUN.format_energy(aerial_data.lifetime_generation + fake_energy, 'J')}
+    content_flow.lifetime_generation.caption = {'aerial-gui.lifetime-generation', py.format_energy(aerial_data.lifetime_generation + fake_energy, 'J')}
 
     local target = aerial_data.target
     if target and target.valid then

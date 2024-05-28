@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 data.raw.fluid["pressured-steam"].heat_capacity = "8KJ"
 
 RECIPE("nuclear-sample"):replace_ingredient('plutonium', {'pu-238', 1}):remove_unlock('production-science-pack'):add_unlock('chemical-science-pack')
@@ -103,14 +101,14 @@ RECIPE('cool-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium
 RECIPE('cold-clean-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 RECIPE('liquid-pure-air'):remove_unlock('semiconductor-doping-mk02'):add_unlock('helium-processing')
 
-FUN.results_replacer("dt-fusion", "critical-steam", "neutron", 1000)
-FUN.remove_ingredient("dt-fusion", "pressured-water")
-FUN.results_replacer("dt-he3", "critical-steam", "neutron", 1000)
-FUN.remove_ingredient("dt-he3", "pressured-water")
-FUN.results_replacer("b-h", "critical-steam", "neutron", 1000)
-FUN.remove_ingredient("b-h", "pressured-water")
-FUN.results_replacer("antimatter-fusion", "critical-steam", "neutron", 1000)
-FUN.remove_ingredient("antimatter-fusion", "pressured-water")
+RECIPE('dt-fusion'):replace_result("critical-steam", "neutron", 1000)
+RECIPE('dt-fusion'):remove_ingredient("pressured-water")
+RECIPE('dt-he3'):replace_result("critical-steam", "neutron", 1000)
+RECIPE('dt-he3'):remove_ingredient("pressured-water")
+RECIPE('b-h'):replace_result("critical-steam", "neutron", 1000)
+RECIPE('b-h'):remove_ingredient("pressured-water")
+RECIPE('antimatter-fusion'):replace_result("critical-steam", "neutron", 1000)
+RECIPE('antimatter-fusion'):remove_ingredient("pressured-water")
 
 RECIPE("steam-exchange1"):remove_unlock("fusion-mk01")
 RECIPE("steam-exchange2"):remove_unlock("fusion-mk02")

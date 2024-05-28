@@ -1,4 +1,4 @@
-local sounds = require("__base__/prototypes/entity/sounds")
+local sounds = require '__base__/prototypes/entity/sounds'
 
 data:extend({{
   type = "equipment-grid",
@@ -43,7 +43,7 @@ ITEM {
     stack_size = 5
 }
 
-{
+ENTITY {
     type = "locomotive",
     name = "mk04-locomotive",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mk04-locomotive.png",

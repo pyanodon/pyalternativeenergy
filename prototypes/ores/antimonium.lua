@@ -1,17 +1,17 @@
-local resource_autoplace = require("resource-autoplace")
+local resource_autoplace = require 'resource-autoplace'
 
-DATA {
+data:extend{{
     type = "autoplace-control",
     category = "resource",
     name = "antimonium",
     richness = true,
     order = "p"
-}
+}}
 
-DATA {
+data:extend{{
     type = "noise-layer",
     name = "antimonium"
-}
+}}
 
 ENTITY {
     type = "resource",

@@ -1,4 +1,4 @@
-local sounds = require("__base__/prototypes/entity/sounds")
+local sounds = require '__base__/prototypes/entity/sounds'
 
 -- TECH CHANGES
 data.raw.technology['uranium-processing'].enabled = true
@@ -73,7 +73,6 @@ RECIPE('uranium-rounds-magazine'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('uranium-cannon-shell'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('explosive-uranium-cannon-shell'):replace_ingredient('uranium-238', 'u-238')
 RECIPE('logistic-science-pack'):add_ingredient { type = 'item', name = 'battery-mk01', amount = 3 }
-RECIPE('heat-exchange'):add_unlock('uranium-processing')
 
 RECIPE('inserter'):clear_ingredients():add_ingredient { 'burner-inserter', 1 }:add_ingredient { 'electronic-circuit', 2 }
 	:add_ingredient { 'small-parts-01', 3 }:add_ingredient { 'duralumin', 1 }
@@ -289,8 +288,8 @@ data.raw.furnace['steel-furnace'].energy_source.fluid_box = {
 		{type = 'input-output', position = {0.5, 1.5}},
 		{type = 'input-output', position = {0.5, -1.5}}
 	},
-	pipe_covers = DATA.Pipes.covers(false, true, true, true),
-	pipe_picture = DATA.Pipes.pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
+	pipe_covers = py.pipe_covers(false, true, true, true),
+	pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
 	production_type = 'input',
 }
 

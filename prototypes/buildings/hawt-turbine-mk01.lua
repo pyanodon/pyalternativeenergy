@@ -1,4 +1,4 @@
-local collision_data = require("prototypes.functions.collision-mask")
+local collision_data = require 'prototypes.functions.collision-mask'
 local wind_layer = collision_data and collision_data.wind_layer or "layer-50" -- make YAFC happy
 
 RECIPE{
@@ -30,7 +30,7 @@ ITEM{
     stack_size = 10
 }
 
-ENTITY{
+local proto = ENTITY{
     type = 'electric-energy-interface',
     name = 'hawt-turbine-mk01',
     icon = '__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk01.png',
@@ -103,16 +103,16 @@ ENTITY{
     },
     localised_name = {'entity-name.hawt-turbine-mk01'},
     localised_description = {'entity-description.hawt-turbine-mk01'}
-}:run_function(function(proto)
-    -- Make a copy, bring in our base layer
-    local new_proto = table.deepcopy(proto)
-    new_proto.name = proto.name .. '-blank'
-    new_proto.picture = table.deepcopy(proto.animations.layers[1])
-    new_proto.picture.filename = new_proto.picture.filename:gsub('r4', 'base-mk01')
-    new_proto.animations = nil
-    new_proto.render_layer = 'lower-object-above-shadow'
-    new_proto:extend(true)
-end)
+}
+
+-- Make a copy with only the base animation
+local new_proto = table.deepcopy(proto)
+new_proto.name = proto.name .. '-blank'
+new_proto.picture = table.deepcopy(proto.animations.layers[1])
+new_proto.picture.filename = new_proto.picture.filename:gsub('r4', 'base-mk01')
+new_proto.animations = nil
+new_proto.render_layer = 'lower-object-above-shadow'
+data:extend{new_proto}
 
 data:extend(
     {

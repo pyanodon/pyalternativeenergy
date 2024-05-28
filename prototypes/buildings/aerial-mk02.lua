@@ -1,4 +1,4 @@
-local util = require('util')
+local util = require 'util'
 
 RECIPE{
 	type = 'recipe',
@@ -72,7 +72,7 @@ data:extend(
 		range = 0,
 		cooldown = 0,
 		ammo_type = _G.make_unit_melee_ammo_type(0),
-		animation = DATA.Sprites.empty_animation()
+		animation = py.empty_image()
 	},
 	vision_distance = 30,
 	movement_speed = 0.04,

@@ -71,13 +71,11 @@ RECIPE("dhilmos-pool-mk01"):add_ingredient({type = "item", name = "intermetallic
 RECIPE("dingrits-pack-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("ez-ranch-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("fish-farm-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
-RECIPE("fish-farm-mk01-heating-cooling"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("kmauts-enclosure-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
 RECIPE("mukmoux-pasture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 RECIPE("phadai-enclosure-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("phagnot-corral-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("prandium-lab-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
-RECIPE("prandium-lab-mk01-ultrasound"):add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("scrondrix-pen-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("simik-den-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("sponge-culture-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
@@ -94,7 +92,7 @@ RECIPE("rennea-plantation-mk01"):add_ingredient({type = "item", name = "intermet
 RECIPE("tuuphra-plantation-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("yotoi-aloe-orchard-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("vonix-den-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
-RECIPE("plankton-farm-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
+RECIPE("plankton-farm"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
 -- RECIPE("data-array"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("generator-1"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("pyphoon-bay"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
@@ -126,13 +124,11 @@ RECIPE("dhilmos-pool-mk02"):add_ingredient({type = "item", name = "self-assembly
 RECIPE("dingrits-pack-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("ez-ranch-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("fish-farm-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
-RECIPE("fish-farm-mk02-heating-cooling"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("kmauts-enclosure-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("mukmoux-pasture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("phadai-enclosure-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("phagnot-corral-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("prandium-lab-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
-RECIPE("prandium-lab-mk02-ultrasound"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("scrondrix-pen-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("simik-den-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("sponge-culture-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -190,13 +186,11 @@ RECIPE("dhilmos-pool-mk03"):add_ingredient({type = "item", name = "ns-material",
 RECIPE("dingrits-pack-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("ez-ranch-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("fish-farm-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
-RECIPE("fish-farm-mk03-heating-cooling"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("kmauts-enclosure-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 6}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("mukmoux-pasture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("phadai-enclosure-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("phagnot-corral-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("prandium-lab-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
-RECIPE("prandium-lab-mk03-ultrasound"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("scrondrix-pen-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("simik-den-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("sponge-culture-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 10}):add_ingredient({type = "item", name = "acrylic", amount = 40}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -251,13 +245,11 @@ RECIPE("dhilmos-pool-mk04"):add_ingredient({type = "item", name = "metastable-qu
 RECIPE("dingrits-pack-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("ez-ranch-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("fish-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
-RECIPE("fish-farm-mk04-heating-cooling"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 2}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("kmauts-enclosure-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 6}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("mukmoux-pasture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 4}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("phadai-enclosure-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("phagnot-corral-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 3}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("prandium-lab-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
-RECIPE("prandium-lab-mk04-ultrasound"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("scrondrix-pen-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("simik-den-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("sponge-culture-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
@@ -273,7 +265,7 @@ RECIPE("ralesia-plantation-mk04"):add_ingredient({type = "item", name = "metasta
 RECIPE("rennea-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("tuuphra-plantation-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("yotoi-aloe-orchard-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
-RECIPE("vonix-den-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+--RECIPE("vonix-den-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 10}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("plankton-farm-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 7}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("micro-mine-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("research-center-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
@@ -293,7 +285,7 @@ RECIPE('sb-pulp-05'):add_ingredient({type = "item", name = "yellow-dextrine", am
 RECIPE('sodium-cyanate'):add_ingredient({type = "item", name = "urea", amount = 5})
 RECIPE('oxalic-acid'):add_ingredient({type = "item", name = "sugar", amount = 5})
 RECIPE('gd-metal'):add_ingredient({type = "item", name = "cobalt-extract", amount = 2})
-RECIPE('chloral'):set_category("chemistry")
+RECIPE('chloral').category = 'chemistry'
 RECIPE('nanocarrier'):add_ingredient({type = "item", name = "metallic-glass", amount = 1})
 -- RECIPE('gh'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 -- RECIPE('gh-2'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})

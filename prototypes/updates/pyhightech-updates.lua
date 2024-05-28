@@ -1,7 +1,6 @@
 --TECHNOLOGY--
 TECHNOLOGY('quantum'):add_prereq('machines-mk02')
 TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04'):add_prereq('mof'):add_prereq('nano-mesh'):add_prereq('biofet')
-TECHNOLOGY('ht-trains'):add_prereq('battery-mk02')
 -- TECHNOLOGY("nucleo"):remove_pack('chemical-science-pack'):remove_prereq('energy-2'):remove_prereq('boron-mk02'):add_prereq('uranium-processing')
 TECHNOLOGY("ht-robotics"):add_prereq("advanced-robotics")
 TECHNOLOGY("microfibers"):remove_pack('production-science-pack')
@@ -12,7 +11,14 @@ TECHNOLOGY("nano-tech"):add_pack("military-science-pack")
 TECHNOLOGY("schrodinger-antelope"):add_pack("military-science-pack")
 
 --BUILDINDS--
-RECIPE("quantum-computer"):remove_ingredient('gasturbinemk03')
+if RECIPE['quantum-computer'] then
+    RECIPE['quantum-computer']
+        :remove_ingredient('gasturbinemk03')
+        :add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 50})
+        :add_ingredient({type = "item", name = "sc-engine", amount = 10})
+        :add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+        :add_ingredient({type = "item", name = "mechanical-parts-04", amount = 10})
+end
 
 --RECIPE("clay-pit-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 -- RECIPE("chipshooter-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
@@ -22,7 +28,7 @@ RECIPE("particle-accelerator-mk01"):add_ingredient({type = "item", name = "inter
 -- RECIPE("electronics-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 1})
 -- RECIPE("pulp-mill-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("nano-assembler-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 15})
-RECIPE("py-recharging-station-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+RECIPE("py-recharge-station-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("py-roboport-mk02"):add_ingredient({type = "item", name = "nexelit-battery", amount = 2})
 RECIPE("phosphate-mine"):add_ingredient({type = "item", name = "intermetallics", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 2 }
 RECIPE("rare-earth-mine"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
@@ -30,7 +36,6 @@ RECIPE("rare-earth-mine"):add_ingredient({type = "item", name = "intermetallics"
 RECIPE("clay-pit-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("chipshooter-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("pcb-factory-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
-RECIPE("pumpjack-hightech"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("fbreactor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("particle-accelerator-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 20}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("electronics-factory-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
@@ -55,10 +60,9 @@ RECIPE("particle-accelerator-mk04"):add_ingredient({type = "item", name = "metas
 RECIPE("electronics-factory-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 1}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 RECIPE("pulp-mill-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 1}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 RECIPE("nano-assembler-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
-RECIPE("blackhole"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
-RECIPE("quantum-computer"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 50}):add_ingredient({type = "item", name = "sc-engine", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
+if RECIPE["blackhole"] then RECIPE("blackhole"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 15}):add_ingredient({type = "item", name = "sc-engine", amount = 4}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 } end
 
-RECIPE("solar-panel-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotubes", amount = 20})
+RECIPE("solar-panel-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-aerogel", amount = 20}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 20})
 RECIPE("solar-panel-mk04"):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "quantum-dots", amount = 10}):add_ingredient({type = "item", name = "hyperelastic-material", amount = 20})
 
 RECIPE('centrifuge-mk03'):add_ingredient({type = "item", name = "re-magnet", amount = 100}):add_ingredient({type = "item", name = "phosphate-glass", amount = 100}):add_ingredient({type = "item", name = "sc-engine", amount = 3})
@@ -119,7 +123,7 @@ RECIPE("quantum-dots"):add_ingredient({type = "item", name = "milfe", amount = 1
 RECIPE("harmonic-absorber"):add_ingredient({type = "item", name = "cf", amount = 30})
 RECIPE("var-josephson-junction"):add_ingredient({type = "item", name = "cf", amount = 30}):add_ingredient({type = "item", name = "photonic-crystal", amount = 1}):add_ingredient({type = "item", name = "gd-metal", amount = 1})
 RECIPE("paradiamatic-resistor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
-RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
+--RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("volumetric-capacitor"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("pa-proton"):replace_ingredient("uranium-235", "u-235")
 RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si"):set_fields{ results = {
@@ -129,7 +133,7 @@ RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si"):set_fields{ resul
 RECIPE("silicon"):remove_unlock("semiconductor-doping"):add_unlock("silicon-mk01")
 RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
 RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
-RECIPE("regenerator"):add_ingredient({type = "item", name = "ceramics", amount = 5})
+RECIPE("regenerator"):add_ingredient({type = "item", name = "ceramic", amount = 5})
 RECIPE("nuclear-reactor-mk03"):add_ingredient({type = "item", name = "biopolymer", amount = 50}):add_ingredient({type = "item", name = "carbon-nanotube", amount = 50}):add_ingredient({type = "item", name = "aerogel", amount = 50})
 RECIPE("nuclear-reactor-mk04"):add_ingredient({type = "item", name = "control-unit", amount = 20}):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 10}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 40})
 RECIPE("neutron-moderator-mk03"):add_ingredient({type = "item", name = "heavy-fermion", amount = 40}):add_ingredient({type = "item", name = "re-magnet", amount = 30}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 10})
@@ -140,7 +144,6 @@ RECIPE("neutron-absorber-mk04"):add_ingredient({type = "item", name = "supercond
 table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 
 RECIPE("py-science-pack-3"):add_ingredient{type = "item", name = "re-magnet", amount = 1}
-RECIPE("quantum-computer"):add_ingredient({type = "item", name = "mechanical-parts-04", amount = 10})
 
 ----EXCLUSIVE RECIPES----
 

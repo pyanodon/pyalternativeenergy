@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 Heliostat = {}
 Heliostat.events = {}
 
@@ -130,7 +128,7 @@ Heliostat.events.on_gui_opened = function(event)
 	content_flow.add{type = 'label', name = 'effective_generation'}
 	content_flow.add{type = 'label', name = 'daylight'}
 	content_flow.add{type = 'label', caption = {'heliostat-gui.range', Thermosolar.tower_range}}
-	content_flow.add{type = 'label', caption = {'heliostat-gui.energy-per-heliostat', FUN.format_energy(global.energy_per_heliostat, 'W')}}
+	content_flow.add{type = 'label', caption = {'heliostat-gui.energy-per-heliostat', py.format_energy(global.energy_per_heliostat, 'W')}}
 	content_flow.add{type = 'label', caption = {'heliostat-gui.target-temperature'}}
 
 	Heliostat.update_gui(main_frame)
@@ -155,11 +153,11 @@ function Heliostat.update_gui(gui)
 	content_flow.progressbar.caption = {'heliostat-gui.salt-generation', math.floor(tower_data.max_salt_production * daylight), math.floor(tower_data.max_salt_production)}
     content_flow.total_heliostats.caption = {'heliostat-gui.total-heliostats', tower_data.heliostats}
     content_flow.average_generation.caption = {'heliostat-gui.average-generation', math.floor(tower_data.max_salt_production * Thermosolar.calc_average_daylight(surface))}
-    content_flow.effective_generation.caption = {'heliostat-gui.effective-generation', FUN.format_energy(tower_data.max_production * daylight, 'W'), FUN.format_energy(tower_data.max_production, 'W')}
+    content_flow.effective_generation.caption = {'heliostat-gui.effective-generation', py.format_energy(tower_data.max_production * daylight, 'W'), py.format_energy(tower_data.max_production, 'W')}
     content_flow.daylight.caption = {'sut-gui.daylight', math.floor(daylight * 100)}
 end
 
-script.on_event('open-gui', function(event)
+py.on_event('open-gui', function(event)
 	local player = game.players[event.player_index]
 	if player.cursor_stack and player.cursor_stack.valid_for_read then return end
 	local entity = player.selected
