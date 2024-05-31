@@ -4,6 +4,7 @@ Date: 2024-??-??
   Bugfixes:
     - Resolved performance issues with most thermosolar/solar updraft setups
     - Added glow layers to geothermal vents
+    - Fixed output display on Thermosolar MK 04 being incorrect after turbine buffs
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.28
 Date: 2024-5-1
