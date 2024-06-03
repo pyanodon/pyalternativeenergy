@@ -1,3 +1,67 @@
+RECIPE('fuelrod-mk01-1'):remove_ingredient('20-u-powder')
+RECIPE('bhoddos-mk02'):remove_ingredient('40-u-powder')
+RECIPE('bhoddos-mk03'):remove_ingredient('70-u-powder')
+RECIPE('fuelrod-mk01'):remove_unlock('advanced-material-processing-2')
+
+--removing old enrichement recipes
+for _, recipe_name in pairs {
+    'u-15',
+    'u-15-2',
+    'u-20',
+    '20-u-powder',
+    'u-23',
+    'u-30',
+    'u-33',
+    '40-u-powder',
+    'u-40',
+    'u-50',
+    'u-65',
+    'u-70',
+    '70-u-powder',
+    'u-73',
+    'u-75',
+    'u-79',
+    'u-79-2',
+    'u-81',
+    'u-83',
+    'yellow-cake',
+    'yellow-cake-u235',
+    'vanadium-mixture',
+    'pregnant-solution-01',
+    'fuelrod-mk01',
+    'fuelrod-mk01-2',
+    'fuelrod-mk01-3',
+} do
+    RECIPE(recipe_name):remove_unlock('uranium-mk04'):remove_unlock('uranium-mk03'):remove_unlock('uranium-mk02'):remove_unlock('uranium-mk01')
+    data.raw.recipe[recipe_name] = nil
+end
+
+data.raw.fluid['u-15'] = nil
+data.raw.fluid['u-20'] = nil
+data.raw.fluid['u-23'] = nil
+data.raw.fluid['u-25'] = nil
+data.raw.fluid['u-30'] = nil
+data.raw.fluid['u-33'] = nil
+data.raw.fluid['u-35'] = nil
+data.raw.fluid['u-40'] = nil
+data.raw.fluid['u-43'] = nil
+data.raw.fluid['u-45'] = nil
+data.raw.fluid['u-50'] = nil
+data.raw.fluid['u-65'] = nil
+data.raw.fluid['u-70'] = nil
+data.raw.fluid['u-73'] = nil
+data.raw.fluid['u-75'] = nil
+data.raw.fluid['u-79'] = nil
+data.raw.fluid['u-81'] = nil
+data.raw.fluid['u-83'] = nil
+data.raw.fluid['u-rich-pulp'] = nil
+data.raw.fluid['u-waste'] = nil
+data.raw.fluid['vanadium-mixture'] = nil
+data.raw.fluid['mukmoux-oil'] = nil
+
+data.raw.item['20-u-powder'] = nil
+data.raw.item['40-u-powder'] = nil
+data.raw.item['70-u-powder'] = nil
 
 --BETA DECAY = lose an electron.
 
