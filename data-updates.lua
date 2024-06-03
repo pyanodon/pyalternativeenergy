@@ -367,6 +367,7 @@ local recipes_list =
   "yaw-drive-mk03",
   "yaw-drive-mk04",
   "yellow-dextrine",
+	'replicator-mova',
 
   "light-n2",
   "p-dope2",
