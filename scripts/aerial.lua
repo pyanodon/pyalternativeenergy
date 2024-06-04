@@ -468,6 +468,10 @@ end
 Aerial.events.on_init = function()
     -- Create or import our global structure. Newline below because otherwise luals thinks this is a description for the global var :/
 
+    if global.aerials and not global.aerials.aerial_counts then
+        global.aerials = nil
+    end
+
     ---@type AerialsGlobalData Global data structure for Aerials
     global.aerials = global.aerials or {
         poles = {},
