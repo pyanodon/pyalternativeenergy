@@ -1,11 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.30
+Date: 2024-6-4
+  Bugfixes:
+    - Fixed a crash while applying aerial turbine migrations.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.29
 Date: 2024-6-3
   Bugfixes:
-    - Resolved performance issues with most thermosolar/solar updraft setups
-    - Added glow layers to geothermal vents
-    - Fixed output display on Thermosolar MK 04 being incorrect after turbine buffs
-    - Removed prototypes for unreachable pyro uranium pulp chain (https://github.com/pyanodon/pybugreports/issues/497)
+    - Resolved performance issues with most thermosolar/solar updraft setups.
+    - Greatly improved performance for aerial turbines.
+    - Added glow layers to geothermal vents.
+    - Fixed output display on Thermosolar MK 04 being incorrect after turbine buffs.
+    - Removed prototypes for unreachable pyro uranium pulp chain. (https://github.com/pyanodon/pybugreports/issues/497)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.28
 Date: 2024-5-1

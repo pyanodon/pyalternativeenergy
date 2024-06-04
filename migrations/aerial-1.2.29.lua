@@ -1,4 +1,4 @@
-if not global.aerials then -- Init didn't get run because it's also on_configuration_changed, lmao
+if not global.aerials or not global.aerial_counts then -- Init didn't get run because it's also on_configuration_changed, lmao
     Aerial.events.on_init()
 end
 
