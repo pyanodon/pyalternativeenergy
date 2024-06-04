@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.29
-Date: 2024-??-??
+Date: 2024-6-3
   Bugfixes:
     - Resolved performance issues with most thermosolar/solar updraft setups
     - Added glow layers to geothermal vents
