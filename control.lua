@@ -60,27 +60,6 @@ py.on_event('on_built', function(event)
             direction = E.direction
         }
         E.destroy()
-    elseif string.match(E.name, 'numal%-reef') and string.match(E.name, 'placer') then
-        local direction = E.direction
-        local x = 0
-        local y = 0
-        if direction == defines.direction.north then
-            y = -4
-        elseif direction == defines.direction.south then
-            y = 4
-        elseif direction == defines.direction.east then
-            x = 4
-        elseif direction == defines.direction.west then
-            x = -4
-        end
-        surface.create_entity{
-            name = 'numal-reef-mk' .. string.match(E.name, '%d+'),
-            position = {E.position.x + x, E.position.y + y},
-            force = E.force,
-            direction = E.direction,
-            raise_built = true
-        }
-        E.destroy()
     elseif string.match(E.name, 'lrf%-panel') ~= nil then
         global.lrf_panels[E.unit_number] = E
     elseif E.name == 'stirling-concentrator' then
