@@ -7,7 +7,10 @@ Thermosolar.events.on_init = function(event)
     global.solar_updraft_towers = global.solar_updraft_towers or {}
     global.tower_circles = global.tower_circles or {}
 	global.heliostat_towers = global.heliostat_towers or {}
-	global.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * game.entity_prototypes['steam-turbine-mk04'].max_power_output
+	local steam = game.fluid_prototypes['pressured-steam']
+	local joules_per_unit = steam.heat_capacity * steam.max_temperature
+	local mk04_max_output_in_w = game.entity_prototypes['steam-turbine-mk04'].fluid_usage_per_tick * joules_per_unit * 60
+	global.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * mk04_max_output_in_w
 	global.energy_per_heliostat = global.heliostat_tower_max_power_output / Heliostat.max_heliostats
 end
 

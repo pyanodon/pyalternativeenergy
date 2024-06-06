@@ -1,8 +1,8 @@
 Heliostat = {}
 Heliostat.events = {}
 
-Heliostat.max_heliostats = 1936
-Heliostat.mk04_turbines_supported_per_maxed_tower = 0.2
+Heliostat.max_heliostats = 1926
+Heliostat.mk04_turbines_supported_per_maxed_tower = (0.2 * (4 / 1000)) -- MK04 turbines were buffed from 4/s to 1k/s steam usage
 
 function Heliostat.is_heliostat(heliostat)
 	return not not (string.match(heliostat.name, 'solar%-tower%-panel%d+'))

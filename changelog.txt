@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.33
+Date: ?
+  Bugfixes:
+    - Fixed that mining a locomotive would wipe its equipment grid. (https://github.com/pyanodon/pybugreports/issues/514)
+---------------------------------------------------------------------------------------------------
 Version: 1.2.32
 Date: 2024-6-4
   Bugfixes:
