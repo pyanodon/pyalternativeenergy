@@ -32,7 +32,7 @@ RECIPE {
 }:add_unlock("railway-mk04")
 
 ITEM {
-    type = "item",
+    type = "item-with-entity-data",
     name = "mk04-locomotive",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mk04-locomotive.png",
     icon_size = 64,
