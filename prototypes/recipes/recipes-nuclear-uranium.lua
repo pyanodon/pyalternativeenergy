@@ -21,7 +21,6 @@ for _, recipe_name in pairs {
     'u-73',
     'u-75',
     'u-79',
-    'u-79-2',
     'u-81',
     'u-83',
     'yellow-cake',

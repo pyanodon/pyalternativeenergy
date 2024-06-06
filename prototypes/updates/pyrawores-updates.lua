@@ -114,12 +114,9 @@ RECIPE("uranium-fuel-cell-mk04"):remove_unlock('uranium-mk03')
 RECIPE("uranium-fuel-cell-mk05"):remove_unlock('uranium-mk04')
 RECIPE("nuclear-fuel-reprocessing-mk04"):remove_unlock('uranium-mk03')
 RECIPE("nuclear-fuel-reprocessing-mk05"):remove_unlock('uranium-mk04')
-RECIPE("fuelrod-mk01"):remove_unlock('fuel-production')
-RECIPE("fuelrod-mk01-1"):remove_unlock('uranium-mk01')
-RECIPE("fuelrod-mk01-2"):remove_unlock('uranium-mk02')
-RECIPE("fuelrod-mk01-3"):remove_unlock('uranium-mk03')
 
 --tweaked by pyal from fuel production to uranium techs. now removing completely
+RECIPE('fuelrod-mk01-1'):remove_unlock('uranium-mk01')
 RECIPE('fuelrod-mk02'):remove_unlock('uranium-mk01')
 RECIPE('fuelrod-mk03'):remove_unlock('uranium-mk02')
 RECIPE('fuelrod-mk04'):remove_unlock('uranium-mk03')
@@ -247,10 +244,6 @@ RECIPE {
 }:remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
 
 RECIPE("u235-pulp-01"):remove_unlock('uranium-mk01')
-
-RECIPE("pregnant-solution-01"):remove_unlock('uranium-mk04')
-RECIPE("vanadium-mixture"):remove_unlock('uranium-mk04')
-
 RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
 
 RECIPE("space-science-pack"):replace_ingredient("yellow-cake", "pu-238")
