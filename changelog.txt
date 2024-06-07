@@ -5,6 +5,7 @@ Date: ?
     - Fixed that mining a locomotive would wipe its equipment grid. (https://github.com/pyanodon/pybugreports/issues/514)
     - Fixed numal reefs jumping on placment. (https://github.com/pyanodon/pybugreports/issues/170)
     - Fixed an exploit allowing numal reefs to be placed on land.
+    - Fixed wind turbine areas being build-order dependent (https://github.com/pyanodon/pybugreports/issues/515)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.32
 Date: 2024-6-4

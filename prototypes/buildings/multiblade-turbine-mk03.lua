@@ -133,4 +133,16 @@ data:extend{{
         width = 288,
         height = 288,
     },
+    created_effect = {
+        type = 'area',
+        radius = 12.4,
+        collision_mask = {wind_layer},
+        action_delivery = {
+            type = 'instant',
+            target_effects = {{
+                type = 'script',
+                effect_id = 'turbine-area'
+            }}
+        }
+    }
 }}

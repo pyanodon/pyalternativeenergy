@@ -115,5 +115,17 @@ data:extend{{
     collision_mask = { wind_layer },
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     selectable_in_game = false,
-    picture = util.empty_sprite()
+    picture = util.empty_sprite(),
+    created_effect = {
+        type = 'area',
+        radius = 13.4,
+        collision_mask = {wind_layer},
+        action_delivery = {
+            type = 'instant',
+            target_effects = {{
+                type = 'script',
+                effect_id = 'turbine-area'
+            }}
+        }
+    }
 }}

@@ -122,5 +122,17 @@ data:extend(
             width = 4,
             height = 4,
         },
+        created_effect = {
+            type = 'area',
+            radius = 17.9,
+            collision_mask = {wind_layer},
+            action_delivery = {
+                type = 'instant',
+                target_effects = {{
+                    type = 'script',
+                    effect_id = 'turbine-area'
+                }}
+            }
+        }
     }
 })
