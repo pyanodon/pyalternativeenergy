@@ -1319,6 +1319,10 @@ function Aerial.update_gui(player)
     local max_energy = accumulator.electric_buffer_size
     stored_energy = math.min(stored_energy, max_energy)
     local progress = stored_energy / max_energy
+    -- NaN?
+    if progress ~= progress then
+        progress = 0
+    end
     content_flow.progressbar.value = progress > 0.99 and 1 or progress
     content_flow.progressbar.caption = {'sut-gui.energy', FUN.format_energy(stored_energy, 'J'), FUN.format_energy(max_energy, 'J')}
 

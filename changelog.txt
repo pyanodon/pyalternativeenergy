@@ -6,6 +6,7 @@ Date: ?
     - Fixed numal reefs jumping on placment. (https://github.com/pyanodon/pybugreports/issues/170)
     - Fixed an exploit allowing numal reefs to be placed on land.
     - Fixed wind turbine areas being build-order dependent (https://github.com/pyanodon/pybugreports/issues/515)
+    - Fixed a crash dividing by 0 in the aerial GUI
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.32
 Date: 2024-6-4
