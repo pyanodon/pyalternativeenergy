@@ -341,6 +341,7 @@ local function get_or_create_accumulator(aerial_entity, network_override)
             if not first_pole then
                 break
             end
+            -- Invalid entry
             if not first_pole.entity or not first_pole.entity.valid then
                 remove_pole(first_pole)
                 first_pole = nil
@@ -359,12 +360,31 @@ local function get_or_create_accumulator(aerial_entity, network_override)
             force = aerial_entity.force,
             create_build_effect_smoke = false
         }
+        ---@cast accumulator LuaEntity shows as LuaEntity? otherwise
         accumulator.destructible = false
         accumulator.operable = false
         accumulator.power_production = 0
         accumulator.power_usage = 0
         local network_id = accumulator.electric_network_id
         if network_id then
+            -- If we end up on a different network, destroy if need be
+            if network_id ~= network_override then
+                -- Allow the user to find the problem network
+                local position = first_pole.position
+                local unit_id = aerial_entity.unit_number
+                log(string.format("Accumulator created for network %d (turbine ID %d) ended up on network %d at [%.2f, %.2f]", network_override, unit_id, network_id, position.x, position.y))
+                -- Migrate the aerial to the new network - it's highly likely the old network isn't usable
+                global.aerials.aerial_data[unit_id].network_id = network_id
+                increment_turbine_count(network_id, name, -1)
+                increment_turbine_count(network_override, name, 1)
+                -- Check if the network already has an accumulator that we've now duplicated
+                local old_accumulator = global.aerials.accumulators[network_id][name]
+                if old_accumulator and old_accumulator.valid then -- Destroy and return the existing accumulator if so
+                    accumulator.destroy()
+                    return old_accumulator
+                end
+            end
+            -- otherwise, continue on
             global.aerials.accumulators[network_id][name] = accumulator
             accumulator.electric_buffer_size = buffer_capacities[name] * (global.aerials.aerial_counts[network_id][name] or 0)
             return accumulator
@@ -380,6 +400,7 @@ local function get_or_create_accumulator(aerial_entity, network_override)
             force = aerial_entity.force,
             create_build_effect_smoke = false
         }
+        ---@cast accumulator LuaEntity shows as LuaEntity? otherwise
         accumulator.destructible = false
         accumulator.operable = false
         accumulator.power_production = 0
