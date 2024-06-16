@@ -84,6 +84,7 @@ if global.aerial_data then -- There's data to migrate
             local accumulator = accumulators[network_id][type_name]
             if accumulator and accumulator.valid then
                 accumulator.electric_buffer_size = accumulator.prototype.electric_energy_source_prototype.buffer_capacity * type_count
+                accumulator.energy = accumulator.electric_buffer_size
             end
         end
     end
