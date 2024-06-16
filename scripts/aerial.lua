@@ -526,7 +526,40 @@ Aerial.events.on_init = function()
         aerial_counts = solid_table(),
         base_data = {},
     }
+
     refresh_networks()
+
+    -- Yeet any remaining accumulators
+    local accumulator_array = {}
+    for name in pairs(turbine_names) do
+        accumulator_array[#accumulator_array+1] = name .. '-accumulator'
+    end
+    -- build a list of our entities to keep
+    local entities_to_keep = {}
+    for _, network_contents in pairs(global.aerials.accumulators) do
+        for _, accumulator_entity in pairs(network_contents) do
+            if accumulator_entity.valid then
+                entities_to_keep[accumulator_entity.unit_number] = true
+            end
+        end
+    end
+    local yeeted_count = 0
+    for _, surface in pairs(game.surfaces) do
+        for _, entity in pairs(surface.find_entities_filtered{
+            name = accumulator_array
+        }) do
+            -- Check every accumulator to see if it's in our global table
+            if entity.valid then
+                if not entities_to_keep[entity.unit_number] then
+                    entity.destroy()
+                    yeeted_count = yeeted_count + 1
+                end
+            end
+        end
+    end
+    if yeeted_count > 0 then
+        log(string.format('deleted %i unnecessary accumulators', yeeted_count))
+    end
 end
 
 ---Counts the turbines of all types for a given electric network
