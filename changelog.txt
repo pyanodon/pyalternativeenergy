@@ -9,6 +9,7 @@ Date: ?
     - Fixed a crash dividing by 0 in the aerial GUI
     - Fixed that migrated aerial accumulators would start empty
     - Fixed that orphaned aerial accumulators wouldn't be deleted on migration
+    - Fixed that overlapping but independent networks resulted in repeatedly creating new aerial accumulators
   Changes:
     - Increased aerial accumulator size to compensate for only transferring energy on completed trips
 ---------------------------------------------------------------------------------------------------
