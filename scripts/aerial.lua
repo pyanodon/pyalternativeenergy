@@ -449,7 +449,6 @@ end
 
 ---Rebuilds/verifies the the global aerial pole, turbine, and accumulator data
 local function refresh_networks()
-    log("refreshing networks")
     global.aerials.refresh_networks = false
     -- First, clear and rebuild our stored poles
     global.aerials.poles = {}
@@ -1060,7 +1059,7 @@ Aerial.events.on_built = function(event)
         local tags = event.tags
         if not tags then
             local stack = event.stack
-            tags = stack and stack.tags or {}
+            tags = stack and stack.valid_for_read and stack.tags or {}
         end
 
         local electric_network_id = accumulator.electric_network_id

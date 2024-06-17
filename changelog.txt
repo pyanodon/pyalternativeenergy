@@ -10,6 +10,8 @@ Date: ?
     - Fixed that migrated aerial accumulators would start empty
     - Fixed that orphaned aerial accumulators wouldn't be deleted on migration
     - Fixed that overlapping but independent networks resulted in repeatedly creating new aerial accumulators
+    - Fixed that aerial update event wasn't running
+    - Fixed a crash from not validating item stacks
   Changes:
     - Increased aerial accumulator size to compensate for only transferring energy on completed trips
 ---------------------------------------------------------------------------------------------------
