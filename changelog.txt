@@ -12,6 +12,7 @@ Date: ?
     - Fixed that overlapping but independent networks resulted in repeatedly creating new aerial accumulators
     - Fixed that aerial update event wasn't running
     - Fixed a crash from not validating item stacks
+    - Fixed that numal recipe icons did not render in alt-mode (https://github.com/pyanodon/pybugreports/issues/519)
   Changes:
     - Increased aerial accumulator size to compensate for only transferring energy on completed trips
 ---------------------------------------------------------------------------------------------------

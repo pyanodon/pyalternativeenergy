@@ -50,7 +50,6 @@ ENTITY{
     collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
     draw_entity_info_icon_background = false,
-    show_recipe_icon = false,
     match_animation_speed_to_activity = false,
     module_specification = {module_slots = MODULE_SLOTS},
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
