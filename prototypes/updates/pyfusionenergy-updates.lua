@@ -15,7 +15,6 @@ RECIPE("methyl-acrylate"):remove_unlock("ethanolamine"):add_unlock("acrylic")
 
 --BUILDINDS--
 RECIPE("particle-accelerator-mk01"):remove_ingredient('gasturbinemk02')
-RECIPE("fusion-reactor-mk01"):remove_ingredient('gasturbinemk03')
 RECIPE("py-turbine"):remove_ingredient('gasturbinemk03') -- TODO: replace with something
 
 RECIPE("automated-screener-mk01"):remove_unlock("machines-mk01"):add_unlock("copper-mk01")
@@ -118,6 +117,40 @@ RECIPE("steam-exchange5"):remove_unlock("fusion-mk04"):add_unlock("fusion-mk01")
 
 RECIPE {
     type = "recipe",
+    name = "fusion-reactor-mk01",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+        {"refined-concrete", 10000},
+        {"stainless-steel", 5000},
+        {"blanket", 440},
+        {"divertor", 54},
+        {"sc-unit", 2500},
+        {"wall-shield", 9000}
+    },
+    results = {
+        {"fusion-reactor-mk01", 1}
+    },
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fusion-reactor-mk02",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+        {"fusion-reactor-mk01", 2},
+        {"reinforced-wall-shield", 2000},
+    },
+    results = {
+        {"fusion-reactor-mk02", 1}
+    },
+}
+
+--TODO: replace heavy wetter production with new process. hot water and hydrogen sulfide (hydrogen with sulfur: h2s) go in one side to make fat acid gas and fat acid gas will combine with cold water to make enriched water. enriched water with get vacuum distilled into water and heavy water. heavy water can be run though a electrolysiser to seperate deuterium and oxygen
+
+RECIPE {
+    type = "recipe",
     name = "heavy-water",
     category = "centrifuging",
     enabled = false,
@@ -140,10 +173,6 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "deuterium", amount = 100},
         {type = "fluid", name = "pressured-water", amount = 10000},
-        {type = "item", name = "blanket", amount = 1},
-        {type = "item", name = "divertor", amount = 2},
-        {type = "item", name = "wall-shield", amount = 5},
-        {type = "item", name = "sc-unit", amount = 4},
         {type = "fluid", name = "liquid-helium", amount = 30},
     },
     results = {
@@ -151,16 +180,113 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 150},
         {type = "fluid", name = "tritium", amount = 20},
         {type = "fluid", name = "helium3", amount = 30},
-        {type = "item", name = "blanket", amount = 1, probability = 0.5},
-        {type = "item", name = "divertor", amount = 1, probability = 0.5},
-        {type = "item", name = "wall-shield", amount = 3, probability = 0.5},
-        {type = "item", name = "sc-unit", amount = 3, probability = 0.5},
     },
     --main_product= "blanket",
     icon = "__pyfusionenergygraphics__/graphics/icons/fusion-deuterium.png",
 	icon_size = 32,
     subgroup = "py-fusion-items",
     order = "e",
+    show_details_in_recipe_tooltip = false
+}
+
+RECIPE {
+    type = "recipe",
+    name = "dt-fusion",
+    category = "fusion-01",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "fluid", name = "deuterium", amount = 80},
+        {type = "fluid", name = "tritium", amount = 20},
+        {type = "fluid", name = "liquid-helium", amount = 30},
+        {type = "fluid", name = "water", amount = 3000}
+    },
+    results = {
+        {type = "fluid", name = "neutron", amount = 1000, temperature = 2000},
+        {type = "fluid", name = "helium", amount = 200},
+        {type = "fluid", name = "tritium", amount = 5},
+        {type = "fluid", name = "steam", amount = 3000, temperature = 500},
+    },
+    --main_product= "blanket",
+    icon = "__pyfusionenergygraphics__/graphics/icons/fusion-dt.png",
+	icon_size = 32,
+    subgroup = "py-fusion-items",
+    order = "e",
+    show_details_in_recipe_tooltip = false
+}
+
+RECIPE {
+    type = "recipe",
+    name = "dt-he3",
+    category = "fusion-02",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "fluid", name = "deuterium", amount = 200},
+        {type = "fluid", name = "helium3", amount = 90},
+        {type = "fluid", name = "liquid-helium", amount = 35},
+        {type = "fluid", name = "water", amount = 5000}
+    },
+    results = {
+        {type = "fluid", name = "neutron", amount = 1000, temperature = 3000},
+        {type = "fluid", name = "helium", amount = 175},
+        {type = "fluid", name = "proton", amount = 15},
+        {type = "fluid", name = "steam", amount = 5000, temperature = 500},
+    },
+    --main_product= "blanket",
+    icon = "__pyfusionenergygraphics__/graphics/icons/fusion-he3.png",
+	icon_size = 32,
+    subgroup = "py-fusion-items",
+    order = "e",
+    show_details_in_recipe_tooltip = false
+}
+
+RECIPE {
+    type = "recipe",
+    name = "b-h",
+    category = "fusion-02",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "fluid", name = "proton", amount = 15},
+        {type = "item", name = "boron", amount = 15},
+        {type = "fluid", name = "liquid-helium", amount = 100},
+        {type = "fluid", name = "water", amount = 5000}
+    },
+    results = {
+        {type = "fluid", name = "neutron", amount = 1000, temperature = 4000},
+        {type = "fluid", name = "helium", amount = 500},
+        {type = "fluid", name = "steam", amount = 5000, temperature = 150},
+    },
+    --main_product= "blanket",
+    icon = "__pyfusionenergygraphics__/graphics/icons/fusion-bh.png",
+	icon_size = 32,
+    subgroup = "py-fusion-items",
+    order = "e",
+    show_details_in_recipe_tooltip = false
+}
+
+RECIPE {
+    type = 'recipe',
+    name = 'antimatter-fusion',
+    category = 'fusion-02',
+    enabled = false,
+    energy_required = 30,
+    ingredients = {
+        {type = 'item', name = 'antimatter', amount = 1},
+        {type = 'fluid', name = 'liquid-helium', amount = 100},
+        {type = 'fluid', name = 'water', amount = 5000}
+    },
+    results = {
+        {type = 'fluid', name = 'neutron', amount = 1000, temperature = 5000},
+        {type = 'fluid', name = 'helium', amount = 500},
+        {type = 'fluid', name = 'steam', amount = 5000, temperature = 150}
+    },
+    --main_product= "blanket",
+    icon = '__pyhightechgraphics__/graphics/icons/fusion-antimatter.png',
+    icon_size = 32,
+    subgroup = 'py-fusion-items',
+    order = 'e',
     show_details_in_recipe_tooltip = false
 }
 

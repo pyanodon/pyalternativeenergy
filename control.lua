@@ -123,8 +123,10 @@ local on_mined_tile = {events.on_player_mined_tile, events.on_robot_mined_tile}
 py.on_event(on_mined_tile, Solar_Updraft_Tower.events.on_destroyed_tile)
 py.on_event(events.on_player_cursor_stack_changed, Thermosolar.events.on_player_cursor_stack_changed)
 py.on_event(events.on_ai_command_completed, Aerial.events.on_ai_command_completed)
-py.on_nth_tick(117, Aerial.events[117])
-py.on_nth_tick(116, Aerial.events[116])
+script.on_event(defines.events.on_script_trigger_effect, Wind.events.on_script_trigger_effect)
+script.on_nth_tick(116, Aerial.events[116])
+script.on_nth_tick(301, Aerial.events[301])
+script.on_nth_tick(3601, Aerial.events[3601])
 py.on_event('open-gui', Aerial.events.on_open_gui)
 
 py.on_nth_tick(9, function()

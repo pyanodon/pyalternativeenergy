@@ -1,10 +1,20 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.33
-Date: ?
+Date: 2024-6-18
   Bugfixes:
     - Fixed that mining a locomotive would wipe its equipment grid. (https://github.com/pyanodon/pybugreports/issues/514)
     - Fixed numal reefs jumping on placment. (https://github.com/pyanodon/pybugreports/issues/170)
     - Fixed an exploit allowing numal reefs to be placed on land.
+    - Fixed a crash dividing by 0 in the aerial GUI
+    - Fixed that migrated aerial accumulators would start empty
+    - Fixed that orphaned aerial accumulators wouldn't be deleted on migration
+    - Fixed that overlapping but independent networks resulted in repeatedly creating new aerial accumulators
+    - Fixed that aerial update event wasn't running
+    - Fixed a crash from not validating item stacks
+    - Fixed that numal recipe icons did not render in alt-mode (https://github.com/pyanodon/pybugreports/issues/519)
+  Changes:
+    - Increased aerial accumulator size to compensate for only transferring energy on completed trips
+    - HAWT, VAWT, and fish turbine areas are no longer build-order dependent (https://github.com/pyanodon/pybugreports/issues/515)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.32
 Date: 2024-6-4

@@ -29,6 +29,10 @@ local animated_turbines = {
 local variation = require 'scripts.wind.variation'
 local draw_animation, set_animation, valid_animation, set_animation_speed = rendering.draw_animation, rendering.set_animation, rendering.is_valid, rendering.set_animation_speed
 
+local function seconds(n)
+    return 60 * n
+end
+
 Wind.events.on_built = function(event)
     local entity = event.created_entity or event.entity
     local turbine_type = entity.valid and managed_turbines[entity.name]
@@ -41,6 +45,60 @@ Wind.events.on_built = function(event)
         force = entity.force,
         create_build_effect_smoke = false,
     }
+    -- Already removed or cancelled
+    if not collision or not collision.valid then
+        if not entity or not entity.valid then
+            return
+        end
+
+        local inserted = 0
+        local player_index = event.player_index
+        local surface = entity.surface
+        local position = entity.position
+        local item_to_place = entity.prototype.items_to_place_this[1]
+
+        -- Try to return to the player, if possible
+        if player_index then
+            local player = game.get_player(player_index)
+            if not player then
+                -- continue
+            elseif player.mine_entity(entity, false) then
+                inserted = 1
+            elseif item_to_place then
+                inserted = player.insert(item_to_place)
+            end
+        end
+
+        -- Otherwise just spill it
+        if inserted == 0 and item_to_place then
+            surface.spill_item_stack(
+                position,
+                item_to_place,
+                true,
+                entity.force_index,
+                false
+            )
+        end
+
+        local tick = game.tick
+        local last_message = global._last_cancel_creation_message or 0
+        if last_message + seconds(1) < tick then
+            surface.create_entity{
+                name = 'flying-text',
+                position = position,
+                text = {
+                    'cant-build-reason.entity-in-the-way',
+                    (global._last_failed_airspace or '')
+                },
+                render_player_index = player_index,
+                color = {255, 255, 255},
+            }
+            global._last_cancel_creation_message = game.tick
+        end
+
+        entity.destroy()
+        return
+    end
     collision.destructible = false
 
     local entry = {
@@ -66,6 +124,63 @@ Wind.events.on_built = function(event)
 
     global.windmill[entry.entity.unit_number] = entry
     Wind.update_power_generation(entry, Wind.calculate_wind_speed())
+end
+
+local function positions_equal(position_a, position_b)
+    if position_a.x ~= position_b.x then
+        return false
+    end
+    if position_a.y ~= position_b.y then
+        return false
+    end
+    return true
+end
+
+Wind.events.on_script_trigger_effect = function(event)
+    if event.effect_id ~= 'turbine-area' then
+        return
+    end
+    local source = event.source_entity
+    if not source or not source.valid then
+        return
+    end
+    local target = event.target_entity
+    if not target or not target.valid then
+        return
+    end
+
+    if managed_turbines[target.name] and not positions_equal(target.position, source.position) then
+        global._last_failed_airspace = target.localised_name or ('entity-name.' .. target.name)
+        local surface = target.surface
+        local source_box, target_box = source.bounding_box, target.bounding_box
+        local ttl = seconds(3)
+        rendering.draw_rectangle({
+            color = {255, 255, 0},
+            width = 4,
+            left_top = source_box.left_top,
+            right_bottom = source_box.right_bottom,
+            surface = surface,
+            time_to_live = ttl
+        })
+        rendering.draw_text({
+            text = "!",
+            color = {255, 0, 0},
+            scale = 3,
+            scale_with_zoom = true,
+            surface = surface,
+            target = target,
+            time_to_live = ttl
+        })
+        rendering.draw_rectangle({
+            color = {255, 0, 0},
+            width = 4,
+            left_top = target_box.left_top,
+            right_bottom = target_box.right_bottom,
+            surface = surface,
+            time_to_live = ttl
+        })
+        source.destroy()
+    end
 end
 
 Wind.events.on_destroyed = function(event)
