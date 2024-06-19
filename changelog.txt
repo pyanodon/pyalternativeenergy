@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.34
+Date: 2024-6-19
+  Bugfixes:
+    - Fixed performance regression in last update (https://github.com/pyanodon/pybugreports/issues/531)
+---------------------------------------------------------------------------------------------------
 Version: 1.2.33
 Date: 2024-6-18
   Bugfixes:
