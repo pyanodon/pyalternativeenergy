@@ -80,7 +80,7 @@ RECIPE("distilator-mk02"):add_ingredient({type = "item", name = "self-assembly-m
 RECIPE("hpf-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("washer-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("borax-mine-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
-RECIPE("soil-extractormk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
+RECIPE("soil-extractor-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 1 }
 RECIPE("py-roboport-mk02"):add_ingredient({type = "item", name = "self-assembly-monolayer", amount = 2}):add_ingredient({type = "item", name = "tower-mk02", amount = 1}):add_ingredient({type = "item", name = "eva", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 
 RECIPE("advanced-foundry-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 5}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
@@ -110,7 +110,7 @@ RECIPE("distilator-mk03"):add_ingredient({type = "item", name = "ns-material", a
 RECIPE("hpf-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("washer-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("borax-mine-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
-RECIPE("soil-extractormk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
+RECIPE("soil-extractor-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 8}):add_ingredient { type = "item", name = "mechanical-parts-02", amount = 1 }
 RECIPE("py-roboport-mk03"):add_ingredient({type = "item", name = "ns-material", amount = 2}):add_ingredient({type = "item", name = "electronics-mk03", amount = 1}):add_ingredient({type = "item", name = "biopolymer", amount = 5}):add_ingredient({type = "item", name = "cf", amount = 15}):add_ingredient({type = "item", name = "biobattery", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-03", amount = 1 }
 
 RECIPE("advanced-foundry-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 5}):add_ingredient({type = "item", name = "sc-engine", amount = 2}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
@@ -141,7 +141,7 @@ RECIPE("distilator-mk04"):add_ingredient({type = "item", name = "metastable-quas
 RECIPE("hpf-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("washer-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 RECIPE("borax-mine-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
-RECIPE("soil-extractormk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
+RECIPE("soil-extractor-mk04"):add_ingredient({type = "item", name = "metastable-quasicrystal", amount = 8}):add_ingredient({type = "item", name = "sc-engine", amount = 3}):add_ingredient { type = "item", name = "mechanical-parts-04", amount = 1 }
 
 -----RECIPES-----
 RECIPE("nas-battery"):replace_ingredient("lead-plate", "pbsb-alloy"):remove_unlock("battery"):add_unlock("battery-mk02")
@@ -244,9 +244,9 @@ data.raw['assembling-machine']['rectisol-mk04'].energy_usage = "4MW"
 data.raw['assembling-machine']['sand-extractor-mk02'].energy_usage = "2MW"
 data.raw['assembling-machine']['sand-extractor-mk03'].energy_usage = "3MW"
 data.raw['assembling-machine']['sand-extractor-mk04'].energy_usage = "4MW"
-data.raw['assembling-machine']['soil-extractormk02'].energy_usage = "2MW"
-data.raw['assembling-machine']['soil-extractormk03'].energy_usage = "3MW"
-data.raw['assembling-machine']['soil-extractormk04'].energy_usage = "4MW"
+data.raw['assembling-machine']['soil-extractor-mk02'].energy_usage = "2MW"
+data.raw['assembling-machine']['soil-extractor-mk03'].energy_usage = "3MW"
+data.raw['assembling-machine']['soil-extractor-mk04'].energy_usage = "4MW"
 data.raw['assembling-machine']['tar-processing-unit-mk02'].energy_usage = "2MW"
 data.raw['assembling-machine']['tar-processing-unit-mk03'].energy_usage = "3MW"
 data.raw['assembling-machine']['tar-processing-unit-mk04'].energy_usage = "4MW"

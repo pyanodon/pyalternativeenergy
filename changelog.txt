@@ -461,9 +461,9 @@ Date: 2022-12-19
     - sand-extractor-mk02 to 2MW.
     - sand-extractor-mk03 to 3MW.
     - sand-extractor-mk04 to 4MW.
-    - soil-extractormk02 to 2MW.
-    - soil-extractormk03 to 3MW.
-    - soil-extractormk04 to 4MW.
+    - soil-extractor-mk02 to 2MW.
+    - soil-extractor-mk03 to 3MW.
+    - soil-extractor-mk04 to 4MW.
     - tar-processing-unit-mk02 to 2MW.
     - tar-processing-unit-mk03 to 3MW.
     - tar-processing-unit-mk04 to 4MW.
