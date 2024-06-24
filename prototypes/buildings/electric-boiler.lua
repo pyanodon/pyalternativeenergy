@@ -1,3 +1,15 @@
+local pipes = {
+    south = {
+        filename = '__pycoalprocessinggraphics__/graphics/entity/methanol-reactor/pipe-ending-down.png',
+        priority = 'extra-high',
+        width = 40,
+        height = 32
+    }
+}
+
+local pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {-0.05, -0.75}, nil, nil, pipes)
+local pipe_covers = py.pipe_covers(true, true, true, true)
+
 RECIPE {
     type = 'recipe',
     name = 'py-electric-boiler',
@@ -67,7 +79,8 @@ ENTITY {
     fluid_boxes = {
         {
             production_type = 'input',
-            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_covers = pipe_covers,
+            pipe_picture = pipe_picture,
             pipe_connections = {
                 {
                     type = 'input-output',
@@ -85,7 +98,8 @@ ENTITY {
         },
         {
             production_type = 'output',
-            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_covers = pipe_covers,
+            pipe_picture = pipe_picture,
             pipe_connections = {{
                 type = 'output',
                 position = {0, 2}
