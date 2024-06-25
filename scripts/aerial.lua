@@ -766,15 +766,15 @@ Aerial.events[301] = function()
         global.aerials.refresh_networks = false
     end
 end
---Update the electric networks every ~minute
-Aerial.events[3601] = function()
+--Update the electric networks every 1h+1tick
+Aerial.events[60*60*60+1] = function()
     -- Refresh if pending, since we want an accurate pole/network count
     global.aerials.refresh_networks = true
 end
 
 local letters = {'A', 'B', 'C', 'D'}
 ---Update the bases every ~2 seconds
-Aerial.events[116] = function()
+Aerial.events[117] = function()
     local stored_energy_per_network = {}
     local max_energy_per_network = {}
 
