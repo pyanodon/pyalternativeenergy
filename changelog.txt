@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.35
+Date: ?
+  Bugfixes:
+    - Fixed that aerial turbines had lower selection priority than ores, leading to situations where the turbines could not be removed. (https://github.com/pyanodon/pybugreports/issues/534)
+---------------------------------------------------------------------------------------------------
 Version: 1.2.34
 Date: 2024-6-19
   Bugfixes:
