@@ -147,7 +147,7 @@ RECIPE {
     },
 }
 
---TODO: replace heavy wetter production with new process. hot water and hydrogen sulfide (hydrogen with sulfur: h2s) go in one side to make fat acid gas and fat acid gas will combine with cold water to make enriched water. enriched water with get vacuum distilled into water and heavy water. heavy water can be run though a electrolysiser to seperate deuterium and oxygen
+--TODO: replace heavy wetter production with new process. hot water and hydrogen sulfide (hydrogen with sulfur: h2s) go in one side to make fat acid gas and fat acid gas will combine with cold water to make enriched water. enriched water with get vacuum distilled into water and heavy water. heavy water can be run though a electrolysiser to separate deuterium and oxygen
 
 RECIPE {
     type = "recipe",
