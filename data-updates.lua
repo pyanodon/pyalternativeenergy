@@ -174,6 +174,12 @@ for _, name in pairs(electric_energy_interfaces) do
   entity.energy_source.buffer_capacity = entity.energy_production
 end
 
+for _, resource in pairs(data.raw.resource) do
+    if not resource.selection_priority then
+        resource.selection_priority = 48
+    end
+end
+
 --gather recipes for module changes
 local recipes_list =
 	{
