@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.36
-Date: ???
+Date: 2024-6-27
   Bugfixes:
-    - reduced energy required on recipes in the centrifuges and removed efficiency mods
+    - reduced energy required on recipes in the centrifuges
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.35
 Date: 2024-6-27
