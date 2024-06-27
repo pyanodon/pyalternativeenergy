@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.35
-Date: ?
+Date: 2024-6-27
   Bugfixes:
     - Fixed that aerial turbines had lower selection priority than ores, leading to situations where the turbines could not be removed. (https://github.com/pyanodon/pybugreports/issues/534)
     - Moved nuclear fuel from nuclear power mk04 to nuclear power mk02
