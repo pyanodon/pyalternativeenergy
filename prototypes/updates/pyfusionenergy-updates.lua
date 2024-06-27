@@ -147,7 +147,7 @@ RECIPE {
     name = "heavy-water",
     category = "centrifuging",
     enabled = false,
-    energy_required = 6,
+    energy_required = 60,
     ingredients = {
         {type = "item", name = "sulfur", amount = 20},
         {type = "fluid", name = "pressured-water", amount = 4000}

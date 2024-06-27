@@ -737,7 +737,7 @@ RECIPE {
     type = "recipe",
     name = "antimony-phosphate",
     enabled = false,
-    energy_required = 15,
+    energy_required = 100,
     category = "centrifuging",
     ingredients =
       {
@@ -756,7 +756,7 @@ RECIPE {
     type = "recipe",
     name = "plutonium-oxidation",
     enabled = false,
-    energy_required = 15,
+    energy_required = 100,
     category = "centrifuging",
     ingredients =
       {
