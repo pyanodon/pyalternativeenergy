@@ -43,7 +43,7 @@ RECIPE {
     name = "pa-233-seperation",
     category = "centrifuging",
     enabled = false,
-    energy_required = 50,
+    energy_required = 5,
     ingredients = {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 1000},
         {type = "fluid", name = "molten-aluminium", amount = 100}
@@ -80,7 +80,7 @@ RECIPE {
     name = "u233-uf6",
     category = "centrifuging",
     enabled = false,
-    energy_required = 40,
+    energy_required = 4,
     ingredients = {
         {type = "item", name = "u-233", amount = 10},
     },

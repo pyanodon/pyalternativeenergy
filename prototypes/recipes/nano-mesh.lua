@@ -179,7 +179,7 @@ RECIPE {
     name = "rpc-mesh",
     category = "centrifuging",
     enabled = false,
-    energy_required = 30,
+    energy_required = 15,
     ingredients = {
         {type = "fluid", name = "ethanol", amount = 100},
         {type = "fluid", name = "pre-fiber-3", amount = 100},

@@ -124,7 +124,7 @@ RECIPE {
     name = "th-dust",
     category = "centrifuging",
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     ingredients = {
         {type = "fluid", name = "stripped-th", amount = 100},
         {type = "fluid", name = "ammonia", amount = 100},

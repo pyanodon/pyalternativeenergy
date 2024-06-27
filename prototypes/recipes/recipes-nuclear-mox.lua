@@ -70,7 +70,7 @@ RECIPE {
     name = "pu239-uf6",
     category = "centrifuging",
     enabled = false,
-    energy_required = 10,
+    energy_required = 1,
     ingredients = {
         {type = "item", name = "pu-239", amount = 8},
         {type = "item", name = "u-238", amount = 100},

@@ -207,7 +207,7 @@ RECIPE {
     name = "plutonium-fuel-reprocessing",
     category = "centrifuging",
     enabled = false,
-    energy_required = 100,
+    energy_required = 20,
     ingredients = {
         {type = "item", name = "used-up-mox-fuel-cell", amount = 4},
     },
