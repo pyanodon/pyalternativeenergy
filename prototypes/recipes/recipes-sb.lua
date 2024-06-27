@@ -329,7 +329,7 @@ RECIPE {
     name = "sb-conc",
     category = "centrifuging",
     enabled = false,
-    energy_required = 100,
+    energy_required = 50,
     ingredients = {
         {type = "fluid", name = "sb-final-conc", amount = 100},
         {type = "fluid", name = "pressured-water", amount = 100},
