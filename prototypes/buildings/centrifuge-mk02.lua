@@ -49,7 +49,7 @@ ENTITY {
     module_specification = {
         module_slots = 2
     },
-    allowed_effects = {"consumption", "speed", "pollution", "productivity"},
+    allowed_effects = {"speed", "pollution", "productivity"},
     crafting_categories = {"centrifuging"},
     crafting_speed = 2,
     energy_source = {
@@ -57,7 +57,7 @@ ENTITY {
         usage_priority = "secondary-input",
         emissions_per_minute = 4
     },
-    energy_usage = "2GW",
+    energy_usage = "400MW",
     animation = {
         layers = {
             {
