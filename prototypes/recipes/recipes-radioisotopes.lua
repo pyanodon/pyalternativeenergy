@@ -139,7 +139,7 @@ RECIPE {
     main_product = "po-210",
     subgroup = "py-nuclear",
     order = "b"
-}:add_unlock("nuclear-power-mk04")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",

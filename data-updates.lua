@@ -1,7 +1,6 @@
 local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
 
 --MOVED RECIPES CATEGORIES
-RECIPE('aromatic-organic'):set_category('centrifuging')
 RECIPE('honey-comb'):set_category('centrifuging')
 RECIPE('honey-comb-buffed'):set_category('centrifuging')
 RECIPE('nickel-tailings'):set_category('centrifuging')
@@ -14,7 +13,6 @@ RECIPE('chromite-concentrate'):set_category('centrifuging')
 RECIPE('vanabins'):set_category('centrifuging')
 RECIPE('clean-rf-gel'):set_category('centrifuging')
 RECIPE('gold-precipitate'):set_category('centrifuging')
-RECIPE('unslimed-iron-2'):set_category('centrifuging')
 RECIPE('serine'):set_category('centrifuging')
 RECIPE('albumin-1'):set_category('centrifuging')
 RECIPE('outlet-gas-02'):set_category('centrifuging')
@@ -25,36 +23,32 @@ RECIPE('nickel-prepared-solution'):set_category('centrifuging')
 RECIPE('chromium-rejects'):set_category('centrifuging')
 
 --adjusting all centrifudge recipe speeds
-RECIPE('uranium-processing'):set_fields {energy_required = 120}
-RECIPE('kovarex-enrichment-process'):set_fields {energy_required = 50}
-RECIPE('nuclear-fuel'):set_fields {energy_required = 900}
-RECIPE('nuclear-fuel-reprocessing'):set_fields {energy_required = 300}
-RECIPE('aromatic-organic'):set_fields {energy_required = 10}
+RECIPE('uranium-processing'):set_fields {energy_required = 40}
+RECIPE('kovarex-enrichment-process'):set_fields {energy_required = 10}
 RECIPE('coal-slurry'):set_fields {energy_required = 5}
-RECIPE('solvent-separation'):set_fields {energy_required = 100}
-RECIPE('serine'):set_fields {energy_required = 300}
-RECIPE('vanabins'):set_fields {energy_required = 20}
-RECIPE('chromite-concentrate'):set_fields {energy_required = 30}
-RECIPE('chromium-rejects'):set_fields {energy_required = 30}
-RECIPE('outlet-gas-02'):set_fields {energy_required = 10}
-RECIPE('nickel-tailings'):set_fields {energy_required = 30}
-RECIPE('nickel-prepared-solution'):set_fields {energy_required = 30}
-RECIPE('unslimed-iron-2'):set_fields {energy_required = 15}
-RECIPE('gold-precipitate'):set_fields {energy_required = 30}
-RECIPE('nuclear-fuel-reprocessing-mk02'):set_fields {energy_required = 600}
-RECIPE('nuclear-fuel-reprocessing-mk03'):set_fields {energy_required = 600}
-RECIPE('nuclear-fuel-reprocessing-mk04'):set_fields {energy_required = 600}
-RECIPE('nuclear-fuel-reprocessing-mk05'):set_fields {energy_required = 600}
-RECIPE('al-tailings-separation'):set_fields {energy_required = 30}
-RECIPE('fiber'):set_fields {energy_required = 5}
-RECIPE('clean-rf-gel'):set_fields {energy_required = 70}
-RECIPE('albumin-1'):set_fields {energy_required = 20}
-RECIPE('honey-comb'):set_fields {energy_required = 10}
-RECIPE('simik-blood-to-oleochemicals'):set_fields {energy_required = 100}
-RECIPE('bitumen-to-nickel'):set_fields {energy_required = 30}
-RECIPE('tar-to-nickel'):set_fields {energy_required = 40}
-RECIPE('fiber-dry-storage-2'):set_fields {energy_required = 6}
-RECIPE('honey-comb-buffed'):set_fields {energy_required = 15}
+RECIPE('solvent-separation'):set_fields {energy_required = 33}
+RECIPE('serine'):set_fields {energy_required = 50}
+RECIPE('vanabins'):set_fields {energy_required = 5}
+RECIPE('chromite-concentrate'):set_fields {energy_required = 10}
+RECIPE('chromium-rejects'):set_fields {energy_required = 5}
+RECIPE('outlet-gas-02'):set_fields {energy_required = 2}
+RECIPE('nickel-tailings'):set_fields {energy_required = 10}
+RECIPE('nickel-prepared-solution'):set_fields {energy_required = 10}
+RECIPE('gold-precipitate'):set_fields {energy_required = 10}
+RECIPE('nuclear-fuel-reprocessing'):set_fields {energy_required = 100}
+RECIPE('nuclear-fuel-reprocessing-mk02'):set_fields {energy_required = 100}
+RECIPE('nuclear-fuel-reprocessing-mk03'):set_fields {energy_required = 100}
+RECIPE('nuclear-fuel-reprocessing-mk04'):set_fields {energy_required = 100}
+RECIPE('nuclear-fuel-reprocessing-mk05'):set_fields {energy_required = 100}
+RECIPE('al-tailings-separation'):set_fields {energy_required = 10}
+RECIPE('clean-rf-gel'):set_fields {energy_required = 20}
+RECIPE('albumin-1'):set_fields {energy_required = 5}
+RECIPE('honey-comb'):set_fields {energy_required = 1}
+RECIPE('simik-blood-to-oleochemicals'):set_fields {energy_required = 20}
+RECIPE('bitumen-to-nickel'):set_fields {energy_required = 10}
+RECIPE('tar-to-nickel'):set_fields {energy_required = 10}
+RECIPE('fiber-dry-storage-2'):set_fields {energy_required = 1}
+RECIPE('honey-comb-buffed'):set_fields {energy_required = 3}
 
 RECIPE('low-density-structure'):add_ingredient {type = 'item', name = 'nxsb-alloy', amount = 25}
 
