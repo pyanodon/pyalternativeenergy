@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.36
+Date: 2024-6-27
+  Bugfixes:
+    - Due to an even higher number of bitch posts decreased centrifuge mk1-mk4 energy usage from 1GW,2GW,3GW,4GW to 250MW,500MW,1GW,2GW
+    - removed coal water slurry from centrifuge
+    - increased the input/output of albumin and used solvent seperation
+    - fixed nuke fuel localization issue
+---------------------------------------------------------------------------------------------------
 Version: 1.2.35
 Date: 2024-6-27
   Bugfixes:
