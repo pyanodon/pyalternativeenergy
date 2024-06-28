@@ -5,8 +5,6 @@ RECIPE('honey-comb'):set_category('centrifuging')
 RECIPE('honey-comb-buffed'):set_category('centrifuging')
 RECIPE('nickel-tailings'):set_category('centrifuging')
 RECIPE('xylenol-2'):set_category('centrifuging')
-RECIPE('coal-slurry'):set_category('centrifuging')
-RECIPE('solvent-separation'):set_category('centrifuging')
 RECIPE('al-tailings-separation'):set_category('centrifuging')
 RECIPE('simik-blood-to-oleochemicals'):set_category('centrifuging')
 RECIPE('chromite-concentrate'):set_category('centrifuging')
@@ -25,8 +23,6 @@ RECIPE('chromium-rejects'):set_category('centrifuging')
 --adjusting all centrifudge recipe speeds
 RECIPE('uranium-processing'):set_fields {energy_required = 40}
 RECIPE('kovarex-enrichment-process'):set_fields {energy_required = 10}
-RECIPE('coal-slurry'):set_fields {energy_required = 5}
-RECIPE('solvent-separation'):set_fields {energy_required = 33}
 RECIPE('serine'):set_fields {energy_required = 50}
 RECIPE('vanabins'):set_fields {energy_required = 5}
 RECIPE('chromite-concentrate'):set_fields {energy_required = 10}
@@ -43,12 +39,32 @@ RECIPE('nuclear-fuel-reprocessing-mk05'):set_fields {energy_required = 100}
 RECIPE('al-tailings-separation'):set_fields {energy_required = 10}
 RECIPE('clean-rf-gel'):set_fields {energy_required = 20}
 RECIPE('albumin-1'):set_fields {energy_required = 5}
-RECIPE('honey-comb'):set_fields {energy_required = 1}
 RECIPE('simik-blood-to-oleochemicals'):set_fields {energy_required = 20}
 RECIPE('bitumen-to-nickel'):set_fields {energy_required = 10}
 RECIPE('tar-to-nickel'):set_fields {energy_required = 10}
 RECIPE('fiber-dry-storage-2'):set_fields {energy_required = 1}
+RECIPE('honey-comb'):set_fields {energy_required = 1}
 RECIPE('honey-comb-buffed'):set_fields {energy_required = 3}
+
+RECIPE {
+    type = "recipe",
+    name = "solvent-separation",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "used-solvent", amount = 500}
+    },
+    results = {
+        {type = "fluid", name = "organic-solvent", amount = 500},
+        {type = "fluid", name = "blue-liquor", amount = 250}
+    },
+    main_product = "organic-solvent",
+    icon = "__pyfusionenergygraphics__/graphics/icons/used-solvent.png",
+	icon_size = 32,
+    subgroup = "py-fusion-recipes",
+    order = "d"
+}
 
 RECIPE('low-density-structure'):add_ingredient {type = 'item', name = 'nxsb-alloy', amount = 25}
 
