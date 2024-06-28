@@ -40,7 +40,6 @@ RECIPE('albumin-1'):set_fields {energy_required = 5}
 RECIPE('simik-blood-to-oleochemicals'):set_fields {energy_required = 20}
 RECIPE('bitumen-to-nickel'):set_fields {energy_required = 10}
 RECIPE('tar-to-nickel'):set_fields {energy_required = 10}
-RECIPE('fiber-dry-storage-2'):set_fields {energy_required = 1}
 RECIPE('honey-comb'):set_fields {energy_required = 1}
 RECIPE('honey-comb-buffed'):set_fields {energy_required = 3}
 
