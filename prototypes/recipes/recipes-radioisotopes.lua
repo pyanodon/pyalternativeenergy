@@ -139,7 +139,7 @@ RECIPE {
     main_product = "po-210",
     subgroup = "py-nuclear",
     order = "b"
-}:add_unlock("nuclear-power-mk04")
+}:add_unlock("nuclear-power-mk02")
 
 RECIPE {
     type = "recipe",
@@ -207,7 +207,7 @@ RECIPE {
     name = "plutonium-fuel-reprocessing",
     category = "centrifuging",
     enabled = false,
-    energy_required = 200,
+    energy_required = 100,
     ingredients = {
         {type = "item", name = "used-up-mox-fuel-cell", amount = 4},
     },

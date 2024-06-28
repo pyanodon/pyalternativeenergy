@@ -124,7 +124,6 @@ RECIPE('fuelrod-mk05'):remove_unlock('uranium-mk04')
 RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessing")
 RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
-RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-mk04')
 
 RECIPE("fuelrod-mk01-1"):add_ingredient({type = "item", name = "pu-239", amount = 1}):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing'):set_fields{category = "crafting"}
 
@@ -151,7 +150,6 @@ RECIPE("molten-super-steel"):remove_ingredient("fuelrod-mk02")
 RECIPE("full-molten-super-steel-1"):remove_ingredient("fuelrod-mk04")
 RECIPE("full-molten-stainless-steel-4"):remove_ingredient("fuelrod-mk03")
 
-
 RECIPE("fuelrod-mk03"):replace_ingredient('40-u-powder', 'u-235'):add_unlock('nuclear-power-mk02')
 RECIPE("fuelrod-mk03"):replace_ingredient("lead-conatiner", "coated-container")
 
@@ -160,7 +158,92 @@ RECIPE("fuelrod-mk03"):replace_ingredient("lead-conatiner", "coated-container")
 --fuelrod mk05 will use Polonium-210 from u234 from a series of alpha decays aka helium particles
 
 RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('nuclear-power-mk03')
-RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power-mk04')
+RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power-mk02')
+RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-mk02')
+
+data.raw.item["nuclear-fuel"].burnt_result = "used-nuclear-fuel"
+
+ITEM{
+    type = "item",
+    name = "nuclear-fuel",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/po-210-nuclear-fuel.png",
+    icon_size = 64, icon_mipmaps = 1,
+    pictures =
+    {
+      layers =
+      {
+        {
+          size = 64,
+          filename = "__pyalternativeenergygraphics__/graphics/icons/po-210-nuclear-fuel.png",
+          scale = 0.25,
+          mipmap_count = 1
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          filename = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fuel-light.png",
+          scale = 0.25,
+          mipmap_count = 1
+        }
+      }
+    },
+    fuel_category = "nuke",
+    fuel_value = "1.21GJ",
+    fuel_acceleration_multiplier = 2.5,
+    fuel_top_speed_multiplier = 2,
+    -- fuel_glow_color = {r = 0.1, g = 1, b = 0.1},
+    subgroup = "intermediate-product",
+    order = "q[uranium-rocket-fuel]",
+    stack_size = 1
+  }
+
+ITEM{
+    type = "item",
+    name = "used-nuclear-fuel",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/used-po-210-nuclear-fuel.png",
+    icon_size = 64, icon_mipmaps = 4,
+    pictures =
+    {
+      layers =
+      {
+        {
+          size = 64,
+          filename = "__pyalternativeenergygraphics__/graphics/icons/used-po-210-nuclear-fuel.png",
+          scale = 0.25,
+          mipmap_count = 1
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          filename = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fuel-light.png",
+          scale = 0.25,
+          mipmap_count = 1
+        }
+      }
+    },
+    -- fuel_glow_color = {r = 0.1, g = 1, b = 0.1},
+    subgroup = "intermediate-product",
+    order = "q[uranium-rocket-fuel]",
+    stack_size = 1
+  }
+
+  RECIPE {
+    type = "recipe",
+    name = "used-nuclear-fuel",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+        {"used-nuclear-fuel", 5},
+    },
+    results = {
+        {"lead-dust", 10}
+    }
+}:add_unlock("nuclear-power-mk02")
+
+table.insert(data.raw.locomotive.locomotive.burner.fuel_categories, "nuke")
+table.insert(data.raw.locomotive["mk02-locomotive"].burner.fuel_categories, "nuke")
 
 --move uranium ore processing recipes
 RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')

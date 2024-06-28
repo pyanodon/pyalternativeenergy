@@ -124,7 +124,7 @@ RECIPE {
     name = "th-dust",
     category = "centrifuging",
     enabled = false,
-    energy_required = 50,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "stripped-th", amount = 100},
         {type = "fluid", name = "ammonia", amount = 100},
@@ -244,7 +244,7 @@ RECIPE {
     name = "crystalized-gd",
     category = "centrifuging",
     enabled = false,
-    energy_required = 100,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "gd-stripped-solution", amount = 50},
         {type = "item", name = "ammonium-chloride", amount = 2},

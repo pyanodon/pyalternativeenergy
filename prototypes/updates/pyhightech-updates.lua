@@ -145,6 +145,8 @@ table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofl
 
 RECIPE("py-science-pack-3"):add_ingredient{type = "item", name = "re-magnet", amount = 1}
 
+RECIPE("fiber"):set_category("ball-mill"):set_fields {energy_required = 5}
+
 ----EXCLUSIVE RECIPES----
 
 RECIPE {
