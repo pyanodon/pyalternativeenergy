@@ -112,8 +112,8 @@ RECIPE('subcritical-water-01').category = 'heat-exchanger'
 RECIPE('subcritical-water-02').category = 'heat-exchanger'
 
 for _, recipe in pairs(data.raw.recipe) do
-    r:replace_ingredient('battery', 'battery-mk01')
-    r:replace_result('battery', 'battery-mk01')
+    recipe:replace_ingredient('battery', 'battery-mk01')
+    recipe:replace_result('battery', 'battery-mk01')
 
     if recipe.category == 'combustion' then
         recipe.hidden = true
