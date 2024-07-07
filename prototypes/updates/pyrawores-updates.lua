@@ -254,7 +254,7 @@ table.insert(data.raw['assembling-machine']['assembling-machine-3'].energy_sourc
 table.insert(data.raw['assembling-machine']['atomizer-mk03'].energy_source.fuel_categories, 'nuke')
 table.insert(data.raw['assembling-machine']['atomizer-mk04'].energy_source.fuel_categories, 'nuke')
 table.insert(data.raw['assembling-machine']['sinter-unit'].energy_source.fuel_categories, 'nuke')
-table.insert(data.raw['assembling-machine']['py-burner'].energy_source.fuel_categories, 'nuke')
+table.insert(data.raw['furnace']['py-burner'].energy_source.fuel_categories, 'nuke')
 
 --move uranium ore processing recipes
 RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
