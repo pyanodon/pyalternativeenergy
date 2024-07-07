@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.37
-Date: ???
+Date: 2024-7-7
   Bugfixes:
     - Fixed a rare corruption in aerial data structures
+    - added nuclear fuel to assembling machine 3, atomizer 3/4, sinter plant, and burner
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.36
 Date: 2024-6-27
