@@ -4,7 +4,7 @@ Centrifuge.events = {}
 Centrifuge.building_speeds = {}
 
 local step_values = {1, 2, 4, 6, 8}
-local speed_names = {'low', 'medium', 'high', 'ultra-high'}
+local speed_names = {'low', 'medium', 'high', 'ultrahigh'}
 
 ---@param dict {[1]: int, [2]: LuaEntity}
 local function update_speed(dict)
@@ -151,7 +151,7 @@ gui_events[defines.events.on_gui_click]['py_centrifuge_confirm'] = function(even
     local building_data = Centrifuge.building_speeds[centrifuge.unit_number --[[@as int]]]
     building_data[1] = speed
     update_speed(building_data)
-    if not string.find(centrifuge.name, '%d%-' .. speed_name) then
+    if not string.find(centrifuge.name, '-' .. speed_name) then
         new_centrifuge = centrifuge.surface.create_entity{
             name = string.sub(centrifuge.name, 1, 16) .. speed_name,
             position = centrifuge.position,

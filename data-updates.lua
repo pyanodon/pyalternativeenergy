@@ -200,7 +200,7 @@ end
 --changes to speed ranges also have to be made in scripts/centrifuge.lua
 local centrifuge_names = {'centrifuge-mk01', 'centrifuge-mk02', 'centrifuge-mk03', 'centrifuge-mk04'}
 for centrifuge_tier, name in pairs(centrifuge_names) do
-    for speed_tier, speed in pairs{'low', 'medium', 'high', 'ultra-high'} do
+    for speed_tier, speed in pairs{'low', 'medium', 'high', 'ultrahigh'} do
         if centrifuge_tier < speed_tier then break end
         local centrifuge = table.deepcopy(data.raw['assembling-machine'][name])
         centrifuge.name = name .. '-' .. speed

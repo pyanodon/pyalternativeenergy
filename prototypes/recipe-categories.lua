@@ -115,7 +115,7 @@ data:extend {
     },
     {
         type = 'recipe-category',
-        name = 'centrifuging-ultra-high'
+        name = 'centrifuging-ultrahigh'
     },
     --resources
     {
