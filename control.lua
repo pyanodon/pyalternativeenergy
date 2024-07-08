@@ -11,7 +11,7 @@ require 'scripts/thermosolar/heliostat'
 require 'scripts/solar'
 require 'scripts/wind/wind'
 require 'scripts/aerial'
-require 'scripts/centrifuge'
+Centrifuge = require 'scripts/centrifuge'
 
 py.on_event('on_init', function()
     Solar.events.on_init()

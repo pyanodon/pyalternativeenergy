@@ -1,4 +1,4 @@
-Centrifuge = {}
+local Centrifuge = {}
 Centrifuge.events = {}
 ---@type table<int, {[1]: int, [2]: LuaEntity}>
 Centrifuge.building_speeds = {}
@@ -36,7 +36,23 @@ Centrifuge.events.on_destroyed = function(event)
 end
 
 Centrifuge.events.on_player_setup_blueprint = function(event)
-
+    local modified_entities = {}
+    for id, entry in pairs(event.mapping.get()) do
+        if Centrifuge.building_speeds[entry.unit_number] then
+            modified_entities[id] = Centrifuge.building_speeds[entry.unit_number][1]
+        end
+    end
+    local player = game.get_player(event.player_index)
+    if not player then return end
+    local blueprint = player.cursor_stack
+    if not blueprint or not blueprint.valid_for_read then return end
+    entities = blueprint.get_blueprint_entities()
+    if not entities then return end
+    for _, entity in pairs(entities) do
+        if modified_entities[entity.entity_number] then
+            blueprint.set_blueprint_entity_tag(entity.entity_number, 'speed', modified_entities[entity.entity_number])
+        end
+    end
 end
 
 ---@param building_speed number
@@ -146,3 +162,5 @@ gui_events[defines.events.on_gui_click]['py_centrifuge_confirm'] = function(even
         centrifuge.destroy()
     end
 end
+
+return Centrifuge
