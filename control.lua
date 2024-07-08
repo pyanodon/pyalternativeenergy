@@ -11,6 +11,7 @@ require 'scripts/thermosolar/heliostat'
 require 'scripts/solar'
 require 'scripts/wind/wind'
 require 'scripts/aerial'
+require 'scripts/centrifuge'
 
 py.on_event('on_init', function()
     Solar.events.on_init()
@@ -35,6 +36,7 @@ py.on_event('on_built', function(event)
     Heliostat.events.on_built(event)
     Wind.events.on_built(event)
     Aerial.events.on_built(event)
+    Centrifuge.events.on_built(event)
 
     local E = event.created_entity or event.entity
     if not E.valid then return end
@@ -93,6 +95,7 @@ py.on_event(on_destroyed, function(event)
     Heliostat.events.on_destroyed(event)
     Wind.events.on_destroyed(event)
     Aerial.events.on_destroyed(event)
+    Centrifuge.events.on_destroyed(event)
 
     local E = event.entity
     if not E.valid or not E.unit_number then return end
@@ -107,6 +110,7 @@ py.on_event(events.on_gui_opened, function(event)
     Microwave_Receiver.events.on_gui_opened(event)
     Solar_Updraft_Tower.events.on_gui_opened(event)
     Heliostat.events.on_gui_opened(event)
+    Centrifuge.events.on_gui_opened(event)
 end)
 
 py.on_event({events.on_gui_closed, events.on_player_changed_surface}, function(event)
@@ -136,5 +140,7 @@ py.on_nth_tick(9, function()
 		if gui then Aerial.update_gui(gui) end
 	end
 end)
+
+py.on_event(events.on_player_setup_blueprint, Centrifuge.events.on_player_setup_blueprint)
 
 py.finalize_events()

@@ -79,7 +79,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pan",
-    category = "centrifuging",
+    category = "centrifuging-low", -- temporary
     enabled = false,
     energy_required = 40,
     ingredients = {

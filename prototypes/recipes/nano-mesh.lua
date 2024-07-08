@@ -177,7 +177,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rpc-mesh",
-    category = "centrifuging",
+    category = "centrifuging-low", -- temporary
     enabled = false,
     energy_required = 30,
     ingredients = {

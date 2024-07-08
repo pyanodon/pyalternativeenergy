@@ -1,22 +1,22 @@
 --MOVED RECIPES CATEGORIES
-RECIPE('honey-comb').category = 'centrifuging'
-RECIPE('honey-comb-buffed').category = 'centrifuging'
-RECIPE('nickel-tailings').category = 'centrifuging'
-RECIPE('xylenol-2').category = 'centrifuging'
-RECIPE('al-tailings-separation').category = 'centrifuging'
-RECIPE('simik-blood-to-oleochemicals').category = 'centrifuging'
-RECIPE('chromite-concentrate').category = 'centrifuging'
-RECIPE('vanabins').category = 'centrifuging'
-RECIPE('clean-rf-gel').category = 'centrifuging'
-RECIPE('gold-precipitate').category = 'centrifuging'
-RECIPE('serine').category = 'centrifuging'
-RECIPE('albumin-1').category = 'centrifuging'
-RECIPE('outlet-gas-02').category = 'centrifuging'
-RECIPE('serine').category = 'centrifuging'
-RECIPE('tar-to-nickel').category = 'centrifuging'
-RECIPE('bitumen-to-nickel').category = 'centrifuging'
-RECIPE('nickel-prepared-solution').category = 'centrifuging'
-RECIPE('chromium-rejects').category = 'centrifuging'
+RECIPE('honey-comb').category = 'centrifuging-low' -- temporary
+RECIPE('honey-comb-buffed').category = 'centrifuging-low' -- temporary
+RECIPE('nickel-tailings').category = 'centrifuging-low' -- temporary
+RECIPE('xylenol-2').category = 'centrifuging-low' -- temporary
+RECIPE('al-tailings-separation').category = 'centrifuging-low' -- temporary
+RECIPE('simik-blood-to-oleochemicals').category = 'centrifuging-low' -- temporary
+RECIPE('chromite-concentrate').category = 'centrifuging-low' -- temporary
+RECIPE('vanabins').category = 'centrifuging-low' -- temporary
+RECIPE('clean-rf-gel').category = 'centrifuging-low' -- temporary
+RECIPE('gold-precipitate').category = 'centrifuging-low' -- temporary
+RECIPE('serine').category = 'centrifuging-low' -- temporary
+RECIPE('albumin-1').category = 'centrifuging-low' -- temporary
+RECIPE('outlet-gas-02').category = 'centrifuging-low' -- temporary
+RECIPE('serine').category = 'centrifuging-low' -- temporary
+RECIPE('tar-to-nickel').category = 'centrifuging-low' -- temporary
+RECIPE('bitumen-to-nickel').category = 'centrifuging-low' -- temporary
+RECIPE('nickel-prepared-solution').category = 'centrifuging-low' -- temporary
+RECIPE('chromium-rejects').category = 'centrifuging-low' -- temporary
 
 --adjusting all centrifudge recipe speeds
 RECIPE('uranium-processing'):set_fields {energy_required = 40}
@@ -46,7 +46,7 @@ RECIPE('honey-comb-buffed'):set_fields {energy_required = 3}
 RECIPE {
     type = 'recipe',
     name = 'solvent-separation',
-    category = 'centrifuging',
+    category = 'centrifuging-low', -- temporary
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -193,6 +193,46 @@ for _, resource in pairs(data.raw.resource) do
     if not resource.selection_priority then
         resource.selection_priority = 48
     end
+end
+
+--CENTRIFUGES--
+
+--changes to speed ranges also have to be made in scripts/centrifuge.lua
+local centrifuge_names = {'centrifuge-mk01', 'centrifuge-mk02', 'centrifuge-mk03', 'centrifuge-mk04'}
+for centrifuge_tier, name in pairs(centrifuge_names) do
+    for speed_tier, speed in pairs{'low', 'medium', 'high', 'ultra-high'} do
+        if centrifuge_tier < speed_tier then break end
+        local centrifuge = table.deepcopy(data.raw['assembling-machine'][name])
+        centrifuge.name = name .. '-' .. speed
+        centrifuge.crafting_categories = {'centrifuging-' .. speed}
+        centrifuge.energy_usage = tonumber(string.sub(centrifuge.energy_usage, 0, -3)) * speed_tier .. string.sub(centrifuge.energy_usage, -2)
+        centrifuge.localised_name = {'entity-name.' .. name, {'entity-name.' .. speed}}
+        centrifuge.placeable_by = {item = name, count = 1}
+        centrifuge.fast_replaceable_group = 'centrifuge-' .. speed
+        if centrifuge_tier < 4 then
+            centrifuge.next_upgrade = string.sub(name, 0, -2) .. centrifuge_tier + 1 .. '-' .. speed
+        end
+        data:extend{centrifuge}
+    end
+    data.raw['assembling-machine'][name] = nil
+    data.raw.item[name].place_result = name .. '-low'
+end
+
+for tier, i in pairs{-75, -50, 50, 100} do
+    mod = {
+        type = 'module',
+        name = 'centrifuge-speed-' .. tier,
+        icon = data.raw.module['speed-module'].icon,
+        icon_size = data.raw.module['speed-module'].icon_size,
+        category = 'speed',
+        tier = tier,
+        stack_size = 1,
+        effect = {
+            speed = {bonus = i / 100},
+            consumption = {bonus = i / 100},
+        },
+    }
+    data:extend{mod}
 end
 
 --gather recipes for module changes

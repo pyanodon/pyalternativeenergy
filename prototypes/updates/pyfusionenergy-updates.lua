@@ -152,7 +152,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "heavy-water",
-    category = "centrifuging",
+    category = "centrifuging-low", -- temporary
     enabled = false,
     energy_required = 60,
     ingredients = {

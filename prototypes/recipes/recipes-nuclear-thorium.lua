@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pa-233-seperation",
-    category = "centrifuging",
+    category = "centrifuging-low", -- temporary
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -78,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u233-uf6",
-    category = "centrifuging",
+    category = "centrifuging-low", -- temporary
     enabled = false,
     energy_required = 40,
     ingredients = {

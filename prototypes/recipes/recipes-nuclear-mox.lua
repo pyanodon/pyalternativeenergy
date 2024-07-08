@@ -68,7 +68,7 @@ steb 6b: Pu-sol3 + heat -> PuO2 + offgas
 RECIPE {
     type = "recipe",
     name = "pu239-uf6",
-    category = "centrifuging",
+    category = "centrifuging-low", -- temporary
     enabled = false,
     energy_required = 10,
     ingredients = {

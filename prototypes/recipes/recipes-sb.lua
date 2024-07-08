@@ -327,7 +327,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-conc",
-    category = "centrifuging",
+    category = "centrifuging-low", -- temporary
     enabled = false,
     energy_required = 50,
     ingredients = {

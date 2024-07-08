@@ -101,6 +101,22 @@ data:extend {
         type = 'recipe-category',
         name = 'electric-boiler'
     },
+    {
+        type = 'recipe-category',
+        name = 'centrifuging-low'
+    },
+    {
+        type = 'recipe-category',
+        name = 'centrifuging-medium'
+    },
+    {
+        type = 'recipe-category',
+        name = 'centrifuging-high'
+    },
+    {
+        type = 'recipe-category',
+        name = 'centrifuging-ultra-high'
+    },
     --resources
     {
         type = 'resource-category',
