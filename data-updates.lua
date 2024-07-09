@@ -210,6 +210,9 @@ for centrifuge_tier, name in pairs(centrifuge_names) do
         local centrifuge = table.deepcopy(data.raw['assembling-machine'][name])
         centrifuge.name = name .. '-' .. speed
         centrifuge.crafting_categories = {'centrifuging-' .. speed}
+        if speed_tier == 1 then
+            table.insert(centrifuge.crafting_categories, 'centrifuging')
+        end
         centrifuge.energy_usage = tonumber(string.sub(centrifuge.energy_usage, 0, -3)) * speed_tier .. string.sub(centrifuge.energy_usage, -2)
         centrifuge.localised_name = {'entity-name.' .. name, {'entity-name.' .. speed}}
         centrifuge.placeable_by = {item = name, count = 1}
