@@ -17,6 +17,11 @@ RECIPE('tar-to-nickel').category = 'centrifuging-low' -- temporary
 RECIPE('bitumen-to-nickel').category = 'centrifuging-low' -- temporary
 RECIPE('nickel-prepared-solution').category = 'centrifuging-low' -- temporary
 RECIPE('chromium-rejects').category = 'centrifuging-low' -- temporary
+RECIPE('nuclear-fuel-reprocessing-mk02').category = 'centrifuging-low' -- temporary
+RECIPE('nuclear-fuel-reprocessing-mk03').category = 'centrifuging-low' -- temporary
+RECIPE('nuclear-fuel-reprocessing-mk04').category = 'centrifuging-low' -- temporary
+RECIPE('nuclear-fuel-reprocessing-mk05').category = 'centrifuging-low' -- temporary
+RECIPE('plutonium-fuel-reprocessing').category = 'centrifuging-low' -- temporary
 
 --adjusting all centrifudge recipe speeds
 RECIPE('uranium-processing'):set_fields {energy_required = 40}
