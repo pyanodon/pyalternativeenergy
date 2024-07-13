@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.39
+Date: 2024-7-13
+  Bugfixes:
+    - Fixed that 1.2.38 changelog was labeled as 1.2.37 as that version got microsofted
+    - Fixed iron processing mk02 tech required a number of unneeded prereqs due to the hydrocyclone being in vanadium processing
+    - Moved hydrocyclone to iron processing mk02
+---------------------------------------------------------------------------------------------------
 Version: 1.2.38
 Date: 2024-7-7
   Bugfixes:
