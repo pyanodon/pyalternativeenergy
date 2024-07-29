@@ -1360,9 +1360,9 @@ Aerial.events.on_open_gui = function(event)
     -- If we passed exists_and_valid, we don't need the IDE whining that entity might be nil
     ---@cast entity LuaEntity
 
-    -- If a player clicks for power stats, we refresh the networks
-    if entity.type == 'power-switch' or entity.type == 'electric-pole' then
-        global.aerials.refresh_networks = true
+    -- If a player clicks for power stats, we verify the network
+    if entity.type == 'electric-pole' then
+        verify_neighbours(entity)
         return
     end
 
