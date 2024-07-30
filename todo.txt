@@ -53,3 +53,9 @@ geothermal from spent bitumen seeps
 12847 - nuke tech
 
 12838 - deal with u238 and plutoium by making it into more uf6
+
+18446 - sulfuric acid decompision to sulfur dioxide
+
+18501 - sulfuric acid
+
+fix simik boilers being super cheap and using way to many buildings

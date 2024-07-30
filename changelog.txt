@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.40
-Date: ???
+Date: 2024-7-29
   Bugfixes:
     - Fixed stutter on clicking electric poles
+    - Added mining productivity 4-12 and shifted current mining prod techs to be earlier in the tech tree locked behind mining machines tech
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.39
 Date: 2024-7-13
