@@ -167,8 +167,6 @@ RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('n
 RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power-mk02')
 RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-mk02')
 
-data.raw.item["nuclear-fuel"].burnt_result = "used-nuclear-fuel"
-
 ITEM{
     type = "item",
     name = "nuclear-fuel",
@@ -201,7 +199,8 @@ ITEM{
     -- fuel_glow_color = {r = 0.1, g = 1, b = 0.1},
     subgroup = "intermediate-product",
     order = "q[uranium-rocket-fuel]",
-    stack_size = 1
+    stack_size = 1,
+	burnt_result = "used-nuclear-fuel"
   }
 
 ITEM{
