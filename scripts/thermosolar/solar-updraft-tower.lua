@@ -27,6 +27,8 @@ local function update_parent_tower(position, cover_count)
     -- Check our last-used tower
     if parent and is_in_radius(parent.position, position, Thermosolar.tower_range) then
         goto continue
+    else
+        parent = nil
     end
     for unit_id, tower_data in pairs(global.solar_updraft_towers) do
         if is_in_radius(tower_data.entity.position, position, Thermosolar.tower_range) then

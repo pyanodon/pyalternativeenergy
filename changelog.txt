@@ -3,6 +3,7 @@ Version: 1.2.41
 Date: ?
   Bugfixes:
     - Nuclear fuel now correctly burns to spent nuclear fuel
+    - Fix tiles being attributed to the wrong solar updraft tower
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.40
 Date: 2024-7-29
