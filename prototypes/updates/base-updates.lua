@@ -330,19 +330,19 @@ TECHNOLOGY{
     prerequisites = {"mining-productivity-11"},
     unit =
     {
-      count = 250,
+      count_formula = "100*(L*1.2)",
       ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-		{"chemical-science-pack", 1},
-		{"production-science-pack", 1},
-		{"utility-science-pack", 1},
-		{"space-science-pack", 1}
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1}
       },
       time = 60
     },
-	max_level = "infinite",
+	  max_level = "infinite",
     upgrade = true,
     order = "c-k-f-e"
   }
