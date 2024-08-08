@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.41
-Date: ?
+Date: 20-8-8
   Bugfixes:
     - Nuclear fuel now correctly burns to spent nuclear fuel
     - Fix tiles being attributed to the wrong solar updraft tower
+    - Fix that minging productivity infinite research didnt correctly increase in costs per level
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.40
 Date: 2024-7-29
