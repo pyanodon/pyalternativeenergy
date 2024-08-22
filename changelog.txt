@@ -1,6 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.42
+Date: 2024-??-??
+  Fusion:
+    - Changed fusion reactor building recipes and fusion reaction recipes
+    - reaction recipes no longer contain building parts
+    - changed deuterium production process to make it longer and stronger 
+---------------------------------------------------------------------------------------------------
 Version: 1.2.41
-Date: 20-8-8
+Date: 2024-8-8
   Bugfixes:
     - Nuclear fuel now correctly burns to spent nuclear fuel
     - Fix tiles being attributed to the wrong solar updraft tower

@@ -59,3 +59,7 @@ geothermal from spent bitumen seeps
 18501 - sulfuric acid
 
 fix simik boilers being super cheap and using way to many buildings
+
+6776 - ethanol
+
+Claus process - reducing hydrogen sulfide to sulfur

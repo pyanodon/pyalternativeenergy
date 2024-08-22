@@ -140,22 +140,101 @@ RECIPE {
     },
 }
 
+RECIPE("d2o-distilation"):remove_unlock("fusion-mk01"):set_fields{hidden = true}
+RECIPE("heavy-water"):remove_unlock("fusion-mk01"):set_fields{hidden = true}
+
+
+data.raw["assembling-machine"]["fusion-reactor-mk02"].crafting_categories = {"fusion-01", "fusion-02"}
+--Girdler sulfide process
+
 --TODO: replace heavy wetter production with new process. hot water and hydrogen sulfide (hydrogen with sulfur: h2s) go in one side to make fat acid gas and fat acid gas will combine with cold water to make enriched water. enriched water with get vacuum distilled into water and heavy water. heavy water can be run though a electrolysiser to seperate deuterium and oxygen
+
+--water + phosphorus pentasulfide = hydrogen sulfide + phosphoric acid
+--P4S10 + 16 H2O → 4 H3PO4 + 10 H2S
 
 RECIPE {
     type = "recipe",
-    name = "heavy-water",
-    category = "centrifuging",
+    name = "hydrogen-sulfide",
+    category = "chemistry",
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "item", name = "sulfur", amount = 20},
-        {type = "fluid", name = "pressured-water", amount = 4000}
+        {type = "item", name = "p2s5", amount = 20},
+        {type = "fluid", name = "water", amount = 160}
     },
     results = {
-        {type = "fluid", name = "heavy-water", amount = 40}
-    }
-}
+        {type = "fluid", name = "phosphoric-acid", amount = 80},
+        {type = "fluid", name = "hydrogen-sulfide", amount = 200}
+    },
+    main_product = "hydrogen-sulfide"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "deuterium-sulfide",
+    category = "gas-separator",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "fluid", name = "water", amount = 500, minimum_temperature = 150},
+        {type = "fluid", name = "hydrogen-sulfide", amount = 400}
+    },
+    results = {
+        {type = "fluid", name = "water", amount = 480, temperature = 125},
+        {type = "fluid", name = "deuterium-sulfide", amount = 400}
+    },
+    main_product = "deuterium-sulfide"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "enriched-water",
+    category = "compressor",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "fluid", name = "deuterium-sulfide", amount = 200},
+        {type = "fluid", name = "water", amount = 1000, maximum_temperature = 101}
+    },
+    results = {
+        {type = "fluid", name = "enriched-water", amount = 1000},
+        {type = "fluid", name = "hydrogen-sulfide", amount = 200},
+    },
+    main_product = "enriched-water"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "enriched-water-distillation",
+    category = "distilator",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "fluid", name = "vacuum", amount = 400},
+        {type = "fluid", name = "enriched-water", amount = 200}
+    },
+    results = {
+        {type = "fluid", name = "water", amount = 175, temperature = 125},
+        {type = "fluid", name = "heavy-water", amount = 25},
+    },
+    main_product = "heavy-water"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "deuterium",
+    category = "electrolyzer",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "fluid", name = "heavy-water", amount = 300},
+    },
+    results = {
+        {type = "fluid", name = "deuterium", amount = 200},
+        {type = "fluid", name = "oxygen", amount = 100}
+    },
+    main_product = "deuterium"
+}:add_unlock("fusion-mk01")
 
 RECIPE {
     type = "recipe",
@@ -169,7 +248,7 @@ RECIPE {
         {type = "fluid", name = "liquid-helium", amount = 30},
     },
     results = {
-        {type = "fluid", name = "critical-steam", amount = 20000, temperature = 5000},
+        {type = "fluid", name = "critical-steam", amount = 10000, temperature = 5000},
         {type = "fluid", name = "helium", amount = 150},
         {type = "fluid", name = "tritium", amount = 20},
         {type = "fluid", name = "helium3", amount = 30},
@@ -195,7 +274,7 @@ RECIPE {
         {type = "fluid", name = "water", amount = 3000}
     },
     results = {
-        {type = "fluid", name = "neutron", amount = 1000, temperature = 2000},
+        {type = "fluid", name = "neutron", amount = 3000, temperature = 2000},
         {type = "fluid", name = "helium", amount = 200},
         {type = "fluid", name = "tritium", amount = 5},
         {type = "fluid", name = "steam", amount = 3000, temperature = 500},
