@@ -130,7 +130,7 @@ RECIPE {
         {type = 'fluid', name = 'hot-molten-salt', amount = 50},
     },
     results = {
-        {type = 'fluid', name = 'tritium', amount = 100},
+        {type = 'fluid', name = 'tritium', amount = 5},
         {type = 'item', name = 'control-rod', amount = 1, probability = 0.5},
         {type = 'fluid', name = 'molten-salt', amount = 50},
     },
