@@ -354,6 +354,9 @@ RECIPE {
     show_details_in_recipe_tooltip = false
 }
 
+RECIPE("antimatter-fusion"):remove_unlock("fusion-mk04")
+
+--[[ removed for total rebuild in pysex
 RECIPE {
     type = 'recipe',
     name = 'antimatter-fusion',
@@ -377,6 +380,7 @@ RECIPE {
     order = 'e',
     show_details_in_recipe_tooltip = false
 }
+]]--
 
 --pyFE--
 data.raw['assembling-machine']['agitator-mk01'].energy_usage = "1MW"
