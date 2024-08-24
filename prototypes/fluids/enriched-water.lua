@@ -2,10 +2,10 @@
 FLUID {
     type = "fluid",
     name = "enriched-water",
-    icon = "__pyfusionenergygraphics__/graphics/icons/heavy-water.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/enriched-water.png",
 	icon_size = 32,
     default_temperature = 10,
-    base_color = {r = 0.423, g = 0.678, b = 0.823},
+    base_color = {r = 255, g = 69, b = 0},
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 100,
     gas_temperature = 15,

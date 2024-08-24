@@ -4,7 +4,8 @@ Date: 2024-??-??
   Fusion:
     - Changed fusion reactor building recipes and fusion reaction recipes
     - reaction recipes no longer contain building parts
-    - changed deuterium production process to make it longer and stronger 
+    - changed deuterium production process to make it longer and stronger
+    - added hydrogen sulfide, deuterium sulfide and enriched water fluids
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.41
 Date: 2024-8-8

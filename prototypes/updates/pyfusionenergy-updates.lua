@@ -217,7 +217,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "enriched-water", amount = 1000},
-        {type = "fluid", name = "hydrogen-sulfide", amount = 200},
+        {type = "fluid", name = "hydrogen-sulfide", amount = 160},
     },
     main_product = "enriched-water"
 }:add_unlock("fusion-mk01")
