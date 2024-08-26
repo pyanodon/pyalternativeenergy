@@ -5,7 +5,12 @@ Date: 2024-??-??
     - Changed fusion reactor building recipes and fusion reaction recipes
     - reaction recipes no longer contain building parts
     - changed deuterium production process to make it longer and stronger
+    - removed antimatter fusion recipe as it didnt fit to reworked fusion reactor recipes. will return in pysex
+    - adjusted mdh generator consumption per tick from 50->400 and lowered max fluid temp to match the max output of the fusion reactors
+    - adjusted used control rod tritium output from 100 -> 5
+    - changed liquid helium recipe crafting time from 10s to 5s, changed helium input from 20 -> 100 and changed the output from 2 -> 10
     - added hydrogen sulfide, deuterium sulfide and enriched water fluids
+    - moved time crystal recipe from fusion reactor to particle accelerator
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.41
 Date: 2024-8-8
