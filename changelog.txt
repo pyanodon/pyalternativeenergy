@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.42
-Date: 2024-??-??
+Date: 2024-8-26
   Fusion:
     - Changed fusion reactor building recipes and fusion reaction recipes
     - reaction recipes no longer contain building parts
