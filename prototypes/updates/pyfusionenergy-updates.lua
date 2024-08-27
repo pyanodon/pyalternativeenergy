@@ -263,10 +263,10 @@ RECIPE {
     energy_required = 40,
     ingredients = {
         {type = "item", name = "lithium", amount = 2},
+        {type = "fluid", name = "water", amount = 10000},
         {type = "fluid", name = "deuterium", amount = 50},
         {type = "fluid", name = "tritium", amount = 50},
-        {type = "fluid", name = "liquid-nitrogen", amount = 30},
-        {type = "fluid", name = "water", amount = 10000}
+        {type = "fluid", name = "liquid-nitrogen", amount = 30}
     },
     results = {
         {type = "fluid", name = "critical-steam", amount = 10000, temperature = 5000},
