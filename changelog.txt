@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.43
+Date: 2024-8-26
+  Fusion:
+    - moved mdh power output priority down from solar tier to normal
+    - changed the fluid inputs on deuterium tritium fusion to have 2 water ports instead of deuterium
+---------------------------------------------------------------------------------------------------
 Version: 1.2.42
 Date: 2024-8-26
   Fusion:
