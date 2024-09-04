@@ -454,7 +454,7 @@ while enrichment < 100 do
 				enabled = false,
 				energy_required = 1,
 				ingredients = {
-						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1}
+						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 0.000001}
 				},
 				results = {
 						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
@@ -520,7 +520,7 @@ while duf > duf_min do
 				enabled = false,
 				energy_required = 1,
 				ingredients = {
-						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 1}
+						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 0.000001}
 				},
 				results = {
 						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
