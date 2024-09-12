@@ -458,9 +458,9 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "time-crystal",
-    category = "fusion-01",
+    category = "pa",
     enabled = false,
-    energy_required = 20,
+    energy_required = 60,
     ingredients = {
         {type = "item", name = "diamond", amount = 5},
         {type = "item", name = "parametric-oscilator", amount = 1}, -- nv-center

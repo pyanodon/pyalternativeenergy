@@ -23,7 +23,7 @@ RECIPE("nmf-mk01"):add_ingredient({type = "item", name = "intermetallics", amoun
 RECIPE("secondary-crusher-mk01"):remove_unlock("machines-mk01"):add_unlock("crusher-2")--:add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("thickener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 7})
 RECIPE("gas-separator-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
-RECIPE("hydrocyclone-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
+RECIPE("hydrocyclone-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10}):remove_unlock("vanadium-processing"):add_unlock("iron-mk02")
 --RECIPE("automated-screener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("centrifugal-pan-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("compressor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 6})
@@ -147,22 +147,147 @@ RECIPE {
     },
 }
 
---TODO: replace heavy wetter production with new process. hot water and hydrogen sulfide (hydrogen with sulfur: h2s) go in one side to make fat acid gas and fat acid gas will combine with cold water to make enriched water. enriched water with get vacuum distilled into water and heavy water. heavy water can be run though a electrolysiser to separate deuterium and oxygen
+RECIPE("d2o-distilation"):remove_unlock("fusion-mk01"):set_fields{hidden = true}
+RECIPE("heavy-water"):remove_unlock("fusion-mk01"):set_fields{hidden = true}
+
+
+data.raw["assembling-machine"]["fusion-reactor-mk02"].crafting_categories = {"fusion-01", "fusion-02"}
 
 RECIPE {
     type = "recipe",
-    name = "heavy-water",
-    category = "centrifuging-low", -- temporary
+    name = "liquid-helium",
+    category = "compressor",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "helium", amount = 100},
+        {type = "fluid", name = "water", amount = 600},
+        {type = "fluid", name = "gasoline", amount = 5}
+    },
+    results = {
+        {type = "fluid", name = "liquid-helium", amount = 10},
+        {type = "fluid", name = "steam", amount = 600, temperature = 150}
+    },
+    main_product = "liquid-helium",
+}
+
+--Girdler sulfide process
+
+--TODO: replace heavy wetter production with new process. hot water and hydrogen sulfide (hydrogen with sulfur: h2s) go in one side to make fat acid gas and fat acid gas will combine with cold water to make enriched water. enriched water with get vacuum distilled into water and heavy water. heavy water can be run though a electrolysiser to seperate deuterium and oxygen
+
+--water + phosphorus pentasulfide = hydrogen sulfide + phosphoric acid
+--P4S10 + 16 H2O → 4 H3PO4 + 10 H2S
+
+RECIPE {
+    type = "recipe",
+    name = "hydrogen-sulfide",
+    category = "chemistry",
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "item", name = "sulfur", amount = 20},
-        {type = "fluid", name = "pressured-water", amount = 4000}
+        {type = "item", name = "p2s5", amount = 20},
+        {type = "fluid", name = "water", amount = 160}
     },
     results = {
-        {type = "fluid", name = "heavy-water", amount = 40}
-    }
-}
+        {type = "fluid", name = "phosphoric-acid", amount = 80},
+        {type = "fluid", name = "hydrogen-sulfide", amount = 200}
+    },
+    main_product = "hydrogen-sulfide"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "deuterium-sulfide",
+    category = "gas-separator",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "fluid", name = "water", amount = 500, minimum_temperature = 150},
+        {type = "fluid", name = "hydrogen-sulfide", amount = 400}
+    },
+    results = {
+        {type = "fluid", name = "water", amount = 480, temperature = 125},
+        {type = "fluid", name = "deuterium-sulfide", amount = 400}
+    },
+    main_product = "deuterium-sulfide"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "enriched-water",
+    category = "compressor",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "fluid", name = "deuterium-sulfide", amount = 200},
+        {type = "fluid", name = "water", amount = 1000, maximum_temperature = 101}
+    },
+    results = {
+        {type = "fluid", name = "enriched-water", amount = 1000},
+        {type = "fluid", name = "hydrogen-sulfide", amount = 160},
+    },
+    main_product = "enriched-water"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "enriched-water-distillation",
+    category = "distilator",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "fluid", name = "vacuum", amount = 400},
+        {type = "fluid", name = "enriched-water", amount = 200}
+    },
+    results = {
+        {type = "fluid", name = "water", amount = 175, temperature = 125},
+        {type = "fluid", name = "heavy-water", amount = 25},
+    },
+    main_product = "heavy-water"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "deuterium",
+    category = "electrolyzer",
+    enabled = false,
+    energy_required = 60,
+    ingredients = {
+        {type = "fluid", name = "heavy-water", amount = 300},
+    },
+    results = {
+        {type = "fluid", name = "deuterium", amount = 200},
+        {type = "fluid", name = "oxygen", amount = 100}
+    },
+    main_product = "deuterium"
+}:add_unlock("fusion-mk01")
+
+RECIPE {
+    type = "recipe",
+    name = "dt-fusion",
+    category = "fusion-01",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "item", name = "lithium", amount = 2},
+        {type = "fluid", name = "water", amount = 10000},
+        {type = "fluid", name = "deuterium", amount = 50},
+        {type = "fluid", name = "tritium", amount = 50},
+        {type = "fluid", name = "liquid-nitrogen", amount = 30}
+    },
+    results = {
+        {type = "fluid", name = "critical-steam", amount = 10000, temperature = 5000},
+        {type = "fluid", name = "helium", amount = 100},
+        {type = "fluid", name = "tritium", amount = 60.1},
+        {type = "fluid", name = "nitrogen", amount = 250},
+    },
+    --main_product= "blanket",
+    icon = "__pyfusionenergygraphics__/graphics/icons/fusion-dt.png",
+	icon_size = 32,
+    subgroup = "py-fusion-items",
+    order = "e",
+    show_details_in_recipe_tooltip = false
+}:remove_unlock("fusion-mk02"):add_unlock("fusion-mk01")
 
 RECIPE {
     type = "recipe",
@@ -176,10 +301,10 @@ RECIPE {
         {type = "fluid", name = "liquid-helium", amount = 30},
     },
     results = {
-        {type = "fluid", name = "critical-steam", amount = 20000, temperature = 5000},
+        {type = "fluid", name = "neutron", amount = 5000, temperature = 2000},
         {type = "fluid", name = "helium", amount = 150},
-        {type = "fluid", name = "tritium", amount = 20},
-        {type = "fluid", name = "helium3", amount = 30},
+        {type = "fluid", name = "tritium", amount = 50},
+        {type = "fluid", name = "helium3", amount = 50},
     },
     --main_product= "blanket",
     icon = "__pyfusionenergygraphics__/graphics/icons/fusion-deuterium.png",
@@ -187,33 +312,7 @@ RECIPE {
     subgroup = "py-fusion-items",
     order = "e",
     show_details_in_recipe_tooltip = false
-}
-
-RECIPE {
-    type = "recipe",
-    name = "dt-fusion",
-    category = "fusion-01",
-    enabled = false,
-    energy_required = 40,
-    ingredients = {
-        {type = "fluid", name = "deuterium", amount = 80},
-        {type = "fluid", name = "tritium", amount = 20},
-        {type = "fluid", name = "liquid-helium", amount = 30},
-        {type = "fluid", name = "water", amount = 3000}
-    },
-    results = {
-        {type = "fluid", name = "neutron", amount = 1000, temperature = 2000},
-        {type = "fluid", name = "helium", amount = 200},
-        {type = "fluid", name = "tritium", amount = 5},
-        {type = "fluid", name = "steam", amount = 3000, temperature = 500},
-    },
-    --main_product= "blanket",
-    icon = "__pyfusionenergygraphics__/graphics/icons/fusion-dt.png",
-	icon_size = 32,
-    subgroup = "py-fusion-items",
-    order = "e",
-    show_details_in_recipe_tooltip = false
-}
+}:remove_unlock("fusion-mk01"):add_unlock("fusion-mk02")
 
 RECIPE {
     type = "recipe",
@@ -222,16 +321,14 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "deuterium", amount = 200},
-        {type = "fluid", name = "helium3", amount = 90},
-        {type = "fluid", name = "liquid-helium", amount = 35},
-        {type = "fluid", name = "water", amount = 5000}
+        {type = "fluid", name = "deuterium", amount = 50},
+        {type = "fluid", name = "helium3", amount = 50},
+        {type = "fluid", name = "liquid-helium", amount = 35}
     },
     results = {
-        {type = "fluid", name = "neutron", amount = 1000, temperature = 3000},
+        {type = "fluid", name = "neutron", amount = 7500, temperature = 3000},
         {type = "fluid", name = "helium", amount = 175},
-        {type = "fluid", name = "proton", amount = 15},
-        {type = "fluid", name = "steam", amount = 5000, temperature = 500},
+        {type = "fluid", name = "proton", amount = 20},
     },
     --main_product= "blanket",
     icon = "__pyfusionenergygraphics__/graphics/icons/fusion-he3.png",
@@ -248,15 +345,13 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "proton", amount = 15},
-        {type = "item", name = "boron", amount = 15},
-        {type = "fluid", name = "liquid-helium", amount = 100},
-        {type = "fluid", name = "water", amount = 5000}
+        {type = "fluid", name = "proton", amount = 20},
+        {type = "item", name = "boron", amount = 20},
+        {type = "fluid", name = "liquid-helium", amount = 10}
     },
     results = {
-        {type = "fluid", name = "neutron", amount = 1000, temperature = 4000},
-        {type = "fluid", name = "helium", amount = 500},
-        {type = "fluid", name = "steam", amount = 5000, temperature = 150},
+        {type = "fluid", name = "neutron", amount = 10000, temperature = 4000},
+        {type = "fluid", name = "helium", amount = 160}
     },
     --main_product= "blanket",
     icon = "__pyfusionenergygraphics__/graphics/icons/fusion-bh.png",
@@ -266,6 +361,9 @@ RECIPE {
     show_details_in_recipe_tooltip = false
 }
 
+RECIPE("antimatter-fusion"):remove_unlock("fusion-mk04")
+
+--[[ removed for total rebuild in pysex
 RECIPE {
     type = 'recipe',
     name = 'antimatter-fusion',
@@ -280,7 +378,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'neutron', amount = 1000, temperature = 5000},
         {type = 'fluid', name = 'helium', amount = 500},
-        {type = 'fluid', name = 'steam', amount = 5000, temperature = 150}
+        {type = 'fluid', name = 'steam', amount = 5000, temperature = 150, catalyst_amount = 5000}
     },
     --main_product= "blanket",
     icon = '__pyhightechgraphics__/graphics/icons/fusion-antimatter.png',
@@ -289,6 +387,7 @@ RECIPE {
     order = 'e',
     show_details_in_recipe_tooltip = false
 }
+]]--
 
 --pyFE--
 data.raw['assembling-machine']['agitator-mk01'].energy_usage = "1MW"

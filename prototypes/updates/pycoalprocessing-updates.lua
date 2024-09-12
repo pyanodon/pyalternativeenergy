@@ -38,7 +38,7 @@ RECIPE("desulfurizator-unit"):add_ingredient({type = "item", name = "intermetall
 --RECIPE("evaporator"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 RECIPE("fluid-separator"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE("fts-reactor"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
---RECIPE("gasifier"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
+RECIPE("gasifier"):remove_unlock("tar-processing"):add_unlock("acetylene")
 RECIPE("methanol-reactor"):add_ingredient({type = "item", name = "intermetallics", amount = 4})
 --RECIPE("olefin-plant"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 --RECIPE("jaw-crusher"):add_ingredient({type = "item", name = "intermetallics", amount = 8})

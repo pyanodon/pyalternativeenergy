@@ -1,4 +1,59 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.45
+Date: in 5 hours
+  Changes:
+    - fixed some recipes outputting more steam than input water when using productivity modules
+---------------------------------------------------------------------------------------------------
+Version: 1.2.44
+Date: 2024-9-4
+  Fission:
+    - Closed the uf6 temperature gap in processing recipes
+---------------------------------------------------------------------------------------------------
+Version: 1.2.43
+Date: 2024-8-26
+  Fusion:
+    - moved mdh power output priority down from solar tier to normal
+    - changed the fluid inputs on deuterium tritium fusion to have 2 water ports instead of deuterium
+---------------------------------------------------------------------------------------------------
+Version: 1.2.42
+Date: 2024-8-26
+  Fusion:
+    - Changed fusion reactor building recipes and fusion reaction recipes
+    - reaction recipes no longer contain building parts
+    - changed deuterium production process to make it longer and stronger
+    - removed antimatter fusion recipe as it didnt fit to reworked fusion reactor recipes. will return in pysex
+    - adjusted mdh generator consumption per tick from 50->400 and lowered max fluid temp to match the max output of the fusion reactors
+    - adjusted used control rod tritium output from 100 -> 5
+    - changed liquid helium recipe crafting time from 10s to 5s, changed helium input from 20 -> 100 and changed the output from 2 -> 10
+    - added hydrogen sulfide, deuterium sulfide and enriched water fluids
+    - moved time crystal recipe from fusion reactor to particle accelerator
+---------------------------------------------------------------------------------------------------
+Version: 1.2.41
+Date: 2024-8-8
+  Bugfixes:
+    - Nuclear fuel now correctly burns to spent nuclear fuel
+    - Fix tiles being attributed to the wrong solar updraft tower
+    - Fix that minging productivity infinite research didnt correctly increase in costs per level
+---------------------------------------------------------------------------------------------------
+Version: 1.2.40
+Date: 2024-7-29
+  Bugfixes:
+    - Fixed stutter on clicking electric poles
+    - Added mining productivity 4-12 and shifted current mining prod techs to be earlier in the tech tree locked behind mining machines tech
+---------------------------------------------------------------------------------------------------
+Version: 1.2.39
+Date: 2024-7-13
+  Bugfixes:
+    - Fixed that 1.2.38 changelog was labeled as 1.2.37 as that version got microsofted
+    - Fixed iron processing mk02 tech required a number of unneeded prereqs due to the hydrocyclone being in vanadium processing
+    - Moved hydrocyclone to iron processing mk02
+---------------------------------------------------------------------------------------------------
+Version: 1.2.38
+Date: 2024-7-7
+  Bugfixes:
+    - Fixed a rare corruption in aerial data structures
+    - added nuclear fuel to assembling machine 3, atomizer 3/4, sinter plant, and burner
+---------------------------------------------------------------------------------------------------
 Version: 1.2.36
 Date: 2024-6-27
   Bugfixes:

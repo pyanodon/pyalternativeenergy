@@ -161,8 +161,6 @@ RECIPE("fuelrod-mk04"):replace_ingredient('70-u-powder', 'cm-250'):add_unlock('n
 RECIPE("fuelrod-mk05"):replace_ingredient('yellow-cake', 'po-210'):add_unlock('nuclear-power-mk02')
 RECIPE("nuclear-fuel"):remove_unlock('uranium-mk04'):add_unlock('nuclear-power-mk02')
 
-data.raw.item["nuclear-fuel"].burnt_result = "used-nuclear-fuel"
-
 ITEM{
     type = "item",
     name = "nuclear-fuel",
@@ -195,7 +193,8 @@ ITEM{
     -- fuel_glow_color = {r = 0.1, g = 1, b = 0.1},
     subgroup = "intermediate-product",
     order = "q[uranium-rocket-fuel]",
-    stack_size = 1
+    stack_size = 1,
+	burnt_result = "used-nuclear-fuel"
   }
 
 ITEM{
@@ -244,6 +243,11 @@ ITEM{
 
 table.insert(data.raw.locomotive.locomotive.burner.fuel_categories, "nuke")
 table.insert(data.raw.locomotive["mk02-locomotive"].burner.fuel_categories, "nuke")
+table.insert(data.raw['assembling-machine']['assembling-machine-3'].energy_source.fuel_categories, 'nuke')
+table.insert(data.raw['assembling-machine']['atomizer-mk03'].energy_source.fuel_categories, 'nuke')
+table.insert(data.raw['assembling-machine']['atomizer-mk04'].energy_source.fuel_categories, 'nuke')
+table.insert(data.raw['assembling-machine']['sinter-unit'].energy_source.fuel_categories, 'nuke')
+table.insert(data.raw['furnace']['py-burner'].energy_source.fuel_categories, 'nuke')
 
 --move uranium ore processing recipes
 RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
@@ -440,7 +444,7 @@ while enrichment < 100 do
 				enabled = false,
 				energy_required = 1,
 				ingredients = {
-						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 1}
+						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment*100), maximum_temperature = math.floor(u235*100) - 0.000001}
 				},
 				results = {
 						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},
@@ -506,7 +510,7 @@ while duf > duf_min do
 				enabled = false,
 				energy_required = 1,
 				ingredients = {
-						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 1}
+						{type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf*100), maximum_temperature = math.floor(u235*100) - 0.000001}
 				},
 				results = {
 						{type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235*100)},

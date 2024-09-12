@@ -154,6 +154,8 @@ require 'prototypes.fluids.antimony-phosphate'
 require 'prototypes.fluids.hydrofluoric-acid'
 require 'prototypes.fluids.molten-fluoride'
 require 'prototypes.fluids.fluorine-gas'
+require 'prototypes.fluids.hydrogen-sulfide'
+require 'prototypes.fluids.enriched-water'
 
 -- ))
 
