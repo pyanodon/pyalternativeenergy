@@ -360,7 +360,7 @@ TECHNOLOGY('solar-energy'):set_fields({ enabled = false, hidden = true })
 
 TECHNOLOGY('speed-module-3'):add_pack('military-science-pack')
 TECHNOLOGY('productivity-module-3'):add_pack('military-science-pack')
-TECHNOLOGY('effectivity-module-3'):add_pack('military-science-pack')
+TECHNOLOGY('efficiency-module-3'):add_pack('military-science-pack')
 
 TECHNOLOGY('advanced-material-processing-2'):set_fields{prerequisites = {}}:remove_pack('chemical-science-pack'):remove_pack('py-science-pack-3')
 
@@ -531,7 +531,7 @@ RECIPE{
 
   RECIPE{
 	type = 'recipe',
-	name = 'effectivity-module',
+	name = 'efficiency-module',
 	enabled = false,
 	ingredients =
 	{
@@ -540,38 +540,38 @@ RECIPE{
 	  {'electronics-mk02', 2}
 	},
 	energy_required = 15,
-	result = 'effectivity-module'
+	result = 'efficiency-module'
   }
   
 RECIPE{
 	type = 'recipe',
-	name = 'effectivity-module-2',
+	name = 'efficiency-module-2',
 	enabled = false,
 	ingredients =
 	{
-		{'effectivity-module', 1},
+		{'efficiency-module', 1},
 		{'utility-box-mk03', 1},
 		{'controler-mk03', 1},
 		{'electronics-mk03', 2}
 	},
 	energy_required = 30,
-	result = 'effectivity-module-2'
+	result = 'efficiency-module-2'
   }
 
 RECIPE{
 	type = 'recipe',
-	name = 'effectivity-module-3',
+	name = 'efficiency-module-3',
 	enabled = false,
 	ingredients =
 	{
-		{'effectivity-module-2', 1},
+		{'efficiency-module-2', 1},
 		{'utility-box-mk04', 1},
 		{'controler-mk04', 1},
 		{'electronics-mk04', 2},
 		{'fes', 1}
 	},
 	energy_required = 60,
-	result = 'effectivity-module-3'
+	result = 'efficiency-module-3'
   }
 
   RECIPE{
@@ -743,7 +743,7 @@ RECIPE('fusion-reactor-equipment'):set_fields {
 		{'gastrocapacitor', 10},
 		{'intelligent-unit', 20},
 		{'mechanical-parts-03', 10},
-		{'effectivity-module-3', 2},
+		{'efficiency-module-3', 2},
 		{'blanket', 1},
 		{'divertor', 2},
 		{ 'big-electric-pole', 1 },
