@@ -1,7 +1,7 @@
 -- Holds circuit connection definitions for PyAE entities.
 -- variation counts from 0 (Python-like).
 
-circuit_connector_definitions["antimonium-drill-mkxx"] = circuit_connector_definitions.create
+circuit_connector_definitions["antimonium-drill-mkxx"] = circuit_connector_definitions.create_vector
 (
   universal_connector_template,
   {--Directions are up, right, down, left.
@@ -12,7 +12,7 @@ circuit_connector_definitions["antimonium-drill-mkxx"] = circuit_connector_defin
   }
 )
 
-circuit_connector_definitions["geothermal-plant-mk01"] = circuit_connector_definitions.create
+circuit_connector_definitions["geothermal-plant-mk01"] = circuit_connector_definitions.create_vector
 (
   universal_connector_template,
   {
@@ -23,7 +23,7 @@ circuit_connector_definitions["geothermal-plant-mk01"] = circuit_connector_defin
   }
 )
 
-circuit_connector_definitions["ree-mining-drill-mkxx"] = circuit_connector_definitions.create
+circuit_connector_definitions["ree-mining-drill-mkxx"] = circuit_connector_definitions.create_vector
 (
   universal_connector_template,
   {--Directions are up, right, down, left.
