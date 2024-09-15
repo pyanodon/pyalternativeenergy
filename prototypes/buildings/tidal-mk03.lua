@@ -481,8 +481,7 @@ ENTITY {
     --damaged_trigger_effect = hit_effects.entity(),
     fluid_box =
     {
-      base_area = 1,
-      base_level = 1,
+      volume = 100,
       pipe_covers = pipecoverspictures(),
       production_type = "output",
       filter = "water",

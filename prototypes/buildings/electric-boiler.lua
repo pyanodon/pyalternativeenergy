@@ -85,8 +85,7 @@ ENTITY {
                 {flow_direction = 'input-output', position = {1.29, 0}, direction = defines.direction.east},
                 {flow_direction = 'input-output', position = {-1.29, 0}, direction = defines.direction.west}
             },
-            base_area = 1,
-            height = 2,
+            volume = 200,
             base_level = -1,
             filter = 'water'
         },
@@ -95,9 +94,8 @@ ENTITY {
             pipe_covers = pipe_covers,
             pipe_picture = pipe_picture,
             pipe_connections = {{type = 'output', position = {0, 1.29}, direction = defines.direction.south}},
-            base_area = 1,
-            height = 2,
-            base_level = 1,
+            volume = 200,
+            volume = 100,
             filter = 'steam'
         }
     },

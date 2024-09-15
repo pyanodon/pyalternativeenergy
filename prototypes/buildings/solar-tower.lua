@@ -172,8 +172,7 @@ ENTITY {
   selection_box = {{-10.0, -10.0}, {10.0, 10.0}},
   target_temperature = 5000,
   fluid_box = {
-      base_area = 100,
-      base_level = -1,
+      volume = 10000,
       pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_connections = {
           {flow_direction = 'input', position = {7.5, 9.8}, direction = defines.direction.south},
@@ -185,8 +184,7 @@ ENTITY {
       filter = 'molten-salt'
   },
   output_fluid_box = {
-      base_area = 100,
-      base_level = 1,
+      volume = 10000,
       pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_connections = {
           {flow_direction = 'output', position = {7.5, -9.8}, direction = defines.direction.north},
@@ -203,7 +201,7 @@ ENTITY {
       emissions_per_minute = 0,
       destroy_non_fuel_fluid = false,
       fluid_box = {
-          base_area = 0.61,
+          volume = 100,
           pipe_connections = {},
           pipe_covers = py.pipe_covers(false, true, true, true),
           pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
