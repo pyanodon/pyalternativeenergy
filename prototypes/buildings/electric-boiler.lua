@@ -82,14 +82,8 @@ ENTITY {
             pipe_covers = pipe_covers,
             pipe_picture = pipe_picture,
             pipe_connections = {
-                {
-                    type = 'input-output',
-                    position = {2, 0}
-                },
-                {
-                    type = 'input-output',
-                    position = {-2, 0}
-                }
+                {flow_direction = 'input-output', position = {1.29, 0}, direction = defines.direction.east},
+                {flow_direction = 'input-output', position = {-1.29, 0}, direction = defines.direction.west}
             },
             base_area = 1,
             height = 2,
@@ -100,10 +94,7 @@ ENTITY {
             production_type = 'output',
             pipe_covers = pipe_covers,
             pipe_picture = pipe_picture,
-            pipe_connections = {{
-                type = 'output',
-                position = {0, 2}
-            }},
+            pipe_connections = {{type = 'output', position = {0, 1.29}, direction = defines.direction.south}},
             base_area = 1,
             height = 2,
             base_level = 1,

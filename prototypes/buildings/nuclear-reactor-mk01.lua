@@ -131,7 +131,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {2, 6.0}}}
+            pipe_connections = {{flow_direction = "input", position = {2, 5.3}, direction = defines.direction.south}}
         },
         {
             production_type = "input",
@@ -139,7 +139,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {-2.0, 6.0}}}
+            pipe_connections = {{flow_direction = "input", position = {-2.0, 5.3}, direction = defines.direction.south}}
         },
         --[[
         {
@@ -148,7 +148,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {2.0, 6.0}}}
+            pipe_connections = {{flow_direction = "input", position = {2.0, 5.3}, direction = defines.direction.south}}
         },
         ]]--
         {
@@ -157,7 +157,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = 1,
-            pipe_connections = {{type = "output", position = {1.0, -6.0}}}
+            pipe_connections = {{flow_direction = "output", position = {1.0, -5.3}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
@@ -165,7 +165,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = 1,
-            pipe_connections = {{type = "output", position = {-1.0, -6.0}}}
+            pipe_connections = {{flow_direction = "output", position = {-1.0, -5.3}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
@@ -173,7 +173,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = 1,
-            pipe_connections = {{type = "output", position = {-3.0, -6.0}}}
+            pipe_connections = {{flow_direction = "output", position = {-3.0, -5.3}, direction = defines.direction.north}}
         },
         off_when_no_fluid_recipe = true
     },
