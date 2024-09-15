@@ -8,7 +8,7 @@ FLUID {
     base_color = {r = 0.843, g = 0.521, b = 0.521},
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 5000,
-    heat_capacity = "1KJ",
+    heat_capacity = "1kJ",
     gas_temperature = 5000,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
