@@ -22,7 +22,7 @@ FLUID {
     icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
-    --heat_capacity = "1KJ",
+    --heat_capacity = "1kJ",
     base_color = {r = 0.996, g = 0.831, b = 0.313},
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 100,
