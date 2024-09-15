@@ -135,8 +135,8 @@ ENTITY {
         pipe_covers = py.pipe_covers(false, false, true, true),
         base_area = 10,
         pipe_connections = {
-            {type = 'input-output', position = {0, -5.5}},
-            {type = 'input-output', position = {0, 5.5}},
+            {flow_direction = 'input-output', position = {0, -4.8}, direction = defines.direction.north},
+            {flow_direction = 'input-output', position = {0, 4.8}, direction = defines.direction.south},
         },
         filter = 'molten-salt'
     },

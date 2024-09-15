@@ -176,10 +176,10 @@ ENTITY {
       base_level = -1,
       pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_connections = {
-          {type = 'input', position = {7.5, 10.5}},
-          {type = 'input', position = {6.5, 10.5}},
-          {type = 'input', position = {-7.5, 10.5}},
-          {type = 'input', position = {-6.5, 10.5}}
+          {flow_direction = 'input', position = {7.5, 9.8}, direction = defines.direction.south},
+          {flow_direction = 'input', position = {6.5, 9.8}, direction = defines.direction.south},
+          {flow_direction = 'input', position = {-7.5, 9.8}, direction = defines.direction.south},
+          {flow_direction = 'input', position = {-6.5, 9.8}, direction = defines.direction.south}
       },
       production_type = 'input',
       filter = 'molten-salt'
@@ -189,10 +189,10 @@ ENTITY {
       base_level = 1,
       pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_connections = {
-          {type = 'output', position = {7.5, -10.5}},
-          {type = 'output', position = {6.5, -10.5}},
-          {type = 'output', position = {-7.5, -10.5}},
-          {type = 'output', position = {-6.5, -10.5}},
+          {flow_direction = 'output', position = {7.5, -9.8}, direction = defines.direction.north},
+          {flow_direction = 'output', position = {6.5, -9.8}, direction = defines.direction.north},
+          {flow_direction = 'output', position = {-7.5, -9.8}, direction = defines.direction.north},
+          {flow_direction = 'output', position = {-6.5, -9.8}, direction = defines.direction.north},
       },
       production_type = 'output',
       filter = 'hot-molten-salt'
