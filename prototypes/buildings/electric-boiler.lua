@@ -95,7 +95,6 @@ ENTITY {
             pipe_picture = pipe_picture,
             pipe_connections = {{type = 'output', position = {0, 1.29}, direction = defines.direction.south}},
             volume = 200,
-            volume = 100,
             filter = 'steam'
         }
     },

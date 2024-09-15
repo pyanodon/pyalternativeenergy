@@ -63,7 +63,6 @@ ENTITY {
     output_fluid_box =
     {
       volume = 1000,
-      volume = 100,
       pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_connections =
       {
