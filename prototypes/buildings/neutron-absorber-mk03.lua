@@ -4,22 +4,22 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"neutron-absorber-mk02", 1},
-        {"processing-unit", 30},
-        {"small-parts-03", 100},
-        {"nichrome", 20},
-        {"biopolymer", 20},
-        {"super-steel", 50},
-        {"cf", 40},
-        {'hydraulic-system-mk01', 4},
-        {"utility-box-mk03", 1},
-        {"electronics-mk03", 1},
-        {'ns-material', 15},
-        {"mechanical-parts-03", 1},
+        {type = "item", name = "neutron-absorber-mk02", amount = 1},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "small-parts-03", amount = 100},
+        {type = "item", name = "nichrome", amount = 20},
+        {type = "item", name = "biopolymer", amount = 20},
+        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "cf", amount = 40},
+        {type = "item", name = 'hydraulic-system-mk01', amount = 4},
+        {type = "item", name = "utility-box-mk03", amount = 1},
+        {type = "item", name = "electronics-mk03", amount = 1},
+        {type = "item", name = 'ns-material', amount = 15},
+        {type = "item", name = "mechanical-parts-03", amount = 1},
 
     },
     results = {
-        {"neutron-absorber-mk03", 1}
+        {type = "item", name = "neutron-absorber-mk03", amount = 1}
     }
 }:add_unlock("nuclear-power-mk03")
 

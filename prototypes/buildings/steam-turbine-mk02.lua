@@ -6,24 +6,24 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"stainless-steel", 100 * factor},
-        {"steel-plate", 40 * factor},
-        {"duralumin", 15 * factor},
-        {"shaft-mk02", 1 * factor},
-        {"small-parts-02", 100 * factor},
-        {"nexelit-plate", 30 * factor},
-        {"rubber", 20 * factor},
-        {"brake-mk02", 5 * factor},
-        {"utility-box-mk02", 2 * factor},
-        {"controler-mk02", 1 * factor},
-        {"gearbox-mk02", 1 * factor},
-        {"advanced-circuit", 10 * factor},
-        {"self-assembly-monolayer", 20 * factor},
-        {'centrifuge-mk01', 1},
-        {"steam-turbine-mk01", 1},
+        {type = "item", name = "stainless-steel", amount = 100 * factor},
+        {type = "item", name = "steel-plate", amount = 40 * factor},
+        {type = "item", name = "duralumin", amount = 15 * factor},
+        {type = "item", name = "shaft-mk02", amount = 1 * factor},
+        {type = "item", name = "small-parts-02", amount = 100 * factor},
+        {type = "item", name = "nexelit-plate", amount = 30 * factor},
+        {type = "item", name = "rubber", amount = 20 * factor},
+        {type = "item", name = "brake-mk02", amount = 5 * factor},
+        {type = "item", name = "utility-box-mk02", amount = 2 * factor},
+        {type = "item", name = "controler-mk02", amount = 1 * factor},
+        {type = "item", name = "gearbox-mk02", amount = 1 * factor},
+        {type = "item", name = "advanced-circuit", amount = 10 * factor},
+        {type = "item", name = "self-assembly-monolayer", amount = 20 * factor},
+        {type = "item", name = 'centrifuge-mk01', amount = 1},
+        {type = "item", name = "steam-turbine-mk01", amount = 1},
     },
     results = {
-        {"steam-turbine-mk02", 1}
+        {type = "item", name = "steam-turbine-mk02", amount = 1}
     }
 }:add_unlock("nonrenewable-mk02")
 

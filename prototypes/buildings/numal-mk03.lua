@@ -6,20 +6,20 @@ RECIPE{
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"numal-reef-mk02", 1},
-        {"ticocr-alloy", 50},
-        {"phosphate-glass", 100},
-        {"py-heat-exchanger", 1},
-        {"electric-engine-unit", 5},
-        {"sc-unit", 20},
-        {"cf", 100},
-        {'ns-material', 20},
-        {"small-parts-03", 200},
-        {"neuromorphic-chip", 30},
-        {"processing-unit", 50},
-        {"mechanical-parts-03", 2},
+        {type = "item", name = "numal-reef-mk02", amount = 1},
+        {type = "item", name = "ticocr-alloy", amount = 50},
+        {type = "item", name = "phosphate-glass", amount = 100},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "electric-engine-unit", amount = 5},
+        {type = "item", name = "sc-unit", amount = 20},
+        {type = "item", name = "cf", amount = 100},
+        {type = "item", name = 'ns-material', amount = 20},
+        {type = "item", name = "small-parts-03", amount = 200},
+        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "mechanical-parts-03", amount = 2},
     },
-    results = {{'numal-reef-mk03', 1}}
+    results = {{type = "item", name = 'numal-reef-mk03', amount = 1}}
 }:add_unlock('numal-mk03')
 
 ITEM{

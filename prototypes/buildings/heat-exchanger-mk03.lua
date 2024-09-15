@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"py-heat-exchanger-mk02", 1},
-        {'processing-unit', 15},
-        {"electric-engine-unit", 4},
-        {"mechanical-parts-03", 1},
+        {type = "item", name = "py-heat-exchanger-mk02", amount = 1},
+        {type = "item", name = 'processing-unit', amount = 15},
+        {type = "item", name = "electric-engine-unit", amount = 4},
+        {type = "item", name = "mechanical-parts-03", amount = 1},
 
     },
     results = {
-        {"py-heat-exchanger-mk03", 1}
+        {type = "item", name = "py-heat-exchanger-mk03", amount = 1}
     }
 }:add_unlock('nonrenewable-mk03')
 

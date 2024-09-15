@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {'axis-tracker', 2},
-        {'mirror-mk01', 25},
-        {'steel-plate', 50},
-        {'duralumin', 20},
-        {'quartz-tube', 10},
-        {'small-parts-01', 100},
-        {'utility-box-mk01', 1},
-        {'electronic-circuit', 5},
+        {type = "item", name = 'axis-tracker', amount = 2},
+        {type = "item", name = 'mirror-mk01', amount = 25},
+        {type = "item", name = 'steel-plate', amount = 50},
+        {type = "item", name = 'duralumin', amount = 20},
+        {type = "item", name = 'quartz-tube', amount = 10},
+        {type = "item", name = 'small-parts-01', amount = 100},
+        {type = "item", name = 'utility-box-mk01', amount = 1},
+        {type = "item", name = 'electronic-circuit', amount = 5},
     },
     results = {
-        {'lrf-panel-mk01', 1}
+        {type = "item", name = 'lrf-panel-mk01', amount = 1}
     }
 }:add_unlock('thermal-mk01')
 

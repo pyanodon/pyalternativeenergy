@@ -5,16 +5,16 @@ RECIPE {
     category = 'advanced-crafting',
     enabled = false,
     ingredients = {
-        {"supercapacitor", 15},
-        {"processing-unit", 10},
-        {"super-steel", 50},
-        {"nano-wires", 10}, --tinned cable
-        {"nexelit-plate", 100}, -- {"nexelit-plate", 60},
-        {"optical-fiber", 50},
-        {"biopolymer", 20},
+        {type = "item", name = "supercapacitor", amount = 15},
+        {type = "item", name = "processing-unit", amount = 10},
+        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "nano-wires", amount = 10}, --tinned cable
+        {"nexelit-plate", 100}, -- {type = "item", name = "nexelit-plate", amount = 60},
+        {type = "item", name = "optical-fiber", amount = 50},
+        {type = "item", name = "biopolymer", amount = 20},
     },
     results = {
-        {"accumulator-mk03", 1},
+        {type = "item", name = "accumulator-mk03", amount = 1},
     }
 }:add_unlock("py-accumulator-mk03")
 

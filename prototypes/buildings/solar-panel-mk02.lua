@@ -5,21 +5,21 @@ RECIPE{
     enabled = false,
     category = "crafting-with-fluid",
     ingredients = {
-        {'aluminium-plate', 5},
-        {'monocrystalline-cell', 10},
-        {'anti-reflex-glass', 1},
-        {'advanced-circuit', 3},
-        {'tinned-cable', 10},
-        {'small-parts-02', 12},
-        {'axis-tracker', 1},
-        {'eva', 10},
-        {'self-assembly-monolayer', 10},
-        {'electric-engine-unit', 1},
+        {type = "item", name = 'aluminium-plate', amount = 5},
+        {type = "item", name = 'monocrystalline-cell', amount = 10},
+        {type = "item", name = 'anti-reflex-glass', amount = 1},
+        {type = "item", name = 'advanced-circuit', amount = 3},
+        {type = "item", name = 'tinned-cable', amount = 10},
+        {type = "item", name = 'small-parts-02', amount = 12},
+        {type = "item", name = 'axis-tracker', amount = 1},
+        {type = "item", name = 'eva', amount = 10},
+        {type = "item", name = 'self-assembly-monolayer', amount = 10},
+        {type = "item", name = 'electric-engine-unit', amount = 1},
         {type = "fluid", name = "etching", amount = 50},
-        {"mechanical-parts-02", 1},
+        {type = "item", name = "mechanical-parts-02", amount = 1},
     },
     results = {
-        {'solar-panel-mk02', 1}
+        {type = "item", name = 'solar-panel-mk02', amount = 1}
     }
 }:add_unlock("solar-mk02")
 

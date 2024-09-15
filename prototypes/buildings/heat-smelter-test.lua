@@ -4,10 +4,10 @@ RECIPE{
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'stone-brick', 20}, {'steel-plate', 40}, {'titanium-plate', 15}, {'iron-plate', 40}, {'steam-engine', 10},
-        {'iron-gear-wheel', 50}, {'electronic-circuit', 5}
+        {'stone-brick', 20}, {'steel-plate', 40}, {'titanium-plate', 15}, {'iron-plate', 40}, {type = "item", name = 'steam-engine', amount = 10},
+        {'iron-gear-wheel', 50}, {type = "item", name = 'electronic-circuit', amount = 5}
     },
-    results = {{'heat-smelter-mk01', 1}}
+    results = {{type = "item", name = 'heat-smelter-mk01', amount = 1}}
 }:add_unlock('uranium-processing')
 
 ITEM{

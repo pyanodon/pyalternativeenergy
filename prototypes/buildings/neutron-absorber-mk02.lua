@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"neutron-absorber-mk01", 1},
-        {"advanced-circuit", 25},
-        {"small-parts-02", 100},
-        {"fenxsb-alloy", 15},
-        {"refined-concrete", 50},
-        {"stainless-steel", 100},
-        {"lead-plate", 50},
-        {"lithium", 30},
-        {'eva', 20},
-        {"electronics-mk02", 3},
-        {"mechanical-parts-02", 1},
-        {'self-assembly-monolayer', 10},
+        {type = "item", name = "neutron-absorber-mk01", amount = 1},
+        {type = "item", name = "advanced-circuit", amount = 25},
+        {type = "item", name = "small-parts-02", amount = 100},
+        {type = "item", name = "fenxsb-alloy", amount = 15},
+        {type = "item", name = "refined-concrete", amount = 50},
+        {type = "item", name = "stainless-steel", amount = 100},
+        {type = "item", name = "lead-plate", amount = 50},
+        {type = "item", name = "lithium", amount = 30},
+        {type = "item", name = 'eva', amount = 20},
+        {type = "item", name = "electronics-mk02", amount = 3},
+        {type = "item", name = "mechanical-parts-02", amount = 1},
+        {type = "item", name = 'self-assembly-monolayer', amount = 10},
     },
     results = {
-        {"neutron-absorber-mk02", 1}
+        {type = "item", name = "neutron-absorber-mk02", amount = 1}
     }
 }:add_unlock("nuclear-power-mk02")
 

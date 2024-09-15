@@ -5,19 +5,19 @@ RECIPE {
     enabled = false,
     category = 'crafting-with-fluid',
     ingredients = {
-        {'intermetallics', 5},
-        {'aluminium-plate', 5},
-        {'polycrystalline-cell', 12},
-        {'anti-reflex-glass', 1},
+        {type = "item", name = 'intermetallics', amount = 5},
+        {type = "item", name = 'aluminium-plate', amount = 5},
+        {type = "item", name = 'polycrystalline-cell', amount = 12},
+        {type = "item", name = 'anti-reflex-glass', amount = 1},
         {type = 'fluid', name = 'etching', amount = 50},
-        {'electronic-circuit', 5},
-        {'copper-cable', 10},
-        {'small-parts-01', 10},
-        {'melamine', 10},
-        {'mechanical-parts-01', 1},
+        {type = "item", name = 'electronic-circuit', amount = 5},
+        {type = "item", name = 'copper-cable', amount = 10},
+        {type = "item", name = 'small-parts-01', amount = 10},
+        {type = "item", name = 'melamine', amount = 10},
+        {type = "item", name = 'mechanical-parts-01', amount = 1},
     },
     results = {
-        {'solar-panel-mk01', 1}
+        {type = "item", name = 'solar-panel-mk01', amount = 1}
     }
 }:add_unlock('solar-mk01')
 

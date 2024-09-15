@@ -7,22 +7,22 @@ RECIPE {
   category = "crafting-with-fluid",
   enabled = false,
   ingredients = {
-    {"processing-unit", 2},
-    {"super-steel", 3},
-    {"cf", 20},
-    {"carbon-nanotube", 3},
-    {"biopolymer", 3},
-    {"small-parts-03", 30},
-    {"ns-material", 1},
-    {"low-density-structure", 3},
-    {'biobattery', 1},
-    {"py-construction-robot-02", 1},
-    {"electric-engine-unit", 1},
-    {"gearbox-mk03", 1},
+    {type = "item", name = "processing-unit", amount = 2},
+    {type = "item", name = "super-steel", amount = 3},
+    {type = "item", name = "cf", amount = 20},
+    {type = "item", name = "carbon-nanotube", amount = 3},
+    {type = "item", name = "biopolymer", amount = 3},
+    {type = "item", name = "small-parts-03", amount = 30},
+    {type = "item", name = "ns-material", amount = 1},
+    {type = "item", name = "low-density-structure", amount = 3},
+    {type = "item", name = 'biobattery', amount = 1},
+    {type = "item", name = "py-construction-robot-02", amount = 1},
+    {type = "item", name = "electric-engine-unit", amount = 1},
+    {type = "item", name = "gearbox-mk03", amount = 1},
     {type = "fluid", name = "bio-oil", amount = 200},
   },
   results = {
-    {"c-pynobot-mk03", 1}
+    {type = "item", name = "c-pynobot-mk03", amount = 1}
   }
 }
 

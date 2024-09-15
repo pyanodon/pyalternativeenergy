@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"ree-mining-drill-mk02", 1},
-        {"titanium-plate", 20},
-        {"super-steel", 20},
-        {"nbti-alloy", 20},
-        {"tin-plate", 20},
-        {'ns-material', 20},
-        {"processing-unit", 10},
-        {"mechanical-parts-03", 2},
+        {type = "item", name = "ree-mining-drill-mk02", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 20},
+        {type = "item", name = "super-steel", amount = 20},
+        {type = "item", name = "nbti-alloy", amount = 20},
+        {type = "item", name = "tin-plate", amount = 20},
+        {type = "item", name = 'ns-material', amount = 20},
+        {type = "item", name = "processing-unit", amount = 10},
+        {type = "item", name = "mechanical-parts-03", amount = 2},
     },
     results = {
-        {"ree-mining-drill-mk03", 1}
+        {type = "item", name = "ree-mining-drill-mk03", amount = 1}
     }
 }:add_unlock("machines-mk04")
 

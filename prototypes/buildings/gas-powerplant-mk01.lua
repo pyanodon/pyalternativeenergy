@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"distilator", 5},
-        {"copper-plate", 400},
-        {"iron-gear-wheel", 500},
-        {"pipe", 200},
-        {"iron-plate", 200},
-        {"electronic-circuit", 100},
-        {'intermetallics', 50},
-        {'steam-engine', 50},
-        {"mechanical-parts-01", 3},
+        {type = "item", name = "distilator", amount = 5},
+        {type = "item", name = "copper-plate", amount = 400},
+        {type = "item", name = "iron-gear-wheel", amount = 500},
+        {type = "item", name = "pipe", amount = 200},
+        {type = "item", name = "iron-plate", amount = 200},
+        {type = "item", name = "electronic-circuit", amount = 100},
+        {type = "item", name = 'intermetallics', amount = 50},
+        {type = "item", name = 'steam-engine', amount = 50},
+        {type = "item", name = "mechanical-parts-01", amount = 3},
     },
     results = {
-        {"py-gas-powerplant-mk01", 1}
+        {type = "item", name = "py-gas-powerplant-mk01", amount = 1}
     }
 }:add_unlock("gasplant-mk01")
 

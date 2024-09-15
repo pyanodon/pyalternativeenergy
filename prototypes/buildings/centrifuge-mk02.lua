@@ -4,20 +4,20 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {'aluminium-plate', 50},
-        {'steel-plate', 50},
-        {'centrifuge-mk01', 1},
-        {'niobium-plate', 30},
-        {'advanced-circuit', 3},
-        {'concrete', 30},
-        {'small-parts-02', 100},
-        {'eva', 10},
-        {'self-assembly-monolayer', 10},
-        {"mechanical-parts-02", 1},
-        {'electric-engine-unit', 10},
+        {type = "item", name = 'aluminium-plate', amount = 50},
+        {type = "item", name = 'steel-plate', amount = 50},
+        {type = "item", name = 'centrifuge-mk01', amount = 1},
+        {type = "item", name = 'niobium-plate', amount = 30},
+        {type = "item", name = 'advanced-circuit', amount = 3},
+        {type = "item", name = 'concrete', amount = 30},
+        {type = "item", name = 'small-parts-02', amount = 100},
+        {type = "item", name = 'eva', amount = 10},
+        {type = "item", name = 'self-assembly-monolayer', amount = 10},
+        {type = "item", name = "mechanical-parts-02", amount = 1},
+        {type = "item", name = 'electric-engine-unit', amount = 10},
     },
     results = {
-        {"centrifuge-mk02", 1}
+        {type = "item", name = "centrifuge-mk02", amount = 1}
     }
 }:add_unlock("machines-mk03")
 

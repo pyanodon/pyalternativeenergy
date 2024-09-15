@@ -6,21 +6,21 @@ RECIPE{
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"numal-reef-mk01", 1},
-        {"glass", 100},
-        {'concrete', 100},
-        {"rubber", 50},
-        {"fiberglass", 100},
-        {"engine-unit", 5},
-        {"small-parts-02", 200},
-        {"neuroprocessor", 10},
-        {"advanced-circuit", 30},
-        {"nbti-alloy", 30},
-        {"niobium-pipe", 50},
-        {"mechanical-parts-02", 2},
-        {"plastic-bar", 200},
+        {type = "item", name = "numal-reef-mk01", amount = 1},
+        {type = "item", name = "glass", amount = 100},
+        {type = "item", name = 'concrete', amount = 100},
+        {type = "item", name = "rubber", amount = 50},
+        {type = "item", name = "fiberglass", amount = 100},
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "small-parts-02", amount = 200},
+        {type = "item", name = "neuroprocessor", amount = 10},
+        {type = "item", name = "advanced-circuit", amount = 30},
+        {type = "item", name = "nbti-alloy", amount = 30},
+        {type = "item", name = "niobium-pipe", amount = 50},
+        {type = "item", name = "mechanical-parts-02", amount = 2},
+        {type = "item", name = "plastic-bar", amount = 200},
     },
-    results = {{'numal-reef-mk02', 1}}
+    results = {{type = "item", name = 'numal-reef-mk02', amount = 1}}
 }:add_unlock('numal-mk02')
 
 ITEM{

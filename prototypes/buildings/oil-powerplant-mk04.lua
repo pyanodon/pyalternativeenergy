@@ -4,20 +4,20 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-oil-powerplant-mk03", 1},
-        {"ti-n", 50},
-        {"nbfe-alloy", 40},
-        {"science-coating", 15},
-        {"carbon-aerogel", 100},
-        {"super-alloy", 200},
-        {"intelligent-unit", 10},
-        {"superconductor-servomechanims", 10},
-        {'metastable-quasicrystal', 10},
-        {"metallic-glass", 40},
-        {"mechanical-parts-04", 5},
+        {type = "item", name = "py-oil-powerplant-mk03", amount = 1},
+        {type = "item", name = "ti-n", amount = 50},
+        {type = "item", name = "nbfe-alloy", amount = 40},
+        {type = "item", name = "science-coating", amount = 15},
+        {type = "item", name = "carbon-aerogel", amount = 100},
+        {type = "item", name = "super-alloy", amount = 200},
+        {type = "item", name = "intelligent-unit", amount = 10},
+        {type = "item", name = "superconductor-servomechanims", amount = 10},
+        {type = "item", name = 'metastable-quasicrystal', amount = 10},
+        {type = "item", name = "metallic-glass", amount = 40},
+        {type = "item", name = "mechanical-parts-04", amount = 5},
     },
     results = {
-        {"py-oil-powerplant-mk04", 1}
+        {type = "item", name = "py-oil-powerplant-mk04", amount = 1}
     }
 }:add_unlock("oilplant-mk04")
 

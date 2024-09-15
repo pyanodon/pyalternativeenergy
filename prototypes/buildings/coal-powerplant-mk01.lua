@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"electric-mining-drill", 10},
-        {"electronic-circuit", 100},
-        {"iron-gear-wheel", 300},
-        {"gasifier", 3},
-        {"steel-plate", 200},
-        {"steam-engine", 20},
-        {'intermetallics', 50},
-        {"mechanical-parts-01", 3},
+        {type = "item", name = "electric-mining-drill", amount = 10},
+        {type = "item", name = "electronic-circuit", amount = 100},
+        {type = "item", name = "iron-gear-wheel", amount = 300},
+        {type = "item", name = "gasifier", amount = 3},
+        {type = "item", name = "steel-plate", amount = 200},
+        {type = "item", name = "steam-engine", amount = 20},
+        {type = "item", name = 'intermetallics', amount = 50},
+        {type = "item", name = "mechanical-parts-01", amount = 3},
     },
     results = {
-        {"py-coal-powerplant-mk01", 1}
+        {type = "item", name = "py-coal-powerplant-mk01", amount = 1}
     }
 }:add_unlock("coalplant-mk01")
 

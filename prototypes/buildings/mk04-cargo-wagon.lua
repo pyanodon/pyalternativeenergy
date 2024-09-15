@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-      {"super-alloy", 100},
-      {"biopolymer", 50},
-      {"intelligent-unit", 2},
-      {"electronics-mk04", 1},
-      {"cf", 50},
-      {'metastable-quasicrystal', 1},
-      {"small-parts-03", 500},
-      {"metallic-glass", 20},
-      {"low-density-structure", 20},
+      {type = "item", name = "super-alloy", amount = 100},
+      {type = "item", name = "biopolymer", amount = 50},
+      {type = "item", name = "intelligent-unit", amount = 2},
+      {type = "item", name = "electronics-mk04", amount = 1},
+      {type = "item", name = "cf", amount = 50},
+      {type = "item", name = 'metastable-quasicrystal', amount = 1},
+      {type = "item", name = "small-parts-03", amount = 500},
+      {type = "item", name = "metallic-glass", amount = 20},
+      {type = "item", name = "low-density-structure", amount = 20},
     },
     results = {
-        {"mk04-wagon", 1}
+        {type = "item", name = "mk04-wagon", amount = 1}
     }
 }:add_unlock("railway-mk04")
 

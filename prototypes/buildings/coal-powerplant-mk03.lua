@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-coal-powerplant-mk02", 1},
-        {'ns-material', 40},
-        {"processing-unit", 50},
-        {"acrylic", 50},
-        {"cf", 100},
-        {"glass-fiber", 100},
-        {"super-steel", 100},
-        {"low-density-structure", 100},
-        {'electric-engine-unit', 20},
-        {"small-parts-03", 300},
-        {"mechanical-parts-03", 5},
+        {type = "item", name = "py-coal-powerplant-mk02", amount = 1},
+        {type = "item", name = 'ns-material', amount = 40},
+        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "acrylic", amount = 50},
+        {type = "item", name = "cf", amount = 100},
+        {type = "item", name = "glass-fiber", amount = 100},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "low-density-structure", amount = 100},
+        {type = "item", name = 'electric-engine-unit', amount = 20},
+        {type = "item", name = "small-parts-03", amount = 300},
+        {type = "item", name = "mechanical-parts-03", amount = 5},
 
     },
     results = {
-        {"py-coal-powerplant-mk03", 1}
+        {type = "item", name = "py-coal-powerplant-mk03", amount = 1}
     }
 }:add_unlock("coalplant-mk03")
 

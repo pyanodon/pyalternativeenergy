@@ -14,20 +14,20 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"super-alloy", 150},
-        {"biopolymer", 200},
-        {"intelligent-unit", 5},
-        {"nexelit-plate", 20},
-        {"electronics-mk04", 2},
-        {"cf", 100},
-        {"sc-engine", 5},
-        {'metastable-quasicrystal', 2},
-        {"small-parts-03", 300},
-        {"metallic-glass", 10},
-        {"low-density-structure", 20},
+        {type = "item", name = "super-alloy", amount = 150},
+        {type = "item", name = "biopolymer", amount = 200},
+        {type = "item", name = "intelligent-unit", amount = 5},
+        {type = "item", name = "nexelit-plate", amount = 20},
+        {type = "item", name = "electronics-mk04", amount = 2},
+        {type = "item", name = "cf", amount = 100},
+        {type = "item", name = "sc-engine", amount = 5},
+        {type = "item", name = 'metastable-quasicrystal', amount = 2},
+        {type = "item", name = "small-parts-03", amount = 300},
+        {type = "item", name = "metallic-glass", amount = 10},
+        {type = "item", name = "low-density-structure", amount = 20},
     },
     results = {
-        {"mk04-locomotive", 1}
+        {type = "item", name = "mk04-locomotive", amount = 1}
     }
 }:add_unlock("railway-mk04")
 

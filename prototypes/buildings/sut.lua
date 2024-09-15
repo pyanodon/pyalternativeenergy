@@ -55,17 +55,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'glass', 1000},
-        {'small-parts-02', 400},
-        {'stainless-steel', 500},
-        {'electric-engine-unit', 18},
-        {'ns-material', 20},
-        {'advanced-circuit', 10},
-        {'concrete', 100},
-        {'mechanical-parts-03', 1},
+        {type = "item", name = 'glass', amount = 1000},
+        {type = "item", name = 'small-parts-02', amount = 400},
+        {type = "item", name = 'stainless-steel', amount = 500},
+        {type = "item", name = 'electric-engine-unit', amount = 18},
+        {type = "item", name = 'ns-material', amount = 20},
+        {type = "item", name = 'advanced-circuit', amount = 10},
+        {type = "item", name = 'concrete', amount = 100},
+        {type = "item", name = 'mechanical-parts-03', amount = 1},
     },
     results = {
-        {'sut', 1}
+        {type = "item", name = 'sut', amount = 1}
     }
 }:add_unlock('thermal-mk03')
 

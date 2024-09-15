@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"ree-mining-drill-mk03", 1},
-        {"concrete", 50},
-        {"super-alloy", 30},
-        {"storage-tank", 1},
-        {"low-density-structure", 10},
-        {"nbfe-alloy", 10},
-        {'metastable-quasicrystal', 2},
-        {"sc-engine", 2},
-        {"intelligent-unit", 3},
-        {"superconductor-servomechanims", 2},
-        {"hyperelastic-material", 5},
-        {"mechanical-parts-04", 3},
+        {type = "item", name = "ree-mining-drill-mk03", amount = 1},
+        {type = "item", name = "concrete", amount = 50},
+        {type = "item", name = "super-alloy", amount = 30},
+        {type = "item", name = "storage-tank", amount = 1},
+        {type = "item", name = "low-density-structure", amount = 10},
+        {type = "item", name = "nbfe-alloy", amount = 10},
+        {type = "item", name = 'metastable-quasicrystal', amount = 2},
+        {type = "item", name = "sc-engine", amount = 2},
+        {type = "item", name = "intelligent-unit", amount = 3},
+        {type = "item", name = "superconductor-servomechanims", amount = 2},
+        {type = "item", name = "hyperelastic-material", amount = 5},
+        {type = "item", name = "mechanical-parts-04", amount = 3},
     },
     results = {
-        {"ree-mining-drill-mk04", 1}
+        {type = "item", name = "ree-mining-drill-mk04", amount = 1}
     }
 }:add_unlock("machines-mk05")
 

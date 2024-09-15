@@ -7,21 +7,21 @@ RECIPE{
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"shaft-mk01", 1},
-        {"belt", 15},
-        {"bolts", 50},
-        {"anemometer-mk01", 1},
-        {"gearbox-mk01", 5},
-        {"electronic-circuit", 20},
-        {"small-parts-01", 100},
-        {"intermetallics", 10},
-        {"utility-box-mk01", 5},
-        {"duralumin", 80},
-        {"plastic-bar", 10},
-        {"copper-cable", 50},
+        {type = "item", name = "shaft-mk01", amount = 1},
+        {type = "item", name = "belt", amount = 15},
+        {type = "item", name = "bolts", amount = 50},
+        {type = "item", name = "anemometer-mk01", amount = 1},
+        {type = "item", name = "gearbox-mk01", amount = 5},
+        {type = "item", name = "electronic-circuit", amount = 20},
+        {type = "item", name = "small-parts-01", amount = 100},
+        {type = "item", name = "intermetallics", amount = 10},
+        {type = "item", name = "utility-box-mk01", amount = 5},
+        {type = "item", name = "duralumin", amount = 80},
+        {type = "item", name = "plastic-bar", amount = 10},
+        {type = "item", name = "copper-cable", amount = 50},
     },
     results = {
-        {"vawt-turbine-mk01", 1}
+        {type = "item", name = "vawt-turbine-mk01", amount = 1}
     }
 }:add_unlock("wind-mk01"):add_ingredient({type = "item", name = "skin", amount = 30})
 

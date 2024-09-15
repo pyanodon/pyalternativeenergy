@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"electric-mining-drill", 5},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 40},
-        {"aluminium-plate", 20},
-        {"engine-unit", 2},
+        {type = "item", name = "electric-mining-drill", amount = 5},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "iron-gear-wheel", amount = 40},
+        {type = "item", name = "aluminium-plate", amount = 20},
+        {type = "item", name = "engine-unit", amount = 2},
     },
     results = {
-        {"antimonium-drill-mk01", 1}
+        {type = "item", name = "antimonium-drill-mk01", amount = 1}
     }
 }:add_unlock("antimony-mk01")
 

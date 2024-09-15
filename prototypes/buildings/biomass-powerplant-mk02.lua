@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-biomass-powerplant-mk01", 1},
-        {"nexelit-plate", 300},
-        {"advanced-circuit", 100},
-        {'aluminium-plate', 100},
-        {"neuroprocessor", 20},
-        {"small-parts-02", 150},
-        {"niobium-pipe", 50},
-        {"engine-unit", 20},
-        {"eva", 50},
-        {"stainless-steel", 100},
-        {"self-assembly-monolayer", 40},
-        {"mechanical-parts-02", 5},
+        {type = "item", name = "py-biomass-powerplant-mk01", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 300},
+        {type = "item", name = "advanced-circuit", amount = 100},
+        {type = "item", name = 'aluminium-plate', amount = 100},
+        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "small-parts-02", amount = 150},
+        {type = "item", name = "niobium-pipe", amount = 50},
+        {type = "item", name = "engine-unit", amount = 20},
+        {type = "item", name = "eva", amount = 50},
+        {type = "item", name = "stainless-steel", amount = 100},
+        {type = "item", name = "self-assembly-monolayer", amount = 40},
+        {type = "item", name = "mechanical-parts-02", amount = 5},
     },
     results = {
-        {"py-biomass-powerplant-mk02", 1}
+        {type = "item", name = "py-biomass-powerplant-mk02", amount = 1}
     }
 }:add_unlock("biomassplant-mk02")
 

@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'small-parts-02', 200},
-        {'niobium-plate', 100},
-        {'advanced-circuit', 30},
-        {'concrete', 200},
-        {'eva', 80},
-        {'self-assembly-monolayer', 20},
-        {'engine-unit', 30},
-        {'solder', 50},
-        {'mechanical-parts-02', 5},
+        {type = "item", name = 'small-parts-02', amount = 200},
+        {type = "item", name = 'niobium-plate', amount = 100},
+        {type = "item", name = 'advanced-circuit', amount = 30},
+        {type = "item", name = 'concrete', amount = 200},
+        {type = "item", name = 'eva', amount = 80},
+        {type = "item", name = 'self-assembly-monolayer', amount = 20},
+        {type = "item", name = 'engine-unit', amount = 30},
+        {type = "item", name = 'solder', amount = 50},
+        {type = "item", name = 'mechanical-parts-02', amount = 5},
     },
     results = {
-        {'solar-concentrator', 1}
+        {type = "item", name = 'solar-concentrator', amount = 1}
     }
 }:add_unlock('thermal-mk02')
 

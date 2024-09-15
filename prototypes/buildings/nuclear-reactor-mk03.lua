@@ -4,23 +4,23 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"nuclear-reactor-mk02", 1},
-        {"processing-unit", 200},
-        {"low-density-structure", 100},
-        {"small-parts-03", 700},
-        {"refined-concrete", 200},
-        {"super-steel", 1000},
-        {"electric-engine-unit", 10},
-        {"glass", 1000},
-        {"nxsb-alloy", 50},
-        {'ns-material', 50},
-        {"py-heat-exchanger", 1},
-        {"ticocr-alloy", 50},
-        {"mechanical-parts-03", 10},
+        {type = "item", name = "nuclear-reactor-mk02", amount = 1},
+        {type = "item", name = "processing-unit", amount = 200},
+        {type = "item", name = "low-density-structure", amount = 100},
+        {type = "item", name = "small-parts-03", amount = 700},
+        {type = "item", name = "refined-concrete", amount = 200},
+        {type = "item", name = "super-steel", amount = 1000},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "glass", amount = 1000},
+        {type = "item", name = "nxsb-alloy", amount = 50},
+        {type = "item", name = 'ns-material', amount = 50},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "ticocr-alloy", amount = 50},
+        {type = "item", name = "mechanical-parts-03", amount = 10},
 
     },
     results = {
-        {"nuclear-reactor-mk03", 1}
+        {type = "item", name = "nuclear-reactor-mk03", amount = 1}
     }
 }:add_unlock("nuclear-power-mk03")
 

@@ -4,13 +4,13 @@ RECIPE {
   energy_required = 0.5,
   enabled = false,
   ingredients = {
-    {"concrete", 15},
-    {"niobium-plate", 5},
-    {"small-parts-02", 20},
-    {"steel-plate", 10},
-    {"nexelit-plate", 50},
+    {type = "item", name = "concrete", amount = 15},
+    {type = "item", name = "niobium-plate", amount = 5},
+    {type = "item", name = "small-parts-02", amount = 20},
+    {type = "item", name = "steel-plate", amount = 10},
+    {type = "item", name = "nexelit-plate", amount = 50},
 },
-  results = {{'nexelit-substation', 1}}
+  results = {{type = "item", name = 'nexelit-substation', amount = 1}}
 }:add_unlock("electric-energy-distribution-5")
 
 ITEM {

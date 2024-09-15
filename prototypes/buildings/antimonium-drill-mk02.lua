@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"antimonium-drill-mk01", 1},
-        {"neuroprocessor", 10},
-        {"advanced-circuit", 15},
-        {"tin-plate", 50},
-        {"stainless-steel", 20},
-        {"self-assembly-monolayer", 10},
-        {"duralumin", 15},
-        {"nexelit-plate", 20},
-        {"mechanical-parts-02", 1},
+        {type = "item", name = "antimonium-drill-mk01", amount = 1},
+        {type = "item", name = "neuroprocessor", amount = 10},
+        {type = "item", name = "advanced-circuit", amount = 15},
+        {type = "item", name = "tin-plate", amount = 50},
+        {type = "item", name = "stainless-steel", amount = 20},
+        {type = "item", name = "self-assembly-monolayer", amount = 10},
+        {type = "item", name = "duralumin", amount = 15},
+        {type = "item", name = "nexelit-plate", amount = 20},
+        {type = "item", name = "mechanical-parts-02", amount = 1},
     },
     results = {
-        {"antimonium-drill-mk02", 1}
+        {type = "item", name = "antimonium-drill-mk02", amount = 1}
     }
 }:add_unlock("machines-mk03")
 

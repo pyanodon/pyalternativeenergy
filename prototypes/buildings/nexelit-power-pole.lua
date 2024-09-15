@@ -5,12 +5,12 @@ RECIPE {
     category = 'crafting',
     enabled = false,
     ingredients = {
-        {"refined-concrete", 5},
-        {"stainless-steel", 1},
-        {"nexelit-plate", 3},
+        {type = "item", name = "refined-concrete", amount = 5},
+        {type = "item", name = "stainless-steel", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 3},
     },
     results = {
-        {"nexelit-power-pole", 1},
+        {type = "item", name = "nexelit-power-pole", amount = 1},
     }
 }:add_unlock("electric-energy-distribution-3")
 

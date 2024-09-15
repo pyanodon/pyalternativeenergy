@@ -4,19 +4,19 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-coal-powerplant-mk01", 1},
-        {"self-assembly-monolayer", 30},
-        {"stainless-steel", 100},
-        {"duralumin", 50},
-        {"titanium-plate", 100},
-        {'concrete', 80},
-        {'small-parts-02', 100},
-        {'engine-unit', 20},
-        {'advanced-circuit', 50},
-        {"mechanical-parts-02", 5},
+        {type = "item", name = "py-coal-powerplant-mk01", amount = 1},
+        {type = "item", name = "self-assembly-monolayer", amount = 30},
+        {type = "item", name = "stainless-steel", amount = 100},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "titanium-plate", amount = 100},
+        {type = "item", name = 'concrete', amount = 80},
+        {type = "item", name = 'small-parts-02', amount = 100},
+        {type = "item", name = 'engine-unit', amount = 20},
+        {type = "item", name = 'advanced-circuit', amount = 50},
+        {type = "item", name = "mechanical-parts-02", amount = 5},
     },
     results = {
-        {"py-coal-powerplant-mk02", 1}
+        {type = "item", name = "py-coal-powerplant-mk02", amount = 1}
     }
 }:add_unlock("coalplant-mk02")
 

@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"steam-engine", 10},
-        {"iron-plate", 300},
-        {"plastic-bar", 50},
-        {"electronic-circuit", 100},
-        {"small-parts-01", 100},
-        {"pipe", 50},
-        {"steel-plate", 100},
-        {"intermetallics", 20},
-        {"mechanical-parts-01", 4},
+        {type = "item", name = "steam-engine", amount = 10},
+        {type = "item", name = "iron-plate", amount = 300},
+        {type = "item", name = "plastic-bar", amount = 50},
+        {type = "item", name = "electronic-circuit", amount = 100},
+        {type = "item", name = "small-parts-01", amount = 100},
+        {type = "item", name = "pipe", amount = 50},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "intermetallics", amount = 20},
+        {type = "item", name = "mechanical-parts-01", amount = 4},
     },
     results = {
-        {"py-biomass-powerplant-mk01", 1}
+        {type = "item", name = "py-biomass-powerplant-mk01", amount = 1}
     }
 }:add_unlock("biomassplant-mk01")
 

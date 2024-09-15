@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"neutron-moderator-mk02", 1},
-        {"processing-unit", 20},
-        {"small-parts-03", 100},
-        {"low-density-structure", 30},
-        {"super-steel", 80},
-        {"nexelit-plate", 100},
-        {"electric-engine-unit", 4},
-        {"anti-reflex-glass", 100},
-        {"utility-box-mk03", 1},
-        {'ns-material', 10},
-        {"mechanical-parts-03", 1},
-        {"alag-alloy", 30},
+        {type = "item", name = "neutron-moderator-mk02", amount = 1},
+        {type = "item", name = "processing-unit", amount = 20},
+        {type = "item", name = "small-parts-03", amount = 100},
+        {type = "item", name = "low-density-structure", amount = 30},
+        {type = "item", name = "super-steel", amount = 80},
+        {type = "item", name = "nexelit-plate", amount = 100},
+        {type = "item", name = "electric-engine-unit", amount = 4},
+        {type = "item", name = "anti-reflex-glass", amount = 100},
+        {type = "item", name = "utility-box-mk03", amount = 1},
+        {type = "item", name = 'ns-material', amount = 10},
+        {type = "item", name = "mechanical-parts-03", amount = 1},
+        {type = "item", name = "alag-alloy", amount = 30},
     },
     results = {
-        {"neutron-moderator-mk03", 1}
+        {type = "item", name = "neutron-moderator-mk03", amount = 1}
     }
 }:add_unlock("nuclear-power-mk03")
 

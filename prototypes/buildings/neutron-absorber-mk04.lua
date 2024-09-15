@@ -4,23 +4,23 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"neutron-absorber-mk03", 1},
-        {"intelligent-unit", 10},
-        {"low-density-structure", 50},
-        {"nano-mesh", 10},
-        {"cooling-system", 10},
-        {"super-alloy", 100},
-        {"divertor", 10},
-        {'hydraulic-system-mk02', 4},
-        {"utility-box-mk04", 1},
-        {"electronics-mk04", 1},
-        {'metastable-quasicrystal', 10},
-        {"control-unit", 10},
-        {"ti-n", 30},
-        {"mechanical-parts-04", 1},
+        {type = "item", name = "neutron-absorber-mk03", amount = 1},
+        {type = "item", name = "intelligent-unit", amount = 10},
+        {type = "item", name = "low-density-structure", amount = 50},
+        {type = "item", name = "nano-mesh", amount = 10},
+        {type = "item", name = "cooling-system", amount = 10},
+        {type = "item", name = "super-alloy", amount = 100},
+        {type = "item", name = "divertor", amount = 10},
+        {type = "item", name = 'hydraulic-system-mk02', amount = 4},
+        {type = "item", name = "utility-box-mk04", amount = 1},
+        {type = "item", name = "electronics-mk04", amount = 1},
+        {type = "item", name = 'metastable-quasicrystal', amount = 10},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "ti-n", amount = 30},
+        {type = "item", name = "mechanical-parts-04", amount = 1},
     },
     results = {
-        {"neutron-absorber-mk04", 1}
+        {type = "item", name = "neutron-absorber-mk04", amount = 1}
     }
 }:add_unlock("nuclear-power-mk04")
 

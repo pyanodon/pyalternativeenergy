@@ -4,19 +4,19 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"super-steel", 15},
-        {"niobium-pipe", 10},
-        {"processing-unit", 10},
-        {"simik", 1},
-        {"electric-engine-unit", 15},
-        {"nbfe-alloy", 20},
-        {"nbti-alloy", 10},
-        {"tin-plate", 20},
-        {'ns-material', 20},
-        {"small-parts-03", 80}
+        {type = "item", name = "super-steel", amount = 15},
+        {type = "item", name = "niobium-pipe", amount = 10},
+        {type = "item", name = "processing-unit", amount = 10},
+        {type = "item", name = "simik", amount = 1},
+        {type = "item", name = "electric-engine-unit", amount = 15},
+        {type = "item", name = "nbfe-alloy", amount = 20},
+        {type = "item", name = "nbti-alloy", amount = 10},
+        {type = "item", name = "tin-plate", amount = 20},
+        {type = "item", name = 'ns-material', amount = 20},
+        {type = "item", name = "small-parts-03", amount = 80}
     },
     results = {
-        {"simik-boiler", 1}
+        {type = "item", name = "simik-boiler", amount = 1}
     }
 }:add_unlock("domestication-mk04")
 

@@ -121,15 +121,15 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"refined-concrete", 10000},
-        {"stainless-steel", 5000},
-        {"blanket", 440},
-        {"divertor", 54},
-        {"sc-unit", 2500},
-        {"wall-shield", 9000}
+        {type = "item", name = "refined-concrete", amount = 10000},
+        {type = "item", name = "stainless-steel", amount = 5000},
+        {type = "item", name = "blanket", amount = 440},
+        {type = "item", name = "divertor", amount = 54},
+        {type = "item", name = "sc-unit", amount = 2500},
+        {type = "item", name = "wall-shield", amount = 9000}
     },
     results = {
-        {"fusion-reactor-mk01", 1}
+        {type = "item", name = "fusion-reactor-mk01", amount = 1}
     },
 }
 

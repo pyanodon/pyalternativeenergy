@@ -4,22 +4,22 @@ RECIPE{
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {'super-steel', 20},
-        {'mirror-mk03', 6},
-        {'mirror-mk04', 1},
-        {'anti-reflex-glass', 3},
-        {'intelligent-unit', 1},
-        {'axis-tracker', 2},
-        {'ns-material', 1},
-        {'small-parts-03', 50},
-        {'graphene-roll', 5},
-        {'electric-engine-unit', 1},
-        {'eva', 3},
-        {'cf', 7},
-        {'aerogel', 2},
+        {type = "item", name = 'super-steel', amount = 20},
+        {type = "item", name = 'mirror-mk03', amount = 6},
+        {type = "item", name = 'mirror-mk04', amount = 1},
+        {type = "item", name = 'anti-reflex-glass', amount = 3},
+        {type = "item", name = 'intelligent-unit', amount = 1},
+        {type = "item", name = 'axis-tracker', amount = 2},
+        {type = "item", name = 'ns-material', amount = 1},
+        {type = "item", name = 'small-parts-03', amount = 50},
+        {type = "item", name = 'graphene-roll', amount = 5},
+        {type = "item", name = 'electric-engine-unit', amount = 1},
+        {type = "item", name = 'eva', amount = 3},
+        {type = "item", name = 'cf', amount = 7},
+        {type = "item", name = 'aerogel', amount = 2},
     },
     results = {
-        {'solar-tower-panel', 1}
+        {type = "item", name = 'solar-tower-panel', amount = 1}
     }
 }:add_unlock('thermal-mk04')
 
