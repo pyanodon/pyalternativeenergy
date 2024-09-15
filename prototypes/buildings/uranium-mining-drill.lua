@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'automated-factory-mk01', 1},
-        {'electric-mining-drill', 10},
-        {'advanced-circuit', 10},
-        {'mechanical-parts-01', 20},
-        {'stainless-steel', 50},
-        {'electric-engine-unit', 20},
-        {'nbfe-alloy', 50},
-        {'small-parts-02', 100},
+        {type = "item", name = 'automated-factory-mk01', amount = 1},
+        {type = "item", name = 'electric-mining-drill', amount = 10},
+        {type = "item", name = 'advanced-circuit', amount = 10},
+        {type = "item", name = 'mechanical-parts-01', amount = 20},
+        {type = "item", name = 'stainless-steel', amount = 50},
+        {type = "item", name = 'electric-engine-unit', amount = 20},
+        {type = "item", name = 'nbfe-alloy', amount = 50},
+        {type = "item", name = 'small-parts-02', amount = 100},
     },
     results = {
-        {'uranium-mining-drill', 1}
+        {type = "item", name = 'uranium-mining-drill', amount = 1}
     }
 }:add_unlock('uranium-processing')
 

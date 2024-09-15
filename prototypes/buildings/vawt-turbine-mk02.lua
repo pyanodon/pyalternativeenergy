@@ -7,23 +7,23 @@ RECIPE{
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"shaft-mk02", 1},
-        {"anemometer-mk02", 1},
-        {"gearbox-mk02", 1},
-        {"advanced-circuit", 10},
-        {"small-parts-02", 300},
-        {"self-assembly-monolayer", 20},
-        {"utility-box-mk02", 3},
-        {"controler-mk02", 2},
-        {"rubber", 30},
-        {"stainless-steel", 50},
-        {"eva", 40},
-        {"green-wire", 50},
-        {"electric-engine-unit", 1},
-        {"electronics-mk02", 1},
+        {type = "item", name = "shaft-mk02", amount = 1},
+        {type = "item", name = "anemometer-mk02", amount = 1},
+        {type = "item", name = "gearbox-mk02", amount = 1},
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "small-parts-02", amount = 300},
+        {type = "item", name = "self-assembly-monolayer", amount = 20},
+        {type = "item", name = "utility-box-mk02", amount = 3},
+        {type = "item", name = "controler-mk02", amount = 2},
+        {type = "item", name = "rubber", amount = 30},
+        {type = "item", name = "stainless-steel", amount = 50},
+        {type = "item", name = "eva", amount = 40},
+        {type = "item", name = "green-wire", amount = 50},
+        {type = "item", name = "electric-engine-unit", amount = 1},
+        {type = "item", name = "electronics-mk02", amount = 1},
     },
     results = {
-        {"vawt-turbine-mk02", 1}
+        {type = "item", name = "vawt-turbine-mk02", amount = 1}
     }
 }:add_unlock("wind-mk02")
 

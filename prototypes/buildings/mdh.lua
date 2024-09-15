@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"fusion-reactor-mk01", 1},
-        {"re-magnet", 100},
-        {"intelligent-unit", 50},
-        {"nano-wires", 400},
-        {"super-alloy", 50},
-        {"super-steel", 100},
-        {"metastable-quasicrystal", 5},
-        {"sc-engine", 2},
-        {"mechanical-parts-04", 5}
+        {type = "item", name = "fusion-reactor-mk01", amount = 1},
+        {type = "item", name = "re-magnet", amount = 100},
+        {type = "item", name = "intelligent-unit", amount = 50},
+        {type = "item", name = "nano-wires", amount = 400},
+        {type = "item", name = "super-alloy", amount = 50},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "metastable-quasicrystal", amount = 5},
+        {type = "item", name = "sc-engine", amount = 2},
+        {type = "item", name = "mechanical-parts-04", amount = 5}
       },
     results = {
-        {"mdh", 1}
+        {type = "item", name = "mdh", amount = 1}
     },
 }:add_unlock("fusion-mk02")
 

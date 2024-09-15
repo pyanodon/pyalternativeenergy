@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {'centrifuge-mk03', 1},
-        {'super-alloy', 50},
-        {'metastable-quasicrystal', 5},
-        {'small-parts-03', 100},
-        {'molybdenum-plate', 20},
-        {"ti-n", 100},
-        {"low-density-structure", 20},
-        {"nbfe-alloy", 10},
-        {"mechanical-parts-04", 1},
+        {type = "item", name = 'centrifuge-mk03', amount = 1},
+        {type = "item", name = 'super-alloy', amount = 50},
+        {type = "item", name = 'metastable-quasicrystal', amount = 5},
+        {type = "item", name = 'small-parts-03', amount = 100},
+        {type = "item", name = 'molybdenum-plate', amount = 20},
+        {type = "item", name = "ti-n", amount = 100},
+        {type = "item", name = "low-density-structure", amount = 20},
+        {type = "item", name = "nbfe-alloy", amount = 10},
+        {type = "item", name = "mechanical-parts-04", amount = 1},
     },
     results = {
-        {"centrifuge-mk04", 1}
+        {type = "item", name = "centrifuge-mk04", amount = 1}
     }
 }:add_unlock("machines-mk05")
 

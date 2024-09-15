@@ -4,23 +4,23 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"neutron-moderator-mk03", 1},
-        {"intelligent-unit", 20},
-        {"parametric-oscilator", 5},
-        {"biopolymer", 50},
-        {"super-alloy", 80},
-        {"carbon-nanotube", 100},
-        {"sc-engine", 4},
-        {"clean-glass-sheet", 100},
-        {"utility-box-mk04", 1},
-        {'metastable-quasicrystal', 10},
-        {"fes", 2},
-        {"heating-system", 1},
-        {"cooling-system", 3},
-        {"mechanical-parts-04", 1},
+        {type = "item", name = "neutron-moderator-mk03", amount = 1},
+        {type = "item", name = "intelligent-unit", amount = 20},
+        {type = "item", name = "parametric-oscilator", amount = 5},
+        {type = "item", name = "biopolymer", amount = 50},
+        {type = "item", name = "super-alloy", amount = 80},
+        {type = "item", name = "carbon-nanotube", amount = 100},
+        {type = "item", name = "sc-engine", amount = 4},
+        {type = "item", name = "clean-glass-sheet", amount = 100},
+        {type = "item", name = "utility-box-mk04", amount = 1},
+        {type = "item", name = 'metastable-quasicrystal', amount = 10},
+        {type = "item", name = "fes", amount = 2},
+        {type = "item", name = "heating-system", amount = 1},
+        {type = "item", name = "cooling-system", amount = 3},
+        {type = "item", name = "mechanical-parts-04", amount = 1},
     },
     results = {
-        {"neutron-moderator-mk04", 1}
+        {type = "item", name = "neutron-moderator-mk04", amount = 1}
     }
 }:add_unlock("nuclear-power-mk04")
 

@@ -4,19 +4,19 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {'nxsb-alloy', 40},
-        {'processing-unit', 15},
-        {'ns-material', 50},
-        {'small-parts-03', 150},
-        {'graphene-roll', 25},
-        {'plastic-bar', 100},
-        {'super-steel', 100},
-        {'electric-engine-unit', 10},
-        {'aerogel', 20},
-        {"mechanical-parts-03", 4},
+        {type = "item", name = 'nxsb-alloy', amount = 40},
+        {type = "item", name = 'processing-unit', amount = 15},
+        {type = "item", name = 'ns-material', amount = 50},
+        {type = "item", name = 'small-parts-03', amount = 150},
+        {type = "item", name = 'graphene-roll', amount = 25},
+        {type = "item", name = 'plastic-bar', amount = 100},
+        {type = "item", name = 'super-steel', amount = 100},
+        {type = "item", name = 'electric-engine-unit', amount = 10},
+        {type = "item", name = 'aerogel', amount = 20},
+        {type = "item", name = "mechanical-parts-03", amount = 4},
     },
     results = {
-        {"microwave-receiver", 1}
+        {type = "item", name = "microwave-receiver", amount = 1}
     }
 }:add_unlock("microwave-receiver")
 

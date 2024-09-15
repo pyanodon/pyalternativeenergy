@@ -4,19 +4,19 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"nuclear-reactor-mk01", 1},
-        {"advanced-circuit", 150},
-        {"small-parts-02", 700},
-        {"refined-concrete", 500},
-        {"stainless-steel", 1000},
-        {"engine-unit", 10},
-        {"pump", 10},
-        {"nxsb-alloy", 50},
-        {"mechanical-parts-02", 10},
-        {'self-assembly-monolayer', 50},
+        {type = "item", name = "nuclear-reactor-mk01", amount = 1},
+        {type = "item", name = "advanced-circuit", amount = 150},
+        {type = "item", name = "small-parts-02", amount = 700},
+        {type = "item", name = "refined-concrete", amount = 500},
+        {type = "item", name = "stainless-steel", amount = 1000},
+        {type = "item", name = "engine-unit", amount = 10},
+        {type = "item", name = "pump", amount = 10},
+        {type = "item", name = "nxsb-alloy", amount = 50},
+        {type = "item", name = "mechanical-parts-02", amount = 10},
+        {type = "item", name = 'self-assembly-monolayer', amount = 50},
     },
     results = {
-        {"nuclear-reactor-mk02", 1}
+        {type = "item", name = "nuclear-reactor-mk02", amount = 1}
     }
 }:add_unlock("nuclear-power-mk02")
 

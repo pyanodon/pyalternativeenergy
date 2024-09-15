@@ -4,20 +4,20 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"electronic-circuit", 35},
-        {"iron-gear-wheel", 120},
-        {"iron-plate", 50},
-        {"concrete", 40},
-        {"steel-plate", 50},
-        {"duralumin", 20},
-        {"steam-engine", 1},
-        {"glass", 100},
-        {"niobium-pipe", 10},
-        {"mechanical-parts-01", 2},
-        {'intermetallics', 10},
+        {type = "item", name = "electronic-circuit", amount = 35},
+        {type = "item", name = "iron-gear-wheel", amount = 120},
+        {type = "item", name = "iron-plate", amount = 50},
+        {type = "item", name = "concrete", amount = 40},
+        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "duralumin", amount = 20},
+        {type = "item", name = "steam-engine", amount = 1},
+        {type = "item", name = "glass", amount = 100},
+        {type = "item", name = "niobium-pipe", amount = 10},
+        {type = "item", name = "mechanical-parts-01", amount = 2},
+        {type = "item", name = 'intermetallics', amount = 10},
     },
     results = {
-        {"neutron-moderator-mk01", 1}
+        {type = "item", name = "neutron-moderator-mk01", amount = 1}
     }
 }:add_unlock("nuclear-power")
 

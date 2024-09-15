@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"antimonium-drill-mk03", 1},
-        {"science-coating", 15},
-        {"nbfe-alloy", 5},
-        {"low-density-structure", 30},
-        {"super-alloy", 20},
-        {"ti-n", 100},
-        {"intelligent-unit", 10},
-        {"superconductor-servomechanims", 10},
-        {"hyperelastic-material", 15},
-        {'metastable-quasicrystal', 4},
-        {"sc-engine", 3},
-        {"mechanical-parts-04", 1},
+        {type = "item", name = "antimonium-drill-mk03", amount = 1},
+        {type = "item", name = "science-coating", amount = 15},
+        {type = "item", name = "nbfe-alloy", amount = 5},
+        {type = "item", name = "low-density-structure", amount = 30},
+        {type = "item", name = "super-alloy", amount = 20},
+        {type = "item", name = "ti-n", amount = 100},
+        {type = "item", name = "intelligent-unit", amount = 10},
+        {type = "item", name = "superconductor-servomechanims", amount = 10},
+        {type = "item", name = "hyperelastic-material", amount = 15},
+        {type = "item", name = 'metastable-quasicrystal', amount = 4},
+        {type = "item", name = "sc-engine", amount = 3},
+        {type = "item", name = "mechanical-parts-04", amount = 1},
     },
     results = {
-        {"antimonium-drill-mk04", 1}
+        {type = "item", name = "antimonium-drill-mk04", amount = 1}
     }
 }:add_unlock("machines-mk05")
 

@@ -4,22 +4,22 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-      {"tidal-mk03", 1},
-      {"ti-n", 50},
-      {"nbfe-alloy", 40},
-      {"science-coating", 15},
-      {"carbon-aerogel", 100},
-      {"super-alloy", 200},
-      {"intelligent-unit", 10},
-      {"superconductor-servomechanims", 10},
-      {'metastable-quasicrystal', 10},
-      {"shaft-mk04", 3},
-      {"brake-mk04", 3},
-      {"utility-box-mk04", 2},
-      {"gearbox-mk04", 3},
-      {"mechanical-parts-04", 10},
+      {type = "item", name = "tidal-mk03", amount = 1},
+      {type = "item", name = "ti-n", amount = 50},
+      {type = "item", name = "nbfe-alloy", amount = 40},
+      {type = "item", name = "science-coating", amount = 15},
+      {type = "item", name = "carbon-aerogel", amount = 100},
+      {type = "item", name = "super-alloy", amount = 200},
+      {type = "item", name = "intelligent-unit", amount = 10},
+      {type = "item", name = "superconductor-servomechanims", amount = 10},
+      {type = "item", name = 'metastable-quasicrystal', amount = 10},
+      {type = "item", name = "shaft-mk04", amount = 3},
+      {type = "item", name = "brake-mk04", amount = 3},
+      {type = "item", name = "utility-box-mk04", amount = 2},
+      {type = "item", name = "gearbox-mk04", amount = 3},
+      {type = "item", name = "mechanical-parts-04", amount = 10},
   },
-    results = {{'tidal-mk04', 1}}
+    results = {{type = "item", name = 'tidal-mk04', amount = 1}}
 }:add_unlock("tidal-mk04")
 
 ITEM {

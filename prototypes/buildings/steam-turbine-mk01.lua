@@ -4,19 +4,19 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"pipe", 20},
-        {"steel-plate", 100},
-        {"iron-gear-wheel", 200},
-        {"duralumin", 20},
-        {"intermetallics", 10},
-        {"shaft-mk01", 1},
-        {"brake-mk01", 4},
-        {"utility-box-mk01", 2},
-        {"gearbox-mk01", 3},
-        {"electronic-circuit", 30},
+        {type = "item", name = "pipe", amount = 20},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "iron-gear-wheel", amount = 200},
+        {type = "item", name = "duralumin", amount = 20},
+        {type = "item", name = "intermetallics", amount = 10},
+        {type = "item", name = "shaft-mk01", amount = 1},
+        {type = "item", name = "brake-mk01", amount = 4},
+        {type = "item", name = "utility-box-mk01", amount = 2},
+        {type = "item", name = "gearbox-mk01", amount = 3},
+        {type = "item", name = "electronic-circuit", amount = 30},
     },
     results = {
-        {"steam-turbine-mk01", 1}
+        {type = "item", name = "steam-turbine-mk01", amount = 1}
     }
 }:add_unlock('nonrenewable-mk01')
 

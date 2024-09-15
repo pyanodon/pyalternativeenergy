@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"electric-mining-drill", 1},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 20},
-        {"steel-plate", 20},
+        {type = "item", name = "electric-mining-drill", amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "iron-gear-wheel", amount = 20},
+        {type = "item", name = "steel-plate", amount = 20},
     },
     results = {
-        {"ree-mining-drill-mk01", 1}
+        {type = "item", name = "ree-mining-drill-mk01", amount = 1}
     }
 }:add_unlock("rare-earth-tech")
 

@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"antimonium-drill-mk02", 1},
-        {"titanium-plate", 20},
-        {"super-steel", 20},
-        {"biopolymer", 15},
-        {"graphene-roll", 20},
-        {'ns-material', 20},
-        {"processing-unit", 10},
-        {"electric-engine-unit", 3},
-        {"mechanical-parts-03", 1},
+        {type = "item", name = "antimonium-drill-mk02", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 20},
+        {type = "item", name = "super-steel", amount = 20},
+        {type = "item", name = "biopolymer", amount = 15},
+        {type = "item", name = "graphene-roll", amount = 20},
+        {type = "item", name = 'ns-material', amount = 20},
+        {type = "item", name = "processing-unit", amount = 10},
+        {type = "item", name = "electric-engine-unit", amount = 3},
+        {type = "item", name = "mechanical-parts-03", amount = 1},
     },
     results = {
-        {"antimonium-drill-mk03", 1}
+        {type = "item", name = "antimonium-drill-mk03", amount = 1}
     }
 }:add_unlock("machines-mk04")
 

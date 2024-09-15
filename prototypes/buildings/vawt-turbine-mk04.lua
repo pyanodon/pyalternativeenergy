@@ -7,23 +7,23 @@ RECIPE{
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"shaft-mk04", 1},
-        {"anemometer-mk04", 1},
-        {"gearbox-mk04", 1},
-        {"intelligent-unit", 5},
-        {"small-parts-03", 400},
-        {"metastable-quasicrystal", 5},
-        {"low-density-structure", 50},
-        {"nxzngd", 4},
-        {"hyperelastic-material", 4},
-        {"biopolymer", 40},
-        {"cf", 200},
-        {"fes", 1},
-        {"electronics-mk04", 2},
-        {"controler-mk04", 1},
+        {type = "item", name = "shaft-mk04", amount = 1},
+        {type = "item", name = "anemometer-mk04", amount = 1},
+        {type = "item", name = "gearbox-mk04", amount = 1},
+        {type = "item", name = "intelligent-unit", amount = 5},
+        {type = "item", name = "small-parts-03", amount = 400},
+        {type = "item", name = "metastable-quasicrystal", amount = 5},
+        {type = "item", name = "low-density-structure", amount = 50},
+        {type = "item", name = "nxzngd", amount = 4},
+        {type = "item", name = "hyperelastic-material", amount = 4},
+        {type = "item", name = "biopolymer", amount = 40},
+        {type = "item", name = "cf", amount = 200},
+        {type = "item", name = "fes", amount = 1},
+        {type = "item", name = "electronics-mk04", amount = 2},
+        {type = "item", name = "controler-mk04", amount = 1},
     },
     results = {
-        {"vawt-turbine-mk04", 1}
+        {type = "item", name = "vawt-turbine-mk04", amount = 1}
     }
 }:add_unlock("wind-mk04")
 

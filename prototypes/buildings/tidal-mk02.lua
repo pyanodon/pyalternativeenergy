@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-      {"tidal-mk01", 1},
-      {"niobium-pipe", 50},
-      {"stainless-steel", 100},
-      {"refined-concrete", 50},
-      {"copper-cable", 500},
-      {"small-parts-02", 150},
-      {"self-assembly-monolayer", 15},
-      {"shaft-mk02", 3},
-      {"brake-mk02", 3},
-      {"utility-box-mk02", 2},
-      {"gearbox-mk02", 3},
-      {"advanced-circuit", 50},
-      {"mechanical-parts-02", 10},
+      {type = "item", name = "tidal-mk01", amount = 1},
+      {type = "item", name = "niobium-pipe", amount = 50},
+      {type = "item", name = "stainless-steel", amount = 100},
+      {type = "item", name = "refined-concrete", amount = 50},
+      {type = "item", name = "copper-cable", amount = 500},
+      {type = "item", name = "small-parts-02", amount = 150},
+      {type = "item", name = "self-assembly-monolayer", amount = 15},
+      {type = "item", name = "shaft-mk02", amount = 3},
+      {type = "item", name = "brake-mk02", amount = 3},
+      {type = "item", name = "utility-box-mk02", amount = 2},
+      {type = "item", name = "gearbox-mk02", amount = 3},
+      {type = "item", name = "advanced-circuit", amount = 50},
+      {type = "item", name = "mechanical-parts-02", amount = 10},
   },
-    results = {{'tidal-mk02', 1}}
+    results = {{type = "item", name = 'tidal-mk02', amount = 1}}
 }:add_unlock("tidal-mk02")
 
 ITEM {

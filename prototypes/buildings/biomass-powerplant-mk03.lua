@@ -4,22 +4,22 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-biomass-powerplant-mk02", 1},
-        {'aluminium-plate', 100},
-        {"small-parts-03", 150},
-        {"nbti-alloy", 100},
-        {"electric-engine-unit", 50},
-        {"super-steel", 100},
-        {'processing-unit', 50},
-        {'ns-material', 40},
-        {'acrylic', 60},
-        {"cf", 100},
-        {"glass-fiber", 100},
-        {"mechanical-parts-03", 5},
+        {type = "item", name = "py-biomass-powerplant-mk02", amount = 1},
+        {type = "item", name = 'aluminium-plate', amount = 100},
+        {type = "item", name = "small-parts-03", amount = 150},
+        {type = "item", name = "nbti-alloy", amount = 100},
+        {type = "item", name = "electric-engine-unit", amount = 50},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = 'processing-unit', amount = 50},
+        {type = "item", name = 'ns-material', amount = 40},
+        {type = "item", name = 'acrylic', amount = 60},
+        {type = "item", name = "cf", amount = 100},
+        {type = "item", name = "glass-fiber", amount = 100},
+        {type = "item", name = "mechanical-parts-03", amount = 5},
 
     },
     results = {
-        {"py-biomass-powerplant-mk03", 1}
+        {type = "item", name = "py-biomass-powerplant-mk03", amount = 1}
     }
 }:add_unlock("biomassplant-mk03")
 

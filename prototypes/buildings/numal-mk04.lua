@@ -6,22 +6,22 @@ RECIPE{
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"numal-reef-mk03", 1},
-        {"anti-reflex-glass", 100},
-        {"silver-foam", 20},
-        {"divertor", 10},
-        {"metallic-glass", 30},
-        {'metastable-quasicrystal', 30},
-        {"harmonic-absorber", 50},
-        {"control-unit", 30},
-        {"sc-engine", 8},
-        {"hyperelastic-material", 30},
-        {"ti-n", 100},
-        {"super-alloy", 500},
-        {"low-density-structure", 10},
-        {"mechanical-parts-04", 2},
+        {type = "item", name = "numal-reef-mk03", amount = 1},
+        {type = "item", name = "anti-reflex-glass", amount = 100},
+        {type = "item", name = "silver-foam", amount = 20},
+        {type = "item", name = "divertor", amount = 10},
+        {type = "item", name = "metallic-glass", amount = 30},
+        {type = "item", name = 'metastable-quasicrystal', amount = 30},
+        {type = "item", name = "harmonic-absorber", amount = 50},
+        {type = "item", name = "control-unit", amount = 30},
+        {type = "item", name = "sc-engine", amount = 8},
+        {type = "item", name = "hyperelastic-material", amount = 30},
+        {type = "item", name = "ti-n", amount = 100},
+        {type = "item", name = "super-alloy", amount = 500},
+        {type = "item", name = "low-density-structure", amount = 10},
+        {type = "item", name = "mechanical-parts-04", amount = 2},
     },
-    results = {{'numal-reef-mk04', 1}}
+    results = {{type = "item", name = 'numal-reef-mk04', amount = 1}}
 }:add_unlock('numal-mk04')
 
 ITEM{

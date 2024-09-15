@@ -5,19 +5,19 @@ RECIPE{
     enabled = false,
     category = "crafting",
     ingredients = {
-        {'super-steel', 20},
-        {'dsnc-cell', 10},
-        {'anti-reflex-glass', 21},
-        {'processing-unit', 3},
-        {'axis-tracker', 1},
-        {'ns-material', 10},
-        {'small-parts-03', 25},
-        {'graphene-roll', 5},
-        {'electric-engine-unit', 3},
-        {'aerogel', 5},
-        {"mechanical-parts-03", 1},
+        {type = "item", name = 'super-steel', amount = 20},
+        {type = "item", name = 'dsnc-cell', amount = 10},
+        {type = "item", name = 'anti-reflex-glass', amount = 21},
+        {type = "item", name = 'processing-unit', amount = 3},
+        {type = "item", name = 'axis-tracker', amount = 1},
+        {type = "item", name = 'ns-material', amount = 10},
+        {type = "item", name = 'small-parts-03', amount = 25},
+        {type = "item", name = 'graphene-roll', amount = 5},
+        {type = "item", name = 'electric-engine-unit', amount = 3},
+        {type = "item", name = 'aerogel', amount = 5},
+        {type = "item", name = "mechanical-parts-03", amount = 1},
     },
-    results = {{'solar-panel-mk03', 1}}
+    results = {{type = "item", name = 'solar-panel-mk03', amount = 1}}
 
 }:add_unlock("solar-mk03")
 

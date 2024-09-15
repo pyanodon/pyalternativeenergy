@@ -4,19 +4,19 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-gas-powerplant-mk01", 1},
-        {"nexelit-plate", 200},
-        {"concrete", 100},
-        {"steel-plate", 400},
-        {"eva", 100},
-        {"advanced-circuit", 50},
-        {'small-parts-02', 200},
-        {'self-assembly-monolayer', 20},
-        {'engine-unit', 30},
-        {"mechanical-parts-02", 5},
+        {type = "item", name = "py-gas-powerplant-mk01", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 200},
+        {type = "item", name = "concrete", amount = 100},
+        {type = "item", name = "steel-plate", amount = 400},
+        {type = "item", name = "eva", amount = 100},
+        {type = "item", name = "advanced-circuit", amount = 50},
+        {type = "item", name = 'small-parts-02', amount = 200},
+        {type = "item", name = 'self-assembly-monolayer', amount = 20},
+        {type = "item", name = 'engine-unit', amount = 30},
+        {type = "item", name = "mechanical-parts-02", amount = 5},
     },
     results = {
-        {"py-gas-powerplant-mk02", 1}
+        {type = "item", name = "py-gas-powerplant-mk02", amount = 1}
     }
 }:add_unlock("gasplant-mk02")
 

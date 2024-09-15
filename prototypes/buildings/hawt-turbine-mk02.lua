@@ -7,15 +7,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"rotor-mk02", 1},
-        {"nacelle-mk02", 1},
-        {"anemometer-mk02", 1},
-        {"vane-mk02", 1},
-        {"tower-mk02", 1},
-        {"electronics-mk02", 3},
+        {type = "item", name = "rotor-mk02", amount = 1},
+        {type = "item", name = "nacelle-mk02", amount = 1},
+        {type = "item", name = "anemometer-mk02", amount = 1},
+        {type = "item", name = "vane-mk02", amount = 1},
+        {type = "item", name = "tower-mk02", amount = 1},
+        {type = "item", name = "electronics-mk02", amount = 3},
     },
     results = {
-        {"hawt-turbine-mk02", 1}
+        {type = "item", name = "hawt-turbine-mk02", amount = 1}
     }
 }:add_unlock("wind-mk02")
 

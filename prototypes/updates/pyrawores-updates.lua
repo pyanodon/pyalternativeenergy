@@ -234,10 +234,10 @@ ITEM{
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {"used-nuclear-fuel", 5},
+        {type = "item", name = "used-nuclear-fuel", amount = 5},
     },
     results = {
-        {"lead-dust", 10}
+        {type = "item", name = "lead-dust", amount = 10}
     }
 }:add_unlock("nuclear-power-mk02")
 

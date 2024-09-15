@@ -4,22 +4,22 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"laser-module", 3},
-        {"processing-unit", 30},
-        {"super-steel", 35},
-        {"nbfe-alloy", 20},
-        {"graphene-roll", 30},
-        {"cobalt-nx", 10},
-        {"nano-wires", 10},
-        {'biopolymer', 40},
-        {'ns-material', 20},
-        {'dsnc-cell', 16},
-        {'anti-reflex-glass', 20},
-        {"mechanical-parts-04", 4},
+        {type = "item", name = "laser-module", amount = 3},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "super-steel", amount = 35},
+        {type = "item", name = "nbfe-alloy", amount = 20},
+        {type = "item", name = "graphene-roll", amount = 30},
+        {type = "item", name = "cobalt-nx", amount = 10},
+        {type = "item", name = "nano-wires", amount = 10},
+        {type = "item", name = 'biopolymer', amount = 40},
+        {type = "item", name = 'ns-material', amount = 20},
+        {type = "item", name = 'dsnc-cell', amount = 16},
+        {type = "item", name = 'anti-reflex-glass', amount = 20},
+        {type = "item", name = "mechanical-parts-04", amount = 4},
 
     },
     results = {
-        {"anti-solar", 1}
+        {type = "item", name = "anti-solar", amount = 1}
     }
 }:add_unlock("anti-solar")
 

@@ -4,23 +4,23 @@ RECIPE {
   energy_required = 10,
   enabled = false,
   ingredients = {
-      {'concrete', 1000},
-      {'super-alloy', 1000},
-      {'cf', 500},
-      {'biopolymer', 800},
-      {'niobium-pipe', 800},
-      {'metallic-glass', 300},
-      {'glass', 1000},
-      {'nbfe-alloy', 1000},
-      {'science-coating', 500},
-      {'carbon-aerogel', 1000},
-      {'metastable-quasicrystal', 50},
-      {'intelligent-unit', 10},
-      {'low-density-structure', 400},
-      {'mechanical-parts-04', 10}
+      {type = "item", name = 'concrete', amount = 1000},
+      {type = "item", name = 'super-alloy', amount = 1000},
+      {type = "item", name = 'cf', amount = 500},
+      {type = "item", name = 'biopolymer', amount = 800},
+      {type = "item", name = 'niobium-pipe', amount = 800},
+      {type = "item", name = 'metallic-glass', amount = 300},
+      {type = "item", name = 'glass', amount = 1000},
+      {type = "item", name = 'nbfe-alloy', amount = 1000},
+      {type = "item", name = 'science-coating', amount = 500},
+      {type = "item", name = 'carbon-aerogel', amount = 1000},
+      {type = "item", name = 'metastable-quasicrystal', amount = 50},
+      {type = "item", name = 'intelligent-unit', amount = 10},
+      {type = "item", name = 'low-density-structure', amount = 400},
+      {type = "item", name = 'mechanical-parts-04', amount = 10}
   },
   results = {
-      {'solar-tower-building', 1}
+      {type = "item", name = 'solar-tower-building', amount = 1}
   }
 }:add_unlock('thermal-mk04')
 

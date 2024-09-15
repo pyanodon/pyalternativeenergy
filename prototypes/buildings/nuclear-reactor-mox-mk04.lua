@@ -4,10 +4,10 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"nuclear-reactor-mk04", 1},
+        {type = "item", name = "nuclear-reactor-mk04", amount = 1},
     },
     results = {
-        {"nuclear-reactor-mox-mk04", 1}
+        {type = "item", name = "nuclear-reactor-mox-mk04", amount = 1}
     }
 }:add_unlock("nuclear-power-mk04")
 

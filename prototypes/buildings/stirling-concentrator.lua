@@ -6,16 +6,16 @@ RECIPE{
     category = 'advanced-crafting',
     ingredients = {
         {type = 'fluid', name = 'lubricant', amount = 100},
-        {'axis-tracker', 2},
-        {'mirror-mk02', 40},
-        {'steel-plate', 50},
-        {'cf', 30},
-        {'stirling-engine', 1},
-        {'self-assembly-monolayer', 10},
-        {'regenerator', 1},
-        {'tower-mk02', 1},
+        {type = "item", name = 'axis-tracker', amount = 2},
+        {type = "item", name = 'mirror-mk02', amount = 40},
+        {type = "item", name = 'steel-plate', amount = 50},
+        {type = "item", name = 'cf', amount = 30},
+        {type = "item", name = 'stirling-engine', amount = 1},
+        {type = "item", name = 'self-assembly-monolayer', amount = 10},
+        {type = "item", name = 'regenerator', amount = 1},
+        {type = "item", name = 'tower-mk02', amount = 1},
     },
-    results = {{'stirling-concentrator', 1}}
+    results = {{type = "item", name = 'stirling-concentrator', amount = 1}}
 }:add_unlock('thermal-mk02')
 
 ITEM{

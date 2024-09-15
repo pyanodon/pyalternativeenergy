@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-biomass-powerplant-mk03", 1},
-        {'low-density-structure', 100},
-        {"small-parts-03", 150},
-        {"super-alloy", 100},
-        {"carbon-aerogel", 20},
-        {"intelligent-unit", 50},
-        {'metastable-quasicrystal', 10},
-        {'alag-alloy', 60},
-        {"sc-engine", 8},
-        {"control-unit", 20},
-        {"metallic-glass", 100},
-        {"mechanical-parts-04", 5},
+        {type = "item", name = "py-biomass-powerplant-mk03", amount = 1},
+        {type = "item", name = 'low-density-structure', amount = 100},
+        {type = "item", name = "small-parts-03", amount = 150},
+        {type = "item", name = "super-alloy", amount = 100},
+        {type = "item", name = "carbon-aerogel", amount = 20},
+        {type = "item", name = "intelligent-unit", amount = 50},
+        {type = "item", name = 'metastable-quasicrystal', amount = 10},
+        {type = "item", name = 'alag-alloy', amount = 60},
+        {type = "item", name = "sc-engine", amount = 8},
+        {type = "item", name = "control-unit", amount = 20},
+        {type = "item", name = "metallic-glass", amount = 100},
+        {type = "item", name = "mechanical-parts-04", amount = 5},
     },
     results = {
-        {"py-biomass-powerplant-mk04", 1}
+        {type = "item", name = "py-biomass-powerplant-mk04", amount = 1}
     }
 }:add_unlock("biomassplant-mk04")
 

@@ -4,20 +4,20 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-gas-powerplant-mk03", 1},
-        {'metastable-quasicrystal', 30},
-        {"harmonic-absorber", 50},
-        {"control-unit", 30},
-        {"boron", 40},
-        {"metallic-glass", 100},
-        {"sc-engine", 8},
-        {"hyperelastic-material", 30},
-        {"ti-n", 100},
-        {"super-alloy", 500},
-        {"mechanical-parts-04", 5},
+        {type = "item", name = "py-gas-powerplant-mk03", amount = 1},
+        {type = "item", name = 'metastable-quasicrystal', amount = 30},
+        {type = "item", name = "harmonic-absorber", amount = 50},
+        {type = "item", name = "control-unit", amount = 30},
+        {type = "item", name = "boron", amount = 40},
+        {type = "item", name = "metallic-glass", amount = 100},
+        {type = "item", name = "sc-engine", amount = 8},
+        {type = "item", name = "hyperelastic-material", amount = 30},
+        {type = "item", name = "ti-n", amount = 100},
+        {type = "item", name = "super-alloy", amount = 500},
+        {type = "item", name = "mechanical-parts-04", amount = 5},
     },
     results = {
-        {"py-gas-powerplant-mk04", 1}
+        {type = "item", name = "py-gas-powerplant-mk04", amount = 1}
     }
 }:add_unlock("gasplant-mk04")
 

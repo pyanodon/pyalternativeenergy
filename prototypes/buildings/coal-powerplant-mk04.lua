@@ -4,21 +4,21 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"py-coal-powerplant-mk03", 1},
-        {"small-parts-03", 300},
-        {"super-alloy", 200},
-        {"intelligent-unit", 50},
-        {'metastable-quasicrystal', 20},
-        {"superconductor-servomechanims", 50},
-        {"control-unit", 20},
-        {"ti-n", 100},
-        {"metallic-glass", 50},
-        {"sc-engine", 8},
-        {"nbti-alloy", 200},
-        {"mechanical-parts-04", 5},
+        {type = "item", name = "py-coal-powerplant-mk03", amount = 1},
+        {type = "item", name = "small-parts-03", amount = 300},
+        {type = "item", name = "super-alloy", amount = 200},
+        {type = "item", name = "intelligent-unit", amount = 50},
+        {type = "item", name = 'metastable-quasicrystal', amount = 20},
+        {type = "item", name = "superconductor-servomechanims", amount = 50},
+        {type = "item", name = "control-unit", amount = 20},
+        {type = "item", name = "ti-n", amount = 100},
+        {type = "item", name = "metallic-glass", amount = 50},
+        {type = "item", name = "sc-engine", amount = 8},
+        {type = "item", name = "nbti-alloy", amount = 200},
+        {type = "item", name = "mechanical-parts-04", amount = 5},
     },
     results = {
-        {"py-coal-powerplant-mk04", 1}
+        {type = "item", name = "py-coal-powerplant-mk04", amount = 1}
     }
 }:add_unlock("coalplant-mk04")
 

@@ -7,17 +7,17 @@ RECIPE{
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {'concrete', 200},
-        {'titanium-plate', 100},
-        {'steel-plate', 100},
-        {'steam-engine', 4},
-        {"intermetallics", 20},
-        {'duralumin', 50},
-        {'glass', 100},
-        {"mechanical-parts-01", 3},
-        {'advanced-circuit', 35}
+        {type = "item", name = 'concrete', amount = 200},
+        {type = "item", name = 'titanium-plate', amount = 100},
+        {type = "item", name = 'steel-plate', amount = 100},
+        {type = "item", name = 'steam-engine', amount = 4},
+        {type = "item", name = "intermetallics", amount = 20},
+        {type = "item", name = 'duralumin', amount = 50},
+        {type = "item", name = 'glass', amount = 100},
+        {type = "item", name = "mechanical-parts-01", amount = 3},
+        {type = "item", name = 'advanced-circuit', amount = 35}
     },
-    results = {{'numal-reef-mk01', 1}}
+    results = {{type = "item", name = 'numal-reef-mk01', amount = 1}}
 }:add_unlock('numal-mk01')
 
 ITEM{

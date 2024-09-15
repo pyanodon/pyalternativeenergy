@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"py-heat-exchanger", 1},
-        {'nexelit-plate', 15},
-        {'advanced-circuit', 30},
-        {"mechanical-parts-02", 2},
-        {"engine-unit", 3},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = 'nexelit-plate', amount = 15},
+        {type = "item", name = 'advanced-circuit', amount = 30},
+        {type = "item", name = "mechanical-parts-02", amount = 2},
+        {type = "item", name = "engine-unit", amount = 3},
     },
     results = {
-        {"py-heat-exchanger-mk02", 1}
+        {type = "item", name = "py-heat-exchanger-mk02", amount = 1}
     }
 }:add_unlock('nonrenewable-mk02')
 

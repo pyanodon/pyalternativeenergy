@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"super-steel", 50},
-        {"iron-plate", 20},
-        {"processing-unit", 5},
-        {"nbfe-alloy", 20},
-        {"glass", 25},
-        {"graphene-roll", 30},
-        {'ns-material', 20},
-        {"small-parts-03", 100},
-        {"mechanical-parts-03", 1},
+        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "iron-plate", amount = 20},
+        {type = "item", name = "processing-unit", amount = 5},
+        {type = "item", name = "nbfe-alloy", amount = 20},
+        {type = "item", name = "glass", amount = 25},
+        {type = "item", name = "graphene-roll", amount = 30},
+        {type = "item", name = 'ns-material', amount = 20},
+        {type = "item", name = "small-parts-03", amount = 100},
+        {type = "item", name = "mechanical-parts-03", amount = 1},
     },
     results = {
-        {"py-rtg", 1}
+        {type = "item", name = "py-rtg", amount = 1}
     }
 }:add_unlock("nuclear-power-mk02")
 

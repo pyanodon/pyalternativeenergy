@@ -7,15 +7,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'small-electric-pole', 6},
-        {'small-parts-01', 4},
-        {'stone-brick', 20},
-        {'inductor1', 18},
-        {'steel-plate', 10},
-        {'fish', 5},
+        {type = "item", name = 'small-electric-pole', amount = 6},
+        {type = "item", name = 'small-parts-01', amount = 4},
+        {type = "item", name = 'stone-brick', amount = 20},
+        {type = "item", name = 'inductor1', amount = 18},
+        {type = "item", name = 'steel-plate', amount = 10},
+        {type = "item", name = 'fish', amount = 5},
     },
     results = {
-        {'multiblade-turbine-mk01', 1}
+        {type = "item", name = 'multiblade-turbine-mk01', amount = 1}
     }
 }:add_unlock('steel-processing')
 

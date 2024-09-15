@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'iron-plate', 600},
-        {'steel-plate', 200},
-        {'glass', 200},
-        {'pipe', 100},
-        {'small-parts-01', 1000},
-        {'steam-engine', 10},
-        {'electronic-circuit', 100},
-        {'intermetallics', 50},
-        {'mechanical-parts-01', 5},
+        {type = "item", name = 'iron-plate', amount = 600},
+        {type = "item", name = 'steel-plate', amount = 200},
+        {type = "item", name = 'glass', amount = 200},
+        {type = "item", name = 'pipe', amount = 100},
+        {type = "item", name = 'small-parts-01', amount = 1000},
+        {type = "item", name = 'steam-engine', amount = 10},
+        {type = "item", name = 'electronic-circuit', amount = 100},
+        {type = "item", name = 'intermetallics', amount = 50},
+        {type = "item", name = 'mechanical-parts-01', amount = 5},
     },
     results = {
-        {'lrf-building-mk01', 1}
+        {type = "item", name = 'lrf-building-mk01', amount = 1}
     }
 }:add_unlock('thermal-mk01')
 
