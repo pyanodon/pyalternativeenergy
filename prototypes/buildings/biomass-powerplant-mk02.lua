@@ -67,7 +67,9 @@ ENTITY {
       },
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
-      emissions_per_minute = 12,
+      emissions_per_minute = {
+          pollution = 12
+      },
       smoke =
         {
             {

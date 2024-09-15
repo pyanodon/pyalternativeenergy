@@ -57,7 +57,13 @@ ENTITY{
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {'numal'},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "numal-reef-mk01"),
-    energy_source = {type = 'electric', usage_priority = 'secondary-input', emissions_per_minute = 1},
+    energy_source = {
+        type = 'electric',
+        usage_priority = 'secondary-input',
+        emissions_per_minute = {
+            pollution = 1
+        }
+    },
     energy_usage = '1600kW',
     animation = {
         north = {

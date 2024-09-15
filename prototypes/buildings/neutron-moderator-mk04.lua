@@ -62,7 +62,9 @@ ENTITY {
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
         usage_priority = "secondary-input",
-        emissions_per_minute = 0.0,
+        emissions_per_minute = {
+            pollution = 0.0
+        },
     },
     energy_usage = "1600kW",
     animation = {

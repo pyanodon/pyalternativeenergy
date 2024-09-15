@@ -589,7 +589,9 @@ data.raw['mining-drill']['uranium-mine'].allowed_effects = {'consumption', 'spee
 data.raw['mining-drill']['uranium-mine'].energy_source = {
 	type = 'electric',
 	usage_priority = 'secondary-input',
-	emissions_per_minute = 0.2 * 15,
+	emissions_per_minute = {
+	    pollution = 0.2 * 15
+	},
 }
 data.raw['mining-drill']['uranium-mine'].energy_usage = (60 * 15) .. 'MW'
 data.raw['mining-drill']['uranium-mine'].icon = '__pyalternativeenergygraphics__/graphics/icons/uranium-mining-drill-mk02.png'
