@@ -53,7 +53,9 @@ ENTITY {
         light_flicker = {color = {0,0,0}},
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
-        emissions_per_minute = 20,
+        emissions_per_minute = {
+            pollution = 20
+        },
     },
     energy_usage = "300kW",
     mining_power = 1,

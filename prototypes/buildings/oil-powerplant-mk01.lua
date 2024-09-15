@@ -54,7 +54,9 @@ ENTITY {
     energy_source =
     {
         type = "fluid",
-        emissions_per_minute = 15,
+        emissions_per_minute = {
+            pollution = 15
+        },
         destroy_non_fuel_fluid = false,
         fluid_box =
           {

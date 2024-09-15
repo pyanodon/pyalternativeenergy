@@ -52,7 +52,13 @@ ENTITY {
     --allowed_effects = {'speed', 'consumption'},
     crafting_categories = {'lrf'},
     crafting_speed = 1,
-    energy_source = {type = 'electric', usage_priority = 'primary-input', emissions_per_minute = 1},
+    energy_source = {
+        type = 'electric',
+        usage_priority = 'primary-input',
+        emissions_per_minute = {
+            pollution = 1
+        }
+    },
     energy_usage = '30MW',
     animation = {
         layers = {

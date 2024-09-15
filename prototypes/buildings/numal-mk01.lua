@@ -54,7 +54,13 @@ ENTITY{
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {'numal'},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
-    energy_source = {type = 'electric', usage_priority = 'secondary-input', emissions_per_minute = 1},
+    energy_source = {
+        type = 'electric',
+        usage_priority = 'secondary-input',
+        emissions_per_minute = {
+            pollution = 1
+        }
+    },
     energy_usage = '400kW',
     animation = {
         north = {
