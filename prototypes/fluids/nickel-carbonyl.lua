@@ -23,6 +23,7 @@ FLUID {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nickel-carbonyl.png",
     icon_size = 64,
     default_temperature = 10,
+    base_flow_rate = 100,
     base_color = {r = 0.807, g = 0.1, b = 0.1},
     flow_color = {r = 1, g = 1, b = 1},
     pressure_to_speed_ratio = 0.4,
