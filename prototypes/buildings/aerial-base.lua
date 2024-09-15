@@ -151,7 +151,7 @@ ENTITY {
     corpse = 'big-remnants',
     collision_box = {{-5.4, -5.4}, {5.4, 5.4}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     circuit_wire_connection_points = {
         circuit_wire_connection_point,
         circuit_wire_connection_point,

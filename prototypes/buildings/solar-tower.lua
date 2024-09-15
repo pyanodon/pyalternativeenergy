@@ -165,7 +165,7 @@ ENTITY {
   minable = {mining_time = 20, result = 'solar-tower-building'},
   max_health = 5500,
   corpse = 'boiler-remnants',
-  vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+  vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
   mode = 'output-to-separate-pipe',
   collision_box = {{-9.8, -9.8}, {9.8, 9.8}},
   collision_mask = {'item-layer', 'object-layer', 'player-layer', 'water-tile', _G.sut_placement_distance},
