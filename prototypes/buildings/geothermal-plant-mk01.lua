@@ -50,8 +50,7 @@ ENTITY {
     input_fluid_box = {
       pipe_picture = _G.assembler2pipepictures(),
       pipe_covers = _G.pipecoverspictures(),
-      base_area = 1,
-      height = 2,
+      volume = 200,
       base_level = -1,
       pipe_connections = {
           {position = {-6, 0}},
@@ -63,8 +62,8 @@ ENTITY {
   },
     output_fluid_box =
     {
-      base_area = 10,
-      base_level = 1,
+      volume = 1000,
+      volume = 100,
       pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_connections =
       {

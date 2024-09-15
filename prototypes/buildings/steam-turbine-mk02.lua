@@ -66,9 +66,7 @@ ENTITY {
         minimum_temperature = 1000.0
     },
     fluid_box = {
-        base_area = 6,
-        base_level = -1,
-        height = 2,
+        volume = 1200,
         pipe_covers = py.pipe_covers(true, true, true, true),
         pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         production_type = "input-output",

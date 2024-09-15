@@ -160,8 +160,7 @@ ENTITY{
         emissions_per_minute = 10,
         destroy_non_fuel_fluid = false,
         fluid_box = {
-            base_area = 1,
-            height = 2,
+            volume = 200,
             base_level = -1,
             pipe_connections = {{flow_direction = 'input', position = {0, -6.3}, direction = defines.direction.north}},
             pipe_covers = py.pipe_covers(false, true, true, true),
@@ -356,7 +355,7 @@ ENTITY{
             production_type = 'input',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = 'input', position = {-3.0, -6.3}, direction = defines.direction.north}}
         },
@@ -364,7 +363,7 @@ ENTITY{
             production_type = 'input',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = 'input', position = {-5.0, -6.3}, direction = defines.direction.north}}
         },
@@ -372,7 +371,7 @@ ENTITY{
             production_type = 'input',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = 'input', position = {3.0, -6.3}, direction = defines.direction.north}}
         },
@@ -380,7 +379,7 @@ ENTITY{
             production_type = 'input',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = 'input', position = {5.0, -6.3}, direction = defines.direction.north}}
         },
@@ -388,32 +387,32 @@ ENTITY{
             production_type = 'output',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 10,
-            base_level = 1,
+            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = 'output', position = {3.0, 6.3}, direction = defines.direction.south}}
         },
         {
             production_type = 'output',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 10,
-            base_level = 1,
+            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = 'output', position = {5.0, 6.3}, direction = defines.direction.south}}
         },
         {
             production_type = 'output',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 10,
-            base_level = 1,
+            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = 'output', position = {-3.0, 6.3}, direction = defines.direction.south}}
         },
         {
             production_type = 'output',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 10,
-            base_level = 1,
+            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = 'output', position = {-5.0, 6.3}, direction = defines.direction.south}}
         },
         off_when_no_fluid_recipe = true

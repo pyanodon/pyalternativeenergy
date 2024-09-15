@@ -56,9 +56,7 @@ ENTITY {
     fluid_box = {
         filter = "pressured-steam",
         minimum_temperature = 500,
-        base_area = 1,
-        base_level = -1,
-        height = 2,
+        volume = 200,
         pipe_covers = py.pipe_covers(false, true, true, true),
         --pipe_picture = pipe_pictures({0, 3}),
         production_type = "input-output",

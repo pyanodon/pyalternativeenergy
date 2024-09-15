@@ -133,7 +133,7 @@ ENTITY {
         production_type = 'input-output',
         pipe_picture = py.pipe_pictures("assembling-machine-2", nil, nil, nil, nil),
         pipe_covers = py.pipe_covers(false, false, true, true),
-        base_area = 10,
+        volume = 1000,
         pipe_connections = {
             {flow_direction = 'input-output', position = {0, -4.8}, direction = defines.direction.north},
             {flow_direction = 'input-output', position = {0, 4.8}, direction = defines.direction.south},

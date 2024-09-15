@@ -54,8 +54,7 @@ ENTITY {
         destroy_non_fuel_fluid = false,
         fluid_box =
         {
-          base_area = 2,
-          height = 1,
+          volume = 200,
           base_level = 0,
           pipe_connections =
           {
@@ -127,7 +126,7 @@ ENTITY {
             production_type = 'input',
             pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            base_area = 1,
+            volume = 100,
             base_level = 0,
             pipe_connections = {{flow_direction = 'input-output', position = {1.3, 0.0}, direction = defines.direction.east}, {flow_direction = 'input-output', position = {-2.0, 0.0}}}
         },
