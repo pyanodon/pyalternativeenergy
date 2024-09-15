@@ -162,7 +162,7 @@ ENTITY {
     },
     discharge_cooldown = 60,
     discharge_light = {intensity = 1, size = 12, color = {r = 0.862, g = 0.117, b = 0.117}},
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
         sound = {
             filename = "__pyalternativeenergygraphics__/sounds/accumulator-mk03.ogg",

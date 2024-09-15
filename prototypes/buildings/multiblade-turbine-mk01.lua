@@ -56,7 +56,7 @@ local proto = ENTITY{
     },
     energy_production = '550kW',
     energy_usage = '0kW',
-    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     continuous_animation = true,
     animations = {
         layers = {

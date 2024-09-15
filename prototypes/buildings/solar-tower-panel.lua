@@ -55,7 +55,7 @@ ENTITY {
         height = 192,
         shift = util.by_pixel(0, -32),
     },
-    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     localised_name = {'entity-name.solar-tower-panel'}
 }
 
