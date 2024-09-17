@@ -62,48 +62,50 @@ ENTITY {
 			},
 		},
 	max_power_output = "40MW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/rtg/raw.png",
-                width = 320,
-                height = 384,
-                frame_count = 1,
-                line_length = 1,
-                scale = 0.5,
-                shift = util.by_pixel(0, -16)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/rtg/l.png",
-                width = 320,
-                height = 384,
-                frame_count = 1,
-                draw_as_light = true,
-                line_length = 1,
-                scale = 0.5,
-                shift = util.by_pixel(0, -16)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/rtg/g.png",
-                width = 320,
-                height = 384,
-                frame_count = 1,
-                draw_as_glow = true,
-                line_length = 1,
-                scale = 0.5,
-                shift = util.by_pixel(0, -16)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/rtg/sh.png",
-                width = 375,
-                height = 192,
-                frame_count = 1,
-                line_length = 1,
-                draw_as_shadow = true,
-                scale = 0.5,
-                shift = util.by_pixel(16, 32)
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/rtg/raw.png",
+                    width = 320,
+                    height = 384,
+                    frame_count = 1,
+                    line_length = 1,
+                    scale = 0.5,
+                    shift = util.by_pixel(0, -16)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/rtg/l.png",
+                    width = 320,
+                    height = 384,
+                    frame_count = 1,
+                    draw_as_light = true,
+                    line_length = 1,
+                    scale = 0.5,
+                    shift = util.by_pixel(0, -16)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/rtg/g.png",
+                    width = 320,
+                    height = 384,
+                    frame_count = 1,
+                    draw_as_glow = true,
+                    line_length = 1,
+                    scale = 0.5,
+                    shift = util.by_pixel(0, -16)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/rtg/sh.png",
+                    width = 375,
+                    height = 192,
+                    frame_count = 1,
+                    line_length = 1,
+                    draw_as_shadow = true,
+                    scale = 0.5,
+                    shift = util.by_pixel(16, 32)
+                },
+            }
+        },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
   }

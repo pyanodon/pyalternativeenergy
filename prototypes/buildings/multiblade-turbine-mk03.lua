@@ -62,47 +62,49 @@ local proto = ENTITY {
         apparent_volume = 2.5
     },
     continuous_animation = true,
-    animations = {
-        layers = {
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png',
-                width = 288,
-                height = 288,
-                line_length = 1,
-                frame_count = 1,
-                repeat_count = 30,
-                animation_speed = 0.5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/r4.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -32),
-                animation_speed = 0.25,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s4.png",
-                width = 320,
-                height = 224,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(44, 16),
-                animation_speed = 0.25,
-                draw_as_shadow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/l4.png",
-                width = 288,
-                height = 352,
-                line_length = 6,
-                frame_count = 30,
-                shift = util.by_pixel(0, -32),
-                animation_speed = 0.25,
-                draw_as_glow = true,
-            },
-        }
+    graphics_set = {
+        animations = {
+            layers = {
+                {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png',
+                    width = 288,
+                    height = 288,
+                    line_length = 1,
+                    frame_count = 1,
+                    repeat_count = 30,
+                    animation_speed = 0.5,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/r4.png",
+                    width = 288,
+                    height = 352,
+                    line_length = 6,
+                    frame_count = 30,
+                    shift = util.by_pixel(0, -32),
+                    animation_speed = 0.25,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s4.png",
+                    width = 320,
+                    height = 224,
+                    line_length = 6,
+                    frame_count = 30,
+                    shift = util.by_pixel(44, 16),
+                    animation_speed = 0.25,
+                    draw_as_shadow = true,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/l4.png",
+                    width = 288,
+                    height = 352,
+                    line_length = 6,
+                    frame_count = 30,
+                    shift = util.by_pixel(0, -32),
+                    animation_speed = 0.25,
+                    draw_as_glow = true,
+                },
+            }
+        },
     },
     localised_name = {'entity-name.multiblade-turbine-mk03'},
     localised_description = {'entity-description.multiblade-turbine-mk03'}

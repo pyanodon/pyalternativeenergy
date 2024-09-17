@@ -61,39 +61,41 @@ local proto = ENTITY {
         apparent_volume = 2.5
     },
     continuous_animation = true,
-    animations = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/r4.png",
-                width = 352,
-                height = 416,
-                frame_count = 1,
-                shift = util.by_pixel(0, -64),
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/a4.png",
-                width = 352,
-                height = 416,
-                frame_count = 1,
-                shift = util.by_pixel(0, -64),
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/s4.png",
-                width = 352,
-                height = 256,
-                frame_count = 1,
-                shift = util.by_pixel(50, 25),
-                draw_as_shadow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/l4.png",
-                width = 352,
-                height = 416,
-                frame_count = 1,
-                shift = util.by_pixel(0, -64),
-                draw_as_glow = true,
-            },
-        }
+    graphics_set = {
+        animations = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/r4.png",
+                    width = 352,
+                    height = 416,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -64),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/a4.png",
+                    width = 352,
+                    height = 416,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -64),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/s4.png",
+                    width = 352,
+                    height = 256,
+                    frame_count = 1,
+                    shift = util.by_pixel(50, 25),
+                    draw_as_shadow = true,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk04/l4.png",
+                    width = 352,
+                    height = 416,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -64),
+                    draw_as_glow = true,
+                },
+            }
+        },
     },
     localised_name = {'entity-name.hawt-turbine-mk04'},
     localised_description = {'entity-description.hawt-turbine-mk04'}

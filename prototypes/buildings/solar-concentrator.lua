@@ -60,113 +60,115 @@ ENTITY {
         }
     },
     energy_usage = '60MW',
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/off.png',
-                width = 416,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(0, -16)
+                effect = 'uranium-glow',
+                fadeout = true,
+                light = {intensity = 1.3, size = 30, shift = {0.0, 0.0}, color = {r = 0.584, g = 1.0, b = 1.0}}
             },
             {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/sh.png',
-                width = 448,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(16, -16),
-                draw_as_shadow = true,
+                north_position = util.by_pixel(-96, 16),
+                west_position = util.by_pixel(-96, 16),
+                south_position = util.by_pixel(-96, 16),
+                east_position = util.by_pixel(-96, 16),
+                animation = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/flash-left.png',
+                    frame_count = 50,
+                    line_length = 10,
+                    width = 160,
+                    height = 320,
+                    animation_speed = 0.3,
+                    --draw_as_glow = true,
+                }
             },
-        }
-    },
-    working_visualisations = {
-        {
-            effect = 'uranium-glow',
-            fadeout = true,
-            light = {intensity = 1.3, size = 30, shift = {0.0, 0.0}, color = {r = 0.584, g = 1.0, b = 1.0}}
+            {
+                north_position = util.by_pixel(64, 16),
+                west_position = util.by_pixel(64, 16),
+                south_position = util.by_pixel(64, 16),
+                east_position = util.by_pixel(64, 16),
+                animation = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/flash-right.png',
+                    frame_count = 50,
+                    line_length = 10,
+                    width = 160,
+                    height = 320,
+                    animation_speed = 0.3,
+                    --draw_as_glow = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(-144, -64),
+                west_position = util.by_pixel(-144, -64),
+                south_position = util.by_pixel(-144, -64),
+                east_position = util.by_pixel(-144, -64),
+                animation = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-left.png',
+                    frame_count = 50,
+                    line_length = 10,
+                    width = 128,
+                    height = 352,
+                    animation_speed = 0.3,
+                    blend_mode = 'additive',
+                    draw_as_glow = true,
+                    effect = 'uranium-glow',
+                    fadeout = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(-16, -64),
+                west_position = util.by_pixel(-16, -64),
+                south_position = util.by_pixel(-16, -64),
+                east_position = util.by_pixel(-16, -64),
+                animation = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-mid.png',
+                    frame_count = 50,
+                    line_length = 10,
+                    width = 128,
+                    height = 352,
+                    animation_speed = 0.3,
+                    blend_mode = 'additive',
+                    draw_as_glow = true,
+                    effect = 'uranium-glow',
+                    fadeout = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(112, -64),
+                west_position = util.by_pixel(112, -64),
+                south_position = util.by_pixel(112, -64),
+                east_position = util.by_pixel(112, -64),
+                animation = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-right.png',
+                    frame_count = 50,
+                    line_length = 10,
+                    width = 128,
+                    height = 352,
+                    animation_speed = 0.3,
+                    blend_mode = 'additive',
+                    draw_as_glow = true,
+                    effect = 'uranium-glow',
+                    fadeout = true,
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(-96, 16),
-            west_position = util.by_pixel(-96, 16),
-            south_position = util.by_pixel(-96, 16),
-            east_position = util.by_pixel(-96, 16),
-            animation = {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/flash-left.png',
-                frame_count = 50,
-                line_length = 10,
-                width = 160,
-                height = 320,
-                animation_speed = 0.3,
-                --draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(64, 16),
-            west_position = util.by_pixel(64, 16),
-            south_position = util.by_pixel(64, 16),
-            east_position = util.by_pixel(64, 16),
-            animation = {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/flash-right.png',
-                frame_count = 50,
-                line_length = 10,
-                width = 160,
-                height = 320,
-                animation_speed = 0.3,
-                --draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(-144, -64),
-            west_position = util.by_pixel(-144, -64),
-            south_position = util.by_pixel(-144, -64),
-            east_position = util.by_pixel(-144, -64),
-            animation = {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-left.png',
-                frame_count = 50,
-                line_length = 10,
-                width = 128,
-                height = 352,
-                animation_speed = 0.3,
-                blend_mode = 'additive',
-                draw_as_glow = true,
-                effect = 'uranium-glow',
-                fadeout = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(-16, -64),
-            west_position = util.by_pixel(-16, -64),
-            south_position = util.by_pixel(-16, -64),
-            east_position = util.by_pixel(-16, -64),
-            animation = {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-mid.png',
-                frame_count = 50,
-                line_length = 10,
-                width = 128,
-                height = 352,
-                animation_speed = 0.3,
-                blend_mode = 'additive',
-                draw_as_glow = true,
-                effect = 'uranium-glow',
-                fadeout = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(112, -64),
-            west_position = util.by_pixel(112, -64),
-            south_position = util.by_pixel(112, -64),
-            east_position = util.by_pixel(112, -64),
-            animation = {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/l-right.png',
-                frame_count = 50,
-                line_length = 10,
-                width = 128,
-                height = 352,
-                animation_speed = 0.3,
-                blend_mode = 'additive',
-                draw_as_glow = true,
-                effect = 'uranium-glow',
-                fadeout = true,
+        animation = {
+            layers = {
+                {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/off.png',
+                    width = 416,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -16)
+                },
+                {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/solar-concentrator/sh.png',
+                    width = 448,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -16),
+                    draw_as_shadow = true,
+                },
             }
         },
     },

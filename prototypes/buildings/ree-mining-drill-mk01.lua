@@ -75,28 +75,30 @@ ENTITY {
     circuit_wire_connection_points = circuit_connector_definitions["ree-mining-drill-mkxx"].points,
     circuit_connector_sprites = circuit_connector_definitions["ree-mining-drill-mkxx"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    animations = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/ree-mining-drill/ree-mining-drill-mk01.png",
-                width = 160,
-                height = 184,
-                line_length = 10,
-                frame_count = 90,
-                animation_speed = 0.3,
-                shift = util.by_pixel(-0, -16),
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/ree-mining-drill/sh.png",
-                width = 172,
-                height = 144,
-                line_length = 10,
-                frame_count = 90,
-                draw_as_shadow = true,
-                animation_speed = 0.3,
-                shift = util.by_pixel(8, 5),
-            },
-        }
+    graphics_set = {
+        animations = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/ree-mining-drill/ree-mining-drill-mk01.png",
+                    width = 160,
+                    height = 184,
+                    line_length = 10,
+                    frame_count = 90,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(-0, -16),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/ree-mining-drill/sh.png",
+                    width = 172,
+                    height = 144,
+                    line_length = 10,
+                    frame_count = 90,
+                    draw_as_shadow = true,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(8, 5),
+                },
+            }
+        },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {

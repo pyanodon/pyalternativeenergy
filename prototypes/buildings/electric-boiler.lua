@@ -121,54 +121,56 @@ ENTITY {
         },
         max_sounds_per_type = 3
     },
-    animation = {
-        layers = {
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png',
-                priority = 'extra-high',
-                width = 96,
-                height = 224,
-                shift = util.by_pixel(0, -64),
-            },
-            {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png',
-                priority = 'extra-high',
-                width = 160,
-                height = 64,
-                draw_as_shadow = true,
-                shift = util.by_pixel(32, 16),
-            },
-        }
-    },
-    working_visualisations = {{
-        fadeout = true,
-        constant_speed = true,
+    graphics_set = {
+        working_visualisations = {{
+            fadeout = true,
+            constant_speed = true,
+            animation = {
+                layers = {
+                    {
+                        filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png',
+                        priority = 'low',
+                        frame_count = 40,
+                        line_length = 8,
+                        width = 96,
+                        height = 128,
+                        animation_speed = 0.8,
+                        shift = util.by_pixel(-0, -112)
+                    },
+                    {
+                        filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png',
+                        priority = 'low',
+                        frame_count = 40,
+                        line_length = 8,
+                        width = 96,
+                        height = 128,
+                        animation_speed = 0.8,
+                        draw_as_glow = true,
+                        shift = util.by_pixel(-0, -112)
+                    }
+                }
+            }
+        }},
         animation = {
             layers = {
                 {
-                    filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png',
-                    priority = 'low',
-                    frame_count = 40,
-                    line_length = 8,
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/raw.png',
+                    priority = 'extra-high',
                     width = 96,
-                    height = 128,
-                    animation_speed = 0.8,
-                    shift = util.by_pixel(-0, -112)
+                    height = 224,
+                    shift = util.by_pixel(0, -64),
                 },
                 {
-                    filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/glow.png',
-                    priority = 'low',
-                    frame_count = 40,
-                    line_length = 8,
-                    width = 96,
-                    height = 128,
-                    animation_speed = 0.8,
-                    draw_as_glow = true,
-                    shift = util.by_pixel(-0, -112)
-                }
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/electric-boiler/sh.png',
+                    priority = 'extra-high',
+                    width = 160,
+                    height = 64,
+                    draw_as_shadow = true,
+                    shift = util.by_pixel(32, 16),
+                },
             }
-        }
-    }},
+        },
+    },
     module_specification = {
         module_slots = 3
     },
