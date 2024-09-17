@@ -21,14 +21,14 @@ end
 ---@param position {x: integer, y: integer} the position to check against the radius
 ---@param cover_count integer the number of glass covers to add or remove from the power generated
 local function update_parent_tower(position, cover_count)
-    local parent = (global.solar_updraft_towers[Solar_Updraft_Tower.last_unit or -1] or {}).entity
+    local parent = (storage.solar_updraft_towers[Solar_Updraft_Tower.last_unit or -1] or {}).entity
     -- Check our last-used tower
     if parent and is_in_radius(parent.position, position, Thermosolar.tower_range) then
         goto continue
     else
         parent = nil
     end
-    for unit_id, tower_data in pairs(global.solar_updraft_towers) do
+    for unit_id, tower_data in pairs(storage.solar_updraft_towers) do
         if is_in_radius(tower_data.entity.position, position, Thermosolar.tower_range) then
             parent = tower_data.entity
             Solar_Updraft_Tower.last_unit = unit_id
@@ -46,13 +46,13 @@ end
 ---@param additional_cover_count integer? the amount of covers to add or remove from the power the tower generated. If <i>nil</i>, the radius is searched and the tiles are re-counted
 function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_count)
     if not tower then
-        for _, tower_data in pairs(global.solar_updraft_towers) do
+        for _, tower_data in pairs(storage.solar_updraft_towers) do
             Solar_Updraft_Tower.update_power_generation(tower_data.entity)
         end
         return
     end
 
-    local tower_data = global.solar_updraft_towers[tower.unit_number]
+    local tower_data = storage.solar_updraft_towers[tower.unit_number]
     if not tower_data then return end
 
     if additional_cover_count then
@@ -64,7 +64,7 @@ function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_cou
     tower.power_production = tower_data.max_production * Thermosolar.calc_daylight(tower.surface)
 	tower.electric_buffer_size = tower.power_production
 
-    global.update_sut_guis = true
+    storage.update_sut_guis = true
 end
 
 Solar_Updraft_Tower.events.on_build_tile = function(event)
@@ -143,12 +143,12 @@ Solar_Updraft_Tower.events.on_built = function(event)
 
     local placement_restriction = surface.create_entity{name = 'sut-placement-distance', position = entity.position, force = entity.force}
     placement_restriction.destructible = false
-    global.solar_updraft_towers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0}
+    storage.solar_updraft_towers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0}
     Solar_Updraft_Tower.update_power_generation(entity)
 end
 
 Solar_Updraft_Tower.events[60] = function()
-    for _, tower_data in pairs(global.solar_updraft_towers) do
+    for _, tower_data in pairs(storage.solar_updraft_towers) do
         local entity = tower_data.entity
         local surface = entity.surface
         local activity = Thermosolar.calc_daylight(surface)
@@ -165,18 +165,18 @@ Solar_Updraft_Tower.events[60] = function()
 	    entity.electric_buffer_size = entity.power_production
     end
 
-    if global.update_sut_guis then
+    if storage.update_sut_guis then
         Solar_Updraft_Tower.update_all_guis()
     end
 end
 
 Solar_Updraft_Tower.events.on_destroyed = function(event)
     local entity = event.entity
-    local tower_data = global.solar_updraft_towers[entity.unit_number]
+    local tower_data = storage.solar_updraft_towers[entity.unit_number]
     if not tower_data then return end
     if tower_data.placement_restriction.valid then tower_data.placement_restriction.destroy() end
-    global.solar_updraft_towers[entity.unit_number] = nil
-    global.update_sut_guis = not not next(global.solar_updraft_towers)
+    storage.solar_updraft_towers[entity.unit_number] = nil
+    storage.update_sut_guis = not not next(storage.solar_updraft_towers)
 end
 
 Solar_Updraft_Tower.events.on_gui_opened = function(event)
@@ -228,7 +228,7 @@ Solar_Updraft_Tower.events.on_gui_closed = function(event)
 end
 
 function Solar_Updraft_Tower.update_gui(gui)
-	local tower_data = global.solar_updraft_towers[gui.tags.unit_number]
+	local tower_data = storage.solar_updraft_towers[gui.tags.unit_number]
 	if not tower_data then gui.destroy(); return end
 	local content_flow = gui.content_frame.content_flow
     local surface = tower_data.entity.surface

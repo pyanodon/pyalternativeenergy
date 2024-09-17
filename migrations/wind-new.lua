@@ -1,4 +1,4 @@
-if global.windmill then return end -- Make sure not to run this twice
+if storage.windmill then return end -- Make sure not to run this twice
 
 local targets = {}
 local collision_targets = {}
@@ -15,9 +15,9 @@ for _, turbine_type in pairs({'hawt', 'vawt', 'multiblade'}) do
 end
 
 -- Clear out the existing global state
--- global.windmills is 2 versions ago
-global.windmill = {}
-global.windmills = nil
+-- storage.windmills is 2 versions ago
+storage.windmill = {}
+storage.windmills = nil
 
 for _, surface in pairs(game.surfaces) do
     -- Yeet the collision boxes

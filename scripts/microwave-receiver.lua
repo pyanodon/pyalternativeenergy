@@ -5,18 +5,18 @@ Microwave_Receiver.max_satellites_per_receiver = 15
 Microwave_Receiver.power_production_per_satellite = 80000
 
 Microwave_Receiver.events.on_init = function()
-	global.microwave_receivers = global.microwave_receivers or {}
+	storage.microwave_receivers = storage.microwave_receivers or {}
 end
 
 function Microwave_Receiver.recalc_satellite_distribution(force)
 	local total_launched = force.get_item_launched('microwave-satellite')
 	local total_receivers = 0
-	for _, microwave_data in pairs(global.microwave_receivers) do
+	for _, microwave_data in pairs(storage.microwave_receivers) do
 		if microwave_data.force == force then total_receivers = total_receivers + 1 end
 	end
 	local average_satellites = math.min(Microwave_Receiver.max_satellites_per_receiver, math.ceil(total_launched / total_receivers))
 
-	for _, microwave_data in pairs(global.microwave_receivers) do
+	for _, microwave_data in pairs(storage.microwave_receivers) do
 		if total_launched >= average_satellites then
 			microwave_data.allocated_satellites = average_satellites
 			total_launched = total_launched - average_satellites
@@ -41,14 +41,14 @@ end
 Microwave_Receiver.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
 	if entity.name ~= 'microwave-receiver' then return end
-	global.microwave_receivers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force}
+	storage.microwave_receivers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force}
 	Microwave_Receiver.recalc_satellite_distribution(entity.force)
 end
 
 Microwave_Receiver.events.on_destroyed = function(event)
 	local entity = event.entity
 	if entity.name ~= 'microwave-receiver' then return end
-	global.microwave_receivers[entity.unit_number] = nil
+	storage.microwave_receivers[entity.unit_number] = nil
 	Microwave_Receiver.recalc_satellite_distribution(entity.force)
 end
 
@@ -108,7 +108,7 @@ end
 function Microwave_Receiver.update_gui(gui)
 	local force = game.forces[gui.tags.force]
 	if not force or not force.valid then return end
-	local microwave_data = global.microwave_receivers[gui.tags.unit_number]
+	local microwave_data = storage.microwave_receivers[gui.tags.unit_number]
 	if not microwave_data then gui.destroy(); return end
 	local content_flow = gui.content_frame.content_flow
 
@@ -122,7 +122,7 @@ function Microwave_Receiver.update_gui(gui)
 	content_flow.total_launched.caption = {'microwave-receiver-gui.launched-satellites', force.get_item_launched('microwave-satellite')}
 
 	local total_built = 0
-	for _, microwave_data in pairs(global.microwave_receivers) do
+	for _, microwave_data in pairs(storage.microwave_receivers) do
 		if microwave_data.force == force then total_built = total_built + 1 end
 	end
 	content_flow.total_built.caption = {'microwave-receiver-gui.total-receivers', total_built}
