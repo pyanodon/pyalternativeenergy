@@ -81,19 +81,19 @@ Wind.events.on_built = function(event)
         end
 
         local tick = game.tick
-        local last_message = global._last_cancel_creation_message or 0
+        local last_message = storage._last_cancel_creation_message or 0
         if last_message + seconds(1) < tick then
             surface.create_entity{
                 name = 'flying-text',
                 position = position,
                 text = {
                     'cant-build-reason.entity-in-the-way',
-                    (global._last_failed_airspace or '')
+                    (storage._last_failed_airspace or '')
                 },
                 render_player_index = player_index,
                 color = {255, 255, 255},
             }
-            global._last_cancel_creation_message = game.tick
+            storage._last_cancel_creation_message = game.tick
         end
 
         entity.destroy()
@@ -122,7 +122,7 @@ Wind.events.on_built = function(event)
         Wind.draw_windmill(entry, Wind.calculate_wind_direction(game.surfaces['nauvis']))
     end
 
-    global.windmill[entry.entity.unit_number] = entry
+    storage.windmill[entry.entity.unit_number] = entry
     Wind.update_power_generation(entry, Wind.calculate_wind_speed())
 end
 
@@ -150,7 +150,7 @@ Wind.events.on_script_trigger_effect = function(event)
     end
 
     if managed_turbines[target.name] and not positions_equal(target.position, source.position) then
-        global._last_failed_airspace = target.localised_name or ('entity-name.' .. target.name)
+        storage._last_failed_airspace = target.localised_name or ('entity-name.' .. target.name)
         local surface = target.surface
         local source_box, target_box = source.bounding_box, target.bounding_box
         local ttl = seconds(3)
@@ -186,13 +186,13 @@ end
 Wind.events.on_destroyed = function(event)
     local entity = event.entity
     if not managed_turbines[entity.name] then return end
-    local entry = global.windmill[entity.unit_number]
+    local entry = storage.windmill[entity.unit_number]
     _ = entry and entry.collision and entry.collision.valid and entry.collision.destroy()
-    global.windmill[entity.unit_number] = nil
+    storage.windmill[entity.unit_number] = nil
 end
 
 Wind.events.on_init = function(event)
-    global.windmill = global.windmill or {}
+    storage.windmill = storage.windmill or {}
 end
 
 function Wind.draw_windmill(windmill_data, direction)
@@ -250,11 +250,11 @@ Wind.events[61] = function()
     local wind_speed = Wind.calculate_wind_speed()
     local direction = Wind.calculate_wind_direction(game.surfaces['nauvis'])
 
-    local key, details = global.last_windmill, nil
+    local key, details = storage.last_windmill, nil
     local max_iter = 0
     repeat
         max_iter = max_iter + 1
-        key, details = next(global.windmill, key)
+        key, details = next(storage.windmill, key)
         -- Empty table or end of list
         if not key or not details then
             break
@@ -267,8 +267,8 @@ Wind.events[61] = function()
         else
             _ = details.collision.valid and details.collision.destroy()
             _ = details.anim_id and rendering.destroy(details.anim_id)
-            global.windmill[key] = nil
+            storage.windmill[key] = nil
         end
     until max_iter > 101
-    global.last_windmill = key
+    storage.last_windmill = key
 end

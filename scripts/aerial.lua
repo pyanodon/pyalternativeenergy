@@ -2,7 +2,7 @@ Aerial = {}
 Aerial.events = {}
 
 ---@diagnostic disable-next-line: unknown-cast-variable
----@cast global.aerials AerialsGlobalData
+---@cast storage.aerials AerialsGlobalData
 
 ---@class AerialsGlobalData Global data for the Aerials system
 ---@field poles AerialPolesTable
@@ -154,14 +154,14 @@ local function exists_and_valid(x)
     return x and x.valid
 end
 
----Increments the turbine count in global.aerials.turbine_count
+---Increments the turbine count in storage.aerials.turbine_count
 ---@param network_id integer network ID of the turbine
 ---@param turbine_name string entity name of the turbine
 ---@param increment integer? amount to increment the count by (can be negative to decrement)
 ---@param skip_capacity_update boolean? skip updating the accumulator capacity
 local function increment_turbine_count(network_id, turbine_name, increment, skip_capacity_update)
     increment = increment or 1
-    local network_turbines = global.aerials.aerial_counts[network_id]
+    local network_turbines = storage.aerials.aerial_counts[network_id]
     -- If the increment puts it below 0, put it *at* 0
     local new_count = math.max((network_turbines[turbine_name] or 0) + increment, 0)
     network_turbines[turbine_name] = new_count
@@ -169,7 +169,7 @@ local function increment_turbine_count(network_id, turbine_name, increment, skip
     if skip_capacity_update then
         return
     end
-    local accumulator = global.aerials.accumulators[network_id][turbine_name]
+    local accumulator = storage.aerials.accumulators[network_id][turbine_name]
     if accumulator and accumulator.valid then
         accumulator.electric_buffer_size = buffer_capacities[turbine_name] * new_count
     end
@@ -184,17 +184,17 @@ local function verify_neighbours(pole_entity)
     end
     for _, entity in pairs(neighbours) do
         if entity.valid and entity.type == 'electric-pole' then
-            local pole_data = global.aerials.poles[entity.unit_number]
+            local pole_data = storage.aerials.poles[entity.unit_number]
             -- No record of this pole
             if not pole_data then
-                global.aerials.refresh_networks = true
+                storage.aerials.refresh_networks = true
                 break
             end
             local network_id = entity.electric_network_id
             -- Pole has switched networks
             if network_id then
                 if pole_data and pole_data.network_id ~= network_id then
-                    global.aerials.refresh_networks = true
+                    storage.aerials.refresh_networks = true
                     break
                 end
             end
@@ -213,11 +213,11 @@ local function add_pole(pole_entity)
     local pole = {
         entity = pole_entity,
         network_id = network_id,
-        list_index = #global.aerials.poles_by_network[network_id] + 1,
+        list_index = #storage.aerials.poles_by_network[network_id] + 1,
         unit_number = unit_number
     }
-    global.aerials.poles[unit_number] = pole
-    global.aerials.poles_by_network[network_id][pole.list_index] = pole
+    storage.aerials.poles[unit_number] = pole
+    storage.aerials.poles_by_network[network_id][pole.list_index] = pole
     verify_neighbours(pole_entity)
 end
 
@@ -227,11 +227,11 @@ local get_first_pole -- definition order because we call it below
 ---Removes any orphaned accumulators if the electric network is now empty.
 ---@param pole_data AerialPolesTableEntry the data structure of the pole to be removed
 local function remove_pole(pole_data)
-    local network_poles = global.aerials.poles_by_network[pole_data.network_id]
+    local network_poles = storage.aerials.poles_by_network[pole_data.network_id]
     local target_index = pole_data.list_index
     local final_index = #network_poles
     -- Remove from the master list
-    global.aerials.poles[pole_data.unit_number] = nil
+    storage.aerials.poles[pole_data.unit_number] = nil
     -- If it's not the last pole on the network, shift the final index to the now-free index
     -- This maintains a contiguous table
     if target_index ~= final_index then
@@ -241,7 +241,7 @@ local function remove_pole(pole_data)
     network_poles[final_index] = nil
     -- Remove or migrate the accumulators
     local network_id = pole_data.network_id
-    local network_accumulators = global.aerials.accumulators[network_id]
+    local network_accumulators = storage.aerials.accumulators[network_id]
     for name, accumulator in pairs(network_accumulators) do
         if accumulator.valid then
             local new_id = accumulator.electric_network_id
@@ -249,8 +249,8 @@ local function remove_pole(pole_data)
             if new_id then
                 if new_id == network_id then
                     goto next_accumulator
-                elseif not global.aerials.accumulators[new_id][name] and #global.aerials.poles_by_network[new_id] > 0 then
-                    global.aerials.accumulators[new_id][name] = accumulator
+                elseif not storage.aerials.accumulators[new_id][name] and #storage.aerials.poles_by_network[new_id] > 0 then
+                    storage.aerials.accumulators[new_id][name] = accumulator
                     network_accumulators[name] = nil
                     goto next_accumulator
                 end
@@ -271,17 +271,17 @@ local function remove_pole(pole_data)
                     if new_id then
                         -- ended up on a different network, somehow
                         if new_id ~= network_id then
-                            local old_accumulator = global.aerials.accumulators[new_id][name]
+                            local old_accumulator = storage.aerials.accumulators[new_id][name]
                             -- if there's no existing accumulator, it just takes that place
                             if not old_accumulator or not old_accumulator.valid then
-                                global.aerials.accumulators[new_id][name] = accumulator
+                                storage.aerials.accumulators[new_id][name] = accumulator
                                 network_accumulators[name] = nil
                                 goto next_accumulator
                             else -- otherwise we empty our accumulator and yeet it
                                 old_accumulator.energy = old_accumulator.energy + accumulator.energy
                             end
                         else -- ended up on our desired network, ez
-                            global.aerials.accumulators[new_id][name] = accumulator
+                            storage.aerials.accumulators[new_id][name] = accumulator
                             goto next_accumulator
                         end
                     end
@@ -307,7 +307,7 @@ end
 get_first_pole = function(network_id)
     local first_pole
     repeat
-        first_pole = global.aerials.poles_by_network[network_id][1]
+        first_pole = storage.aerials.poles_by_network[network_id][1]
         -- empty table
         if not first_pole then
             break
@@ -330,16 +330,16 @@ end
 local function get_or_create_accumulator(aerial_entity, network_override)
     local name = aerial_entity.name
     if network_override then
-        local accumulator = global.aerials.accumulators[network_override][name]
+        local accumulator = storage.aerials.accumulators[network_override][name]
         -- There's already an accumulator on this network
         if accumulator and accumulator.valid then
             local network_id = accumulator.electric_network_id
             if network_id ~= network_override then
                 -- If it has a network, migrate it if there isn't an accumulator on that network
                 if network_id then
-                    local old_accumulator = global.aerials.accumulators[network_id][name]
+                    local old_accumulator = storage.aerials.accumulators[network_id][name]
                     if not old_accumulator or not old_accumulator.valid then
-                        global.aerials.accumulators[network_id][name] = accumulator
+                        storage.aerials.accumulators[network_id][name] = accumulator
                     else
                         -- Transfer the power from the accumulator we're about to destroy
                         old_accumulator.energy = old_accumulator.energy + accumulator.energy
@@ -350,7 +350,7 @@ local function get_or_create_accumulator(aerial_entity, network_override)
                     accumulator.destroy()
                 end
                 -- remove this accumulator from the old network id, it's either changed or invalid
-                global.aerials.accumulators[network_override][name] = nil
+                storage.aerials.accumulators[network_override][name] = nil
                 -- retry
                 return get_or_create_accumulator(aerial_entity, network_override)
             else
@@ -384,19 +384,19 @@ local function get_or_create_accumulator(aerial_entity, network_override)
                 local unit_id = aerial_entity.unit_number
                 log(string.format("Accumulator created for network %d (turbine ID %d) ended up on network %d at [%.2f, %.2f]", network_override, unit_id, network_id, position.x, position.y))
                 -- Migrate the aerial to the new network - it's highly likely the old network isn't usable
-                global.aerials.aerial_data[unit_id].network_id = network_id
+                storage.aerials.aerial_data[unit_id].network_id = network_id
                 increment_turbine_count(network_id, name, -1)
                 increment_turbine_count(network_override, name, 1)
                 -- Check if the network already has an accumulator that we've now duplicated
-                local old_accumulator = global.aerials.accumulators[network_id][name]
+                local old_accumulator = storage.aerials.accumulators[network_id][name]
                 if old_accumulator and old_accumulator.valid then -- Destroy and return the existing accumulator if so
                     accumulator.destroy()
                     return old_accumulator
                 end
             end
             -- otherwise, continue on
-            global.aerials.accumulators[network_id][name] = accumulator
-            accumulator.electric_buffer_size = buffer_capacities[name] * (global.aerials.aerial_counts[network_id][name] or 0)
+            storage.aerials.accumulators[network_id][name] = accumulator
+            accumulator.electric_buffer_size = buffer_capacities[name] * (storage.aerials.aerial_counts[network_id][name] or 0)
             return accumulator
         else
             accumulator.destroy()
@@ -417,7 +417,7 @@ local function get_or_create_accumulator(aerial_entity, network_override)
         accumulator.power_usage = 0
         local network_id = accumulator.electric_network_id
         if network_id then
-            local parent = global.aerials.accumulators[network_id][name]
+            local parent = storage.aerials.accumulators[network_id][name]
             if parent and parent.valid and parent ~= accumulator then
                 -- We accidentally made an accumulator on a network that already has one!
                 accumulator.destroy()
@@ -429,8 +429,8 @@ local function get_or_create_accumulator(aerial_entity, network_override)
                 if first_pole then
                     accumulator.teleport(first_pole.position)
                 end
-                global.aerials.accumulators[network_id][name] = accumulator
-                accumulator.electric_buffer_size = buffer_capacities[name] * (global.aerials.aerial_counts[network_id][name] or 0)
+                storage.aerials.accumulators[network_id][name] = accumulator
+                accumulator.electric_buffer_size = buffer_capacities[name] * (storage.aerials.aerial_counts[network_id][name] or 0)
                 return accumulator
             end
         else
@@ -449,16 +449,16 @@ end
 
 ---Rebuilds/verifies the the global aerial pole, turbine, and accumulator data
 local function refresh_networks()
-    global.aerials.refresh_networks = false
+    storage.aerials.refresh_networks = false
     -- First, clear and rebuild our stored poles
-    global.aerials.poles = {}
-    global.aerials.poles_by_network = solid_table()
+    storage.aerials.poles = {}
+    storage.aerials.poles_by_network = solid_table()
     for _, surface in pairs(game.surfaces) do
         for _, pole in pairs(surface.find_entities_filtered({type = 'electric-pole'})) do
             local network_id = pole.electric_network_id
             if network_id then
                 -- One is an array, one is a list. This allows ease of selecting a random pole.
-                local index = #global.aerials.poles_by_network[network_id] + 1
+                local index = #storage.aerials.poles_by_network[network_id] + 1
                 local unit_number = pole.unit_number
                 local pole_data = {
                     entity = pole,
@@ -466,15 +466,15 @@ local function refresh_networks()
                     network_id = network_id,
                     unit_number = unit_number
                 }
-                global.aerials.poles[unit_number] = pole_data
-                global.aerials.poles_by_network[network_id][index] = pole_data
+                storage.aerials.poles[unit_number] = pole_data
+                storage.aerials.poles_by_network[network_id][index] = pole_data
             end
         end
     end
 
     -- Second, clear and rebuild the count data for our turbines and rectify their network_id vs their target network_id
-    global.aerials.aerial_counts = solid_table()
-    for _, aerial in pairs(global.aerials.aerial_data) do
+    storage.aerials.aerial_counts = solid_table()
+    for _, aerial in pairs(storage.aerials.aerial_data) do
         -- Check if the aerial is invalid
         if not aerial.entity or not aerial.entity.valid then
             goto continue
@@ -496,8 +496,8 @@ local function refresh_networks()
     end
 
     -- Third, remove any orphaned accumulators and update the capacity of the rest
-    for network_id, network_accumulators in pairs(global.aerials.accumulators) do
-        local network_pole_count = #global.aerials.poles_by_network[network_id]
+    for network_id, network_accumulators in pairs(storage.aerials.accumulators) do
+        local network_pole_count = #storage.aerials.poles_by_network[network_id]
         for accumulator_name, accumulator in pairs(network_accumulators) do
             if not accumulator.valid then
                 network_accumulators[accumulator_name] = nil
@@ -507,7 +507,7 @@ local function refresh_networks()
             local new_id = accumulator.electric_network_id
             if new_id ~= network_id then
                 if new_id then -- migrate any remaining charge
-                    local new_accumulator = global.aerials.accumulators[new_id][accumulator_name]
+                    local new_accumulator = storage.aerials.accumulators[new_id][accumulator_name]
                     if new_accumulator and new_accumulator.valid then
                         new_accumulator.energy = new_accumulator.energy + accumulator.energy
                     end
@@ -522,7 +522,7 @@ local function refresh_networks()
                 network_accumulators[accumulator_name] = nil
                 goto continue
             end
-            local turbine_count = global.aerials.aerial_counts[network_id][accumulator_name] or 0
+            local turbine_count = storage.aerials.aerial_counts[network_id][accumulator_name] or 0
             if turbine_count == 0 then
                 accumulator.destroy()
                 network_accumulators[accumulator_name] = nil
@@ -545,12 +545,12 @@ end
 Aerial.events.on_init = function()
     -- Create or import our global structure. Newline below because otherwise luals thinks this is a description for the global var :/
 
-    if global.aerials and not global.aerials.aerial_counts then
-        global.aerials = nil
+    if storage.aerials and not storage.aerials.aerial_counts then
+        storage.aerials = nil
     end
 
     ---@type AerialsGlobalData Global data structure for Aerials
-    global.aerials = global.aerials or {
+    storage.aerials = storage.aerials or {
         poles = {},
         poles_by_network = solid_table(),
         accumulators = solid_table(),
@@ -568,7 +568,7 @@ Aerial.events.on_init = function()
     end
     -- build a list of our entities to keep
     local entities_to_keep = {}
-    for _, network_contents in pairs(global.aerials.accumulators) do
+    for _, network_contents in pairs(storage.aerials.accumulators) do
         for _, accumulator_entity in pairs(network_contents) do
             if accumulator_entity.valid then
                 entities_to_keep[accumulator_entity.unit_number] = true
@@ -598,7 +598,7 @@ end
 ---@param electric_network_id integer electric network ID to count for
 ---@return integer # total turbine count
 local function count_turbines_for_network(electric_network_id)
-    local per_network = global.aerials.aerial_counts[electric_network_id]
+    local per_network = storage.aerials.aerial_counts[electric_network_id]
     local sum = 0
     for _, count in pairs(per_network) do
         sum = sum + count
@@ -686,7 +686,7 @@ local function validate_base(base, unit_number)
             end
             chest.destroy()
         end
-        global.aerials.base_data[unit_number] = nil
+        storage.aerials.base_data[unit_number] = nil
     end
 
     return not invalid
@@ -694,7 +694,7 @@ end
 
 local function store_turbine(electric_network_id, name, inventory)
     -- If we have none in the network, return early
-    if (global.aerials.aerial_counts[electric_network_id][name] or 0) < 1 then
+    if (storage.aerials.aerial_counts[electric_network_id][name] or 0) < 1 then
         return false
     end
     -- If our inventory is full, return early
@@ -703,7 +703,7 @@ local function store_turbine(electric_network_id, name, inventory)
         return false
     end
     -- Walk our table until we find our target turbine
-    for key, aerial in pairs(global.aerials.aerial_data) do
+    for key, aerial in pairs(storage.aerials.aerial_data) do
         local entity = aerial.entity
         if  entity.valid
             and entity.name == name
@@ -716,7 +716,7 @@ local function store_turbine(electric_network_id, name, inventory)
             }
             stack.tags = {lifetime_generation = aerial.lifetime_generation}
             stack.custom_description = {'', aerial.entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', py.format_energy(aerial.lifetime_generation, 'J')}}
-            global.aerials.aerial_data[key] = nil
+            storage.aerials.aerial_data[key] = nil
             entity.destroy()
             increment_turbine_count(electric_network_id, name, -1)
             return true
@@ -732,7 +732,7 @@ local function release_turbine(aerial_base_data, name, stack)
     local surface = combinator.surface
     local electric_network_id = aerial_base_data.animation.electric_network_id
     local aerial_turbines = count_turbines_for_network(electric_network_id)
-    local electric_poles = #global.aerials.poles_by_network[electric_network_id]
+    local electric_poles = #storage.aerials.poles_by_network[electric_network_id]
     -- Return if we don't mee the minimum 3 poles per turbine
     if 3 * (aerial_turbines + 1) > electric_poles then
         surface.create_entity{
@@ -744,7 +744,7 @@ local function release_turbine(aerial_base_data, name, stack)
         return false
     end
 
-    global.aerials.electric_network_id_override = electric_network_id
+    storage.aerials.electric_network_id_override = electric_network_id
     surface.create_entity{
         name = name,
         position = position,
@@ -753,7 +753,7 @@ local function release_turbine(aerial_base_data, name, stack)
         item = stack,
         raise_built = true
     }
-    global.aerials.electric_network_id_override = nil
+    storage.aerials.electric_network_id_override = nil
     stack.clear()
     return true
 end
@@ -761,15 +761,15 @@ end
 
 --Update the electric or aerial networks on demand
 Aerial.events[301] = function()
-    if global.aerials.refresh_networks then
+    if storage.aerials.refresh_networks then
         refresh_networks()
-        global.aerials.refresh_networks = false
+        storage.aerials.refresh_networks = false
     end
 end
 --Update the electric networks every 1h+1tick
 Aerial.events[60*60*60+1] = function()
     -- Refresh if pending, since we want an accurate pole/network count
-    global.aerials.refresh_networks = true
+    storage.aerials.refresh_networks = true
 end
 
 local letters = {'A', 'B', 'C', 'D'}
@@ -778,7 +778,7 @@ Aerial.events[117] = function()
     local stored_energy_per_network = {}
     local max_energy_per_network = {}
 
-    for unit_number, aerial_base in pairs(global.aerials.base_data) do
+    for unit_number, aerial_base in pairs(storage.aerials.base_data) do
         -- If the base components aren't valid, remove it and try again in the next event
         local invalid = false
 
@@ -812,7 +812,7 @@ Aerial.events[117] = function()
                 end
                 chest.destroy()
             end
-            global.aerials.base_data[unit_number] = nil
+            storage.aerials.base_data[unit_number] = nil
             break
         end
 
@@ -833,13 +833,13 @@ Aerial.events[117] = function()
         end
 
         -- No poles on this network
-        local all_poles = global.aerials.poles_by_network[electric_network_id]
+        local all_poles = storage.aerials.poles_by_network[electric_network_id]
         if #all_poles == 0 then
             control.enabled = false
             goto continue
         end
 
-        local existing_turbines = global.aerials.aerial_counts[electric_network_id]
+        local existing_turbines = storage.aerials.aerial_counts[electric_network_id]
 
         -- Parse our input signals for blimp signals indicating the target count in the current network
         local desired_turbines = {}
@@ -889,7 +889,7 @@ Aerial.events[117] = function()
             end
             -- sum stored energy of all turbine accumulators
             if update_accumulators then
-                local accumulator = global.aerials.accumulators[electric_network_id][name]
+                local accumulator = storage.aerials.accumulators[electric_network_id][name]
                 if exists_and_valid(accumulator) then
                     stored_energy = stored_energy + accumulator.energy
                     max_energy = max_energy + accumulator.electric_buffer_size
@@ -972,7 +972,7 @@ local function find_target(aerial)
     end
 
     -- Our ID is overridden here in case we create an entity and want it on a new network
-    local network_id = global.aerials.electric_network_id_override
+    local network_id = storage.aerials.electric_network_id_override
         or (previous_target and previous_target.electric_network_id)
         or aerial.network_id
 
@@ -994,7 +994,7 @@ local function find_target(aerial)
             -- Decrement the old network and increment the new
             increment_turbine_count(aerial.network_id, name, -1)
             increment_turbine_count(network_id, name, 1)
-            accumulator.electric_buffer_size = global.aerials.aerial_counts[network_id][name] * buffer_capacities[name]
+            accumulator.electric_buffer_size = storage.aerials.aerial_counts[network_id][name] * buffer_capacities[name]
             aerial.network_id = network_id
         else -- how did you fail to make an accumulator?
             log("aerial stuck: couldn't find or create an accumulator")
@@ -1003,7 +1003,7 @@ local function find_target(aerial)
         end
     end
 
-    local all_poles = global.aerials.poles_by_network[network_id]
+    local all_poles = storage.aerials.poles_by_network[network_id]
     local pole_count = #all_poles
 
     if pole_count < 2 then
@@ -1060,7 +1060,7 @@ Aerial.events.on_built = function(event)
     -- Turbine?
     if turbine_names[entity_name] then
         -- Build or find the relevant accumulator
-        local accumulator = get_or_create_accumulator(entity, global.aerials.electric_network_id_override)
+        local accumulator = get_or_create_accumulator(entity, storage.aerials.electric_network_id_override)
 
         if not accumulator or not accumulator.valid then
             py.cancel_creation(entity, event.player_index, {'aerial-gui.must-be-placed-in-electric-network'}, placement_restriction_text_color)
@@ -1081,7 +1081,7 @@ Aerial.events.on_built = function(event)
         end
 
         local turbine_count = count_turbines_for_network(electric_network_id)
-        local electric_poles = #global.aerials.poles_by_network[electric_network_id]
+        local electric_poles = #storage.aerials.poles_by_network[electric_network_id]
         if (turbine_count + 1) * 3 > electric_poles then
             py.cancel_creation(entity, event.player_index, {'aerial-gui.airspace-too-crowded'}, placement_restriction_text_color)
             return
@@ -1093,12 +1093,12 @@ Aerial.events.on_built = function(event)
             lifetime_generation = tags.lifetime_generation or 0
         }
 
-        global.aerials.aerial_data[entity.unit_number] = aerial
+        storage.aerials.aerial_data[entity.unit_number] = aerial
 
         entity.destructible = false
 
         -- Increment turbine counts for this model
-        local network_counts = global.aerials.aerial_counts[electric_network_id]
+        local network_counts = storage.aerials.aerial_counts[electric_network_id]
         local new_count = (network_counts[entity_name] or 0) + 1
         network_counts[entity_name] = new_count
         accumulator.electric_buffer_size = buffer_capacities[entity_name] * new_count
@@ -1114,7 +1114,7 @@ Aerial.events.on_built = function(event)
     end
     -- Switches also invalidate the network cache
     if entity_type == 'power-switch' then
-        global.aerials.refresh_networks = true
+        storage.aerials.refresh_networks = true
         return
     end
     -- Base compound entity
@@ -1140,7 +1140,7 @@ Aerial.events.on_built = function(event)
             animation = animation,
             chest = chest
         }
-        global.aerials.base_data[entity.unit_number] = aerial_base_data
+        storage.aerials.base_data[entity.unit_number] = aerial_base_data
         local inventory = aerial_base_data.chest.get_inventory(defines.inventory.chest)
         set_aerial_base_inventory_filters(inventory)
     end
@@ -1152,7 +1152,7 @@ Aerial.events.on_destroyed = function(event)
         return
     end
 
-    local aerial = global.aerials.aerial_data[entity.unit_number]
+    local aerial = storage.aerials.aerial_data[entity.unit_number]
 
     -- Turbine?
     if aerial then
@@ -1177,13 +1177,13 @@ Aerial.events.on_destroyed = function(event)
         end
 
         -- drop from the global table and done
-        global.aerials.aerial_data[entity.unit_number] = nil
+        storage.aerials.aerial_data[entity.unit_number] = nil
         return
     end
 
     -- Poles
     if entity.type == 'electric-pole' then
-        local pole_data = global.aerials.poles[entity.unit_number]
+        local pole_data = storage.aerials.poles[entity.unit_number]
         if pole_data then
             remove_pole(pole_data)
         end
@@ -1193,7 +1193,7 @@ Aerial.events.on_destroyed = function(event)
     -- Base compound entity
     if entity.name == 'aerial-base-combinator' then
         local unit_number = entity.unit_number
-        local base = global.aerials.base_data[unit_number]
+        local base = storage.aerials.base_data[unit_number]
         if not base then
             return
         end
@@ -1227,12 +1227,12 @@ Aerial.events.on_destroyed = function(event)
         if exists_and_valid(base.animation) then
             base.animation.destroy()
         end
-        global.aerials.base_data[unit_number] = nil
+        storage.aerials.base_data[unit_number] = nil
     end
 end
 
 Aerial.events.on_ai_command_completed = function(event)
-    local aerial = global.aerials.aerial_data[event.unit_number]
+    local aerial = storage.aerials.aerial_data[event.unit_number]
     if not aerial then
         return
     end
@@ -1323,12 +1323,12 @@ Aerial.events.on_open_gui = function(event)
 
     local unit_number = entity.unit_number
     -- Otherwise, open the GUI if it's an aerial or aerial base
-    local aerial = global.aerials.aerial_data[unit_number]
+    local aerial = storage.aerials.aerial_data[unit_number]
     if aerial then
         build_aerial_gui(player, aerial)
         return
     end
-    local aerial_base_data = global.aerials.base_data[unit_number]
+    local aerial_base_data = storage.aerials.base_data[unit_number]
     if aerial_base_data and validate_base(aerial_base_data, unit_number) then
         build_aerial_base_gui(player, aerial_base_data)
         return
@@ -1357,7 +1357,7 @@ function Aerial.update_gui(player)
     local content_flow = main_frame.content_frame.content_flow
 
     local unit_number = main_frame.tags.unit_number
-    local aerial = global.aerials.aerial_data[unit_number]
+    local aerial = storage.aerials.aerial_data[unit_number]
 
     -- Return early if the aerial doesn't exist anymore
     if not aerial then
@@ -1368,7 +1368,7 @@ function Aerial.update_gui(player)
     local entity = aerial.entity
     if not entity or not entity.valid then
         main_frame.destroy()
-        global.aerials.aerial_data[unit_number] = nil
+        storage.aerials.aerial_data[unit_number] = nil
         return
     end
 
@@ -1434,7 +1434,7 @@ function Aerial.update_gui(player)
     local electric_network_id = aerial.network_id
     if electric_network_id then
         local aerial_turbines = count_turbines_for_network(electric_network_id)
-        local electric_poles = #global.aerials.poles_by_network[electric_network_id]
+        local electric_poles = #storage.aerials.poles_by_network[electric_network_id]
         local traffic = math.min(1, aerial_turbines / math.floor(electric_poles / 3))
         -- Convert to percentage, rounded to one decimal place
         traffic = math.ceil(traffic * 1000) / 10

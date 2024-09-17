@@ -8,13 +8,13 @@ Solar.animated_solarpanels = {
 }
 
 Solar.events.on_init = function()
-	global.solarpanels = global.solarpanels or {}
-	global.unsynced_solarpanels = global.unsynced_solarpanels or {}
+	storage.solarpanels = storage.solarpanels or {}
+	storage.unsynced_solarpanels = storage.unsynced_solarpanels or {}
 end
 
 Solar.sync_solarpanels = function()
 	local new = {}
-	for _, panel in pairs(global.unsynced_solarpanels) do
+	for _, panel in pairs(storage.unsynced_solarpanels) do
 		local surface = panel.surface
 		local time = surface.daytime
 		if surface.morning <= time and time < (surface.morning + 100 / surface.ticks_per_day) then
@@ -26,18 +26,18 @@ Solar.sync_solarpanels = function()
 				create_build_effect_smoke = false
 			}
 			new_panel.operable = false
-			global.solarpanels[panel.unit_number] = nil
-			global.solarpanels[new_panel.unit_number] = new_panel
+			storage.solarpanels[panel.unit_number] = nil
+			storage.solarpanels[new_panel.unit_number] = new_panel
 			panel.destroy()
 		else
 			new[panel.unit_number] = panel
 		end
 	end
-	global.unsynced_solarpanels = new
+	storage.unsynced_solarpanels = new
 end
 
 Solar.events[100] = function()
-	for _, panel in pairs(global.solarpanels) do
+	for _, panel in pairs(storage.solarpanels) do
 		local daylight = Thermosolar.calc_daylight(panel.surface)
 		if panel.name == 'anti-solar' then daylight = 1 - daylight end
 
@@ -52,7 +52,7 @@ Solar.events[100] = function()
 		end
 	end
 
-	if next(global.unsynced_solarpanels) then
+	if next(storage.unsynced_solarpanels) then
 		Solar.sync_solarpanels()
 	end
 end
@@ -60,14 +60,14 @@ end
 Solar.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
 	if not Solar.animated_solarpanels[entity.name] then return end
-	global.solarpanels[entity.unit_number] = entity
-	global.unsynced_solarpanels[entity.unit_number] = entity
+	storage.solarpanels[entity.unit_number] = entity
+	storage.unsynced_solarpanels[entity.unit_number] = entity
 	entity.operable = false
 end
 
 Solar.events.on_destroyed = function(event)
 	local entity = event.created_entity or event.entity
 	if not Solar.animated_solarpanels[entity.name] then return end
-	global.solarpanels[entity.unit_number] = nil
-	global.unsynced_solarpanels[entity.unit_number] = nil
+	storage.solarpanels[entity.unit_number] = nil
+	storage.unsynced_solarpanels[entity.unit_number] = nil
 end

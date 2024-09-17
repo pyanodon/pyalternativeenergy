@@ -4,14 +4,14 @@ Thermosolar.events = {}
 Thermosolar.tower_range = 100
 
 Thermosolar.events.on_init = function(event)
-    global.solar_updraft_towers = global.solar_updraft_towers or {}
-    global.tower_circles = global.tower_circles or {}
-	global.heliostat_towers = global.heliostat_towers or {}
+    storage.solar_updraft_towers = storage.solar_updraft_towers or {}
+    storage.tower_circles = storage.tower_circles or {}
+	storage.heliostat_towers = storage.heliostat_towers or {}
 	local steam = game.fluid_prototypes['pressured-steam']
 	local joules_per_unit = steam.heat_capacity * steam.max_temperature
 	local mk04_max_output_in_w = game.entity_prototypes['steam-turbine-mk04'].fluid_usage_per_tick * joules_per_unit * 60
-	global.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * mk04_max_output_in_w
-	global.energy_per_heliostat = global.heliostat_tower_max_power_output / Heliostat.max_heliostats
+	storage.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * mk04_max_output_in_w
+	storage.energy_per_heliostat = storage.heliostat_tower_max_power_output / Heliostat.max_heliostats
 end
 
 local tower_circle_render_items = {
@@ -22,8 +22,8 @@ local tower_circle_render_items = {
 }
 
 local function draw_circle(tower_data)
-	if not global.tower_circles[tower_data.unit_number] then
-		global.tower_circles[tower_data.unit_number] = rendering.draw_circle{
+	if not storage.tower_circles[tower_data.unit_number] then
+		storage.tower_circles[tower_data.unit_number] = rendering.draw_circle{
 			draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = Thermosolar.tower_range,
 			target = tower_data.entity, filled = true, surface = tower_data.entity.surface
 		}
@@ -34,20 +34,20 @@ Thermosolar.events.on_player_cursor_stack_changed = function(event)
     for _, player in pairs(game.connected_players) do
         local stack = player.cursor_stack
         if stack and stack.valid_for_read and tower_circle_render_items[stack.name] then
-            for _, tower_data in pairs(global.solar_updraft_towers) do
+            for _, tower_data in pairs(storage.solar_updraft_towers) do
                 draw_circle(tower_data)
             end
-			for _, tower_data in pairs(global.heliostat_towers) do
+			for _, tower_data in pairs(storage.heliostat_towers) do
                 draw_circle(tower_data)
             end
             return
         end
     end
 
-    for _, circle in pairs(global.tower_circles) do
+    for _, circle in pairs(storage.tower_circles) do
         rendering.destroy(circle)
     end
-    global.tower_circles = {}
+    storage.tower_circles = {}
 end
 
 function Thermosolar.calc_daylight(surface)

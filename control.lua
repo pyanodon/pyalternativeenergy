@@ -21,9 +21,9 @@ py.on_event('on_init', function()
     Wiki.events.on_init()
     Aerial.events.on_init()
 
-    global.reactor_tanks = global.reactor_tanks or {}
-    global.lrf_panels = global.lrf_panels or {}
-    global.stirling = global.stirling or {}
+    storage.reactor_tanks = storage.reactor_tanks or {}
+    storage.lrf_panels = storage.lrf_panels or {}
+    storage.stirling = storage.stirling or {}
     for farm, domain in pairs(farms) do
         remote.call('pyfarm', 'register', farm, domain)
     end
@@ -63,9 +63,9 @@ py.on_event('on_built', function(event)
         }
         E.destroy()
     elseif string.match(E.name, 'lrf%-panel') ~= nil then
-        global.lrf_panels[E.unit_number] = E
+        storage.lrf_panels[E.unit_number] = E
     elseif E.name == 'stirling-concentrator' then
-        global.stirling[E.unit_number] = E
+        storage.stirling[E.unit_number] = E
     end
 end)
 
@@ -76,10 +76,10 @@ end)
 
 py.on_nth_tick(55, function(event)
     local active = Thermosolar.calc_daylight(game.surfaces['nauvis']) > 0.5
-    for _, panel in pairs(global.lrf_panels) do
+    for _, panel in pairs(storage.lrf_panels) do
         if panel.valid then panel.active = active end
     end
-    for _, panel in pairs(global.stirling) do
+    for _, panel in pairs(storage.stirling) do
         if panel.valid then panel.active = active end
     end
 end)
@@ -100,9 +100,9 @@ py.on_event(on_destroyed, function(event)
     local E = event.entity
     if not E.valid or not E.unit_number then return end
     if string.match(E.name, 'lrf%-panel') ~= nil then
-        global.lrf_panels[E.unit_number] = nil
+        storage.lrf_panels[E.unit_number] = nil
     elseif E.name == 'stirling-concentrator' then
-        global.stirling[E.unit_number] = nil
+        storage.stirling[E.unit_number] = nil
     end
 end)
 

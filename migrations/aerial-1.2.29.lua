@@ -1,21 +1,21 @@
-if global.aerials and not global.aerials.aerial_counts then
-    global.aerials = nil
+if storage.aerials and not storage.aerials.aerial_counts then
+    storage.aerials = nil
 end
 
-if not global.aerials then -- Init didn't get run because it's also on_configuration_changed, lmao
+if not storage.aerials then -- Init didn't get run because it's also on_configuration_changed, lmao
     Aerial.events.on_init()
 end
 
 -- .init from aerial.lua has already been run at this point
-local aerials = global.aerials
+local aerials = storage.aerials
 
 local poles_by_network = aerials.poles_by_network
 local accumulators = aerials.accumulators
 local aerial_data = aerials.aerial_data
 local aerial_counts = aerials.aerial_counts
 
-if global.aerial_data then -- There's data to migrate
-    for unit_number, struct in pairs(global.aerial_data) do
+if storage.aerial_data then -- There's data to migrate
+    for unit_number, struct in pairs(storage.aerial_data) do
         local entity = struct.entity
         if not entity or not entity.valid then
             goto continue
@@ -88,19 +88,19 @@ if global.aerial_data then -- There's data to migrate
             end
         end
     end
-    global.aerial_data = nil
+    storage.aerial_data = nil
 end
 
 -- Migrate the base (launch base thing) data
-if global.aerial_base_data then
-    aerials.base_data = global.aerial_base_data
-    global.aerial_base_data = nil
+if storage.aerial_base_data then
+    aerials.base_data = storage.aerial_base_data
+    storage.aerial_base_data = nil
 end
 
-global.last_aerial = nil
-global.all_electric_poles = nil
-global.electric_networks = nil
-global.existing_turbines_invalid = nil
-global.surfaces_to_refresh = nil
-global.existing_turbines = nil
-global.electric_network_id_override = nil
+storage.last_aerial = nil
+storage.all_electric_poles = nil
+storage.electric_networks = nil
+storage.existing_turbines_invalid = nil
+storage.surfaces_to_refresh = nil
+storage.existing_turbines = nil
+storage.electric_network_id_override = nil

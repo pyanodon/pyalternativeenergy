@@ -15,7 +15,7 @@ end
 local min_void_temp = 0
 local max_void_temp = 8333.33333333
 function Heliostat.update_power_generation(tower, excluded_heliostat)
-    local tower_data = global.heliostat_towers[tower.unit_number]
+    local tower_data = storage.heliostat_towers[tower.unit_number]
     if not tower_data then return end
 
     tower_data.heliostats = 0
@@ -25,7 +25,7 @@ function Heliostat.update_power_generation(tower, excluded_heliostat)
 			heliostat = Heliostat.rotate_heliostat(heliostat, tower)
 		end
 	end
-    tower_data.max_production = (global.energy_per_heliostat * tower_data.heliostats) * tower.surface.solar_power_multiplier
+    tower_data.max_production = (storage.energy_per_heliostat * tower_data.heliostats) * tower.surface.solar_power_multiplier
 	tower_data.efficiency = tower_data.heliostats / Heliostat.max_heliostats * tower.surface.solar_power_multiplier
 	tower_data.max_salt_production = tower_data.efficiency * 4000
 
@@ -70,9 +70,9 @@ Heliostat.events.on_built = function(event)
 	elseif entity.name == 'solar-tower-building' then
 		local placement_restriction = entity.surface.create_entity{name = 'sut-placement-distance', position = entity.position, force = entity.force}
 		placement_restriction.destructible = false
-		global.heliostat_towers[entity.unit_number] = {entity = entity, unit_number = entity.unit_number, placement_restriction = placement_restriction, heliostats = 0}
+		storage.heliostat_towers[entity.unit_number] = {entity = entity, unit_number = entity.unit_number, placement_restriction = placement_restriction, heliostats = 0}
 		Heliostat.update_power_generation(entity)
-		global.update_heliostat_guis = true
+		storage.update_heliostat_guis = true
 	end
 end
 
@@ -85,11 +85,11 @@ Heliostat.events.on_destroyed = function(event)
 		return
 	end
 
-    local tower_data = global.heliostat_towers[entity.unit_number]
+    local tower_data = storage.heliostat_towers[entity.unit_number]
     if not tower_data then return end
     if tower_data.placement_restriction.valid then tower_data.placement_restriction.destroy() end
-    global.heliostat_towers[entity.unit_number] = nil
-    global.update_heliostat_guis = not not next(global.heliostat_towers)
+    storage.heliostat_towers[entity.unit_number] = nil
+    storage.update_heliostat_guis = not not next(storage.heliostat_towers)
 end
 
 Heliostat.events.on_gui_opened = function(event)
@@ -128,7 +128,7 @@ Heliostat.events.on_gui_opened = function(event)
 	content_flow.add{type = 'label', name = 'effective_generation'}
 	content_flow.add{type = 'label', name = 'daylight'}
 	content_flow.add{type = 'label', caption = {'heliostat-gui.range', Thermosolar.tower_range}}
-	content_flow.add{type = 'label', caption = {'heliostat-gui.energy-per-heliostat', py.format_energy(global.energy_per_heliostat, 'W')}}
+	content_flow.add{type = 'label', caption = {'heliostat-gui.energy-per-heliostat', py.format_energy(storage.energy_per_heliostat, 'W')}}
 	content_flow.add{type = 'label', caption = {'heliostat-gui.target-temperature'}}
 
 	Heliostat.update_gui(main_frame)
@@ -143,7 +143,7 @@ Heliostat.events.on_gui_closed = function(event)
 end
 
 function Heliostat.update_gui(gui)
-	local tower_data = global.heliostat_towers[gui.tags.unit_number]
+	local tower_data = storage.heliostat_towers[gui.tags.unit_number]
 	if not tower_data then gui.destroy(); return end
 	local content_flow = gui.content_frame.content_flow
     local surface = tower_data.entity.surface
@@ -167,7 +167,7 @@ py.on_event('open-gui', function(event)
 end)
 
 Heliostat.events[60] = function()
-	for _, tower_data in pairs(global.heliostat_towers) do
+	for _, tower_data in pairs(storage.heliostat_towers) do
 		if tower_data.heliostats ~= 0 then
 			local tower = tower_data.entity
 			local daylight = Thermosolar.calc_daylight(tower.surface)
@@ -179,7 +179,7 @@ Heliostat.events[60] = function()
 		end
 	end
 
-	if global.update_heliostat_guis then
+	if storage.update_heliostat_guis then
 		Heliostat.update_all_guis()
 	end
 end
