@@ -85,80 +85,82 @@ ENTITY {
     circuit_wire_connection_points = circuit_connector_definitions["geothermal-plant-mk01"].points,
     circuit_connector_sprites = circuit_connector_definitions["geothermal-plant-mk01"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    animations = {
-      layers = {
-          {
-              filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/left-raw.png",
+    graphics_set = {
+        animations = {
+          layers = {
+              {
+                  filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/left-raw.png",
+                  width = 128,
+                  height = 512,
+                  repeat_count = 50,
+                  line_length = 1,
+                  frame_count = 1,
+                  animation_speed = 0.25,
+                  shift = util.by_pixel(-112, -80)
+              },
+              {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/left-l.png",
+                width = 128,
+                height = 512,
+                repeat_count = 50,
+                line_length = 1,
+                frame_count = 1,
+                animation_speed = 0.25,
+                draw_as_glow = true,
+                shift = util.by_pixel(-112, -80)
+            },
+            {
+              filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/mid-raw.png",
               width = 128,
               height = 512,
+              line_length = 16,
+              frame_count = 50,
+              animation_speed = 0.25,
+              shift = util.by_pixel(16, -80)
+            },
+            {
+              filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/mid-l.png",
+              width = 128,
+              height = 512,
+              line_length = 16,
+              frame_count = 50,
+              animation_speed = 0.25,
+              draw_as_glow = true,
+              shift = util.by_pixel(16, -80)
+            },
+            {
+              filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/right-raw.png",
+              width = 96,
+              height = 512,
+              line_length = 16,
+              frame_count = 50,
+              animation_speed = 0.25,
+              shift = util.by_pixel(128, -80)
+            },
+            {
+              filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/right-l.png",
+              width = 96,
+              height = 512,
+              line_length = 16,
+              frame_count = 50,
+              animation_speed = 0.25,
+              draw_as_glow = true,
+              shift = util.by_pixel(128, -80)
+            },
+            {
+              filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/sh.png",
+              width = 416,
+              height = 320,
               repeat_count = 50,
               line_length = 1,
               frame_count = 1,
               animation_speed = 0.25,
-              shift = util.by_pixel(-112, -80)
-          },
-          {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/left-l.png",
-            width = 128,
-            height = 512,
-            repeat_count = 50,
-            line_length = 1,
-            frame_count = 1,
-            animation_speed = 0.25,
-            draw_as_glow = true,
-            shift = util.by_pixel(-112, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/mid-raw.png",
-          width = 128,
-          height = 512,
-          line_length = 16,
-          frame_count = 50,
-          animation_speed = 0.25,
-          shift = util.by_pixel(16, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/mid-l.png",
-          width = 128,
-          height = 512,
-          line_length = 16,
-          frame_count = 50,
-          animation_speed = 0.25,
-          draw_as_glow = true,
-          shift = util.by_pixel(16, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/right-raw.png",
-          width = 96,
-          height = 512,
-          line_length = 16,
-          frame_count = 50,
-          animation_speed = 0.25,
-          shift = util.by_pixel(128, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/right-l.png",
-          width = 96,
-          height = 512,
-          line_length = 16,
-          frame_count = 50,
-          animation_speed = 0.25,
-          draw_as_glow = true,
-          shift = util.by_pixel(128, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/sh.png",
-          width = 416,
-          height = 320,
-          repeat_count = 50,
-          line_length = 1,
-          frame_count = 1,
-          animation_speed = 0.25,
-          draw_as_shadow = true,
-          shift = util.by_pixel(32, 16)
-        },
-  },
-},
+              draw_as_shadow = true,
+              shift = util.by_pixel(32, 16)
+            },
+      },
+    },
+    },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65 },
     working_sound =
     {

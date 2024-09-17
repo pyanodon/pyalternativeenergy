@@ -85,84 +85,86 @@ ENTITY {
       maximum_temperature = 3000,
     },
     energy_usage = "300kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/off.png",
-                width = 480,
-                height = 576,
-                frame_count = 1,
-                shift = util.by_pixel(0, -48)
+                north_position = util.by_pixel(-112, -80),
+                west_position = util.by_pixel(-112, -80),
+                south_position = util.by_pixel(-112, -80),
+                east_position = util.by_pixel(-112, -80),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/la1.png",
+                    frame_count = 30,
+                    line_length = 8,
+                    width = 256,
+                    height = 512,
+                    animation_speed = 0.8,
+                    --draw_as_glow = true,
+                }
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/sh.png",
-                width = 544,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(32, 16),
-                draw_as_shadow = true,
+                north_position = util.by_pixel(128, -80),
+                west_position = util.by_pixel(128, -80),
+                south_position = util.by_pixel(128, -80),
+                east_position = util.by_pixel(128, -80),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/la2.png",
+                    frame_count = 30,
+                    line_length = 8,
+                    width = 224,
+                    height = 512,
+                    animation_speed = 0.8,
+                    --draw_as_glow = true,
+                }
             },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-112, -80),
-            west_position = util.by_pixel(-112, -80),
-            south_position = util.by_pixel(-112, -80),
-            east_position = util.by_pixel(-112, -80),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/la1.png",
-                frame_count = 30,
-                line_length = 8,
-                width = 256,
-                height = 512,
-                animation_speed = 0.8,
-                --draw_as_glow = true,
-            }
+            {
+                north_position = util.by_pixel(-96, -32),
+                west_position = util.by_pixel(-96, -32),
+                south_position = util.by_pixel(-96, -32),
+                east_position = util.by_pixel(-96, -32),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/lb1.png",
+                    frame_count = 30,
+                    line_length = 8,
+                    width = 224,
+                    height = 288,
+                    animation_speed = 0.8,
+                    draw_as_glow = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(112, -32),
+                west_position = util.by_pixel(112, -32),
+                south_position = util.by_pixel(112, -32),
+                east_position = util.by_pixel(112, -32),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/lb2.png",
+                    frame_count = 30,
+                    line_length = 8,
+                    width = 192,
+                    height = 288,
+                    animation_speed = 0.8,
+                    draw_as_glow = true,
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(128, -80),
-            west_position = util.by_pixel(128, -80),
-            south_position = util.by_pixel(128, -80),
-            east_position = util.by_pixel(128, -80),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/la2.png",
-                frame_count = 30,
-                line_length = 8,
-                width = 224,
-                height = 512,
-                animation_speed = 0.8,
-                --draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(-96, -32),
-            west_position = util.by_pixel(-96, -32),
-            south_position = util.by_pixel(-96, -32),
-            east_position = util.by_pixel(-96, -32),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/lb1.png",
-                frame_count = 30,
-                line_length = 8,
-                width = 224,
-                height = 288,
-                animation_speed = 0.8,
-                draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(112, -32),
-            west_position = util.by_pixel(112, -32),
-            south_position = util.by_pixel(112, -32),
-            east_position = util.by_pixel(112, -32),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/lb2.png",
-                frame_count = 30,
-                line_length = 8,
-                width = 192,
-                height = 288,
-                animation_speed = 0.8,
-                draw_as_glow = true,
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/off.png",
+                    width = 480,
+                    height = 576,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -48)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk03/sh.png",
+                    width = 544,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(32, 16),
+                    draw_as_shadow = true,
+                },
             }
         },
     },

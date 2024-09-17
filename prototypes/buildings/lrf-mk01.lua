@@ -60,80 +60,82 @@ ENTITY {
         }
     },
     energy_usage = '30MW',
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/r.png',
-                width = 512,
-                height = 608,
-                frame_count = 1,
-                shift = util.by_pixel(0, -48)
+                north_position = util.by_pixel(140, 17),
+                west_position = util.by_pixel(140, 17),
+                south_position = util.by_pixel(140, 17),
+                east_position = util.by_pixel(140, 17),
+                animation = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/tela.png',
+                    frame_count = 200,
+                    line_length = 25,
+                    width = 64,
+                    height = 32,
+                    animation_speed = 0.5,
+                    draw_as_glow = true,
+                }
             },
             {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/r-mask.png',
-                width = 512,
-                height = 608,
-                frame_count = 1,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(0, -48)
+                north_position = util.by_pixel(49, 112),
+                west_position = util.by_pixel(49, 112),
+                south_position = util.by_pixel(49, 112),
+                east_position = util.by_pixel(49, 112),
+                animation = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/part.png',
+                    frame_count = 36,
+                    line_length = 6,
+                    width = 96,
+                    height = 96,
+                    animation_speed = 0.4,
+                    --draw_as_glow = true,
+                }
             },
             {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/l.png',
-                width = 512,
-                height = 608,
-                frame_count = 1,
-                shift = util.by_pixel(0, -48),
-                draw_as_glow = true,
-            },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(140, 17),
-            west_position = util.by_pixel(140, 17),
-            south_position = util.by_pixel(140, 17),
-            east_position = util.by_pixel(140, 17),
-            animation = {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/tela.png',
-                frame_count = 200,
-                line_length = 25,
-                width = 64,
-                height = 32,
-                animation_speed = 0.5,
-                draw_as_glow = true,
+                north_position = util.by_pixel(-192, -64),
+                west_position = util.by_pixel(-192, -64),
+                south_position = util.by_pixel(-192, -64),
+                east_position = util.by_pixel(-192, -64),
+                animation = {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/smoke.png',
+                    frame_count = 50,
+                    line_length = 10,
+                    width = 128,
+                    run_mode = 'backward',
+                    height = 320,
+                    animation_speed = 0.4,
+                    --draw_as_glow = true,
+                }
             }
         },
-        {
-            north_position = util.by_pixel(49, 112),
-            west_position = util.by_pixel(49, 112),
-            south_position = util.by_pixel(49, 112),
-            east_position = util.by_pixel(49, 112),
-            animation = {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/part.png',
-                frame_count = 36,
-                line_length = 6,
-                width = 96,
-                height = 96,
-                animation_speed = 0.4,
-                --draw_as_glow = true,
+        animation = {
+            layers = {
+                {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/r.png',
+                    width = 512,
+                    height = 608,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -48)
+                },
+                {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/r-mask.png',
+                    width = 512,
+                    height = 608,
+                    frame_count = 1,
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(0, -48)
+                },
+                {
+                    filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/l.png',
+                    width = 512,
+                    height = 608,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -48),
+                    draw_as_glow = true,
+                },
             }
         },
-        {
-            north_position = util.by_pixel(-192, -64),
-            west_position = util.by_pixel(-192, -64),
-            south_position = util.by_pixel(-192, -64),
-            east_position = util.by_pixel(-192, -64),
-            animation = {
-                filename = '__pyalternativeenergygraphics__/graphics/entity/lrf/smoke.png',
-                frame_count = 50,
-                line_length = 10,
-                width = 128,
-                run_mode = 'backward',
-                height = 320,
-                animation_speed = 0.4,
-                --draw_as_glow = true,
-            }
-        }
     },
     fluid_boxes = {
         {

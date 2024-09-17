@@ -97,200 +97,202 @@ ENTITY {
         }
       },
     energy_usage = "20MW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/off.png",
-                width = 416,
-                height = 768,
-                frame_count = 1,
-                --repeat_count = 151,
-                shift = util.by_pixel(0, -176),
+                north_position = util.by_pixel(32, -256),
+                west_position = util.by_pixel(32, -256),
+                south_position = util.by_pixel(32, -256),
+                east_position = util.by_pixel(32, -256),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/reds.png",
+                    frame_count = 75,
+                    line_length = 15,
+                    width = 96,
+                    height = 160,
+                    repeat_count = 2,
+                    animation_speed = 1/3,
+                    draw_as_glow = true,
+                }
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/mask.png",
-                width = 416,
-                height = 768,
-                frame_count = 1,
-                --repeat_count = 151,
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(0, -176),
+                north_position = util.by_pixel(-128, -64),
+                west_position = util.by_pixel(-128, -64),
+                south_position = util.by_pixel(-128, -64),
+                east_position = util.by_pixel(-128, -64),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-bot.png",
+                    frame_count = 150,
+                    line_length = 12,
+                    width = 160,
+                    height = 96,
+                    animation_speed = 1/3,
+                }
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/sh.png",
-                width = 480,
-                height = 384,
-                frame_count = 1,
-                draw_as_shadow = true,
-                shift = util.by_pixel(32, 16),
+                north_position = util.by_pixel(-128, -160),
+                west_position = util.by_pixel(-128, -160),
+                south_position = util.by_pixel(-128, -160),
+                east_position = util.by_pixel(-128, -160),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-mid.png",
+                    frame_count = 150,
+                    line_length = 12,
+                    width = 160,
+                    height = 96,
+                    animation_speed = 1/3,
+                }
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/beams.png",
-                width = 416,
-                height = 768,
-                frame_count = 1,
-                draw_as_light = true,
-                shift = util.by_pixel(0, -176),
+                north_position = util.by_pixel(-128, -272),
+                west_position = util.by_pixel(-128, -272),
+                south_position = util.by_pixel(-128, -272),
+                east_position = util.by_pixel(-128, -272),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-top.png",
+                    frame_count = 150,
+                    line_length = 12,
+                    width = 160,
+                    height = 128,
+                    animation_speed = 1/3,
+                }
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/beams.png",
-                width = 416,
-                height = 768,
-                frame_count = 1,
-                draw_as_light = true,
-                shift = util.by_pixel(0, -176),
+                north_position = util.by_pixel(128, -160),
+                west_position = util.by_pixel(128, -160),
+                south_position = util.by_pixel(128, -160),
+                east_position = util.by_pixel(128, -160),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-right-bot.png",
+                    frame_count = 150,
+                    line_length = 12,
+                    width = 160,
+                    height = 96,
+                    animation_speed = 1/3,
+                }
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/static-glow.png",
-                width = 416,
-                height = 768,
-                frame_count = 1,
-                draw_as_glow = true,
-                shift = util.by_pixel(0, -176),
+                north_position = util.by_pixel(128, -272),
+                west_position = util.by_pixel(128, -272),
+                south_position = util.by_pixel(128, -272),
+                east_position = util.by_pixel(128, -272),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-right-top.png",
+                    frame_count = 150,
+                    line_length = 12,
+                    width = 160,
+                    height = 128,
+                    animation_speed = 1/3,
+                }
             },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(32, -256),
-            west_position = util.by_pixel(32, -256),
-            south_position = util.by_pixel(32, -256),
-            east_position = util.by_pixel(32, -256),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/reds.png",
-                frame_count = 75,
-                line_length = 15,
-                width = 96,
-                height = 160,
-                repeat_count = 2,
-                animation_speed = 1/3,
-                draw_as_glow = true,
-            }
+            {
+                north_position = util.by_pixel(-64, -384),
+                west_position = util.by_pixel(-64, -384),
+                south_position = util.by_pixel(-64, -384),
+                east_position = util.by_pixel(-64, -384),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/steam-down-1.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 64,
+                    animation_speed = 1/3,
+                }
+            },
+            {
+                north_position = util.by_pixel(-32, -320),
+                west_position = util.by_pixel(-32, -320),
+                south_position = util.by_pixel(-32, -320),
+                east_position = util.by_pixel(-32, -320),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/steam-down-2.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 64,
+                    animation_speed = 1/3,
+                }
+            },
+            {
+                north_position = util.by_pixel(-96, -256),
+                west_position = util.by_pixel(-96, -256),
+                south_position = util.by_pixel(-96, -256),
+                east_position = util.by_pixel(-96, -256),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/steam-side.png",
+                    frame_count = 150,
+                    line_length = 15,
+                    width = 96,
+                    height = 96,
+                    animation_speed = 1/3,
+                }
+            },
+            {
+                north_position = util.by_pixel(48, -144),
+                west_position = util.by_pixel(48, -144),
+                south_position = util.by_pixel(48, -144),
+                east_position = util.by_pixel(48, -144),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/steam-push.png",
+                    frame_count = 150,
+                    line_length = 16,
+                    width = 128,
+                    height = 128,
+                    animation_speed = 1/4,
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(-128, -64),
-            west_position = util.by_pixel(-128, -64),
-            south_position = util.by_pixel(-128, -64),
-            east_position = util.by_pixel(-128, -64),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-bot.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 160,
-                height = 96,
-                animation_speed = 1/3,
-            }
-        },
-        {
-            north_position = util.by_pixel(-128, -160),
-            west_position = util.by_pixel(-128, -160),
-            south_position = util.by_pixel(-128, -160),
-            east_position = util.by_pixel(-128, -160),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-mid.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 160,
-                height = 96,
-                animation_speed = 1/3,
-            }
-        },
-        {
-            north_position = util.by_pixel(-128, -272),
-            west_position = util.by_pixel(-128, -272),
-            south_position = util.by_pixel(-128, -272),
-            east_position = util.by_pixel(-128, -272),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-top.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 160,
-                height = 128,
-                animation_speed = 1/3,
-            }
-        },
-        {
-            north_position = util.by_pixel(128, -160),
-            west_position = util.by_pixel(128, -160),
-            south_position = util.by_pixel(128, -160),
-            east_position = util.by_pixel(128, -160),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-right-bot.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 160,
-                height = 96,
-                animation_speed = 1/3,
-            }
-        },
-        {
-            north_position = util.by_pixel(128, -272),
-            west_position = util.by_pixel(128, -272),
-            south_position = util.by_pixel(128, -272),
-            east_position = util.by_pixel(128, -272),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/smoke-right-top.png",
-                frame_count = 150,
-                line_length = 12,
-                width = 160,
-                height = 128,
-                animation_speed = 1/3,
-            }
-        },
-        {
-            north_position = util.by_pixel(-64, -384),
-            west_position = util.by_pixel(-64, -384),
-            south_position = util.by_pixel(-64, -384),
-            east_position = util.by_pixel(-64, -384),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/steam-down-1.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 64,
-                animation_speed = 1/3,
-            }
-        },
-        {
-            north_position = util.by_pixel(-32, -320),
-            west_position = util.by_pixel(-32, -320),
-            south_position = util.by_pixel(-32, -320),
-            east_position = util.by_pixel(-32, -320),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/steam-down-2.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 64,
-                animation_speed = 1/3,
-            }
-        },
-        {
-            north_position = util.by_pixel(-96, -256),
-            west_position = util.by_pixel(-96, -256),
-            south_position = util.by_pixel(-96, -256),
-            east_position = util.by_pixel(-96, -256),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/steam-side.png",
-                frame_count = 150,
-                line_length = 15,
-                width = 96,
-                height = 96,
-                animation_speed = 1/3,
-            }
-        },
-        {
-            north_position = util.by_pixel(48, -144),
-            west_position = util.by_pixel(48, -144),
-            south_position = util.by_pixel(48, -144),
-            east_position = util.by_pixel(48, -144),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/steam-push.png",
-                frame_count = 150,
-                line_length = 16,
-                width = 128,
-                height = 128,
-                animation_speed = 1/4,
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/off.png",
+                    width = 416,
+                    height = 768,
+                    frame_count = 1,
+                    --repeat_count = 151,
+                    shift = util.by_pixel(0, -176),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/mask.png",
+                    width = 416,
+                    height = 768,
+                    frame_count = 1,
+                    --repeat_count = 151,
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(0, -176),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/sh.png",
+                    width = 480,
+                    height = 384,
+                    frame_count = 1,
+                    draw_as_shadow = true,
+                    shift = util.by_pixel(32, 16),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/beams.png",
+                    width = 416,
+                    height = 768,
+                    frame_count = 1,
+                    draw_as_light = true,
+                    shift = util.by_pixel(0, -176),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/beams.png",
+                    width = 416,
+                    height = 768,
+                    frame_count = 1,
+                    draw_as_light = true,
+                    shift = util.by_pixel(0, -176),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/oil-powerplant/static-glow.png",
+                    width = 416,
+                    height = 768,
+                    frame_count = 1,
+                    draw_as_glow = true,
+                    shift = util.by_pixel(0, -176),
+                },
             }
         },
     },

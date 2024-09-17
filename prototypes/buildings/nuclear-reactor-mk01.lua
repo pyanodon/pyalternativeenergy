@@ -81,46 +81,48 @@ ENTITY {
       maximum_temperature = 250,
     },
     energy_usage = "300kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/off.png",
-                width = 352,
-                height = 576,
-                frame_count = 1,
-                shift = util.by_pixel(0, -112)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/sh.png",
-                width = 416,
-                height = 320,
-                frame_count = 1,
-                shift = util.by_pixel(32, 16),
-                draw_as_shadow = true,
-            },
-        }
-    },
-    working_visualisations = {
-        {
-            effect = "uranium-glow",
-            fadeout = true,
-            light = {intensity = 1.3, size = 20, shift = {0.0, 0.0}, color = {r = 0.584, g = 0.8, b = 1.0}}
-        },
-        {
-            north_position = util.by_pixel(-0, -208),
-            west_position = util.by_pixel(-0, -208),
-            south_position = util.by_pixel(-0, -208),
-            east_position = util.by_pixel(-0, -208),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/l.png",
-                frame_count = 20,
-                line_length = 5,
-                width = 352,
-                height = 384,
-                animation_speed = 0.3,
-                draw_as_glow = true,
                 effect = "uranium-glow",
                 fadeout = true,
+                light = {intensity = 1.3, size = 20, shift = {0.0, 0.0}, color = {r = 0.584, g = 0.8, b = 1.0}}
+            },
+            {
+                north_position = util.by_pixel(-0, -208),
+                west_position = util.by_pixel(-0, -208),
+                south_position = util.by_pixel(-0, -208),
+                east_position = util.by_pixel(-0, -208),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/l.png",
+                    frame_count = 20,
+                    line_length = 5,
+                    width = 352,
+                    height = 384,
+                    animation_speed = 0.3,
+                    draw_as_glow = true,
+                    effect = "uranium-glow",
+                    fadeout = true,
+                }
+            },
+        },
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/off.png",
+                    width = 352,
+                    height = 576,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -112)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/nuclear-reactor-mk01/sh.png",
+                    width = 416,
+                    height = 320,
+                    frame_count = 1,
+                    shift = util.by_pixel(32, 16),
+                    draw_as_shadow = true,
+                },
             }
         },
     },

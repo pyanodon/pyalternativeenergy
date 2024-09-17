@@ -207,149 +207,151 @@ ENTITY{
     --burns_fluid = true,
     --scale_fluid_usage = true,
     energy_usage = '10MW',
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/off.png',
-                width = 512,
-                height = 544,
-                frame_count = 1,
-                shift = util.by_pixel(16, -64)
+                north_position = util.by_pixel(-144, -64),
+                west_position = util.by_pixel(-144, -64),
+                south_position = util.by_pixel(-144, -64),
+                east_position = util.by_pixel(-144, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/left-on.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 128,
+                    height = 480,
+                    animation_speed = 0.3
+                }
             }, {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/off-mask.png',
-                width = 512,
-                height = 544,
-                frame_count = 1,
-                shift = util.by_pixel(16, -64),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                north_position = util.by_pixel(-144, -64),
+                west_position = util.by_pixel(-144, -64),
+                south_position = util.by_pixel(-144, -64),
+                east_position = util.by_pixel(-144, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/left-on-mask.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 128,
+                    height = 480,
+                    animation_speed = 0.3,
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                }
+            }, {
+                north_position = util.by_pixel(-144, -64),
+                west_position = util.by_pixel(-144, -64),
+                south_position = util.by_pixel(-144, -64),
+                east_position = util.by_pixel(-144, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/left-fx.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 128,
+                    height = 480,
+                    animation_speed = 0.3,
+                    draw_as_glow = true
+                }
+            }, {
+                north_position = util.by_pixel(-16, -64),
+                west_position = util.by_pixel(-16, -64),
+                south_position = util.by_pixel(-16, -64),
+                east_position = util.by_pixel(-16, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/mid-on.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 128,
+                    height = 480,
+                    animation_speed = 0.3
+                }
+            }, {
+                north_position = util.by_pixel(-16, -64),
+                west_position = util.by_pixel(-16, -64),
+                south_position = util.by_pixel(-16, -64),
+                east_position = util.by_pixel(-16, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/mid-on-mask.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 128,
+                    height = 480,
+                    animation_speed = 0.3,
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                }
+            }, {
+                north_position = util.by_pixel(-16, -64),
+                west_position = util.by_pixel(-16, -64),
+                south_position = util.by_pixel(-16, -64),
+                east_position = util.by_pixel(-16, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/mid-fx.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 128,
+                    height = 480,
+                    animation_speed = 0.3,
+                    draw_as_glow = true
+                }
+            }, {
+                north_position = util.by_pixel(96, -64),
+                west_position = util.by_pixel(96, -64),
+                south_position = util.by_pixel(96, -64),
+                east_position = util.by_pixel(96, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/right-on.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 96,
+                    height = 480,
+                    animation_speed = 0.3
+                }
+            }, {
+                north_position = util.by_pixel(96, -64),
+                west_position = util.by_pixel(96, -64),
+                south_position = util.by_pixel(96, -64),
+                east_position = util.by_pixel(96, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/right-on-mask.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 96,
+                    height = 480,
+                    animation_speed = 0.3,
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                }
+            }, {
+                north_position = util.by_pixel(96, -64),
+                west_position = util.by_pixel(96, -64),
+                south_position = util.by_pixel(96, -64),
+                east_position = util.by_pixel(96, -64),
+                animation = {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/right-fx.png',
+                    frame_count = 50,
+                    line_length = 16,
+                    width = 96,
+                    height = 480,
+                    animation_speed = 0.3,
+                    draw_as_glow = true
+                }
             }
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-144, -64),
-            west_position = util.by_pixel(-144, -64),
-            south_position = util.by_pixel(-144, -64),
-            east_position = util.by_pixel(-144, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/left-on.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 128,
-                height = 480,
-                animation_speed = 0.3
+        },
+        animation = {
+            layers = {
+                {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/off.png',
+                    width = 512,
+                    height = 544,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -64)
+                }, {
+                    filename = '__pyraworesgraphics__/graphics/entity/smelter/off-mask.png',
+                    width = 512,
+                    height = 544,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -64),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                }
             }
-        }, {
-            north_position = util.by_pixel(-144, -64),
-            west_position = util.by_pixel(-144, -64),
-            south_position = util.by_pixel(-144, -64),
-            east_position = util.by_pixel(-144, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/left-on-mask.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 128,
-                height = 480,
-                animation_speed = 0.3,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            }
-        }, {
-            north_position = util.by_pixel(-144, -64),
-            west_position = util.by_pixel(-144, -64),
-            south_position = util.by_pixel(-144, -64),
-            east_position = util.by_pixel(-144, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/left-fx.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 128,
-                height = 480,
-                animation_speed = 0.3,
-                draw_as_glow = true
-            }
-        }, {
-            north_position = util.by_pixel(-16, -64),
-            west_position = util.by_pixel(-16, -64),
-            south_position = util.by_pixel(-16, -64),
-            east_position = util.by_pixel(-16, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/mid-on.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 128,
-                height = 480,
-                animation_speed = 0.3
-            }
-        }, {
-            north_position = util.by_pixel(-16, -64),
-            west_position = util.by_pixel(-16, -64),
-            south_position = util.by_pixel(-16, -64),
-            east_position = util.by_pixel(-16, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/mid-on-mask.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 128,
-                height = 480,
-                animation_speed = 0.3,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            }
-        }, {
-            north_position = util.by_pixel(-16, -64),
-            west_position = util.by_pixel(-16, -64),
-            south_position = util.by_pixel(-16, -64),
-            east_position = util.by_pixel(-16, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/mid-fx.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 128,
-                height = 480,
-                animation_speed = 0.3,
-                draw_as_glow = true
-            }
-        }, {
-            north_position = util.by_pixel(96, -64),
-            west_position = util.by_pixel(96, -64),
-            south_position = util.by_pixel(96, -64),
-            east_position = util.by_pixel(96, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/right-on.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 96,
-                height = 480,
-                animation_speed = 0.3
-            }
-        }, {
-            north_position = util.by_pixel(96, -64),
-            west_position = util.by_pixel(96, -64),
-            south_position = util.by_pixel(96, -64),
-            east_position = util.by_pixel(96, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/right-on-mask.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 96,
-                height = 480,
-                animation_speed = 0.3,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            }
-        }, {
-            north_position = util.by_pixel(96, -64),
-            west_position = util.by_pixel(96, -64),
-            south_position = util.by_pixel(96, -64),
-            east_position = util.by_pixel(96, -64),
-            animation = {
-                filename = '__pyraworesgraphics__/graphics/entity/smelter/right-fx.png',
-                frame_count = 50,
-                line_length = 16,
-                width = 96,
-                height = 480,
-                animation_speed = 0.3,
-                draw_as_glow = true
-            }
-        }
+        },
     },
     fluid_boxes = {
         -- 1

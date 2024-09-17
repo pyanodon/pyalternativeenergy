@@ -53,52 +53,54 @@ ENTITY {
     crafting_speed = 4,
     energy_source = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].energy_source),
     energy_usage = "1W",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-absorber/off.png",
-                width = 224,
-                height = 416,
-                frame_count = 1,
-                shift = util.by_pixel(8, -56),
-                scale = 0.5,
+                north_position = util.by_pixel(6, -87),
+                west_position = util.by_pixel(6, -87),
+                south_position = util.by_pixel(6, -87),
+                east_position = util.by_pixel(6, -87),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-absorber/l.png",
+                    frame_count = 15,
+                    line_length = 5,
+                    width = 224,
+                    height = 288,
+                    animation_speed = 0.3,
+                    run_mode = "forward-then-backward",
+                    draw_as_glow = true,
+                    scale = 0.5,
+                }
             },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-absorber/mask.png",
-                width = 224,
-                height = 416,
-                frame_count = 1,
-                shift = util.by_pixel(8, -56),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
-                scale = 0.5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-absorber/sh.png",
-                width = 288,
-                height = 192,
-                frame_count = 1,
-                shift = util.by_pixel(24, 0),
-                scale = 0.5,
-                draw_as_shadow = true,
-            },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(6, -87),
-            west_position = util.by_pixel(6, -87),
-            south_position = util.by_pixel(6, -87),
-            east_position = util.by_pixel(6, -87),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-absorber/l.png",
-                frame_count = 15,
-                line_length = 5,
-                width = 224,
-                height = 288,
-                animation_speed = 0.3,
-                run_mode = "forward-then-backward",
-                draw_as_glow = true,
-                scale = 0.5,
+        },
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-absorber/off.png",
+                    width = 224,
+                    height = 416,
+                    frame_count = 1,
+                    shift = util.by_pixel(8, -56),
+                    scale = 0.5,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-absorber/mask.png",
+                    width = 224,
+                    height = 416,
+                    frame_count = 1,
+                    shift = util.by_pixel(8, -56),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
+                    scale = 0.5,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-absorber/sh.png",
+                    width = 288,
+                    height = 192,
+                    frame_count = 1,
+                    shift = util.by_pixel(24, 0),
+                    scale = 0.5,
+                    draw_as_shadow = true,
+                },
             }
         },
     },

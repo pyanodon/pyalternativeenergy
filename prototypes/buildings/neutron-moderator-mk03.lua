@@ -65,74 +65,76 @@ ENTITY {
         },
     },
     energy_usage = "1200kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/off.png",
-                width = 160,
-                height = 288,
-                frame_count = 1,
-                shift = util.by_pixel(0, -64),
+                north_position = util.by_pixel(0, -64),
+                west_position = util.by_pixel(0, -64),
+                south_position = util.by_pixel(0, -64),
+                east_position = util.by_pixel(0, -64),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/l.png",
+                    frame_count = 1,
+                    line_length = 1,
+                    width = 160,
+                    height = 288,
+                    draw_as_glow = true,
+                }
             },
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/tube.png",
-                width = 160,
-                height = 288,
-                frame_count = 1,
-                shift = util.by_pixel(0, -64),
+                north_position = util.by_pixel(0, -80),
+                west_position = util.by_pixel(0, -80),
+                south_position = util.by_pixel(0, -80),
+                east_position = util.by_pixel(0, -80),
+                animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/bubbles.png",
+                    frame_count = 100,
+                    line_length = 10,
+                    animation_speed = 1/2,
+                    width = 160,
+                    height = 128,
+                }
             },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/mask.png",
-                width = 160,
-                height = 288,
-                frame_count = 1,
-                shift = util.by_pixel(0, -64),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/sh.png",
-                width = 224,
-                height = 128,
-                frame_count = 1,
-                shift = util.by_pixel(32, 16),
-                draw_as_shadow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/ao.png",
-                width = 160,
-                height = 288,
-                frame_count = 1,
-                shift = util.by_pixel(0, -64),
-            },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(0, -64),
-            west_position = util.by_pixel(0, -64),
-            south_position = util.by_pixel(0, -64),
-            east_position = util.by_pixel(0, -64),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/l.png",
-                frame_count = 1,
-                line_length = 1,
-                width = 160,
-                height = 288,
-                draw_as_glow = true,
-            }
         },
-        {
-            north_position = util.by_pixel(0, -80),
-            west_position = util.by_pixel(0, -80),
-            south_position = util.by_pixel(0, -80),
-            east_position = util.by_pixel(0, -80),
-            animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/bubbles.png",
-                frame_count = 100,
-                line_length = 10,
-                animation_speed = 1/2,
-                width = 160,
-                height = 128,
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/off.png",
+                    width = 160,
+                    height = 288,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -64),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/tube.png",
+                    width = 160,
+                    height = 288,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -64),
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/mask.png",
+                    width = 160,
+                    height = 288,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -64),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/sh.png",
+                    width = 224,
+                    height = 128,
+                    frame_count = 1,
+                    shift = util.by_pixel(32, 16),
+                    draw_as_shadow = true,
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/ao.png",
+                    width = 160,
+                    height = 288,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -64),
+                },
             }
         },
     },
