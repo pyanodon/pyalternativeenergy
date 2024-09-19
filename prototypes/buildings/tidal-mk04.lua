@@ -905,91 +905,51 @@ ENTITY {
       {
         north =
         {
-          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-fluid.png",
+          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North-fluid.png",
           apply_runtime_tint = true,
           line_length = 8,
           frame_count = 32,
           animation_speed = 0.25,
-          width = 22,
-          height = 20,
-          shift = util.by_pixel(-2, -22),
-          hr_version = {
-            filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North-fluid.png",
-            apply_runtime_tint = true,
-            line_length = 8,
-            frame_count = 32,
-            animation_speed = 0.25,
-            width = 40,
-            height = 40,
-            shift = util.by_pixel(-1, -22),
-            scale = 0.5
-          }
+          width = 40,
+          height = 40,
+          shift = util.by_pixel(-1, -22),
+          scale = 0.5
         },
         east =
         {
-          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-fluid.png",
+          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East-fluid.png",
           apply_runtime_tint = true,
           line_length = 8,
           frame_count = 32,
           animation_speed = 0.25,
-          width = 20,
-          height = 24,
-          shift = util.by_pixel(6, -10),
-          hr_version = {
-            filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East-fluid.png",
-            apply_runtime_tint = true,
-            line_length = 8,
-            frame_count = 32,
-            animation_speed = 0.25,
-            width = 38,
-            height = 50,
-            shift = util.by_pixel(6, -11),
-            scale = 0.5
-          }
+          width = 38,
+          height = 50,
+          shift = util.by_pixel(6, -11),
+          scale = 0.5
         },
         south =
         {
-          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-fluid.png",
+          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South-fluid.png",
           apply_runtime_tint = true,
           line_length = 8,
           frame_count = 32,
           animation_speed = 0.25,
-          width = 20,
-          height = 8,
-          shift = util.by_pixel(-2, -4),
-          hr_version = {
-            filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South-fluid.png",
-            apply_runtime_tint = true,
-            line_length = 8,
-            frame_count = 32,
-            animation_speed = 0.25,
-            width = 36,
-            height = 14,
-            shift = util.by_pixel(-1, -4),
-            scale = 0.5
-          }
+          width = 36,
+          height = 14,
+          shift = util.by_pixel(-1, -4),
+          scale = 0.5
         },
         west =
         {
-          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-fluid.png",
+          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West-fluid.png",
           apply_runtime_tint = true,
           line_length = 8,
           frame_count = 32,
           animation_speed = 0.25,
-          width = 20,
-          height = 24,
-          shift = util.by_pixel(-8, -10),
-          hr_version = {
-            filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West-fluid.png",
-            apply_runtime_tint = true,
-            line_length = 8,
-            frame_count = 32,
-            animation_speed = 0.25,
-            width = 36,
-            height = 50,
-            shift = util.by_pixel(-7, -11),
-            scale = 0.5
-          }
+          width = 36,
+          height = 50,
+          shift = util.by_pixel(-7, -11),
+          scale = 0.5
         }
       },
       glass_pictures =
