@@ -1,5 +1,7 @@
 local resource_autoplace = require 'resource-autoplace'
 
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["antimonium"] = {}
+
 data:extend{{
     type = "autoplace-control",
     category = "resource",
@@ -8,10 +10,10 @@ data:extend{{
     order = "p"
 }}
 
-data:extend{{
-    type = "noise-layer",
-    name = "antimonium"
-}}
+-- data:extend{{
+--     type = "noise-layer",
+--     name = "antimonium"
+-- }}
 
 ENTITY {
     type = "resource",
