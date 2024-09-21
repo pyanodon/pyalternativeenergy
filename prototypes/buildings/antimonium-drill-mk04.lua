@@ -55,7 +55,7 @@ ENTITY {
     mining_speed = 4,
     energy_source = {
         type = "burner",
-        fuel_category = "jerry",
+        fuel_categories = {"jerry"},
         effectivity = 1,
         light_flicker = {color = {0,0,0}},
         fuel_inventory_size = 1,

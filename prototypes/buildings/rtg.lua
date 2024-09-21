@@ -53,7 +53,7 @@ ENTITY {
 	burner =
 		{
 			type = "burner",
-			fuel_category = "fuelrod",
+			fuel_categories = {"fuelrod"},
 			effectivity = 50,
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,

@@ -100,7 +100,7 @@ ENTITY {
     },
     burner =
     {
-      fuel_category = "quantum",
+      fuel_categories = {"quantum"},
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
