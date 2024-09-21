@@ -45,9 +45,7 @@ ENTITY {
     collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 2
-    },
+    module_slots = 2,
     allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"oil-powerplant"},
     crafting_speed = 2,

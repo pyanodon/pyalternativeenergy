@@ -55,9 +55,7 @@ ENTITY {
             {position = {2.8, 2}},
         }
     },
-    module_specification = {
-        module_slots = 0
-    },
+    module_slots = 0,
     --allowed_effects = {"consumption", "speed", "pollution"},
     mining_speed = 3,
     energy_source = {

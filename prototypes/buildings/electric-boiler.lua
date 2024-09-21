@@ -171,9 +171,7 @@ ENTITY {
             }
         },
     },
-    module_specification = {
-        module_slots = 3
-    },
+    module_slots = 3,
     allowed_effects = {'consumption', 'speed', 'productivity', 'pollution'},
     show_recipe_icon = false,
     show_recipe_icon_on_map = false,

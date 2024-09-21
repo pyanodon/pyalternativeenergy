@@ -49,9 +49,7 @@ ENTITY {
     collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 0
-    },
+    module_slots = 0,
     allowed_effects = {},
     crafting_categories = {"nuclear-fission"},
     crafting_speed = 10,

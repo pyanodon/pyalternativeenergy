@@ -53,7 +53,7 @@ ENTITY{
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
-    module_specification = {module_slots = MODULE_SLOTS},
+    module_slots = MODULE_SLOTS,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {'numal'},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "numal-reef-mk01"),
