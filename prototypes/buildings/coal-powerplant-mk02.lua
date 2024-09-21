@@ -54,7 +54,7 @@ ENTITY {
     energy_source =
     {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = {"chemical"},
       effectivity = 1,
       light_flicker =
       {

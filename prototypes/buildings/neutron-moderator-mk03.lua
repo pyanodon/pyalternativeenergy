@@ -55,7 +55,7 @@ ENTITY {
     crafting_speed = 3,
     energy_source = {
         type = "burner",
-        fuel_category = "control-rod",
+        fuel_categories = {"control-rod"},
         effectivity = 1,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,

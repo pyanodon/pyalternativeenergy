@@ -53,7 +53,7 @@ ENTITY {
     energy_source =
     {
       type = "burner",
-      fuel_category = "biomass",
+      fuel_categories = {"biomass"},
       effectivity = 1,
       light_flicker =
       {
