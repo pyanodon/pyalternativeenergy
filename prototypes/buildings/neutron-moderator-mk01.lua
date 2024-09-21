@@ -46,9 +46,7 @@ ENTITY {
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 1
-    },
+    module_slots = 1,
     allowed_effects = {"speed", "consumption"},
     crafting_categories = {"neutron-moderator"},
     crafting_speed = 1,
