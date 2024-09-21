@@ -464,13 +464,13 @@ RECIPE('big-electric-pole'):remove_unlock('electric-energy-distribution-1'):add_
 
 RECIPE('substation'):remove_unlock('electric-energy-distribution-2'):add_unlock('electric-energy-distribution-4')
 
-ITEM('uranium-235'):add_flag('hidden')
-ITEM('uranium-238'):add_flag('hidden')
-ITEM('battery'):add_flag('hidden')
+ITEM('uranium-235').hidden = true
+ITEM('uranium-238').hidden = true
+ITEM('battery').hidden = true
 
 RECIPE('centrifuge'):remove_unlock('filtration'):set_fields { hidden = true }
-ITEM('centrifuge'):add_flag('hidden')
-ENTITY('centrifuge', 'assembling-machine'):add_flag('hidden')
+ITEM('centrifuge').hidden = true
+ENTITY('centrifuge', 'assembling-machine').hidden = true
 
 ITEM('speed-module').effect.consumption.bonus = 1.0
 ITEM('speed-module-2').effect.consumption.bonus = 1.2
