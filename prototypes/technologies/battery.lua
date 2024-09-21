@@ -65,7 +65,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/battery-mk04.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'advanced-electronics','battery-mk03'},
+    prerequisites = {'advanced-circuit','battery-mk03'},
     dependencies = {"battery-mk03"},
     effects = {},
     unit = {
