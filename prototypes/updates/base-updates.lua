@@ -448,7 +448,7 @@ RECIPE('fast-inserter'):set_fields {
 	energy_required = 0.5
 }
 
-RECIPE('stack-inserter'):set_fields {
+RECIPE('bulk-inserter'):set_fields {
 	ingredients = {
 		{ 'fast-inserter', 1 },
 		{ 'advanced-circuit', 1 },

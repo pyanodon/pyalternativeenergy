@@ -88,7 +88,7 @@ table.insert(RECIPE("reheat-outlet-gas-2").results, {type = "fluid", name = "mol
 
 RECIPE("fast-inserter-2"):replace_ingredient("electronic-circuit", { "controler-mk01", 2 }):add_ingredient{"electronics-mk01", 2}:add_ingredient{"gearbox-mk01", 1}:replace_ingredient("steel-plate", "nbfe-alloy")
 RECIPE("long-handed-inserter-2"):replace_ingredient("duralumin", "fenxsb-alloy"):add_ingredient{"nichrome", 2}
-RECIPE("stack-inserter-2"):replace_ingredient("titanium-plate", {"self-assembly-monolayer", 2})
+RECIPE("bulk-inserter-2"):replace_ingredient("titanium-plate", {"self-assembly-monolayer", 2})
 
 --pyPH--
 data.raw['assembling-machine']['coalbed-mk02'].energy_usage = "2MW"
