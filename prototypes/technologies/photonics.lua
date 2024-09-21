@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = '__pyalternativeenergygraphics__/graphics/technology/photonics.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'advanced-electronics'},
+    prerequisites = {'advanced-circuit'},
     effects = {},
     unit = {
         count = 500,
