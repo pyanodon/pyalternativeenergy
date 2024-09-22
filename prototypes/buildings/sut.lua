@@ -1,5 +1,9 @@
-local collision_mask_util = require '__core__/lualib/collision-mask-util'
-local mask = collision_mask_util.get_first_unused_layer()
+data:extend{{
+    type = "collision-layer",
+    name = "sut"
+}}
+
+local mask = "sut"
 
 data:extend{{
     type = 'tile',
@@ -46,7 +50,12 @@ data:extend{{
     walking_speed_modifier = 3.5
 }}
 
-local sut_placement_distance = collision_mask_util.get_first_unused_layer()
+data:extend{{
+    type = "collision-layer",
+    name = "sut_placement_distance"
+}}
+local sut_placement_distance = "sut_placement_distance"
+
 _G.sut_placement_distance = sut_placement_distance
 
 RECIPE {
