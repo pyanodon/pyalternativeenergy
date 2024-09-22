@@ -10,9 +10,12 @@ if CollisionData then
     return CollisionData
 end
 
-local collision_mask_util = require 'collision-mask-util'
+data:extend{{
+    type = "collision-layer",
+    name = "wind_layer"
+}}
 CollisionData = {
-    wind_layer = collision_mask_util.get_first_unused_layer()
+    wind_layer = "wind_layer"
 }
 
 return CollisionData
