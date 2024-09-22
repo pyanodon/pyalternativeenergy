@@ -236,8 +236,8 @@ for tier, i in pairs{-75, -50, 50, 100} do
         tier = tier,
         stack_size = 1,
         effect = {
-            speed = {bonus = i / 100},
-            consumption = {bonus = i / 100},
+            speed = i / 100,
+            consumption = i / 100,
         },
     }
     data:extend{mod}
