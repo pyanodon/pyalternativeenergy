@@ -735,7 +735,7 @@ RECIPE('power-armor-mk2'):set_fields {
 	},
 	category = 'crafting-with-fluid'
 }
-RECIPE('fusion-reactor-equipment'):set_fields {
+RECIPE('fission-reactor-equipment'):set_fields {
 	ingredients = {
 		{'low-density-structure', 40},
 		{'gastrocapacitor', 10},
@@ -833,7 +833,7 @@ data.raw.technology['solar-panel-equipment'].prerequisites = {'solar-mk01', 'mod
 data.raw.technology['night-vision-equipment'].prerequisites = {'personal-roboport-equipment'}
 data.raw.technology['belt-immunity-equipment'].prerequisites = {'personal-roboport-equipment'}
 data.raw.technology['exoskeleton-equipment'].prerequisites = {'bio-implants', 'power-armor'}
-data.raw.technology['fusion-reactor-equipment'].prerequisites = {'power-armor', 'fusion-mk02'}
+data.raw.technology['fission-reactor-equipment'].prerequisites = {'power-armor', 'fusion-mk02'}
 data.raw.technology['personal-roboport-mk2-equipment'].prerequisites = {'solar-panel-equipment', 'modular-armor', 'personal-roboport-equipment'}
 
 TECHNOLOGY('solar-panel-equipment'):add_pack('chemical-science-pack')
