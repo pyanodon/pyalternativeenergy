@@ -82,7 +82,7 @@ ENTITY {
     --   fluid_usage_per_tick = (2/60),
       maximum_temperature = 1000,
     },
-    energy_usage = "750KW",
+    energy_usage = "750kW",
     graphics_set = {
         working_visualisations = {
             {
