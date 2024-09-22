@@ -76,7 +76,7 @@ data:extend(
 	vision_distance = 0,
 	movement_speed = 0.02,
 	distance_per_frame = 0.13,
-	pollution_to_join_attack = 0,
+	absorptions_to_join_attack = {pollution = 0},
 	distraction_cooldown = 0,
 	dying_explosion = 'blood-explosion-small',
 	run_animation =
