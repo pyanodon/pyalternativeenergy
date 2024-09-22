@@ -472,13 +472,13 @@ RECIPE('centrifuge'):remove_unlock('filtration'):set_fields { hidden = true }
 ITEM('centrifuge').hidden = true
 ENTITY('centrifuge', 'assembling-machine').hidden = true
 
-ITEM('speed-module').effect.consumption.bonus = 1.0
-ITEM('speed-module-2').effect.consumption.bonus = 1.2
-ITEM('speed-module-3').effect.consumption.bonus = 1.5
+ITEM('speed-module').effect.consumption = 1.0
+ITEM('speed-module-2').effect.consumption = 1.2
+ITEM('speed-module-3').effect.consumption = 1.5
 
-ITEM('productivity-module').effect.consumption.bonus = 1.2
-ITEM('productivity-module-2').effect.consumption.bonus = 1.5
-ITEM('productivity-module-3').effect.consumption.bonus = 2.0
+ITEM('productivity-module').effect.consumption = 1.2
+ITEM('productivity-module-2').effect.consumption = 1.5
+ITEM('productivity-module-3').effect.consumption = 2.0
 
 ENTITY('beacon', 'beacon').energy_usage = '2MW'
 
