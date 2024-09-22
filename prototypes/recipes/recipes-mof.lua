@@ -23,7 +23,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "item", name = "dodecanoic-acid", amount = 1},
-        {type = "item", name = "empty-barrel", amount = 1},
+        {type = "item", name = "barrel", amount = 1},
         {type = "item", name = "molybdenum-plate", amount = 5},
         {type = "fluid", name = "ammonia", amount = 200},
         {type = "fluid", name = "water", amount = 100},

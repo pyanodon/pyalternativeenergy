@@ -84,7 +84,7 @@ RECIPE {
         {type = "fluid", name = "benzene", amount = 150},
         {type = "fluid", name = "phosphoric-acid", amount = 50},
         {type = "fluid", name = "butanol", amount = 100},
-        {type = "item", name = "empty-barrel", amount = 3},
+        {type = "item", name = "barrel", amount = 3},
 
     },
     results = {

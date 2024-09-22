@@ -515,7 +515,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = "item", name = "empty-barrel", amount = 1},
+        {type = "item", name = "barrel", amount = 1},
         {type = "item", name = "cadaveric-arum", amount = 5},
         {type = "item", name = "chromium", amount = 1},
 

@@ -22,7 +22,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'numal-mk02', amount = 1, probability = 0.005},
-        {type = 'item', name = 'empty-barrel', amount = 15},
+        {type = 'item', name = 'barrel', amount = 15},
         {type = 'item', name = 'numal', amount = 1, probability = 0.5},
     },
     main_product = "numal-mk02",
@@ -56,7 +56,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'numal-mk03', amount = 1, probability = 0.004},
-        {type = 'item', name = 'empty-barrel', amount = 15},
+        {type = 'item', name = 'barrel', amount = 15},
         {type = 'item', name = 'numal-mk02', amount = 1, probability = 0.6},
     },
     main_product = "numal-mk03",
@@ -90,7 +90,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'numal-mk04', amount = 1, probability = 0.003},
-        {type = 'item', name = 'empty-barrel', amount = 15},
+        {type = 'item', name = 'barrel', amount = 15},
         {type = 'item', name = 'numal-mk03', amount = 1, probability = 0.7},
     },
     main_product = "numal-mk04",

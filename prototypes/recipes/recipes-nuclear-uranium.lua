@@ -186,7 +186,7 @@ RECIPE{
 	ingredients =
 		{
 			{type = "fluid", name = "phosphoryl-chloride", amount = 50},
-            {type = "item", name = "empty-barrel", amount = 1},
+            {type = "item", name = "barrel", amount = 1},
             {type = "item", name = "pyridine", amount = 1},
 			{type = "fluid", name = "butanol", amount = 50}
 		},
