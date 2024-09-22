@@ -19,7 +19,7 @@ for i = 1, 4 do
             render_no_network_icon = false,
             render_no_power_icon = false
         },
-        collision_mask = {},
+        collision_mask = {layers = {}},
         charge_cooldown = 0,
         discharge_cooldown = 0
     }}

@@ -37,7 +37,7 @@ local proto = ENTITY {
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk03.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
-    collision_mask = {wind_layer, "object-layer", "water-tile"},
+    collision_mask = {layers = {wind_layer, "object-layer", "water-tile"}},
     minable = {mining_time = 0.5, result = "multiblade-turbine-mk03"},
     placeable_by = {item = 'multiblade-turbine-mk03', count = 1},
     fast_replaceable_group = "multiblade-turbine-mk03",
@@ -126,7 +126,7 @@ data:extend{{
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "not-on-map"},
     collision_box = {{-12.4, -12.4}, {12.4, 12.4}},
-    collision_mask = { wind_layer },
+    collision_mask = {layers = { wind_layer }},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     selectable_in_game = false,
     picture = {
@@ -137,7 +137,7 @@ data:extend{{
     created_effect = {
         type = 'area',
         radius = 12.4,
-        collision_mask = {wind_layer},
+        collision_mask = {layers = {wind_layer}},
         action_delivery = {
             type = 'instant',
             target_effects = {{
