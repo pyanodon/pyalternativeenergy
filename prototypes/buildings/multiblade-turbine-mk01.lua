@@ -50,7 +50,7 @@ local proto = ENTITY{
     energy_source = {
         type = 'electric',
         usage_priority = 'primary-output',
-        buffer_capacity = '550KW',
+        buffer_capacity = '550kW',
         input_flow_limit = '0W',
         render_no_power_icon = false
     },
