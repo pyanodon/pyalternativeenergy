@@ -1072,7 +1072,7 @@ data:extend({
             tile_name = "nuclear-ground",
             radius = 12,
             apply_projection = true,
-            tile_collision_mask = { "water-tile" }
+            tile_collision_mask = {layers = { "water-tile" }}
           },
           {
             type = "destroy-cliffs",
@@ -1274,7 +1274,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { "water-tile" }
+                    tile_collision_mask = {layers = { "water-tile" }}
                   }
                 }
               }

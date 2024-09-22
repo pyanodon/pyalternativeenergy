@@ -12,7 +12,7 @@ data:extend{{
     map_color = {1, 1, 1},
     pollution_absorption_per_second = 0,
     minable = {mining_time = 0.1, result = 'sut-panel'},
-    collision_mask = {'ground-tile', mask},
+    collision_mask = {layers = {'ground-tile', mask}},
     check_collision_with_entities = true,
     placeable_by = {item = 'sut-panel', count = 1},
     icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png',
@@ -144,7 +144,7 @@ ENTITY {
         apparent_volume = 2.5
     },
     render_layer = 'entity-info-icon',
-    collision_mask = {'item-layer', 'object-layer', 'player-layer', 'water-tile', mask, sut_placement_distance}
+    collision_mask = {layers = {'item-layer', 'object-layer', 'player-layer', 'water-tile', mask, sut_placement_distance}}
 }
 
 data:extend{{
@@ -154,7 +154,7 @@ data:extend{{
 	icon_size = 64,
     flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
     collision_box = {{-200, -200}, {200, 200}},
-    collision_mask = {sut_placement_distance},
+    collision_mask = {layers = {sut_placement_distance}},
     selectable_in_game = false,
     picture = {
         filename = '__core__/graphics/empty.png',
@@ -226,7 +226,7 @@ do
                 },
                 icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png',
                 icon_size = 64,
-                collision_mask = {},
+                collision_mask = {layers = {}},
                 collision_box = {{0, 0}, {0, 0}},
                 flags = {'not-on-map', 'not-flammable', 'not-rotatable', 'not-in-kill-statistics', 'hidden'},
                 selectable_in_game = false,

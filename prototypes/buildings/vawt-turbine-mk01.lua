@@ -43,7 +43,7 @@ ENTITY{
     icon = '__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk01.png',
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation'},
-    collision_mask = {wind_layer, 'object-layer', 'player-layer', 'water-tile'},
+    collision_mask = {layers = {wind_layer, 'object-layer', 'player-layer', 'water-tile'}},
     minable = {mining_time = 0.5, result = "vawt-turbine-mk01"},
     fast_replaceable_group = 'vawt-turbine',
     max_health = 400,
@@ -114,7 +114,7 @@ data:extend(
         icon_size = 64,
         flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
         collision_box = {{-17.9, -17.9}, {17.9, 17.9}},
-        collision_mask = { wind_layer },
+        collision_mask = {layers = { wind_layer }},
         selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
         selectable_in_game = false,
         picture = {
@@ -125,7 +125,7 @@ data:extend(
         created_effect = {
             type = 'area',
             radius = 17.9,
-            collision_mask = {wind_layer},
+            collision_mask = {layers = {wind_layer}},
             action_delivery = {
                 type = 'instant',
                 target_effects = {{
