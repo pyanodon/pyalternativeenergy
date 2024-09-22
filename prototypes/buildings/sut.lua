@@ -228,7 +228,8 @@ do
                 icon_size = 64,
                 collision_mask = {layers = {}},
                 collision_box = {{0, 0}, {0, 0}},
-                flags = {'not-on-map', 'not-flammable', 'not-rotatable', 'not-in-kill-statistics', 'hidden'},
+                hidden = true,
+                flags = {'not-on-map', 'not-flammable', 'not-rotatable', 'not-in-kill-statistics', },
                 selectable_in_game = false,
                 render_layer = 'wires'
             }}
