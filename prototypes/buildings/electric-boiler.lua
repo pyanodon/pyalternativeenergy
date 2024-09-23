@@ -93,7 +93,7 @@ ENTITY {
             production_type = 'output',
             pipe_covers = pipe_covers,
             pipe_picture = pipe_picture,
-            pipe_connections = {{type = 'output', position = {0, 1.29}, direction = defines.direction.south}},
+            pipe_connections = {{flow_direction = 'output', position = {0, 1.29}, direction = defines.direction.south}},
             volume = 200,
             filter = 'steam'
         }
