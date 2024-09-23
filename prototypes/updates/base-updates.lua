@@ -874,7 +874,7 @@ data.raw.furnace['electric-furnace'].energy_source = {
 			direction_count = 4,
 			hr_version =
 			{
-				filename = '__base__/graphics/entity/heat-exchanger/hr-heatex-endings.png',
+				filename = '__base__/graphics/entity/heat-exchanger/heatex-endings.png',
 				width = 64,
 				height = 64,
 				direction_count = 4,
@@ -890,7 +890,7 @@ data.raw.furnace['electric-furnace'].energy_source = {
 			direction_count = 4,
 			hr_version =
 			{
-				filename = '__base__/graphics/entity/heat-exchanger/hr-heatex-endings-heated.png',
+				filename = '__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png',
 				width = 64,
 				height = 64,
 				direction_count = 4,
@@ -908,7 +908,7 @@ data.raw.furnace['electric-furnace'].energy_source = {
 			shift = util.by_pixel(-1, 8),
 			hr_version =
 			{
-				filename = '__base__/graphics/entity/heat-exchanger/hr-heatex-N-heated.png',
+				filename = '__base__/graphics/entity/heat-exchanger/heatex-N-heated.png',
 				priority = 'extra-high',
 				width = 44,
 				height = 96,
@@ -925,7 +925,7 @@ data.raw.furnace['electric-furnace'].energy_source = {
 			shift = util.by_pixel(-21, -13),
 			hr_version =
 			{
-				filename = '__base__/graphics/entity/heat-exchanger/hr-heatex-E-heated.png',
+				filename = '__base__/graphics/entity/heat-exchanger/heatex-E-heated.png',
 				priority = 'extra-high',
 				width = 80,
 				height = 80,
@@ -942,7 +942,7 @@ data.raw.furnace['electric-furnace'].energy_source = {
 			shift = util.by_pixel(-1, -30),
 			hr_version =
 			{
-				filename = '__base__/graphics/entity/heat-exchanger/hr-heatex-S-heated.png',
+				filename = '__base__/graphics/entity/heat-exchanger/heatex-S-heated.png',
 				priority = 'extra-high',
 				width = 28,
 				height = 40,
@@ -959,7 +959,7 @@ data.raw.furnace['electric-furnace'].energy_source = {
 			shift = util.by_pixel(23, -13),
 			hr_version =
 			{
-				filename = '__base__/graphics/entity/heat-exchanger/hr-heatex-W-heated.png',
+				filename = '__base__/graphics/entity/heat-exchanger/heatex-W-heated.png',
 				priority = 'extra-high',
 				width = 64,
 				height = 76,
@@ -1037,7 +1037,7 @@ data:extend({
 		map_color = {r=1, g=1, b=0},
 		picture =
 		{
-		  filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
+		  filename = "__base__/graphics/entity/artillery-projectile/shell.png",
 		  draw_as_glow = true,
 		  width = 64,
 		  height = 64,
@@ -1045,7 +1045,7 @@ data:extend({
 		},
 		shadow =
 		{
-		  filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+		  filename = "__base__/graphics/entity/artillery-projectile/shell-shadow.png",
 		  width = 64,
 		  height = 64,
 		  scale = 0.5
