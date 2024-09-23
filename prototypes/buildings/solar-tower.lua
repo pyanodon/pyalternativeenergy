@@ -168,7 +168,7 @@ ENTITY {
   vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
   mode = 'output-to-separate-pipe',
   collision_box = {{-9.8, -9.8}, {9.8, 9.8}},
-  collision_mask = {layers = {'item-layer', 'object-layer', 'player-layer', 'water-tile', _G.sut_placement_distance}},
+  collision_mask = {layers = {item = true, object = true, 'player-layer', water_tile = true, _G.sut_placement_distance}},
   selection_box = {{-10.0, -10.0}, {10.0, 10.0}},
   target_temperature = 5000,
   fluid_box = {

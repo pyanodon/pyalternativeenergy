@@ -38,7 +38,7 @@ local proto = ENTITY {
 	icon_size = 64,
     hidden = true,
     flags = {"placeable-neutral", "player-creation", },
-    collision_mask = {layers = {[wind_layer] = true, ['object-layer'] = true, ['player-layer'] = true, ['water-tile'] = true}},
+    collision_mask = {layers = {[wind_layer] = true, object = true, ['player-layer'] = true, water_tile = true}},
     minable = {mining_time = 0.5, result = "hawt-turbine-mk03"},
     placeable_by = {item = 'hawt-turbine-mk03', count = 1},
     fast_replaceable_group = "hawt-turbine",

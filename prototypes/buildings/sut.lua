@@ -12,7 +12,7 @@ data:extend{{
     map_color = {1, 1, 1},
     pollution_absorption_per_second = 0,
     minable = {mining_time = 0.1, result = 'sut-panel'},
-    collision_mask = {layers = {'ground-tile', mask}},
+    collision_mask = {layers = {ground_tile = true, mask}},
     check_collision_with_entities = true,
     placeable_by = {item = 'sut-panel', count = 1},
     icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png',
@@ -144,7 +144,7 @@ ENTITY {
         apparent_volume = 2.5
     },
     render_layer = 'entity-info-icon',
-    collision_mask = {layers = {'item-layer', 'object-layer', 'player-layer', 'water-tile', mask, sut_placement_distance}}
+    collision_mask = {layers = {item = true, object = true, 'player-layer', water_tile = true, mask, sut_placement_distance}}
 }
 
 data:extend{{
@@ -199,7 +199,7 @@ ITEM{
     flags = {},
     subgroup = 'py-alternativeenergy-thermosolar',
     order = 'cb',
-    place_as_tile = {result = 'sut-panel', condition = {mask, 'water-tile'}, condition_size = 1},
+    place_as_tile = {result = 'sut-panel', condition = {mask, water_tile = true}, condition_size = 1},
     stack_size = 1000,
     localised_name = {'tile-name.sut-panel'},
     localised_description = {'tile-description.sut-panel'}
