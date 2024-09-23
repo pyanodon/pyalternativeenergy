@@ -10,7 +10,7 @@ data:extend{{
     name = 'sut-panel',
     layer = 100,
     map_color = {1, 1, 1},
-    pollution_absorption_per_second = 0,
+    absorptions_per_second = {pollution = 0},
     minable = {mining_time = 0.1, result = 'sut-panel'},
     collision_mask = {layers = {ground_tile = true, mask = true}},
     check_collision_with_entities = true,
@@ -19,6 +19,7 @@ data:extend{{
     icon_size = 64,
     decorative_removal_probability = 1,
     variants = {
+        transition = table.deepcopy(TILE('concrete').variants.transition),
         main = {
             {
                 picture = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/tile/white.png',
