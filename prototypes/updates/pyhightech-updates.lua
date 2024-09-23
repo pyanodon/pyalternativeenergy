@@ -1,7 +1,7 @@
 --TECHNOLOGY--
 TECHNOLOGY('quantum'):add_prereq('machines-mk02')
 TECHNOLOGY('nano-tech'):add_prereq('photonics'):add_prereq('battery-mk04'):add_prereq('mof'):add_prereq('nano-mesh'):add_prereq('biofet')
--- TECHNOLOGY("nucleo"):remove_pack('chemical-science-pack'):remove_prereq('energy-2'):remove_prereq('boron-mk02'):add_prereq('uranium-processing')
+-- TECHNOLOGY("nucleo"):remove_pack('chemical-science-pack'):remove_prereq('energy-2'):remove_prereq('boron-mk02'):add_prereq('uranium-mining')
 TECHNOLOGY('ht-robotics'):add_prereq('advanced-robotics')
 TECHNOLOGY('microfibers'):remove_pack('production-science-pack')
 TECHNOLOGY('ethylene'):remove_pack('chemical-science-pack')
@@ -24,7 +24,7 @@ end
 -- RECIPE("chipshooter-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 -- RECIPE("pcb-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 --RECIPE("fbreactor-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
-RECIPE('particle-accelerator-mk01'):add_ingredient {type = 'item', name = 'intermetallics', amount = 20}:remove_ingredient('electric-engine-unit'):add_ingredient {type = 'item', name = 'electric-engine-unit', amount = 20}:add_ingredient {type = 'item', name = 'steel-plate', amount = 500}:add_ingredient {type = 'item', name = 'copper-cable', amount = 1000}:remove_unlock('nucleo'):add_unlock('uranium-processing')
+RECIPE('particle-accelerator-mk01'):add_ingredient {type = 'item', name = 'intermetallics', amount = 20}:remove_ingredient('electric-engine-unit'):add_ingredient {type = 'item', name = 'electric-engine-unit', amount = 20}:add_ingredient {type = 'item', name = 'steel-plate', amount = 500}:add_ingredient {type = 'item', name = 'copper-cable', amount = 1000}:remove_unlock('nucleo'):add_unlock('uranium-mining')
 -- RECIPE("electronics-factory-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 1})
 -- RECIPE("pulp-mill-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 5})
 RECIPE('nano-assembler-mk01'):add_ingredient {type = 'item', name = 'intermetallics', amount = 15}
