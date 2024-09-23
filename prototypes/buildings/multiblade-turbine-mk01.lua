@@ -105,7 +105,7 @@ data:extend{new_proto}
 data:extend{{
     type = 'simple-entity-with-force',
     name = 'multiblade-turbine-mk01-collision',
-    render_layer = 'ground-tile',
+    render_layer = 'ground-layer-1',
     icon = '__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png',
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
