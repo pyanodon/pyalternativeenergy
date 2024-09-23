@@ -73,7 +73,7 @@ ENTITY {
     collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    mode = 'heat-water-inside',
+    mode = 'heat-fluid-inside',
     target_temperature = 5000,
     energy_source = {type = 'void'},
     energy_consumption = '1.6MW',
@@ -104,14 +104,15 @@ ENTITY {
         pipe_covers = py.pipe_covers(false, true, true, true),
         volume = 1000,
         pipe_connections = {
-            {flow_direction = 'input-output', position = {0, -3}, direction = defines.direction.north},
-            {flow_direction = 'input-output', position = {0, 3}, direction = defines.direction.south},
-            {flow_direction = 'input-output', position = {-3, 0}, direction = defines.direction.west},
-            {flow_direction = 'input-output', position = {3, 0}, direction = defines.direction.east}
+            {flow_direction = 'input-output', position = {0, -2.2}, direction = defines.direction.north},
+            {flow_direction = 'input-output', position = {0, 2.2}, direction = defines.direction.south},
+            {flow_direction = 'input-output', position = {-2.2, 0}, direction = defines.direction.west},
+            {flow_direction = 'input-output', position = {2.2, 0}, direction = defines.direction.east}
         },
         filter = 'molten-salt'
     },
     output_fluid_box = {
+        volume = 100,
         pipe_connections = {},
         production_type = 'output'
     },
