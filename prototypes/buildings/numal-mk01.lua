@@ -45,7 +45,7 @@ ENTITY{
     max_health = 100,
     corpse = 'big-remnants',
     dying_explosion = 'big-explosion',
-    collision_mask = {layers = {['object-layer'] = true, ['ground-tile'] = true, train = true}},
+    collision_mask = {layers = {object = true, ground_tile = true, train = true}},
     collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
     draw_entity_info_icon_background = false,

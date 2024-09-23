@@ -45,7 +45,7 @@ ENTITY{
     icon = '__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk04.png',
     icon_size = 64,
     flags = {'placeable-neutral', 'player-creation'},
-    collision_mask = {layers = {wind_layer, 'object-layer', 'player-layer', 'water-tile'}},
+    collision_mask = {layers = {wind_layer, object = true, 'player-layer', water_tile = true}},
     minable = {mining_time = 0.5, result = "vawt-turbine-mk04"},
     fast_replaceable_group = 'vawt-turbine',
     max_health = 400,

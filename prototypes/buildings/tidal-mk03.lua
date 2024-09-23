@@ -455,11 +455,11 @@ ENTITY {
     icon_size = 64,
     hidden = true,
     flags = {"placeable-neutral", "player-creation", "filter-directions", },
-    collision_mask = {layers = { "object-layer", train = true }}, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
-    center_collision_mask = {layers = { "water-tile", "object-layer", "player-layer" }}, -- to test that tile directly under the pump is ground
-    fluid_box_tile_collision_test = { "ground-tile" },
-    adjacent_tile_collision_test = { "water-tile" },
-    adjacent_tile_collision_mask = {layers = { "ground-tile" }}, -- to prevent building on edge of map :(
+    collision_mask = {layers = { object = true, train = true }}, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    center_collision_mask = {layers = { water_tile = true, object = true, "player-layer" }}, -- to test that tile directly under the pump is ground
+    fluid_box_tile_collision_test = { ground_tile = true },
+    adjacent_tile_collision_test = { water_tile = true },
+    adjacent_tile_collision_mask = {layers = { ground_tile = true }}, -- to prevent building on edge of map :(
     adjacent_tile_collision_box = { { -1, -2 }, { 1, -1 } },
     --minable = {mining_time = 0.1, result = "offshore-test"},
     max_health = 150,
