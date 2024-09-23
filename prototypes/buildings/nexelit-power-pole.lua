@@ -31,7 +31,7 @@ ENTITY {
     name = "nexelit-power-pole",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nexelit-power-pole.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "nexelit-power-pole"},
     max_health = 100,
     corpse = "medium-electric-pole-remnants",
