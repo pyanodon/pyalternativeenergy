@@ -453,7 +453,7 @@ ENTITY {
     hidden = true,
     flags = {"placeable-neutral", "player-creation", "filter-directions", },
     collision_mask = {layers = { object = true, train = true }}, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
-    center_collision_mask = {layers = { water_tile = true, object = true, "player-layer" }}, -- to test that tile directly under the pump is ground
+    center_collision_mask = {layers = { water_tile = true, object = true, player = true }}, -- to test that tile directly under the pump is ground
     fluid_box_tile_collision_test = { ground_tile = true },
     adjacent_tile_collision_test = { water_tile = true },
     adjacent_tile_collision_mask = {layers = { ground_tile = true }}, -- to prevent building on edge of map :(
