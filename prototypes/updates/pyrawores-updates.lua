@@ -426,8 +426,6 @@ while enrichment < 100 do
 
 		local name = string.format( "%.2f", tostring(u235))
 		local recipe_name = "uf6-" .. string.gsub(name, "%.", "-") --TODO:find a way to fix uf6 names
-		log(name)
-		log(recipe_name)
 		
 		if u235 < 2.5 then
 			t = 1
