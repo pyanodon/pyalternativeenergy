@@ -12,7 +12,7 @@ data:extend{{
     map_color = {1, 1, 1},
     pollution_absorption_per_second = 0,
     minable = {mining_time = 0.1, result = 'sut-panel'},
-    collision_mask = {layers = {ground_tile = true, mask}},
+    collision_mask = {layers = {ground_tile = true, mask = true}},
     check_collision_with_entities = true,
     placeable_by = {item = 'sut-panel', count = 1},
     icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png',
