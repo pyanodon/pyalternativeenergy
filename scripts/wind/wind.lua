@@ -27,7 +27,8 @@ local animated_turbines = {
 }
 
 local variation = require 'scripts.wind.variation'
-local draw_animation, set_animation, valid_animation, set_animation_speed = rendering.draw_animation, rendering.set_animation, rendering.is_valid, rendering.set_animation_speed
+-- TODO check animation changes
+local draw_animation = rendering.draw_animation
 
 local function seconds(n)
     return 60 * n
@@ -196,7 +197,7 @@ end
 
 function Wind.draw_windmill(windmill_data, direction)
     local anim_id = windmill_data.anim_id
-    if not anim_id or not valid_animation(anim_id) then
+    if not anim_id then
         anim_id = draw_animation({
             animation = windmill_data.base_name .. direction,
             surface = windmill_data.entity.surface,
@@ -205,7 +206,7 @@ function Wind.draw_windmill(windmill_data, direction)
         })
         windmill_data.anim_id = anim_id
     elseif windmill_data.direction ~= direction then
-        set_animation(anim_id, windmill_data.base_name .. direction)
+        -- set_animation(anim_id, windmill_data.base_name .. direction)
         windmill_data.direction = direction
     end
 end
