@@ -65,7 +65,7 @@ data:extend(
     immune_to_tree_impacts = true,
     has_belt_immunity = true,
     immune_to_rock_impacts = true,
-    collision_mask = {layers = {['not-colliding-with-itself'] = true}},
+    collision_mask = {layers = {not_colliding_with_itself = true}},
     selection_box = {{-1.5, -3.5}, {1.5, 3.5}},
     attack_parameters =
     {
