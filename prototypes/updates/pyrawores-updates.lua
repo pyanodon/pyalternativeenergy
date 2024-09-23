@@ -425,7 +425,9 @@ while enrichment < 100 do
 		end
 
 		local name = string.format( "%.2f", tostring(u235))
-		local recipe_name = "uf6-" .. string.gsub(name, "%.", ",") --TODO:find a way to readd % to name
+		local recipe_name = "uf6-" .. string.gsub(name, "%.", "-") --TODO:find a way to fix uf6 names
+		log(name)
+		log(recipe_name)
 		
 		if u235 < 2.5 then
 			t = 1
@@ -505,7 +507,7 @@ while duf > duf_min do
 
 		RECIPE {
 				type = "recipe",
-				name = "depleted-uf6-" .. string.gsub(name, "%.", ","), --TODO:find a way to readd % to name
+				name = "depleted-uf6-" .. string.gsub(name, "%.", "-"), --TODO:find a way to fix uf6 names
 				category = "gas-separator",
 				enabled = false,
 				energy_required = 1,
