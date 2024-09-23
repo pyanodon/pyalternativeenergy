@@ -140,7 +140,7 @@ end
 
 --ENERGY PRODUCTION DESCRIPTION --
 for name, variance in pairs(require 'scripts.wind.variation') do
-    variance = {'entity-description.variance', variance * 100}
+    variance = {'entity-description.variance', tostring(variance * 100)}
     -- Handle the surrogate items that show in electric stats, too
     for _, suffix in pairs {'', '-blank'} do
         local entity = data.raw['electric-energy-interface'][name .. suffix]
@@ -179,11 +179,11 @@ for _, name in pairs(electric_energy_interfaces) do
     local entity = data.raw['electric-energy-interface'][name]
     local output = {'entity-description.max-output', entity.energy_production}
     if item.localised_description then
-        item.localised_description = tostring({'', item.localised_description, '\n', (output)}) --TODO:CHECK THIS IS REALLY FIXED
+        item.localised_description = {'', item.localised_description, '\n', (output)}
     elseif entity.localised_description then
-        item.localised_description = tostring({'', entity.localised_description, '\n', output}) --TODO:CHECK THIS IS REALLY FIXED
+        item.localised_description = {'', entity.localised_description, '\n', output}
     else
-        item.localised_description = tostring({'?', {'', {'entity-description.' .. name}, '\n', output}, output}) --TODO:CHECK THIS IS REALLY FIXED
+        item.localised_description = {'?', {'', {'entity-description.' .. name}, '\n', output}, output}
     end
     entity.energy_source.buffer_capacity = entity.energy_production
 end
