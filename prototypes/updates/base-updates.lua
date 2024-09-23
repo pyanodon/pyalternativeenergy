@@ -629,8 +629,8 @@ data.raw.furnace['steel-furnace'].energy_source.fluid_usage_per_tick = 2
 data.raw.furnace['steel-furnace'].energy_source.fluid_box = {
 	volume = 200,
 	pipe_connections = {
-		{type = 'input-output', position = {0.5, 1.5}},
-		{type = 'input-output', position = {0.5, -1.5}}
+		{flow_direction = 'input-output', position = {0.5, 0.7}, direction = defines.direction.north},
+		{flow_direction = 'input-output', position = {0.5, -0.7}, direction = defines.direction.south}
 	},
 	pipe_covers = py.pipe_covers(false, true, true, true),
 	pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
