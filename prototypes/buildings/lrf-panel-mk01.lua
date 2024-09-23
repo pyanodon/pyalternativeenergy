@@ -142,7 +142,8 @@ ENTITY {
     },
     output_fluid_box = {
         pipe_connections = {},
-        production_type = 'output'
+        production_type = 'output',
+        volume = 1,
     },
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     placeable_by = {item = 'stirling-concentrator', count = 1}
