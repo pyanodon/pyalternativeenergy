@@ -179,11 +179,11 @@ for _, name in pairs(electric_energy_interfaces) do
     local entity = data.raw['electric-energy-interface'][name]
     local output = {'entity-description.max-output', entity.energy_production}
     if item.localised_description then
-        item.localised_description = {'', item.localised_description, '\n', output}
+        item.localised_description = tostring({'', item.localised_description, '\n', (output)}) --TODO:CHECK THIS IS REALLY FIXED
     elseif entity.localised_description then
-        item.localised_description = {'', entity.localised_description, '\n', output}
+        item.localised_description = tostring({'', entity.localised_description, '\n', output}) --TODO:CHECK THIS IS REALLY FIXED
     else
-        item.localised_description = {'?', {'', {'entity-description.' .. name}, '\n', output}, output}
+        item.localised_description = tostring({'?', {'', {'entity-description.' .. name}, '\n', output}, output}) --TODO:CHECK THIS IS REALLY FIXED
     end
     entity.energy_source.buffer_capacity = entity.energy_production
 end
