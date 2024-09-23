@@ -57,11 +57,9 @@ ENTITY {
         fluid_box =
         {
           volume = 200,
-          base_level = 0,
-          pipe_connections =
-          {
-            {type = "input-output", position = {0, -2}},
-            {type = "input-output", position = {0, 2}}
+          pipe_connections = {
+            {flow_direction = "input-output", position = {0, -1.3}, direction = defines.direction.north},
+            {flow_direction = "input-output", position = {0, 1.3}, direction = defines.direction.south}
           },
           pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
           pipe_covers = py.pipe_covers(false, true, true, true),
@@ -132,7 +130,10 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             base_level = 0,
-            pipe_connections = {{flow_direction = 'input-output', position = {1.3, 0.0}, direction = defines.direction.east}, {flow_direction = 'input-output', position = {-2.0, 0.0}}}
+            pipe_connections = {
+                {flow_direction = 'input-output', position = {1.3, 0.0}, direction = defines.direction.east},
+                {flow_direction = 'input-output', position = {-1.3, 0.0}, direction = defines.direction.west}
+            }
         },
         off_when_no_fluid_recipe = true
     },

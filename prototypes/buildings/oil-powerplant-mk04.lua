@@ -59,16 +59,14 @@ ENTITY {
         destroy_non_fuel_fluid = false,
         fluid_box =
           {
-          volume = 200,
-          base_level = -1,
-          pipe_connections =
-          {
-              {type = "input", position = {0, 7.0}}
-          },
-          pipe_covers = py.pipe_covers(false, true, true, true),
-          pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-          production_type = "input",
-          filter = "gasoline"
+            volume = 200,
+            pipe_connections = {
+                {flow_direction = "input", position = {0, 6.3}, direction = defines.direction.south}
+            },
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            production_type = "input",
+            filter = "gasoline"
           },
       effectivity = 1,
       burns_fluid = true,
