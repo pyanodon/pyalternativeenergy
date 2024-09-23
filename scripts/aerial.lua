@@ -735,12 +735,14 @@ local function release_turbine(aerial_base_data, name, stack)
     local electric_poles = #storage.aerials.poles_by_network[electric_network_id]
     -- Return if we don't mee the minimum 3 poles per turbine
     if 3 * (aerial_turbines + 1) > electric_poles then
-        surface.create_entity{
-            name = 'flying-text',
-            position = position,
-            text = {'aerial-gui.airspace-too-crowded'},
-            color = {255,60,60}
-        }
+        for _, player in pairs(game.connected_players) do
+            player.create_local_flying_text {
+                position = position,
+                create_at_cursor = false,
+                text = {'aerial-gui.airspace-too-crowded'},
+                color = {255, 60, 60}
+            }
+        end
         return false
     end
 

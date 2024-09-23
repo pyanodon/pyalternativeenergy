@@ -83,16 +83,15 @@ Wind.events.on_built = function(event)
         local tick = game.tick
         local last_message = storage._last_cancel_creation_message or 0
         if last_message + seconds(1) < tick then
-            surface.create_entity{
-                name = 'flying-text',
-                position = position,
+            game.get_player(player_index).create_local_flying_text {
                 text = {
                     'cant-build-reason.entity-in-the-way',
                     (storage._last_failed_airspace or '')
                 },
-                render_player_index = player_index,
-                color = {255, 255, 255},
+                position = position,
+                create_at_cursor = true
             }
+            
             storage._last_cancel_creation_message = game.tick
         end
 
