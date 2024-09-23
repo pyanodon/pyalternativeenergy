@@ -104,8 +104,8 @@ local proto = ENTITY{
             }
         },
     },
-    localised_name = {'entity-name.hawt-turbine-mk01'},
-    localised_description = {'entity-description.hawt-turbine-mk01'}
+    --localised_name = {'entity-name.hawt-turbine-mk01'},
+    --localised_description = {'entity-description.hawt-turbine-mk01'}
 }
 
 -- Make a copy with only the base animation
