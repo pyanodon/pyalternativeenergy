@@ -347,10 +347,10 @@ TECHNOLOGY{
     order = "c-k-f-e"
   }
 
-data.raw.technology['uranium-processing'].enabled = true
-data.raw.technology['uranium-processing'].hidden = false
+data.raw.technology['uranium-mining'].enabled = true
+data.raw.technology['uranium-mining'].hidden = false
 
-TECHNOLOGY('uranium-processing'):remove_pack('chemical-science-pack'):remove_prereq('chemical-science-pack'):add_pack('py-science-pack-2')
+TECHNOLOGY('uranium-mining'):remove_pack('chemical-science-pack'):remove_prereq('chemical-science-pack'):add_pack('py-science-pack-2')
 
 TECHNOLOGY('kovarex-enrichment-process'):set_fields({ enabled = false, hidden = true })
 
@@ -400,14 +400,14 @@ RECIPE('chemical-science-pack'):set_fields {
 	energy_required = 240
 }
 
-RECIPE('nuclear-reactor'):add_unlock('uranium-processing'):remove_ingredient('super-steel')
+RECIPE('nuclear-reactor'):add_unlock('uranium-mining'):remove_ingredient('super-steel')
 
 --modify reactor to produce very little energy
 --data.raw.reactor['nuclear-reactor'].energy_source.effectivity = 0.2
 --data.raw.reactor['nuclear-reactor'].heat_buffer.connections = nil
 
 data.raw.technology['atomic-bomb'].prerequisites = {} 
-TECHNOLOGY('atomic-bomb'):add_prereq('uranium-processing')
+TECHNOLOGY('atomic-bomb'):add_prereq('uranium-mining')
 data.raw.technology["atomic-bomb"].unit.ingredients = {
 	{"automation-science-pack", 1},
 	{"logistic-science-pack", 1},

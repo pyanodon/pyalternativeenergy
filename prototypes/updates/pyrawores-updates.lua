@@ -107,7 +107,7 @@ RECIPE("p2s5"):remove_unlock("additives"):add_unlock("intermetallics-mk02")
 RECIPE("p2s5-2"):remove_unlock("additives"):add_unlock("intermetallics-mk02")
 
 --removing old nuclear reactor fuel cells as they wont do anything now.
-RECIPE("uranium-fuel-cell"):remove_unlock('uranium-mk01')--:add_unlock('uranium-processing')
+RECIPE("uranium-fuel-cell"):remove_unlock('uranium-mk01')--:add_unlock('uranium-mining')
 RECIPE("uranium-fuel-cell-mk02"):remove_unlock('uranium-mk01')
 RECIPE("uranium-fuel-cell-mk03"):remove_unlock('uranium-mk02')
 RECIPE("uranium-fuel-cell-mk04"):remove_unlock('uranium-mk03')
@@ -125,7 +125,7 @@ RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessin
 RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
-RECIPE("fuelrod-mk01-1"):add_ingredient({type = "item", name = "pu-239", amount = 1}):replace_ingredient('coke', 'graphite'):add_unlock('uranium-processing'):set_fields{category = "crafting"}
+RECIPE("fuelrod-mk01-1"):add_ingredient({type = "item", name = "pu-239", amount = 1}):replace_ingredient('coke', 'graphite'):add_unlock('uranium-mining'):set_fields{category = "crafting"}
 
 RECIPE {
 	type = "recipe",
@@ -250,9 +250,9 @@ table.insert(data.raw['assembling-machine']['sinter-unit'].energy_source.fuel_ca
 table.insert(data.raw['furnace']['py-burner'].energy_source.fuel_categories, 'nuke')
 
 --move uranium ore processing recipes
-RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
-RECIPE("grade-1-u-recrush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
-RECIPE("grade-2-u-crush"):remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
+RECIPE("grade-1-u"):remove_unlock('uranium-mk01'):add_unlock('uranium-mining')
+RECIPE("grade-1-u-recrush"):remove_unlock('uranium-mk01'):add_unlock('uranium-mining')
+RECIPE("grade-2-u-crush"):remove_unlock('uranium-mk01'):add_unlock('uranium-mining')
 --RECIPE("u-pulp-01"):remove_ingredient('20-u-powder'):add_ingredient({type = "item", name = "powdered-u", amount = 5}):replace_ingredient('sulfuric-acid','hydrogen-peroxide'):remove_unlock('uranium-mk02'):add_unlock('uranium-mk01')
 --TODO:look into uranium issues with pyro changes
 
@@ -273,7 +273,7 @@ RECIPE {
 	main_product = "u-pulp-01",
 	subgroup = "py-rawores-uranium",
 	order = "q-2"
-}:remove_unlock('uranium-mk01'):add_unlock('uranium-processing')
+}:remove_unlock('uranium-mk01'):add_unlock('uranium-mining')
 
 RECIPE {
 	type = "recipe",
@@ -291,7 +291,7 @@ RECIPE {
 	main_product = "u-pulp-02",
 	subgroup = "py-rawores-uranium",
 	order = "q-2"
-}:remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+}:remove_unlock('uranium-mk02'):add_unlock('uranium-mining')
 
 RECIPE {
 	type = "recipe",
@@ -309,7 +309,7 @@ RECIPE {
 	main_product = "u-pulp-03",
 	subgroup = "py-rawores-uranium",
 	order = "q-2"
-}:remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+}:remove_unlock('uranium-mk02'):add_unlock('uranium-mining')
 
 RECIPE {
 	type = "recipe",
@@ -328,7 +328,7 @@ RECIPE {
 	main_product = "yellow-cake",
 	subgroup = "py-rawores-uranium",
 	order = "q-2"
-}:remove_unlock('uranium-mk02'):add_unlock('uranium-processing')
+}:remove_unlock('uranium-mk02'):add_unlock('uranium-mining')
 
 RECIPE("u235-pulp-01"):remove_unlock('uranium-mk01')
 RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
@@ -352,7 +352,7 @@ RECIPE {
 	results = {
 			{"uranium-fuel-cell", 1}
 	},
-}--:add_unlock('uranium-processing')
+}--:add_unlock('uranium-mining')
 
 --[[
 RECIPE {
@@ -369,7 +369,7 @@ RECIPE {
 		results = {
 				{"uranium-fuel-cell-mk02", 1}
 		},
-	}--:add_unlock('uranium-processing')
+	}--:add_unlock('uranium-mining')
 ]]--
 
 	RECIPE {

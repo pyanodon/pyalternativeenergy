@@ -8,7 +8,7 @@ RECIPE{
         {'iron-gear-wheel', 50}, {type = "item", name = 'electronic-circuit', amount = 5}
     },
     results = {{type = "item", name = 'heat-smelter-mk01', amount = 1}}
-}:add_unlock('uranium-processing')
+}:add_unlock('uranium-mining')
 
 ITEM{
     type = 'item',
