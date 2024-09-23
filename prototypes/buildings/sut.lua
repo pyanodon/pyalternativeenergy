@@ -3,8 +3,6 @@ data:extend{{
     name = "sut"
 }}
 
-local mask = "sut"
-
 data:extend{{
     type = 'tile',
     name = 'sut-panel',
@@ -12,7 +10,7 @@ data:extend{{
     map_color = {1, 1, 1},
     absorptions_per_second = {pollution = 0},
     minable = {mining_time = 0.1, result = 'sut-panel'},
-    collision_mask = {layers = {ground_tile = true, mask = true}},
+    collision_mask = {layers = {ground_tile = true, sut = true}},
     check_collision_with_entities = true,
     placeable_by = {item = 'sut-panel', count = 1},
     icon = '__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png',
@@ -55,9 +53,6 @@ data:extend{{
     type = "collision-layer",
     name = "sut_placement_distance"
 }}
-local sut_placement_distance = "sut_placement_distance"
-
-_G.sut_placement_distance = sut_placement_distance
 
 RECIPE {
     type = 'recipe',
@@ -145,7 +140,7 @@ ENTITY {
         apparent_volume = 2.5
     },
     render_layer = 'entity-info-icon',
-    collision_mask = {layers = {item = true, object = true, 'player-layer', water_tile = true, mask, sut_placement_distance}}
+    collision_mask = {layers = {item = true, object = true, player = true, water_tile = true, sut = true, sut_placement_distance = true}}
 }
 
 data:extend{{
@@ -155,7 +150,7 @@ data:extend{{
 	icon_size = 64,
     flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
     collision_box = {{-200, -200}, {200, 200}},
-    collision_mask = {layers = {sut_placement_distance}},
+    collision_mask = {layers = {sut_placement_distance = true}},
     selectable_in_game = false,
     picture = {
         filename = '__core__/graphics/empty.png',
@@ -206,7 +201,7 @@ ITEM{
             condition = {
                 layers=
                 {
-                    mask = true,
+                    sut = true,
                     water_tile = true
                 }
             },

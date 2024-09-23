@@ -1,6 +1,3 @@
-local collision_data = require 'prototypes.functions.collision-mask'
-local wind_layer = collision_data and collision_data.wind_layer or "layer-50" -- make YAFC happy
-
 RECIPE {
     type = "recipe",
     name = "hawt-turbine-mk04",
@@ -36,7 +33,7 @@ local proto = ENTITY {
 	icon_size = 64,
     hidden = true,
     flags = {"placeable-neutral", "player-creation", },
-    collision_mask = {layers = {[wind_layer] = true, object = true, ['player-layer'] = true, water_tile = true}},
+    collision_mask = {layers = {wind_layer = true, object = true, player = true, water_tile = true}},
     minable = {mining_time = 0.5, result = "hawt-turbine-mk04"},
     placeable_by = {item = 'hawt-turbine-mk04', count = 1},
     fast_replaceable_group = "hawt-turbine",
@@ -121,7 +118,7 @@ data:extend(
         icon_size = 64,
         flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
         collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
-        collision_mask = {layers = { wind_layer }},
+        collision_mask = {layers = {wind_layer = true}},
         selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
         selectable_in_game = false,
         picture = {
@@ -132,7 +129,7 @@ data:extend(
         created_effect = {
             type = 'area',
             radius = 13.4,
-            collision_mask = {layers = {[wind_layer] = true}},
+            collision_mask = {layers = {wind_layer = true}},
             action_delivery = {
                 type = 'instant',
                 target_effects = {{
