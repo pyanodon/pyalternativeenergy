@@ -241,8 +241,8 @@ ITEM{
     }
 }:add_unlock("nuclear-power-mk02")
 
-table.insert(data.raw.locomotive.locomotive.burner.fuel_categories, "nuke")
-table.insert(data.raw.locomotive["mk02-locomotive"].burner.fuel_categories, "nuke")
+table.insert(data.raw.locomotive.locomotive.energy_source.fuel_categories, "nuke")
+table.insert(data.raw.locomotive["mk02-locomotive"].energy_source.fuel_categories, "nuke")
 table.insert(data.raw['assembling-machine']['assembling-machine-3'].energy_source.fuel_categories, 'nuke')
 table.insert(data.raw['assembling-machine']['atomizer-mk03'].energy_source.fuel_categories, 'nuke')
 table.insert(data.raw['assembling-machine']['atomizer-mk04'].energy_source.fuel_categories, 'nuke')
