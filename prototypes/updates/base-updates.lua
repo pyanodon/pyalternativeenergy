@@ -1002,7 +1002,7 @@ data:extend({
 		name = "nuclear-artillery-shell",
 		icon = "__pyalternativeenergygraphics__/graphics/icons/fatmanbomb_64.png",
 		icon_size = 64,
-    ammo_category = "artillery",
+    ammo_category = "artillery-shell",
 		ammo_type =
 		{
 		  category = "artillery-shell",
