@@ -458,6 +458,11 @@ ENTITY {
     adjacent_tile_collision_test = { water_tile = true },
     adjacent_tile_collision_mask = {layers = { ground_tile = true }}, -- to prevent building on edge of map :(
     adjacent_tile_collision_box = { { -1, -2 }, { 1, -1 } },
+    energy_source = {
+        type = 'void'
+    },
+    energy_usage = '1W',
+    fluid_source_offset = {0, 0},
     --minable = {mining_time = 0.1, result = "offshore-test"},
     max_health = 150,
     corpse = "offshore-pump-remnants",
