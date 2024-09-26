@@ -204,8 +204,9 @@ end
 
 --changes to speed ranges also have to be made in scripts/centrifuge.lua
 local centrifuge_names = {'centrifuge-mk01', 'centrifuge-mk02', 'centrifuge-mk03', 'centrifuge-mk04'}
+local speed_tiers = {'low', 'medium', 'high', 'ultrahigh'}
 for centrifuge_tier, name in pairs(centrifuge_names) do
-    for speed_tier, speed in pairs{'low', 'medium', 'high', 'ultrahigh'} do
+    for speed_tier, speed in pairs(speed_tiers) do
         if centrifuge_tier < speed_tier then break end
         local centrifuge = table.deepcopy(data.raw['assembling-machine'][name])
         centrifuge.name = name .. '-' .. speed
@@ -223,11 +224,11 @@ for centrifuge_tier, name in pairs(centrifuge_names) do
         data:extend{centrifuge}
     end
     data.raw['assembling-machine'][name] = nil
-    data.raw.item[name].place_result = name .. '-low'
+    data.raw.item[name].place_result = name .. '-' .. speed_tiers[centrifuge_tier]
 end
 
 for tier, i in pairs{-75, -50, 50, 100} do
-    mod = {
+    local mod = {
         type = 'module',
         name = 'centrifuge-speed-' .. tier,
         icon = data.raw.module['speed-module'].icon,
