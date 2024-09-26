@@ -24,7 +24,8 @@ Centrifuge.events.on_built = function(event)
         position=entity.position,
         force=entity.force,
     }
-    Centrifuge.building_speeds[entity.unit_number] = {(tags and tags.speed) or 2, bacon}
+    local tier = tonumber(string.sub(entity.name, string.find(entity.name, '0%d')))
+    Centrifuge.building_speeds[entity.unit_number] = {(tags and tags.speed) or (-3 + 5 * tier), bacon}
     update_speed(Centrifuge.building_speeds[entity.unit_number])
 end
 
@@ -46,7 +47,7 @@ Centrifuge.events.on_player_setup_blueprint = function(event)
     if not player then return end
     local blueprint = player.cursor_stack
     if not blueprint or not blueprint.valid_for_read then return end
-    entities = blueprint.get_blueprint_entities()
+    local entities = blueprint.get_blueprint_entities()
     if not entities then return end
     for _, entity in pairs(entities) do
         if modified_entities[entity.entity_number] then
