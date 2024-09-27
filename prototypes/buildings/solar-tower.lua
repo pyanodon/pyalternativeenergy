@@ -223,25 +223,27 @@ ENTITY {
       },
       max_sounds_per_type = 3
   },
-  structure = {
-      north = structure,
-      east = structure,
-      south = structure,
-      west = structure
-  },
-  fire_flicker_enabled = false,
-  fire = {
-      north = fire,
-      east = fire,
-      south = fire,
-      west = fire
-  },
-  fire_glow_flicker_enabled = false,
-  fire_glow = {
-      north = fire_glow,
-      east = fire_glow,
-      south = fire_glow,
-      west = fire_glow
-  },
-  burning_cooldown = 20
+  burning_cooldown = 20,
+  pictures = {
+    north = {
+        structure = structure,
+        fire = fire,
+        fire_glow = fire_glow,
+    },
+    east = {
+        structure = structure,
+        fire = fire,
+        fire_glow = fire_glow,
+    },
+    south = {
+        structure = structure,
+        fire = fire,
+        fire_glow = fire_glow,
+    },
+    west = {
+        structure = structure,
+        fire = fire,
+        fire_glow = fire_glow,
+    },
+  }
 }
