@@ -77,26 +77,6 @@ ENTITY {
     target_temperature = 5000,
     energy_source = {type = 'void'},
     energy_consumption = '1.6MW',
-    structure = {
-        north = structure,
-        east = structure,
-        south = structure,
-        west = structure
-    },
-    fire_flicker_enabled = false,
-    fire = {
-        north = empty,
-        east = empty,
-        south = empty,
-        west = empty
-    },
-    fire_glow_flicker_enabled = false,
-    fire_glow = {
-        north = empty,
-        east = empty,
-        south = empty,
-        west = empty
-    },
     burning_cooldown = 0,
     fluid_box = {
         production_type = 'input-output',
@@ -117,5 +97,27 @@ ENTITY {
         production_type = 'output'
     },
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
-    placeable_by = {item = 'stirling-concentrator', count = 1}
+    placeable_by = {item = 'stirling-concentrator', count = 1},
+  pictures = {
+    north = {
+        structure = structure,
+        fire = empty,
+        fire_glow = empty,
+    },
+    east = {
+        structure = structure,
+        fire = empty,
+        fire_glow = empty,
+    },
+    south = {
+        structure = structure,
+        fire = empty,
+        fire_glow = empty,
+    },
+    west = {
+        structure = structure,
+        fire = empty,
+        fire_glow = empty,
+    },
+  }
 }
