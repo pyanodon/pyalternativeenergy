@@ -185,7 +185,9 @@ local function verify_neighbours(pole_entity)
     local cables = pole_entity.get_wire_connector(defines.wire_connector_id.pole_copper)
     local neighbours = {}
     for _, cable in pairs(cables and cables.connections or {}) do
-        table.insert(neighbours, cable.target.owner)
+        if cable.valid then
+            table.insert(neighbours, cable.target.owner)
+        end
     end
     if #neighbours == 0 then return end
 
@@ -1223,7 +1225,7 @@ Aerial.events.on_destroyed = function(event)
                         end
                     end
                     if stack.valid_for_read then
-                        chest.surface.spill_item_stack(chest.position, stack, true, chest.force_index, false)
+                        chest.surface.spill_item_stack({position = chest.position, stack = stack, enable_looted = true, force = chest.force_index, allow_belts = false})
                     end
                 end
             end
