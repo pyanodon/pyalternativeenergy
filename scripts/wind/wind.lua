@@ -203,7 +203,7 @@ function Wind.draw_windmill(windmill_data, direction)
             surface = windmill_data.entity.surface,
             target = windmill_data.entity,
             render_layer = 'higher-object-above'
-        })
+        }).id
         windmill_data.anim_id = anim_id
     elseif windmill_data.direction ~= direction then
         -- set_animation(anim_id, windmill_data.base_name .. direction)
@@ -266,7 +266,7 @@ Wind.events[61] = function()
             Wind.update_power_generation(details, wind_speed)
         else
             _ = details.collision.valid and details.collision.destroy()
-            _ = details.anim_id and rendering.destroy(details.anim_id)
+            _ = details.anim_id and rendering.get_object_by_id(details.anim_id).destroy()
             storage.windmill[key] = nil
         end
     until max_iter > 101

@@ -26,7 +26,7 @@ local function draw_circle(tower_data)
 		storage.tower_circles[tower_data.unit_number] = rendering.draw_circle{
 			draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = Thermosolar.tower_range,
 			target = tower_data.entity, filled = true, surface = tower_data.entity.surface
-		}
+		}.id
 	end
 end
 
@@ -45,7 +45,7 @@ Thermosolar.events.on_player_cursor_stack_changed = function(event)
     end
 
     for _, circle in pairs(storage.tower_circles) do
-        rendering.destroy(circle)
+        rendering.get_object_by_id(circle).destroy()
     end
     storage.tower_circles = {}
 end
