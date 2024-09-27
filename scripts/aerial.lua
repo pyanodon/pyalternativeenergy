@@ -178,22 +178,15 @@ end
 ---Verify the neighbours of a given electric pole. Sets the network to be refreshed if any fail.
 ---@param pole_entity LuaEntity electric pole entity
 local function verify_neighbours(pole_entity)
-    local cables = pole_entity.get_wire_connectors() -- copper cables are 5 for some reason
-    local index
-    for key, value in pairs(cables) do
-        if value.wire_type == defines.wire_type.copper then
-            index = key
-            break
-        end
-    end
-    cables = cables[index]
+    -- TODO: power switches maybe?
+    if pole_entity.type == 'power-switch' then return end
+    local cables = pole_entity.get_wire_connector(defines.wire_connector_id.pole_copper)
     local neighbours = {}
     for _, cable in pairs(cables and cables.connections or {}) do
         table.insert(neighbours, cable.target.owner)
     end
-    if #neighbours == 0 then
-        return
-    end
+    if #neighbours == 0 then return end
+
     for _, entity in pairs(neighbours) do
         game.print(entity)
         if entity.valid and entity.type == 'electric-pole' then
