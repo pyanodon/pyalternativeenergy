@@ -1,3 +1,5 @@
+-- TODO: fix aerial turbine and aerial base gui
+
 Aerial = {}
 Aerial.events = {}
 
@@ -188,7 +190,6 @@ local function verify_neighbours(pole_entity)
     if #neighbours == 0 then return end
 
     for _, entity in pairs(neighbours) do
-        game.print(entity)
         if entity.valid and entity.type == 'electric-pole' then
             local pole_data = storage.aerials.poles[entity.unit_number]
             -- No record of this pole
@@ -851,7 +852,7 @@ Aerial.events[117] = function()
 
         -- Parse our input signals for blimp signals indicating the target count in the current network
         local desired_turbines = {}
-        for _, signal in pairs(combinator.get_merged_signals() or {}) do
+        for _, signal in pairs(combinator.get_signals(defines.wire_connector_id.combinator_input_red, defines.wire_connector_id.combinator_input_green) or {}) do
             local name = signal.signal.name
             if turbine_names[name] then
                 desired_turbines[name] = signal.count
@@ -1049,7 +1050,7 @@ local function find_target(aerial)
     aerial.target = target
     aerial.starting_position = entity.position
     local target_position = target.position
-    entity.set_command{
+    entity.commandable.set_command{
         type = defines.command.go_to_location,
         destination = {target_position.x, target_position.y - 5},
         distraction = defines.distraction.none,
