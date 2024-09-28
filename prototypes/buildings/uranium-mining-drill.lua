@@ -74,7 +74,7 @@ ENTITY {
     circuit_connector_sprites = circuit_connector_definitions['ree-mining-drill-mkxx'].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
-        animations = {
+        animation = {
             layers = {
                 {
                     filename = '__pyalternativeenergygraphics__/graphics/entity/uranium-mining-drill/top.png',

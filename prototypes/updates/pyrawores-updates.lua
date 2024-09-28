@@ -600,7 +600,7 @@ data.raw['item']['uranium-mine'].icon = '__pyalternativeenergygraphics__/graphic
 data.raw['item']['uranium-mine'].icon_size = 64
 RECIPE('uranium-mine'):remove_unlock('big-mines'):add_unlock('nuclear-power-mk02')
 RECIPE('uranium-mine'):remove_ingredient('electric-mining-drill'):add_ingredient({type = 'item', name = 'uranium-mining-drill', amount = 1})
-for _, layer in pairs(data.raw['mining-drill']['uranium-mine'].graphics_set.animations.layers) do
+for _, layer in pairs(data.raw['mining-drill']['uranium-mine'].graphics_set.animation.layers) do
 	layer.animation_speed = 0.3
 end
 data.raw['mining-drill']['uranium-mine'].input_fluid_box = nil
