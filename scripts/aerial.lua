@@ -184,9 +184,11 @@ local function verify_neighbours(pole_entity)
     if pole_entity.type == 'power-switch' then return end
     local cables = pole_entity.get_wire_connector(defines.wire_connector_id.pole_copper)
     local neighbours = {}
-    for _, cable in pairs(cables and cables.connections or {}) do
-        if cable.valid then
-            table.insert(neighbours, cable.target.owner)
+    if cables and cables.valid then
+        for _, cable in pairs(cables.connections or {}) do
+            if cable.target.valid then
+                table.insert(neighbours, cable.target.owner)
+            end
         end
     end
     if #neighbours == 0 then return end
