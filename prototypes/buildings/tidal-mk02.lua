@@ -994,126 +994,70 @@ ENTITY {
         north =
         {
           filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-legs.png",
-          width = 60,
-          height = 52,
-          shift = util.by_pixel(-2, -4),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-legs.png",
-            width = 114,
-            height = 106,
-            shift = util.by_pixel(-1, -5),
-            scale = 0.5
-          }
-        },
+          width = 114,
+          height = 106,
+          shift = util.by_pixel(-1, -5),
+          scale = 0.5
+          },
         east =
         {
           filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-legs.png",
-          width = 54,
-          height = 32,
-          shift = util.by_pixel(4, 12),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-legs.png",
-            width = 106,
-            height = 60,
-            shift = util.by_pixel(4, 13),
-            scale = 0.5
-          }
-        },
+          width = 106,
+          height = 60,
+          shift = util.by_pixel(4, 13),
+          scale = 0.5
+          },
         south =
         {
           filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-legs.png",
-          width = 56,
-          height = 54,
+          width = 110,
+          height = 108,
           shift = util.by_pixel(-2, 6),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-legs.png",
-            width = 110,
-            height = 108,
-            shift = util.by_pixel(-2, 6),
-            scale = 0.5
-          }
-        },
+          scale = 0.5
+          },
         west =
         {
           filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-legs.png",
-          width = 54,
-          height = 32,
+          width = 108,
+          height = 64,
           shift = util.by_pixel(-6, 12),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-legs.png",
-            width = 108,
-            height = 64,
-            shift = util.by_pixel(-6, 12),
-            scale = 0.5
+          scale = 0.5
           }
-        }
       },
       underwater_pictures =
       {
         north =
         {
           filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-underwater.png",
-          width = 52,
-          height = 16,
-          shift = util.by_pixel(-2, -34),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-underwater.png",
-            width = 98,
-            height = 36,
-            shift = util.by_pixel(-1, -32),
-            scale = 0.5
-          }
-        },
+          width = 98,
+          height = 36,
+          shift = util.by_pixel(-1, -32),
+          scale = 0.5
+          },
         east =
         {
           filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-underwater.png",
-          width = 18,
-          height = 38,
-          shift = util.by_pixel(40, 16),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-underwater.png",
-            width = 40,
-            height = 72,
-            shift = util.by_pixel(39, 17),
-            scale = 0.5
-          }
-        },
+          width = 40,
+          height = 72,
+          shift = util.by_pixel(39, 17),
+          scale = 0.5
+          },
         south =
         {
           filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-underwater.png",
-          width = 52,
-          height = 26,
-          shift = util.by_pixel(-2, 48),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-underwater.png",
-            width = 98,
-            height = 48,
-            shift = util.by_pixel(-1, 49),
-            scale = 0.5
-          }
-        },
+          width = 98,
+          height = 48,
+          shift = util.by_pixel(-1, 49),
+          scale = 0.5
+          },
         west =
         {
           filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-underwater.png",
-          width = 20,
-          height = 34,
-          shift = util.by_pixel(-40, 18),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-underwater.png",
-            width = 40,
-            height = 72,
-            shift = util.by_pixel(-40, 17),
-            scale = 0.5
+          width = 40,
+          height = 72,
+          shift = util.by_pixel(-40, 17),
+          scale = 0.5
           }
-        }
       }
     },
     placeable_position_visualization =
