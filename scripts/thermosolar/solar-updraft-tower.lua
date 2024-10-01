@@ -60,7 +60,7 @@ function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_cou
     else
         tower_data.glass_covers = tower.surface.count_tiles_filtered{position = tower.position, radius = Thermosolar.tower_range, name = 'sut-panel'}
     end
-    tower_data.max_production = (tower_data.glass_covers * Solar_Updraft_Tower.power_generated_per_cover + tower.prototype.max_energy_production) * tower.surface.solar_power_multiplier
+    tower_data.max_production = (tower_data.glass_covers * Solar_Updraft_Tower.power_generated_per_cover + tower.prototype.get_max_energy_production()) * tower.surface.solar_power_multiplier
     tower.power_production = tower_data.max_production * Thermosolar.calc_daylight(tower.surface)
 	tower.electric_buffer_size = tower.power_production
 
