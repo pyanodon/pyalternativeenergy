@@ -689,7 +689,7 @@ local function validate_base(base, unit_number)
             for i = 1, #inventory do
                 local stack = inventory[i]
                 if stack.valid_for_read then
-                    local spilled_results = chest.surface.spill_item_stack(position, stack, true, force, false)
+                    local spilled_results = chest.surface.spill_item_stack{position = position, stack = stack, enable_looted = true, force = force, allow_belts = false}
                     for ii = 1,  #spilled_results do
                         spilled_results[ii].order_deconstruction(force)
                     end
@@ -817,7 +817,7 @@ Aerial.events[117] = function()
                 for i = 1, #inventory do
                     local stack = inventory[i]
                     if stack.valid_for_read then
-                        local spilled_results = chest.surface.spill_item_stack(position, stack, true, force, false)
+                        local spilled_results = chest.surface.spill_item_stack{position = position, stack = stack, enable_looted = true, force = force, allow_belts = false}
                         for ii = 1,  #spilled_results do
                             spilled_results[ii].order_deconstruction(force)
                         end
