@@ -46,7 +46,7 @@ Solar.events[100] = function()
 			panel.electric_buffer_size = 0
 			panel.active = false
 		else
-			panel.power_production = panel.prototype.max_energy_production * daylight * panel.surface.solar_power_multiplier
+			panel.power_production = panel.prototype.get_max_energy_production() * daylight * panel.surface.solar_power_multiplier
 			panel.electric_buffer_size = panel.power_production
 			panel.active = true
 		end

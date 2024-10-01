@@ -235,7 +235,7 @@ end
 
 function Wind.update_power_generation(windmill_data, wind_speed)
     local entity = windmill_data.entity
-    local power_output = entity.prototype.max_energy_production * (1 + variation[windmill_data.base_name] * wind_speed)
+    local power_output = entity.prototype.get_max_energy_production() * (1 + variation[windmill_data.base_name] * wind_speed)
     entity.power_production = power_output
     entity.electric_buffer_size = power_output
 end
