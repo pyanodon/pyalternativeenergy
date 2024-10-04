@@ -1715,6 +1715,8 @@ ITEM {
     subgroup = "py-alternativeenergy-special-buildings",
     order = "fa",
     stack_size = 1,
+    weight = 200e3,
+    send_to_orbit_mode = "automated"
 }
 
 ITEM {
