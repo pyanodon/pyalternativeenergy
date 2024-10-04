@@ -177,7 +177,7 @@ local electric_energy_interfaces = {
 for _, name in pairs(electric_energy_interfaces) do
     local item = data.raw.item[name]
     local entity = data.raw['electric-energy-interface'][name]
-    local output = {'entity-description.max-output', entity.energy_production}
+    local output = {'entity-description.max-output', tostring(entity.energy_production)}
     if item.localised_description then
         item.localised_description = {'', item.localised_description, '\n', (output)}
     elseif entity.localised_description then
