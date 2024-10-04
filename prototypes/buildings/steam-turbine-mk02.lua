@@ -73,10 +73,10 @@ ENTITY {
         filter = "pressured-steam",
         minimum_temperature = 500.0,
         pipe_connections = {
-            {flow_direction = "input-output", position = {0, 3.3}, direction = defines.direction.south},
-            {flow_direction = "input-output", position = {-3.3, 0}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {0, -3.3}, direction = defines.direction.north},
-            {flow_direction = "input-output", position = {3.3, 0}, direction = defines.direction.east},
+            {flow_direction = "input-output", position = {0, 3.0}, direction = defines.direction.south},
+            {flow_direction = "input-output", position = {-3.0, 0}, direction = defines.direction.west},
+            {flow_direction = "input-output", position = {0, -3.0}, direction = defines.direction.north},
+            {flow_direction = "input-output", position = {3.0, 0}, direction = defines.direction.east},
         }
     },
     energy_source = {

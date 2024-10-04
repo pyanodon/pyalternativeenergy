@@ -232,7 +232,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -5.3}, direction = defines.direction.north}}
+            pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}}
         },
         {
             production_type = "input",
@@ -241,7 +241,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
-            pipe_connections = {{flow_direction = "input", position = {2.0, -5.3}, direction = defines.direction.north}}
+            pipe_connections = {{flow_direction = "input", position = {2.0, -5.0}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
@@ -249,7 +249,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
-            pipe_connections = {{flow_direction = "output", position = {2.0, 5.3}, direction = defines.direction.south}}
+            pipe_connections = {{flow_direction = "output", position = {2.0, 5.0}, direction = defines.direction.south}}
         },
         {
             production_type = "output",
@@ -257,7 +257,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 5.3}, direction = defines.direction.south}}
+            pipe_connections = {{flow_direction = "output", position = {-2.0, 5.0}, direction = defines.direction.south}}
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

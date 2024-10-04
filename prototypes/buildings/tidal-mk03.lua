@@ -493,7 +493,7 @@ ENTITY {
       filter = "water",
       pipe_connections =
       {
-        {flow_direction = "output", position = {0, 5.3}, direction = defines.direction.south}
+        {flow_direction = "output", position = {0, -1.0}, direction = defines.direction.south}
       }
     },
     pumping_speed = 20,
