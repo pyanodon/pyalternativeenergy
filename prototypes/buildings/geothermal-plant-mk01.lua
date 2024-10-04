@@ -53,9 +53,9 @@ ENTITY {
       volume = 200,
       base_level = -1,
       pipe_connections = {
-          {flow_direction = 'input-output', position = {-5.2, 0}, direction = defines.direction.west},
-          {flow_direction = 'input-output', position = {5.2, 0}, direction = defines.direction.east},
-          {flow_direction = 'input-output', position = {0, 5.2}, direction = defines.direction.south},
+          {flow_direction = 'input-output', position = {-5.0, 0}, direction = defines.direction.west},
+          {flow_direction = 'input-output', position = {5.0, 0}, direction = defines.direction.east},
+          {flow_direction = 'input-output', position = {0, 5.0}, direction = defines.direction.south},
       },
       filter = 'pressured-water',
       production_type = "input-output",
@@ -65,7 +65,7 @@ ENTITY {
       volume = 1000,
       pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_connections = {
-        {flow_direction = 'output', position = {0, -5.2}, direction = defines.direction.north}
+        {flow_direction = 'output', position = {0, -5.0}, direction = defines.direction.north}
       },
       production_type = "output",
     },
