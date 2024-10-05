@@ -59,55 +59,53 @@ ENTITY {
     energy_production = '100MW',
     energy_usage = '0kW',
     continuous_animation = true,
-    graphics_set = {
-        animation = {
-            layers = {
-                {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/raw.png",
-                    width = 192,
-                    height = 192,
-                    frame_count = 70,
-                    line_length = 10,
-                    animation_speed = 0.3,
-                    --blend_mode = "additive",
-                    --draw_as_glow = true,
-                    shift = util.by_pixel(0, -0)
-                },
-                {
-                  filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/ao.png",
-                  width = 192,
-                  height = 192,
-                  frame_count = 70,
-                  line_length = 10,
-                  animation_speed = 0.3,
-                  --blend_mode = "multiplicative",
-                  --draw_as_shadow = true,
-                  shift = util.by_pixel(0, -0)
-                },
-                {
-                  filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/l.png",
-                  width = 192,
-                  height = 224,
-                  frame_count = 70,
-                  line_length = 10,
-                  animation_speed = 0.3,
-                  --blend_mode = "multiplicative",
-                  draw_as_glow = true,
-                  shift = util.by_pixel(0, -16)
-                },
-                {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/sh.png",
-                    width = 192,
-                    height = 192,
-                    frame_count = 70,
-                    line_length = 10,
-                    animation_speed = 0.3,
-                    --blend_mode = "additive",
-                    draw_as_shadow = true,
-                    shift = util.by_pixel(16, -0)
-                }
+    animation = {
+        layers = {
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/raw.png",
+                width = 192,
+                height = 192,
+                frame_count = 70,
+                line_length = 10,
+                animation_speed = 0.3,
+                --blend_mode = "additive",
+                --draw_as_glow = true,
+                shift = util.by_pixel(0, -0)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/ao.png",
+                width = 192,
+                height = 192,
+                frame_count = 70,
+                line_length = 10,
+                animation_speed = 0.3,
+                --blend_mode = "multiplicative",
+                --draw_as_shadow = true,
+                shift = util.by_pixel(0, -0)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/l.png",
+                width = 192,
+                height = 224,
+                frame_count = 70,
+                line_length = 10,
+                animation_speed = 0.3,
+                --blend_mode = "multiplicative",
+                draw_as_glow = true,
+                shift = util.by_pixel(0, -16)
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/sh.png",
+                width = 192,
+                height = 192,
+                frame_count = 70,
+                line_length = 10,
+                animation_speed = 0.3,
+                --blend_mode = "additive",
+                draw_as_shadow = true,
+                shift = util.by_pixel(16, -0)
             }
-        },
+        }
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65}
   }

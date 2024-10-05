@@ -55,40 +55,38 @@ local proto = ENTITY{
     energy_usage = '0kW',
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     continuous_animation = true,
-    graphics_set = {
-        animations = {
-            layers = {
-                {
-                    filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/base-fishturbine.png',
-                    width = 224,
-                    height = 224,
-                    line_length = 1,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    --shift = util.by_pixel(0, -64),
-                    animation_speed = 0.5,
-                },
-                {
-                    filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r4.png',
-                    width = 288,
-                    height = 352,
-                    line_length = 6,
-                    frame_count = 30,
-                    shift = util.by_pixel(0, -64),
-                    animation_speed = 0.5,
-                },
-                {
-                    filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s4.png',
-                    width = 288,
-                    height = 352,
-                    line_length = 6,
-                    frame_count = 30,
-                    shift = util.by_pixel(0, -64),
-                    animation_speed = 0.5,
-                    draw_as_shadow = true
-                },
-            }
-        },
+    animations = {
+        layers = {
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/base-fishturbine.png',
+                width = 224,
+                height = 224,
+                line_length = 1,
+                frame_count = 1,
+                repeat_count = 30,
+                --shift = util.by_pixel(0, -64),
+                animation_speed = 0.5,
+            },
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/r4.png',
+                width = 288,
+                height = 352,
+                line_length = 6,
+                frame_count = 30,
+                shift = util.by_pixel(0, -64),
+                animation_speed = 0.5,
+            },
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/s4.png',
+                width = 288,
+                height = 352,
+                line_length = 6,
+                frame_count = 30,
+                shift = util.by_pixel(0, -64),
+                animation_speed = 0.5,
+                draw_as_shadow = true
+            },
+        }
     },
     localised_name = {'entity-name.multiblade-turbine-mk01'},
     localised_description = {'entity-description.multiblade-turbine-mk01'}
@@ -97,7 +95,7 @@ local proto = ENTITY{
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. '-blank'
-new_proto.picture = proto.graphics_set.animations.layers[1]
+new_proto.picture = proto.animations.layers[1]
 new_proto.animations = nil
 new_proto.render_layer = 'floor-mechanics'
 data:extend{new_proto}

@@ -61,40 +61,38 @@ local proto = ENTITY {
         apparent_volume = 2.5
     },
     continuous_animation = true,
-    graphics_set = {
-        animations = {
-            layers = {
-                {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r4.png",
-                    width = 192,
-                    height = 416,
-                    line_length = 10,
-                    frame_count = 20,
-                    shift = util.by_pixel(0, -112),
-                    animation_speed = 1,
-                },
-                {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s4.png",
-                    width = 287,
-                    height = 160,
-                    line_length = 5,
-                    frame_count = 20,
-                    shift = util.by_pixel(44, 16),
-                    animation_speed = 1,
-                    draw_as_shadow = true,
-                },
-                {
-                    filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l4.png",
-                    width = 192,
-                    height = 416,
-                    line_length = 10,
-                    frame_count = 20,
-                    shift = util.by_pixel(0, -112),
-                    animation_speed = 1,
-                    draw_as_glow = true,
-                },
-            }
-        },
+    animations = {
+        layers = {
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r4.png",
+                width = 192,
+                height = 416,
+                line_length = 10,
+                frame_count = 20,
+                shift = util.by_pixel(0, -112),
+                animation_speed = 1,
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s4.png",
+                width = 287,
+                height = 160,
+                line_length = 5,
+                frame_count = 20,
+                shift = util.by_pixel(44, 16),
+                animation_speed = 1,
+                draw_as_shadow = true,
+            },
+            {
+                filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l4.png",
+                width = 192,
+                height = 416,
+                line_length = 10,
+                frame_count = 20,
+                shift = util.by_pixel(0, -112),
+                animation_speed = 1,
+                draw_as_glow = true,
+            },
+        }
     },
     localised_name = {'entity-name.hawt-turbine-mk03'},
     localised_description = {'entity-description.hawt-turbine-mk03'}
@@ -103,7 +101,7 @@ local proto = ENTITY {
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. '-blank'
-new_proto.picture = table.deepcopy(proto.graphics_set.animations.layers[1])
+new_proto.picture = table.deepcopy(proto.animations.layers[1])
 new_proto.picture.filename = new_proto.picture.filename:gsub('r4', 'base-mk03')
 new_proto.animations = nil
 new_proto.render_layer = 'lower-object-above-shadow'

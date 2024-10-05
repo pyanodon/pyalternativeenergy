@@ -108,30 +108,28 @@ ENTITY {
     },
     energy_production = '1MW',
     energy_usage = '0kW',
-    graphics_set = {
-        animation = {
-            layers = {
-                {
-                    filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/top.png',
-                    width = 608,
-                    height = 1312,
-                    frame_count = 1,
-                    line_length = 1,
-                    shift = util.by_pixel(1, -321+32),
-                    scale = 0.9473
-                },
-                {
-                    filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/sh.png',
-                    width = 222,
-                    height = 592,
-                    frame_count = 1,
-                    line_length = 1,
-                    shift = util.by_pixel(384, 32),
-                    draw_as_shadow = true,
-                    scale = 0.9,
-                }
+    animation = {
+        layers = {
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/top.png',
+                width = 608,
+                height = 1312,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(1, -321+32),
+                scale = 0.9473
+            },
+            {
+                filename = '__pyalternativeenergygraphics__/graphics/entity/updraft-tower/sh.png',
+                width = 222,
+                height = 592,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(384, 32),
+                draw_as_shadow = true,
+                scale = 0.9,
             }
-        },
+        }
     },
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     working_sound = {
