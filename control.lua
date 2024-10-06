@@ -69,12 +69,12 @@ py.on_event('on_built', function(event)
     end
 end)
 
-py.on_nth_tick(60, function(event)
+py.register_on_nth_tick(60, "sut", "pyae", function(event)
     Solar_Updraft_Tower.events[60]()
     Heliostat.events[60]()
 end)
 
-py.on_nth_tick(55, function(event)
+py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
     local active = Thermosolar.calc_daylight(game.surfaces['nauvis']) > 0.5
     for _, panel in pairs(storage.lrf_panels) do
         if panel.valid then panel.active = active end
@@ -84,8 +84,8 @@ py.on_nth_tick(55, function(event)
     end
 end)
 
-py.on_nth_tick(100, Solar.events[100])
-py.on_nth_tick(61, Wind.events[61])
+py.register_on_nth_tick(100, "solar", "pyae", Solar.events[100])
+py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
 
 local on_destroyed = {events.on_player_mined_entity, events.on_robot_mined_entity, events.script_raised_destroy, events.on_entity_died}
 py.on_event(on_destroyed, function(event)
@@ -128,13 +128,13 @@ py.on_event(on_mined_tile, Solar_Updraft_Tower.events.on_destroyed_tile)
 py.on_event(events.on_player_cursor_stack_changed, Thermosolar.events.on_player_cursor_stack_changed)
 py.on_event(events.on_ai_command_completed, Aerial.events.on_ai_command_completed)
 script.on_event(defines.events.on_script_trigger_effect, Wind.events.on_script_trigger_effect)
-script.on_nth_tick(117, Aerial.events[117])
-script.on_nth_tick(301, Aerial.events[301])
+py.register_on_nth_tick(117, "aerial117", "pyae", Aerial.events[117])
+py.register_on_nth_tick(301, "aerial301", "pyae", Aerial.events[301])
 --1h+1tick
-script.on_nth_tick(60*60*60+1, Aerial.events[60*60*60+1])
+py.register_on_nth_tick(60*60*60+1, "aerialfuckinghuge", "pyae", Aerial.events[60*60*60+1])
 script.on_event('open-gui', Aerial.events.on_open_gui)
 
-py.on_nth_tick(9, function()
+py.register_on_nth_tick(9, "aerial9", "pyae", function()
     for _, player in pairs(game.connected_players) do
 		local gui = player.gui.screen.aerial_gui
 		if gui then Aerial.update_gui(gui) end
@@ -142,5 +142,12 @@ py.on_nth_tick(9, function()
 end)
 
 py.on_event(events.on_player_setup_blueprint, Centrifuge.events.on_player_setup_blueprint)
+
+remote.add_interface("pyae", {
+    ---@param func string
+    execute_on_nth_tick = function(func)
+        py.mod_nth_tick_funcs[func]()
+    end
+})
 
 py.finalize_events()
