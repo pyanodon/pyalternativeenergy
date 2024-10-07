@@ -166,7 +166,7 @@ py.on_event('open-gui', function(event)
 	if tower then player.opened = tower end
 end)
 
-Heliostat.events[60] = function()
+py.register_on_nth_tick(60, 'heliostat', 'pyae', function()
 	for _, tower_data in pairs(storage.heliostat_towers) do
 		if tower_data.heliostats ~= 0 then
 			local tower = tower_data.entity
@@ -182,7 +182,7 @@ Heliostat.events[60] = function()
 	if storage.update_heliostat_guis then
 		Heliostat.update_all_guis()
 	end
-end
+end)
 
 function Heliostat.update_all_guis()
     for _, player in pairs(game.connected_players) do
