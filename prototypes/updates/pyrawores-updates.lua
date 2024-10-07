@@ -582,9 +582,7 @@ end
 data.raw.resource['uranium-rock'].minable.required_fluid = nil
 data.raw.resource['uranium-rock'].minable.fluid_amount = nil
 data.raw.resource['uranium-rock'].minable.mining_time = 1
-data.raw['mining-drill']['uranium-mine'].module_specification = {
-	module_slots = 10
-}
+data.raw['mining-drill']['uranium-mine'].module_slots = 10
 data.raw['mining-drill']['uranium-mine'].allowed_effects = {'consumption', 'speed', 'pollution', 'productivity'}
 data.raw['mining-drill']['uranium-mine'].energy_source = {
 	type = 'electric',
