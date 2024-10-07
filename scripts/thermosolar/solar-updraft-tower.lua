@@ -147,7 +147,7 @@ Solar_Updraft_Tower.events.on_built = function(event)
     Solar_Updraft_Tower.update_power_generation(entity)
 end
 
-Solar_Updraft_Tower.events[60] = function()
+py.register_on_nth_tick(60, 'sut', 'pyae', function()
     for _, tower_data in pairs(storage.solar_updraft_towers) do
         local entity = tower_data.entity
         local surface = entity.surface
@@ -168,7 +168,7 @@ Solar_Updraft_Tower.events[60] = function()
     if storage.update_sut_guis then
         Solar_Updraft_Tower.update_all_guis()
     end
-end
+end)
 
 Solar_Updraft_Tower.events.on_destroyed = function(event)
     local entity = event.entity

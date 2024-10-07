@@ -69,11 +69,6 @@ py.on_event('on_built', function(event)
     end
 end)
 
-py.register_on_nth_tick(60, 'sut', 'pyae', function(event)
-    Solar_Updraft_Tower.events[60]()
-    Heliostat.events[60]()
-end)
-
 py.register_on_nth_tick(55, 'thermosolar', 'pyae', function(event)
     local active = Thermosolar.calc_daylight(game.surfaces['nauvis']) > 0.5
     for _, panel in pairs(storage.lrf_panels) do
