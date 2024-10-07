@@ -45,7 +45,8 @@ Thermosolar.events.on_player_cursor_stack_changed = function(event)
     end
 
     for _, circle in pairs(storage.tower_circles) do
-        rendering.get_object_by_id(circle).destroy()
+        local circle = rendering.get_object_by_id(circle)
+		if circle then circle.destroy() end
     end
     storage.tower_circles = {}
 end
