@@ -129,7 +129,7 @@ py.register_on_nth_tick(301, 'aerial301', 'pyae', Aerial.events[301])
 py.register_on_nth_tick(60 * 60 * 60 + 1, 'aerialfuckinghuge', 'pyae', Aerial.events[60 * 60 * 60 + 1])
 py.on_event('open-gui', Aerial.events.on_open_gui)
 
-script.on_nth_tick(9, function()
+py.register_on_nth_tick(9, 'aerial9', 'pyae', function()
     for _, player in pairs(game.connected_players) do
         local gui = player.gui.screen.aerial_gui
         if gui then Aerial.update_gui(gui) end
