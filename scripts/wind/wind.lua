@@ -260,7 +260,10 @@ Wind.events[61] = function()
             Wind.update_power_generation(details, wind_speed)
         else
             _ = details.collision.valid and details.collision.destroy()
-            _ = details.anim_id and rendering.get_object_by_id(details.anim_id).destroy()
+            if details.anim_id then
+                local animation = rendering.get_object_by_id(details.anim_id)
+                if animation then animation.destroy() end
+            end
             storage.windmill[key] = nil
         end
     until max_iter > 101
