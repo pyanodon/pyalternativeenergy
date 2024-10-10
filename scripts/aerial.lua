@@ -830,25 +830,25 @@ Aerial.events[117] = function()
         end
 
 
-        local control = combinator.get_or_create_control_behavior()
+        local control = combinator.get_or_create_control_behavior().sections[1]
 
         -- I guess we do this to make the combinator not use power and thus not flicker at low power? Seems weird...
         if animation.energy == 0 then
-            control.enabled = false
+            control.active = false
             goto continue
         end
 
         -- No power network
         local electric_network_id = animation.electric_network_id
         if not electric_network_id then
-            control.enabled = false
+            control.active = false
             goto continue
         end
 
         -- No poles on this network
         local all_poles = storage.aerials.poles_by_network[electric_network_id]
         if #all_poles == 0 then
-            control.enabled = false
+            control.active = false
             goto continue
         end
 
@@ -921,27 +921,27 @@ Aerial.events[117] = function()
             max_energy = max_energy_per_network[electric_network_id]
         end
 
-        control.enabled = true
+        control.active = true
         -- The first arg here is just what order it shows in the output, 1-8 are reserved for the item counts
-        control.set_signal(9, {
-            signal = {type = 'virtual', name = 'signal-yellow'},
-            count = stored_energy
+        control.set_slot(9, {
+            value = "signal-yellow",
+            min = stored_energy,
         })
-        control.set_signal(10, {
-            signal = {type = 'virtual', name = 'signal-green'},
-            count = max_energy
+        control.set_slot(10, {
+            value = "signal-green",
+            min = max_energy
         })
 
         -- Update the blimp count signals
         for i, letter in pairs(letters) do
             local name = 'aerial-blimp-mk0' .. i
-            control.set_signal(i, {
-                signal = {type = 'virtual', name = 'signal-' .. i},
-                count = existing_turbines[name] or 0
+            control.set_slot(i, {
+                value = 'signal-' .. i,
+                min = existing_turbines[name] or 0
             })
-            control.set_signal(i + 4, {
-                signal = {type = 'virtual', name = 'signal-' .. letter},
-                count = inventory.get_item_count(name)
+            control.set_slot(i + 4, {
+                value = 'signal-' .. letter,
+                min = inventory.get_item_count(name)
             })
         end
 
