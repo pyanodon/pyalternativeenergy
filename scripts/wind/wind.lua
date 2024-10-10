@@ -3,30 +3,30 @@ Wind.events = {}
 
 local managed_turbines = {}
 local base_names = {}
-for turbine, type in pairs{
-    ['hawt-turbine-mk01'] = 'hawt',
-    ['hawt-turbine-mk02'] = 'hawt',
-    ['hawt-turbine-mk03'] = 'hawt',
-    ['hawt-turbine-mk04'] = 'hawt',
-    ['vawt-turbine-mk01'] = 'vawt',
-    ['vawt-turbine-mk02'] = 'vawt',
-    ['vawt-turbine-mk03'] = 'vawt',
-    ['vawt-turbine-mk04'] = 'vawt',
-    ['multiblade-turbine-mk01'] = 'multiblade',
-    ['multiblade-turbine-mk03'] = 'multiblade'
+for turbine, type in pairs {
+    ["hawt-turbine-mk01"] = "hawt",
+    ["hawt-turbine-mk02"] = "hawt",
+    ["hawt-turbine-mk03"] = "hawt",
+    ["hawt-turbine-mk04"] = "hawt",
+    ["vawt-turbine-mk01"] = "vawt",
+    ["vawt-turbine-mk02"] = "vawt",
+    ["vawt-turbine-mk03"] = "vawt",
+    ["vawt-turbine-mk04"] = "vawt",
+    ["multiblade-turbine-mk01"] = "multiblade",
+    ["multiblade-turbine-mk03"] = "multiblade"
 } do
     managed_turbines[turbine] = type
-    managed_turbines[turbine..'-blank'] = type
+    managed_turbines[turbine .. "-blank"] = type
     base_names[turbine] = turbine
-    base_names[turbine..'-blank'] = turbine
+    base_names[turbine .. "-blank"] = turbine
 end
 
 local animated_turbines = {
-    ['hawt'] = true,
-    ['multiblade'] = true
+    ["hawt"] = true,
+    ["multiblade"] = true
 }
 
-local variation = require 'scripts.wind.variation'
+local variation = require "scripts.wind.variation"
 -- TODO check animation changes
 local draw_animation = rendering.draw_animation
 
@@ -40,8 +40,8 @@ Wind.events.on_built = function(event)
     if not turbine_type then return end
 
     -- Invisible collision entity prevents nearby turbine placement
-    local collision = entity.surface.create_entity{
-        name = base_names[entity.name]..'-collision',
+    local collision = entity.surface.create_entity {
+        name = base_names[entity.name] .. "-collision",
         position = entity.position,
         force = entity.force,
         create_build_effect_smoke = false,
@@ -72,7 +72,7 @@ Wind.events.on_built = function(event)
 
         -- Otherwise just spill it
         if inserted == 0 and item_to_place then
-            surface.spill_item_stack{position = position, stack = item_to_place, enable_looted = true, force = entity.force_index, allow_belts = false}
+            surface.spill_item_stack {position = position, stack = item_to_place, enable_looted = true, force = entity.force_index, allow_belts = false}
         end
 
         local tick = game.tick
@@ -80,13 +80,13 @@ Wind.events.on_built = function(event)
         if last_message + seconds(1) < tick then
             game.get_player(player_index).create_local_flying_text {
                 text = {
-                    'cant-build-reason.entity-in-the-way',
-                    (storage._last_failed_airspace or '')
+                    "cant-build-reason.entity-in-the-way",
+                    (storage._last_failed_airspace or "")
                 },
                 position = position,
                 create_at_cursor = true
             }
-            
+
             storage._last_cancel_creation_message = game.tick
         end
 
@@ -104,8 +104,8 @@ Wind.events.on_built = function(event)
 
     -- Animated turbines are destroyed and replaced with a base graphic
     if animated_turbines[turbine_type] then
-        local replacement_entity = entity.surface.create_entity{
-            name = base_names[entity.name]..'-blank',
+        local replacement_entity = entity.surface.create_entity {
+            name = base_names[entity.name] .. "-blank",
             position = entity.position,
             force = entity.force,
             create_build_effect_smoke = false,
@@ -113,7 +113,7 @@ Wind.events.on_built = function(event)
         }
         entity.destroy()
         entry.entity = replacement_entity
-        Wind.draw_windmill(entry, Wind.calculate_wind_direction(game.surfaces['nauvis']))
+        Wind.draw_windmill(entry, Wind.calculate_wind_direction(game.surfaces["nauvis"]))
     end
 
     storage.windmill[entry.entity.unit_number] = entry
@@ -131,7 +131,7 @@ local function positions_equal(position_a, position_b)
 end
 
 Wind.events.on_script_trigger_effect = function(event)
-    if event.effect_id ~= 'turbine-area' then
+    if event.effect_id ~= "turbine-area" then
         return
     end
     local source = event.source_entity
@@ -144,19 +144,19 @@ Wind.events.on_script_trigger_effect = function(event)
     end
 
     if managed_turbines[target.name] and not positions_equal(target.position, source.position) then
-        storage._last_failed_airspace = target.localised_name or ('entity-name.' .. target.name)
+        storage._last_failed_airspace = target.localised_name or ("entity-name." .. target.name)
         local surface = target.surface
         local source_box, target_box = source.bounding_box, target.bounding_box
         local ttl = seconds(3)
-        rendering.draw_rectangle({
+        rendering.draw_rectangle {
             color = {255, 255, 0},
             width = 4,
             left_top = source_box.left_top,
             right_bottom = source_box.right_bottom,
             surface = surface,
             time_to_live = ttl
-        })
-        rendering.draw_text({
+        }
+        rendering.draw_text {
             text = "!",
             color = {255, 0, 0},
             scale = 3,
@@ -164,15 +164,15 @@ Wind.events.on_script_trigger_effect = function(event)
             surface = surface,
             target = target,
             time_to_live = ttl
-        })
-        rendering.draw_rectangle({
+        }
+        rendering.draw_rectangle {
             color = {255, 0, 0},
             width = 4,
             left_top = target_box.left_top,
             right_bottom = target_box.right_bottom,
             surface = surface,
             time_to_live = ttl
-        })
+        }
         source.destroy()
     end
 end
@@ -192,12 +192,12 @@ end
 function Wind.draw_windmill(windmill_data, direction)
     local anim_id = windmill_data.anim_id
     if not anim_id then
-        anim_id = draw_animation({
+        anim_id = draw_animation {
             animation = windmill_data.base_name .. direction,
             surface = windmill_data.entity.surface,
             target = windmill_data.entity,
-            render_layer = 'higher-object-above'
-        }).id
+            render_layer = "higher-object-above"
+        }.id
         windmill_data.anim_id = anim_id
     elseif windmill_data.direction ~= direction then
         -- set_animation(anim_id, windmill_data.base_name .. direction)
@@ -208,21 +208,21 @@ end
 function Wind.calculate_wind_direction(surface)
     local wind_dir = surface.wind_orientation
     if wind_dir > 0.0625 and wind_dir <= 0.1875 then
-        return '-northeast'
+        return "-northeast"
     elseif wind_dir > 0.1875 and wind_dir <= 0.3125 then
-        return '-east'
+        return "-east"
     elseif wind_dir > 0.3125 and wind_dir <= 0.4375 then
-        return '-southeast'
+        return "-southeast"
     elseif wind_dir > 0.4375 and wind_dir <= 0.5625 then
-        return '-south'
+        return "-south"
     elseif wind_dir > 0.5625 and wind_dir <= 0.6875 then
-        return '-southwest'
+        return "-southwest"
     elseif wind_dir > 0.6875 and wind_dir <= 0.8125 then
-        return '-west'
+        return "-west"
     elseif wind_dir > 0.8125 and wind_dir <= 0.9375 then
-        return '-northwest'
+        return "-northwest"
     else
-        return '-north'
+        return "-north"
     end
 end
 
@@ -242,7 +242,7 @@ end
 
 Wind.events[61] = function()
     local wind_speed = Wind.calculate_wind_speed()
-    local direction = Wind.calculate_wind_direction(game.surfaces['nauvis'])
+    local direction = Wind.calculate_wind_direction(game.surfaces["nauvis"])
 
     local key, details = storage.last_windmill, nil
     local max_iter = 0

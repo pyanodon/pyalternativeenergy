@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = 'centrifuge-mk02', amount = 1},
-        {type = "item", name = 'titanium-plate', amount = 40},
-        {type = "item", name = 'processing-unit', amount = 10},
-        {type = "item", name = 'ns-material', amount = 10},
-        {type = "item", name = 'small-parts-03', amount = 100},
-        {type = "item", name = 'graphene-roll', amount = 25},
-        {type = "item", name = 'plastic-bar', amount = 100},
-        {type = "item", name = 'electric-engine-unit', amount = 10},
-        {type = "item", name = 'aerogel', amount = 20},
-        {type = "item", name = "mechanical-parts-03", amount = 1},
+        {type = "item", name = "centrifuge-mk02",      amount = 1},
+        {type = "item", name = "titanium-plate",       amount = 40},
+        {type = "item", name = "processing-unit",      amount = 10},
+        {type = "item", name = "ns-material",          amount = 10},
+        {type = "item", name = "small-parts-03",       amount = 100},
+        {type = "item", name = "graphene-roll",        amount = 25},
+        {type = "item", name = "plastic-bar",          amount = 100},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "aerogel",              amount = 20},
+        {type = "item", name = "mechanical-parts-03",  amount = 1},
     },
     results = {
         {type = "item", name = "centrifuge-mk03", amount = 1}
@@ -183,8 +183,8 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound =
     {
-      sound = { filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25 },
-      apparent_volume = 0.5
+        sound = {filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25},
+        apparent_volume = 0.5
     },
     fast_replaceable_group = "centrifuge"
-  }
+}

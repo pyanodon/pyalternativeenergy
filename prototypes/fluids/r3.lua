@@ -17,7 +17,7 @@ FLUID {
     type = "fluid",
     name = "r3",
     icon = "__pyalternativeenergygraphics__/graphics/icons/r3.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.278, g = 0.643, b = 0.243},

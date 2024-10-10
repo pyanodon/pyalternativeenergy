@@ -7,7 +7,7 @@ data:extend {
         icon = "__pyalternativeenergygraphics__/graphics/icons/group/item-group.png",
         icon_size = 64
     },
---MKS--
+    --MKS--
     {
         type = "item-subgroup",
         name = "py-alternativeenergy-buildings-mk01",
@@ -118,12 +118,12 @@ data:extend {
         order = "az"
     },
     {
-        type = 'item-subgroup',
-        name = 'py-rawores-uranium-depleted',
-        group = 'py-rawores',
-        order = 'bma'
+        type = "item-subgroup",
+        name = "py-rawores-uranium-depleted",
+        group = "py-rawores",
+        order = "bma"
     },
 }
 
-data.raw.item['engine-unit'].subgroup = 'py-alternativeenergy-engine-units'
-data.raw.item['electric-engine-unit'].subgroup = 'py-alternativeenergy-engine-units'
+data.raw.item["engine-unit"].subgroup = "py-alternativeenergy-engine-units"
+data.raw.item["electric-engine-unit"].subgroup = "py-alternativeenergy-engine-units"

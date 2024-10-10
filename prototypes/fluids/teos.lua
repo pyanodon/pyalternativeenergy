@@ -5,12 +5,12 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "silicon", amount = 5},
+        {type = "item",  name = "silicon",  amount = 5},
         {type = "fluid", name = "chlorine", amount = 30},
-        {type = "fluid", name = "ethanol", amount = 100},
+        {type = "fluid", name = "ethanol",  amount = 100},
     },
     results = {
-        {type = "fluid", name = "teos", amount = 50},
+        {type = "fluid", name = "teos",              amount = 50},
         {type = "fluid", name = "hydrogen-chloride", amount = 30},
     },
     main_product = "teos",
@@ -32,4 +32,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

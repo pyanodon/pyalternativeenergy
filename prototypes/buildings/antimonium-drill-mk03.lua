@@ -5,14 +5,14 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "antimonium-drill-mk02", amount = 1},
-        {type = "item", name = "titanium-plate", amount = 20},
-        {type = "item", name = "super-steel", amount = 20},
-        {type = "item", name = "biopolymer", amount = 15},
-        {type = "item", name = "graphene-roll", amount = 20},
-        {type = "item", name = 'ns-material', amount = 20},
-        {type = "item", name = "processing-unit", amount = 10},
-        {type = "item", name = "electric-engine-unit", amount = 3},
-        {type = "item", name = "mechanical-parts-03", amount = 1},
+        {type = "item", name = "titanium-plate",        amount = 20},
+        {type = "item", name = "super-steel",           amount = 20},
+        {type = "item", name = "biopolymer",            amount = 15},
+        {type = "item", name = "graphene-roll",         amount = 20},
+        {type = "item", name = "ns-material",           amount = 20},
+        {type = "item", name = "processing-unit",       amount = 10},
+        {type = "item", name = "electric-engine-unit",  amount = 3},
+        {type = "item", name = "mechanical-parts-03",   amount = 1},
     },
     results = {
         {type = "item", name = "antimonium-drill-mk03", amount = 1}
@@ -52,7 +52,7 @@ ENTITY {
         type = "burner",
         fuel_categories = {"jerry"},
         effectivity = 1,
-        light_flicker = {color = {0,0,0}},
+        light_flicker = {color = {0, 0, 0}},
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
         emissions_per_minute = {

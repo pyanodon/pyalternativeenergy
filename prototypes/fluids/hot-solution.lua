@@ -6,9 +6,9 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "fluid", name = "salt-solution", amount = 100},
-        {type = "fluid", name = "mibc", amount = 50},
-        {type = "item", name = "tbp", amount = 1},
-        {type = "item", name = "zinc-chloride", amount = 2},
+        {type = "fluid", name = "mibc",          amount = 50},
+        {type = "item",  name = "tbp",           amount = 1},
+        {type = "item",  name = "zinc-chloride", amount = 2},
     },
     results = {
         {type = "fluid", name = "hot-solution", amount = 100},
@@ -20,7 +20,7 @@ FLUID {
     type = "fluid",
     name = "hot-solution",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hot-solution.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.431, g = 0.556, b = 0.627},

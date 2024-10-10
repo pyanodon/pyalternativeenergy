@@ -6,7 +6,7 @@ if storage.aerials and storage.aerials.accumulators then
         if table_entry.type then
             storage.aerials.accumulators[network_id] = nil
             if table_entry.valid and table_entry.electric_network_id then
-                log('found an oopsie')
+                log("found an oopsie")
                 -- Migrate to the correct place in the structure if possible
                 if storage.aerials.accumulators[table_entry.electric_network_id][table_entry.name] then
                     table_entry.destroy()

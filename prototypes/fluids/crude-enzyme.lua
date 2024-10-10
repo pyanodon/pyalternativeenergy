@@ -5,10 +5,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "pre-enzyme", amount = 100},
-        {type = "fluid", name = "manure-bacteria", amount = 50},
-        {type = "item", name = "ammonium-sulfate", amount = 1},
-        {type = "item", name = "bio-sample", amount = 2},
+        {type = "fluid", name = "pre-enzyme",       amount = 100},
+        {type = "fluid", name = "manure-bacteria",  amount = 50},
+        {type = "item",  name = "ammonium-sulfate", amount = 1},
+        {type = "item",  name = "bio-sample",       amount = 2},
     },
     results = {
         {type = "fluid", name = "crude-enzyme", amount = 50},
@@ -32,4 +32,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

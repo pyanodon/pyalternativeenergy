@@ -1,8 +1,8 @@
-local resource_autoplace = require 'resource-autoplace'
+local resource_autoplace = require "resource-autoplace"
 
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["antimonium"] = {}
 
-data:extend{{
+data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "antimonium",
@@ -18,7 +18,7 @@ data:extend{{
 ENTITY {
     type = "resource",
     name = "antimonium",
-    category = "antimonium",  --maybe here
+    category = "antimonium", --maybe here
     icon = "__pyalternativeenergygraphics__/graphics/ore/antimonium/antimonium.png",
     icon_size = 64,
     flags = {"placeable-neutral"},

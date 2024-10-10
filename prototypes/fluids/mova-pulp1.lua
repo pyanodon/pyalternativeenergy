@@ -5,8 +5,8 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "water", amount = 150},
-        {type = "item", name = "washed-mova", amount = 10},
+        {type = "fluid", name = "water",       amount = 150},
+        {type = "item",  name = "washed-mova", amount = 10},
     },
     results = {
         {type = "fluid", name = "mova-pulp1", amount = 50},
@@ -30,4 +30,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

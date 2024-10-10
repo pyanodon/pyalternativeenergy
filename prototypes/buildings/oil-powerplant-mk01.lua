@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "small-parts-01", amount = 200},
-        {type = "item", name = "duralumin", amount = 50},
-        {type = "item", name = "pipe", amount = 200},
-        {type = "item", name = "gas-refinery-mk01", amount = 1},
-        {type = "item", name = "electronic-circuit", amount = 100},
-        {type = "item", name = "distilator", amount = 1},
-        {type = "item", name = "intermetallics", amount = 40},
-        {type = "item", name = 'steam-engine', amount = 20},
+        {type = "item", name = "steel-plate",         amount = 100},
+        {type = "item", name = "small-parts-01",      amount = 200},
+        {type = "item", name = "duralumin",           amount = 50},
+        {type = "item", name = "pipe",                amount = 200},
+        {type = "item", name = "gas-refinery-mk01",   amount = 1},
+        {type = "item", name = "electronic-circuit",  amount = 100},
+        {type = "item", name = "distilator",          amount = 1},
+        {type = "item", name = "intermetallics",      amount = 40},
+        {type = "item", name = "steam-engine",        amount = 20},
         {type = "item", name = "mechanical-parts-01", amount = 3},
     },
     results = {
@@ -66,31 +66,31 @@ ENTITY {
             production_type = "input",
             filter = "kerosene"
         },
-      effectivity = 1,
-      burns_fluid = true,
-      scale_fluid_usage = true,
-      light_flicker =
-      {
-        minimum_intensity = 0,
-        maximum_intensity = 0,
-        light_intensity_to_size_coefficient = 0,
-        color = {0,0,0},
-      },
+        effectivity = 1,
+        burns_fluid = true,
+        scale_fluid_usage = true,
+        light_flicker =
+        {
+            minimum_intensity = 0,
+            maximum_intensity = 0,
+            light_intensity_to_size_coefficient = 0,
+            color = {0, 0, 0},
+        },
         smoke =
         {
-          {
-            name = "fire-smoke-on-adding-fuel",
-            north_position = util.by_pixel(-16, -432),
-            south_position = util.by_pixel(-16, -432),
-            east_position = util.by_pixel(-16, -432),
-            west_position = util.by_pixel(-16, -432),
-            frequency = 25,
-            slow_down_factor = 0.1,
-            starting_vertical_speed = 0.16,
-            starting_frame_deviation = 10
-          },
+            {
+                name = "fire-smoke-on-adding-fuel",
+                north_position = util.by_pixel(-16, -432),
+                south_position = util.by_pixel(-16, -432),
+                east_position = util.by_pixel(-16, -432),
+                west_position = util.by_pixel(-16, -432),
+                frequency = 25,
+                slow_down_factor = 0.1,
+                starting_vertical_speed = 0.16,
+                starting_frame_deviation = 10
+            },
         }
-      },
+    },
     energy_usage = "10MW",
     graphics_set = {
         working_visualisations = {
@@ -106,7 +106,7 @@ ENTITY {
                     width = 96,
                     height = 160,
                     repeat_count = 2,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                     draw_as_glow = true,
                 }
             },
@@ -121,7 +121,7 @@ ENTITY {
                     line_length = 12,
                     width = 160,
                     height = 96,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                 }
             },
             {
@@ -135,7 +135,7 @@ ENTITY {
                     line_length = 12,
                     width = 160,
                     height = 96,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                 }
             },
             {
@@ -149,7 +149,7 @@ ENTITY {
                     line_length = 12,
                     width = 160,
                     height = 128,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                 }
             },
             {
@@ -163,7 +163,7 @@ ENTITY {
                     line_length = 12,
                     width = 160,
                     height = 96,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                 }
             },
             {
@@ -177,7 +177,7 @@ ENTITY {
                     line_length = 12,
                     width = 160,
                     height = 128,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                 }
             },
             {
@@ -191,7 +191,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 64,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                 }
             },
             {
@@ -205,7 +205,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 64,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                 }
             },
             {
@@ -219,7 +219,7 @@ ENTITY {
                     line_length = 15,
                     width = 96,
                     height = 96,
-                    animation_speed = 1/3,
+                    animation_speed = 1 / 3,
                 }
             },
             {
@@ -233,7 +233,7 @@ ENTITY {
                     line_length = 16,
                     width = 128,
                     height = 128,
-                    animation_speed = 1/4,
+                    animation_speed = 1 / 4,
                 }
             },
         },
@@ -339,4 +339,4 @@ ENTITY {
         apparent_volume = 0.45
     },
     fast_replaceable_group = "oil-power"
-  }
+}

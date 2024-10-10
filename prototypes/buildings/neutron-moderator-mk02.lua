@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "neutron-moderator-mk01", amount = 1},
-        {type = "item", name = "advanced-circuit", amount = 35},
-        {type = "item", name = "small-parts-02", amount = 50},
-        {type = "item", name = "refined-concrete", amount = 30},
-        {type = "item", name = "stainless-steel", amount = 100},
-        {type = "item", name = "lithium", amount = 30},
-        {type = "item", name = "engine-unit", amount = 5},
-        {type = "item", name = "phosphate-glass", amount = 100},
-        {type = "item", name = "pump", amount = 5},
-        {type = "item", name = 'self-assembly-monolayer', amount = 15},
-        {type = "item", name = "mechanical-parts-02", amount = 1},
-        {type = "item", name = "nxsb-alloy", amount = 50},
+        {type = "item", name = "neutron-moderator-mk01",  amount = 1},
+        {type = "item", name = "advanced-circuit",        amount = 35},
+        {type = "item", name = "small-parts-02",          amount = 50},
+        {type = "item", name = "refined-concrete",        amount = 30},
+        {type = "item", name = "stainless-steel",         amount = 100},
+        {type = "item", name = "lithium",                 amount = 30},
+        {type = "item", name = "engine-unit",             amount = 5},
+        {type = "item", name = "phosphate-glass",         amount = 100},
+        {type = "item", name = "pump",                    amount = 5},
+        {type = "item", name = "self-assembly-monolayer", amount = 15},
+        {type = "item", name = "mechanical-parts-02",     amount = 1},
+        {type = "item", name = "nxsb-alloy",              amount = 50},
     },
     results = {
         {type = "item", name = "neutron-moderator-mk02", amount = 1}
@@ -88,7 +88,7 @@ ENTITY {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/bubbles.png",
                     frame_count = 100,
                     line_length = 10,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     width = 160,
                     height = 128,
                 }
@@ -172,4 +172,4 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-mod"
-  }
+}

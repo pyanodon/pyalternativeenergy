@@ -5,17 +5,17 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "py-biomass-powerplant-mk03", amount = 1},
-        {type = "item", name = 'low-density-structure', amount = 100},
-        {type = "item", name = "small-parts-03", amount = 150},
-        {type = "item", name = "super-alloy", amount = 100},
-        {type = "item", name = "carbon-aerogel", amount = 20},
-        {type = "item", name = "intelligent-unit", amount = 50},
-        {type = "item", name = 'metastable-quasicrystal', amount = 10},
-        {type = "item", name = 'alag-alloy', amount = 60},
-        {type = "item", name = "sc-engine", amount = 8},
-        {type = "item", name = "control-unit", amount = 20},
-        {type = "item", name = "metallic-glass", amount = 100},
-        {type = "item", name = "mechanical-parts-04", amount = 5},
+        {type = "item", name = "low-density-structure",      amount = 100},
+        {type = "item", name = "small-parts-03",             amount = 150},
+        {type = "item", name = "super-alloy",                amount = 100},
+        {type = "item", name = "carbon-aerogel",             amount = 20},
+        {type = "item", name = "intelligent-unit",           amount = 50},
+        {type = "item", name = "metastable-quasicrystal",    amount = 10},
+        {type = "item", name = "alag-alloy",                 amount = 60},
+        {type = "item", name = "sc-engine",                  amount = 8},
+        {type = "item", name = "control-unit",               amount = 20},
+        {type = "item", name = "metallic-glass",             amount = 100},
+        {type = "item", name = "mechanical-parts-04",        amount = 5},
     },
     results = {
         {type = "item", name = "py-biomass-powerplant-mk04", amount = 1}
@@ -53,22 +53,22 @@ ENTITY {
     crafting_speed = 4,
     energy_source =
     {
-      type = "burner",
-      fuel_categories = {"biomass"},
-      effectivity = 1,
-      light_flicker =
-      {
-        minimum_intensity = 0,
-        maximum_intensity = 0,
-        light_intensity_to_size_coefficient = 0,
-        color = {0,0,0},
-      },
-      fuel_inventory_size = 1,
-      burnt_inventory_size = 1,
-      emissions_per_minute = {
-          pollution = 12
-      },
-      smoke =
+        type = "burner",
+        fuel_categories = {"biomass"},
+        effectivity = 1,
+        light_flicker =
+        {
+            minimum_intensity = 0,
+            maximum_intensity = 0,
+            light_intensity_to_size_coefficient = 0,
+            color = {0, 0, 0},
+        },
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = {
+            pollution = 12
+        },
+        smoke =
         {
             {
                 name = "turbine-smoke",
@@ -98,7 +98,7 @@ ENTITY {
                     line_length = 10,
                     width = 160,
                     height = 288,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     draw_as_glow = true,
                 }
@@ -114,7 +114,7 @@ ENTITY {
                     line_length = 10,
                     width = 160,
                     height = 288,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     draw_as_glow = true,
                 }
@@ -128,7 +128,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(0, -80),
                 },
                 {
@@ -137,7 +137,7 @@ ENTITY {
                     height = 224,
                     line_length = 8,
                     frame_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(112, 0),
                 },
                 {
@@ -146,7 +146,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(0, -80),
                 },
                 {
@@ -155,7 +155,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
                     shift = util.by_pixel(0, -80),
                 },
@@ -165,7 +165,7 @@ ENTITY {
                     height = 448,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(16, 16),
                     draw_as_shadow = true,
                 },
@@ -175,7 +175,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     shift = util.by_pixel(0, -80),
                 },
@@ -185,7 +185,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     shift = util.by_pixel(0, -80),
                 },
@@ -240,4 +240,4 @@ ENTITY {
         apparent_volume = 0.45
     },
     fast_replaceable_group = "biomass-power"
-  }
+}

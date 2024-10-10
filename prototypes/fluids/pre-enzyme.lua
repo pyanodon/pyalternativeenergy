@@ -5,9 +5,9 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "mova-pulp3", amount = 50},
+        {type = "fluid", name = "mova-pulp3",      amount = 50},
         {type = "fluid", name = "buffer-solution", amount = 50},
-        {type = "item", name = "nexelit-plate", amount = 3},
+        {type = "item",  name = "nexelit-plate",   amount = 3},
     },
     results = {
         {type = "fluid", name = "pre-enzyme", amount = 50},
@@ -31,4 +31,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

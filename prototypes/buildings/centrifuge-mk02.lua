@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = 'aluminium-plate', amount = 50},
-        {type = "item", name = 'steel-plate', amount = 50},
-        {type = "item", name = 'centrifuge-mk01', amount = 1},
-        {type = "item", name = 'niobium-plate', amount = 30},
-        {type = "item", name = 'advanced-circuit', amount = 3},
-        {type = "item", name = 'concrete', amount = 30},
-        {type = "item", name = 'small-parts-02', amount = 100},
-        {type = "item", name = 'eva', amount = 10},
-        {type = "item", name = 'self-assembly-monolayer', amount = 10},
-        {type = "item", name = "mechanical-parts-02", amount = 1},
-        {type = "item", name = 'electric-engine-unit', amount = 10},
+        {type = "item", name = "aluminium-plate",         amount = 50},
+        {type = "item", name = "steel-plate",             amount = 50},
+        {type = "item", name = "centrifuge-mk01",         amount = 1},
+        {type = "item", name = "niobium-plate",           amount = 30},
+        {type = "item", name = "advanced-circuit",        amount = 3},
+        {type = "item", name = "concrete",                amount = 30},
+        {type = "item", name = "small-parts-02",          amount = 100},
+        {type = "item", name = "eva",                     amount = 10},
+        {type = "item", name = "self-assembly-monolayer", amount = 10},
+        {type = "item", name = "mechanical-parts-02",     amount = 1},
+        {type = "item", name = "electric-engine-unit",    amount = 10},
     },
     results = {
         {type = "item", name = "centrifuge-mk02", amount = 1}
@@ -184,8 +184,8 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound =
     {
-      sound = { filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25 },
-      apparent_volume = 0.5
+        sound = {filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25},
+        apparent_volume = 0.5
     },
     fast_replaceable_group = "centrifuge"
-  }
+}

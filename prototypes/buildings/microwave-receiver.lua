@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = 'nxsb-alloy', amount = 40},
-        {type = "item", name = 'processing-unit', amount = 15},
-        {type = "item", name = 'ns-material', amount = 50},
-        {type = "item", name = 'small-parts-03', amount = 150},
-        {type = "item", name = 'graphene-roll', amount = 25},
-        {type = "item", name = 'plastic-bar', amount = 100},
-        {type = "item", name = 'super-steel', amount = 100},
-        {type = "item", name = 'electric-engine-unit', amount = 10},
-        {type = "item", name = 'aerogel', amount = 20},
-        {type = "item", name = "mechanical-parts-03", amount = 4},
+        {type = "item", name = "nxsb-alloy",           amount = 40},
+        {type = "item", name = "processing-unit",      amount = 15},
+        {type = "item", name = "ns-material",          amount = 50},
+        {type = "item", name = "small-parts-03",       amount = 150},
+        {type = "item", name = "graphene-roll",        amount = 25},
+        {type = "item", name = "plastic-bar",          amount = 100},
+        {type = "item", name = "super-steel",          amount = 100},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "aerogel",              amount = 20},
+        {type = "item", name = "mechanical-parts-03",  amount = 4},
     },
     results = {
         {type = "item", name = "microwave-receiver", amount = 1}
@@ -47,14 +47,14 @@ ENTITY {
     match_animation_speed_to_activity = false,
     continuous_animation = true,
     energy_source = {
-        type = 'electric',
-        usage_priority = 'primary-output',
-        buffer_capacity = '5MJ',
+        type = "electric",
+        usage_priority = "primary-output",
+        buffer_capacity = "5MJ",
         render_no_power_icon = false,
-        input_flow_limit = '0W'
+        input_flow_limit = "0W"
     },
-    energy_production = '0MW',
-    energy_usage = '0kW',
+    energy_production = "0MW",
+    energy_usage = "0kW",
     animation = {
         layers = {
             {
@@ -149,5 +149,4 @@ ENTITY {
     },
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
-  }
-  
+}

@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "ree-mining-drill-mk03", amount = 1},
-        {type = "item", name = "concrete", amount = 50},
-        {type = "item", name = "super-alloy", amount = 30},
-        {type = "item", name = "storage-tank", amount = 1},
-        {type = "item", name = "low-density-structure", amount = 10},
-        {type = "item", name = "nbfe-alloy", amount = 10},
-        {type = "item", name = 'metastable-quasicrystal', amount = 2},
-        {type = "item", name = "sc-engine", amount = 2},
-        {type = "item", name = "intelligent-unit", amount = 3},
+        {type = "item", name = "ree-mining-drill-mk03",         amount = 1},
+        {type = "item", name = "concrete",                      amount = 50},
+        {type = "item", name = "super-alloy",                   amount = 30},
+        {type = "item", name = "storage-tank",                  amount = 1},
+        {type = "item", name = "low-density-structure",         amount = 10},
+        {type = "item", name = "nbfe-alloy",                    amount = 10},
+        {type = "item", name = "metastable-quasicrystal",       amount = 2},
+        {type = "item", name = "sc-engine",                     amount = 2},
+        {type = "item", name = "intelligent-unit",              amount = 3},
         {type = "item", name = "superconductor-servomechanims", amount = 2},
-        {type = "item", name = "hyperelastic-material", amount = 5},
-        {type = "item", name = "mechanical-parts-04", amount = 3},
+        {type = "item", name = "hyperelastic-material",         amount = 5},
+        {type = "item", name = "mechanical-parts-04",           amount = 3},
     },
     results = {
         {type = "item", name = "ree-mining-drill-mk04", amount = 1}
@@ -55,7 +55,7 @@ ENTITY {
         volume = 200,
         pipe_connections = {
             {flow_direction = "input-output", position = {-2.0, 2}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.0, 2}, direction = defines.direction.east},
+            {flow_direction = "input-output", position = {2.0, 2},  direction = defines.direction.east},
         }
     },
     module_slots = 0,

@@ -1,6 +1,6 @@
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["geothermal-crack"] = {}
 
-data:extend{{
+data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "geothermal-crack",
@@ -13,7 +13,7 @@ data:extend{{
 --     name = "geothermal-crack"
 -- }}
 
-data:extend{
+data:extend {
     {
         type = "noise-expression",
         name = "py_geothermal_crack_starting_area",
@@ -44,7 +44,7 @@ data:extend{
     }
 }
 
-data:extend{{
+data:extend {{
     type = "resource",
     name = "geothermal-crack",
     category = "geothermal-crack",
@@ -60,10 +60,10 @@ data:extend{{
         mining_time = 1,
         results = {
             {
-            type = "fluid",
-            name = "geothermal-water",
-            amount = 100,
-            temperature = 3000,
+                type = "fluid",
+                name = "geothermal-water",
+                amount = 100,
+                temperature = 3000,
             }
         },
         fluid_amount = 100,

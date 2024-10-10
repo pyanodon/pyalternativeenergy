@@ -1,9 +1,8 @@
-
 FLUID {
     type = "fluid",
     name = "enriched-water",
     icon = "__pyalternativeenergygraphics__/graphics/icons/enriched-water.png",
-	icon_size = 32,
+    icon_size = 32,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 255, g = 69, b = 0},

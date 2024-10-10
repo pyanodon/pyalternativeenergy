@@ -5,13 +5,13 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "ree-mining-drill-mk02", amount = 1},
-        {type = "item", name = "titanium-plate", amount = 20},
-        {type = "item", name = "super-steel", amount = 20},
-        {type = "item", name = "nbti-alloy", amount = 20},
-        {type = "item", name = "tin-plate", amount = 20},
-        {type = "item", name = 'ns-material', amount = 20},
-        {type = "item", name = "processing-unit", amount = 10},
-        {type = "item", name = "mechanical-parts-03", amount = 2},
+        {type = "item", name = "titanium-plate",        amount = 20},
+        {type = "item", name = "super-steel",           amount = 20},
+        {type = "item", name = "nbti-alloy",            amount = 20},
+        {type = "item", name = "tin-plate",             amount = 20},
+        {type = "item", name = "ns-material",           amount = 20},
+        {type = "item", name = "processing-unit",       amount = 10},
+        {type = "item", name = "mechanical-parts-03",   amount = 2},
     },
     results = {
         {type = "item", name = "ree-mining-drill-mk03", amount = 1}
@@ -51,7 +51,7 @@ ENTITY {
         volume = 200,
         pipe_connections = {
             {flow_direction = "input-output", position = {-2.0, 2}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.0, 2}, direction = defines.direction.east},
+            {flow_direction = "input-output", position = {2.0, 2},  direction = defines.direction.east},
         }
     },
     module_slots = 0,

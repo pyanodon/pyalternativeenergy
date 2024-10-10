@@ -5,19 +5,19 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "py-heat-exchanger-mk03", amount = 1},
-        {type = "item", name = "low-density-structure", amount = 10},
-        {type = "item", name = "mechanical-parts-04", amount = 1},
+        {type = "item", name = "low-density-structure",  amount = 10},
+        {type = "item", name = "mechanical-parts-04",    amount = 1},
     },
     results = {
         {type = "item", name = "py-heat-exchanger-mk04", amount = 1}
     }
-}:add_unlock('nonrenewable-mk04')
+}:add_unlock("nonrenewable-mk04")
 
 ITEM {
     type = "item",
     name = "py-heat-exchanger-mk04",
     icon = "__pyfusionenergygraphics__/graphics/icons/py-heat-exchanger-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {},
     subgroup = "py-fusion-buildings-mk04",
     order = "z",
@@ -29,7 +29,7 @@ ENTITY {
     type = "assembling-machine",
     name = "py-heat-exchanger-mk04",
     icon = "__pyfusionenergygraphics__/graphics/icons/py-heat-exchanger-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "py-heat-exchanger-mk04"},
     fast_replaceable_group = "py-heat-exchanger",

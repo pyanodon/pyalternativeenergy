@@ -4,20 +4,20 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "neutron-moderator-mk03", amount = 1},
-        {type = "item", name = "intelligent-unit", amount = 20},
-        {type = "item", name = "parametric-oscilator", amount = 5},
-        {type = "item", name = "biopolymer", amount = 50},
-        {type = "item", name = "super-alloy", amount = 80},
-        {type = "item", name = "carbon-nanotube", amount = 100},
-        {type = "item", name = "sc-engine", amount = 4},
-        {type = "item", name = "clean-glass-sheet", amount = 100},
-        {type = "item", name = "utility-box-mk04", amount = 1},
-        {type = "item", name = 'metastable-quasicrystal', amount = 10},
-        {type = "item", name = "fes", amount = 2},
-        {type = "item", name = "heating-system", amount = 1},
-        {type = "item", name = "cooling-system", amount = 3},
-        {type = "item", name = "mechanical-parts-04", amount = 1},
+        {type = "item", name = "neutron-moderator-mk03",  amount = 1},
+        {type = "item", name = "intelligent-unit",        amount = 20},
+        {type = "item", name = "parametric-oscilator",    amount = 5},
+        {type = "item", name = "biopolymer",              amount = 50},
+        {type = "item", name = "super-alloy",             amount = 80},
+        {type = "item", name = "carbon-nanotube",         amount = 100},
+        {type = "item", name = "sc-engine",               amount = 4},
+        {type = "item", name = "clean-glass-sheet",       amount = 100},
+        {type = "item", name = "utility-box-mk04",        amount = 1},
+        {type = "item", name = "metastable-quasicrystal", amount = 10},
+        {type = "item", name = "fes",                     amount = 2},
+        {type = "item", name = "heating-system",          amount = 1},
+        {type = "item", name = "cooling-system",          amount = 3},
+        {type = "item", name = "mechanical-parts-04",     amount = 1},
     },
     results = {
         {type = "item", name = "neutron-moderator-mk04", amount = 1}
@@ -90,7 +90,7 @@ ENTITY {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/bubbles.png",
                     frame_count = 100,
                     line_length = 10,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     width = 160,
                     height = 128,
                 }
@@ -174,4 +174,4 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-mod"
-  }
+}

@@ -4,27 +4,27 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "pipe", amount = 20},
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "iron-gear-wheel", amount = 200},
-        {type = "item", name = "duralumin", amount = 20},
-        {type = "item", name = "intermetallics", amount = 10},
-        {type = "item", name = "shaft-mk01", amount = 1},
-        {type = "item", name = "brake-mk01", amount = 4},
-        {type = "item", name = "utility-box-mk01", amount = 2},
-        {type = "item", name = "gearbox-mk01", amount = 3},
+        {type = "item", name = "pipe",               amount = 20},
+        {type = "item", name = "steel-plate",        amount = 100},
+        {type = "item", name = "iron-gear-wheel",    amount = 200},
+        {type = "item", name = "duralumin",          amount = 20},
+        {type = "item", name = "intermetallics",     amount = 10},
+        {type = "item", name = "shaft-mk01",         amount = 1},
+        {type = "item", name = "brake-mk01",         amount = 4},
+        {type = "item", name = "utility-box-mk01",   amount = 2},
+        {type = "item", name = "gearbox-mk01",       amount = 3},
         {type = "item", name = "electronic-circuit", amount = 30},
     },
     results = {
         {type = "item", name = "steam-turbine-mk01", amount = 1}
     }
-}:add_unlock('nonrenewable-mk01')
+}:add_unlock("nonrenewable-mk01")
 
 ITEM {
     type = "item",
     name = "steam-turbine-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/steam-turbine-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
     order = "x",
@@ -36,7 +36,7 @@ ENTITY {
     type = "generator",
     name = "steam-turbine-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/steam-turbine-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "steam-turbine-mk01"},
     max_health = 500,
@@ -61,7 +61,7 @@ ENTITY {
         --pipe_picture = pipe_pictures({0, 3}),
         production_type = "input-output",
         pipe_connections = {
-            {flow_direction = "input-output", position = {2.0, 0.0}, direction = defines.direction.east},
+            {flow_direction = "input-output", position = {2.0, 0.0},  direction = defines.direction.east},
             {flow_direction = "input-output", position = {-2.0, 0.0}, direction = defines.direction.west}
         }
     },

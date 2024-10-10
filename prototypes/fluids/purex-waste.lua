@@ -1,4 +1,3 @@
-
 FLUID {
     type = "fluid",
     name = "purex-waste-1",

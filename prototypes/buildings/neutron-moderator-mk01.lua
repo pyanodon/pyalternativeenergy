@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "electronic-circuit", amount = 35},
-        {type = "item", name = "iron-gear-wheel", amount = 120},
-        {type = "item", name = "iron-plate", amount = 50},
-        {type = "item", name = "concrete", amount = 40},
-        {type = "item", name = "steel-plate", amount = 50},
-        {type = "item", name = "duralumin", amount = 20},
-        {type = "item", name = "steam-engine", amount = 1},
-        {type = "item", name = "glass", amount = 100},
-        {type = "item", name = "niobium-pipe", amount = 10},
+        {type = "item", name = "electronic-circuit",  amount = 35},
+        {type = "item", name = "iron-gear-wheel",     amount = 120},
+        {type = "item", name = "iron-plate",          amount = 50},
+        {type = "item", name = "concrete",            amount = 40},
+        {type = "item", name = "steel-plate",         amount = 50},
+        {type = "item", name = "duralumin",           amount = 20},
+        {type = "item", name = "steam-engine",        amount = 1},
+        {type = "item", name = "glass",               amount = 100},
+        {type = "item", name = "niobium-pipe",        amount = 10},
         {type = "item", name = "mechanical-parts-01", amount = 2},
-        {type = "item", name = 'intermetallics', amount = 10},
+        {type = "item", name = "intermetallics",      amount = 10},
     },
     results = {
         {type = "item", name = "neutron-moderator-mk01", amount = 1}
@@ -87,7 +87,7 @@ ENTITY {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/bubbles.png",
                     frame_count = 100,
                     line_length = 10,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     width = 160,
                     height = 128,
                 }
@@ -171,4 +171,4 @@ ENTITY {
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-mod"
-  }
+}

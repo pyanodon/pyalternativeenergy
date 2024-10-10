@@ -47,7 +47,7 @@ Aerial.events = {}
 ---@field chest LuaEntity chest entity portion of the Aerial Base
 ---@field combinator LuaEntity combinator entity of the Aerial Base. This is the place_result of the item.
 
---[[ 
+--[[
     GLOBALS:
 
     aerials = {
@@ -93,7 +93,7 @@ Aerial.events = {}
         refresh_networks = false,
     }
 
-]]--
+]] --
 
 local pathfind_flags = {
     allow_destroy_friendly_entities = true,
@@ -103,32 +103,34 @@ local pathfind_flags = {
 
 -- Set up a metamethod to guarantee tables have sub-tables when indexed
 -- This helps avoid constant validation for indexing nested tables
-local dynamic_index = {__index = function(self, index)
-    local tbl = {}
-    rawset(self, index, tbl)
-    return tbl
-end }
+local dynamic_index = {
+    __index = function(self, index)
+        local tbl = {}
+        rawset(self, index, tbl)
+        return tbl
+    end
+}
 script.register_metatable("dynamic_index", dynamic_index)
 
 local energy_per_distance = {
-    ['aerial-blimp-mk01'] = 4500000 * 1.2,
-    ['aerial-blimp-mk02'] = 9000000 * 1.2,
-    ['aerial-blimp-mk03'] = 13500000 * 1.2,
-    ['aerial-blimp-mk04'] = 18000000 * 1.2,
+    ["aerial-blimp-mk01"] = 4500000 * 1.2,
+    ["aerial-blimp-mk02"] = 9000000 * 1.2,
+    ["aerial-blimp-mk03"] = 13500000 * 1.2,
+    ["aerial-blimp-mk04"] = 18000000 * 1.2,
 }
 
 local travel_speeds = {
-    ['aerial-blimp-mk01'] = 1.2,
-    ['aerial-blimp-mk02'] = 2.4,
-    ['aerial-blimp-mk03'] = 3.6,
-    ['aerial-blimp-mk04'] = 4.8,
+    ["aerial-blimp-mk01"] = 1.2,
+    ["aerial-blimp-mk02"] = 2.4,
+    ["aerial-blimp-mk03"] = 3.6,
+    ["aerial-blimp-mk04"] = 4.8,
 }
 
 local buffer_capacities = {
-    ['aerial-blimp-mk01'] = (200*2^1) * 1000000,-- x * MJ
-    ['aerial-blimp-mk02'] = (200*2^2) * 1000000,-- x * MJ
-    ['aerial-blimp-mk03'] = (200*2^3) * 1000000,-- x * MJ
-    ['aerial-blimp-mk04'] = (200*2^4) * 1000000-- x * MJ
+    ["aerial-blimp-mk01"] = (200 * 2 ^ 1) * 1000000, -- x * MJ
+    ["aerial-blimp-mk02"] = (200 * 2 ^ 2) * 1000000, -- x * MJ
+    ["aerial-blimp-mk03"] = (200 * 2 ^ 3) * 1000000, -- x * MJ
+    ["aerial-blimp-mk04"] = (200 * 2 ^ 4) * 1000000 -- x * MJ
 }
 
 local placement_restriction_text_color = {255, 60, 60}
@@ -181,7 +183,7 @@ end
 ---@param pole_entity LuaEntity electric pole entity
 local function verify_neighbours(pole_entity)
     -- TODO: power switches maybe?
-    if pole_entity.type == 'power-switch' then return end
+    if pole_entity.type == "power-switch" then return end
     local cables = pole_entity.get_wire_connector(defines.wire_connector_id.pole_copper)
     local neighbours = {}
     if cables and cables.valid then
@@ -194,7 +196,7 @@ local function verify_neighbours(pole_entity)
     if #neighbours == 0 then return end
 
     for _, entity in pairs(neighbours) do
-        if entity.valid and entity.type == 'electric-pole' then
+        if entity.valid and entity.type == "electric-pole" then
             local pole_data = storage.aerials.poles[entity.unit_number]
             -- No record of this pole
             if not pole_data then
@@ -334,7 +336,7 @@ get_first_pole = function(network_id)
     return first_pole
 end
 
----Gets or creates an accumulator 
+---Gets or creates an accumulator
 ---@param aerial_entity LuaEntity the aerial looking for a sexy accumulator in their area (network)
 ---@param network_override integer? the electric network ID to check instead of the one at the aerial's position
 ---@return LuaEntity? # the accumulator we found or created, if successful
@@ -375,8 +377,8 @@ local function get_or_create_accumulator(aerial_entity, network_override)
             return get_or_create_accumulator(aerial_entity)
         end
         -- Yep, we have a pole to base on
-        accumulator = aerial_entity.surface.create_entity{
-            name = name .. '-accumulator',
+        accumulator = aerial_entity.surface.create_entity {
+            name = name .. "-accumulator",
             position = first_pole.position,
             force = aerial_entity.force,
             create_build_effect_smoke = false
@@ -415,8 +417,8 @@ local function get_or_create_accumulator(aerial_entity, network_override)
         end
         -- implied return nil
     else -- Make an accumulator and get its network ID, checking for an accumulator on that network
-        local accumulator = aerial_entity.surface.create_entity{
-            name = name .. '-accumulator',
+        local accumulator = aerial_entity.surface.create_entity {
+            name = name .. "-accumulator",
             position = aerial_entity.position,
             force = aerial_entity.force,
             create_build_effect_smoke = false
@@ -465,7 +467,7 @@ local function refresh_networks()
     storage.aerials.poles = {}
     storage.aerials.poles_by_network = solid_table()
     for _, surface in pairs(game.surfaces) do
-        for _, pole in pairs(surface.find_entities_filtered({type = 'electric-pole'})) do
+        for _, pole in pairs(surface.find_entities_filtered {type = "electric-pole"}) do
             local network_id = pole.electric_network_id
             if network_id then
                 -- One is an array, one is a list. This allows ease of selecting a random pole.
@@ -575,7 +577,7 @@ Aerial.events.on_init = function()
     -- Yeet any remaining accumulators
     local accumulator_array = {}
     for name in pairs(turbine_names) do
-        accumulator_array[#accumulator_array+1] = name .. '-accumulator'
+        accumulator_array[#accumulator_array + 1] = name .. "-accumulator"
     end
     -- build a list of our entities to keep
     local entities_to_keep = {}
@@ -588,7 +590,7 @@ Aerial.events.on_init = function()
     end
     local yeeted_count = 0
     for _, surface in pairs(game.surfaces) do
-        for _, entity in pairs(surface.find_entities_filtered{
+        for _, entity in pairs(surface.find_entities_filtered {
             name = accumulator_array
         }) do
             -- Check every accumulator to see if it's in our global table
@@ -601,7 +603,7 @@ Aerial.events.on_init = function()
         end
     end
     if yeeted_count > 0 then
-        log(string.format('deleted %i unnecessary accumulators', yeeted_count))
+        log(string.format("deleted %i unnecessary accumulators", yeeted_count))
     end
 end
 
@@ -689,8 +691,8 @@ local function validate_base(base, unit_number)
             for i = 1, #inventory do
                 local stack = inventory[i]
                 if stack.valid_for_read then
-                    local spilled_results = chest.surface.spill_item_stack{position = position, stack = stack, enable_looted = true, force = force, allow_belts = false}
-                    for ii = 1,  #spilled_results do
+                    local spilled_results = chest.surface.spill_item_stack {position = position, stack = stack, enable_looted = true, force = force, allow_belts = false}
+                    for ii = 1, #spilled_results do
                         spilled_results[ii].order_deconstruction(force)
                     end
                 end
@@ -716,17 +718,17 @@ local function store_turbine(electric_network_id, name, inventory)
     -- Walk our table until we find our target turbine
     for key, aerial in pairs(storage.aerials.aerial_data) do
         local entity = aerial.entity
-        if  entity.valid
+        if entity.valid
             and entity.name == name
             and aerial.network_id == electric_network_id
         then
             accumulate(aerial)
-            stack.set_stack{
+            stack.set_stack {
                 name = name,
                 count = 1
             }
             stack.tags = {lifetime_generation = aerial.lifetime_generation}
-            stack.custom_description = {'', aerial.entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', py.format_energy(aerial.lifetime_generation, 'J')}}
+            stack.custom_description = {"", aerial.entity.prototype.localised_description, "\n", {"aerial-gui.lifetime-generation", py.format_energy(aerial.lifetime_generation, "J")}}
             storage.aerials.aerial_data[key] = nil
             entity.destroy()
             increment_turbine_count(electric_network_id, name, -1)
@@ -750,7 +752,7 @@ local function release_turbine(aerial_base_data, name, stack)
             player.create_local_flying_text {
                 position = position,
                 create_at_cursor = false,
-                text = {'aerial-gui.airspace-too-crowded'},
+                text = {"aerial-gui.airspace-too-crowded"},
                 color = {255, 60, 60}
             }
         end
@@ -758,7 +760,7 @@ local function release_turbine(aerial_base_data, name, stack)
     end
 
     storage.aerials.electric_network_id_override = electric_network_id
-    surface.create_entity{
+    surface.create_entity {
         name = name,
         position = position,
         force = combinator.force_index,
@@ -780,12 +782,12 @@ Aerial.events[301] = function()
     end
 end
 --Update the electric networks every 1h+1tick
-Aerial.events[60*60*60+1] = function()
+Aerial.events[60 * 60 * 60 + 1] = function()
     -- Refresh if pending, since we want an accurate pole/network count
     storage.aerials.refresh_networks = true
 end
 
-local letters = {'A', 'B', 'C', 'D'}
+local letters = {"A", "B", "C", "D"}
 ---Update the bases every ~2 seconds
 Aerial.events[117] = function()
     local stored_energy_per_network = {}
@@ -817,8 +819,8 @@ Aerial.events[117] = function()
                 for i = 1, #inventory do
                     local stack = inventory[i]
                     if stack.valid_for_read then
-                        local spilled_results = chest.surface.spill_item_stack{position = position, stack = stack, enable_looted = true, force = force, allow_belts = false}
-                        for ii = 1,  #spilled_results do
+                        local spilled_results = chest.surface.spill_item_stack {position = position, stack = stack, enable_looted = true, force = force, allow_belts = false}
+                        for ii = 1, #spilled_results do
                             spilled_results[ii].order_deconstruction(force)
                         end
                     end
@@ -877,7 +879,7 @@ Aerial.events[117] = function()
         for name in pairs(turbine_names) do
             -- Diff the signals from our active turbine counts and rectify any differences
             local delta = (desired_turbines[name] or 0) - (existing_turbines[name] or 0)
-            if not is_empty and delta > 0 then -- Release blimps
+            if not is_empty and delta > 0 then    -- Release blimps
                 for _ = 1, math.min(delta, 10) do -- ~5/s release rate
                     local stack = inventory.find_item_stack(name)
                     if stack then
@@ -891,7 +893,7 @@ Aerial.events[117] = function()
                 end
             elseif not is_full and delta < 0 then -- Return blimps
                 for _ = 1, math.min(delta * -1, 10) do
-                    if  inventory.can_insert(name) then
+                    if inventory.can_insert(name) then
                         if not store_turbine(electric_network_id, name, inventory) then
                             break
                         end
@@ -913,7 +915,7 @@ Aerial.events[117] = function()
         -- Update the energy signals
         if update_accumulators then
             max_energy = math.floor(max_energy / 1000000)
-            stored_energy =  math.min(max_energy, math.floor(stored_energy / 1000000 * 1.01))
+            stored_energy = math.min(max_energy, math.floor(stored_energy / 1000000 * 1.01))
             stored_energy_per_network[electric_network_id] = stored_energy
             max_energy_per_network[electric_network_id] = max_energy
         else
@@ -934,13 +936,13 @@ Aerial.events[117] = function()
 
         -- Update the blimp count signals
         for i, letter in pairs(letters) do
-            local name = 'aerial-blimp-mk0' .. i
+            local name = "aerial-blimp-mk0" .. i
             control.set_slot(i, {
-                value = 'signal-' .. i,
+                value = "signal-" .. i,
                 min = existing_turbines[name] or 0
             })
             control.set_slot(i + 4, {
-                value = 'signal-' .. letter,
+                value = "signal-" .. letter,
                 min = inventory.get_item_count(name)
             })
         end
@@ -952,14 +954,14 @@ end
 ---Parks the given turbine, prints an error in chat, and removes it from the global data tables
 ---@param entity LuaEntity the turbine to park
 local function park_and_error(entity)
-    rendering.draw_sprite{
-        sprite = 'utility.electricity_icon',
+    rendering.draw_sprite {
+        sprite = "utility.electricity_icon",
         target = entity,
         surface = entity.surface,
-        render_layer = 'air-entity-info-icon'
+        render_layer = "air-entity-info-icon"
     }
-    game.print{'aerial-gui.stranded', entity.name, entity.position.x, entity.position.y}
-    Aerial.events.on_destroyed{entity = entity}
+    game.print {"aerial-gui.stranded", entity.name, entity.position.x, entity.position.y}
+    Aerial.events.on_destroyed {entity = entity}
 end
 
 ---Finds a target electric pole for the given turbine and issues the AI command to travel to it, if found
@@ -1054,7 +1056,7 @@ local function find_target(aerial)
     aerial.target = target
     aerial.starting_position = entity.position
     local target_position = target.position
-    entity.commandable.set_command{
+    entity.commandable.set_command {
         type = defines.command.go_to_location,
         destination = {target_position.x, target_position.y - 5},
         distraction = defines.distraction.none,
@@ -1076,7 +1078,7 @@ Aerial.events.on_built = function(event)
         local accumulator = get_or_create_accumulator(entity, storage.aerials.electric_network_id_override)
 
         if not accumulator or not accumulator.valid then
-            py.cancel_creation(entity, event.player_index, {'aerial-gui.must-be-placed-in-electric-network'}, placement_restriction_text_color)
+            py.cancel_creation(entity, event.player_index, {"aerial-gui.must-be-placed-in-electric-network"}, placement_restriction_text_color)
             return
         end
 
@@ -1089,14 +1091,14 @@ Aerial.events.on_built = function(event)
 
         local electric_network_id = accumulator.electric_network_id
         if not electric_network_id then
-            py.cancel_creation(entity, event.player_index, {'aerial-gui.must-be-placed-in-electric-network'}, placement_restriction_text_color)
+            py.cancel_creation(entity, event.player_index, {"aerial-gui.must-be-placed-in-electric-network"}, placement_restriction_text_color)
             return
         end
 
         local turbine_count = count_turbines_for_network(electric_network_id)
         local electric_poles = #storage.aerials.poles_by_network[electric_network_id]
         if (turbine_count + 1) * 3 > electric_poles then
-            py.cancel_creation(entity, event.player_index, {'aerial-gui.airspace-too-crowded'}, placement_restriction_text_color)
+            py.cancel_creation(entity, event.player_index, {"aerial-gui.airspace-too-crowded"}, placement_restriction_text_color)
             return
         end
 
@@ -1121,28 +1123,28 @@ Aerial.events.on_built = function(event)
         return
     end
     -- Pole?
-    if entity_type == 'electric-pole' or entity_type == 'power-switch' then
+    if entity_type == "electric-pole" or entity_type == "power-switch" then
         add_pole(entity)
         return
     end
     -- Switches also invalidate the network cache
-    if entity_type == 'power-switch' then
+    if entity_type == "power-switch" then
         storage.aerials.refresh_networks = true
         return
     end
     -- Base compound entity
-    if entity_name == 'aerial-base-combinator' then
+    if entity_name == "aerial-base-combinator" then
         entity.operable = false
-        local animation = entity.surface.create_entity{
-            name = 'aerial-base-animation',
+        local animation = entity.surface.create_entity {
+            name = "aerial-base-animation",
             position = entity.position,
             force = entity.force,
             create_build_effect_smoke = false
         }
         animation.destructible = false
         animation.operable = false
-        local chest = entity.surface.create_entity{
-            name = 'aerial-base-chest',
+        local chest = entity.surface.create_entity {
+            name = "aerial-base-chest",
             position = entity.position,
             force = entity.force,
             create_build_effect_smoke = false
@@ -1186,7 +1188,7 @@ Aerial.events.on_destroyed = function(event)
         if buffer then
             local stack = buffer[1]
             stack.tags = {lifetime_generation = aerial.lifetime_generation}
-            stack.custom_description = {'', entity.prototype.localised_description, '\n', {'aerial-gui.lifetime-generation', py.format_energy(aerial.lifetime_generation, 'J')}}
+            stack.custom_description = {"", entity.prototype.localised_description, "\n", {"aerial-gui.lifetime-generation", py.format_energy(aerial.lifetime_generation, "J")}}
         end
 
         -- drop from the global table and done
@@ -1195,7 +1197,7 @@ Aerial.events.on_destroyed = function(event)
     end
 
     -- Poles
-    if entity.type == 'electric-pole' then
+    if entity.type == "electric-pole" then
         local pole_data = storage.aerials.poles[entity.unit_number]
         if pole_data then
             remove_pole(pole_data)
@@ -1204,7 +1206,7 @@ Aerial.events.on_destroyed = function(event)
     end
 
     -- Base compound entity
-    if entity.name == 'aerial-base-combinator' then
+    if entity.name == "aerial-base-combinator" then
         local unit_number = entity.unit_number
         local base = storage.aerials.base_data[unit_number]
         if not base then
@@ -1227,7 +1229,7 @@ Aerial.events.on_destroyed = function(event)
                         end
                     end
                     if stack.valid_for_read then
-                        chest.surface.spill_item_stack({position = chest.position, stack = stack, enable_looted = true, force = chest.force_index, allow_belts = false})
+                        chest.surface.spill_item_stack {position = chest.position, stack = stack, enable_looted = true, force = chest.force_index, allow_belts = false}
                     end
                 end
             end
@@ -1261,11 +1263,11 @@ local function build_aerial_gui(player, aerial)
     local entity = aerial.entity
 
     player.opened = nil
-    local main_frame = player.gui.screen.add{
-        type = 'frame',
-        name = 'aerial_gui',
+    local main_frame = player.gui.screen.add {
+        type = "frame",
+        name = "aerial_gui",
         caption = entity.prototype.localised_name,
-        direction = 'vertical'
+        direction = "vertical"
     }
     main_frame.style.width = 336
     main_frame.tags = {unit_number = entity.unit_number}
@@ -1273,41 +1275,41 @@ local function build_aerial_gui(player, aerial)
     -- "I think that was needed to fix some weird error" --notnotmelon
     player.opened = main_frame
 
-    local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
-	content_frame.style.vertically_stretchable = true
-	local content_flow = content_frame.add{type = 'flow', name = 'content_flow', direction = 'vertical'}
-	content_flow.style.vertical_spacing = 8
-	content_flow.style.margin = {-4, 0, -4, 0}
-	content_flow.style.vertical_align = 'center'
+    local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
+    content_frame.style.vertically_stretchable = true
+    local content_flow = content_frame.add {type = "flow", name = "content_flow", direction = "vertical"}
+    content_flow.style.vertical_spacing = 8
+    content_flow.style.margin = {-4, 0, -4, 0}
+    content_flow.style.vertical_align = "center"
 
-    local status_flow = content_flow.add{type = 'flow', name = 'status_flow', direction = 'horizontal'}
-	status_flow.style.vertical_align = 'center'
-	local status_sprite = status_flow.add{type = 'sprite', name = 'status_sprite'}
-	status_sprite.resize_to_sprite = false
-	status_sprite.style.size = {16, 16}
-	status_sprite.sprite = 'utility/status_working'
-	status_flow.add{type = 'label', name = 'status_text'}.caption = {'entity-status.working'}
+    local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
+    status_flow.style.vertical_align = "center"
+    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
+    status_sprite.resize_to_sprite = false
+    status_sprite.style.size = {16, 16}
+    status_sprite.sprite = "utility/status_working"
+    status_flow.add {type = "label", name = "status_text"}.caption = {"entity-status.working"}
 
-    content_flow.add{type = 'progressbar', name = 'progressbar', style = 'electric_satisfaction_statistics_progressbar'}.style.horizontally_stretchable = true
+    content_flow.add {type = "progressbar", name = "progressbar", style = "electric_satisfaction_statistics_progressbar"}.style.horizontally_stretchable = true
 
-    local camera_frame = content_flow.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
-	local camera = camera_frame.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = entity.position, surface_index = entity.surface_index}
-	camera.visible = true
+    local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
+    local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = entity.position, surface_index = entity.surface_index}
+    camera.visible = true
     camera.entity = entity
-	camera.style.height = 180
-	camera.zoom = 0.7
+    camera.style.height = 180
+    camera.zoom = 0.7
 
-    local camera_frame_2 = content_flow.add{type = 'frame', name = 'camera_frame_2', style = 'py_nice_frame'}
-    camera = camera_frame_2.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = entity.position, surface_index = entity.surface_index}
-	camera.visible = true
+    local camera_frame_2 = content_flow.add {type = "frame", name = "camera_frame_2", style = "py_nice_frame"}
+    camera = camera_frame_2.add {type = "camera", name = "camera", style = "py_caravan_camera", position = entity.position, surface_index = entity.surface_index}
+    camera.visible = true
     camera.entity = entity
-	camera.style.height = 180
-	camera.zoom = 0.7
+    camera.style.height = 180
+    camera.zoom = 0.7
 
-	content_flow.add{type = 'label', name = 'distance_bonus'}
-    content_flow.add{type = 'label', name = 'lifetime_generation'}
-    content_flow.add{type = 'label', name = 'airspace_traffic_flow'}
-    content_flow.add{type = 'label', name = 'arrival'}
+    content_flow.add {type = "label", name = "distance_bonus"}
+    content_flow.add {type = "label", name = "lifetime_generation"}
+    content_flow.add {type = "label", name = "airspace_traffic_flow"}
+    content_flow.add {type = "label", name = "arrival"}
 
     Aerial.update_gui(player)
 end
@@ -1329,7 +1331,7 @@ Aerial.events.on_open_gui = function(event)
     ---@cast entity LuaEntity
 
     -- If a player clicks for power stats, we verify the network
-    if entity.type == 'electric-pole' then
+    if entity.type == "electric-pole" then
         verify_neighbours(entity)
         return
     end
@@ -1351,14 +1353,14 @@ end
 Aerial.events.on_gui_closed = function(event)
     local player = game.get_player(event.player_index)
     local gui_type = event.gui_type or player.opened_gui_type
-	if gui_type == defines.gui_type.custom then
-		local gui = player.gui.screen.aerial_gui
-		if gui then
+    if gui_type == defines.gui_type.custom then
+        local gui = player.gui.screen.aerial_gui
+        if gui then
             gui.destroy()
         end
     elseif gui_type == defines.gui_type.entity then
         local entity = event.entity
-        if entity and entity.name == 'aerial-base-chest' then
+        if entity and entity.name == "aerial-base-chest" then
             local inventory = entity.get_inventory(defines.inventory.chest)
             set_aerial_base_inventory_filters(inventory)
         end
@@ -1402,7 +1404,7 @@ function Aerial.update_gui(player)
         progress = 0
     end
     content_flow.progressbar.value = progress > 0.99 and 1 or progress
-    content_flow.progressbar.caption = {'sut-gui.energy', py.format_energy(stored_energy, 'J'), py.format_energy(max_energy, 'J')}
+    content_flow.progressbar.caption = {"sut-gui.energy", py.format_energy(stored_energy, "J"), py.format_energy(max_energy, "J")}
 
     -- Get the average of the last 20 trips and add it to the GUI
     local last_20 = aerial.last_20
@@ -1410,8 +1412,8 @@ function Aerial.update_gui(player)
     if last_20 then
         distance_bonus = tostring(distance_bonus)
         -- Add the trailing .0 if there's no decimal value
-        if not distance_bonus:find('%.') then
-            distance_bonus = distance_bonus .. '.0'
+        if not distance_bonus:find("%.") then
+            distance_bonus = distance_bonus .. ".0"
         end
         local count = #last_20
         local sum = 0
@@ -1419,12 +1421,12 @@ function Aerial.update_gui(player)
             sum = sum + last_20[I]
         end
         local average = math.ceil(sum / count * 1000) / 10
-        content_flow.distance_bonus.caption = {'aerial-gui.rpm-bonus-avg', distance_bonus, count, average}
+        content_flow.distance_bonus.caption = {"aerial-gui.rpm-bonus-avg", distance_bonus, count, average}
     else
-        content_flow.distance_bonus.caption = {'aerial-gui.rpm-bonus', distance_bonus}
+        content_flow.distance_bonus.caption = {"aerial-gui.rpm-bonus", distance_bonus}
     end
 
-    content_flow.lifetime_generation.caption = {'aerial-gui.lifetime-generation', py.format_energy(aerial.lifetime_generation + fake_energy, 'J')}
+    content_flow.lifetime_generation.caption = {"aerial-gui.lifetime-generation", py.format_energy(aerial.lifetime_generation + fake_energy, "J")}
 
     -- Update the target camera and ETA
     local target = aerial.target
@@ -1439,9 +1441,9 @@ function Aerial.update_gui(player)
         seconds = tostring(math.floor(seconds % 60))
         -- zero-pad the seconds to a length of two digits
         if #seconds == 1 then
-            seconds = '0' .. seconds
+            seconds = "0" .. seconds
         end
-        content_flow.arrival.caption = {'aerial-gui.eta', minutes, seconds}
+        content_flow.arrival.caption = {"aerial-gui.eta", minutes, seconds}
     end
 
     local electric_network_id = aerial.network_id
@@ -1451,6 +1453,6 @@ function Aerial.update_gui(player)
         local traffic = math.min(1, aerial_turbines / math.floor(electric_poles / 3))
         -- Convert to percentage, rounded to one decimal place
         traffic = math.ceil(traffic * 1000) / 10
-        content_flow.airspace_traffic_flow.caption = {'aerial-gui.airspace-traffic-flow', traffic}
+        content_flow.airspace_traffic_flow.caption = {"aerial-gui.airspace-traffic-flow", traffic}
     end
 end

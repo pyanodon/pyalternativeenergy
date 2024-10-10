@@ -1,19 +1,19 @@
-require '__pypostprocessing__.lib'
+require "__pypostprocessing__.lib"
 
-local farms = require 'scripts/farming'
+local farms = require "scripts/farming"
 local events = defines.events
 
-require 'scripts/wiki/text-pages'
-require 'scripts/microwave-receiver'
-require 'scripts/thermosolar/shared'
-require 'scripts/thermosolar/solar-updraft-tower'
-require 'scripts/thermosolar/heliostat'
-require 'scripts/solar'
-require 'scripts/wind/wind'
-require 'scripts/aerial'
-Centrifuge = require 'scripts/centrifuge'
+require "scripts/wiki/text-pages"
+require "scripts/microwave-receiver"
+require "scripts/thermosolar/shared"
+require "scripts/thermosolar/solar-updraft-tower"
+require "scripts/thermosolar/heliostat"
+require "scripts/solar"
+require "scripts/wind/wind"
+require "scripts/aerial"
+Centrifuge = require "scripts/centrifuge"
 
-py.on_event('on_init', function()
+py.on_event("on_init", function()
     Solar.events.on_init()
     Microwave_Receiver.events.on_init()
     Thermosolar.events.on_init()
@@ -25,11 +25,11 @@ py.on_event('on_init', function()
     storage.lrf_panels = storage.lrf_panels or {}
     storage.stirling = storage.stirling or {}
     for farm, domain in pairs(farms) do
-        remote.call('pyfarm', 'register', farm, domain)
+        remote.call("pyfarm", "register", farm, domain)
     end
 end)
 
-py.on_event('on_built', function(event)
+py.on_event("on_built", function(event)
     Solar.events.on_built(event)
     Solar_Updraft_Tower.events.on_built(event)
     Microwave_Receiver.events.on_built(event)
@@ -42,7 +42,7 @@ py.on_event('on_built', function(event)
     if not E.valid then return end
     local surface = E.surface
 
-    if string.match(E.name, 'tidal%-placer') then
+    if string.match(E.name, "tidal%-placer") then
         local direction = E.direction
         local x = 0
         local y = 0
@@ -56,21 +56,21 @@ py.on_event('on_built', function(event)
             x = -1
         end
         surface.create_entity {
-            name = 'tidal-mk' .. string.match(E.name, '%d+'),
+            name = "tidal-mk" .. string.match(E.name, "%d+"),
             position = {E.position.x + x, E.position.y + y},
             force = E.force,
             direction = E.direction
         }
         E.destroy()
-    elseif string.match(E.name, 'lrf%-panel') ~= nil then
+    elseif string.match(E.name, "lrf%-panel") ~= nil then
         storage.lrf_panels[E.unit_number] = E
-    elseif E.name == 'stirling-concentrator' then
+    elseif E.name == "stirling-concentrator" then
         storage.stirling[E.unit_number] = E
     end
 end)
 
-py.register_on_nth_tick(55, 'thermosolar', 'pyae', function(event)
-    local active = Thermosolar.calc_daylight(game.surfaces['nauvis']) > 0.5
+py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
+    local active = Thermosolar.calc_daylight(game.surfaces["nauvis"]) > 0.5
     for _, panel in pairs(storage.lrf_panels) do
         if panel.valid then panel.active = active end
     end
@@ -79,8 +79,8 @@ py.register_on_nth_tick(55, 'thermosolar', 'pyae', function(event)
     end
 end)
 
-py.register_on_nth_tick(100, 'solar', 'pyae', Solar.events[100])
-py.register_on_nth_tick(61, 'wind', 'pyae', Wind.events[61])
+py.register_on_nth_tick(100, "solar", "pyae", Solar.events[100])
+py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
 
 local on_destroyed = {events.on_player_mined_entity, events.on_robot_mined_entity, events.script_raised_destroy, events.on_entity_died}
 py.on_event(on_destroyed, function(event)
@@ -94,9 +94,9 @@ py.on_event(on_destroyed, function(event)
 
     local E = event.entity
     if not E.valid or not E.unit_number then return end
-    if string.match(E.name, 'lrf%-panel') ~= nil then
+    if string.match(E.name, "lrf%-panel") ~= nil then
         storage.lrf_panels[E.unit_number] = nil
-    elseif E.name == 'stirling-concentrator' then
+    elseif E.name == "stirling-concentrator" then
         storage.stirling[E.unit_number] = nil
     end
 end)
@@ -123,13 +123,13 @@ py.on_event(on_mined_tile, Solar_Updraft_Tower.events.on_destroyed_tile)
 py.on_event(events.on_player_cursor_stack_changed, Thermosolar.events.on_player_cursor_stack_changed)
 py.on_event(events.on_ai_command_completed, Aerial.events.on_ai_command_completed)
 py.on_event(defines.events.on_script_trigger_effect, Wind.events.on_script_trigger_effect)
-py.register_on_nth_tick(117, 'aerial117', 'pyae', Aerial.events[117])
-py.register_on_nth_tick(301, 'aerial301', 'pyae', Aerial.events[301])
+py.register_on_nth_tick(117, "aerial117", "pyae", Aerial.events[117])
+py.register_on_nth_tick(301, "aerial301", "pyae", Aerial.events[301])
 --1h+1tick
-py.register_on_nth_tick(60 * 60 * 60 + 1, 'aerialfuckinghuge', 'pyae', Aerial.events[60 * 60 * 60 + 1])
-py.on_event('open-gui', Aerial.events.on_open_gui)
+py.register_on_nth_tick(60 * 60 * 60 + 1, "aerialfuckinghuge", "pyae", Aerial.events[60 * 60 * 60 + 1])
+py.on_event("open-gui", Aerial.events.on_open_gui)
 
-py.register_on_nth_tick(9, 'aerial9', 'pyae', function()
+py.register_on_nth_tick(9, "aerial9", "pyae", function()
     for _, player in pairs(game.connected_players) do
         local gui = player.gui.screen.aerial_gui
         if gui then Aerial.update_gui(gui) end
@@ -138,7 +138,7 @@ end)
 
 py.on_event(events.on_player_setup_blueprint, Centrifuge.events.on_player_setup_blueprint)
 
-remote.add_interface('pyae', {
+remote.add_interface("pyae", {
     ---@param func string
     execute_on_nth_tick = function(func)
         py.mod_nth_tick_funcs[func]()

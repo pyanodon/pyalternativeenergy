@@ -5,14 +5,14 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "mukmoux-fat", amount = 5}, --Py its called mukmoux fat
-        {type = "item", name = "coke", amount = 5},
-        {type = "fluid", name = "water", amount = 500},
+        {type = "item",  name = "mukmoux-fat", amount = 5}, --Py its called mukmoux fat
+        {type = "item",  name = "coke",        amount = 5},
+        {type = "fluid", name = "water",       amount = 500},
     },
     results = {
         {type = "fluid", name = "middle-processed-lard", amount = 20},
-        {type = "fluid", name = "steam", amount = 500, temperature = 150, catalyst_amount = 500},
-        {type = "fluid", name = "tar", amount = 50},
+        {type = "fluid", name = "steam",                 amount = 500, temperature = 150, catalyst_amount = 500},
+        {type = "fluid", name = "tar",                   amount = 50},
     },
     main_product = "middle-processed-lard",
 }:add_unlock("eva")
@@ -24,13 +24,13 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "industrial-solvent", amount = 50},
-        {type = "item", name = "chromium", amount = 1},
+        {type = "fluid", name = "industrial-solvent",    amount = 50},
+        {type = "item",  name = "chromium",              amount = 1},
         {type = "fluid", name = "middle-processed-lard", amount = 50},
     },
     results = {
         {type = "fluid", name = "fatty-acids", amount = 70},
-       },
+    },
     --main_product = "middle-processed-lard",
 }:add_unlock("eva")
 
@@ -42,12 +42,12 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "fluid", name = "organic-solvent", amount = 70},
-        {type = "fluid", name = "hot-air", amount = 100},
-        {type = "item", name = "seaweed", amount = 100},
+        {type = "fluid", name = "hot-air",         amount = 100},
+        {type = "item",  name = "seaweed",         amount = 100},
     },
     results = {
         {type = "fluid", name = "fatty-acids", amount = 50},
-       },
+    },
     --main_product = "middle-processed-lard",
 }:add_unlock("eva")
 
@@ -75,12 +75,12 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "processed-fatty-acids", amount = 100},
-        {type = "item", name = "chromium", amount = 2},
+        {type = "item",  name = "chromium",              amount = 2},
     },
     results = {
-        {type = "fluid", name = "vinyl-acetate", amount = 50},
+        {type = "fluid", name = "vinyl-acetate",     amount = 50},
         {type = "fluid", name = "dirty-water-heavy", amount = 100},
-        {type = "fluid", name = "carbon-dioxide", amount = 50},
+        {type = "fluid", name = "carbon-dioxide",    amount = 50},
     },
     main_product = "vinyl-acetate",
 }:add_unlock("eva")
@@ -93,7 +93,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "vinyl-acetate", amount = 50},
-        {type = "fluid", name = "ethylene", amount = 50},
+        {type = "fluid", name = "ethylene",      amount = 50},
     },
     results = {
         {type = "item", name = "eva", amount = 5},

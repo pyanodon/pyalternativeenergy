@@ -5,21 +5,21 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "py-heat-exchanger-mk02", amount = 1},
-        {type = "item", name = 'processing-unit', amount = 15},
-        {type = "item", name = "electric-engine-unit", amount = 4},
-        {type = "item", name = "mechanical-parts-03", amount = 1},
+        {type = "item", name = "processing-unit",        amount = 15},
+        {type = "item", name = "electric-engine-unit",   amount = 4},
+        {type = "item", name = "mechanical-parts-03",    amount = 1},
 
     },
     results = {
         {type = "item", name = "py-heat-exchanger-mk03", amount = 1}
     }
-}:add_unlock('nonrenewable-mk03')
+}:add_unlock("nonrenewable-mk03")
 
 ITEM {
     type = "item",
     name = "py-heat-exchanger-mk03",
     icon = "__pyfusionenergygraphics__/graphics/icons/py-heat-exchanger-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {},
     subgroup = "py-fusion-buildings-mk03",
     order = "z",
@@ -31,7 +31,7 @@ ENTITY {
     type = "assembling-machine",
     name = "py-heat-exchanger-mk03",
     icon = "__pyfusionenergygraphics__/graphics/icons/py-heat-exchanger-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "py-heat-exchanger-mk03"},
     fast_replaceable_group = "py-heat-exchanger",
@@ -144,5 +144,5 @@ ENTITY {
         idle_sound = {filename = "__pyfusionenergygraphics__/sounds/heat-exchanger.ogg", volume = 0.3},
         apparent_volume = 2.5
     },
-    next_upgrade = 'py-heat-exchanger-mk04'
+    next_upgrade = "py-heat-exchanger-mk04"
 }

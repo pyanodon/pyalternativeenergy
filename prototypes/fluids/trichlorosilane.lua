@@ -5,12 +5,12 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "silicon", amount = 5},
+        {type = "item",  name = "silicon",           amount = 5},
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
     },
     results = {
         {type = "fluid", name = "trichlorosilane", amount = 50},
-        {type = "fluid", name = "hydrogen", amount = 100},
+        {type = "fluid", name = "hydrogen",        amount = 100},
     },
     main_product = "trichlorosilane",
 }:add_unlock("silicon-mk01")
@@ -31,4 +31,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

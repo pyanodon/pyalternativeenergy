@@ -8,10 +8,10 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "pure-trichlorosilane", amount = 50},
-        {type = "fluid", name = "hydrogen", amount = 100},
+        {type = "fluid", name = "hydrogen",             amount = 100},
     },
     results = {
-        {type = "item", name = "eg-si", amount = 2},
+        {type = "item",  name = "eg-si",             amount = 2},
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
     },
     main_product = "eg-si",
@@ -24,9 +24,9 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "nisi", amount = 2},
+        {type = "item", name = "nisi",          amount = 2},
         {type = "item", name = "silica-powder", amount = 5},
-        {type = "item", name = "clay", amount = 5},
+        {type = "item", name = "clay",          amount = 5},
     },
     results = {
         {type = "item", name = "crucible", amount = 2},
@@ -41,7 +41,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = "item", name = "eg-si", amount = 3},
+        {type = "item", name = "eg-si",    amount = 3},
         {type = "item", name = "graphite", amount = 3},
         {type = "item", name = "crucible", amount = 1},
     },
@@ -58,9 +58,9 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "polycrystalline-slab", amount = 1},
-        {type = "fluid", name = "wax", amount = 30},
-        {type = "item", name = "diamond-wire", amount = 1},
+        {type = "item",  name = "polycrystalline-slab", amount = 1},
+        {type = "fluid", name = "wax",                  amount = 30},
+        {type = "item",  name = "diamond-wire",         amount = 1},
     },
     results = {
         {type = "item", name = "polycrystalline-plate", amount = 5},
@@ -77,7 +77,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "mold", amount = 2},
+        {type = "item",  name = "mold",                   amount = 2},
         {type = "fluid", name = "high-grade-quartz-pulp", amount = 50},
     },
     results = {
@@ -93,7 +93,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "eg-si", amount = 3},
+        {type = "item", name = "eg-si",           amount = 3},
         {type = "item", name = "quartz-crucible", amount = 1},
     },
     results = {
@@ -109,9 +109,9 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "monocrystalline-slab", amount = 1},
-        {type = "fluid", name = "wax", amount = 30},
-        {type = "item", name = "diamond-wire", amount = 1},
+        {type = "item",  name = "monocrystalline-slab", amount = 1},
+        {type = "fluid", name = "wax",                  amount = 30},
+        {type = "item",  name = "diamond-wire",         amount = 1},
     },
     results = {
         {type = "item", name = "monocrystalline-plate", amount = 5},
@@ -127,7 +127,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item", name = "monocrystalline-plate", amount = 1},
-        {type = "item", name = "aramid", amount = 1},
+        {type = "item", name = "aramid",                amount = 1},
     },
     results = {
         {type = "item", name = "silicon-wafer", amount = 5},
@@ -143,7 +143,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item", name = "polycrystalline-plate", amount = 1},
-        {type = "item", name = "aramid", amount = 1},
+        {type = "item", name = "aramid",                amount = 1},
     },
     results = {
         {type = "item", name = "silicon-wafer", amount = 3},

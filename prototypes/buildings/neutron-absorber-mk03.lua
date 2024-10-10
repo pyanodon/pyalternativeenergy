@@ -5,17 +5,17 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "neutron-absorber-mk02", amount = 1},
-        {type = "item", name = "processing-unit", amount = 30},
-        {type = "item", name = "small-parts-03", amount = 100},
-        {type = "item", name = "nichrome", amount = 20},
-        {type = "item", name = "biopolymer", amount = 20},
-        {type = "item", name = "super-steel", amount = 50},
-        {type = "item", name = "cf", amount = 40},
-        {type = "item", name = 'hydraulic-system-mk01', amount = 4},
-        {type = "item", name = "utility-box-mk03", amount = 1},
-        {type = "item", name = "electronics-mk03", amount = 1},
-        {type = "item", name = 'ns-material', amount = 15},
-        {type = "item", name = "mechanical-parts-03", amount = 1},
+        {type = "item", name = "processing-unit",       amount = 30},
+        {type = "item", name = "small-parts-03",        amount = 100},
+        {type = "item", name = "nichrome",              amount = 20},
+        {type = "item", name = "biopolymer",            amount = 20},
+        {type = "item", name = "super-steel",           amount = 50},
+        {type = "item", name = "cf",                    amount = 40},
+        {type = "item", name = "hydraulic-system-mk01", amount = 4},
+        {type = "item", name = "utility-box-mk03",      amount = 1},
+        {type = "item", name = "electronics-mk03",      amount = 1},
+        {type = "item", name = "ns-material",           amount = 15},
+        {type = "item", name = "mechanical-parts-03",   amount = 1},
 
     },
     results = {
@@ -50,7 +50,7 @@ ENTITY {
     match_animation_speed_to_activity = false,
     crafting_categories = {"neutron-absorber"},
     crafting_speed = 3,
-    energy_source = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].energy_source),
+    energy_source = table.deepcopy(data.raw["assembling-machine"]["neutron-absorber-mk01"].energy_source),
     energy_usage = "1W",
     graphics_set = {
         working_visualisations = {
@@ -103,9 +103,9 @@ ENTITY {
             }
         },
     },
-    fluid_boxes = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].fluid_boxes),
+    fluid_boxes = table.deepcopy(data.raw["assembling-machine"]["neutron-absorber-mk01"].fluid_boxes),
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-absorber"
-  }
+}
 
-  data.raw['assembling-machine']['neutron-absorber-mk03'].energy_source.fluid_usage_per_tick = 6/60
+data.raw["assembling-machine"]["neutron-absorber-mk03"].energy_source.fluid_usage_per_tick = 6 / 60

@@ -5,12 +5,12 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "organic-pulp", amount = 50},
-        {type = "item", name = "filtration-media", amount = 2},
+        {type = "fluid", name = "organic-pulp",     amount = 50},
+        {type = "item",  name = "filtration-media", amount = 2},
     },
     results = {
         {type = "fluid", name = "clean-organic-pulp", amount = 50},
-        {type = "item", name = "biomass", amount = 3},
+        {type = "item",  name = "biomass",            amount = 3},
     },
     main_product = "clean-organic-pulp",
 }:add_unlock("mof")
@@ -31,4 +31,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

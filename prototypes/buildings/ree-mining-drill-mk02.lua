@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "ree-mining-drill-mk01", amount = 1},
-        {type = "item", name = "stainless-steel", amount = 60},
-        {type = "item", name = "steel-plate", amount = 40},
-        {type = "item", name = "duralumin", amount = 15},
-        {type = "item", name = "lead-plate", amount = 10},
+        {type = "item", name = "ree-mining-drill-mk01",   amount = 1},
+        {type = "item", name = "stainless-steel",         amount = 60},
+        {type = "item", name = "steel-plate",             amount = 40},
+        {type = "item", name = "duralumin",               amount = 15},
+        {type = "item", name = "lead-plate",              amount = 10},
         {type = "item", name = "self-assembly-monolayer", amount = 20},
-        {type = "item", name = "nexelit-plate", amount = 15},
-        {type = "item", name = "advanced-circuit", amount = 10},
-        {type = "item", name = "mechanical-parts-02", amount = 1},
+        {type = "item", name = "nexelit-plate",           amount = 15},
+        {type = "item", name = "advanced-circuit",        amount = 10},
+        {type = "item", name = "mechanical-parts-02",     amount = 1},
     },
     results = {
         {type = "item", name = "ree-mining-drill-mk02", amount = 1}
@@ -52,7 +52,7 @@ ENTITY {
         volume = 200,
         pipe_connections = {
             {flow_direction = "input-output", position = {-2.0, 2}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.0, 2}, direction = defines.direction.east},
+            {flow_direction = "input-output", position = {2.0, 2},  direction = defines.direction.east},
         }
     },
     module_slots = 0,

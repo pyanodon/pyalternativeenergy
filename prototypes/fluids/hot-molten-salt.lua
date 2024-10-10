@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "hot-molten-salt",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hot-molten-salt.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 1000, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.843, g = 0.521, b = 0.521},

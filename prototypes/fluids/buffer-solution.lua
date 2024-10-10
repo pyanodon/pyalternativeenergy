@@ -6,9 +6,9 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "fluid", name = "hydrogen-peroxide", amount = 100},
-        {type = "fluid", name = "water", amount = 200},
-        {type = "item", name = "guaiacol", amount = 1},
-        {type = "item", name = "phosphate-rock", amount = 5},
+        {type = "fluid", name = "water",             amount = 200},
+        {type = "item",  name = "guaiacol",          amount = 1},
+        {type = "item",  name = "phosphate-rock",    amount = 5},
     },
     results = {
         {type = "fluid", name = "buffer-solution", amount = 50},
@@ -32,4 +32,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

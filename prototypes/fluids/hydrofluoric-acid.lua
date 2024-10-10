@@ -1,4 +1,3 @@
-
 RECIPE {
     type = "recipe",
     name = "hydrofluoric-acid",
@@ -6,9 +5,9 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "sulfuric-acid", amount = 75},
-        {type = "item", name = "powdered-phosphate-rock", amount = 5},
-        {type = "fluid", name = "prepared-quartz", amount = 50},
+        {type = "fluid", name = "sulfuric-acid",           amount = 75},
+        {type = "item",  name = "powdered-phosphate-rock", amount = 5},
+        {type = "fluid", name = "prepared-quartz",         amount = 50},
     },
     results = {
         {type = "fluid", name = "hydrofluoric-acid", amount = 200}
@@ -20,7 +19,7 @@ FLUID {
     type = "fluid",
     name = "hydrofluoric-acid",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hydrogen-fluoride.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.431, g = 0.556, b = 0.627},

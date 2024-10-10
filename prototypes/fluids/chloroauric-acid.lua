@@ -5,9 +5,9 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "gold-plate", amount = 2},
+        {type = "item",  name = "gold-plate",        amount = 2},
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
-        {type = "item", name = "graphite", amount = 3},
+        {type = "item",  name = "graphite",          amount = 3},
     },
     results = {
         {type = "fluid", name = "chloroauric-acid", amount = 50},
@@ -31,4 +31,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

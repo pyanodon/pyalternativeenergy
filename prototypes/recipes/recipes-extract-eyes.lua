@@ -9,9 +9,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "animal-eye", amount = 2},
-        {type = "item", name = "cage", amount = 1},
+        {type = "item", name = "cage",       amount = 1},
     },
-    subgroup = 'py-alienlife-auog',
+    subgroup = "py-alienlife-auog",
     main_product = "animal-eye",
 }:add_unlock("photonics")
 
@@ -26,9 +26,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "animal-eye", amount = 2},
-        {type = "item", name = "cage", amount = 1},
+        {type = "item", name = "cage",       amount = 1},
     },
-    subgroup = 'py-alienlife-ulric',
+    subgroup = "py-alienlife-ulric",
     main_product = "animal-eye",
 }:add_unlock("photonics")
 
@@ -43,9 +43,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "animal-eye", amount = 2},
-        {type = "item", name = "cage", amount = 1},
+        {type = "item", name = "cage",       amount = 1},
     },
-    subgroup = 'py-alienlife-mukmoux',
+    subgroup = "py-alienlife-mukmoux",
     main_product = "animal-eye",
 }:add_unlock("photonics")
 
@@ -60,9 +60,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "animal-eye", amount = 2},
-        {type = "item", name = "cage", amount = 1},
+        {type = "item", name = "cage",       amount = 1},
     },
-    subgroup = 'py-alienlife-scrondrix',
+    subgroup = "py-alienlife-scrondrix",
     main_product = "animal-eye",
 }:add_unlock("photonics")
 
@@ -78,6 +78,6 @@ RECIPE {
     results = {
         {type = "item", name = "animal-eye", amount = 4},
     },
-    subgroup = 'py-alienlife-dhilmos',
+    subgroup = "py-alienlife-dhilmos",
     main_product = "animal-eye",
 }:add_unlock("photonics")
