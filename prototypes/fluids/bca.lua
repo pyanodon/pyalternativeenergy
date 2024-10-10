@@ -5,10 +5,10 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = "fluid", name = "benzene", amount = 150},
-        {type = "fluid", name = "acetic-acid", amount = 50},
-        {type = "item", name = "saps", amount = 10},
-        {type = "item", name = "cyanoacrylate", amount = 1},
+        {type = "fluid", name = "benzene",       amount = 150},
+        {type = "fluid", name = "acetic-acid",   amount = 50},
+        {type = "item",  name = "saps",          amount = 10},
+        {type = "item",  name = "cyanoacrylate", amount = 1},
     },
     results = {
         {type = "fluid", name = "bca", amount = 50},
@@ -32,4 +32,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

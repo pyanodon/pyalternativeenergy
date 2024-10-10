@@ -2,9 +2,9 @@ Solar = {}
 Solar.events = {}
 
 Solar.animated_solarpanels = {
-	['anti-solar'] = true,
-	['solar-panel-mk02'] = true,
-	['solar-panel-mk03'] = true
+	["anti-solar"] = true,
+	["solar-panel-mk02"] = true,
+	["solar-panel-mk03"] = true
 }
 
 Solar.events.on_init = function()
@@ -18,7 +18,7 @@ Solar.sync_solarpanels = function()
 		local surface = panel.surface
 		local time = surface.daytime
 		if surface.morning <= time and time < (surface.morning + 100 / surface.ticks_per_day) then
-			local new_panel = surface.create_entity{
+			local new_panel = surface.create_entity {
 				name = panel.name,
 				force = panel.force,
 				position = panel.position,
@@ -39,7 +39,7 @@ end
 Solar.events[100] = function()
 	for _, panel in pairs(storage.solarpanels) do
 		local daylight = Thermosolar.calc_daylight(panel.surface)
-		if panel.name == 'anti-solar' then daylight = 1 - daylight end
+		if panel.name == "anti-solar" then daylight = 1 - daylight end
 
 		if daylight == 0 then
 			panel.power_production = 0

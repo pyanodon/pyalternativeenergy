@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steam-engine", amount = 10},
-        {type = "item", name = "iron-plate", amount = 300},
-        {type = "item", name = "plastic-bar", amount = 50},
-        {type = "item", name = "electronic-circuit", amount = 100},
-        {type = "item", name = "small-parts-01", amount = 100},
-        {type = "item", name = "pipe", amount = 50},
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "intermetallics", amount = 20},
+        {type = "item", name = "steam-engine",        amount = 10},
+        {type = "item", name = "iron-plate",          amount = 300},
+        {type = "item", name = "plastic-bar",         amount = 50},
+        {type = "item", name = "electronic-circuit",  amount = 100},
+        {type = "item", name = "small-parts-01",      amount = 100},
+        {type = "item", name = "pipe",                amount = 50},
+        {type = "item", name = "steel-plate",         amount = 100},
+        {type = "item", name = "intermetallics",      amount = 20},
         {type = "item", name = "mechanical-parts-01", amount = 4},
     },
     results = {
@@ -50,22 +50,22 @@ ENTITY {
     crafting_speed = 1,
     energy_source =
     {
-      type = "burner",
-      fuel_categories = {"biomass"},
-      effectivity = 1,
-      light_flicker =
-      {
-        minimum_intensity = 0,
-        maximum_intensity = 0,
-        light_intensity_to_size_coefficient = 0,
-        color = {0,0,0},
-      },
-      fuel_inventory_size = 1,
-      burnt_inventory_size = 1,
-      emissions_per_minute = {
-          pollution = 12
-      },
-      smoke =
+        type = "burner",
+        fuel_categories = {"biomass"},
+        effectivity = 1,
+        light_flicker =
+        {
+            minimum_intensity = 0,
+            maximum_intensity = 0,
+            light_intensity_to_size_coefficient = 0,
+            color = {0, 0, 0},
+        },
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = {
+            pollution = 12
+        },
+        smoke =
         {
             {
                 name = "turbine-smoke",
@@ -95,7 +95,7 @@ ENTITY {
                     line_length = 10,
                     width = 160,
                     height = 288,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     draw_as_glow = true,
                 }
@@ -111,7 +111,7 @@ ENTITY {
                     line_length = 10,
                     width = 160,
                     height = 288,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     draw_as_glow = true,
                 }
@@ -125,7 +125,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(0, -80),
                 },
                 {
@@ -134,7 +134,7 @@ ENTITY {
                     height = 224,
                     line_length = 8,
                     frame_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(112, 0),
                 },
                 {
@@ -143,7 +143,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(0, -80),
                 },
                 {
@@ -152,7 +152,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
                     shift = util.by_pixel(0, -80),
                 },
@@ -162,7 +162,7 @@ ENTITY {
                     height = 448,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(16, 16),
                     draw_as_shadow = true,
                 },
@@ -172,7 +172,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     shift = util.by_pixel(0, -80),
                 },
@@ -182,7 +182,7 @@ ENTITY {
                     height = 640,
                     frame_count = 1,
                     repeat_count = 50,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     shift = util.by_pixel(0, -80),
                 },
@@ -237,4 +237,4 @@ ENTITY {
         apparent_volume = 0.45
     },
     fast_replaceable_group = "biomass-power"
-  }
+}

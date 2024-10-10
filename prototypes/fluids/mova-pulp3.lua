@@ -5,13 +5,13 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "mova-pulp2", amount = 50},
-        {type = "fluid", name = "vacuum", amount = 100},
-        {type = "item", name = "filtration-media", amount = 2},
+        {type = "fluid", name = "mova-pulp2",       amount = 50},
+        {type = "fluid", name = "vacuum",           amount = 100},
+        {type = "item",  name = "filtration-media", amount = 2},
     },
     results = {
         {type = "fluid", name = "mova-pulp3", amount = 50},
-        {type = "item", name = "biomass", amount = 2},
+        {type = "item",  name = "biomass",    amount = 2},
     },
     main_product = "mova-pulp3",
 }:add_unlock("nanozymes")
@@ -32,4 +32,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

@@ -1,4 +1,3 @@
-
 FLUID {
     type = "fluid",
     name = "purex-pu-concentrate-1",

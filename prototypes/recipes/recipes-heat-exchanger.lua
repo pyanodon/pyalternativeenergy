@@ -9,7 +9,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt", amount = 200},
+        {type = "fluid", name = "molten-salt",     amount = 200},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 1000},
     },
     main_product = "pressured-steam",
@@ -26,7 +26,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt", amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 2000},
     },
     main_product = "pressured-steam",
@@ -43,7 +43,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt", amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 3000},
     },
     main_product = "pressured-steam",
@@ -60,7 +60,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt", amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 4000},
     },
     main_product = "pressured-steam",
@@ -77,7 +77,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt", amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 5000},
     },
     main_product = "pressured-steam",
@@ -109,7 +109,7 @@ RECIPE {
     energy_required = 2.5,
     ingredients = {
         {type = "fluid", name = "geothermal-water", amount = 600, minimum_temperature = 950},
-        {type = "fluid", name = "pressured-water", amount = 75},
+        {type = "fluid", name = "pressured-water",  amount = 75},
     },
     results = {
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 1000},
@@ -127,7 +127,7 @@ RECIPE {
     energy_required = 2.5,
     ingredients = {
         {type = "fluid", name = "geothermal-water", amount = 600, minimum_temperature = 1950},
-        {type = "fluid", name = "pressured-water", amount = 100},
+        {type = "fluid", name = "pressured-water",  amount = 100},
     },
     results = {
         {type = "fluid", name = "pressured-steam", amount = 100, temperature = 2000},
@@ -145,7 +145,7 @@ RECIPE {
     energy_required = 2.5,
     ingredients = {
         {type = "fluid", name = "geothermal-water", amount = 600, minimum_temperature = 2950},
-        {type = "fluid", name = "pressured-water", amount = 125},
+        {type = "fluid", name = "pressured-water",  amount = 125},
     },
     results = {
         {type = "fluid", name = "pressured-steam", amount = 125, temperature = 5000},

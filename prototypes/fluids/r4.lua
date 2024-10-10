@@ -5,8 +5,8 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "r3", amount = 100},
-        {type = "item", name = "sodium-hydroxide", amount = 5},
+        {type = "fluid", name = "r3",               amount = 100},
+        {type = "item",  name = "sodium-hydroxide", amount = 5},
     },
     results = {
         {type = "fluid", name = "r4", amount = 100},
@@ -18,7 +18,7 @@ FLUID {
     type = "fluid",
     name = "r4",
     icon = "__pyalternativeenergygraphics__/graphics/icons/r4.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.278, g = 0.643, b = 0.243},

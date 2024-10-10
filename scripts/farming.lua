@@ -1,4 +1,4 @@
 ﻿return {
-    ['zungror-lair'] = 'animal',
-    ['numal-reef'] = 'animal'
+    ["zungror-lair"] = "animal",
+    ["numal-reef"] = "animal"
 }

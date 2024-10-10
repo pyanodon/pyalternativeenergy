@@ -5,16 +5,16 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "py-gas-powerplant-mk02", amount = 1},
-        {type = "item", name = "low-density-structure", amount = 100},
-        {type = "item", name = "biopolymer", amount = 100},
-        {type = "item", name = "super-steel", amount = 100},
-        {type = "item", name = 'ns-material', amount = 50},
-        {type = "item", name = "processing-unit", amount = 100},
-        {type = "item", name = 'small-parts-03', amount = 200},
-        {type = "item", name = 'graphene-roll', amount = 200},
-        {type = "item", name = 'paramagnetic-material', amount = 100},
-        {type = "item", name = 'electric-engine-unit', amount = 50},
-        {type = "item", name = "mechanical-parts-03", amount = 5},
+        {type = "item", name = "low-density-structure",  amount = 100},
+        {type = "item", name = "biopolymer",             amount = 100},
+        {type = "item", name = "super-steel",            amount = 100},
+        {type = "item", name = "ns-material",            amount = 50},
+        {type = "item", name = "processing-unit",        amount = 100},
+        {type = "item", name = "small-parts-03",         amount = 200},
+        {type = "item", name = "graphene-roll",          amount = 200},
+        {type = "item", name = "paramagnetic-material",  amount = 100},
+        {type = "item", name = "electric-engine-unit",   amount = 50},
+        {type = "item", name = "mechanical-parts-03",    amount = 5},
 
     },
     results = {
@@ -68,17 +68,17 @@ ENTITY {
             production_type = "input",
             filter = "purified-natural-gas"
         },
-      effectivity = 1,
-      burns_fluid = true,
-      scale_fluid_usage = true,
-      light_flicker =
-      {
-        minimum_intensity = 0,
-        maximum_intensity = 0,
-        light_intensity_to_size_coefficient = 0,
-        color = {0,0,0},
-      },
-      fluid_usage_per_tick = 20,
+        effectivity = 1,
+        burns_fluid = true,
+        scale_fluid_usage = true,
+        light_flicker =
+        {
+            minimum_intensity = 0,
+            maximum_intensity = 0,
+            light_intensity_to_size_coefficient = 0,
+            color = {0, 0, 0},
+        },
+        fluid_usage_per_tick = 20,
         smoke =
         {
             {
@@ -106,7 +106,7 @@ ENTITY {
                 color = {r = 0.2, g = 0.2, b = 0.2},
             },
         }
-      },
+    },
     energy_usage = "15MW",
     graphics_set = {
         working_visualisations = {
@@ -121,7 +121,7 @@ ENTITY {
                     line_length = 8,
                     width = 256,
                     height = 128,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     draw_as_glow = true,
                 }
@@ -138,7 +138,7 @@ ENTITY {
                     width = 192,
                     tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                     height = 96,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_glow = true,
                 }
             },
@@ -151,7 +151,7 @@ ENTITY {
                     height = 576,
                     frame_count = 1,
                     repeat_count = 80,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(0, -80),
                 },
                 {
@@ -160,7 +160,7 @@ ENTITY {
                     height = 576,
                     frame_count = 1,
                     repeat_count = 80,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                     shift = util.by_pixel(0, -80),
                 },
@@ -170,7 +170,7 @@ ENTITY {
                     height = 576,
                     frame_count = 1,
                     repeat_count = 80,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                     draw_as_glow = true,
                     shift = util.by_pixel(0, -80),
@@ -181,7 +181,7 @@ ENTITY {
                     height = 576,
                     frame_count = 1,
                     repeat_count = 80,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
                     shift = util.by_pixel(0, -80),
                 },
@@ -192,7 +192,7 @@ ENTITY {
                     frame_count = 80,
                     line_length = 20,
                     --repeat_count = 151,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     shift = util.by_pixel(-64, -80),
                 },
                 {
@@ -201,7 +201,7 @@ ENTITY {
                     height = 576,
                     frame_count = 1,
                     repeat_count = 80,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_light = true,
                     shift = util.by_pixel(0, -80),
                 },
@@ -211,7 +211,7 @@ ENTITY {
                     height = 384,
                     frame_count = 1,
                     repeat_count = 80,
-                    animation_speed = 1/2,
+                    animation_speed = 1 / 2,
                     draw_as_shadow = true,
                     shift = util.by_pixel(16, 16),
                 },
@@ -266,4 +266,4 @@ ENTITY {
         apparent_volume = 0.45
     },
     fast_replaceable_group = "gas-power"
-  }
+}

@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "nxsb-alloy", amount = 2},
+        {type = "item",  name = "nxsb-alloy",   amount = 2},
         {type = "fluid", name = "nitrobenzene", amount = 100},
     },
     results = {
@@ -21,7 +21,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "phenol", amount = 10},
+        {type = "item",  name = "phenol",  amount = 10},
         {type = "fluid", name = "ammonia", amount = 100},
     },
     results = {
@@ -46,4 +46,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

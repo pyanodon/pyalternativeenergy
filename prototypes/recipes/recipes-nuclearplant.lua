@@ -9,7 +9,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "reactor-waste-1", amount = 200},
-        {type = "fluid", name = "neutron", amount = 200, temperature = 100},
+        {type = "fluid", name = "neutron",         amount = 200, temperature = 100},
     },
     main_product = "reactor-waste-1"
 }:add_unlock("nuclear-power")
@@ -25,7 +25,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "reactor-waste-2", amount = 200},
-        {type = "fluid", name = "neutron", amount = 200, temperature = 100},
+        {type = "fluid", name = "neutron",         amount = 200, temperature = 100},
     },
     main_product = "reactor-waste-2"
 }:add_unlock("nuclear-power")

@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "mova-pulp1", amount = 100},
+        {type = "fluid", name = "mova-pulp1",      amount = 100},
         {type = "fluid", name = "liquid-nitrogen", amount = 10},
     },
     results = {
@@ -30,4 +30,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

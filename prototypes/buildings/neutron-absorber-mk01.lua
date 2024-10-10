@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "electronic-circuit", amount = 20},
-        {type = "item", name = "iron-gear-wheel", amount = 150},
-        {type = "item", name = "nbfe-alloy", amount = 30},
-        {type = "item", name = "concrete", amount = 50},
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "aluminium-plate", amount = 50},
-        {type = "item", name = "nexelit-plate", amount = 50},
-        {type = "item", name = "niobium-pipe", amount = 10},
+        {type = "item", name = "electronic-circuit",  amount = 20},
+        {type = "item", name = "iron-gear-wheel",     amount = 150},
+        {type = "item", name = "nbfe-alloy",          amount = 30},
+        {type = "item", name = "concrete",            amount = 50},
+        {type = "item", name = "steel-plate",         amount = 100},
+        {type = "item", name = "aluminium-plate",     amount = 50},
+        {type = "item", name = "nexelit-plate",       amount = 50},
+        {type = "item", name = "niobium-pipe",        amount = 10},
         {type = "item", name = "mechanical-parts-01", amount = 2},
-        {type = "item", name = 'intermetallics', amount = 20},
+        {type = "item", name = "intermetallics",      amount = 20},
     },
     results = {
         {type = "item", name = "neutron-absorber-mk01", amount = 1}
@@ -56,21 +56,21 @@ ENTITY {
         destroy_non_fuel_fluid = false,
         fluid_box =
         {
-          volume = 200,
-          pipe_connections = {
-            {flow_direction = "input-output", position = {0, -1.0}, direction = defines.direction.north},
-            {flow_direction = "input-output", position = {0, 1.0}, direction = defines.direction.south}
-          },
-          pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-          pipe_covers = py.pipe_covers(false, true, true, true),
-          production_type = "input-output",
-          filter = "boric-acid"
+            volume = 200,
+            pipe_connections = {
+                {flow_direction = "input-output", position = {0, -1.0}, direction = defines.direction.north},
+                {flow_direction = "input-output", position = {0, 1.0},  direction = defines.direction.south}
+            },
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            production_type = "input-output",
+            filter = "boric-acid"
         },
         burns_fluid = false,
         scale_fluid_usage = false,
-        fluid_usage_per_tick = (2/60),
+        fluid_usage_per_tick = (2 / 60),
         maximum_temperature = 10,
-      },
+    },
     energy_usage = "1W",
     graphics_set = {
         working_visualisations = {
@@ -126,21 +126,21 @@ ENTITY {
     fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
         {
-            production_type = 'input',
-            pipe_picture = py.pipe_pictures('assembling-machine-2', nil, {0.0, -0.96}, nil, nil),
+            production_type = "input",
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             base_level = 0,
             pipe_connections = {
-                {flow_direction = 'input-output', position = {1.0, 0.0}, direction = defines.direction.east},
-                {flow_direction = 'input-output', position = {-1.0, 0.0}, direction = defines.direction.west}
+                {flow_direction = "input-output", position = {1.0, 0.0},  direction = defines.direction.east},
+                {flow_direction = "input-output", position = {-1.0, 0.0}, direction = defines.direction.west}
             }
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-absorber"
-  }
+}
 
-  data.raw.fluid['boric-acid'].default_temperature = 0
-  data.raw.fluid['boric-acid'].max_temperature = 10
-  data.raw.recipe['boric-acid'].results[1].temperature = 10
+data.raw.fluid["boric-acid"].default_temperature = 0
+data.raw.fluid["boric-acid"].max_temperature = 10
+data.raw.recipe["boric-acid"].results[1].temperature = 10

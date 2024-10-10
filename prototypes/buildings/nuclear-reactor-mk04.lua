@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "nuclear-reactor-mk03", amount = 1},
-        {type = "item", name = "intelligent-unit", amount = 200},
-        {type = "item", name = "super-alloy", amount = 1000},
-        {type = "item", name = "sc-engine", amount = 30},
-        {type = "item", name = "phosphate-glass", amount = 500},
-        {type = "item", name = "agzn-alloy", amount = 100},
-        {type = "item", name = 'metastable-quasicrystal', amount = 10},
-        {type = "item", name = "metallic-glass", amount = 40},
-        {type = "item", name = "carbon-aerogel", amount = 100},
-        {type = "item", name = "cf", amount = 500},
-        {type = "item", name = "mechanical-parts-04", amount = 10},
+        {type = "item", name = "nuclear-reactor-mk03",    amount = 1},
+        {type = "item", name = "intelligent-unit",        amount = 200},
+        {type = "item", name = "super-alloy",             amount = 1000},
+        {type = "item", name = "sc-engine",               amount = 30},
+        {type = "item", name = "phosphate-glass",         amount = 500},
+        {type = "item", name = "agzn-alloy",              amount = 100},
+        {type = "item", name = "metastable-quasicrystal", amount = 10},
+        {type = "item", name = "metallic-glass",          amount = 40},
+        {type = "item", name = "carbon-aerogel",          amount = 100},
+        {type = "item", name = "cf",                      amount = 500},
+        {type = "item", name = "mechanical-parts-04",     amount = 10},
     },
     results = {
         {type = "item", name = "nuclear-reactor-mk04", amount = 1}
@@ -54,28 +54,28 @@ ENTITY {
     result_inventory_size = 1,
     energy_source =
     {
-      type = "fluid",
-      effectivity = 1,
-      emissions_per_minute = {
-          pollution = 0
-      },
-      destroy_non_fuel_fluid = false,
-      fluid_box =
-      {
-        volume = 200,
-        pipe_connections = {
-          {flow_direction = "input-output", position = {-4.0, 7.0}, direction = defines.direction.south},
-          {flow_direction = "input-output", position = {-4.0, -7.0}, direction = defines.direction.north}
+        type = "fluid",
+        effectivity = 1,
+        emissions_per_minute = {
+            pollution = 0
         },
-        pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-        pipe_covers = py.pipe_covers(false, true, true, true),
-        production_type = "input-output",
-        filter = "uf6"
-      },
-      burns_fluid = false,
-      scale_fluid_usage = false,
-    --   fluid_usage_per_tick = (2/60),
-      maximum_temperature = 10000,
+        destroy_non_fuel_fluid = false,
+        fluid_box =
+        {
+            volume = 200,
+            pipe_connections = {
+                {flow_direction = "input-output", position = {-4.0, 7.0},  direction = defines.direction.south},
+                {flow_direction = "input-output", position = {-4.0, -7.0}, direction = defines.direction.north}
+            },
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            production_type = "input-output",
+            filter = "uf6"
+        },
+        burns_fluid = false,
+        scale_fluid_usage = false,
+        --   fluid_usage_per_tick = (2/60),
+        maximum_temperature = 10000,
     },
     energy_usage = "300kW",
     graphics_set = {
@@ -182,7 +182,7 @@ ENTITY {
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {4.0, 7.0}, direction = defines.direction.south}}
         },
-        ]]--
+        ]] --
         {
             production_type = "output",
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
@@ -205,4 +205,4 @@ ENTITY {
         apparent_volume = 2.5
     },
     fast_replaceable_group = "reactor"
-  }
+}

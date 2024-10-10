@@ -35,7 +35,7 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "arqad", amount = 2},
+        {type = "item", name = "arqad",  amount = 2},
         {type = "item", name = "vrauks", amount = 2},
     },
     results = {
@@ -60,4 +60,4 @@ FLUID {
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
-	}
+}

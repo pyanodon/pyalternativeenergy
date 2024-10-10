@@ -1,9 +1,8 @@
-
 FLUID {
     type = "fluid",
     name = "hydrogen-sulfide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hydrogen-sulfide.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.431, g = 0.556, b = 0.627},
@@ -20,7 +19,7 @@ FLUID {
     type = "fluid",
     name = "deuterium-sulfide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/deuterium-sulfide.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.431, g = 0.556, b = 0.627},

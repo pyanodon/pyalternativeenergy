@@ -57,28 +57,28 @@ ENTITY {
     result_inventory_size = 1,
     energy_source =
     {
-      type = "fluid",
-      effectivity = 1,
-      emissions_per_minute = {
-          pollution = 0
-      },
-      destroy_non_fuel_fluid = false,
-      fluid_box =
-      {
-        volume = 200,
-        pipe_connections = {
-          {flow_direction = "input-output", position = {-3.0, 6.0}, direction = defines.direction.south},
-          {flow_direction = "input-output", position = {-3.0, -6.0}, direction = defines.direction.north}
+        type = "fluid",
+        effectivity = 1,
+        emissions_per_minute = {
+            pollution = 0
         },
-        pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-        pipe_covers = py.pipe_covers(false, true, true, true),
-        production_type = "input-output",
-        filter = "puo2"
-      },
-      burns_fluid = false,
-      scale_fluid_usage = false,
-    --   fluid_usage_per_tick = (2/60),
-      maximum_temperature = 1000,
+        destroy_non_fuel_fluid = false,
+        fluid_box =
+        {
+            volume = 200,
+            pipe_connections = {
+                {flow_direction = "input-output", position = {-3.0, 6.0},  direction = defines.direction.south},
+                {flow_direction = "input-output", position = {-3.0, -6.0}, direction = defines.direction.north}
+            },
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            production_type = "input-output",
+            filter = "puo2"
+        },
+        burns_fluid = false,
+        scale_fluid_usage = false,
+        --   fluid_usage_per_tick = (2/60),
+        maximum_temperature = 1000,
     },
     energy_usage = "750kW",
     graphics_set = {
@@ -162,7 +162,7 @@ ENTITY {
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {3.0, 6.0}, direction = defines.direction.south}}
         },
-        ]]--
+        ]] --
         {
             production_type = "output",
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
@@ -184,4 +184,4 @@ ENTITY {
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/nuclear-reactor-mk02.ogg", volume = 0.1},
         apparent_volume = 2.5
     }
-  }
+}

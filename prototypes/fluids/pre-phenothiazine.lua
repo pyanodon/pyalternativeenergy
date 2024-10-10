@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "pre-phenothiazine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/pre-phenothiazine.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.635, g = 0.227, b = 0.121},

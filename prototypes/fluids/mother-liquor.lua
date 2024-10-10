@@ -5,13 +5,13 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "r4", amount = 100},
-        {type = "item", name = "sodium-carbonate", amount = 1},
-        {type = "item", name = "flask", amount = 1},
+        {type = "fluid", name = "r4",               amount = 100},
+        {type = "item",  name = "sodium-carbonate", amount = 1},
+        {type = "item",  name = "flask",            amount = 1},
     },
     results = {
-        {type = "fluid", name = "mother-liquor", amount = 100},
-        {type = "item", name = "lithium-carbonate", amount = 1},
+        {type = "fluid", name = "mother-liquor",     amount = 100},
+        {type = "item",  name = "lithium-carbonate", amount = 1},
     },
     main_product = "lithium-carbonate",
 }:add_unlock("lithium-processing")
@@ -24,7 +24,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "hot-solution", amount = 100},
-        {type = "item", name = "chromium", amount = 5},
+        {type = "item",  name = "chromium",     amount = 5},
     },
     results = {
         {type = "fluid", name = "mother-liquor", amount = 20},
@@ -36,7 +36,7 @@ FLUID {
     type = "fluid",
     name = "mother-liquor",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mother-liquor.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.278, g = 0.643, b = 0.243},

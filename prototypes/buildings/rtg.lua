@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "super-steel", amount = 50},
-        {type = "item", name = "iron-plate", amount = 20},
-        {type = "item", name = "processing-unit", amount = 5},
-        {type = "item", name = "nbfe-alloy", amount = 20},
-        {type = "item", name = "glass", amount = 25},
-        {type = "item", name = "graphene-roll", amount = 30},
-        {type = "item", name = 'ns-material', amount = 20},
-        {type = "item", name = "small-parts-03", amount = 100},
+        {type = "item", name = "super-steel",         amount = 50},
+        {type = "item", name = "iron-plate",          amount = 20},
+        {type = "item", name = "processing-unit",     amount = 5},
+        {type = "item", name = "nbfe-alloy",          amount = 20},
+        {type = "item", name = "glass",               amount = 25},
+        {type = "item", name = "graphene-roll",       amount = 30},
+        {type = "item", name = "ns-material",         amount = 20},
+        {type = "item", name = "small-parts-03",      amount = 100},
         {type = "item", name = "mechanical-parts-03", amount = 1},
     },
     results = {
@@ -45,23 +45,23 @@ ENTITY {
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
     energy_source =
-		{
-				type = "electric",
-				usage_priority = "secondary-output",
-                input_flow_limit = "0kW",
-		},
-	burner =
-		{
-			type = "burner",
-			fuel_categories = {"fuelrod"},
-			effectivity = 50,
-            fuel_inventory_size = 1,
-            burnt_inventory_size = 1,
-			emissions_per_minute = {
-			    pollution = 0
-			},
-		},
-	max_power_output = "40MW",
+    {
+        type = "electric",
+        usage_priority = "secondary-output",
+        input_flow_limit = "0kW",
+    },
+    burner =
+    {
+        type = "burner",
+        fuel_categories = {"fuelrod"},
+        effectivity = 50,
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = {
+            pollution = 0
+        },
+    },
+    max_power_output = "40MW",
     animation = {
         layers = {
             {
@@ -106,4 +106,4 @@ ENTITY {
         }
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
-  }
+}

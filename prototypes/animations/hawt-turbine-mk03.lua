@@ -1,20 +1,20 @@
-local base_path = '__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/%s%d.png'
-for index, direction in pairs({
-    'south',
-    'southwest',
-    'west',
-    'northwest',
-    'north',
-    'northeast',
-    'east',
-    'southeast'
-}) do
-    data:extend{{
-        type = 'animation',
-        name = 'hawt-turbine-mk03-' .. direction,
+local base_path = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/%s%d.png"
+for index, direction in pairs {
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east",
+    "southeast"
+} do
+    data:extend {{
+        type = "animation",
+        name = "hawt-turbine-mk03-" .. direction,
         layers = {
             {
-                filename = string.format(base_path, 'r', index),
+                filename = string.format(base_path, "r", index),
                 width = 192,
                 height = 416,
                 line_length = 10,
@@ -23,7 +23,7 @@ for index, direction in pairs({
                 animation_speed = 1
             },
             {
-                filename = string.format(base_path, 's', index),
+                filename = string.format(base_path, "s", index),
                 width = 287,
                 height = 160,
                 line_length = 5,
@@ -33,7 +33,7 @@ for index, direction in pairs({
                 draw_as_shadow = true
             },
             {
-                filename = string.format(base_path, 'l', index),
+                filename = string.format(base_path, "l", index),
                 width = 192,
                 height = 416,
                 line_length = 10,

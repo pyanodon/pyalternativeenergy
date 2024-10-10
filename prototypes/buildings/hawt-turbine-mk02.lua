@@ -4,11 +4,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "rotor-mk02", amount = 1},
-        {type = "item", name = "nacelle-mk02", amount = 1},
-        {type = "item", name = "anemometer-mk02", amount = 1},
-        {type = "item", name = "vane-mk02", amount = 1},
-        {type = "item", name = "tower-mk02", amount = 1},
+        {type = "item", name = "rotor-mk02",       amount = 1},
+        {type = "item", name = "nacelle-mk02",     amount = 1},
+        {type = "item", name = "anemometer-mk02",  amount = 1},
+        {type = "item", name = "vane-mk02",        amount = 1},
+        {type = "item", name = "tower-mk02",       amount = 1},
         {type = "item", name = "electronics-mk02", amount = 3},
     },
     results = {
@@ -32,12 +32,12 @@ local proto = ENTITY {
     type = "electric-energy-interface",
     name = "hawt-turbine-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     hidden = true,
-    flags = {"placeable-neutral", "player-creation", },
+    flags = {"placeable-neutral", "player-creation",},
     collision_mask = {layers = {wind_layer = true, object = true, player = true, water_tile = true}},
     minable = {mining_time = 0.5, result = "hawt-turbine-mk02"},
-    placeable_by = {item = 'hawt-turbine-mk02', count = 1},
+    placeable_by = {item = "hawt-turbine-mk02", count = 1},
     fast_replaceable_group = "hawt-turbine",
     max_health = 400,
     corpse = "big-remnants",
@@ -53,7 +53,7 @@ local proto = ENTITY {
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = '25MW',
+    energy_production = "25MW",
     energy_usage = "0kW",
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
@@ -104,48 +104,48 @@ local proto = ENTITY {
             },
         }
     },
-    localised_name = {'entity-name.hawt-turbine-mk02'},
-    localised_description = {'entity-description.hawt-turbine-mk02'}
+    localised_name = {"entity-name.hawt-turbine-mk02"},
+    localised_description = {"entity-description.hawt-turbine-mk02"}
 }
 
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
-new_proto.name = proto.name .. '-blank'
+new_proto.name = proto.name .. "-blank"
 new_proto.picture = table.deepcopy(proto.animations.layers[1])
-new_proto.picture.filename = new_proto.picture.filename:gsub('r4', 'base-mk02')
+new_proto.picture.filename = new_proto.picture.filename:gsub("r4", "base-mk02")
 new_proto.animations = nil
-new_proto.render_layer = 'lower-object-above-shadow'
-data:extend{new_proto}
+new_proto.render_layer = "lower-object-above-shadow"
+data:extend {new_proto}
 
-data:extend(
+data:extend
     {
         {
-        type = 'simple-entity-with-force',
-        name = 'hawt-turbine-mk02-collision',
-        render_layer = 'wires-above',
-        icon = '__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk02.png',
-        icon_size = 64,
-        flags = {'placeable-neutral', 'player-creation', 'not-on-map'},
-        collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
-        collision_mask = {layers = {wind_layer = true}},
-        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-        selectable_in_game = false,
-        picture = {
-            filename = '__pyalternativeenergygraphics__/graphics/icons/filler.png',
-            width = 4,
-            height = 4,
-        },
-        created_effect = {
-            type = 'area',
-            radius = 13.4,
+            type = "simple-entity-with-force",
+            name = "hawt-turbine-mk02-collision",
+            render_layer = "wires-above",
+            icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk02.png",
+            icon_size = 64,
+            flags = {"placeable-neutral", "player-creation", "not-on-map"},
+            collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
             collision_mask = {layers = {wind_layer = true}},
-            action_delivery = {
-                type = 'instant',
-                target_effects = {{
-                    type = 'script',
-                    effect_id = 'turbine-area'
-                }}
+            selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+            selectable_in_game = false,
+            picture = {
+                filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
+                width = 4,
+                height = 4,
+            },
+            created_effect = {
+                type = "area",
+                radius = 13.4,
+                collision_mask = {layers = {wind_layer = true}},
+                action_delivery = {
+                    type = "instant",
+                    target_effects = {{
+                        type = "script",
+                        effect_id = "turbine-area"
+                    }}
+                }
             }
         }
     }
-})

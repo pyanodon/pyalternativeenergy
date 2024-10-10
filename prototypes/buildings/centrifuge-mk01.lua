@@ -5,12 +5,12 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "electric-mining-drill", amount = 2},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel", amount = 100},
-        {type = "item", name = "aluminium-plate", amount = 20},
-        {type = "item", name = "duralumin", amount = 50},
-        {type = "item", name = "engine-unit", amount = 2},
-        {type = "item", name = 'intermetallics', amount = 5},
+        {type = "item", name = "electronic-circuit",    amount = 10},
+        {type = "item", name = "iron-gear-wheel",       amount = 100},
+        {type = "item", name = "aluminium-plate",       amount = 20},
+        {type = "item", name = "duralumin",             amount = 50},
+        {type = "item", name = "engine-unit",           amount = 2},
+        {type = "item", name = "intermetallics",        amount = 5},
     },
     results = {
         {type = "item", name = "centrifuge-mk01", amount = 1}
@@ -180,8 +180,8 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound =
     {
-      sound = { filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25 },
-      apparent_volume = 0.5
+        sound = {filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25},
+        apparent_volume = 0.5
     },
     fast_replaceable_group = "centrifuge"
-  }
+}

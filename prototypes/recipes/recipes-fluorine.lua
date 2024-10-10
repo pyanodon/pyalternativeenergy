@@ -1,4 +1,3 @@
-
 RECIPE {
     type = "recipe",
     name = "fluorine-gas",
@@ -9,10 +8,10 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "fluid", name = "hydrofluoric-acid", amount = 100},
-        {type = "item", name = "sodium-hydroxide", amount = 10}
+        {type = "item",  name = "sodium-hydroxide",  amount = 10}
     },
     results = {
-        {type = "fluid", name = "hydrogen", amount = 50},
+        {type = "fluid", name = "hydrogen",     amount = 50},
         {type = "fluid", name = "fluorine-gas", amount = 50}
     },
     main_product = "fluorine-gas",

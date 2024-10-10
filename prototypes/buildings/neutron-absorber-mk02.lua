@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "neutron-absorber-mk01", amount = 1},
-        {type = "item", name = "advanced-circuit", amount = 25},
-        {type = "item", name = "small-parts-02", amount = 100},
-        {type = "item", name = "fenxsb-alloy", amount = 15},
-        {type = "item", name = "refined-concrete", amount = 50},
-        {type = "item", name = "stainless-steel", amount = 100},
-        {type = "item", name = "lead-plate", amount = 50},
-        {type = "item", name = "lithium", amount = 30},
-        {type = "item", name = 'eva', amount = 20},
-        {type = "item", name = "electronics-mk02", amount = 3},
-        {type = "item", name = "mechanical-parts-02", amount = 1},
-        {type = "item", name = 'self-assembly-monolayer', amount = 10},
+        {type = "item", name = "neutron-absorber-mk01",   amount = 1},
+        {type = "item", name = "advanced-circuit",        amount = 25},
+        {type = "item", name = "small-parts-02",          amount = 100},
+        {type = "item", name = "fenxsb-alloy",            amount = 15},
+        {type = "item", name = "refined-concrete",        amount = 50},
+        {type = "item", name = "stainless-steel",         amount = 100},
+        {type = "item", name = "lead-plate",              amount = 50},
+        {type = "item", name = "lithium",                 amount = 30},
+        {type = "item", name = "eva",                     amount = 20},
+        {type = "item", name = "electronics-mk02",        amount = 3},
+        {type = "item", name = "mechanical-parts-02",     amount = 1},
+        {type = "item", name = "self-assembly-monolayer", amount = 10},
     },
     results = {
         {type = "item", name = "neutron-absorber-mk02", amount = 1}
@@ -49,7 +49,7 @@ ENTITY {
     match_animation_speed_to_activity = false,
     crafting_categories = {"neutron-absorber"},
     crafting_speed = 2,
-    energy_source = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].energy_source),
+    energy_source = table.deepcopy(data.raw["assembling-machine"]["neutron-absorber-mk01"].energy_source),
     energy_usage = "1W",
     graphics_set = {
         working_visualisations = {
@@ -102,9 +102,9 @@ ENTITY {
             }
         },
     },
-    fluid_boxes = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].fluid_boxes),
+    fluid_boxes = table.deepcopy(data.raw["assembling-machine"]["neutron-absorber-mk01"].fluid_boxes),
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-absorber"
-  }
+}
 
-  data.raw['assembling-machine']['neutron-absorber-mk02'].energy_source.fluid_usage_per_tick = 4/60
+data.raw["assembling-machine"]["neutron-absorber-mk02"].energy_source.fluid_usage_per_tick = 4 / 60

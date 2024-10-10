@@ -51,8 +51,8 @@ if storage.aerial_data then -- There's data to migrate
         first_pole = first_pole and first_pole.entity
         -- Yep
         if first_pole and first_pole.valid then
-            accumulator = entity.surface.create_entity{
-                name = name .. '-accumulator',
+            accumulator = entity.surface.create_entity {
+                name = name .. "-accumulator",
                 position = first_pole.position,
                 force = entity.force,
                 create_build_effect_smoke = false

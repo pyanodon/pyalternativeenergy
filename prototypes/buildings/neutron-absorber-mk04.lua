@@ -4,20 +4,20 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "neutron-absorber-mk03", amount = 1},
-        {type = "item", name = "intelligent-unit", amount = 10},
-        {type = "item", name = "low-density-structure", amount = 50},
-        {type = "item", name = "nano-mesh", amount = 10},
-        {type = "item", name = "cooling-system", amount = 10},
-        {type = "item", name = "super-alloy", amount = 100},
-        {type = "item", name = "divertor", amount = 10},
-        {type = "item", name = 'hydraulic-system-mk02', amount = 4},
-        {type = "item", name = "utility-box-mk04", amount = 1},
-        {type = "item", name = "electronics-mk04", amount = 1},
-        {type = "item", name = 'metastable-quasicrystal', amount = 10},
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "ti-n", amount = 30},
-        {type = "item", name = "mechanical-parts-04", amount = 1},
+        {type = "item", name = "neutron-absorber-mk03",   amount = 1},
+        {type = "item", name = "intelligent-unit",        amount = 10},
+        {type = "item", name = "low-density-structure",   amount = 50},
+        {type = "item", name = "nano-mesh",               amount = 10},
+        {type = "item", name = "cooling-system",          amount = 10},
+        {type = "item", name = "super-alloy",             amount = 100},
+        {type = "item", name = "divertor",                amount = 10},
+        {type = "item", name = "hydraulic-system-mk02",   amount = 4},
+        {type = "item", name = "utility-box-mk04",        amount = 1},
+        {type = "item", name = "electronics-mk04",        amount = 1},
+        {type = "item", name = "metastable-quasicrystal", amount = 10},
+        {type = "item", name = "control-unit",            amount = 10},
+        {type = "item", name = "ti-n",                    amount = 30},
+        {type = "item", name = "mechanical-parts-04",     amount = 1},
     },
     results = {
         {type = "item", name = "neutron-absorber-mk04", amount = 1}
@@ -51,7 +51,7 @@ ENTITY {
     match_animation_speed_to_activity = false,
     crafting_categories = {"neutron-absorber"},
     crafting_speed = 4,
-    energy_source = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].energy_source),
+    energy_source = table.deepcopy(data.raw["assembling-machine"]["neutron-absorber-mk01"].energy_source),
     energy_usage = "1W",
     graphics_set = {
         working_visualisations = {
@@ -104,9 +104,9 @@ ENTITY {
             }
         },
     },
-    fluid_boxes = table.deepcopy(data.raw['assembling-machine']['neutron-absorber-mk01'].fluid_boxes),
+    fluid_boxes = table.deepcopy(data.raw["assembling-machine"]["neutron-absorber-mk01"].fluid_boxes),
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     fast_replaceable_group = "neutron-absorber"
-  }
+}
 
-data.raw['assembling-machine']['neutron-absorber-mk04'].energy_source.fluid_usage_per_tick = 8/60
+data.raw["assembling-machine"]["neutron-absorber-mk04"].energy_source.fluid_usage_per_tick = 8 / 60

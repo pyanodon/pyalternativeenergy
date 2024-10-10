@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "perylene",
     icon = "__pyalternativeenergygraphics__/graphics/icons/perylene.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 1.0, g = 1.0, b = 1.0},
@@ -22,11 +22,11 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "tar", amount = 100},
-        {type = "item", name = "nexelit-plate", amount = 2},
-        {type = "item", name = "navens", amount = 5},
-        {type = "item", name = "p2s5", amount = 5},
-        {type = "fluid", name = "benzene", amount = 150},
+        {type = "fluid", name = "tar",           amount = 100},
+        {type = "item",  name = "nexelit-plate", amount = 2},
+        {type = "item",  name = "navens",        amount = 5},
+        {type = "item",  name = "p2s5",          amount = 5},
+        {type = "fluid", name = "benzene",       amount = 150},
     },
     results = {
         {type = "fluid", name = "perylene", amount = 50},

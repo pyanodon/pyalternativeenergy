@@ -2,16 +2,16 @@ RECIPE {
     type = "recipe",
     name = "accumulator-mk03",
     energy_required = 1,
-    category = 'advanced-crafting',
+    category = "advanced-crafting",
     enabled = false,
     ingredients = {
-        {type = "item", name = "supercapacitor", amount = 15},
+        {type = "item", name = "supercapacitor",  amount = 15},
         {type = "item", name = "processing-unit", amount = 10},
-        {type = "item", name = "super-steel", amount = 50},
-        {type = "item", name = "nano-wires", amount = 10}, --tinned cable
-        {type = "item", name = "nexelit-plate", amount = 100}, -- {type = "item", name = "nexelit-plate", amount = 60},
-        {type = "item", name = "optical-fiber", amount = 50},
-        {type = "item", name = "biopolymer", amount = 20},
+        {type = "item", name = "super-steel",     amount = 50},
+        {type = "item", name = "nano-wires",      amount = 10}, --tinned cable
+        {type = "item", name = "nexelit-plate",   amount = 100}, -- {type = "item", name = "nexelit-plate", amount = 60},
+        {type = "item", name = "optical-fiber",   amount = 50},
+        {type = "item", name = "biopolymer",      amount = 20},
     },
     results = {
         {type = "item", name = "accumulator-mk03", amount = 1},
@@ -72,14 +72,14 @@ ENTITY {
                     shift = util.by_pixel(0, -112)
                 },
                 {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/sh.png",
-                width = 192,
-                height = 160,
-                frame_count = 1,
-                line_length = 1,
-                --blend_mode = "multiplicative",
-                draw_as_shadow = true,
-                shift = util.by_pixel(16, -0)
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/sh.png",
+                    width = 192,
+                    height = 160,
+                    frame_count = 1,
+                    line_length = 1,
+                    --blend_mode = "multiplicative",
+                    draw_as_shadow = true,
+                    shift = util.by_pixel(16, -0)
                 },
             }
         },

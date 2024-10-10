@@ -1,4 +1,3 @@
-
 RECIPE {
     type = "recipe",
     name = "molten-thorium",
@@ -7,8 +6,8 @@ RECIPE {
     energy_required = 0.5,
     ingredients = {
         {type = "fluid", name = "fluorine-gas", amount = 100},
-        {type = "item", name = "lithium", amount = 10},
-        {type = "item", name = "th-oxide", amount = 10}
+        {type = "item",  name = "lithium",      amount = 10},
+        {type = "item",  name = "th-oxide",     amount = 10}
     },
     results = {
         {type = "fluid", name = "molten-fluoride-thorium", amount = 100}
@@ -27,11 +26,11 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "fluid", name = "molten-fluoride-thorium", amount = 1000},
-        {type = "fluid", name = "molten-salt", amount = 10000}
+        {type = "fluid", name = "molten-salt",             amount = 10000}
     },
     results = {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 1000},
-        {type = "fluid", name = "neutron", amount = 250, temperature = 100},
+        {type = "fluid", name = "neutron",                       amount = 250, temperature = 100},
     },
     main_product = "molten-fluoride-thorium-pa233",
     subgroup = "py-nuclear",
@@ -46,12 +45,12 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 1000},
-        {type = "fluid", name = "molten-aluminium", amount = 100}
+        {type = "fluid", name = "molten-aluminium",              amount = 100}
     },
     results = {
         {type = "fluid", name = "molten-fluoride-thorium", amount = 900},
-        {type = "fluid", name = "hot-molten-salt", amount = 10000, temperature = 5000},
-        {type = "item", name = "pa-233", amount = 10}
+        {type = "fluid", name = "hot-molten-salt",         amount = 10000, temperature = 5000},
+        {type = "item",  name = "pa-233",                  amount = 10}
     },
     main_product = "pa-233",
     subgroup = "py-nuclear",

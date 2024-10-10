@@ -1,7 +1,7 @@
-data:extend(
-{
+data:extend
     {
-        type = "module-category",
-        name = "numal"
-    },
-})
+        {
+            type = "module-category",
+            name = "numal"
+        },
+    }

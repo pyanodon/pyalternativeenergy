@@ -1,6 +1,8 @@
 {
-    "entity":
-    [
-        ["electric-boiler", "py-electric-boiler"]
+    "entity": [
+        [
+            "electric-boiler",
+            "py-electric-boiler"
+        ]
     ]
 }

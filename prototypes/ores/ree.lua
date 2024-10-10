@@ -1,8 +1,8 @@
-local resource_autoplace = require 'resource-autoplace'
+local resource_autoplace = require "resource-autoplace"
 
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["ree"] = {}
 
-data:extend{{
+data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "ree",
@@ -18,7 +18,7 @@ data:extend{{
 ENTITY {
     type = "resource",
     name = "ree",
-    category = "ree",  --maybe here
+    category = "ree", --maybe here
     icon = "__pyhightechgraphics__/graphics/icons/mip/re-01.png",
     icon_size = 64,
     flags = {"placeable-neutral"},

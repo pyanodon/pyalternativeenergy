@@ -5,7 +5,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "filtration-media", amount = 2},
+        {type = "item",  name = "filtration-media",  amount = 2},
         {type = "fluid", name = "silicate-solution", amount = 100},
     },
     results = {
@@ -18,7 +18,7 @@ FLUID {
     type = "fluid",
     name = "filtered-silicate-solution",
     icon = "__pyalternativeenergygraphics__/graphics/icons/filtered-silicate-solution.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10, -- less than 15 = liquid / equal a 15 = gas
     base_flow_rate = 100,
     base_color = {r = 0.231, g = 0.196, b = 0.325},

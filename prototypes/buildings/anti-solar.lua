@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "laser-module", amount = 3},
-        {type = "item", name = "processing-unit", amount = 30},
-        {type = "item", name = "super-steel", amount = 35},
-        {type = "item", name = "nbfe-alloy", amount = 20},
-        {type = "item", name = "graphene-roll", amount = 30},
-        {type = "item", name = "cobalt-nx", amount = 10},
-        {type = "item", name = "nano-wires", amount = 10},
-        {type = "item", name = 'biopolymer', amount = 40},
-        {type = "item", name = 'ns-material', amount = 20},
-        {type = "item", name = 'dsnc-cell', amount = 16},
-        {type = "item", name = 'anti-reflex-glass', amount = 20},
+        {type = "item", name = "laser-module",        amount = 3},
+        {type = "item", name = "processing-unit",     amount = 30},
+        {type = "item", name = "super-steel",         amount = 35},
+        {type = "item", name = "nbfe-alloy",          amount = 20},
+        {type = "item", name = "graphene-roll",       amount = 30},
+        {type = "item", name = "cobalt-nx",           amount = 10},
+        {type = "item", name = "nano-wires",          amount = 10},
+        {type = "item", name = "biopolymer",          amount = 40},
+        {type = "item", name = "ns-material",         amount = 20},
+        {type = "item", name = "dsnc-cell",           amount = 16},
+        {type = "item", name = "anti-reflex-glass",   amount = 20},
         {type = "item", name = "mechanical-parts-04", amount = 4},
 
     },
@@ -50,14 +50,14 @@ ENTITY {
     match_animation_speed_to_activity = false,
     --allowed_effects = {"speed", "consumption"},
     energy_source = {
-        type = 'electric',
-        usage_priority = 'primary-output',
+        type = "electric",
+        usage_priority = "primary-output",
         buffer_capacity = "100MJ",
         render_no_power_icon = false,
-        input_flow_limit = '0W'
+        input_flow_limit = "0W"
     },
-    energy_production = '100MW',
-    energy_usage = '0kW',
+    energy_production = "100MW",
+    energy_usage = "0kW",
     continuous_animation = true,
     animation = {
         layers = {
@@ -108,4 +108,4 @@ ENTITY {
         }
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65}
-  }
+}

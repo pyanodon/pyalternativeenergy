@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "super-steel", amount = 15},
-        {type = "item", name = "niobium-pipe", amount = 10},
-        {type = "item", name = "processing-unit", amount = 10},
-        {type = "item", name = "simik", amount = 1},
+        {type = "item", name = "super-steel",          amount = 15},
+        {type = "item", name = "niobium-pipe",         amount = 10},
+        {type = "item", name = "processing-unit",      amount = 10},
+        {type = "item", name = "simik",                amount = 1},
         {type = "item", name = "electric-engine-unit", amount = 15},
-        {type = "item", name = "nbfe-alloy", amount = 20},
-        {type = "item", name = "nbti-alloy", amount = 10},
-        {type = "item", name = "tin-plate", amount = 20},
-        {type = "item", name = 'ns-material', amount = 20},
-        {type = "item", name = "small-parts-03", amount = 80}
+        {type = "item", name = "nbfe-alloy",           amount = 20},
+        {type = "item", name = "nbti-alloy",           amount = 10},
+        {type = "item", name = "tin-plate",            amount = 20},
+        {type = "item", name = "ns-material",          amount = 20},
+        {type = "item", name = "small-parts-03",       amount = 80}
     },
     results = {
         {type = "item", name = "simik-boiler", amount = 1}
@@ -45,7 +45,7 @@ ENTITY {
     type = "assembling-machine",
     name = "simik-boiler",
     icon = "__pyalternativeenergygraphics__/graphics/icons/generator-3.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "simik-boiler"},
     fast_replaceable_group = "simik-boiler",
@@ -61,21 +61,21 @@ ENTITY {
     crafting_speed = 1,
     energy_source =
     {
-      type = "burner",
-      fuel_categories = {"simik"},
-      effectivity = 1,
-      light_flicker =
-      {
-        minimum_intensity = 0,
-        maximum_intensity = 0,
-        light_intensity_to_size_coefficient = 0,
-        color = {0,0,0},
-      },
-      fuel_inventory_size = 1,
-      burnt_inventory_size = 1,
-      emissions_per_minute = {
-          pollution = 0.0
-      },
+        type = "burner",
+        fuel_categories = {"simik"},
+        effectivity = 1,
+        light_flicker =
+        {
+            minimum_intensity = 0,
+            maximum_intensity = 0,
+            light_intensity_to_size_coefficient = 0,
+            color = {0, 0, 0},
+        },
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = {
+            pollution = 0.0
+        },
     },
     energy_usage = "4000kW",
     graphics_set = {
@@ -272,12 +272,12 @@ for _, fluid_box in pairs(data.raw["assembling-machine"]["simik-boiler"].fluid_b
     -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
     if type(fluid_box) == "boolean" then
         break
-     end
-     if fluid_box.pipe_covers.south.layers then
-         fluid_box.pipe_covers.south.layers[1].filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south.png"
-         fluid_box.pipe_covers.south.layers[2].filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south-shadow.png"
-     end
-     -- Move cover up to compensate
-     fluid_box.pipe_picture.south.scale = 0.5
-     fluid_box.pipe_picture.south.shift = {0,-2.33}
+    end
+    if fluid_box.pipe_covers.south.layers then
+        fluid_box.pipe_covers.south.layers[1].filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south.png"
+        fluid_box.pipe_covers.south.layers[2].filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south-shadow.png"
+    end
+    -- Move cover up to compensate
+    fluid_box.pipe_picture.south.scale = 0.5
+    fluid_box.pipe_picture.south.shift = {0, -2.33}
 end

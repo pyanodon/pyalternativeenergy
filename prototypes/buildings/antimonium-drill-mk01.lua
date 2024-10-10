@@ -5,10 +5,10 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "electric-mining-drill", amount = 5},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel", amount = 40},
-        {type = "item", name = "aluminium-plate", amount = 20},
-        {type = "item", name = "engine-unit", amount = 2},
+        {type = "item", name = "electronic-circuit",    amount = 10},
+        {type = "item", name = "iron-gear-wheel",       amount = 40},
+        {type = "item", name = "aluminium-plate",       amount = 20},
+        {type = "item", name = "engine-unit",           amount = 2},
     },
     results = {
         {type = "item", name = "antimonium-drill-mk01", amount = 1}
@@ -48,7 +48,7 @@ ENTITY {
         type = "burner",
         fuel_categories = {"jerry"},
         effectivity = 1,
-        light_flicker = {color = {0,0,0}},
+        light_flicker = {color = {0, 0, 0}},
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
         emissions_per_minute = {
