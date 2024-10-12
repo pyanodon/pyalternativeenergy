@@ -859,7 +859,7 @@ ITEM {
     subgroup = "py-battery-equipment",
     order = "a",
     stack_size = 100,
-    placed_as_equipment_result = "battery-equipment",
+    place_as_equipment_result = "battery-equipment",
     localised_name = {"item-name.battery-mk01"},
     localised_description = {"item-description.battery-mk01"}
 }
@@ -893,7 +893,7 @@ ITEM {
     order = "aae",
     stack_size = 100,
     localised_name = {"item-name.battery-mk00"},
-    --placed_as_equipment_result = 'battery-mk00'
+    --place_as_equipment_result = 'battery-mk00'
 }
 
 ITEM {
@@ -985,7 +985,7 @@ ITEM {
     subgroup = "py-battery-equipment",
     order = "db",
     stack_size = 10,
-    placed_as_equipment_result = "quantum-battery",
+    place_as_equipment_result = "quantum-battery",
     localised_name = {"item-name.used-quantum-battery"},
 }
 
