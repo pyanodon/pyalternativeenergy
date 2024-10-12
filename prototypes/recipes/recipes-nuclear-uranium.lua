@@ -722,7 +722,7 @@ RECIPE {
     category = "mixer",
     ingredients =
     {
-        {type = "item",  name = "used-up-uranium-fuel-cell", amount = 10},
+        {type = "item",  name = "depleted-uranium-fuel-cell", amount = 10},
         {type = "item",  name = "sodium-hydroxide",          amount = 15},
         {type = "fluid", name = "water",                     amount = 250},
         {type = "fluid", name = "sulfuric-acid",             amount = 250}
