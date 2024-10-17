@@ -1,4 +1,5 @@
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["geothermal-crack"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["geothermal-crack"] = {}
 
 data:extend {{
     type = "autoplace-control",
@@ -33,14 +34,14 @@ data:extend {
         name = "py_geothermal_crack",
         -- Our final chance, likely a very, very small decimal
         expression = [[
-            py_geothermal_crack_starting_area * py_geothermal_crack_desired_frequency * var("control-setting:geothermal-crack:frequency:multiplier")
+            py_geothermal_crack_starting_area * py_geothermal_crack_desired_frequency * var("control:geothermal-crack:frequency")
         ]]
     },
     {
         -- We return the richness here, which is just the quantity the resource tile yields
         type = "noise-expression",
         name = "py_geothermal_crack_richness",
-        expression = "2^16 * var('distance') * var('control-setting:geothermal-crack:richness:multiplier')"
+        expression = "2^16 * var('distance') * var('control:geothermal-crack:richness')"
     }
 }
 
