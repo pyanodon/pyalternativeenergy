@@ -324,9 +324,9 @@ RECIPE("py-science-pack-4"):add_ingredient {type = "item", name = "mechanical-pa
 
 RECIPE("battery-mk01"):remove_unlock("electric-energy-accumulators"):add_unlock("battery-mk01"):replace_ingredient("lead-plate", "pbsb-alloy")
 
-RECIPE("grod-seeds-mk02-soaker"):set_fields {category = "centrifuging-low"}:set_fields {energy_required = 20} -- temporary
-RECIPE("grod-seeds-mk03-soaker"):set_fields {category = "centrifuging-low"}:set_fields {energy_required = 20} -- temporary
-RECIPE("grod-seeds-mk04-soaker"):set_fields {category = "centrifuging-low"}:set_fields {energy_required = 20} -- temporary
+RECIPE("grod-seeds-mk02-soaker"):set_fields {category = "centrifuging"}:set_fields {energy_required = 20}
+RECIPE("grod-seeds-mk03-soaker"):set_fields {category = "centrifuging"}:set_fields {energy_required = 20}
+RECIPE("grod-seeds-mk04-soaker"):set_fields {category = "centrifuging"}:set_fields {energy_required = 20}
 
 RECIPE("brain-cartridge-01"):add_ingredient {type = "item", name = "nbalti", amount = 1}
 

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "mova-pulp2",
-    category = "centrifuging-medium", -- temporary
+    category = "centrifuging",
     enabled = false,
     energy_required = 20,
     ingredients = {

@@ -204,7 +204,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-fuel-reprocessing",
-    category = "centrifuging-low", -- temporary
+    category = "centrifuging",
     enabled = false,
     energy_required = 100,
     ingredients = {

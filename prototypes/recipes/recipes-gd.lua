@@ -122,7 +122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "th-dust",
-    category = "centrifuging-low", -- temporary
+    category = "centrifuging",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -242,7 +242,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crystalized-gd",
-    category = "centrifuging-low", -- temporary
+    category = "centrifuging",
     enabled = false,
     energy_required = 10,
     ingredients = {
