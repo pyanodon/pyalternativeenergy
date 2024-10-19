@@ -67,7 +67,7 @@ function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_cou
     storage.update_sut_guis = true
 end
 
-Solar_Updraft_Tower.events.on_build_tile = function(event)
+py.on_event(py.events.on_built_tile(), function(event)
     local surface = game.surfaces[event.surface_index]
 
     for _, tile in pairs(event.tiles) do
@@ -100,9 +100,9 @@ Solar_Updraft_Tower.events.on_build_tile = function(event)
 
         ::continue::
     end
-end
+end)
 
-Solar_Updraft_Tower.events.on_destroyed_tile = function(event)
+py.on_event(py.events.on_mined_tile(), function(event)
     local surface = game.surfaces[event.surface_index]
     for _, tile in pairs(event.tiles) do
         if tile.old_tile.name == "sut-panel" then
@@ -127,9 +127,9 @@ Solar_Updraft_Tower.events.on_destroyed_tile = function(event)
             end
         end
     end
-end
+end)
 
-Solar_Updraft_Tower.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
     local entity = event.created_entity or event.entity
     if entity.name ~= "sut" then return end
     local surface = entity.surface
@@ -145,7 +145,7 @@ Solar_Updraft_Tower.events.on_built = function(event)
     placement_restriction.destructible = false
     storage.solar_updraft_towers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0}
     Solar_Updraft_Tower.update_power_generation(entity)
-end
+end)
 
 py.register_on_nth_tick(60, "sut", "pyae", function()
     for _, tower_data in pairs(storage.solar_updraft_towers) do
@@ -170,16 +170,16 @@ py.register_on_nth_tick(60, "sut", "pyae", function()
     end
 end)
 
-Solar_Updraft_Tower.events.on_destroyed = function(event)
+py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     local tower_data = storage.solar_updraft_towers[entity.unit_number]
     if not tower_data then return end
     if tower_data.placement_restriction.valid then tower_data.placement_restriction.destroy() end
     storage.solar_updraft_towers[entity.unit_number] = nil
     storage.update_sut_guis = not not next(storage.solar_updraft_towers)
-end
+end)
 
-Solar_Updraft_Tower.events.on_gui_opened = function(event)
+py.on_event(events.on_gui_opened, function(event)
     local player = game.get_player(event.player_index)
     local entity = event.entity
     if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= "sut" then return end
@@ -217,15 +217,15 @@ Solar_Updraft_Tower.events.on_gui_opened = function(event)
     content_flow.add {type = "label", caption = {"sut-gui.energy-per-cover", py.format_energy(Solar_Updraft_Tower.power_generated_per_cover, "W")}}
 
     Solar_Updraft_Tower.update_gui(main_frame)
-end
+end)
 
-Solar_Updraft_Tower.events.on_gui_closed = function(event)
+py.on_event({events.on_gui_closed, events.on_player_changed_surface}, function(event)
     local player = game.get_player(event.player_index)
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
         local gui = player.gui.screen.sut_gui
         if gui then gui.destroy() end
     end
-end
+end)
 
 function Solar_Updraft_Tower.update_gui(gui)
     local tower_data = storage.solar_updraft_towers[gui.tags.unit_number]
