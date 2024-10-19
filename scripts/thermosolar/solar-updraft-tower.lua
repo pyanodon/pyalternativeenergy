@@ -179,7 +179,7 @@ py.on_event(py.events.on_destroyed(), function(event)
     storage.update_sut_guis = not not next(storage.solar_updraft_towers)
 end)
 
-py.on_event(events.on_gui_opened, function(event)
+py.on_event(defines.events.on_gui_opened, function(event)
     local player = game.get_player(event.player_index)
     local entity = event.entity
     if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= "sut" then return end
@@ -219,7 +219,7 @@ py.on_event(events.on_gui_opened, function(event)
     Solar_Updraft_Tower.update_gui(main_frame)
 end)
 
-py.on_event({events.on_gui_closed, events.on_player_changed_surface}, function(event)
+py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     local player = game.get_player(event.player_index)
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
         local gui = player.gui.screen.sut_gui
