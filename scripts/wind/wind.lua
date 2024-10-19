@@ -185,9 +185,9 @@ Wind.events.on_destroyed = function(event)
     storage.windmill[entity.unit_number] = nil
 end
 
-Wind.events.on_init = function(event)
+py.on_event(py.events.on_init(), function(event)
     storage.windmill = storage.windmill or {}
-end
+end)
 
 function Wind.draw_windmill(windmill_data, direction)
     local anim_id = windmill_data.anim_id

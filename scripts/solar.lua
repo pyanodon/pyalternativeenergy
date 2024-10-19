@@ -7,10 +7,10 @@ Solar.animated_solarpanels = {
 	["solar-panel-mk03"] = true
 }
 
-Solar.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.solarpanels = storage.solarpanels or {}
 	storage.unsynced_solarpanels = storage.unsynced_solarpanels or {}
-end
+end)
 
 Solar.sync_solarpanels = function()
 	local new = {}

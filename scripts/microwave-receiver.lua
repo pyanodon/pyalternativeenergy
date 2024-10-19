@@ -4,9 +4,9 @@ Microwave_Receiver.events = {}
 Microwave_Receiver.max_satellites_per_receiver = 15
 Microwave_Receiver.power_production_per_satellite = 80000
 
-Microwave_Receiver.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.microwave_receivers = storage.microwave_receivers or {}
-end
+end)
 
 function Microwave_Receiver.recalc_satellite_distribution(force)
 	local total_launched = force.get_item_launched("microwave-satellite")

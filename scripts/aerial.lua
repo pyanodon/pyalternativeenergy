@@ -555,7 +555,7 @@ end
 
 ---Just initializes the global data and rebuilds the network. There's additional checks for existing turbines in the migrations/aerial-1.2.29.lua
 ---@source ../migrations/aerial-1.2.29.lua
-Aerial.events.on_init = function()
+py.on_event(py.events.on_init(), function()
     -- Create or import our global structure. Newline below because otherwise luals thinks this is a description for the global var :/
 
     if storage.aerials and not storage.aerials.aerial_counts then
@@ -605,7 +605,7 @@ Aerial.events.on_init = function()
     if yeeted_count > 0 then
         log(string.format("deleted %i unnecessary accumulators", yeeted_count))
     end
-end
+end)
 
 ---Counts the turbines of all types for a given electric network
 ---@param electric_network_id integer electric network ID to count for

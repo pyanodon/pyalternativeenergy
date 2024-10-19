@@ -13,13 +13,6 @@ require "scripts/wind/wind"
 require "scripts/aerial"
 
 py.on_event(py.events.on_init(), function()
-    Solar.events.on_init()
-    Microwave_Receiver.events.on_init()
-    Thermosolar.events.on_init()
-    Wind.events.on_init()
-    Wiki.events.on_init()
-    Aerial.events.on_init()
-
     storage.reactor_tanks = storage.reactor_tanks or {}
     storage.lrf_panels = storage.lrf_panels or {}
     storage.stirling = storage.stirling or {}
@@ -80,8 +73,7 @@ end)
 py.register_on_nth_tick(100, "solar", "pyae", Solar.events[100])
 py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
 
-local on_destroyed = {events.on_player_mined_entity, events.on_robot_mined_entity, events.script_raised_destroy, events.on_entity_died}
-py.on_event(on_destroyed, function(event)
+py.on_event(py.events.on_destroyed(), function(event)
     Solar.events.on_destroyed(event)
     Microwave_Receiver.events.on_destroyed(event)
     Solar_Updraft_Tower.events.on_destroyed(event)

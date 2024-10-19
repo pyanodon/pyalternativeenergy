@@ -3,7 +3,7 @@ Thermosolar.events = {}
 
 Thermosolar.tower_range = 100
 
-Thermosolar.events.on_init = function(event)
+py.on_event(py.events.on_init(), function(event)
 	storage.solar_updraft_towers = storage.solar_updraft_towers or {}
 	storage.tower_circles = storage.tower_circles or {}
 	storage.heliostat_towers = storage.heliostat_towers or {}
@@ -12,7 +12,7 @@ Thermosolar.events.on_init = function(event)
 	local mk04_max_output_in_w = prototypes.entity["steam-turbine-mk04"].fluid_usage_per_tick * joules_per_unit * 60
 	storage.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * mk04_max_output_in_w
 	storage.energy_per_heliostat = storage.heliostat_tower_max_power_output / Heliostat.max_heliostats
-end
+end)
 
 local tower_circle_render_items = {
 	["sut"] = true,

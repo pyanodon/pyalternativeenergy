@@ -2,10 +2,6 @@ if storage.aerials and not storage.aerials.aerial_counts then
     storage.aerials = nil
 end
 
-if not storage.aerials then -- Init didn't get run because it's also on_configuration_changed, lmao
-    Aerial.events.on_init()
-end
-
 -- .init from aerial.lua has already been run at this point
 local aerials = storage.aerials
 
