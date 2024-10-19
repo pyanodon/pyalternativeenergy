@@ -112,10 +112,8 @@ py.on_event({events.on_gui_closed, events.on_player_changed_surface}, function(e
 end)
 
 py.on_event(events.on_rocket_launched, Microwave_Receiver.events.on_rocket_launched)
-local on_built_tile = {events.on_player_built_tile, events.on_robot_built_tile}
-py.on_event(on_built_tile, Solar_Updraft_Tower.events.on_build_tile)
-local on_mined_tile = {events.on_player_mined_tile, events.on_robot_mined_tile}
-py.on_event(on_mined_tile, Solar_Updraft_Tower.events.on_destroyed_tile)
+py.on_event(py.events.on_built_tile(), Solar_Updraft_Tower.events.on_build_tile)
+py.on_event(py.events.on_mined_tile(), Solar_Updraft_Tower.events.on_destroyed_tile)
 py.on_event(events.on_player_cursor_stack_changed, Thermosolar.events.on_player_cursor_stack_changed)
 py.on_event(events.on_ai_command_completed, Aerial.events.on_ai_command_completed)
 py.on_event(defines.events.on_script_trigger_effect, Wind.events.on_script_trigger_effect)
