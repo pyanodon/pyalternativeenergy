@@ -43,10 +43,10 @@ ENTITY {
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     energy_source = {
         type = "electric",
-        buffer_capacity = "1000MJ",
+        buffer_capacity = "150GJ",
         usage_priority = "tertiary",
-        input_flow_limit = "100000kW",
-        output_flow_limit = "100000kW"
+        input_flow_limit = "5GW",
+        output_flow_limit = "5GW"
     },
     chargable_graphics = {
         picture = {

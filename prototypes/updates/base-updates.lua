@@ -1278,3 +1278,7 @@ for name, module in pairs(data.raw.module) do
     module.limitation_blacklist[#module.limitation_blacklist + 1] = "electric-boiler-water-to-steam"
   end
 end
+
+data.raw["accumulator"]["accumulator"].energy_source.buffer_capacity = "150MJ"
+data.raw["accumulator"]["accumulator"].energy_source.input_flow_limit = "1MW"
+data.raw["accumulator"]["accumulator"].energy_source.output_flow_limit = "1MW"
