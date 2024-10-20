@@ -161,6 +161,7 @@ require "prototypes.fluids.enriched-water"
 
 -- (( RECIPEs ))--
 require "prototypes.recipes.recipes"
+require "prototypes.recipes.recycling-recipes"
 require "prototypes.recipes.recipes-eva"
 require "prototypes.recipes.recipes-sb"
 require "prototypes.recipes.recipes-si"

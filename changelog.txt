@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.45
+Version: 1.3.0
 Date: in 5 hours
   Changes:
-    - fixed some recipes outputting more steam than input water when using productivity modules
+    - Fixed some recipes outputting more steam than input water when using productivity modules
+    - Added a bajllion new optional recycling recipes. Useful for those who want to recycle more things. (Adapted from py hard mode!)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.44
 Date: 2024-9-4
