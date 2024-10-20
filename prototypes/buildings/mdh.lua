@@ -66,10 +66,10 @@ ENTITY {
         filter = "neutron",
         minimum_temperature = 500.0,
         pipe_connections = {
-            {flow_direction = "input-output", position = {2.5, 5.5},   direction = defines.direction.south},
-            {flow_direction = "input-output", position = {-2.5, 5.5},  direction = defines.direction.south},
-            {flow_direction = "input-output", position = {2.5, -5.5},  direction = defines.direction.north},
-            {flow_direction = "input-output", position = {-2.5, -5.5}, direction = defines.direction.north},
+            {flow_direction = "input-output", position = {2.5, 5.5},   direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, 5.5},  direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, -5.5},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, -5.5}, direction = defines.direction.west},
         }
     },
     energy_source = {
