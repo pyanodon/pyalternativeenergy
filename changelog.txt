@@ -10,6 +10,9 @@ Date: in 5 hours
     - All miners now output as stacked belts.
     - Lategame power armors now have the ability to fly.
     - Due to extreme unforeseen performance issues, locomotives no longer have equipment grids.
+    - All crafting machines and rocket silos now have a circuit connection.
+    - All cars, trains, and mecha-zungror are now remote drivable.
+    - Removed 300% prod limit for recipes.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.44
 Date: 2024-9-4
