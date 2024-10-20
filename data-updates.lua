@@ -200,6 +200,11 @@ for _, resource in pairs(data.raw.resource) do
     end
 end
 
+if feature_flags.space_travel and not data.raw.armor["mech-armor"] then
+    data.raw.armor["power-armor"].provides_flight = true
+    data.raw.armor["power-armor-mk2"].provides_flight = true
+end
+
 --gather recipes for module changes
 local recipes_list =
 {

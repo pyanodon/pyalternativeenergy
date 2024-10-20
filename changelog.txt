@@ -5,6 +5,10 @@ Date: in 5 hours
     - Fixed some recipes outputting more steam than input water when using productivity modules
     - Added a bajllion new optional recycling recipes. Useful for those who want to recycle more things. (Adapted from py hard mode!)
     - Significantly buffed the energy capacity of accumulators. Vanilla: 5MJ -> 150MJ, MK01: 100MJ -> 1.5GJ, MK02: 450MJ -> 15GJ, MK03: 1GJ -> 150GJ
+    - Added belt stacking techs up to 8 layers of belt stacking.
+    - Added a new 2x1 inserter with high hand size and the ability to stack items on belts.
+    - All miners now output as stacked belts.
+    - Lategame power armors now have the ability to fly.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.44
 Date: 2024-9-4
