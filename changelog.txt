@@ -9,6 +9,7 @@ Date: in 5 hours
     - Added a new 2x1 inserter with high hand size and the ability to stack items on belts.
     - All miners now output as stacked belts.
     - Lategame power armors now have the ability to fly.
+    - Due to extreme unforeseen performance issues, locomotives no longer have equipment grids.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.44
 Date: 2024-9-4
