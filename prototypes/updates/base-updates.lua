@@ -490,9 +490,9 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"utility-box-mk02", 1},
-    {"controler-mk02",   1},
-    {"electronics-mk02", 2}
+    { type = "item", name = "utility-box-mk02", amount = 1},
+    { type = "item", name = "controler-mk02", amount = 1},
+    { type = "item", name = "electronics-mk02", amount = 2}
   },
   energy_required = 15,
   result = "speed-module"
@@ -504,10 +504,10 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"speed-module",     1},
-    {"utility-box-mk03", 1},
-    {"controler-mk03",   1},
-    {"electronics-mk03", 2}
+    { type = "item", name = "speed-module", amount = 1},
+    { type = "item", name = "utility-box-mk03", amount = 1},
+    { type = "item", name = "controler-mk03", amount = 1},
+    { type = "item", name = "electronics-mk03", amount = 2}
   },
   energy_required = 30,
   result = "speed-module-2"
@@ -519,11 +519,11 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"speed-module-2",   1},
-    {"utility-box-mk04", 1},
-    {"controler-mk04",   1},
-    {"electronics-mk04", 2},
-    {"fes",              1}
+    { type = "item", name = "speed-module-2", amount = 1},
+    { type = "item", name = "utility-box-mk04", amount = 1},
+    { type = "item", name = "controler-mk04", amount = 1},
+    { type = "item", name = "electronics-mk04", amount = 2},
+    { type = "item", name = "fes", amount = 1}
   },
   energy_required = 60,
   result = "speed-module-3"
@@ -535,9 +535,9 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"utility-box-mk02", 1},
-    {"controler-mk02",   1},
-    {"electronics-mk02", 2}
+    { type = "item", name = "utility-box-mk02", amount = 1},
+    { type = "item", name = "controler-mk02", amount = 1},
+    { type = "item", name = "electronics-mk02", amount = 2}
   },
   energy_required = 15,
   result = "efficiency-module"
@@ -549,10 +549,10 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"efficiency-module", 1},
-    {"utility-box-mk03",  1},
-    {"controler-mk03",    1},
-    {"electronics-mk03",  2}
+    { type = "item", name = "efficiency-module", amount = 1},
+    { type = "item", name = "utility-box-mk03", amount = 1},
+    { type = "item", name = "controler-mk03", amount = 1},
+    { type = "item", name = "electronics-mk03", amount = 2}
   },
   energy_required = 30,
   result = "efficiency-module-2"
@@ -564,11 +564,11 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"efficiency-module-2", 1},
-    {"utility-box-mk04",    1},
-    {"controler-mk04",      1},
-    {"electronics-mk04",    2},
-    {"fes",                 1}
+    { type = "item", name = "efficiency-module-2", amount = 1},
+    { type = "item", name = "utility-box-mk04", amount = 1},
+    { type = "item", name = "controler-mk04", amount = 1},
+    { type = "item", name = "electronics-mk04", amount = 2},
+    { type = "item", name = "fes", amount = 1}
   },
   energy_required = 60,
   result = "efficiency-module-3"
@@ -580,9 +580,9 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"utility-box-mk02", 1},
-    {"controler-mk02",   1},
-    {"electronics-mk02", 2}
+    { type = "item", name = "utility-box-mk02", amount = 1},
+    { type = "item", name = "controler-mk02", amount = 1},
+    { type = "item", name = "electronics-mk02", amount = 2}
   },
   energy_required = 15,
   result = "productivity-module"
@@ -594,10 +594,10 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"productivity-module", 1},
-    {"utility-box-mk03",    1},
-    {"controler-mk03",      1},
-    {"electronics-mk03",    2}
+    { type = "item", name = "productivity-module", amount = 1},
+    { type = "item", name = "utility-box-mk03", amount = 1},
+    { type = "item", name = "controler-mk03", amount = 1},
+    { type = "item", name = "electronics-mk03", amount = 2}
   },
   energy_required = 30,
   result = "productivity-module-2"
@@ -609,15 +609,63 @@ RECIPE {
   enabled = false,
   ingredients =
   {
-    {"productivity-module-2", 1},
-    {"utility-box-mk04",      1},
-    {"controler-mk04",        1},
-    {"electronics-mk04",      2},
-    {"fes",                   1}
+    { type = "item", name = "productivity-module-2", amount = 1},
+    { type = "item", name = "utility-box-mk04", amount = 1},
+    { type = "item", name = "controler-mk04", amount = 1},
+    { type = "item", name = "electronics-mk04", amount = 2},
+    { type = "item", name = "fes", amount = 1}
   },
   energy_required = 60,
   result = "productivity-module-3"
 }
+
+if mods["quality"] then
+
+RECIPE {
+  type = "recipe",
+  name = "quality-module",
+  enabled = false,
+  ingredients =
+  {
+    { type = "item", name = "utility-box-mk02", amount = 1},
+    { type = "item", name = "controler-mk02", amount = 1},
+    { type = "item", name = "electronics-mk02", amount = 2}
+  },
+  energy_required = 15,
+  result = "quality-module"
+}
+
+RECIPE {
+  type = "recipe",
+  name = "quality-module-2",
+  enabled = false,
+  ingredients =
+  {
+    { type = "item", name = "quality-module", amount = 1},
+    { type = "item", name = "utility-box-mk03", amount = 1},
+    { type = "item", name = "controler-mk03", amount = 1},
+    { type = "item", name = "electronics-mk03", amount = 2}
+  },
+  energy_required = 30,
+  result = "quality-module-2"
+}
+
+RECIPE {
+  type = "recipe",
+  name = "quality-module-3",
+  enabled = false,
+  ingredients =
+  {
+    { type = "item", name = "quality-module-2", amount = 1},
+    { type = "item", name = "utility-box-mk04", amount = 1},
+    { type = "item", name = "controler-mk04", amount = 1},
+    { type = "item", name = "electronics-mk04", amount = 2},
+    { type = "item", name = "fes", amount = 1}
+  },
+  energy_required = 60,
+  result = "quality-module-3"
+}
+end
 
 data.raw.furnace["steel-furnace"].energy_usage = "3MW"
 data.raw.furnace["steel-furnace"].crafting_speed = 4
