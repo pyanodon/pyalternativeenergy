@@ -20,7 +20,7 @@ ENTITY {
     type = "resource",
     name = "antimonium",
     category = "antimonium", --maybe here
-    icon = "__pyalternativeenergygraphics__/graphics/ore/antimonium/antimonium.png",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/antimonium-ore.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
