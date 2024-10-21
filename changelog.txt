@@ -14,6 +14,7 @@ Date: in 5 hours
     - All cars, trains, and mecha-zungror are now remote drivable.
     - Removed 300% prod limit for recipes.
     - Corrected the spelling of "Dielectric" (https://github.com/pyanodon/pybugreports/issues/551)
+    - Corrected the spelling of "Triphenylamine" (https://github.com/pyanodon/pybugreports/issues/605)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.44
 Date: 2024-9-4
