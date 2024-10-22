@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - Fixed replacing thermosolar III cover panels does not remove the shine effect. (https://github.com/pyanodon/pybugreports/issues/571)
     - The antisolar panel recipe is now outputs five solar panels instead of one.
+    - fix belts on ores not being selectable
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.5
 Date: 2024-10-21

@@ -190,13 +190,7 @@ end
 
 for _, resource in pairs(data.raw.resource) do
     if not resource.selection_priority then
-        resource.selection_priority = 48
-    end
-end
-
-for _, resource in pairs(data.raw.resource) do
-    if not resource.selection_priority then
-        resource.selection_priority = 48
+        resource.selection_priority = 40
     end
 end
 
