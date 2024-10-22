@@ -1,3 +1,5 @@
+local floor = math.floor
+
 Solar_Updraft_Tower = {}
 Solar_Updraft_Tower.events = {}
 
@@ -67,22 +69,45 @@ function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_cou
     storage.update_sut_guis = true
 end
 
+local function clear_shine_effect(surface, position)
+    local x, y = position.x, position.y
+
+    local a, b = floor(x / 2), y
+    a = a * (-1) ^ floor(a / 30)
+    b = b * (-1) ^ floor(b / 30)
+    local sprite_num = (a + b) % 60 + 1
+
+    if sprite_num >= 30 then
+        sprite_num = 90 - sprite_num
+    else
+        sprite_num = 31 - sprite_num
+    end
+
+    local proxy = surface.find_entity("sut-panel-" .. sprite_num, position)
+    if proxy and proxy.valid then
+        proxy.destroy {raise_destroy = true}
+    end
+end
+
 py.on_event(py.events.on_built_tile(), function(event)
     local surface = game.surfaces[event.surface_index]
 
     for _, tile in pairs(event.tiles) do
+        local position = tile.position
+
         if tile.old_tile.name == "sut-panel" then
-            update_parent_tower(tile.position, -1)
+            update_parent_tower(position, -1)
+            clear_shine_effect(surface, position)
         end
         if event.tile.name ~= "sut-panel" then goto continue end
 
-        update_parent_tower(tile.position, 1)
+        update_parent_tower(position, 1)
 
-        local x, y = tile.position.x, tile.position.y
+        local x, y = position.x, position.y
 
-        local a, b = math.floor(x / 2), y
-        a = a * (-1) ^ math.floor(a / 30)
-        b = b * (-1) ^ math.floor(b / 30)
+        local a, b = floor(x / 2), y
+        a = a * (-1) ^ floor(a / 30)
+        b = b * (-1) ^ floor(b / 30)
         local sprite_num = (a + b) % 60 + 1
 
         if sprite_num >= 30 then
@@ -106,25 +131,9 @@ py.on_event(py.events.on_mined_tile(), function(event)
     local surface = game.surfaces[event.surface_index]
     for _, tile in pairs(event.tiles) do
         if tile.old_tile.name == "sut-panel" then
-            update_parent_tower(tile.position, -1)
-
-            local x, y = tile.position.x, tile.position.y
-
-            local a, b = math.floor(x / 2), y
-            a = a * (-1) ^ math.floor(a / 30)
-            b = b * (-1) ^ math.floor(b / 30)
-            local sprite_num = (a + b) % 60 + 1
-
-            if sprite_num >= 30 then
-                sprite_num = 90 - sprite_num
-            else
-                sprite_num = 31 - sprite_num
-            end
-
-            local proxy = surface.find_entity("sut-panel-" .. sprite_num, tile.position)
-            if proxy and proxy.valid then
-                proxy.destroy {raise_destroy = true}
-            end
+            local position = tile.position
+            update_parent_tower(position, -1)
+            clear_shine_effect(surface, position)            
         end
     end
 end)
@@ -240,7 +249,7 @@ function Solar_Updraft_Tower.update_gui(gui)
     content_flow.progressbar.caption = {"sut-gui.energy", py.format_energy(tower_data.entity.power_production, "W"), py.format_energy(tower_data.max_production, "W")}
     content_flow.total_covers.caption = {"sut-gui.total-covers", tower_data.glass_covers}
     content_flow.average_generation.caption = {"sut-gui.average-generation", py.format_energy(tower_data.max_production * Thermosolar.calc_average_daylight(surface), "W")}
-    content_flow.daylight.caption = {"sut-gui.daylight", math.floor(daylight * 100)}
+    content_flow.daylight.caption = {"sut-gui.daylight", floor(daylight * 100)}
 end
 
 function Solar_Updraft_Tower.update_all_guis()
