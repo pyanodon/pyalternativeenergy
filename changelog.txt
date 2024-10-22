@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.5
+Date: 2024-10-21
+  Changes:
+    - Fixed gas furance fluid boxes were inaccesible.
+    - Updated the Russian localization (by Shadow_man).
+---------------------------------------------------------------------------------------------------
 Version: 3.0.4
 Date: 2024-10-21
   Changes:
