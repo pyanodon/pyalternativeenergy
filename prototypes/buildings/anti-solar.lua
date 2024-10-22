@@ -16,10 +16,9 @@ RECIPE {
         {type = "item", name = "dsnc-cell",           amount = 16},
         {type = "item", name = "anti-reflex-glass",   amount = 20},
         {type = "item", name = "mechanical-parts-04", amount = 4},
-
     },
     results = {
-        {type = "item", name = "anti-solar", amount = 1}
+        {type = "item", name = "anti-solar", amount = 5}
     }
 }:add_unlock("anti-solar")
 
