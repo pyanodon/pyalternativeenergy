@@ -106,7 +106,7 @@ RECIPE("crco-alloy"):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
 RECIPE("hotair-crco-alloy"):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
 
 RECIPE("personal-roboport-equipment"):add_ingredient {type = "item", name = "intermetallics", amount = 12}
-RECIPE("portable-gasolene-generator"):add_ingredient {type = "item", name = "intermetallics", amount = 8}
+RECIPE("portable-gasoline-generator"):add_ingredient {type = "item", name = "intermetallics", amount = 8}
 RECIPE("py-construction-robot-01"):add_ingredient {type = "item", name = "intermetallics", amount = 3}
 RECIPE("py-logistic-robot-01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}
 RECIPE("py-construction-robot-02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 3}
