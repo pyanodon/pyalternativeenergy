@@ -95,7 +95,6 @@ RECIPE("plankton-farm"):add_ingredient {type = "item", name = "intermetallics", 
 -- RECIPE("data-array"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("generator-1"):add_ingredient {type = "item", name = "intermetallics", amount = 2}
 RECIPE("pyphoon-bay"):add_ingredient {type = "item", name = "intermetallics", amount = 2}
--- RECIPE("collector"):add_ingredient({type = "item", name = "intermetallics", amount = 2})
 RECIPE("zungror-lair-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 5}
 --RECIPE("outpost"):add_ingredient({type = "item", name = "intermetallics", amount = 10}):add_ingredient { type = "item", name = "mechanical-parts-01", amount = 5 }
 
@@ -156,7 +155,7 @@ RECIPE("sap-extractor-mk02"):add_ingredient {type = "item", name = "self-assembl
 RECIPE("seaweed-crop-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 1}
 RECIPE("zungror-lair-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 5}
 RECIPE("fluid-drill-mk03"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
-RECIPE("collector-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 6}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 2}
+RECIPE("flora-collector-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 6}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 2}
 RECIPE("rc-mk02"):add_ingredient {"eva", 100}:add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 12}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 10}
 RECIPE("outpost-aerial"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 5}
 
@@ -216,7 +215,7 @@ RECIPE("sap-extractor-mk03"):add_ingredient {type = "item", name = "ns-material"
 RECIPE("seaweed-crop-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 RECIPE("zungror-lair-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-03", amount = 5}
 RECIPE("fluid-drill-mk04"):add_ingredient {type = "item", name = "ns-material", amount = 5}:replace_ingredient("electric-engine-unit", "sc-engine"):add_ingredient {type = "item", name = "mechanical-parts-03", amount = 1}
-RECIPE("collector-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 4}:add_ingredient {type = "item", name = "acrylic", amount = 20}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 2}
+RECIPE("flora-collector-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 4}:add_ingredient {type = "item", name = "acrylic", amount = 20}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 2}
 RECIPE("rc-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 6}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 
 
@@ -275,7 +274,7 @@ RECIPE("sap-extractor-mk04"):add_ingredient {type = "item", name = "metastable-q
 RECIPE("seaweed-crop-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 5}:add_ingredient {type = "item", name = "sc-engine", amount = 1}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 1}
 RECIPE("pydrive"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 20}:add_ingredient {type = "item", name = "sc-engine", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 1}
 RECIPE("antelope-enclosure-mk01"):add_ingredient {type = "item", name = "sc-engine", amount = 3}:add_ingredient {type = "item", name = "mechanical-parts-03", amount = 10}
-RECIPE("collector-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 2}:add_ingredient {type = "item", name = "sc-engine", amount = 2}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 2}
+RECIPE("flora-collector-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 2}:add_ingredient {type = "item", name = "sc-engine", amount = 2}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 2}
 RECIPE("rc-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 6}:add_ingredient {type = "item", name = "sc-engine", amount = 3}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 12}
 
 -----RECIPES-----
@@ -356,9 +355,9 @@ data.raw["assembling-machine"]["biofactory-mk04"].energy_usage = "4MW"
 data.raw["assembling-machine"]["bio-reactor-mk02"].energy_usage = "2MW"
 data.raw["assembling-machine"]["bio-reactor-mk03"].energy_usage = "3MW"
 data.raw["assembling-machine"]["bio-reactor-mk04"].energy_usage = "4MW"
-data.raw["mining-drill"]["collector-mk02"].energy_usage = "2MW"
-data.raw["mining-drill"]["collector-mk03"].energy_usage = "3MW"
-data.raw["mining-drill"]["collector-mk04"].energy_usage = "4MW"
+data.raw["mining-drill"]["flora-collector-mk02"].energy_usage = "2MW"
+data.raw["mining-drill"]["flora-collector-mk03"].energy_usage = "3MW"
+data.raw["mining-drill"]["flora-collector-mk04"].energy_usage = "4MW"
 data.raw["furnace"]["compost-plant-mk02"].energy_usage = "2MW"
 data.raw["furnace"]["compost-plant-mk03"].energy_usage = "3MW"
 data.raw["furnace"]["compost-plant-mk04"].energy_usage = "4MW"
