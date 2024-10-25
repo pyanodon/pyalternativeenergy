@@ -39,7 +39,7 @@ function Microwave_Receiver.recalc_satellite_distribution(force)
 end
 
 Microwave_Receiver.events.on_built = function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if entity.name ~= "microwave-receiver" then return end
 	storage.microwave_receivers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force}
 	Microwave_Receiver.recalc_satellite_distribution(entity.force)

@@ -35,7 +35,7 @@ local function seconds(n)
 end
 
 Wind.events.on_built = function(event)
-    local entity = event.created_entity or event.entity
+    local entity = event.entity
     local turbine_type = entity.valid and managed_turbines[entity.name]
     if not turbine_type then return end
 

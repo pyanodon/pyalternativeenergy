@@ -130,7 +130,7 @@ local buffer_capacities = {
     ["aerial-blimp-mk01"] = (200 * 2 ^ 1) * 1000000, -- x * MJ
     ["aerial-blimp-mk02"] = (200 * 2 ^ 2) * 1000000, -- x * MJ
     ["aerial-blimp-mk03"] = (200 * 2 ^ 3) * 1000000, -- x * MJ
-    ["aerial-blimp-mk04"] = (200 * 2 ^ 4) * 1000000 -- x * MJ
+    ["aerial-blimp-mk04"] = (200 * 2 ^ 4) * 1000000  -- x * MJ
 }
 
 local placement_restriction_text_color = {255, 60, 60}
@@ -1068,7 +1068,7 @@ local function find_target(aerial)
 end
 
 Aerial.events.on_built = function(event)
-    local entity = event.created_entity or event.entity
+    local entity = event.entity
     if not entity.valid or not entity.unit_number then
         return
     end

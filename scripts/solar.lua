@@ -58,7 +58,7 @@ Solar.events[100] = function()
 end
 
 Solar.events.on_built = function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if not Solar.animated_solarpanels[entity.name] then return end
 	storage.solarpanels[entity.unit_number] = entity
 	storage.unsynced_solarpanels[entity.unit_number] = entity
@@ -66,7 +66,7 @@ Solar.events.on_built = function(event)
 end
 
 Solar.events.on_destroyed = function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if not Solar.animated_solarpanels[entity.name] then return end
 	storage.solarpanels[entity.unit_number] = nil
 	storage.unsynced_solarpanels[entity.unit_number] = nil

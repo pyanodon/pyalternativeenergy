@@ -28,7 +28,7 @@ py.on_event(py.events.on_built(), function(event)
     Wind.events.on_built(event)
     Aerial.events.on_built(event)
 
-    local E = event.created_entity or event.entity
+    local E = event.entity
     if not E.valid then return end
     local surface = E.surface
 

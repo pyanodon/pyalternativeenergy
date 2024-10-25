@@ -133,13 +133,13 @@ py.on_event(py.events.on_mined_tile(), function(event)
         if tile.old_tile.name == "sut-panel" then
             local position = tile.position
             update_parent_tower(position, -1)
-            clear_shine_effect(surface, position)            
+            clear_shine_effect(surface, position)
         end
     end
 end)
 
 py.on_event(py.events.on_built(), function(event)
-    local entity = event.created_entity or event.entity
+    local entity = event.entity
     if entity.name ~= "sut" then return end
     local surface = entity.surface
 
