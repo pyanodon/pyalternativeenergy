@@ -300,7 +300,7 @@ RECIPE("korlex-food-02"):replace_ingredient("fish-oil", "fatty-acids")
 RECIPE("dynemicin"):add_ingredient {type = "item", name = "acrylic", amount = 2}
 RECIPE("cellulose-00"):remove_unlock("cellulose-mk01"):add_unlock("vacuum-tube-electronics")
 --RECIPE("ethanol"):replace_ingredient("bacteria-1", "zogna-bacteria")
-RECIPE("steam-heating"):remove_unlock("phytomining"):add_unlock("uranium-mining")
+RECIPE("steam-heating"):remove_unlock("phytomining"):add_unlock("uranium-processing")
 RECIPE("py-science-pack-3"):add_ingredient {type = "item", name = "bio-ore", amount = 2}:replace_ingredient("plastic-bar", "acrylic")
 RECIPE("py-science-pack-4"):add_ingredient {type = "item", name = "nanozymes", amount = 1}
 RECIPE("perfect-samples"):add_ingredient {type = "item", name = "vsk", amount = 1}

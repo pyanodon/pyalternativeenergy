@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {type = "item", name = "uranium-mining-drill", amount = 1}
     }
-}:add_unlock("uranium-mining")
+}:add_unlock("uranium-processing")
 
 ITEM {
     type = "item",
