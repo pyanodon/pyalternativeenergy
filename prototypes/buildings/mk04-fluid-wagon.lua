@@ -44,7 +44,7 @@ ENTITY {
   max_health = 700,
   corpse = "fluid-wagon-remnants",
   dying_explosion = "fluid-wagon-explosion",
-  collision_box = {{-1.0, -1.5}, {1.0, 1.5}},   --must have a relation between this box and the joint distance to calibrate the wagon distance. (min 0.2)
+  collision_box = {{-0.6, -1.5}, {0.6, 1.5}}, --must have a relation between this box and the joint distance to calibrate the wagon distance. (min 0.2)
   selection_box = {{-1.2, -1.7}, {1.2, 1.7}},
   --damaged_trigger_effect = hit_effects.entity(),
   vertical_selection_shift = -0.5,
@@ -54,7 +54,7 @@ ENTITY {
   friction_force = 0.30,
   air_resistance = 0.0050,
   connection_distance = 2,
-  joint_distance = 1.5,   --igual to collision box works if the sprite is tight in the png
+  joint_distance = 1.5, --igual to collision box works if the sprite is tight in the png
   tank_count = 1,
   energy_per_hit_point = 5,
   capacity = 75000,

@@ -3,6 +3,7 @@ Version: 3.0.8
 Date: 404 not found
   Changes:
     - Fixed nuclear research technology.
+    - Fixed mk4 wagons being too wide (https://github.com/pyanodon/pybugreports/issues/613).
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.7
 Date: 2024-10-23
