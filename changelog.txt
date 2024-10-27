@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.8
-Date: 404 not found
+Date: 2024-10-27
   Changes:
-    - Fixed nuclear research technology.
+    - Fixed nuclear research technology was unlocking incorrect recipes.
     - Fixed mk4 wagons being too wide (https://github.com/pyanodon/pybugreports/issues/613).
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.7
