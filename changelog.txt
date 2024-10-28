@@ -3,6 +3,7 @@ Version: 3.0.9
 Date: before_gta_6
   Changes:
     - Fix certain pipe connections disconnecting with squeak through installed.
+    - Fix gamba numal recipes not returning cages.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.8
 Date: 2024-10-27
