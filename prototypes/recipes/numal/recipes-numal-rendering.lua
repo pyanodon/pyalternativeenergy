@@ -125,7 +125,10 @@ py.autorecipes {
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/meat-numal.png",
+			icons = {
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
