@@ -64,7 +64,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/guts-numal.png",
+			icons = {
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood numal rendering
