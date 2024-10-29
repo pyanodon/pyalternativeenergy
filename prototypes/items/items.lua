@@ -2605,7 +2605,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "blood-numal",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/blood-numal.png",
+    icons = {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
