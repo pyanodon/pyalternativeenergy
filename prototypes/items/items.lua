@@ -2619,7 +2619,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "chitin-numal",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/chitin-numal.png",
+    icons = {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/chitin.png", scale = 0.25, shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
@@ -2655,7 +2658,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "skin-numal",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/skin-numal.png",
+    icons = {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",

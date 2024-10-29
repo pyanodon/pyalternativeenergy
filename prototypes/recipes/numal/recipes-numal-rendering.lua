@@ -105,7 +105,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/chitin-numal.png",
+			icons = {
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",       scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat numal rendering
