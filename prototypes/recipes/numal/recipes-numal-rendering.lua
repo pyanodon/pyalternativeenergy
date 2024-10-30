@@ -87,7 +87,7 @@ py.autorecipes {
 			name = "ex-blo-num",
 			icons = {
 				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
