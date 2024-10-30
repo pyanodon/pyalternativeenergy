@@ -4,6 +4,8 @@ Date: ¯\_(ツ)_/¯
   Changes:
     - Fixed improved animal icon scaling
     - Added a new recycling recipe to reprocess excess antimony phosphate stage 2.
+    - Fixed that oleochemicals had no reliable sinks at logistics science tier. You can now combine it with methanol additives to create bioplastic.
+    - Additionally, there is a new recipe to use oleochemicals as a plasticizer in rubber production.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.10
 Date: 2024-10-29

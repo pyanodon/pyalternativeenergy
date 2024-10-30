@@ -9,12 +9,12 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "sb-phosphate-2",      amount = 60},
         {type = "fluid", name = "purex-concentrate-1", amount = 30},
-        {type = "item",  name = "plastic-bar",         amount = 1},
+        {type = "item",  name = "plastic-bar",         amount = 3},
     },
     results = {
         {type = "fluid", name = "phosphorous-acid", amount = 120},
-        {type = "item",  name = "sb-oxide",         amount = 1,  probability = 0.30},
-        {type = "item",  name = "plastic-bar",      amount = 1,  probability = 0.7},
+        {type = "item",  name = "sb-oxide",         amount = 1,  probability = 0.50},
+        {type = "item",  name = "plastic-bar",      amount_min = 1, amount_max = 3},
     },
     main_product = "phosphorous-acid",
 }:add_unlock("uranium-processing")
@@ -735,3 +735,40 @@ RECIPE {
     main_product = "dirty-water-light",
     allow_productivity = true,
 }:add_unlock("filtration")
+
+-- oleochemicals
+
+RECIPE {
+    type = "recipe",
+    name = "oleochemicals-bioplastic",
+    category = "methanol",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+        {type = "fluid", name = "oleochemicals", amount = 350},
+        {type = "fluid", name = "methanol",      amount = 50},
+    },
+    results = {
+        {type = "item", name = "plastic-bar", amount = 10},
+    },
+}:add_unlock("plastics-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "rubber-from-oleochemicals",
+    category = "hor",
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+        {type = "fluid", name = "oleochemicals", amount = 350},
+        {type = "fluid", name = "polybutadiene", amount = 20},
+        {type = "item",  name = "carbon-black",    amount = 10},
+        {type = "item",  name = "latex",    amount = 1},
+        {type = "item",  name = "sulfur",    amount = 2},
+    },
+    results = {
+        {type = "item", name = "rubber", amount = 4},
+    },
+    subgroup = "py-petroleum-handling-recipes",
+    order = "a"
+}:add_unlock("rubber-2")
