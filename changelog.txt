@@ -2,7 +2,8 @@
 Version: 3.0.11
 Date: ¯\_(ツ)_/¯
   Changes:
-    - fixed improved animal icon scaling
+    - Fixed improved animal icon scaling
+    - Added a new recycling recipe to reprocess excess antimony phosphate stage 2.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.10
 Date: 2024-10-29
