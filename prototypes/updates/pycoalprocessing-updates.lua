@@ -269,3 +269,14 @@ data.raw["recipe"]["power-house"] = nil
 data.raw["recipe"]["power-house-mk02"] = nil
 data.raw["recipe"]["power-house-mk03"] = nil
 data.raw["recipe"]["power-house-mk04"] = nil
+
+--tailings dust
+
+RECIPE("tailings-classification"):remove_unlock("separation")
+RECIPE("tailings-classification"):add_unlock("fluid-processing-machines-1").category = "solid-separator"
+data.raw.recipe["tailings-classification"].energy_required = 1
+data.raw.recipe["tailings-classification"].results = {
+    data.raw.recipe["tailings-classification"].results[1],
+    {"ore-titanium", 1},
+    {"ore-tin",      1},
+}
