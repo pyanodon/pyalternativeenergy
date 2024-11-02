@@ -323,17 +323,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "curium-oxide",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/curium-oxide.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
     name = "cm-250",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/cm-250.png",
     icon_size = 64,
