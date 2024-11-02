@@ -8,6 +8,7 @@ TECHNOLOGY("energy-2"):remove_pack("chemical-science-pack")
 
 
 --RECIPE--
+RECIPE("stone-distilation"):add_unlock("heavy-oil-mk01"):replace_ingredient("stone", "gravel").energy_required = 5
 RECIPE("equipment-chassi"):replace_ingredient("duralumin", {type = "item", name = "fenxsb-alloy", amount = 1})
 
 --remove combustion mix stuff
