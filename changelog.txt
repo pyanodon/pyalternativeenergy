@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.13
+Date: after blackout
+  Changes:
+    - Ukrainian translation (by bootseller). Almost complete, but not completely complete yet
+---------------------------------------------------------------------------------------------------
 Version: 3.0.12
 Date: 2024-11-1
   Changes:
