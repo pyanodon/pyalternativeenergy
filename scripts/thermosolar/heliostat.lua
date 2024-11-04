@@ -60,7 +60,7 @@ function Heliostat.rotate_heliostat(heliostat, tower)
 end
 
 Heliostat.events.on_built = function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if not entity.valid then return end
 
 	if Heliostat.is_heliostat(entity) then

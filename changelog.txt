@@ -1,11 +1,55 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.14
+Date: 2024-11-3
+  Changes:
+    - Ukrainian translation (by bootseller). Almost complete, but not completely complete yet
+    - Added a new logistics science tier destructive distillation recipe for gravel. https://github.com/pyanodon/pybugreports/issues/661
+    - Removed unused curium oxide item from the game files.
+    - Updated "gasolene" to "gasoline"
+---------------------------------------------------------------------------------------------------
+Version: 3.0.12
+Date: 2024-11-1
+  Changes:
+    - Fixed that the tailings seperation recipe was not unlockable in 2.0
+---------------------------------------------------------------------------------------------------
+Version: 3.0.11
+Date: 2024-10-30
+  Changes:
+    - Fixed improved animal icon scaling
+    - Added a new recycling recipe to reprocess excess antimony phosphate stage 2.
+    - Fixed that oleochemicals had no reliable sinks at logistics science tier. You can now combine it with methanol additives to create bioplastic.
+    - Additionally, there is a new recipe to use oleochemicals as a plasticizer in rubber production.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.10
+Date: 2024-10-29
+  Changes:
+    - passed the test and now overly qualityfied
+---------------------------------------------------------------------------------------------------
+Version: 3.0.9
+Date: 2024-10-29
+  Changes:
+    - Fix certain pipe connections disconnecting with squeak through installed.
+    - Fix gamba numal recipes not returning cages.
+    - Unify improved animal icons.
+    - Removed ash
+---------------------------------------------------------------------------------------------------
+Version: 3.0.8
+Date: 2024-10-27
+  Changes:
+    - Fixed nuclear research technology was unlocking incorrect recipes.
+    - Fixed mk4 wagons being too wide (https://github.com/pyanodon/pybugreports/issues/613).
+---------------------------------------------------------------------------------------------------
+Version: 3.0.7
+Date: 2024-10-23
+  Changes:
+    - Changed code to reflect upstream internal name changes.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.6
-Date: ?
+Date: 2024-10-23
   Changes:
     - Fixed replacing thermosolar III cover panels does not remove the shine effect. (https://github.com/pyanodon/pybugreports/issues/571)
     - The antisolar panel recipe is now outputs five solar panels instead of one.
-    - fix belts on ores not being selectable
-    - Updated "gasolene" to "gasoline"
+    - Fixed that you cannot mine belts on ores. (https://github.com/pyanodon/pybugreports/issues/623)
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.5
 Date: 2024-10-21

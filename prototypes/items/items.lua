@@ -323,17 +323,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "curium-oxide",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/curium-oxide.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
     name = "cm-250",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/cm-250.png",
     icon_size = 64,
@@ -2605,7 +2594,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "blood-numal",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/blood-numal.png",
+    icons = {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
@@ -2616,7 +2608,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "chitin-numal",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/chitin-numal.png",
+    icons = {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",       scale = 0.25, shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
@@ -2627,7 +2622,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "guts-numal",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/guts-numal.png",
+    icons = {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
@@ -2638,7 +2636,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "meat-numal",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/meat-numal.png",
+    icons = {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
@@ -2649,7 +2650,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "skin-numal",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/skin-numal.png",
+    icons = {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         scale = 0.25, shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",

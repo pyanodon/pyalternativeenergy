@@ -501,7 +501,7 @@ RECIPE {
     --main_product = "plutonium-oxide",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("uranium-mining")
+}:add_unlock("uranium-processing")
 
 --URANIUM
 
@@ -712,7 +712,7 @@ RECIPE {
     --main_product = "u-235",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("uranium-mining")
+}:add_unlock("uranium-processing")
 
 RECIPE {
     type = "recipe",
@@ -723,14 +723,14 @@ RECIPE {
     ingredients =
     {
         {type = "item",  name = "depleted-uranium-fuel-cell", amount = 10},
-        {type = "item",  name = "sodium-hydroxide",          amount = 15},
-        {type = "fluid", name = "water",                     amount = 250},
-        {type = "fluid", name = "sulfuric-acid",             amount = 250}
+        {type = "item",  name = "sodium-hydroxide",           amount = 15},
+        {type = "fluid", name = "water",                      amount = 250},
+        {type = "fluid", name = "sulfuric-acid",              amount = 250}
     },
     results = {
         {type = "fluid", name = "sb-phosphate-1", amount = 100}
     },
-}:add_unlock("uranium-mining")
+}:add_unlock("uranium-processing")
 
 RECIPE {
     type = "recipe",
@@ -749,7 +749,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-1", amount = 100}
     },
     main_product = "sb-hpo-pu",
-}:add_unlock("uranium-mining")
+}:add_unlock("uranium-processing")
 
 RECIPE {
     type = "recipe",
@@ -767,7 +767,7 @@ RECIPE {
         {type = "fluid", name = "sb-phosphate-2",     amount = 100}
     },
     main_product = "plutonium-peroxide",
-}:add_unlock("uranium-mining")
+}:add_unlock("uranium-processing")
 
 RECIPE {
     type = "recipe",

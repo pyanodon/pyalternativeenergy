@@ -175,7 +175,7 @@ ENTITY {
         },
     },
     module_slots = 3,
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     show_recipe_icon = false,
     show_recipe_icon_on_map = false,
     crafting_categories = {"electric-boiler"},

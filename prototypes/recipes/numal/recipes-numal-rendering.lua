@@ -32,12 +32,12 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "meat",          amount = BASE_MEAT},
-				{name = "chitin",        amount = BASE_SKIN},
-				{name = "guts",          amount = BASE_GUTS},
+				{name = "meat",            amount = BASE_MEAT},
+				{name = "chitin",          amount = BASE_SKIN},
+				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD},
-				{name = "brain",         amount = BASE_BRAIN},
-				{name = "numal-ink",     amount = BASE_SPECIAL},
+				{name = "brain",           amount = BASE_BRAIN},
+				{name = "numal-ink",       amount = BASE_SPECIAL},
 			},
 			crafting_speed = 30,
 			tech = "numal-mk01",
@@ -49,7 +49,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "numal",    remove_item = true},
+				{name = "numal",      remove_item = true},
 				{name = "guts-numal", amount = INPUT_AMOUNT},
 			},
 			results =
@@ -64,32 +64,38 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/guts-numal.png",
+			icons = {
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood numal rendering
 		{
 			ingredients =
 			{
-				{name = "guts-numal", remove_item = true},
+				{name = "guts-numal",  remove_item = true},
 				{name = "blood-numal", amount = INPUT_AMOUNT},
 			},
 			results =
 			{
-				{name = "guts",           remove_item = true},
-				{name = "numal-ink",      remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "numal-ink",       remove_item = true},
 				{name = "arthropod-blood", amount = IMP_BLOOD},
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/blood-numal.png",
+			icons = {
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin numal rendering
 		{
 			ingredients =
 			{
-				{name = "blood-numal", remove_item = true},
+				{name = "blood-numal",  remove_item = true},
 				{name = "chitin-numal", amount = INPUT_AMOUNT},
 			},
 			results =
@@ -99,7 +105,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/chitin-numal.png",
+			icons = {
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",       scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat numal rendering
@@ -107,7 +116,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "chitin-numal", remove_item = true},
-				{name = "meat-numal", amount = INPUT_AMOUNT},
+				{name = "meat-numal",   amount = INPUT_AMOUNT},
 			},
 			results =
 			{
@@ -116,7 +125,10 @@ py.autorecipes {
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/meat-numal.png",
+			icons = {
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
