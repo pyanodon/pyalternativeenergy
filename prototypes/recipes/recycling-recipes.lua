@@ -727,6 +727,7 @@ RECIPE {
         {type = "fluid", name = "dirty-water-heavy", amount = 200},
         {type = "item",  name = "oil-sand",          amount = 3},
     },
+    main_product = "oil-sand",
     allow_productivity = true,
 }:add_unlock("paramagnetic-material")
 
