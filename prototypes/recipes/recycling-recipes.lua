@@ -13,9 +13,10 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "phosphorous-acid", amount = 120},
-        {type = "item",  name = "sb-oxide",         amount = 1,  probability = 0.50},
-        {type = "item",  name = "plastic-bar",      amount_min = 1, amount_max = 3},
+        {type = "item",  name = "sb-oxide",         amount = 1,     probability = 0.50},
+        {type = "item",  name = "plastic-bar",      amount_min = 1, amount_max = 3,    ignored_by_stats = 3, ignored_by_productivity = 3},
     },
+    allow_productivity = true,
     main_product = "phosphorous-acid",
 }:add_unlock("uranium-processing")
 
@@ -53,6 +54,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "water", amount = 300},
     },
+    allow_productivity = true,
     main_product = "water"
 }:add_unlock("electrolysis")
 
@@ -71,6 +73,7 @@ RECIPE {
     results = {
         {type = "item", name = "iron-oxide", amount = 1},
     },
+    allow_productivity = true,
     main_product = "iron-oxide"
 }:add_unlock("electrolysis")
 
@@ -88,6 +91,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "dirty-water-heavy", amount = 50},
     },
+    allow_productivity = true,
     main_product = "dirty-water-heavy"
 }:add_unlock("advanced-mining-facilities")
 
@@ -104,9 +108,10 @@ RECIPE {
         {type = "item", name = "limestone", amount = 3},
     },
     results = {
-        {type = "item", name = "soil",      amount = 3, catalyst_amount = 2},
-        {type = "item", name = "limestone", amount = 2, catalyst_amount = 2},
+        {type = "item", name = "soil",      amount = 3, ignored_by_productivity = 2, ignored_by_stats = 2},
+        {type = "item", name = "limestone", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2},
     },
+    allow_productivity = false,
     main_product = "soil"
 }:add_unlock("crusher-2")
 
@@ -126,6 +131,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "tar", amount = 50},
     },
+    allow_productivity = true,
     main_product = "tar"
 }:add_unlock("fluid-processing-machines-1")
 
@@ -140,8 +146,9 @@ RECIPE {
         {type = "fluid", name = "water",  amount = 50},
     },
     results = {
-        {type = "fluid", name = "water", amount = 10, catalyst_amount = 10},
+        {type = "fluid", name = "water", amount = 10, ignored_by_productivity = 10, ignored_by_stats = 10},
     },
+    allow_productivity = true, -- extremely useful
     main_product = "water"
 }:add_unlock("desulfurization")
 
@@ -163,6 +170,7 @@ RECIPE {
         {type = "fluid", name = "oxygen", amount = 10},
         {type = "item",  name = "soil",   amount = 5},
     },
+    allow_productivity = true,
     main_product = "water"
 }:add_unlock("electrolysis")
 
@@ -180,6 +188,7 @@ RECIPE {
     results = {
         {type = "item", name = "ash", amount = 1},
     },
+    allow_productivity = true,
     main_product = "ash"
 }:add_unlock("coal-processing-1")
 
@@ -198,6 +207,7 @@ RECIPE {
         {type = "item", name = "lime",   amount = 1},
         {type = "item", name = "gravel", amount = 1},
     },
+    allow_productivity = true,
     main_product = "lime"
 }:add_unlock("fluid-processing-machines-1")
 
@@ -217,6 +227,7 @@ RECIPE {
     results = {
         {type = "item", name = "ore-lead", amount = 5},
     },
+    allow_productivity = true,
     main_product = "ore-lead",
 }:add_unlock("molecular-decohesion")
 
@@ -233,6 +244,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "fatty-acids", amount = 50},
     },
+    allow_productivity = true,
     main_product = "fatty-acids",
 }:add_unlock("eva")
 
@@ -252,6 +264,7 @@ RECIPE {
         {type = "item", name = "bones", amount = 5},
         {type = "item", name = "meat",  amount = 5},
     },
+    allow_productivity = true,
     main_product = "bones",
 }:add_unlock("mukmoux-mk02")
 
@@ -269,6 +282,7 @@ RECIPE {
     results = {
         {type = "item", name = "kerogen", amount = 8},
     },
+    allow_productivity = true,
     main_product = "kerogen",
 }:add_unlock("molecular-decohesion")
 
@@ -286,23 +300,9 @@ RECIPE {
     results = {
         {type = "fluid", name = "acetic-acid", amount = 60},
     },
+    allow_productivity = true,
     main_product = "acetic-acid",
 }:add_unlock("molecular-decohesion-mk02")
-
-RECIPE {
-    type = "recipe",
-    name = "guts-to-jerky",
-    category = "smelting",
-    enabled = false,
-    energy_required = 5,
-    ingredients = {
-        {type = "item", name = "guts", amount = 10},
-    },
-    results = {
-        {type = "item", name = "dried-meat", amount = 5},
-    },
-    main_product = "dried-meat",
-}:add_unlock("microbiology-mk01")
 
 RECIPE {
     type = "recipe",
@@ -317,6 +317,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "phytoplankton", amount = 10},
     },
+    allow_productivity = true,
     main_product = "phytoplankton",
 }:add_unlock("microbiology-mk01")
 
@@ -335,6 +336,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "water", amount = 50},
     },
+    allow_productivity = true,
     main_product = "water",
 }:add_unlock("fish-mk01")
 
@@ -353,6 +355,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "residual-mixture", amount = 60},
     },
+    allow_productivity = true,
     main_product = "residual-mixture",
 }:add_unlock("arqad")
 
@@ -372,6 +375,7 @@ RECIPE {
         {type = "fluid", name = "blood",          amount = 30},
         {type = "item",  name = "grade-1-copper", amount = 1},
     },
+    allow_productivity = false, -- no :(
     main_product = "blood"
 }:add_unlock("water-invertebrates-mk01")
 
@@ -392,6 +396,7 @@ RECIPE {
         {type = "fluid", name = "carbolic-oil",    amount = 100},
         {type = "fluid", name = "naphthalene-oil", amount = 50},
     },
+    allow_productivity = true,
     main_product = "carbolic-oil",
     crafting_machine_tint = {primary = FLUID["carbolic-oil"].base_color, secondary = defines.color.deeppink}
 }:add_unlock("rendering")
@@ -411,6 +416,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "water-saline", amount = 100},
     },
+    allow_productivity = true,
     main_product = "water-saline",
 }:add_unlock("electrolysis")
 
@@ -432,6 +438,7 @@ RECIPE {
         {type = "fluid", name = "vpulp1",   amount = 50},
         {type = "fluid", name = "flue-gas", amount = 50},
     },
+    allow_productivity = true,
     main_product = "vpulp1",
 }:add_unlock("vanadium-processing")
 
@@ -449,6 +456,7 @@ RECIPE {
     results = {
         {type = "item", name = "ti-rejects", amount = 1},
     },
+    allow_productivity = true,
     main_product = "ti-rejects",
 }:add_unlock("titanium-mk02")
 
@@ -467,6 +475,7 @@ RECIPE {
         {type = "fluid", name = "ti-overflow-waste", amount = 30},
         {type = "fluid", name = "mibc",              amount = 30},
     },
+    allow_productivity = true,
     main_product = "mibc",
 }:add_unlock("titanium-mk02")
 
@@ -485,6 +494,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "molten-glass", amount = 10},
     },
+    allow_productivity = true,
     main_product = "molten-glass",
 }:add_unlock("basic-substrate")
 
@@ -509,6 +519,7 @@ RECIPE {
         {type = "fluid", name = "coal-gas",     amount = 35},
         {type = "fluid", name = "carbolic-oil", amount = 10},
     },
+    allow_productivity = true,
     main_product = "carbolic-oil"
 }:add_unlock("coal-processing-1")
 
@@ -527,7 +538,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "high-distillate", amount = 100},
-    }
+    },
+    allow_productivity = true,
 }:add_unlock("light-oil-mk01")
 
 --anthracene oil
@@ -544,6 +556,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "creosote", amount = 20},
     },
+    allow_productivity = true,
     main_product = "creosote",
     crafting_machine_tint = RECIPE["creosote"].crafting_machine_tint
 }:add_unlock("creosote")
@@ -564,8 +577,9 @@ RECIPE {
     results = {
         {type = "fluid", name = "methanal",       amount = 50},
         {type = "fluid", name = "carbon-dioxide", amount = 100},
-        {type = "fluid", name = "molten-salt",    amount = 30},
+        {type = "fluid", name = "molten-salt",    amount = 30, ignored_by_stats = 30, ignored_by_productivity = 30},
     },
+    allow_productivity = true,
     main_product = "methanal"
 }:add_unlock("petroleum-gas-mk01")
 
@@ -582,9 +596,10 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "condensates", amount = 100},
-        {type = "fluid", name = "steam",       amount = 200, temperature = 150, catalyst_amount = 200},
+        {type = "fluid", name = "steam",       amount = 200, temperature = 150, ignored_by_productivity = 200, ignored_by_stats = 200},
         {type = "fluid", name = "naphtha",     amount = 50},
     },
+    allow_productivity = true,
     main_product = "condensates",
 }:add_unlock("petroleum-gas-mk01")
 
@@ -606,6 +621,7 @@ RECIPE {
         {type = "fluid", name = "nitrogen", amount = 100},
         {type = "fluid", name = "water",    amount = 100},
     },
+    allow_productivity = true,
     main_product = "water"
 }:add_unlock("methanol-processing-1")
 
@@ -624,6 +640,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "water", amount = 200},
     },
+    allow_productivity = true,
     main_product = "water"
 }
 
@@ -642,6 +659,7 @@ RECIPE {
     results = {
         {type = "item", name = "soot", amount = 1},
     },
+    allow_productivity = true,
     main_product = "soot"
 }:add_unlock("hot-air-mk02")
 
@@ -662,6 +680,7 @@ RECIPE {
         {type = "fluid", name = "olefin",  amount = 100},
         {type = "fluid", name = "naphtha", amount = 50},
     },
+    allow_productivity = true,
     main_product = "olefin"
 }:add_unlock("phosphorous-processing")
 
@@ -684,8 +703,9 @@ RECIPE {
     results = {
         {type = "fluid", name = "chlorine",   amount = 100},
         {type = "fluid", name = "hydrogen",   amount = 100},
-        {type = "item",  name = "small-lamp", amount = 1,  probability = 0.5},
+        {type = "item",  name = "small-lamp", amount = 1,  probability = 0.5, ignored_by_productivity = 1, ignored_by_stats = 1},
     },
+    allow_productivity = true,
     main_product = "chlorine"
 }:add_unlock("filtration")
 
@@ -701,10 +721,13 @@ RECIPE {
         {type = "fluid", name = "grease",  amount = 25},
         {type = "fluid", name = "water",   amount = 100},
         {type = "fluid", name = "acetone", amount = 50},
+        {type = "item",  name = "sand",    amount = 1},
     },
     results = {
         {type = "fluid", name = "dirty-water-heavy", amount = 200},
+        {type = "item",  name = "oil-sand",          amount = 3},
     },
+    allow_productivity = true,
 }:add_unlock("paramagnetic-material")
 
 -- sand
@@ -741,6 +764,7 @@ RECIPE {
     results = {
         {type = "item", name = "plastic-bar", amount = 10},
     },
+    allowed_productivity = false,
 }:add_unlock("plastics-mk02")
 
 RECIPE {
@@ -752,13 +776,14 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "oleochemicals", amount = 350},
         {type = "fluid", name = "polybutadiene", amount = 20},
-        {type = "item",  name = "carbon-black",    amount = 10},
-        {type = "item",  name = "latex",    amount = 1},
-        {type = "item",  name = "sulfur",    amount = 2},
+        {type = "item",  name = "carbon-black",  amount = 10},
+        {type = "item",  name = "latex",         amount = 1},
+        {type = "item",  name = "sulfur",        amount = 2},
     },
     results = {
         {type = "item", name = "rubber", amount = 4},
     },
     subgroup = "py-petroleum-handling-recipes",
-    order = "a"
+    order = "a",
+    allow_productivity = false,
 }:add_unlock("rubber-2")
