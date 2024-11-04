@@ -1,10 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.13
+Version: 3.0.14
 Date: 2024-11-3
   Changes:
     - Ukrainian translation (by bootseller). Almost complete, but not completely complete yet
     - Added a new logistics science tier destructive distillation recipe for gravel. https://github.com/pyanodon/pybugreports/issues/661
     - Removed unused curium oxide item from the game files.
+    - Updated "gasolene" to "gasoline"
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.12
 Date: 2024-11-1
