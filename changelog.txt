@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.1
+Date: 2024-11-4
+  Changes:
+    - [space-age] Aerogel and carbon aerogel no longer decay.
+---------------------------------------------------------------------------------------------------
 Version: 3.1.0
 Date: 2024-11-4
   Changes:
@@ -23,7 +28,6 @@ Date: 2024-11-4
     - [space-age] Crushed and processed iron spoil into iron oxide
     - [space-age] Native flora spoils into biomass
     - [space-age] Time crystals spoil into themselves every hour, and metastable quasicrystals spoil into time crystals
-    - [space-age] Citric acid, sodium citrate and acetaldehyde spoils into barrels
     - [space-age] Bio ore spoils into biocarnation, which can be reprocessed or spoiled into advanced substrate
     - [space-age] erbium spoils into erbium oxide, which spoils into impure erbium oxide
     - [space-age] Various nuclear isotopes spoil into other nuclear isotopes with semirealistic spoil times
