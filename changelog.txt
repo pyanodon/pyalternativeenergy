@@ -26,7 +26,7 @@ Date: 2024-11-4
     - [space-age] Added empty barrels output to the metallic-core recipe.
     - [space-age] Animal samples spoil into plasmids
     - [space-age] Crushed and processed iron spoil into iron oxide
-    - [space-age] Native flora spoils into biomass
+    - [space-age] Native flora spoils into floraspollinin
     - [space-age] Time crystals spoil into themselves every hour, and metastable quasicrystals spoil into time crystals
     - [space-age] Bio ore spoils into biocarnation, which can be reprocessed or spoiled into advanced substrate
     - [space-age] erbium spoils into erbium oxide, which spoils into impure erbium oxide
