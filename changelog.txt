@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.0
-Date: factorio: spoil age
+Date: 2024-11-4
   Changes:
     - Huge thanks to emanresu on discord for assistance in compiling this changelog!
     - IMPORTANT: In order to enable [space-age] features the following mod is required; https://mods.factorio.com/mod/enable-all-feature-flags
