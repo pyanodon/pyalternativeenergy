@@ -1,4 +1,54 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.0
+Date: factorio: spoil age
+  Changes:
+    - Huge thanks to emanresu on discord for assistance in compiling this changelog!
+    - IMPORTANT: In order to enable [space-age] features the following mod is required; https://mods.factorio.com/mod/enable-all-feature-flags
+    - [space-age] Added experimental spoilage feature for 109 items. This entire changelog is toggleable in the mod settings (except for the last 4).
+    - [space-age] We need your balance feedback on the spoilage feature! Is it fun? Is it annoying? Too pYainful?
+    - [space-age] Significantly reduced the ingredient count for certain food recipes. Replace various meat inputs with spoiled jerky.
+    - [space-age] Added biocrud and rich biocrud.
+    - [space-age] Added biocarnations.
+    - [space-age] Added floraspollinin.
+    - [space-age] Native flora now has a fuel value.
+    - [space-age] Renamed spoilage % to "decay %"
+    - [space-age] Nerfed blood -> urea from requiring 100 blood to now requiring 250 blood.
+    - [space-age] Biomass power plants now require a small amount of biocrud to operate.
+    - [space-age] Added 3x rich biocrud to the perfect samples recipe.
+    - [space-age] Uranium oxide seperation now returns less u238.
+    - [space-age] Removed direct craft recipes for jerky. Replaced with spoilage recipes.
+    - [space-age] Added a new early-game recipe to recycle excess biomass.
+    - [space-age] Added empty barrels output to the metallic-core recipe.
+    - [space-age] Animal samples spoil into plasmids
+    - [space-age] Crushed and processed iron spoil into iron oxide
+    - [space-age] Native flora spoils into biomass
+    - [space-age] Time crystals spoil into themselves every hour, and metastable quasicrystals spoil into time crystals
+    - [space-age] Citric acid, sodium citrate and acetaldehyde spoils into barrels
+    - [space-age] Bio ore spoils into biocarnation, which can be reprocessed or spoiled into advanced substrate
+    - [space-age] erbium spoils into erbium oxide, which spoils into impure erbium oxide
+    - [space-age] Various nuclear isotopes spoil into other nuclear isotopes with semirealistic spoil times
+    - [space-age] High energy waste spoils into ash
+    - [space-age] Petri dishes with bacteria spoil into petri dishes in 15 seconds
+    - [space-age] brains, meat and guts spoil into dried meat, which is now an ingredient in several types of worker food and cannot be made any other way
+    - [space-age] Manure spoils into rich clay
+    - [space-age] Fish eggs of all tiers spoil into fishmeal
+    - [space-age] Fawogae substrate spoils into fawogae spores
+    - [space-age] All perfect sample ingredients and snarer hearts spoil into rich biocrud, which can be reprocessed into giving small chances of high-tech AL products
+    - [space-age] mova, cellulose, lignin, mukmoux fat, organics, agar, seed extract, pineal glands, gas bladders, photophores, animal eyes, arqad propolis, urea and yotoi leaves spoil into biocrud, which can be reprocessed into a variety of AL products
+    - [space-age] Albumin and collagen spoil into urea
+    - [space-age] Resilin spoils into myoglobin, which spoils into meat
+    - [space-age] Blood meal spoils into fiberboard
+    - [space-age] Charged auogs and dingrits spoil into their uncharged forms
+    - [space-age] Arqad nests of all types spoil into their original animal (which is somehow still alive)
+    - [space-age] Sea sponge sprouts, yotoi fruit, and tree seedlings of all tiers spoil down a tier, then at tier 1 spoil into quartz, yotoi seeds and tree seeds respectively.
+    - [space-age] Organ printing stage 3 synthetic organs now spoil into rich biocrud.
+    - [space-age] High energy waste 2 now spoils into high energy waste 1.
+    - [space-age] Clean mova now spoils back into mova.
+    - Allowed productivity in 38 of the recycling recipes added in 3.0.0.
+    - Fixed missing catalyst amounts for the purex-antimony-void, limestone-void, sulfur-void-water, formaldehyde-from-refined-natural-gas, refined-natural-gas-to-condensates, hydrogen-chloride-void recipes.
+    - Oil sands are now renewable. Added oil sands as a byproduct to the acetone-void-degrease recipe.
+    - Renamed "meat, dried meat" to jerky.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.14
 Date: 2024-11-3
   Changes:

@@ -316,8 +316,6 @@ require "prototypes.animations.hawt-turbine-mk02"
 require "prototypes.animations.hawt-turbine-mk03"
 require "prototypes.animations.hawt-turbine-mk04"
 
---data.raw['utility-constants'].default.main_menu_background_image_location = '__pycoalprocessinggraphics__.graphics.pycp-wall.jpg'
-
 data.raw.fluid["crude-oil"].subgroup = "test"
 data.raw.fluid["gasoline"].subgroup = "test"
 data.raw.fluid["fatty-acids"].fuel_value = "1MJ"
