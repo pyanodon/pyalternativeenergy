@@ -316,6 +316,8 @@ require "prototypes.animations.hawt-turbine-mk02"
 require "prototypes.animations.hawt-turbine-mk03"
 require "prototypes.animations.hawt-turbine-mk04"
 
+require "prototypes.decay.decay"
+
 data.raw.fluid["crude-oil"].subgroup = "test"
 data.raw.fluid["gasoline"].subgroup = "test"
 data.raw.fluid["fatty-acids"].fuel_value = "1MJ"

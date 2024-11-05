@@ -1,4 +1,4 @@
-require "prototypes.decay.decay"
+require "prototypes.decay.decay-updates"
 
 --MOVED RECIPES CATEGORIES
 RECIPE("honey-comb").category = "centrifuging"
