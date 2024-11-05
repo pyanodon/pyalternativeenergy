@@ -1,4 +1,4 @@
-if not feature_flags.space_travel then return end
+if not feature_flags.spoiling_required then return end
 if not settings.startup["py-enable-decay"].value then return end
 
 local second = 60
