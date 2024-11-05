@@ -4,11 +4,11 @@ Date: ?
   Changes:
     - [space-age] The "enable decay" mod setting is now default off instead of default on.
     - [space-age] Processed iron no longer decays.
+    - [space-age] Metastable quasicrystal no longer decays.
     - [space-age] Fixed various innaccuracies in the changelog.
     - [space-age] Added 1 biomass to the floraspollinin reprocessing recipe.
     - [space-age] Added a new recipe to reprocess floraspollinin in the compressor.
     - [space-age] Sped up the floraspollinin reprocessing recipe from 10 seconds -> 2 seconds.
-    - [space-age] Metastable quasicrystal now decays in 11.11 hours instead of 1 hour.
     - [space-age] Added a new recipe to process biopolymer into biocrud.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.1

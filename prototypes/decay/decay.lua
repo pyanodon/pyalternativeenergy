@@ -66,7 +66,6 @@ RECIPE("acetaldehyde-1"):replace_ingredient("plastic-bar", {type = "item", name 
 RECIPE("acetaldehyde-2"):replace_ingredient("plastic-bar", {type = "item", name = "barrel", amount = 1})
 ITEM("acetaldehyde"):spoil("barrel", 30 * second)
 ITEM("time-crystal"):spoil("time-crystal", hour)
-ITEM("metastable-quasicrystal"):spoil("time-crystal", (11 * minute) + 11 * hour)
 ITEM("bio-ore"):spoil("biocarnation", hour)
 ITEM("erbium"):spoil("er-oxide", hour)
 ITEM("er-oxide"):spoil("impure-er-oxide", hour)
