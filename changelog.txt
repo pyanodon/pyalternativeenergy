@@ -11,6 +11,9 @@ Date: ?
     - [space-age] Sped up the floraspollinin reprocessing recipe from 10 seconds -> 2 seconds.
     - [space-age] Added a new recipe to process biopolymer into biocrud.
     - The "void" fluid is now hidden from factoriopedia. (This fluid is used only by the thermosolar mk04 script to provide energy during the daytime)
+    - Updated Russian locale (Shadow_man)
+    - Greatly buffed the production science tier knallgas-bacteria -> petrolelum gas recipe. This recipe is now a knallgas producer instead of a consumer.
+    - Added new localised name, localised desription, and recipe icon for knallgas-bacteria -> petrolelum gas recipe.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.1
 Date: 2024-11-4

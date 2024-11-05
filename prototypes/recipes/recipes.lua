@@ -1272,3 +1272,35 @@ RECIPE {
     subgroup = "py-alternativeenergy-fluids",
     order = "s"
 }:add_unlock("thermal-mk02")
+
+-- This buffs a recipe by the same name in py high tech.
+RECIPE {
+    type = "recipe",
+    name = "petroleum-gas2",
+    category = "bio-reactor",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "organic-solvent",    amount = 100},
+        {type = "fluid", name = "bacteria-2",         amount = 50},
+        {type = "fluid", name = "pressured-hydrogen", amount = 50},
+        {type = "item",  name = "meat",               amount = 10},
+    },
+    results = {
+        {type = "fluid", name = "petroleum-gas", amount = 200},
+        {type = "fluid", name = "bacteria-2",    amount_min = 40, amount_max = 70, ignored_by_productivity = 50, ignored_by_stats = 50},
+    },
+    subgroup = "py-hightech-fluids",
+    main_product = "petroleum-gas",
+    order = "b1",
+    icons = {
+        {
+            icon = "__pyalternativeenergygraphics__/graphics/icons/reprocessing.png"
+        },
+        {
+            icon = "__pyhightechgraphics__/graphics/icons/bacteria-2.png",
+            icon_size = 32,
+            scale = 0.7
+        },
+    }
+}
