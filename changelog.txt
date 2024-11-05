@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.4
 Date: ?
+  Bugfixes:
+    - Fix broken check for decay feature flag
   Changes:
     - Fix spelling issue in description of steam-turbine-mk03.
 ---------------------------------------------------------------------------------------------------
