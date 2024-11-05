@@ -13,8 +13,6 @@ local max_spoilage = 4294967295
 -- coal processing
 
 ITEM("animal-sample-01"):spoil("plasmids", hour)
-ITEM("crushed-iron"):spoil("iron-oxide", 35 * minute)
-ITEM("processed-iron-ore"):spoil("iron-oxide", 35 * minute)
 
 -- alternative energy
 
@@ -68,7 +66,7 @@ RECIPE("acetaldehyde-1"):replace_ingredient("plastic-bar", {type = "item", name 
 RECIPE("acetaldehyde-2"):replace_ingredient("plastic-bar", {type = "item", name = "barrel", amount = 1})
 ITEM("acetaldehyde"):spoil("barrel", 30 * second)
 ITEM("time-crystal"):spoil("time-crystal", hour)
-ITEM("metastable-quasicrystal"):spoil("time-crystal", hour)
+ITEM("metastable-quasicrystal"):spoil("time-crystal", (11 * minute) + 11 * hour)
 ITEM("bio-ore"):spoil("biocarnation", hour)
 ITEM("erbium"):spoil("er-oxide", hour)
 ITEM("er-oxide"):spoil("impure-er-oxide", hour)
@@ -166,7 +164,7 @@ RECIPE {
     name = "floraspollinin-reprocessing",
     type = "recipe",
     category = "nursery",
-    energy_required = 10,
+    energy_required = 2,
     enabled = false,
     ingredients = {
         {type = "item", name = "floraspollinin", amount = 10},
@@ -174,6 +172,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "native-flora", amount_min = 5, amount_max = 10},
+        {type = "item", name = "biomass", amount = 1},
     },
     main_product = "native-flora",
     icons = {
@@ -207,6 +206,44 @@ ITEM {
     fuel_value = "450kJ",
     fuel_category = "biomass"
 }:spoil("biomass", 45 * minute)
+
+RECIPE {
+    type = "item",
+    name = "floraspollinin-compression",
+    ingredients = {
+        {type = "item", name = "floraspollinin", amount = 2},
+        {type = "fluid", name = "water", amount = 100},
+        {type = "fluid", name = "gasoline", amount = 5},
+    },
+    results = {
+        {type = "item", name = "biocrud", amount = 1},
+        {type = "fluid", name = "steam", amount = 5, temperature = 150},
+    },
+    energy_required = 2,
+    category = "compressor",
+    enabled = false,
+    main_product = "biocrud",
+    allow_productivity = false,
+}:add_unlock("energy-2")
+
+RECIPE {
+    type = "item",
+    name = "biopolymer-reaction",
+    ingredients = {
+        {type = "item",  name = "biopolymer", amount = 2},
+        {type = "fluid", name = "pressured-hydrogen",          amount = 100},
+        {type = "fluid", name = "bacteria-2",       amount = 10},
+    },
+    results = {
+        {type = "item",  name = "biocrud",      amount = 30},
+        {type = "fluid", name = "bio-oil",   amount = 100},
+    },
+    energy_required = 15,
+    category = "bio-reactor",
+    main_product = "biocrud",
+    enabled = false,
+    allow_productivity = true,
+}:add_unlock("biopolymer")
 
 ITEM("native-flora").fuel_value = "175kJ"
 ITEM("native-flora").fuel_category = "biomass"

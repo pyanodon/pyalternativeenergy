@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.2
+Date: ?
+  Changes:
+    - [space-age] Processed iron no longer decays.
+    - [space-age] Fixed various innaccuracies in the changelog.
+    - [space-age] Added 1 biomass to the floraspollinin reprocessing recipe.
+    - [space-age] Added a new recipe to reprocess floraspollinin in the compressor.
+    - [space-age] Sped up the floraspollinin reprocessing recipe from 10 seconds -> 2 seconds.
+    - [space-age] Metastable quasicrystal now decays in 11.11 hours instead of 1 hour.
+    - [space-age] Added a new recipe to process biopolymer into biocrud.
+---------------------------------------------------------------------------------------------------
 Version: 3.1.1
 Date: 2024-11-4
   Changes:
@@ -35,7 +46,6 @@ Date: 2024-11-4
     - [space-age] Petri dishes with bacteria spoil into petri dishes in 15 seconds
     - [space-age] brains, meat and guts spoil into dried meat, which is now an ingredient in several types of worker food and cannot be made any other way
     - [space-age] Manure spoils into rich clay
-    - [space-age] Fish eggs of all tiers spoil into fishmeal
     - [space-age] Fawogae substrate spoils into fawogae spores
     - [space-age] All perfect sample ingredients and snarer hearts spoil into rich biocrud, which can be reprocessed into giving small chances of high-tech AL products
     - [space-age] mova, cellulose, lignin, mukmoux fat, organics, agar, seed extract, pineal glands, gas bladders, photophores, animal eyes, arqad propolis, urea and yotoi leaves spoil into biocrud, which can be reprocessed into a variety of AL products
@@ -44,7 +54,7 @@ Date: 2024-11-4
     - [space-age] Blood meal spoils into fiberboard
     - [space-age] Charged auogs and dingrits spoil into their uncharged forms
     - [space-age] Arqad nests of all types spoil into their original animal (which is somehow still alive)
-    - [space-age] Sea sponge sprouts, yotoi fruit, and tree seedlings of all tiers spoil down a tier, then at tier 1 spoil into quartz, yotoi seeds and tree seeds respectively.
+    - [space-age] Sea sponge sprouts, yotoi fruit, fish eggs, and tree seedlings of all tiers spoil down a tier, then at tier 1 spoil into quartz, yotoi seeds, fishmeal and tree seeds respectively.
     - [space-age] Organ printing stage 3 synthetic organs now spoil into rich biocrud.
     - [space-age] High energy waste 2 now spoils into high energy waste 1.
     - [space-age] Clean mova now spoils back into mova.
