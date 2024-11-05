@@ -124,7 +124,7 @@ for _, food in pairs(meaty_foods) do
     food:add_ingredient {type = "item", name = "dried-meat", amount = 15}
 end
 
-ITEM("native-flora"):spoil("floraspollinin", 45 * minute)
+ITEM("native-flora"):spoil("floraspollinin", 200 * minute)
 
 ITEM("native-flora").fuel_value = "175kJ"
 ITEM("native-flora").fuel_category = "biomass"

@@ -43,7 +43,7 @@ ITEM {
     },
     fuel_value = "450kJ",
     fuel_category = "biomass"
-}:spoil("biomass", 45 * minute)
+}:spoil("biomass", 200 * minute)
 
 RECIPE {
     type = "item",
