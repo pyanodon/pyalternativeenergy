@@ -10,6 +10,7 @@ Date: ?
     - [space-age] Added a new recipe to reprocess floraspollinin in the compressor.
     - [space-age] Sped up the floraspollinin reprocessing recipe from 10 seconds -> 2 seconds.
     - [space-age] Added a new recipe to process biopolymer into biocrud.
+    - The "void" fluid is now hidden from factoriopedia. (This fluid is used only by the thermosolar mk04 script to provide energy during the daytime)
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.1
 Date: 2024-11-4
