@@ -221,7 +221,6 @@ ITEM("charged-dingrit"):spoil("dingrits", 6 * hour)
 -- High tech
 
 ITEM("collagen"):spoil("urea", 10 * minute)
-ITEM("blood-meal"):spoil("fiberboard", 16 * hour)
 ITEM("myoglobin"):spoil("meat", 12 * minute)
 ITEM("resilin"):spoil("myoglobin", 444 * minute)
 ITEM("albumin"):spoil("urea", 10 * minute)
