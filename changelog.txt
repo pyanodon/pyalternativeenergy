@@ -2,10 +2,11 @@
 Version: 3.1.4
 Date: ?
   Bugfixes:
-    - Fix broken check for decay feature flag  
+    - [space-age] Fixed broken check for decay feature flag.
+    - [space-age] Fixed that incubated petri dishes spoiled in 1 tick.
   Locale:
     - Fix spelling issue in description of steam-turbine-mk03.
-    - Fix spelling issue in description of decay setting (PR from Ecoround)
+    - [space-age] Fix spelling issue in description of decay setting (PR from Ecoround)
   Translation:
     - Update RU translation (PR from Astorin)
 ---------------------------------------------------------------------------------------------------

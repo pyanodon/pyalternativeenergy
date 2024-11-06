@@ -78,7 +78,7 @@ ITEM("high-energy-waste-1"):spoil("ash", 5 * minute)
 
 -- alien life
 
-ITEM("petri-dish-bacteria"):spoil("petri-dish", 15 * second)
+ITEM("petri-dish-bacteria"):spoil("petri-dish", 45 * second)
 ITEM("fawogae-substrate"):spoil("fawogae-spore", minute * 10)
 
 ITEM("brain"):spoil("dried-meat", 2 * hour)
