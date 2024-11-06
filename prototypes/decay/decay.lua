@@ -1,3 +1,8 @@
+if not feature_flags.spoiling then return end
+if not settings.startup["py-enable-decay"].value then
+    return
+end
+
 RECIPE {
     name = "floraspollinin-reprocessing",
     type = "recipe",

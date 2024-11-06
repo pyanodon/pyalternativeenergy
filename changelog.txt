@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.6
+Date: ?
+  Changes:
+    - [space-age] Hid certain spoilage-related items and recipes from factoriopedia if the setting is disabled.
+---------------------------------------------------------------------------------------------------
 Version: 3.1.4
 Date: 2024-11-5
   Bugfixes:
