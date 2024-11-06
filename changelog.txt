@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.4
-Date: ?
+Date: 2024-11-5
   Bugfixes:
     - [space-age] Fixed broken check for decay feature flag.
     - [space-age] Fixed that incubated petri dishes spoiled in 1 tick.
