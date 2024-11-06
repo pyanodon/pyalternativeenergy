@@ -45,6 +45,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-7.8, -7.8}, {7.8, 7.8}},
     selection_box = {{-8.0, -8.0}, {8.0, 8.0}},
+    forced_symmetry = "diagonal-pos",
     match_animation_speed_to_activity = false,
     module_slots = 0,
     --allowed_effects = {'speed', 'consumption'},
