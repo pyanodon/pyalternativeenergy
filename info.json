@@ -12,8 +12,11 @@
     "pyhightech >= 1.7.7",
     "? enable-all-feature-flags",
     "~ pyalternativeenergygraphics",
-    "! omnimatter_energy",
-    "(?) pyindustry"
+    "(?) pyindustry",
+    "! wret-beacon-rebalance-mod",
+    "! BigBags",
+    "! ResearchFog",
+    "! omnimatter_energy"
   ],
   "package": {
     "ignore": [],
