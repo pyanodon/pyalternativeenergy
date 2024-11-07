@@ -81,9 +81,9 @@ ITEM("high-energy-waste-1"):spoil("ash", 5 * minute)
 ITEM("petri-dish-bacteria"):spoil("petri-dish", 45 * second)
 ITEM("fawogae-substrate"):spoil("fawogae-spore", minute * 10)
 
-ITEM("brain"):spoil("dried-meat", 2 * hour)
 ITEM("meat"):spoil("dried-meat", 4 * hour)
 ITEM("guts"):spoil("dried-meat", 8 * hour)
+ITEM("brain"):spoil("dried-meat", 16 * hour)
 
 ITEM("manure"):spoil("rich-clay", 5.5 * hour)
 

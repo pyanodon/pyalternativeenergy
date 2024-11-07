@@ -2,7 +2,8 @@
 Version: 3.1.5
 Date: ?
   Changes:
-    - Made most crafting machines flippable
+    - Made most crafting machines flippable.
+    - [space-age] In order to improve the user-experience with caravans: Brains now spoil in 16 hours instead of 2 hours.
     - [space-age] Hid certain spoilage-related items and recipes from factoriopedia if the setting is disabled.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.4
