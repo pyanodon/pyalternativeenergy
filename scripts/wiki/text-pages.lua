@@ -1,6 +1,3 @@
-Wiki = {}
-Wiki.events = {}
-
 py.on_event(py.events.on_init(), function()
     remote.call("pywiki", "add_section", "alternativeenergy")
 
