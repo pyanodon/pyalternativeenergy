@@ -212,9 +212,9 @@ ITEM("arqad-egg-nest-2"):spoil("ulric", 3 * minute)
 ITEM("arqad-egg-nest-3"):spoil("korlex", 2 * minute)
 ITEM("arqad-egg-nest-4"):spoil("simik", 1 * minute)
 
-ITEM("wood-seedling-mk04"):spoil("wood-seeds-mk03", 6 * hour)
-ITEM("wood-seedling-mk03"):spoil("wood-seeds-mk02", 4 * hour)
-ITEM("wood-seedling-mk02"):spoil("wood-seeds", 2 * hour)
+ITEM("wood-seedling-mk04"):spoil("wood-seeds-mk04", 6 * hour)
+ITEM("wood-seedling-mk03"):spoil("wood-seeds-mk03", 4 * hour)
+ITEM("wood-seedling-mk02"):spoil("wood-seeds-mk02", 2 * hour)
 ITEM("wood-seedling"):spoil("wood-seeds", hour)
 
 ITEM("charged-auog"):spoil("auog", 4 * hour)

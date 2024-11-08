@@ -4,7 +4,8 @@ Date: ||||||||||||
   Changes:
     - Fixed that steam turbines were 2x as efficent compared to 1.1.
     - Fixed inconsistent naming scheme for the numal modules. Resolves https://github.com/pyanodon/pybugreports/issues/685
-    - Updated Uk translation
+    - Updated Uk translation (by bootseller)
+    - Fixed tree saplings MK2, MK3, MK4 spoiling into the incorrect tier of tree seed.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.5
 Date: 2024-11-7
