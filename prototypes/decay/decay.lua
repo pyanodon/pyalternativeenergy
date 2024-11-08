@@ -119,7 +119,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "ga",
-    stack_size = 1000
+    stack_size = data.raw.item["biomass"].stack_size
 }:spoil("biomass", 2 * hour)
 
 ITEM {
@@ -137,7 +137,7 @@ ITEM {
     flags = {},
     subgroup = "py-alienlife-items",
     order = "ga",
-    stack_size = 1000
+    stack_size = data.raw.item["biomass"].stack_size
 }:spoil("biocrud", 3 * hour)
 
 RECIPE {
@@ -256,5 +256,5 @@ ITEM {
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "h",
-    stack_size = 10,
+    stack_size = 100,
 }

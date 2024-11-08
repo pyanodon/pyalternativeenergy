@@ -33,7 +33,7 @@ RECIPE("jacket-bio-ore")
 ITEM("animal-eye"):spoil("biomass", 30 * minute)
 RECIPE("acetaldehyde-1"):replace_ingredient("plastic-bar", {type = "item", name = "barrel", amount = 1})
 RECIPE("acetaldehyde-2"):replace_ingredient("plastic-bar", {type = "item", name = "barrel", amount = 1})
-ITEM("acetaldehyde"):spoil("barrel", 30 * second)
+ITEM("acetaldehyde"):spoil("barrel", 30 * second).stack_size = data.raw.item["barrel"].stack_size
 ITEM("time-crystal"):spoil("time-crystal", hour)
 ITEM("bio-ore"):spoil("biocarnation", hour)
 ITEM("erbium"):spoil("er-oxide", hour)
@@ -188,8 +188,8 @@ ITEM("animal-eye"):spoil("biocrud", 15 * minute)
 ITEM("arqad-propolis"):spoil("biocrud", 13 * minute)
 ITEM("yotoi-leaves"):spoil("biocrud", 13 * minute)
 
-ITEM("mova"):spoil("biocrud", hour)
-ITEM("washed-mova"):spoil("mova", minute)
+ITEM("mova"):spoil("biocrud", hour).stack_size = 100
+ITEM("washed-mova"):spoil("mova", minute).stack_size = 100
 
 ITEM("denatured-seismite"):spoil("nonconductive-phazogen", 41 * minute)
 ITEM("nonconductive-phazogen"):spoil("negasium", 39 * minute)
@@ -197,20 +197,20 @@ ITEM("negasium"):spoil("paragen", 37 * minute)
 ITEM("paragen"):spoil("solidified-sarcorus", 31 * minute)
 ITEM("solidified-sarcorus"):spoil("chitin", 29 * minute)
 
-ITEM("sea-sponge-sprouts-mk04"):spoil("sea-sponge-sprouts-mk03", 2 * minute)
-ITEM("sea-sponge-sprouts-mk03"):spoil("sea-sponge-sprouts-mk02", 4 * minute)
-ITEM("sea-sponge-sprouts-mk02"):spoil("sea-sponge-sprouts", 8 * minute)
-ITEM("sea-sponge-sprouts"):spoil("ore-quartz", 16 * minute)
+ITEM("sea-sponge-sprouts-mk04"):spoil("sea-sponge-sprouts-mk03", 2 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
+ITEM("sea-sponge-sprouts-mk03"):spoil("sea-sponge-sprouts-mk02", 4 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
+ITEM("sea-sponge-sprouts-mk02"):spoil("sea-sponge-sprouts", 8 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
+ITEM("sea-sponge-sprouts"):spoil("ore-quartz", 16 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
 
 ITEM("yotoi-fruit-mk04"):spoil("yotoi-fruit-mk03", 32 * minute)
 ITEM("yotoi-fruit-mk03"):spoil("yotoi-fruit-mk02", 16 * minute)
 ITEM("yotoi-fruit-mk02"):spoil("yotoi-fruit", 8 * minute)
 ITEM("yotoi-fruit"):spoil("yotoi-seeds", 4 * minute)
 
-ITEM("arqad-egg-nest"):spoil("vrauks", 4 * minute)
-ITEM("arqad-egg-nest-2"):spoil("ulric", 3 * minute)
-ITEM("arqad-egg-nest-3"):spoil("korlex", 2 * minute)
-ITEM("arqad-egg-nest-4"):spoil("simik", 1 * minute)
+ITEM("arqad-egg-nest"):spoil("vrauks", 4 * minute).stack_size = data.raw.module["vrauks"].stack_size
+ITEM("arqad-egg-nest-2"):spoil("ulric", 3 * minute).stack_size = data.raw.module["ulric"].stack_size
+ITEM("arqad-egg-nest-3"):spoil("korlex", 2 * minute).stack_size = data.raw.module["korlex"].stack_size
+ITEM("arqad-egg-nest-4"):spoil("simik", 1 * minute).stack_size = data.raw.module["simik"].stack_size
 
 ITEM("wood-seedling-mk04"):spoil("wood-seeds-mk04", 6 * hour)
 ITEM("wood-seedling-mk03"):spoil("wood-seeds-mk03", 4 * hour)
