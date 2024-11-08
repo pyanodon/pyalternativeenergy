@@ -207,10 +207,10 @@ ITEM("yotoi-fruit-mk03"):spoil("yotoi-fruit-mk02", 16 * minute)
 ITEM("yotoi-fruit-mk02"):spoil("yotoi-fruit", 8 * minute)
 ITEM("yotoi-fruit"):spoil("yotoi-seeds", 4 * minute)
 
-ITEM("arqad-egg-nest"):spoil("vrauks", 4 * minute).stack_size = data.raw.module["vrauks"].stack_size
-ITEM("arqad-egg-nest-2"):spoil("ulric", 3 * minute).stack_size = data.raw.module["ulric"].stack_size
-ITEM("arqad-egg-nest-3"):spoil("korlex", 2 * minute).stack_size = data.raw.module["korlex"].stack_size
-ITEM("arqad-egg-nest-4"):spoil("simik", 1 * minute).stack_size = data.raw.module["simik"].stack_size
+ITEM("arqad-egg-nest"):spoil("vrauks", 40 * minute).stack_size = data.raw.module["vrauks"].stack_size
+ITEM("arqad-egg-nest-2"):spoil("ulric", 30 * minute).stack_size = data.raw.module["ulric"].stack_size
+ITEM("arqad-egg-nest-3"):spoil("korlex", 20 * minute).stack_size = data.raw.module["korlex"].stack_size
+ITEM("arqad-egg-nest-4"):spoil("simik", 10 * minute).stack_size = data.raw.module["simik"].stack_size
 
 ITEM("wood-seedling-mk04"):spoil("wood-seeds-mk04", 6 * hour)
 ITEM("wood-seedling-mk03"):spoil("wood-seeds-mk03", 4 * hour)
