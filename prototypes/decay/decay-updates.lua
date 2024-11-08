@@ -228,3 +228,7 @@ ITEM("resilin"):spoil("myoglobin", 444 * minute)
 ITEM("albumin"):spoil("urea", 10 * minute)
 ITEM("urea"):spoil("biocrud", 3 * minute)
 RECIPE("blood-to-urea"):replace_ingredient("blood", {type = "fluid", name = "blood", amount = 250})
+
+for _, recipe in pairs(data.raw.recipe) do
+    recipe.result_is_always_fresh = true
+end
