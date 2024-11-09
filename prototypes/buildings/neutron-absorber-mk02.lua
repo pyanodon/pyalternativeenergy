@@ -104,7 +104,7 @@ ENTITY {
         },
     },
     fluid_boxes = table.deepcopy(data.raw["assembling-machine"]["neutron-absorber-mk01"].fluid_boxes),
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+    impact_category = "metal-large",
     fast_replaceable_group = "neutron-absorber"
 }
 

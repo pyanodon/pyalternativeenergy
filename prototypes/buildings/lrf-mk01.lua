@@ -167,7 +167,7 @@ ENTITY {
             pipe_connections = {{flow_direction = "output", position = {2.5, 7.5}, direction = defines.direction.south}}
         },
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+    impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 2.0},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 0.70},

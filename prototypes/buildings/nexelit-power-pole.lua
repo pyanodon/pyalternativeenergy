@@ -55,7 +55,7 @@ ENTITY {
   drawing_box = {{-0.5, -2.8}, {0.5, 0.5}},
   maximum_wire_distance = 18,
   supply_area_distance = 6.5,
-  vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+  impact_category = "metal-large",
   pictures =
   {
     layers =

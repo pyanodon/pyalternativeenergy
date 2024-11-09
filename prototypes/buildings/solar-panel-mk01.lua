@@ -82,6 +82,6 @@ ENTITY {
     }
   },
   integration_patch_render_layer = "object",
-  vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+  impact_category = "metal-large",
   production = "1.5MW"
 }

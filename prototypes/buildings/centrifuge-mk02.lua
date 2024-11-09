@@ -180,7 +180,7 @@ ENTITY {
             pipe_connections = {{flow_direction = "output", position = {-1.0, -3.0}, direction = defines.direction.north}}
         },
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+    impact_category = "metal-large",
     working_sound =
     {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25},

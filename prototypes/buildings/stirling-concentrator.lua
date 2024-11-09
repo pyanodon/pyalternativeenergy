@@ -98,7 +98,7 @@ ENTITY {
         pipe_connections = {},
         production_type = "output"
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+    impact_category = "metal-large",
     placeable_by = {item = "stirling-concentrator", count = 1},
     pictures = {
         north = {

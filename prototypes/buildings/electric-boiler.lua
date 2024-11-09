@@ -71,10 +71,7 @@ ENTITY {
     },
     max_health = 200,
     corpse = "big-remnants",
-    vehicle_impact_sound = {
-        filename = "__base__/sound/car-metal-impact-1.ogg",
-        volume = 0.65
-    },
+    impact_category = "metal",
     fixed_recipe = "electric-boiler-water-to-steam",
     fluid_boxes = {
         {
