@@ -309,10 +309,10 @@ RECIPE {
     name = "jerky-to-phytoplankton",
     category = "plankton",
     enabled = false,
-    energy_required = 30,
+    energy_required = 10,
     ingredients = {
         {type = "fluid", name = "water",      amount = 500},
-        {type = "item",  name = "dried-meat", amount = 1},
+        {type = "item",  name = "dried-meat", amount = 3},
     },
     results = {
         {type = "fluid", name = "phytoplankton", amount = 10},
