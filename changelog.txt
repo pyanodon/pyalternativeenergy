@@ -12,6 +12,8 @@ Date: ?
     - [space-age] Added 2 biocrud to the seaweed -> fertilizer recipe.
     - Carbon black now has a fuel value.
     - Sped up the jerky -> plankton recipe by a factor of three. Increased jerky input by a factor of three.
+    - Added (MHD) to the localised name of the magnetohydrodynamic generator to ease in searching.
+    - Decreased the internal fluidbox size of the magnetohydrodynamic generator from 3000 -> 400.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.6
 Date: 2024-11-7
