@@ -258,3 +258,24 @@ ITEM {
     order = "h",
     stack_size = 100,
 }
+
+RECIPE {
+    name = "biocrud-to-wastewater",
+    type = "recipe",
+    category = "pulp",
+    ingredients = {
+        {type = "item",  name = "biocrud",   amount = 5},
+        {type = "fluid", name = "water",     amount = 250},
+        {type = "fluid", name = "nitrogen",  amount = 50},
+        {type = "fluid", name = "b-molasse", amount = 15},
+    },
+    results = {
+        {type = "fluid", name = "waste-water", amount = 250},
+        {type = "fluid", name = "a-molasse",   amount = 5}, -- should not be ingnored by productivity
+        {type = "item",  name = "biocrud",     amount = 1,  probability = 0.5, ignored_by_stats = 2}
+    },
+    main_product = "waste-water",
+    allow_productivity = true,
+    enabled = false,
+    energy_required = 5
+}:add_unlock("ethanol")
