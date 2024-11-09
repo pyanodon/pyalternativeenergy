@@ -86,7 +86,6 @@ ENTITY {
                 {flow_direction = "input-output", position = {-1.0, 0}, direction = defines.direction.west}
             },
             volume = 200,
-            base_level = -1,
             filter = "water"
         },
         {
