@@ -4,15 +4,17 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fusion-reactor-mk01",     amount = 1},
-        {type = "item", name = "re-magnet",               amount = 100},
-        {type = "item", name = "intelligent-unit",        amount = 50},
-        {type = "item", name = "nano-wires",              amount = 400},
-        {type = "item", name = "super-alloy",             amount = 50},
-        {type = "item", name = "super-steel",             amount = 100},
-        {type = "item", name = "metastable-quasicrystal", amount = 5},
-        {type = "item", name = "sc-engine",               amount = 2},
-        {type = "item", name = "mechanical-parts-04",     amount = 5}
+        {type = "item", name = "fusion-reactor-mk01",     amount = 10},
+        {type = "item", name = "re-magnet",               amount = 1000},
+        {type = "item", name = "intelligent-unit",        amount = 500},
+        {type = "item", name = "nano-wires",              amount = 4000},
+        {type = "item", name = "super-alloy",             amount = 500},
+        {type = "item", name = "super-steel",             amount = 1000},
+        {type = "item", name = "metastable-quasicrystal", amount = 50},
+        {type = "item", name = "sc-engine",               amount = 20},
+        {type = "item", name = "sc-unit",                 amount = 200},
+        {type = "item", name = "hts-coil",                amount = 4000},
+        {type = "item", name = "mechanical-parts-04",     amount = 50}
     },
     results = {
         {type = "item", name = "mdh", amount = 1}
