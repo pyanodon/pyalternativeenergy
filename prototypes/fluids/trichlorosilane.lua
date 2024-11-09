@@ -21,7 +21,6 @@ FLUID {
     icon = "__pyalternativeenergygraphics__/graphics/icons/trichlorosilane.png",
     icon_size = 64,
     default_temperature = 15,
-    base_flow_rate = 100,
     --heat_capacity = "1kJ",
     base_color = {r = 0.407, g = 0.494, b = 0.494},
     flow_color = {r = 1, g = 1, b = 1},

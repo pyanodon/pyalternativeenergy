@@ -20,7 +20,6 @@ FLUID {
 	icon = "__pyalternativeenergygraphics__/graphics/icons/phosphorus-trichloride.png",
 	icon_size = 64,
 	default_temperature = 15,
-	base_flow_rate = 100,
 	heat_capacity = "1kJ",
 	base_color = {r = 1, g = 1, b = 0},
 	flow_color = {r = 1, g = 1, b = 1},
