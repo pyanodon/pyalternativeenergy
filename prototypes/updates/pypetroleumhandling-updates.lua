@@ -125,3 +125,5 @@ data.raw["assembling-machine"]["upgrader-mk04"].energy_usage            = "4MW"
 data.raw.item["carbon-black"].fuel_value                                = "2.5MJ"
 data.raw.item["carbon-black"].fuel_category                             = "biomass"
 data.raw.item["carbon-black"].fuel_emissions_multiplier                 = 3.5
+data.raw.item["carbon-black"].fuel_acceleration_multiplier              = 0.8
+data.raw.item["carbon-black"].fuel_top_speed_multiplier                 = 0.8
