@@ -6,6 +6,7 @@ Date: ?
     - [space-age] Set the `result_is_always_fresh = true` flag for every recipe in the game.
     - [space-age] Increased spoilage timers for arqad nest mk01, mk02, mk03, and mk04 from 1m, 2m, 3m, 4m -> 10m, 20m, 30m, 40m.
     - [space-age] Added a new py2 recipe to convert biocrud into wastewater.
+    - [space-age] Added a new logistics science recipe to convert biocrud into bio oil, propene, and syngas.
     - Carbon black now has a fuel value.
     - Sped up the jerky -> plankton recipe by a factor of three. Increased jerky input by a factor of three.
 ---------------------------------------------------------------------------------------------------

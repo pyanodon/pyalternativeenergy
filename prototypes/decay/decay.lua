@@ -271,7 +271,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "waste-water", amount = 250},
-        {type = "fluid", name = "a-molasse",   amount = 5}, -- should not be ingnored by productivity
+        {type = "fluid", name = "a-molasse",   amount = 5}, -- should not be ignored by productivity
         {type = "item",  name = "biocrud",     amount = 1,  probability = 0.5, ignored_by_stats = 2}
     },
     main_product = "waste-water",
@@ -279,3 +279,28 @@ RECIPE {
     enabled = false,
     energy_required = 5
 }:add_unlock("ethanol")
+
+RECIPE {
+    name = "biocrud-pyrolysis",
+    type = "recipe",
+    ingredients = {
+        {type = "item",  name = "biocrud",     amount = 10},
+        {type = "item",  name = "log",         amount = 2},
+        {type = "item",  name = "redhot-coke", amount = 1},
+        {type = "fluid", name = "steam",       amount = 200, minimum_temperature = 500},
+        {type = "fluid", name = "vacuum",      amount = 50},
+    },
+    results = {
+        {type = "fluid", name = "bio-oil",        amount = 30},
+        {type = "fluid", name = "syngas",         amount = 120},
+        {type = "fluid", name = "tar",            amount = 230},
+        {type = "fluid", name = "carbon-dioxide", amount = 340},
+        {type = "item",  name = "carbon-black",   amount = 5},
+    },
+    category = "distilator",
+    main_product = "syngas",
+    localised_name = {"recipe-name.biocrud-pyrolysis"},
+    localised_description = {"recipe-description.biocrud-pyrolysis"},
+    enabled = false,
+    energy_required = 12,
+}:add_unlock("coke-mk02")
