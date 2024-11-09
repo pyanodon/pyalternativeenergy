@@ -87,6 +87,8 @@ ITEM("brain"):spoil("dried-meat", 16 * hour)
 
 ITEM("manure"):spoil("rich-clay", 5.5 * hour)
 
+RECIPE("fertilizer-3"):add_ingredient{type = "item", name = "biocrud", amount = 2}
+
 local meaty_foods = {
     "workers-food",
     "workers-food-02",
