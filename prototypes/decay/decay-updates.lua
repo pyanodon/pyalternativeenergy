@@ -232,3 +232,7 @@ RECIPE("blood-to-urea"):replace_ingredient("blood", {type = "fluid", name = "blo
 for _, recipe in pairs(data.raw.recipe) do
     recipe.result_is_always_fresh = true
 end
+
+-- Raw ores
+
+ITEM("redhot-coke"):spoil("coke", 2 * hour)
