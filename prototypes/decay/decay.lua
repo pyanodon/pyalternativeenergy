@@ -147,9 +147,9 @@ RECIPE {
     enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "item",  name = "biomass",       amount = 15},
-        {type = "item",  name = "biocrud",       amount = 5},
-        {type = "fluid", name = "steam",         amount = 10},
+        {type = "item",  name = "biomass",       amount = 8},
+        {type = "item",  name = "biocrud",       amount = 3},
+        {type = "fluid", name = "steam",         amount = 10, minimum_temperature = 150},
         {type = "fluid", name = "phytoplankton", amount = 10},
     },
     allow_productivity = true,
@@ -190,8 +190,8 @@ RECIPE {
     enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "item",  name = "biomass",       amount = 15},
-        {type = "item",  name = "rich-biocrud",  amount = 5},
+        {type = "item",  name = "nacl-biomass",       amount = 8},
+        {type = "item",  name = "rich-biocrud",  amount = 3},
         {type = "fluid", name = "phytoplankton", amount = 10},
         {type = "fluid", name = "bacteria-2",    amount = 10},
     },
