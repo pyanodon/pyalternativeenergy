@@ -378,7 +378,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'neutron', amount = 1000, temperature = 5000},
         {type = 'fluid', name = 'helium', amount = 500},
-        {type = 'fluid', name = 'steam', amount = 5000, temperature = 150, catalyst_amount = 5000}
+        {type = 'fluid', name = 'steam', amount = 5000, temperature = 150, ignored_by_productivity = 5000, ignored_by_stats = 5000}
     },
     --main_product= "blanket",
     icon = '__pyhightechgraphics__/graphics/icons/fusion-antimatter.png',

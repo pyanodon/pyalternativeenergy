@@ -468,7 +468,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "time-crystal",     amount = 1},
-        {type = "item", name = "yag-laser-module", amount = 1, probability = 0.9, catalyst_amount = 1},
+        {type = "item", name = "yag-laser-module", amount = 1, probability = 0.9, ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     main_product = "time-crystal",
 }:add_unlock("intermetallics-mk04")

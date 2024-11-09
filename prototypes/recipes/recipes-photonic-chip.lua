@@ -153,7 +153,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "inverse-opal",     amount = 1},
-        {type = "item", name = "yag-laser-module", amount = 1, catalyst_amount = 1, probability = 0.9},
+        {type = "item", name = "yag-laser-module", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1, probability = 0.9},
     },
     main_product = "inverse-opal",
 }:add_unlock("photonics")
