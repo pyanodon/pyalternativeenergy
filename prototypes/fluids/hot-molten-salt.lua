@@ -10,7 +10,6 @@ FLUID {
     max_temperature = 5000,
     heat_capacity = "1kJ",
     gas_temperature = 5000,
-    pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     subgroup = "py-alternativeenergy-fluids",
     order = "c",

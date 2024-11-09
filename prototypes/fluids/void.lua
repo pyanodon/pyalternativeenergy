@@ -10,7 +10,6 @@ FLUID {
     max_temperature = 10000,
     heat_capacity = "32kJ",
     gas_temperature = -1,
-    pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     subgroup = "py-nuclear",
     order = "c",
