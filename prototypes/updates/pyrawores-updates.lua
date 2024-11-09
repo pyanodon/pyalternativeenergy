@@ -165,7 +165,7 @@ ITEM {
 	type = "item",
 	name = "nuclear-fuel",
 	icon = "__pyalternativeenergygraphics__/graphics/icons/po-210-nuclear-fuel.png",
-	icon_size = 64, icon_mipmaps = 1,
+	icon_size = 64,
 	pictures =
 	{
 		layers =
@@ -201,7 +201,7 @@ ITEM {
 	type = "item",
 	name = "used-nuclear-fuel",
 	icon = "__pyalternativeenergygraphics__/graphics/icons/used-po-210-nuclear-fuel.png",
-	icon_size = 64, icon_mipmaps = 4,
+	icon_size = 64,
 	pictures =
 	{
 		layers =

@@ -5,7 +5,7 @@ local sounds = require "__base__/prototypes/entity/sounds"
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-1",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -32,7 +32,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-2",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -59,7 +59,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-3",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -86,7 +86,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-4",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -113,7 +113,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-5",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -141,7 +141,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-6",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -169,7 +169,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-7",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -198,7 +198,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-8",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -227,7 +227,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-9",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -257,7 +257,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-10",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -287,7 +287,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-11",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -318,7 +318,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "mining-productivity-12",
-  icon_size = 256, icon_mipmaps = 4,
+  icon_size = 256,
   icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
   effects =
   {
@@ -989,7 +989,6 @@ data.raw.furnace["electric-furnace"].energy_source = {
 
 ITEM("space-science-pack", "tool"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
 ITEM("space-science-pack", "tool"):set("icon_size", 64)
-ITEM("space-science-pack", "tool"):set("icon_mipmaps", nil)
 
 data.raw.recipe["empty-boric-acid-barrel"].results[1].temperature = 10
 
