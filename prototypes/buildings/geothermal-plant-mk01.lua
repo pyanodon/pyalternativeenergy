@@ -79,9 +79,8 @@ ENTITY {
   },
   monitor_visualization_tint = {r = 78, g = 173, b = 255},
   --base_render_layer = "lower-object-above-shadow",
-  circuit_wire_connection_points = circuit_connector_definitions["geothermal-plant-mk01"].points,
-  circuit_connector_sprites = circuit_connector_definitions["geothermal-plant-mk01"].sprites,
-  circuit_wire_max_distance = default_circuit_wire_max_distance,
+  circuit_connector = circuit_connector_definitions["geothermal-plant-mk01"],
+  circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
   graphics_set = {
     animation = {
       layers = {
