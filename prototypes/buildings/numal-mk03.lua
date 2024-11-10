@@ -52,7 +52,6 @@ ENTITY {
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
     forced_symmetry = "diagonal-pos",
     draw_entity_info_icon_background = false,
-    match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"numal"},

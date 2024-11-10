@@ -48,7 +48,6 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
-    match_animation_speed_to_activity = false,
     energy_source = {
         type = "electric",
         usage_priority = "primary-output",

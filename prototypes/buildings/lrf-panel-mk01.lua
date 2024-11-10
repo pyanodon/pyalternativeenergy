@@ -107,7 +107,6 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-2.2, -4.8}, {2.2, 4.8}},
     selection_box = {{-2.5, -5.0}, {2.5, 5.0}},
-    match_animation_speed_to_activity = false,
     mode = "heat-fluid-inside",
     target_temperature = 5000,
     energy_source = {type = "void"},

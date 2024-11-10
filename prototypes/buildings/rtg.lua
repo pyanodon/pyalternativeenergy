@@ -43,7 +43,6 @@ ENTITY {
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    match_animation_speed_to_activity = false,
     energy_source =
     {
         type = "electric",
