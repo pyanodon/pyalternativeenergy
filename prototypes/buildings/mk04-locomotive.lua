@@ -49,7 +49,7 @@ ENTITY {
   collision_box = {{-0.6, -2.5}, {0.6, 2.5}},
   selection_box = {{-1, -3.0}, {1, 3.0}},
   --damaged_trigger_effect = hit_effects.entity(),
-  drawing_box = {{-1, -4}, {1, 3}},
+  drawing_box_vertical_extension = data.raw["locomotive"]["locomotive"].drawing_box_vertical_extension,
   alert_icon_shift = util.by_pixel(0, -24),
   weight = 900,
   max_speed = 1.7,

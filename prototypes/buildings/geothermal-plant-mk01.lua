@@ -39,7 +39,6 @@ ENTITY {
   dying_explosion = "big-explosion",
   collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
   selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-  --drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
   energy_source =
   {
     type = "electric",

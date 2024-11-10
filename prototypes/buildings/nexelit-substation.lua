@@ -46,7 +46,6 @@ ENTITY {
   collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
   selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   --damaged_trigger_effect = hit_effects.entity({{-0.5, -2.5}, {0.5, 0.5}}),
-  -- drawing_box = {{-1, -3}, {1, 1}},
   maximum_wire_distance = 60,
   supply_area_distance = 30,
   pictures =
