@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.7
-Date: ?
+Date: 2024-11-9
   Changes:
     - [space-age] Fixed that arqad nest mk04 would decay in 1 tick.
     - [space-age] Set the `result_is_always_fresh = true` flag for every recipe in the game.
