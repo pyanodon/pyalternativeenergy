@@ -2680,7 +2680,6 @@ ITEM {
     stack_size = 50,
     effect = {speed = 1, pollution = 1},
     limitation = {},
-    limitation_message_key = "numal"
 }
 
 ITEM {
@@ -2700,7 +2699,6 @@ ITEM {
     stack_size = 50,
     effect = {speed = 1.5, pollution = 1},
     limitation = {},
-    limitation_message_key = "numal"
 }
 
 ITEM {
@@ -2720,7 +2718,6 @@ ITEM {
     stack_size = 50,
     effect = {speed = 2, pollution = 1},
     limitation = {},
-    limitation_message_key = "numal"
 }
 
 ITEM {
@@ -2740,7 +2737,6 @@ ITEM {
     stack_size = 50,
     effect = {speed = 2.5, pollution = 1},
     limitation = {},
-    limitation_message_key = "numal"
 }
 
 ITEM {
