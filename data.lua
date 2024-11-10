@@ -202,8 +202,8 @@ require "prototypes.recipes.recipes-fluorine"
 -- ))
 
 -- (( ROBOTS ))--
-require "prototypes.robots.c-pynobot-mk03"
-require "prototypes.robots.l-pynobot-mk03"
+require "prototypes.robots.py-construction-robot-mk03"
+require "prototypes.robots.py-logistic-robot-mk03"
 
 -- (( BUILDINGS ))--
 require "prototypes.buildings.hawt-turbine-mk01"

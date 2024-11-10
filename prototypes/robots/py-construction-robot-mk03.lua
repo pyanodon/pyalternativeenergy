@@ -2,7 +2,7 @@ local sounds = require "__base__/prototypes/entity/sounds"
 
 RECIPE {
   type = "recipe",
-  name = "c-pynobot-mk03",
+  name = "py-construction-robot-mk03",
   energy_required = 15,
   category = "crafting-with-fluid",
   enabled = false,
@@ -16,37 +16,37 @@ RECIPE {
     {type = "item",  name = "ns-material",              amount = 1},
     {type = "item",  name = "low-density-structure",    amount = 3},
     {type = "item",  name = "biobattery",               amount = 1},
-    {type = "item",  name = "py-construction-robot-02", amount = 1},
+    {type = "item",  name = "py-construction-robot-mk02", amount = 1},
     {type = "item",  name = "electric-engine-unit",     amount = 1},
     {type = "item",  name = "gearbox-mk03",             amount = 1},
     {type = "fluid", name = "bio-oil",                  amount = 200},
   },
   results = {
-    {type = "item", name = "c-pynobot-mk03", amount = 1}
+    {type = "item", name = "py-construction-robot-mk03", amount = 1}
   }
 }
 
 ITEM {
   type = "item",
-  name = "c-pynobot-mk03",
+  name = "py-construction-robot-mk03",
   icon = "__pyalternativeenergygraphics__/graphics/icons/c-pynobot-mk03.png",
   icon_size = 64,
   flags = {},
   subgroup = "py-robots",
   order = "f",
-  place_result = "c-pynobot-mk03",
+  place_result = "py-construction-robot-mk03",
   stack_size = 50
 }
 
 ENTITY {
   type = "construction-robot",
-  name = "c-pynobot-mk03",
+  name = "py-construction-robot-mk03",
   icon = "__pyalternativeenergygraphics__/graphics/icons/c-pynobot-mk03.png",
   icon_size = 64,
   flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
   minable = {
     mining_time = 0.1,
-    result = "c-pynobot-mk03"
+    result = "py-construction-robot-mk03"
   },
   resistances = {{type = "fire", percent = 85}},
   max_health = 20,

@@ -6,8 +6,8 @@ TECHNOLOGY {
     order = "c-a",
     prerequisites = {"construction-robotics", "logistic-robotics"},
     effects = {
-        {type = "unlock-recipe", recipe = "l-pynobot-mk03"},
-        {type = "unlock-recipe", recipe = "c-pynobot-mk03"},
+        {type = "unlock-recipe", recipe = "py-logistic-robot-mk03"},
+        {type = "unlock-recipe", recipe = "py-construction-robot-mk03"},
         {type = "unlock-recipe", recipe = "py-roboport-mk03"},
     },
     unit = {

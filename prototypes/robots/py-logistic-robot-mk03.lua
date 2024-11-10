@@ -2,13 +2,13 @@ local sounds = require "__base__/prototypes/entity/sounds"
 
 RECIPE {
   type = "recipe",
-  name = "l-pynobot-mk03",
+  name = "py-logistic-robot-mk03",
   energy_required = 15,
   category = "crafting-with-fluid",
   enabled = false,
   ingredients = {
     {type = "item",  name = "processing-unit",       amount = 3},
-    {type = "item",  name = "py-logistic-robot-02",  amount = 1},
+    {type = "item",  name = "py-logistic-robot-mk02",  amount = 1},
     {type = "item",  name = "ns-material",           amount = 1},
     {type = "item",  name = "low-density-structure", amount = 4},
     {type = "item",  name = "biobattery",            amount = 1},
@@ -22,31 +22,31 @@ RECIPE {
     {type = "fluid", name = "bio-oil",               amount = 200},
   },
   results = {
-    {type = "item", name = "l-pynobot-mk03", amount = 1}
+    {type = "item", name = "py-logistic-robot-mk03", amount = 1}
   }
 }
 
 ITEM {
   type = "item",
-  name = "l-pynobot-mk03",
+  name = "py-logistic-robot-mk03",
   icon = "__pyalternativeenergygraphics__/graphics/icons/l-pynobot-mk03.png",
   icon_size = 64,
   flags = {},
   subgroup = "py-robots",
   order = "g",
-  place_result = "l-pynobot-mk03",
+  place_result = "py-logistic-robot-mk03",
   stack_size = 50
 }
 
 ENTITY {
   type = "logistic-robot",
-  name = "l-pynobot-mk03",
+  name = "py-logistic-robot-mk03",
   icon = "__pyalternativeenergygraphics__/graphics/icons/l-pynobot-mk03.png",
   icon_size = 64,
   flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
   minable = {
     mining_time = 0.1,
-    result = "l-pynobot-mk03"
+    result = "py-logistic-robot-mk03"
   },
   resistances = {{type = "fire", percent = 85}},
   max_health = 100,

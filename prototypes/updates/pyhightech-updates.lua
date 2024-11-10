@@ -107,12 +107,12 @@ RECIPE("hotair-crco-alloy"):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03
 
 RECIPE("personal-roboport-equipment"):add_ingredient {type = "item", name = "intermetallics", amount = 12}
 RECIPE("portable-gasoline-generator"):add_ingredient {type = "item", name = "intermetallics", amount = 8}
-RECIPE("py-construction-robot-01"):add_ingredient {type = "item", name = "intermetallics", amount = 3}
-RECIPE("py-logistic-robot-01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}
-RECIPE("py-construction-robot-02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 3}
-RECIPE("py-logistic-robot-02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}
-RECIPE("construction-robot-ht"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 2}:replace_ingredient("py-construction-robot-02", "c-pynobot-mk03")
-RECIPE("logistic-robot-ht"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 2}:replace_ingredient("py-logistic-robot-02", "l-pynobot-mk03")
+RECIPE("py-construction-robot-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 3}
+RECIPE("py-logistic-robot-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}
+RECIPE("py-construction-robot-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 3}
+RECIPE("py-logistic-robot-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}
+RECIPE("py-construction-robot-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 2}:replace_ingredient("py-construction-robot-mk02", "py-construction-robot-mk03")
+RECIPE("py-logistic-robot-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 2}:replace_ingredient("py-logistic-robot-mk02", "py-logistic-robot-mk03")
 RECIPE("lithium-chloride"):remove_ingredient("reo"):add_ingredient {type = "item", name = "lithium-hydroxide", amount = 1}
 RECIPE("nexelit-battery"):remove_unlock("py-accumulator-mk01"):add_unlock {"battery-mk02"}
 RECIPE("nanochip"):add_ingredient {type = "item", name = "milfe", amount = 1}
