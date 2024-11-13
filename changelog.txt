@@ -5,6 +5,11 @@ Date: ?
     - [space-age] Basic substrate no longer decays.
     - Increased the energy consumption of the gas furnace from 3MW to 6MW.
     - Changed internal name of py-satellite back to satellite.
+    - Antimonium drill now scales the health, mining area, module slots, and resource depletion % based on MK level.
+    - Antimonium drill no longer requires gas canisters can consume fuel directly.
+    - Increased the fuel consumption of the antimonium drill.
+    - Added smoke sources and glow effects to the antimonium drill.
+    - Migration notice: The old canister consuming antimonium drills still exist on the map. These will be migrated automatically when mined and re-built.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.7
 Date: 2024-11-9
