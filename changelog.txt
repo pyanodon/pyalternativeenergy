@@ -3,6 +3,7 @@ Version: 3.1.8
 Date: ?
   Changes:
     - [space-age] Basic substrate no longer decays.
+    - Increased the energy consumption of the gas furnace from 3MW to 6MW.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.7
 Date: 2024-11-9
