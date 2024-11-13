@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - [space-age] Basic substrate no longer decays.
     - Increased the energy consumption of the gas furnace from 3MW to 6MW.
+    - Changed internal name of py-satellite back to satellite.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.7
 Date: 2024-11-9
