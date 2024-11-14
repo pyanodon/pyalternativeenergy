@@ -12,6 +12,7 @@ Date: ?
     - Reduced pyanodon preset default richness modifier of antimony ore from 1000% to 300% in order to account for the new resource_drain_rate_percent modifier on higher tiers of antimony drill.
     - Buffed the tier 2 recipe for lightly n-doped silicon wafers from consuming 3 arsenic to 1 arsenic.
     - Removed unused acrylonitrile -> nylon recipe from the game files.
+    - Buffed the nxsb-alloy -> aniline recipe by reducing required number of nxsb-alloy from 4 -> 1. Also reduced nitrobenzene requirement by 50%.
     - Migration notice: The old canister consuming antimonium drills still exist on the map. These will be migrated automatically when mined and re-built.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.7
