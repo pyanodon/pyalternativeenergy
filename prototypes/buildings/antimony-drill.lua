@@ -96,10 +96,10 @@ local function old_energy_source()
 end
 
 local power_usage_by_tier = {
-    "15MW",
-    "45MW",
-    "95MW",
-    "145MW",
+    "10MW",
+    "30MW",
+    "60MW",
+    "100MW",
 }
 
 for i = 1, 4 do
@@ -157,7 +157,7 @@ for i = 1, 4 do
             },
             smoke = {
                 {
-                    name = "turbine-smoke",
+                    name = "fire-smoke",
                     deviation = {0.1, 0.1},
                     frequency = 25,
                     north_position = {0, -11.5},
@@ -251,8 +251,9 @@ for i = 1, 4 do
         legacy_entity.name = "antimonium-drill-mk0" .. i
         legacy_entity.energy_source = old_energy_source()
         legacy_entity.energy_usage = (500 * i) .. "kW"
-        legacy_entity.localised_name = {"", {"entity-name.antimony-drill-mk0" .. i}, " legacy"}
+        legacy_entity.localised_name = {"", {"entity-name.antimony-drill-mk0" .. i}, " (Legacy)"}
         legacy_entity.module_slots = 0
+        legacy_entity.hidden = true
         legacy_entity.resource_drain_rate_percent = nil
         legacy_entity.resource_searching_radius = 4.49
         legacy_entity.localised_description = {"entity-description.antimony-drill-mk0" .. i}

@@ -9,6 +9,7 @@ Date: ?
     - Antimonium drill no longer requires gas canisters can consume fuel directly.
     - Increased the fuel consumption of the antimonium drill.
     - Added smoke sources and glow effects to the antimonium drill.
+    - Reduced pyanodon preset default richness modifier of antimony ore from 1000% to 300% in order to account for the new resource_drain_rate_percent modifier on higher tiers of antimony drill.
     - Migration notice: The old canister consuming antimonium drills still exist on the map. These will be migrated automatically when mined and re-built.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.7
