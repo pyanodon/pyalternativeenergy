@@ -151,22 +151,6 @@ RECIPE("fiber"):set_fields {energy_required = 5}.category = "ball-mill"
 
 RECIPE {
     type = "recipe",
-    name = "nylon3",
-    category = "rectisol",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-        {type = "item",  name = "acrylonitrile", amount = 1},
-        {type = "fluid", name = "sulfuric-acid", amount = 100},
-        {type = "item",  name = "sb-oxide",      amount = 1},
-    },
-    results = {
-        {type = "item", name = "nylon", amount = 5}
-    }
-}:add_unlock("placeholder") -- CHANGE LATER!
-
-RECIPE {
-    type = "recipe",
     name = "light-n2",
     category = "gas-separator",
     enabled = false,
