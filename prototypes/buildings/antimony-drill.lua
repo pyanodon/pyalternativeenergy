@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "antimonium-drill-mk01",
+    name = "antimony-drill-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
@@ -11,17 +11,17 @@ RECIPE {
         {type = "item", name = "engine-unit",           amount = 2},
     },
     results = {
-        {type = "item", name = "antimonium-drill-mk01", amount = 1}
+        {type = "item", name = "antimony-drill-mk01", amount = 1}
     }
 }:add_unlock("antimony-mk01")
 
 RECIPE {
     type = "recipe",
-    name = "antimonium-drill-mk02",
+    name = "antimony-drill-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "antimonium-drill-mk01",   amount = 1},
+        {type = "item", name = "antimony-drill-mk01",   amount = 1},
         {type = "item", name = "neuroprocessor",          amount = 10},
         {type = "item", name = "advanced-circuit",        amount = 15},
         {type = "item", name = "tin-plate",               amount = 50},
@@ -32,17 +32,17 @@ RECIPE {
         {type = "item", name = "mechanical-parts-02",     amount = 1},
     },
     results = {
-        {type = "item", name = "antimonium-drill-mk02", amount = 1}
+        {type = "item", name = "antimony-drill-mk02", amount = 1}
     }
 }:add_unlock("machines-mk03")
 
 RECIPE {
     type = "recipe",
-    name = "antimonium-drill-mk03",
+    name = "antimony-drill-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "antimonium-drill-mk02", amount = 1},
+        {type = "item", name = "antimony-drill-mk02", amount = 1},
         {type = "item", name = "titanium-plate",        amount = 20},
         {type = "item", name = "super-steel",           amount = 20},
         {type = "item", name = "biopolymer",            amount = 15},
@@ -53,17 +53,17 @@ RECIPE {
         {type = "item", name = "mechanical-parts-03",   amount = 1},
     },
     results = {
-        {type = "item", name = "antimonium-drill-mk03", amount = 1}
+        {type = "item", name = "antimony-drill-mk03", amount = 1}
     }
 }:add_unlock("machines-mk04")
 
 RECIPE {
     type = "recipe",
-    name = "antimonium-drill-mk04",
+    name = "antimony-drill-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "antimonium-drill-mk03",         amount = 1},
+        {type = "item", name = "antimony-drill-mk03",         amount = 1},
         {type = "item", name = "science-coating",               amount = 15},
         {type = "item", name = "nbfe-alloy",                    amount = 5},
         {type = "item", name = "low-density-structure",         amount = 30},
@@ -77,7 +77,7 @@ RECIPE {
         {type = "item", name = "mechanical-parts-04",           amount = 1},
     },
     results = {
-        {type = "item", name = "antimonium-drill-mk04", amount = 1}
+        {type = "item", name = "antimony-drill-mk04", amount = 1}
     }
 }:add_unlock("machines-mk05")
 
@@ -103,7 +103,7 @@ local power_usage_by_tier = {
 }
 
 for i = 1, 4 do
-    local name = "antimonium-drill-mk0" .. i
+    local name = "antimony-drill-mk0" .. i
     local icon = "__pyalternativeenergygraphics__/graphics/icons/antimonium-drill-mk0" .. i .. ".png"
     local icon_size = 64
 
@@ -119,15 +119,15 @@ for i = 1, 4 do
         stack_size = 10
     }
 
-    ENTITY {
+    local entity = ENTITY {
         type = "mining-drill",
         name = name,
         icon = icon,
         icon_size = icon_size,
-        drawing_box_vertical_extension = 8,
+        drawing_box_vertical_extension = 7,
         flags = {"placeable-neutral", "player-creation"},
         minable = {mining_time = 1, result = name},
-        fast_replaceable_group = "antimonium-drill",
+        fast_replaceable_group = "antimony-drill",
         max_health = 700 * i,
         resource_categories = {"antimonium"},
         corpse = "big-remnants",
@@ -179,7 +179,7 @@ for i = 1, 4 do
             width = 12,
             height = 12
         },
-        circuit_connector = circuit_connector_definitions["antimonium-drill-mkxx"],
+        circuit_connector = circuit_connector_definitions["antimony-drill-mkxx"],
         circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
         graphics_set = {
             animation = {
@@ -245,4 +245,17 @@ for i = 1, 4 do
             apparent_volume = 2.5
         }
     }
+
+    if not mods["pystellarexpedition"] then
+        local legacy_entity = table.deepcopy(entity)
+        legacy_entity.name = "antimonium-drill-mk0" .. i
+        legacy_entity.energy_source = old_energy_source()
+        legacy_entity.energy_usage = (500 * i) .. "kW"
+        legacy_entity.localised_name = {"", {"entity-name.antimony-drill-mk0" .. i}, " legacy"}
+        legacy_entity.module_slots = 0
+        legacy_entity.resource_drain_rate_percent = nil
+        legacy_entity.resource_searching_radius = 4.49
+        legacy_entity.localised_description = {"entity-description.antimony-drill-mk0" .. i}
+        data:extend{legacy_entity}
+    end
 end

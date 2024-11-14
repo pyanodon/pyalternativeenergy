@@ -1,0 +1,38 @@
+{
+    "item": [
+        [
+            "antimonium-drill-mk01",
+            "antimony-drill-mk01"
+        ],
+        [
+            "antimonium-drill-mk02",
+            "antimony-drill-mk02"
+        ],
+        [
+            "antimonium-drill-mk03",
+            "antimony-drill-mk03"
+        ],
+        [
+            "antimonium-drill-mk04",
+            "antimony-drill-mk04"
+        ]
+    ],
+    "recipe": [
+        [
+            "antimonium-drill-mk01",
+            "antimony-drill-mk01"
+        ],
+        [
+            "antimonium-drill-mk02",
+            "antimony-drill-mk02"
+        ],
+        [
+            "antimonium-drill-mk03",
+            "antimony-drill-mk03"
+        ],
+        [
+            "antimonium-drill-mk04",
+            "antimony-drill-mk04"
+        ]
+    ]
+}
