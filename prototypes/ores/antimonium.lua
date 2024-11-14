@@ -39,7 +39,7 @@ ENTITY {
     autoplace = resource_autoplace.resource_autoplace_settings {
         name = "antimonium",
         order = "b",
-        base_density = 10,
+        base_density = 3, -- Typical density is 10. Antimony uses a density of 3 due to the resource_drain_rate_percent property on higher mk levels of antimony drills.
         base_spots_per_km2 = 1.25,
         has_starting_area_placement = false,
         random_spot_size_minimum = 2,

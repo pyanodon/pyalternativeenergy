@@ -3,13 +3,13 @@ RECIPE {
     name = "aniline-01",
     category = "hpf",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-        {type = "item",  name = "nxsb-alloy",   amount = 2},
+        {type = "item",  name = "nxsb-alloy",   amount = 1},
         {type = "fluid", name = "nitrobenzene", amount = 100},
     },
     results = {
-        {type = "fluid", name = "aniline", amount = 50},
+        {type = "fluid", name = "aniline", amount = 100},
     },
     main_product = "aniline",
 }:add_unlock("additives")

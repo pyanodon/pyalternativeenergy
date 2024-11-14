@@ -682,7 +682,7 @@ if mods["quality"] then
     }
 end
 
-data.raw.furnace["steel-furnace"].energy_usage = "3MW"
+data.raw.furnace["steel-furnace"].energy_usage = "6MW"
 data.raw.furnace["steel-furnace"].crafting_speed = 4
 data.raw.furnace["steel-furnace"].energy_source.type = "fluid"
 data.raw.furnace["steel-furnace"].energy_source.destroy_non_fuel_fluid = false
