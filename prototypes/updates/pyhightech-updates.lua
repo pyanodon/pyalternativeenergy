@@ -173,7 +173,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "item",  name = "silicon-wafer", amount = 5},
-        {type = "item",  name = "arsenic",       amount = 3},
+        {type = "item",  name = "arsenic",       amount = 1},
         {type = "fluid", name = "phosphine-gas", amount = 30},
         {type = "fluid", name = "etching",       amount = 20}
     },
