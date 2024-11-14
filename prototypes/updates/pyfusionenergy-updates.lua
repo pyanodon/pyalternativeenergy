@@ -30,7 +30,7 @@ RECIPE("compressor-mk01"):add_ingredient {type = "item", name = "intermetallics"
 RECIPE("jig-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}
 RECIPE("grease-table-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 7}
 RECIPE("mixer-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}
-RECIPE("py-heat-exchanger"):add_ingredient {type = "item", name = "intermetallics", amount = 5}:replace_ingredient("niobium-pipe", "pipe"):remove_unlock("machines-mk02"):add_unlock("nonrenewable-mk01"):add_ingredient {type = "item", name = "mechanical-parts-01", amount = 1}
+RECIPE("py-heat-exchanger"):add_ingredient {type = "item", name = "intermetallics", amount = 5}:replace_ingredient("niobium-pipe", "pipe"):remove_unlock("machines-mk02"):add_unlock("nonrenewable-mk01"):add_ingredient {type = "item", name = "mechanical-parts-01", amount = 1}:remove_ingredient("py-asphalt")
 
 
 RECIPE("agitator-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 1}
