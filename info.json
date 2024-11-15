@@ -11,7 +11,7 @@
     "pyalienlife >= 1.12.5",
     "pyhightech >= 1.7.7",
     "? enable-all-feature-flags",
-    "~ pyalternativeenergygraphics",
+    "~ pyalternativeenergygraphics >= 3.0.4",
     "(?) pyindustry",
     "! wret-beacon-rebalance-mod",
     "! BigBags",
