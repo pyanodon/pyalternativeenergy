@@ -131,6 +131,11 @@ for i = 1, 4 do
         max_health = 700 * i,
         resource_categories = {"antimonium"},
         corpse = "big-remnants",
+        effect_receiver = {
+            -- makes green modules 9x less effective in order to not trivalize the fluid fuel challenge.
+            -- 20% consumption is still possible with green beacons later on.
+            base_effect = {consumption = 9}
+        },
         dying_explosion = "big-explosion",
         collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
@@ -139,7 +144,12 @@ for i = 1, 4 do
         energy_source = {
             type = "fluid",
             effectivity = 1,
-            light_flicker = {color = {0, 0, 0}},
+            light_flicker = {
+                minimum_intensity = 1, -- a static sized light
+                maximum_intensity = 1,
+                light_intensity_to_size_coefficient = 1,
+                color = {1, 0.5, 0.5},
+            },
             burns_fluid = true,
             scale_fluid_usage = true,
             destroy_non_fuel_fluid = false,
@@ -148,12 +158,11 @@ for i = 1, 4 do
                 pipe_connections = {
                     {flow_direction = "input", position = {0, 3.0}, direction = defines.direction.south}
                 },
-                pipe_covers = py.pipe_covers(false, true, true, true),
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_covers = table.deepcopy(data.raw["pipe-to-ground"]["ht-pipes-to-ground"].fluid_box.pipe_covers),
                 production_type = "input",
             },
             emissions_per_minute = {
-                pollution = 20
+                pollution = 2
             },
             smoke = {
                 {
@@ -213,6 +222,23 @@ for i = 1, 4 do
                         shift = util.by_pixel(-0, -240),
                     },
                     {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/antimonium-drill/pipes.png",
+                        width = 224,
+                        height = 224,
+                        line_length = 1,
+                        repeat_count = 50,
+                        shift = util.by_pixel(-0, -0),
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/antimonium-drill/pipes-sh.png",
+                        width = 224,
+                        height = 224,
+                        line_length = 1,
+                        repeat_count = 50,
+                        draw_as_shadow = true,
+                        shift = util.by_pixel(-0, -0),
+                    },
+                    {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/antimonium-drill/sh.png",
                         width = 256,
                         height = 224,
@@ -256,6 +282,7 @@ for i = 1, 4 do
         legacy_entity.hidden = true
         legacy_entity.resource_drain_rate_percent = nil
         legacy_entity.resource_searching_radius = 4.49
+        legacy_entity.effect_receiver = nil
         legacy_entity.localised_description = {"entity-description.antimony-drill-mk0" .. i}
         data:extend{legacy_entity}
     end

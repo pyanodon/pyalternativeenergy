@@ -4,6 +4,9 @@ Date: ?
   Changes:
     - Removed asphalt from the heat exchanger recipe.
     - Removed asphalt from the ball mill mk04 recipe.
+    - Added light flicker effects to the antimony drill.
+    - Removed east-west direction lock for the antimony drill.
+    - Diluted the effects of green modules on the antimony drill by a factor of 9x.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.8
 Date: 2024-11-14
@@ -11,15 +14,15 @@ Date: 2024-11-14
     - [space-age] Basic substrate no longer decays.
     - Increased the energy consumption of the gas furnace from 3MW to 6MW.
     - Changed internal name of py-satellite back to satellite.
-    - Antimonium drill now scales the health, mining area, module slots, and resource depletion % based on MK level.
-    - Antimonium drill no longer requires gas canisters can consume fuel directly.
-    - Increased the fuel consumption of the antimonium drill.
-    - Added smoke sources and glow effects to the antimonium drill.
+    - Antimony drill now scales the health, mining area, module slots, and resource depletion % based on MK level.
+    - Antimony drill no longer requires gas canisters can consume fuel directly.
+    - Increased the fuel consumption of the antimony drill.
+    - Added smoke sources and glow effects to the antimony drill.
     - Reduced pyanodon preset default richness modifier of antimony ore from 1000% to 300% in order to account for the new resource_drain_rate_percent modifier on higher tiers of antimony drill.
     - Buffed the tier 2 recipe for lightly n-doped silicon wafers from consuming 3 arsenic to 1 arsenic.
     - Removed unused acrylonitrile -> nylon recipe from the game files.
     - Buffed the nxsb-alloy -> aniline recipe by reducing required number of nxsb-alloy from 4 -> 1. Also reduced nitrobenzene requirement by 50%.
-    - Migration notice: The old canister consuming antimonium drills still exist on the map. These will be migrated automatically when mined and re-built.
+    - Migration notice: The old canister consuming antimony drills still exist on the map. These will be migrated automatically when mined and re-built.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.7
 Date: 2024-11-9
