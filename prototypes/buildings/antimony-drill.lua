@@ -96,10 +96,10 @@ local function old_energy_source()
 end
 
 local power_usage_by_tier = {
+    "1MW",
+    "3MW",
+    "6MW",
     "10MW",
-    "30MW",
-    "60MW",
-    "100MW",
 }
 
 for i = 1, 4 do
