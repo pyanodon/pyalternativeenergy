@@ -150,11 +150,6 @@ RECIPE("biomass-molten-salt-04"):add_ingredient {type = "item", name = "biocrud"
 RECIPE("bacteria-2"):remove_unlock("microbiology-mk04"):add_unlock("microbiology-mk03")
 RECIPE("perfect-samples"):add_ingredient {type = "item", name = "rich-biocrud", amount = 3}
 
-ITEM("bioartificial-guts"):spoil("rich-biocrud", 5 * minute)
-ITEM("biomimetic-skin"):spoil("rich-biocrud", 5 * minute)
-ITEM("laboratory-grown-brain"):spoil("rich-biocrud", 5 * minute)
-ITEM("scafold-free-bones"):spoil("rich-biocrud", 5 * minute)
-ITEM("tissue-engineered-fat"):spoil("rich-biocrud", 5 * minute)
 ITEM("perfect-samples"):spoil("rich-biocrud", 30 * minute)
 ITEM("magnetic-organ"):spoil("biocrud", hour)
 ITEM("glandular-myocluster"):spoil("biocrud", hour)

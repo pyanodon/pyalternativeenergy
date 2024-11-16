@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.11
+Date: ?
+  Changes:
+    - [space-age] bioartificial-guts, biomimetic-skin, laboratory-grown-brain, scafold-free-bones, tissue-engineered-fat no longer decay.
+---------------------------------------------------------------------------------------------------
 Version: 3.1.10
 Date: 2024-11-15
   Changes:
-    - Fixed antimony drill consuming 10x as much power an intended.
+    - Fixed antimony drill consuming 10x as much power as intended.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.9
 Date: 2024-11-15
