@@ -5,7 +5,7 @@ TECHNOLOGY("hot-air-mk03"):add_prereq("coalplant-mk02")
 --BUILDINDS--
 
 RECIPE("retorter"):add_ingredient {type = "item", name = "burner-inserter", amount = 10}
-RECIPE("natural-gas-seep-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 4}
+RECIPE("natural-gas-derrick-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 4}
 RECIPE("oil-derrick-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}
 RECIPE("oil-sand-extractor-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}
 RECIPE("tar-extractor-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}
@@ -23,7 +23,7 @@ RECIPE("oil-boiler-mk01"):add_ingredient {type = "item", name = "intermetallics"
 --RECIPE("rhe"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("sulfur-mine"):add_ingredient {type = "item", name = "intermetallics", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 2}
 
-RECIPE("natural-gas-seep-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 4}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
+RECIPE("natural-gas-derrick-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 4}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 RECIPE("oil-derrick-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 RECIPE("oil-sand-extractor-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 RECIPE("tar-extractor-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
@@ -39,7 +39,7 @@ RECIPE("tholin-plant-mk02"):add_ingredient {type = "item", name = "self-assembly
 RECIPE("upgrader-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 RECIPE("guar-gum-plantation-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 
-RECIPE("natural-gas-seep-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 4}:add_ingredient {type = "item", name = "mechanical-parts-03", amount = 1}
+RECIPE("natural-gas-derrick-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 4}:add_ingredient {type = "item", name = "mechanical-parts-03", amount = 1}
 RECIPE("oil-derrick-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-03", amount = 1}
 RECIPE("oil-sand-extractor-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-03", amount = 1}
 RECIPE("tar-extractor-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-03", amount = 1}
@@ -56,7 +56,7 @@ RECIPE("upgrader-mk03"):add_ingredient {type = "item", name = "ns-material", amo
 RECIPE("guar-gum-plantation-mk03"):add_ingredient {type = "item", name = "ns-material", amount = 8}:add_ingredient {type = "item", name = "mechanical-parts-03", amount = 1}
 
 
-RECIPE("natural-gas-seep-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 4}:add_ingredient {type = "item", name = "sc-engine", amount = 1}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 1}
+RECIPE("natural-gas-derrick-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 4}:add_ingredient {type = "item", name = "sc-engine", amount = 1}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 1}
 RECIPE("oil-derrick-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 5}:add_ingredient {type = "item", name = "sc-engine", amount = 2}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 1}
 RECIPE("oil-sand-extractor-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 10}:add_ingredient {type = "item", name = "sc-engine", amount = 3}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 1}
 RECIPE("tar-extractor-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 5}:add_ingredient {type = "item", name = "sc-engine", amount = 2}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 1}
