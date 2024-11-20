@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.12
+Date: 2024-11-20
+  Changes:
+    - [space-age] Arqad nest MK 01 -> MK 04 no longer decays.
+    - [space-age] Urea no longer decays into biocrud.
+    - [space-age] Biocrud no longer decays into biomass.
+    - [space-age] Reverted the nerf to blood -> urea.
+---------------------------------------------------------------------------------------------------
 Version: 3.1.11
 Date: 2024-11-17
   Changes:

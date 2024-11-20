@@ -109,7 +109,6 @@ ITEM {
     name = "biocrud",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mip/biocrud-1.png",
     icon_size = 64,
-
     pictures = {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mip/biocrud-1.png", scale = 0.60},
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mip/biocrud-2.png", scale = 0.60},
@@ -120,14 +119,13 @@ ITEM {
     subgroup = "py-alienlife-items",
     order = "ga",
     stack_size = data.raw.item["biomass"].stack_size
-}:spoil("biomass", 2 * hour)
+}
 
 ITEM {
     type = "item",
     name = "rich-biocrud",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mip/rich-biocrud-1.png",
     icon_size = 64,
-
     pictures = {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mip/rich-biocrud-1.png", scale = 0.60},
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mip/rich-biocrud-2.png", scale = 0.60},
