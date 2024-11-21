@@ -121,10 +121,11 @@ for _, food in pairs(meaty_foods) do
             removed_count = removed_count + ingredient.amount
         end
     end
+    if removed_count == 0 then error(food.name .. " has no meat") end
     for meat in pairs(meat_to_remove) do
         food:remove_ingredient(meat)
     end
-    food:add_ingredient {type = "item", name = "dried-meat", amount = 15}
+    food:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}
 end
 
 ITEM("native-flora"):spoil("floraspollinin", 200 * minute)
