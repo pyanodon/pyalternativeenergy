@@ -6,6 +6,7 @@ Date: ?
     - Fixed missing English locale for LFR power plants. Resolves https://github.com/pyanodon/pybugreports/issues/740
     - Removed hyphens from various alloy and nuclear product names in order to aid in itemsearch qol.
     - Removed unused antimony sheet item from factoriopedia.
+    - The electric boiler steam recipe is now selectable in factory planner.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.12
 Date: 2024-11-20

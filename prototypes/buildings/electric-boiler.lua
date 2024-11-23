@@ -57,7 +57,7 @@ RECIPE {
         temperature = 250
     }},
     main_product = "steam"
-}
+}:add_unlock("energy-1")
 
 ENTITY {
     name = "py-electric-boiler",
