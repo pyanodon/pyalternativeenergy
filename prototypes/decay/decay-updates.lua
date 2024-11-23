@@ -89,9 +89,6 @@ ITEM("manure"):spoil("rich-clay", 5.5 * hour)
 RECIPE("fertilizer-3"):add_ingredient{type = "item", name = "biocrud", amount = 2}
 
 local meaty_foods = {
-    "workers-food",
-    "workers-food-02",
-    "workers-food-03",
     "kmauts-ration",
     "kmauts-ration-chitin",
     "arthurian-food-01",
@@ -126,6 +123,14 @@ for _, food in pairs(meaty_foods) do
         food:remove_ingredient(meat)
     end
     food:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}
+end
+
+for _, workers_food in pairs{
+    "workers-food",
+    "workers-food-02",
+    "workers-food-03",
+} do
+    RECIPE(workers_food):add_ingredient {type = "item", name = "dried-meat", amount = 5}
 end
 
 ITEM("native-flora"):spoil("floraspollinin", 200 * minute)
