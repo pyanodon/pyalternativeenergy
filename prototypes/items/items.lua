@@ -501,17 +501,6 @@ ITEM {
 
 ITEM {
     type = "item",
-    name = "sb-plate",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/sb-plate.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-rawores-antimony",
-    order = "aab",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
     name = "sb-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sb-oxide.png",
     icon_size = 64,
