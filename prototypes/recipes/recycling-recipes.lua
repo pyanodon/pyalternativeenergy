@@ -174,6 +174,27 @@ RECIPE {
     main_product = "water"
 }:add_unlock("electrolysis")
 
+RECIPE {
+    type = "recipe",
+    name = "filtration-dirty-water",
+    category = "carbonfilter",
+    enabled = false,
+    energy_required = 5.5,
+    ingredients = {
+        {type = "item",  name = "filtration-media",  amount = 1},
+        {type = "fluid", name = "dirty-water-light", amount = 500}
+    },
+    results = {
+        {type = "fluid", name = "water", amount = 500},
+        {type = "item",  name = "ash",   amount_min = 2, amount_max = 5}
+    },
+    main_product = "water",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/filtration-dirty-water.png",
+    icon_size = 32,
+    subgroup = "py-fluid-handling",
+    order = "g"
+}:add_unlock("microfibers")
+
 --coal gas
 
 RECIPE {

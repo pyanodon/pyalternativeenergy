@@ -7,6 +7,7 @@ Date: ?
     - Removed hyphens from various alloy and nuclear product names in order to aid in itemsearch qol.
     - Removed unused antimony sheet item from factoriopedia.
     - The electric boiler steam recipe is now selectable in factory planner.
+    - Fixed "Industrial Water Recycling" was not researchable. Resolves https://github.com/pyanodon/pybugreports/issues/742
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.12
 Date: 2024-11-20
