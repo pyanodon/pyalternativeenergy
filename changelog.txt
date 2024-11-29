@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.13
-Date: ?
+Date: 2024-11-29
   Changes:
     - [space-age] Reduced jerky consmption in the workers food recipes.
     - Fixed missing English locale for LFR power plants. Resolves https://github.com/pyanodon/pybugreports/issues/740
