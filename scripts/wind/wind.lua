@@ -78,14 +78,21 @@ Wind.events.on_built = function(event)
         local tick = game.tick
         local last_message = storage._last_cancel_creation_message or 0
         if last_message + seconds(1) < tick then
-            game.get_player(player_index).create_local_flying_text {
+            local cant_build_message = {
                 text = {
                     "cant-build-reason.entity-in-the-way",
                     (storage._last_failed_airspace or "")
                 },
                 position = position,
-                create_at_cursor = true
+                create_at_cursor = not not player_index
             }
+            if player_index then
+                game.get_player(player_index).create_local_flying_text(cant_build_message)
+            else
+                for _, player in pairs(game.connected_players) do
+                    player.create_local_flying_text(cant_build_message)
+                end
+            end
 
             storage._last_cancel_creation_message = game.tick
         end

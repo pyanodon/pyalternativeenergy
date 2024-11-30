@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.14
+Date: ?
+  Changes:
+    - Fixed a crash when building an aerial turbine via construction bots. Resolves https://github.com/pyanodon/pybugreports/issues/756
+---------------------------------------------------------------------------------------------------
 Version: 3.1.13
 Date: 2024-11-29
   Changes:
