@@ -4,6 +4,7 @@ local farms = require "scripts/farming"
 local events = defines.events
 
 require "scripts/wiki/text-pages"
+require "scripts/turbines"
 require "scripts/microwave-receiver"
 require "scripts/thermosolar/shared"
 require "scripts/thermosolar/solar-updraft-tower"
