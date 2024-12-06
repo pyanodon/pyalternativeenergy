@@ -26,6 +26,7 @@ py.on_event(py.events.on_built(), function(event)
     Solar.events.on_built(event)
     Microwave_Receiver.events.on_built(event)
     Heliostat.events.on_built(event)
+    Turbines.events.on_built(event)
     Wind.events.on_built(event)
     Aerial.events.on_built(event)
 
@@ -105,9 +106,9 @@ py.on_event(events.on_player_cursor_stack_changed, Thermosolar.events.on_player_
 py.on_event(events.on_ai_command_completed, Aerial.events.on_ai_command_completed)
 py.on_event(defines.events.on_script_trigger_effect, Wind.events.on_script_trigger_effect)
 py.register_on_nth_tick(117, "aerial117", "pyae", Aerial.events[117])
-py.register_on_nth_tick(301, "aerial301", "pyae", Aerial.events[301])
+py.register_on_nth_tick(301, "aerial301", "pyae", Turbines.events[301])
 --1h+1tick
-py.register_on_nth_tick(60 * 60 * 60 + 1, "aerialfuckinghuge", "pyae", Aerial.events[60 * 60 * 60 + 1])
+py.register_on_nth_tick(60 * 60 * 60 + 1, "aerialfuckinghuge", "pyae", Turbines.events[60 * 60 * 60 + 1])
 py.on_event(py.events.on_entity_clicked(), Aerial.events.on_open_gui)
 
 py.register_on_nth_tick(9, "aerial9", "pyae", function()

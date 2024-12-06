@@ -227,7 +227,7 @@ end
 ---@return number #
 local function accumulate(aerial)
     local energy, distance_bonus = calc_stored_energy(aerial)
-    local accumulator = get_or_create_accumulator(aerial.entity, aerial.network_id)
+    local accumulator = Turbines.get_or_create_interface(aerial.entity, aerial.network_id)
     if accumulator and accumulator.valid then
         accumulator.energy = accumulator.energy + energy
         aerial.previous_position = aerial.entity.position
@@ -314,7 +314,7 @@ local function store_turbine(electric_network_id, name, inventory)
             stack.custom_description = {"", aerial.entity.prototype.localised_description, "\n", {"aerial-gui.lifetime-generation", py.format_energy(aerial.lifetime_generation, "J")}}
             storage.aerials.aerial_data[key] = nil
             entity.destroy()
-            increment_turbine_count(electric_network_id, name, -1)
+            Turbines.increment_turbine_count(electric_network_id, name, -1)
             return true
         end
     end
@@ -570,15 +570,14 @@ local function find_target(aerial)
         log(string.format("%s [%d] swapping from network %d to %d", name, entity.unit_number, aerial.network_id, network_id))
         Turbines.refresh_networks()
         -- Make sure there's an accumulator on the network
-        local accumulator = get_or_create_accumulator(entity, network_id)
+        local accumulator = Turbines.get_or_create_interface(entity, network_id)
         -- and adjust it to the new entity count
         if accumulator and accumulator.valid then
             -- Update the entry
             network_id = accumulator.electric_network_id
             -- Decrement the old network and increment the new
-            increment_turbine_count(aerial.network_id, name, -1)
-            increment_turbine_count(network_id, name, 1)
-            accumulator.electric_buffer_size = storage.aerials.aerial_counts[network_id][name] * buffer_capacities[name]
+            Turbines.increment_turbine_count(aerial.network_id, name, -1)
+            Turbines.increment_turbine_count(network_id, name, 1)
             aerial.network_id = network_id
         else -- how did you fail to make an accumulator?
             log("aerial stuck: couldn't find or create an accumulator")
@@ -587,7 +586,7 @@ local function find_target(aerial)
         end
     end
 
-    local all_poles = storage.aerials.poles_by_network[network_id]
+    local all_poles = storage.turbines.poles_by_network[network_id]
     local pole_count = #all_poles
 
     if pole_count < 2 then
@@ -611,7 +610,7 @@ local function find_target(aerial)
         -- ruh roh
         if not target or not target.valid then
             target = nil
-            remove_pole(all_poles[index])
+            Turbines.remove_pole(all_poles[index])
             -- re-count for our random indexing
             pole_count = #all_poles
             -- We removed the only valid target!
@@ -645,7 +644,7 @@ Aerial.events.on_built = function(event)
     -- Turbine?
     if turbine_names[entity_name] then
         -- Build or find the relevant accumulator
-        local accumulator = get_or_create_accumulator(entity, storage.aerials.electric_network_id_override)
+        local accumulator = Turbines.get_or_create_interface(entity, storage.aerials.electric_network_id_override)
 
         if not accumulator or not accumulator.valid then
             py.cancel_creation(entity, event.player_index, {"aerial-gui.must-be-placed-in-electric-network"}, placement_restriction_text_color)
@@ -666,7 +665,7 @@ Aerial.events.on_built = function(event)
         end
 
         local turbine_count = count_turbines_for_network(electric_network_id)
-        local electric_poles = #storage.aerials.poles_by_network[electric_network_id]
+        local electric_poles = #storage.turbines.poles_by_network[electric_network_id]
         if (turbine_count + 1) * 3 > electric_poles then
             py.cancel_creation(entity, event.player_index, {"aerial-gui.airspace-too-crowded"}, placement_restriction_text_color)
             return
@@ -683,23 +682,10 @@ Aerial.events.on_built = function(event)
         entity.destructible = false
 
         -- Increment turbine counts for this model
-        local network_counts = storage.aerials.aerial_counts[electric_network_id]
-        local new_count = (network_counts[entity_name] or 0) + 1
-        network_counts[entity_name] = new_count
-        accumulator.electric_buffer_size = buffer_capacities[entity_name] * new_count
+        Turbines.increment_turbine_count(electric_network_id, entity_name, 1)
 
         -- Pick our target
         find_target(aerial)
-        return
-    end
-    -- Pole?
-    if entity_type == "electric-pole" or entity_type == "power-switch" then
-        add_pole(entity)
-        return
-    end
-    -- Switches also invalidate the network cache
-    if entity_type == "power-switch" then
-        storage.aerials.refresh_networks = true
         return
     end
     -- Base compound entity
@@ -750,7 +736,7 @@ Aerial.events.on_destroyed = function(event)
         end
 
         -- Update the counts and accumulator
-        increment_turbine_count(aerial.network_id, entity.name, -1)
+        Turbines.increment_turbine_count(aerial.network_id, entity.name, -1)
 
         -- on_mined events provide the temporary buffer that holds the item
         -- we add the tags here
@@ -763,15 +749,6 @@ Aerial.events.on_destroyed = function(event)
 
         -- drop from the global table and done
         storage.aerials.aerial_data[entity.unit_number] = nil
-        return
-    end
-
-    -- Poles
-    if entity.type == "electric-pole" then
-        local pole_data = storage.aerials.poles[entity.unit_number]
-        if pole_data then
-            remove_pole(pole_data)
-        end
         return
     end
 
@@ -964,6 +941,7 @@ function Aerial.update_gui(player)
     end
 
     -- We add the energy that the blimp holds but hasn't yet added to the accumulator to the total
+    ---@type number,number|string distance_bonus is also the stringified version
     local fake_energy, distance_bonus = calc_stored_energy(aerial)
     local stored_energy = accumulator.energy + fake_energy
     local max_energy = accumulator.electric_buffer_size
@@ -1006,6 +984,7 @@ function Aerial.update_gui(player)
         camera.entity = target
 
         local distance = math.max(0, calc_distance(target.position, entity.position) - 5)
+        ---@type number|string seconds is also the stringified version
         local seconds = distance / travel_speeds[entity.name]
         local minutes = math.floor(seconds / 60)
         seconds = tostring(math.floor(seconds % 60))

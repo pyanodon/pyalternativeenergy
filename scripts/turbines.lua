@@ -262,7 +262,7 @@ Turbines.get_first_pole = function(network_id)
         end
         -- Invalid entry
         if not first_pole.entity or not first_pole.entity.valid then
-            remove_pole(first_pole)
+            Turbines.remove_pole(first_pole)
             first_pole = nil
         else
             first_pole = first_pole.entity
@@ -553,6 +553,42 @@ end
 py.on_event(py.events.on_init(), function(event)
     Turbines.on_init()
 end)
+
+Turbines.events.on_built = function(event)
+    local entity = event.entity
+    if not entity.valid or not entity.unit_number then
+        return
+    end
+    local entity_type = entity.type
+    -- Pole?
+    if entity_type == "electric-pole" or entity_type == "power-switch" then
+        Turbines.add_pole(entity)
+        return
+    end
+    -- Switches also invalidate the network cache
+    if entity_type == "power-switch" then
+        storage.turbines.refresh_networks = true
+        return
+    end
+end
+
+Turbines.events.on_destroyed = function(event)
+    local entity = event.entity
+    if not entity.valid or not entity.unit_number then
+        return
+    end
+
+    -- Poles
+    if entity.type == "electric-pole" then
+        local pole_data = storage.turbines.poles[entity.unit_number]
+        if pole_data then
+            Turbines.remove_pole(pole_data)
+        end
+        return
+    end
+    
+
+end
 
 --Update the electric or aerial networks on demand
 Turbines.events[301] = function()

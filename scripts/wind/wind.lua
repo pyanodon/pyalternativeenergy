@@ -240,16 +240,49 @@ function Wind.calculate_wind_speed()
     return (sin(2 * x) + sin(pi * x)) / 2
 end
 
-function Wind.update_power_generation(windmill_data, wind_speed)
-    local entity = windmill_data.entity
-    local power_output = entity.prototype.get_max_energy_production() * (1 + variation[windmill_data.base_name] * wind_speed)
-    entity.power_production = power_output
-    entity.electric_buffer_size = power_output
+-- TODO: Not 100% certain how to pass around entities here so hard coding this for now
+local wind_energy_production = {
+    ["hawt-turbine-mk01"] = 5 * 1000 * 1000, -- 5MW
+    ["hawt-turbine-mk02"] = 25 * 1000 * 1000, -- 25MW
+    ["hawt-turbine-mk03"] = 50 * 1000 * 1000, -- 50MW
+    ["hawt-turbine-mk04"] = 80 * 1000 * 1000, -- 80MW
+    ["vawt-turbine-mk01"] = 4 * 1000 * 1000, -- 4MW
+    ["vawt-turbine-mk02"] = 20 * 1000 * 1000, -- 20MW
+    ["vawt-turbine-mk03"] = 50 * 1000 * 1000, -- 50MW
+    ["vawt-turbine-mk04"] = 85 * 1000 * 1000, -- 85MW
+    ["multiblade-turbine-mk01"] = 550 * 1000, -- 550kW
+    ["multiblade-turbine-mk03"] = 34 * 1000 * 1000  -- 34MW
+}
+
+for name, variance in variation do
+    local power = wind_energy_production[name]
+    Turbines.lookup[name] = {
+        power = function(count)
+            return count * power * (1 + variance * Wind.calculate_wind_speed())
+        end,
+        interface_name = name .. "-interface"
+    }
 end
 
 Wind.events[61] = function()
     local wind_speed = Wind.calculate_wind_speed()
     local direction = Wind.calculate_wind_direction(game.surfaces["nauvis"])
+
+    -- TODO: Couldn't figure out an easy way to batch this so didn't
+    for network_id, name_to_interface in storage.turbines.interfaces do
+        local network_counts = storage.turbines.turbine_counts[network_id]
+        if network_counts then
+            for name, _ in wind_energy_production do
+                local interface = name_to_interface[name]
+                local count = network_counts[name]
+                if interface and count then
+                    local total = Turbines.lookup[name].power(count)
+                    interface.power_production = total
+                    interface.electric_buffer_size = total
+                end
+            end
+        end
+    end
 
     local key, details = storage.last_windmill, nil
     local max_iter = 0
@@ -264,7 +297,6 @@ Wind.events[61] = function()
             if animated_turbines[details.turbine_type] then
                 Wind.draw_windmill(details, direction)
             end
-            Wind.update_power_generation(details, wind_speed)
         else
             _ = details.collision.valid and details.collision.destroy()
             if details.anim_id then
@@ -276,3 +308,5 @@ Wind.events[61] = function()
     until max_iter > 101
     storage.last_windmill = key
 end
+
+--TODO: Need to handle GUI updates now that we don't have individual interfaces
