@@ -3,6 +3,7 @@ Version: 3.1.14
 Date: ?
   Changes:
     - Fixed a crash when building an aerial turbine via construction bots. Resolves https://github.com/pyanodon/pybugreports/issues/756
+    - [space-age] Fish egg now decays into biocrud instead of fishmeal. Resolves https://github.com/pyanodon/pybugreports/issues/763
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.13
 Date: 2024-11-29

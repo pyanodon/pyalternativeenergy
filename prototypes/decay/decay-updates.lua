@@ -143,7 +143,7 @@ RECIPE("guts-to-jerky"):remove_unlock("microbiology-mk01")
 data.raw.recipe["dried-meat-01"] = nil
 data.raw.recipe["guts-to-jerky"] = nil
 
-ITEM("fish-egg"):spoil("fishmeal", 30 * minute)
+ITEM("fish-egg"):spoil("biocrud", 30 * minute)
 ITEM("fish-egg-mk02"):spoil("fish-egg", hour)
 ITEM("fish-egg-mk03"):spoil("fish-egg-mk02", 2 * hour)
 ITEM("fish-egg-mk04"):spoil("fish-egg-mk03", 4 * hour)
