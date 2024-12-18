@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - Fixed a crash when building an aerial turbine via construction bots. Resolves https://github.com/pyanodon/pybugreports/issues/756
     - [space-age] Fish egg now decays into biocrud instead of fishmeal. Resolves https://github.com/pyanodon/pybugreports/issues/763
+    - Corrected the misspelling of Americium as Americum. Resolves https://github.com/pyanodon/pybugreports/issues/782
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.13
 Date: 2024-11-29
@@ -490,9 +491,9 @@ Date: 2024-1-29
     - reduced purex raffinate 1 output in purex U concentrate 3 (20 -> 10)
     - increased purex raffinate 1 input in purex raffinate 2 (100 -> 150)
     - increased purex raffinate 2 input in purex raffinate 3 (100 -> 150)
-    - increased purex raffinate 3 input in Americum curium waste stream (75 -> 100)
-    - increased Americum curium waste stream input in Americum oxide waste stream (60 -> 80)
-    - increased Americum oxide waste stream input in Curium oxide waste stream (50 -> 60)
+    - increased purex raffinate 3 input in Americium curium waste stream (75 -> 100)
+    - increased Americium curium waste stream input in Americium oxide waste stream (60 -> 80)
+    - increased Americium oxide waste stream input in Curium oxide waste stream (50 -> 60)
     - reduced Curium oxide waste stream output in Curium oxide waste stream (25 -> 20)
     - increased Curium oxide waste stream input in Curium-250 (50 -> 60)
     - increased crafting time in Uranium-233
