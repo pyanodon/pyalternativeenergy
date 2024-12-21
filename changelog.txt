@@ -5,6 +5,7 @@ Date: ?
     - Fixed a crash when building an aerial turbine via construction bots. Resolves https://github.com/pyanodon/pybugreports/issues/756
     - [space-age] Fish egg now decays into biocrud instead of fishmeal. Resolves https://github.com/pyanodon/pybugreports/issues/763
     - Corrected the misspelling of Americium as Americum. Resolves https://github.com/pyanodon/pybugreports/issues/782
+    - Fixed wind turbines being stuck in one orientation. Resolves https://github.com/pyanodon/pybugreports/issues/781, thanks Vraleth.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.13
 Date: 2024-11-29
