@@ -967,7 +967,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "item",  name = "small-parts-03", amount = 500},
+        {type = "item",  name = "small-parts-03", amount = 300},
         {type = "item",  name = "nxsb-alloy",     amount = 30},
         {type = "item",  name = "lithium",        amount = 20},
         {type = "item",  name = "super-alloy",    amount = 200},
