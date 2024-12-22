@@ -68,7 +68,7 @@ ITEM("u-240"):spoil("pu-240", 14.1 * hour)
 --]]
 
 for i = 232, 240 do
-    ITEM("u-" .. i):spoil("uranium-oxide", 5 * minute)
+    ITEM("u-" .. i):spoil("uranium-oxide", 50 * minute)
 end
 ITEM("uranium-oxide"):spoil("ash", day)
 data.raw.recipe["uranium-seperation"]:replace_ingredient("u238", {type = "item", name = "u238", amount = 10, probability = 0.25}):add_ingredient {type = "item", name = "ash", amount = 10, probability = 0.425}
