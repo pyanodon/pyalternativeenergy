@@ -879,7 +879,7 @@ RECIPE("exoskeleton-equipment"):set_fields {
         {"neuromorphic-chip",       1},
         {"low-density-structure",   4},
         {"hydraulic-system-mk02",   2},
-        {"mechanical-parts-04",     1},
+        {"mechanical-parts-03",     1},
         {"sc-engine",               1},
         {"brake-mk04",              1},
         {"nano-mesh",               1},
