@@ -6,6 +6,7 @@ Date: ?
     - [space-age] Fish egg now decays into biocrud instead of fishmeal. Resolves https://github.com/pyanodon/pybugreports/issues/763
     - Corrected the misspelling of Americium as Americum. Resolves https://github.com/pyanodon/pybugreports/issues/782
     - Fixed wind turbines being stuck in one orientation. Resolves https://github.com/pyanodon/pybugreports/issues/781, thanks Vraleth.
+    - Exoskeleton recipe now requires mechanical parts 3 instead of mech parts 4. Resolves https://github.com/pyanodon/pybugreports/issues/799
     - Uranium now spoils in 50 minutes instead of 5 minutes.
     - Gearbox MK04 now requires 300 special small parts instead of 500.
     - The coal powerplant now makes 30x the pollution.
