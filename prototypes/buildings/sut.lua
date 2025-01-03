@@ -259,6 +259,7 @@ data:extend {smoke}
 data:extend {{
     name = "sut-smokestack",
     type = "fire",
+    hidden = true,
     damage_per_tick = {amount = 0, type = "physical"},
     spread_delay = 0,
     spread_delay_deviation = 0,
@@ -276,6 +277,7 @@ data:extend {{
 data:extend {{
     name = "sut-smokestack-weak",
     type = "fire",
+    hidden = true,
     damage_per_tick = {amount = 0, type = "physical"},
     spread_delay = 0,
     spread_delay_deviation = 0,

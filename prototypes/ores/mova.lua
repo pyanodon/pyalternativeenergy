@@ -40,6 +40,7 @@ data:extend {
     {
         type = "tree",
         name = "mova-fake",
+        hidden = true,
         icon = "__pyalternativeenergygraphics__/graphics/icons/mova.png",
         icon_size = 64,
         flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
@@ -57,7 +58,7 @@ data:extend {
         drawing_box_vertical_extension = 1.8,
         subgroup = "trees",
         order = "a[tree]-c[dry-tree]",
-        impact_category = "wood", 
+        impact_category = "wood",
         --autoplace = dead_trees_autoplace(0.5),
         pictures =
         {

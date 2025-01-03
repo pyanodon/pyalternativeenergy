@@ -1048,6 +1048,7 @@ data:extend {
     {
         type = "artillery-projectile",
         name = "nuclear-artillery-projectile",
+        hidden = true,
         flags = {"not-on-map"},
         reveal_map = true,
         map_color = {r = 1, g = 1, b = 0},
