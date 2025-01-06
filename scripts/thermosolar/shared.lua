@@ -9,7 +9,7 @@ py.on_event(py.events.on_init(), function(event)
 	storage.heliostat_towers = storage.heliostat_towers or {}
 	local steam = prototypes.fluid["pressured-steam"]
 	local joules_per_unit = steam.heat_capacity * steam.max_temperature
-	local mk04_max_output_in_w = prototypes.entity["steam-turbine-mk04"].fluid_usage_per_tick * joules_per_unit * 60
+	local mk04_max_output_in_w = prototypes.entity["steam-turbine-mk04"].get_fluid_usage_per_tick() * joules_per_unit * 60
 	storage.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * mk04_max_output_in_w
 	storage.energy_per_heliostat = storage.heliostat_tower_max_power_output / Heliostat.max_heliostats
 end)
