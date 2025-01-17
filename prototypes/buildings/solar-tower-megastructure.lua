@@ -1,3 +1,19 @@
+FLUID {
+    type = "fluid",
+    name = "solar-concentration",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/solar-tower.png",
+    icon_size = 64,
+    default_temperature = 0, -- less than 15 = liquid / equal a 15 = gas
+    base_color = {r = 255, g = 165, b = 0},
+    flow_color = {r = 255, g = 165, b = 0},
+    max_temperature = 10000,
+    heat_capacity = "32kJ",
+    gas_temperature = -1,
+    subgroup = "py-nuclear",
+    order = "c",
+    hidden = true
+}
+
 RECIPE {
     type = "recipe",
     name = "solar-tower-building",
@@ -208,7 +224,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             production_type = "input",
-            filter = "void"
+            filter = "solar-concentration"
         },
         effectivity = 1,
         burns_fluid = false,

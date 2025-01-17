@@ -176,7 +176,7 @@ py.register_on_nth_tick(60, "heliostat", "pyae", function()
 			if daylight ~= 0 then
 				local target_temperature = (tower_data.efficiency * daylight) * (max_void_temp - min_void_temp)
 				target_temperature = math.min(max_void_temp, math.max(min_void_temp, target_temperature + min_void_temp))
-				tower.fluidbox[3] = {name = "void", amount = 61, temperature = target_temperature}
+				tower.fluidbox[3] = {name = "solar-concentration", amount = 61, temperature = target_temperature}
 			end
 		end
 	end
