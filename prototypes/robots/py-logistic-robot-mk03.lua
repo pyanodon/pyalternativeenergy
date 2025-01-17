@@ -62,7 +62,7 @@ ENTITY {
   min_to_charge = 0.2,
   max_to_charge = 0.95,
   idle = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/hr-idle.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/idle.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -73,7 +73,7 @@ ENTITY {
     scale = 0.55
   },
   idle_with_cargo = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/hr-idle-cargo.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/idle-cargo.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -84,7 +84,7 @@ ENTITY {
     scale = 0.55
   },
   in_motion = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/hr-run.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/run.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -95,7 +95,7 @@ ENTITY {
     scale = 0.55
   },
   in_motion_with_cargo = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/hr-run-cargo.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/run-cargo.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -106,7 +106,7 @@ ENTITY {
     scale = 0.55
   },
   shadow_idle = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/hr-sh.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/sh.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -118,7 +118,7 @@ ENTITY {
     scale = 0.55
   },
   shadow_idle_with_cargo = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/hr-sh.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/sh.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -130,7 +130,7 @@ ENTITY {
     scale = 0.55
   },
   shadow_in_motion = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/hr-sh.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/sh.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -142,7 +142,7 @@ ENTITY {
     scale = 0.55
   },
   shadow_in_motion_with_cargo = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/hr-sh.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/l-pynobot-mk03/sh.png",
     priority = "high",
     line_length = 8,
     width = 128,

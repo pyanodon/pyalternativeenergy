@@ -23,7 +23,7 @@ ENTITY {
     stage_counts = {800},
     stages = {
         sheet = {
-            filename = "__pyalternativeenergygraphics__/graphics/entity/crops/mova/hr-mova.png",
+            filename = "__pyalternativeenergygraphics__/graphics/entity/crops/mova.png",
             priority = "extra-high",
             width = 128,
             height = 160,
@@ -64,7 +64,7 @@ data:extend {
         {
             --dry-tree
             {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/crops/mova/mova.png",
+                filename = "__pyalternativeenergygraphics__/graphics/entity/crops/mova.png",
                 priority = "extra-high",
                 width = 64,
                 height = 80,

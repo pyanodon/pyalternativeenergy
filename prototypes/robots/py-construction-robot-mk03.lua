@@ -63,7 +63,7 @@ ENTITY {
   max_to_charge = 0.95,
   working_light = {intensity = 1, size = 3, color = {r = 0.3, g = 0.8, b = 1}},
   idle = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/hr-idle.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/idle.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -74,7 +74,7 @@ ENTITY {
     scale = 0.5
   },
   in_motion = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/hr-running.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/running.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -85,7 +85,7 @@ ENTITY {
     scale = 0.5
   },
   shadow_idle = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/hr-sh.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/sh.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -97,7 +97,7 @@ ENTITY {
     scale = 0.5
   },
   shadow_in_motion = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/hr-sh.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/sh.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -109,7 +109,7 @@ ENTITY {
     scale = 0.5
   },
   working = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/hr-working.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/working.png",
     priority = "high",
     line_length = 8,
     width = 128,
@@ -120,7 +120,7 @@ ENTITY {
     scale = 0.5
   },
   shadow_working = {
-    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/hr-sh.png",
+    filename = "__pyalternativeenergygraphics__/graphics/entity/c-pynobot-mk03/sh.png",
     priority = "high",
     line_length = 8,
     width = 128,

@@ -53,7 +53,7 @@ ENTITY {
     stage_counts = {20000, 13000, 10000, 5000, 3000, 1000, 500, 100},
     stages = {
         sheet = {
-            filename = "__pyalternativeenergygraphics__/graphics/ore/ree/hr-ree.png",
+            filename = "__pyalternativeenergygraphics__/graphics/ore/ree/ree.png",
             priority = "extra-high",
             width = 128,
             height = 128,
