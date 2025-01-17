@@ -121,7 +121,7 @@ py.on_event(py.events.on_built_tile(), function(event)
             position = tile.position
         }
         entity.destructible = false
-        entity.minable = false
+        entity.minable_flag = false
 
         ::continue::
     end
