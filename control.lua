@@ -60,13 +60,24 @@ py.on_event(py.events.on_built(), function(event)
     end
 end)
 
+local REQUIRES_SUNLIGHT = {
+    diode = defines.entity_status_diode.red,
+    label = {"entity-status.requires-sunlight"}
+}
+
 py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
-    local active = Thermosolar.calc_daylight(game.surfaces["nauvis"]) > 0.5
+    local active = Thermosolar.calc_daylight(game.surfaces["nauvis"]) > 0.5 -- TODO: fix for multisurface
     for _, panel in pairs(storage.lrf_panels) do
-        if panel.valid then panel.active = active end
+        if panel.valid then
+            panel.active = active
+            panel.custom_status = (not active) and REQUIRES_SUNLIGHT or nil
+        end
     end
     for _, panel in pairs(storage.stirling) do
-        if panel.valid then panel.active = active end
+        if panel.valid then
+            panel.active = active
+            panel.custom_status = (not active) and REQUIRES_SUNLIGHT or nil
+        end
     end
 end)
 
