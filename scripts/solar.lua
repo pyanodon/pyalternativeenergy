@@ -45,10 +45,15 @@ Solar.events[100] = function()
 			panel.power_production = 0
 			panel.electric_buffer_size = 0
 			panel.active = false
+            panel.custom_status = {
+                diode = defines.entity_status_diode.red,
+                label = {(panel.name == "anti-solar") and "entity-status.requires-moonlight" or "entity-status.requires-sunlight"}
+            }
 		else
 			panel.power_production = panel.prototype.get_max_energy_production() * daylight * panel.surface.solar_power_multiplier
 			panel.electric_buffer_size = panel.power_production
 			panel.active = true
+            panel.custom_status = nil
 		end
 	end
 
