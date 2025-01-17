@@ -9,6 +9,7 @@ Date: tba
     - Solarthermal MK01 and MK02 no longer show "disabled by script" and instead shows a custom status explaining that it needs daylight.
     - Replaced deprecated .minable with .minable_flag
     - Removed all legacy low-res graphic files from pyanodon.
+    - Fixed missing pressurized steam recipes from gas powerplant technologies. Resolves https://github.com/pyanodon/pybugreports/issues/808
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.14
 Date: 2025-1-2
