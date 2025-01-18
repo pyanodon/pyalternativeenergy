@@ -208,6 +208,7 @@ ITEM("yotoi-fruit-mk04"):spoil("yotoi-fruit-mk03", 32 * minute)
 ITEM("yotoi-fruit-mk03"):spoil("yotoi-fruit-mk02", 16 * minute)
 ITEM("yotoi-fruit-mk02"):spoil("yotoi-fruit", 8 * minute)
 ITEM("yotoi-fruit"):spoil("yotoi-seeds", 4 * minute)
+RECIPE("yotoi-seeds"):add_result_amount("yotoi-seeds", 4):add_result("yotoi-leaves", 1).main_product = "yotoi-seeds"
 
 ITEM("wood-seedling-mk04"):spoil("wood-seeds-mk04", 6 * hour)
 ITEM("wood-seedling-mk03"):spoil("wood-seeds-mk03", 4 * hour)

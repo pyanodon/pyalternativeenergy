@@ -14,6 +14,7 @@ Date: tba
     - Fixed missing locale key for HAWT turbines MK01.
     - Removed hyphens from most item, fluid, entity, and recipe names in order to aid in itemsearch.
     - Removed "EXPERIMENTAL" from decay setting description.
+    - [space-age] With decay enabled, buffed yotoi seeds recipe from 3 output -> 7 output. Additionally added 1 yotoi leaf byproduct.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.14
 Date: 2025-1-2
