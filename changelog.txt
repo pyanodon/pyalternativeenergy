@@ -13,6 +13,7 @@ Date: tba
     - Fixed wrong item subgroup for the antimony drill.
     - Fixed missing locale key for HAWT turbines MK01.
     - Removed hyphens from most item, fluid, entity, and recipe names in order to aid in itemsearch.
+    - Removed "EXPERIMENTAL" from decay setting description.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.14
 Date: 2025-1-2
