@@ -188,7 +188,7 @@ RECIPE {
     enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "item",  name = "nacl-biomass",       amount = 8},
+        {type = "item",  name = "nacl-biomass",  amount = 8},
         {type = "item",  name = "rich-biocrud",  amount = 3},
         {type = "fluid", name = "phytoplankton", amount = 10},
         {type = "fluid", name = "bacteria-2",    amount = 10},

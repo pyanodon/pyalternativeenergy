@@ -1150,7 +1150,7 @@ data:extend {
                         include_decals = true,
                         invoke_decorative_trigger = true,
                         decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
-                        radius = 14                -- large radius for demostrative purposes
+                        radius = 14                            -- large radius for demostrative purposes
                     },
                     {
                         type = "create-decorative",
@@ -1326,7 +1326,7 @@ data:extend {
                         include_decals = false,
                         invoke_decorative_trigger = true,
                         decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
-                        radius = 3.5               -- large radius for demostrative purposes
+                        radius = 3.5                           -- large radius for demostrative purposes
                     }
                 }
             }

@@ -66,20 +66,20 @@ do
     for y = 0, 768 - 192, 192 do
         for x = 0, 1536 - 192, 192 do
             ENTITY {
-                type = "simple-entity-with-owner",
-                name = "solar-tower-panel" .. i,
-                icon = panel.icon,
-                icon_size = panel.icon_size,
-                flags = {"placeable-neutral", "player-creation"},
-                minable = panel.minable,
-                placeable_by = {item = "solar-tower-panel", count = 1},
+                type                   = "simple-entity-with-owner",
+                name                   = "solar-tower-panel" .. i,
+                icon                   = panel.icon,
+                icon_size              = panel.icon_size,
+                flags                  = {"placeable-neutral", "player-creation"},
+                minable                = panel.minable,
+                placeable_by           = {item = "solar-tower-panel", count = 1},
                 fast_replaceable_group = "solar-panel",
-                max_health = panel.max_health,
-                corpse = panel.corpse,
-                dying_explosion = panel.dying_explosion,
-                collision_box = panel.collision_box,
-                selection_box = panel.selection_box,
-                picture = {
+                max_health             = panel.max_health,
+                corpse                 = panel.corpse,
+                dying_explosion        = panel.dying_explosion,
+                collision_box          = panel.collision_box,
+                selection_box          = panel.selection_box,
+                picture                = {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/solar-tower/r-helio.png",
                     width = panel.picture.width,
                     height = panel.picture.height,
@@ -88,7 +88,7 @@ do
                     shift = panel.picture.shift,
                 },
                 impact_category        = panel.impact_category,
-                localised_name = {"entity-name.solar-tower-panel"}
+                localised_name         = {"entity-name.solar-tower-panel"}
             }
             i = i + 1
         end

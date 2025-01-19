@@ -140,34 +140,34 @@ ENTITY {
 }
 
 data:extend
+{
     {
-        {
-            type = "simple-entity-with-force",
-            name = "vawt-turbine-mk03-collision",
-            render_layer = "wires-above",
-            icon = "__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk03.png",
-            icon_size = 64,
-            flags = {"placeable-neutral", "player-creation", "not-on-map"},
-            collision_box = {{-17.4, -17.4}, {17.4, 17.4}},
+        type = "simple-entity-with-force",
+        name = "vawt-turbine-mk03-collision",
+        render_layer = "wires-above",
+        icon = "__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk03.png",
+        icon_size = 64,
+        flags = {"placeable-neutral", "player-creation", "not-on-map"},
+        collision_box = {{-17.4, -17.4}, {17.4, 17.4}},
+        collision_mask = {layers = {wind_layer = true}},
+        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+        selectable_in_game = false,
+        picture = {
+            filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
+            width = 4,
+            height = 4,
+        },
+        created_effect = {
+            type = "area",
+            radius = 17.4,
             collision_mask = {layers = {wind_layer = true}},
-            selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-            selectable_in_game = false,
-            picture = {
-                filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-                width = 4,
-                height = 4,
-            },
-            created_effect = {
-                type = "area",
-                radius = 17.4,
-                collision_mask = {layers = {wind_layer = true}},
-                action_delivery = {
-                    type = "instant",
-                    target_effects = {{
-                        type = "script",
-                        effect_id = "turbine-area"
-                    }}
-                }
+            action_delivery = {
+                type = "instant",
+                target_effects = {{
+                    type = "script",
+                    effect_id = "turbine-area"
+                }}
             }
         }
     }
+}

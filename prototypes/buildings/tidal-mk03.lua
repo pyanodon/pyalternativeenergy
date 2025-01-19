@@ -49,11 +49,11 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
-    collision_mask = {layers = {object = true, train = true}},                              -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
-    center_collision_mask = {layers = {water_tile = true, object = true, player = true}},   -- to test that tile directly under the pump is ground
+    collision_mask = {layers = {object = true, train = true}},                            -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    center_collision_mask = {layers = {water_tile = true, object = true, player = true}}, -- to test that tile directly under the pump is ground
     tile_buildability_rules = {
-        {area = {{-2,-5},{2,1}}, required_tiles = {layers={water_tile=true}},colliding_tiles = {layers = {ground_tile = true}},remove_on_collision = true},
-        {area = {{-2,1.6},{2,5}}, required_tiles = {layers={ground_tile=true}},colliding_tiles = {layers = {water_tile = true}},remove_on_collision = true}
+        {area = {{-2, -5}, {2, 1}}, required_tiles = {layers = {water_tile = true}}, colliding_tiles = {layers = {ground_tile = true}}, remove_on_collision = true},
+        {area = {{-2, 1.6}, {2, 5}}, required_tiles = {layers = {ground_tile = true}}, colliding_tiles = {layers = {water_tile = true}}, remove_on_collision = true}
     },
     energy_source = {
         type = "electric",
@@ -68,12 +68,12 @@ ENTITY {
     continuous_animation = true,
     placeable_position_visualization = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization),
     created_effect = {
-        type = 'direct',
+        type = "direct",
         action_delivery = {
-            type = 'instant',
+            type = "instant",
             source_effects = {
-                type = 'script',
-                effect_id = 'on_built_hydro'
+                type = "script",
+                effect_id = "on_built_hydro"
             }
         }
     },

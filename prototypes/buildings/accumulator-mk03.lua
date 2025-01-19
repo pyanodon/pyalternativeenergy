@@ -8,7 +8,7 @@ RECIPE {
         {type = "item", name = "supercapacitor",  amount = 15},
         {type = "item", name = "processing-unit", amount = 10},
         {type = "item", name = "super-steel",     amount = 50},
-        {type = "item", name = "nano-wires",      amount = 10}, --tinned cable
+        {type = "item", name = "nano-wires",      amount = 10},  --tinned cable
         {type = "item", name = "nexelit-plate",   amount = 100}, -- {type = "item", name = "nexelit-plate", amount = 60},
         {type = "item", name = "optical-fiber",   amount = 50},
         {type = "item", name = "biopolymer",      amount = 20},

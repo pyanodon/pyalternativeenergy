@@ -86,7 +86,7 @@ ITEM("brain"):spoil("dried-meat", 16 * hour)
 
 ITEM("manure"):spoil("rich-clay", 5.5 * hour)
 
-RECIPE("fertilizer-3"):add_ingredient{type = "item", name = "biocrud", amount = 2}
+RECIPE("fertilizer-3"):add_ingredient {type = "item", name = "biocrud", amount = 2}
 
 local meaty_foods = {
     "kmauts-ration",
@@ -125,7 +125,7 @@ for _, food in pairs(meaty_foods) do
     food:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}
 end
 
-for _, workers_food in pairs{
+for _, workers_food in pairs {
     "workers-food",
     "workers-food-02",
     "workers-food-03",

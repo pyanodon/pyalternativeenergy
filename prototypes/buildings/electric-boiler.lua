@@ -91,7 +91,7 @@ ENTITY {
             pipe_picture = pipe_picture,
             pipe_connections = {
                 {flow_direction = "input-output", position = {0, 1.0},  direction = defines.direction.south},
-                {flow_direction = "input-output",  position = {0, -1.0}, direction = defines.direction.north},
+                {flow_direction = "input-output", position = {0, -1.0}, direction = defines.direction.north},
             },
             volume = 200,
             filter = "steam"

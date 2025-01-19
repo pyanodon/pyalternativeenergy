@@ -21,7 +21,7 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "antimony-drill-mk01",   amount = 1},
+        {type = "item", name = "antimony-drill-mk01",     amount = 1},
         {type = "item", name = "neuroprocessor",          amount = 10},
         {type = "item", name = "advanced-circuit",        amount = 15},
         {type = "item", name = "tin-plate",               amount = 50},
@@ -42,15 +42,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "antimony-drill-mk02", amount = 1},
-        {type = "item", name = "titanium-plate",        amount = 20},
-        {type = "item", name = "super-steel",           amount = 20},
-        {type = "item", name = "biopolymer",            amount = 15},
-        {type = "item", name = "graphene-roll",         amount = 20},
-        {type = "item", name = "ns-material",           amount = 20},
-        {type = "item", name = "processing-unit",       amount = 10},
-        {type = "item", name = "electric-engine-unit",  amount = 3},
-        {type = "item", name = "mechanical-parts-03",   amount = 1},
+        {type = "item", name = "antimony-drill-mk02",  amount = 1},
+        {type = "item", name = "titanium-plate",       amount = 20},
+        {type = "item", name = "super-steel",          amount = 20},
+        {type = "item", name = "biopolymer",           amount = 15},
+        {type = "item", name = "graphene-roll",        amount = 20},
+        {type = "item", name = "ns-material",          amount = 20},
+        {type = "item", name = "processing-unit",      amount = 10},
+        {type = "item", name = "electric-engine-unit", amount = 3},
+        {type = "item", name = "mechanical-parts-03",  amount = 1},
     },
     results = {
         {type = "item", name = "antimony-drill-mk03", amount = 1}
@@ -63,7 +63,7 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "antimony-drill-mk03",         amount = 1},
+        {type = "item", name = "antimony-drill-mk03",           amount = 1},
         {type = "item", name = "science-coating",               amount = 15},
         {type = "item", name = "nbfe-alloy",                    amount = 5},
         {type = "item", name = "low-density-structure",         amount = 30},
@@ -284,6 +284,6 @@ for i = 1, 4 do
         legacy_entity.resource_searching_radius = 4.49
         legacy_entity.effect_receiver = nil
         legacy_entity.localised_description = {"entity-description.antimony-drill-mk0" .. i}
-        data:extend{legacy_entity}
+        data:extend {legacy_entity}
     end
 end
