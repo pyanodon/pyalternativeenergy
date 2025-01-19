@@ -160,7 +160,7 @@ function Heliostat.update_gui(gui)
 end
 
 py.on_event(py.events.on_entity_clicked(), function(event)
-	local player = game.players[event.player_index]
+	local player = game.get_player(event.player_index)
 	if player.cursor_stack and player.cursor_stack.valid_for_read then return end
 	local entity = player.selected
 	if not entity or not Heliostat.is_heliostat(entity) then return end
