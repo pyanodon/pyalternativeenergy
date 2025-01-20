@@ -2,6 +2,7 @@
 Version: 3.1.15
 Date: tba
   Changes:
+    - Added a new required dependancy on "Pyanodons Modpack". This allows us to have a single list of min pYmod versions and ensure stability for any installation.
     - Changed min factorio version to 2.0.29.
     - Fixed aerial turbine battery values in codex.
     - Solar and antisolar panels no longer show "disabled by script" and instead shows a custom status explaining it needs sunlight/moonlight.

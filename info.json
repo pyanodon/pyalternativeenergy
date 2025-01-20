@@ -11,6 +11,7 @@
         "base >= 2.0.29",
         "pyalienlife >= 3.0.33",
         "pyhightech >= 3.0.0",
+        "pymodpack >= 3.0.0",
         "? enable-all-feature-flags",
         "~ pyalternativeenergygraphics >= 3.0.4",
         "(?) pyindustry",
