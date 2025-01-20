@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.15
-Date: tba
+Date: 2024-1-20
   Changes:
     - Added a new required dependancy on "Pyanodons Modpack". This allows us to have a single list of min pYmod versions and ensure stability for any installation.
     - Changed min factorio version to 2.0.29.
