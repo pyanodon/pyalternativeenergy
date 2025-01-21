@@ -175,9 +175,7 @@ ENTITY {
                     lines_per_file = 4,
                     shift = util.by_pixel(0, -0),
                     scale = 0.5
-                }
-            },
-            {
+                },
                 {
                     priority = "very-low",
                     flags = {"mask"},
@@ -213,39 +211,39 @@ ENTITY {
                     shift = util.by_pixel(0, -0),
                     apply_runtime_tint = true,
                     scale = 0.5
-                }
-            },
-            {
-                priority = "very-low",
-                dice = 4,
-                flags = {"shadow"},
-                width = 240,
-                height = 256,
-                direction_count = 256,
-                draw_as_shadow = true,
-                allow_low_quality_rotation = true,
-                filenames =
-                {
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-01.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-02.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-03.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-04.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-05.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-06.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-07.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-08.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-09.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-10.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-11.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-12.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-13.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-14.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-15.png",
-                    "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-16.png",
                 },
-                line_length = 4,
-                lines_per_file = 4,
-                shift = util.by_pixel(32, 10),
+                {
+                    priority = "very-low",
+                    dice = 4,
+                    flags = {"shadow"},
+                    width = 240,
+                    height = 256,
+                    direction_count = 256,
+                    draw_as_shadow = true,
+                    allow_low_quality_rotation = true,
+                    filenames =
+                    {
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-01.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-02.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-03.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-04.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-05.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-06.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-07.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-08.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-09.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-10.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-11.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-12.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-13.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-14.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-15.png",
+                        "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sh-16.png",
+                    },
+                    line_length = 4,
+                    lines_per_file = 4,
+                    shift = util.by_pixel(64, 10),
+                }
             }
         }
     },

@@ -1,26 +1,31 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.20
+Date: ?
+  Changes:
+    - Fixed missing shadow for MK04 locomotives. Resolves https://github.com/pyanodon/pybugreports/issues/827
+---------------------------------------------------------------------------------------------------
 Version: 3.1.19
-Date: 2024-1-20
+Date: 2025-1-20
   Changes:
     - Allowed pyAE to function on either experimental or stable versions of factorio. But for actual real this time!
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.18
-Date: 2024-1-20
+Date: 2025-1-20
   Changes:
     - Allowed pyAE to function on either experimental or stable versions of factorio. But for real this time!
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.17
-Date: 2024-1-20
+Date: 2025-1-20
   Changes:
     - Allowed pyAE to function on either experimental or stable versions of factorio.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.16
-Date: 2024-1-20
+Date: 2025-1-20
   Changes:
     - Reverted 'Added a new required dependancy on "Pyanodons Modpack"'.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.15
-Date: 2024-1-20
+Date: 2025-1-20
   Changes:
     - Added a new required dependancy on "Pyanodons Modpack". This allows us to have a single list of min pYmod versions and ensure stability for any installation.
     - Changed min factorio version to 2.0.29.
