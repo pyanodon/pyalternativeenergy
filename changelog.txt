@@ -4,7 +4,7 @@ Date: ?
   Changes:
     - Fixed missing shadow for MK04 locomotives. Resolves https://github.com/pyanodon/pybugreports/issues/827
     - Migrated the internal name of the "vacuum-tube-electronics" technology to "electronics". Resolves https://github.com/pyanodon/pybugreports/issues/453
-    - Migrated the internal name of the "railway" technology to "electronics". Resolves https://github.com/pyanodon/pybugreports/issues/453
+    - Migrated the internal name of the "railway-mk01" technology to "railway". Resolves https://github.com/pyanodon/pybugreports/issues/453
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.19
 Date: 2025-1-20
