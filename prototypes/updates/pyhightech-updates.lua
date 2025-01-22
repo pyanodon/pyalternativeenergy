@@ -87,7 +87,7 @@ RECIPE("pa-coal"):remove_unlock("nucleo")
 RECIPE("sodium-silicate"):remove_unlock("colloidal-silica"):add_unlock {"silicon-mk01"}
 RECIPE("quantum-dots"):remove_unlock("quantum"):add_unlock {"nano-tech"}
 RECIPE("silica-powder"):remove_unlock("colloidal-silica"):add_unlock {"silicon-mk01"}
-RECIPE("saline-water"):remove_unlock("electrolysis"):add_unlock("vacuum-tube-electronics")
+RECIPE("saline-water"):remove_unlock("electrolysis"):add_unlock("electronics")
 RECIPE("electronic-circuit"):add_ingredient {type = "item", name = "battery-mk00", amount = 1}
 RECIPE("electronic-circuit"):set_fields {results = {{type = "item", name = "electronic-circuit", amount = 3}}}
 local recipe = table.deepcopy(data.raw.recipe["electronic-circuit"])

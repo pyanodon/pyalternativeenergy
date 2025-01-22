@@ -226,7 +226,7 @@ RECIPE {
         {type = "item", name = "battery-mk00", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("vacuum-tube-electronics")
+}:add_unlock("electronics")
 
 RECIPE {
     type = "recipe",

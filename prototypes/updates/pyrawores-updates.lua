@@ -100,7 +100,7 @@ RECIPE("battery-2"):replace_ingredient("lead-plate", "pbsb-alloy"):remove_unlock
 
 --RECIPE MOVING--
 RECIPE("eaf-mk01"):remove_unlock("smelters-mk01"):add_unlock("machines-mk01")
-RECIPE("zinc-plate-1"):remove_unlock("zinc-mk01"):add_unlock("vacuum-tube-electronics")
+RECIPE("zinc-plate-1"):remove_unlock("zinc-mk01"):add_unlock("electronics")
 RECIPE("water-saline"):remove_unlock("electrolysis"):add_unlock("energy-1")
 RECIPE("gravel-saline-water"):remove_unlock("electrolysis"):add_unlock("crusher")
 RECIPE("p2s5"):remove_unlock("additives"):add_unlock("intermetallics-mk02")
