@@ -8,7 +8,7 @@
     "homepage": "https://github.com/pyanodon/pyalternativeenergy",
     "description": "Contains POWER!",
     "dependencies": [
-        "base >= 2.0.28",
+        "base >= 2.0.33",
         "pyalienlife >= 3.0.33",
         "pyhightech >= 3.0.0",
         "~ pyalternativeenergygraphics >= 3.0.4",

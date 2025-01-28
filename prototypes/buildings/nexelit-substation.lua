@@ -95,10 +95,10 @@ ENTITY {
         sound =
         {
             filename = "__base__/sound/substation.ogg",
-            volume = 0.4
+            volume = 0.4,
+            audible_distance_modifier = 0.32,
         },
-        max_sounds_per_type = 3,
-        audible_distance_modifier = 0.32,
+        max_sounds_per_prototype = 3,
         fade_in_ticks = 30,
         fade_out_ticks = 40,
         use_doppler_shift = false

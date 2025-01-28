@@ -1119,7 +1119,6 @@ data:extend {
                         -- min_distance = 200,
                         max_distance = 1000,
                         -- volume_modifier = 1,
-                        audible_distance_modifier = 3
                     },
                     {
                         type = "play-sound",
@@ -1128,7 +1127,6 @@ data:extend {
                         -- min_distance = 200,
                         max_distance = 1000,
                         -- volume_modifier = 1,
-                        audible_distance_modifier = 3
                     },
                     {
                         type = "damage",
