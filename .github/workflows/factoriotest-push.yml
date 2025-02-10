@@ -12,7 +12,7 @@ permissions:
 jobs:
   test-push:
     name: Push
-    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@v1.6.4
+    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@v1.6.5
     with:
       repository: ${{ github.repository }}
       ref: ${{ github.sha }}
