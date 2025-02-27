@@ -307,10 +307,10 @@ RECIPE("perfect-samples"):add_ingredient {type = "item", name = "vsk", amount = 
 RECIPE("perfect-samples"):add_ingredient {type = "item", name = "aeroorgan", amount = 1}
 RECIPE("gastrocapacitor"):add_ingredient {type = "item", name = "sugar", amount = 1}:replace_ingredient("phytoplankton", "fatty-acids")
 
-ITEM("simik"):set_fields {fuel_category = "simik", fuel_value = "600MJ", burnt_result = "used-simik"}
-ITEM("simik-mk02"):set_fields {fuel_category = "simik", fuel_value = "800MJ", burnt_result = "used-simik-mk02"}
-ITEM("simik-mk03"):set_fields {fuel_category = "simik", fuel_value = "1100MJ", burnt_result = "used-simik-mk03"}
-ITEM("simik-mk04"):set_fields {fuel_category = "simik", fuel_value = "1500MJ", burnt_result = "used-simik-mk04"}
+ITEM("simik"):set_fields {fuel_category = "simik", fuel_value = "800MJ", burnt_result = "used-simik"}
+ITEM("simik-mk02"):set_fields {fuel_category = "simik", fuel_value = "1000MJ", burnt_result = "used-simik-mk02"}
+ITEM("simik-mk03"):set_fields {fuel_category = "simik", fuel_value = "1500MJ", burnt_result = "used-simik-mk03"}
+ITEM("simik-mk04"):set_fields {fuel_category = "simik", fuel_value = "2000MJ", burnt_result = "used-simik-mk04"}
 
 RECIPE("nano-cellulose"):remove_ingredient("steam"):add_ingredient {type = "fluid", name = "pressured-steam", amount = 50}
 RECIPE("zymogens"):add_ingredient {type = "item", name = "zungror-cocoon", amount = 2}
