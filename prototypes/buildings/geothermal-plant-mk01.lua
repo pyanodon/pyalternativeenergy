@@ -55,7 +55,6 @@ ENTITY {
             {flow_direction = "input-output", position = {0, 5.0},  direction = defines.direction.south},
         },
         filter = "pressured-water",
-        production_type = "input-output",
     },
     output_fluid_box =
     {
