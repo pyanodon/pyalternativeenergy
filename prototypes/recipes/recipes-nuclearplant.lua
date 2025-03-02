@@ -37,10 +37,10 @@ RECIPE {
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "neutron", amount = 200},
+        {type = "fluid", name = "neutron", amount = 200, ignored_by_stats = 200},
     },
     results = {
-        {type = "fluid", name = "neutron", amount = 200, temperature = 1000},
+        {type = "fluid", name = "neutron", amount = 200, temperature = 1000, ignored_by_stats = 200, ignored_by_productivity = 200},
     },
     main_product = "neutron"
 }:add_unlock("nuclear-power")

@@ -202,11 +202,11 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "fluid", name = "water",            amount = 500, minimum_temperature = 150},
+        {type = "fluid", name = "water",            amount = 500, minimum_temperature = 150, ignored_by_stats = 480},
         {type = "fluid", name = "hydrogen-sulfide", amount = 400}
     },
     results = {
-        {type = "fluid", name = "water",             amount = 480, temperature = 125},
+        {type = "fluid", name = "water",             amount = 480, temperature = 125, ignored_by_stats = 480, ignored_by_productivity = 480},
         {type = "fluid", name = "deuterium-sulfide", amount = 400}
     },
     main_product = "deuterium-sulfide"
@@ -272,13 +272,13 @@ RECIPE {
         {type = "item",  name = "lithium",         amount = 2},
         {type = "fluid", name = "water",           amount = 10000},
         {type = "fluid", name = "deuterium",       amount = 50},
-        {type = "fluid", name = "tritium",         amount = 50},
+        {type = "fluid", name = "tritium",         amount = 50,   ignored_by_stats = 50},
         {type = "fluid", name = "liquid-nitrogen", amount = 30}
     },
     results = {
         {type = "fluid", name = "critical-steam", amount = 10000, temperature = 5000},
         {type = "fluid", name = "helium",         amount = 100},
-        {type = "fluid", name = "tritium",        amount = 60.1},
+        {type = "fluid", name = "tritium",        amount = 60.1,  ignored_by_stats = 50, ignored_by_productivity = 50},
         {type = "fluid", name = "nitrogen",       amount = 250},
     },
     --main_product= "blanket",

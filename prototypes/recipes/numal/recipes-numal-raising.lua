@@ -21,7 +21,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "numal-egg",       amount = 4},
+				{name = "numal-egg",         amount = 4},
 				{name = "empty-barrel-milk", amount = 2},
 			},
 			crafting_speed = 30,
@@ -39,7 +39,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "numal-egg",       amount = 5},
+				{name = "numal-egg",         amount = 5},
 				{name = "empty-barrel-milk", amount = 2},
 			},
 			crafting_speed = 25,
@@ -70,7 +70,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "numal-egg",       amount = 14},
+				{name = "numal-egg",         amount = 14},
 				{name = "empty-barrel-milk", amount = 2},
 			},
 			crafting_speed = 18,
@@ -314,7 +314,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "numal-egg", amount_min = 12, amount_max = 20},
+				{name = "numal-egg", amount_min = 12, amount_max = 20, ignored_by_productivity = 20},
 			},
 			crafting_speed = 80,
 			tech = "numal-mk04"

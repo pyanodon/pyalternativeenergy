@@ -71,11 +71,11 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "item",  name = "u-236",   amount = 10},
+        {type = "item",  name = "u-236",   amount = 10, ignored_by_stats = 10},
         {type = "fluid", name = "neutron", amount = 10}
     },
     results = {
-        {type = "item", name = "u-236", amount = 10, probability = 0.999},
+        {type = "item", name = "u-236", amount = 10, probability = 0.999, ignored_by_stats = 10, ignored_by_productivity = 10},
         {type = "item", name = "u-237", amount = 1,  probability = 0.1}
     },
     main_product = "u-237",
@@ -305,11 +305,11 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item",  name = "pu-241",  amount = 40},
+        {type = "item",  name = "pu-241",  amount = 40, ignored_by_stats = 24},
         {type = "fluid", name = "neutron", amount = 80, minimum_temperature = 750}
     },
     results = {
-        {type = "item", name = "pu-241", amount = 24},
+        {type = "item", name = "pu-241", amount = 24, ignored_by_stats = 24, ignored_by_productivity = 24},
         {type = "item", name = "pu-242", amount = 12},
         {type = "item", name = "am-241", amount = 4},
     },

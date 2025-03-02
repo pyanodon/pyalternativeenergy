@@ -537,7 +537,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-u-concentrate-3", amount = 10},
         {type = "fluid", name = "purex-raffinate",       amount = 10},
-        {type = "item",  name = "tbp",                   amount = 1, probability = 0.5},
+        {type = "item",  name = "tbp",                   amount = 1, probability = 0.5, ignored_by_productivity = 1},
     },
     main_product = "purex-u-concentrate-3",
     subgroup = "py-nuclear-waste",
