@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.22
+Date: ?
+  Changes:
+    - Increased the energy consumption of the diamond mine from 2MW -> 1GW. Resolves https://github.com/pyanodon/pybugreports/issues/893
+---------------------------------------------------------------------------------------------------
 Version: 3.1.21
 Date: 2025-3-3
   Changes:
