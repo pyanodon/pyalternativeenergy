@@ -36,7 +36,6 @@ RECIPE("acetaldehyde-2"):replace_ingredient("plastic-bar", {type = "item", name 
 ITEM("acetaldehyde"):spoil("barrel", 30 * second).stack_size = data.raw.item["barrel"].stack_size
 ITEM("time-crystal"):spoil("time-crystal", hour)
 ITEM("bio-ore"):spoil("biocarnation", hour)
-ITEM("erbium"):spoil("er-oxide", hour)
 ITEM("er-oxide"):spoil("impure-er-oxide", hour)
 ITEM("biocarnation"):spoil("advanced-substrate", 2 * hour)
 

@@ -2,8 +2,9 @@
 Version: 3.1.21
 Date: ???
   Changes:
-    - Fixed fluid mining drills not working when connected to pipelines with low fluid level
-    - Fixed some recipes not having defined catalysts
+    - Fixed fluid mining drills not working when connected to pipelines with low fluid level.
+    - Fixed some recipes not having defined catalysts.
+    - [space-age] Erbium oxide no longer decays.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.20
 Date: 2025-2-26
