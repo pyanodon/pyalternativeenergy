@@ -5,6 +5,7 @@ Date: ???
     - Fixed fluid mining drills not working when connected to pipelines with low fluid level.
     - Fixed some recipes not having defined catalysts.
     - [space-age] Erbium oxide no longer decays.
+    - Swapped pistols to gunpowder in the fat man recipe. Resolves https://github.com/pyanodon/pybugreports/issues/888
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.20
 Date: 2025-2-26

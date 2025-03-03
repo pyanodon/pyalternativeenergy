@@ -999,7 +999,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "pistol",                   amount = 1},
+        {type = "item", name = "gunpowder",                amount = 10},
         {type = "item", name = "piercing-rounds-magazine", amount = 1},
         {type = "item", name = "atomic-bomb",              amount = 1},
         {type = "item", name = "artillery-shell",          amount = 1},
