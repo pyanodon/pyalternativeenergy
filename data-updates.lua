@@ -237,7 +237,7 @@ local recipes_list =
     "butynediol",
     "cerium-oxide",
     "cf",
-    "citric-acid-01",
+    -- "citric-acid-01", https://github.com/pyanodon/pybugreports/issues/938
     "citric-acid-02",
     "conductive-sheet",
     "control-rod",

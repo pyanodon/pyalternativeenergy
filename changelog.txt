@@ -6,6 +6,7 @@ Date: 2025-3-3
     - Fixed some recipes not having defined catalysts.
     - [space-age] Erbium oxide no longer decays.
     - Swapped pistols to gunpowder in the fat man recipe. Resolves https://github.com/pyanodon/pybugreports/issues/888
+    - Citric acid no longer accepts productivity modules. Resolves https://github.com/pyanodon/pybugreports/issues/938
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.20
 Date: 2025-2-26
