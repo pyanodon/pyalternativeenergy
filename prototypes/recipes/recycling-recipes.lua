@@ -809,3 +809,22 @@ RECIPE {
     order = "a",
     allow_productivity = false,
 }:add_unlock("rubber-2")
+
+-- barrels
+
+RECIPE {
+    type = "recipe",
+    name = "steel-from-barrels",
+    category = "advanced-crafting",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {
+        {type = "item", name = "barrel", amount = 1},
+    },
+    results = {
+        {type = "item", name = "steel-plate", amount = 1, probability = 0.65},
+    },
+    subgroup = "barrel",
+    order = "aa",
+    allow_productivity = false,
+}:add_unlock("fluid-handling")
