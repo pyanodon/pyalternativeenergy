@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.22
+Date: ?
+  Changes:
+    - Citric acid no longer accepts productivity modules. Resolves https://github.com/pyanodon/pybugreports/issues/938
+    - Added a new recipe to recycle barrels back into steel. Resolves https://github.com/pyanodon/pybugreports/issues/902
+    - Reduced the size of nexelit substations from 5x5 -> 4x4. Migration note: existing substations will remain 5x5 and are marked with a (legacy) tag. Resolves https://github.com/pyanodon/pybugreports/issues/845
+---------------------------------------------------------------------------------------------------
 Version: 3.1.21
 Date: 2025-3-3
   Changes:
@@ -6,8 +13,6 @@ Date: 2025-3-3
     - Fixed some recipes not having defined catalysts.
     - [space-age] Erbium oxide no longer decays.
     - Swapped pistols to gunpowder in the fat man recipe. Resolves https://github.com/pyanodon/pybugreports/issues/888
-    - Citric acid no longer accepts productivity modules. Resolves https://github.com/pyanodon/pybugreports/issues/938
-    - Added a new recipe to recycle barrels back into steel. Resolves https://github.com/pyanodon/pybugreports/issues/902
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.20
 Date: 2025-2-26
