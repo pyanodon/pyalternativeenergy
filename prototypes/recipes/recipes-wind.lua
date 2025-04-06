@@ -106,6 +106,25 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "shaft-mk01-casting",
+    category = "casting",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = "fluid", name = "molten-solder",  amount = 50},
+        {type = "fluid", name = "molten-nexelit", amount = 50},
+        {type = "fluid", name = "molten-iron",    amount = 50},
+        {type = "item",  name = "mold",           amount = 1},
+        {type = "item",  name = "small-parts-01", amount = 10},
+        {type = "item",  name = "sb-oxide",       amount = 5},
+    },
+    results = {
+        {type = "item", name = "shaft-mk01", amount = 2},
+    },
+}:add_unlock("casting-mk02")
+
+RECIPE {
+    type = "recipe",
     name = "rotor-mk01",
     category = "crafting",
     enabled = false,
