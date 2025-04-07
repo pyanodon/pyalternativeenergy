@@ -8,22 +8,22 @@ RECIPE {
     enabled = false,
     ingredients =
     {
-        {"aerial-blimp-mk02",   1},
-        {"processing-unit",     5},
-        {"ns-material",         20},
-        {"small-parts-03",      100},
-        {"acrylic",             200},
-        {"aerogel",             40},
-        {"shaft-mk03",          2},
-        {"anemometer-mk03",     4},
-        {"controler-mk03",      2},
-        {"electronics-mk03",    2},
-        {"biobattery",          100},
-        {"cf",                  200},
-        {"mechanical-parts-03", 1},
-        {type = "fluid",        name = "helium", amount = 4000},
+        {type = "item",  name = "aerial-blimp-mk02",   amount = 1},
+        {type = "item",  name = "processing-unit",     amount = 5},
+        {type = "item",  name = "ns-material",         amount = 20},
+        {type = "item",  name = "small-parts-03",      amount = 100},
+        {type = "item",  name = "acrylic",             amount = 200},
+        {type = "item",  name = "aerogel",             amount = 40},
+        {type = "item",  name = "shaft-mk03",          amount = 2},
+        {type = "item",  name = "anemometer-mk03",     amount = 4},
+        {type = "item",  name = "controler-mk03",      amount = 2},
+        {type = "item",  name = "electronics-mk03",    amount = 2},
+        {type = "item",  name = "biobattery",          amount = 100},
+        {type = "item",  name = "cf",                  amount = 200},
+        {type = "item",  name = "mechanical-parts-03", amount = 1},
+        {type = "fluid", name = "helium",              amount = 4000},
     },
-    result = "aerial-blimp-mk03"
+    results = {{type = "item", name = "aerial-blimp-mk03", amount = 1}}
 }:add_unlock("renewable-mk03")
 
 ITEM {

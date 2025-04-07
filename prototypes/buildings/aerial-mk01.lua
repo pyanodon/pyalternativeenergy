@@ -8,20 +8,20 @@ RECIPE {
     enabled = false,
     ingredients =
     {
-        {"shaft-mk01",         2},
-        {"aluminium-plate",    200},
-        {"bolts",              40},
-        {"anemometer-mk01",    4},
-        {"electronic-circuit", 5},
-        {"small-parts-01",     100},
-        {"intermetallics",     10},
-        {"utility-box-mk01",   2},
-        {"battery-mk01",       100},
-        {"plastic-bar",        60},
-        {"copper-cable",       100},
-        {type = "fluid",       name = "hot-air", amount = 4000},
+        {type = "item",  name = "shaft-mk01",         amount = 2},
+        {type = "item",  name = "aluminium-plate",    amount = 200},
+        {type = "item",  name = "bolts",              amount = 40},
+        {type = "item",  name = "anemometer-mk01",    amount = 4},
+        {type = "item",  name = "electronic-circuit", amount = 5},
+        {type = "item",  name = "small-parts-01",     amount = 100},
+        {type = "item",  name = "intermetallics",     amount = 10},
+        {type = "item",  name = "utility-box-mk01",   amount = 2},
+        {type = "item",  name = "battery-mk01",       amount = 100},
+        {type = "item",  name = "plastic-bar",        amount = 60},
+        {type = "item",  name = "copper-cable",       amount = 100},
+        {type = "fluid", name = "hot-air",            amount = 4000},
     },
-    result = "aerial-blimp-mk01"
+    results = {{type = "item", name = "aerial-blimp-mk01", amount = 1}}
 }:add_unlock("renewable-mk01")
 
 ITEM {

@@ -426,37 +426,37 @@ RECIPE("inserter"):clear_ingredients():add_ingredient {"burner-inserter", 1}:add
     :add_ingredient {"small-parts-01", 3}:add_ingredient {"duralumin", 1}
 RECIPE("long-handed-inserter"):set_fields {
     ingredients = {
-        {"inserter",           1},
-        {"electronic-circuit", 1},
-        {"small-parts-01",     5},
-        {"belt",               1},
-        {"fenxsb-alloy",       1},
-        {"chromium",           10}
+        {type = "item", name = "inserter",           amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 1},
+        {type = "item", name = "small-parts-01",     amount = 5},
+        {type = "item", name = "belt",               amount = 1},
+        {type = "item", name = "fenxsb-alloy",       amount = 1},
+        {type = "item", name = "chromium",           amount = 10}
     },
-    result_count = 2,
+    results = {{type = "item", name = "long-handed-inserter", amount = 2}},
     energy_required = 1
 }
 
 RECIPE("fast-inserter"):set_fields {
     ingredients = {
-        {"inserter",           1},
-        {"electronic-circuit", 4},
-        {"belt",               1},
-        {"nbfe-alloy",         3},
-        {"vitreloy",           1},
-        {"small-parts-01",     10}
+        {type = "item", name = "inserter",           amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 4},
+        {type = "item", name = "belt",               amount = 1},
+        {type = "item", name = "nbfe-alloy",         amount = 3},
+        {type = "item", name = "vitreloy",           amount = 1},
+        {type = "item", name = "small-parts-01",     amount = 10}
     },
-    result_count = 1,
+    results = {{type = "item", name = "fast-inserter", amount = 1}},
     energy_required = 0.5
 }
 
 RECIPE("bulk-inserter"):set_fields {
     ingredients = {
-        {"fast-inserter",        1},
-        {"advanced-circuit",     1},
-        {"electric-engine-unit", 1},
-        {"small-parts-02",       1},
-        {"crmoni",               1},
+        {type = "item", name = "fast-inserter",        amount = 1},
+        {type = "item", name = "advanced-circuit",     amount = 1},
+        {type = "item", name = "electric-engine-unit", amount = 1},
+        {type = "item", name = "small-parts-02",       amount = 1},
+        {type = "item", name = "crmoni",               amount = 1},
     },
 }
 
@@ -497,7 +497,7 @@ RECIPE {
         {type = "item", name = "electronics-mk02", amount = 2}
     },
     energy_required = 15,
-    result = "speed-module"
+    results = {{type = "item", name = "speed-module", amount = 1}}
 }
 
 RECIPE {
@@ -512,7 +512,7 @@ RECIPE {
         {type = "item", name = "electronics-mk03", amount = 2}
     },
     energy_required = 30,
-    result = "speed-module-2"
+    results = {{type = "item", name = "speed-module-2", amount = 1}}
 }
 
 RECIPE {
@@ -528,7 +528,7 @@ RECIPE {
         {type = "item", name = "fes",              amount = 1}
     },
     energy_required = 60,
-    result = "speed-module-3"
+    results = {{type = "item", name = "speed-module-3", amount = 1}}
 }
 
 RECIPE {
@@ -542,7 +542,7 @@ RECIPE {
         {type = "item", name = "electronics-mk02", amount = 2}
     },
     energy_required = 15,
-    result = "efficiency-module"
+    results = {{type = "item", name = "efficiency-module", amount = 1}}
 }
 
 RECIPE {
@@ -557,7 +557,7 @@ RECIPE {
         {type = "item", name = "electronics-mk03",  amount = 2}
     },
     energy_required = 30,
-    result = "efficiency-module-2"
+    results = {{type = "item", name = "efficiency-module-2", amount = 1}}
 }
 
 RECIPE {
@@ -573,7 +573,7 @@ RECIPE {
         {type = "item", name = "fes",                 amount = 1}
     },
     energy_required = 60,
-    result = "efficiency-module-3"
+    results = {{type = "item", name = "efficiency-module-3", amount = 1}}
 }
 
 RECIPE {
@@ -587,7 +587,7 @@ RECIPE {
         {type = "item", name = "electronics-mk02", amount = 2}
     },
     energy_required = 15,
-    result = "productivity-module"
+    results = {{type = "item", name = "productivity-module", amount = 1}}
 }
 
 RECIPE {
@@ -602,7 +602,7 @@ RECIPE {
         {type = "item", name = "electronics-mk03",    amount = 2}
     },
     energy_required = 30,
-    result = "productivity-module-2"
+    results = {{type = "item", name = "productivity-module-2", amount = 1}}
 }
 
 RECIPE {
@@ -618,7 +618,7 @@ RECIPE {
         {type = "item", name = "fes",                   amount = 1}
     },
     energy_required = 60,
-    result = "productivity-module-3"
+    results = {{type = "item", name = "productivity-module-3", amount = 1}}
 }
 
 if mods["quality"] then
@@ -633,7 +633,7 @@ if mods["quality"] then
             {type = "item", name = "electronics-mk02", amount = 2}
         },
         energy_required = 15,
-        result = "quality-module"
+        results = {{type = "item", name = "quality-module", amount = 1}}
     }
 
     RECIPE {
@@ -647,7 +647,7 @@ if mods["quality"] then
             {type = "item", name = "electronics-mk02", amount = 2}
         },
         energy_required = 15,
-        result = "quality-module"
+        results = {{type = "item", name = "quality-module", amount = 1}}
     }
 
     RECIPE {
@@ -662,7 +662,7 @@ if mods["quality"] then
             {type = "item", name = "electronics-mk03", amount = 2}
         },
         energy_required = 30,
-        result = "quality-module-2"
+        results = {{type = "item", name = "quality-module-2", amount = 1}}
     }
 
     RECIPE {
@@ -678,7 +678,7 @@ if mods["quality"] then
             {type = "item", name = "fes",              amount = 1}
         },
         energy_required = 60,
-        result = "quality-module-3"
+        results = {{type = "item", name = "quality-module-3", amount = 1}}
     }
 end
 
@@ -720,174 +720,174 @@ RECIPE("space-science-pack"):add_ingredient {type = "item", name = "mechanical-p
 
 RECIPE("light-armor"):set_fields {
     ingredients = {
-        {"small-parts-01", 20},
-        {"inductor1",      4},
-        {"steel-plate",    20},
+        {type = "item", name = "small-parts-01", amount = 20},
+        {type = "item", name = "inductor1",      amount = 4},
+        {type = "item", name = "steel-plate",    amount = 20},
     },
     enabled = false
 }:add_unlock("steel-axe")
 RECIPE("heavy-armor"):set_fields {
     ingredients = {
-        {"duralumin",          20},
-        {"titanium-plate",     40},
-        {"electronic-circuit", 25},
-        {"plastic-bar",        10},
-        {"small-parts-01",     20},
-        {"latex-slab",         4},
-        {"intermetallics",     5}
+        {type = "item", name = "duralumin",          amount = 20},
+        {type = "item", name = "titanium-plate",     amount = 40},
+        {type = "item", name = "electronic-circuit", amount = 25},
+        {type = "item", name = "plastic-bar",        amount = 10},
+        {type = "item", name = "small-parts-01",     amount = 20},
+        {type = "item", name = "latex-slab",         amount = 4},
+        {type = "item", name = "intermetallics",     amount = 5}
     },
 }
 RECIPE("modular-armor"):set_fields {
     ingredients = {
-        {"advanced-circuit",        55},
-        {"electronics-mk02",        10},
-        {"self-assembly-monolayer", 10},
-        {"mechanical-parts-02",     10},
-        {"utility-box-mk02",        1},
-        {"small-parts-01",          40},
-        {"small-parts-02",          20},
-        {"stainless-steel",         10},
-        {"filtration-media",        2},
-        {"kevlar",                  80},
-        {type = "fluid",            name = "molten-titanium", amount = 400},
+        {type = "item",  name = "advanced-circuit",        amount = 55},
+        {type = "item",  name = "electronics-mk02",        amount = 10},
+        {type = "item",  name = "self-assembly-monolayer", amount = 10},
+        {type = "item",  name = "mechanical-parts-02",     amount = 10},
+        {type = "item",  name = "utility-box-mk02",        amount = 1},
+        {type = "item",  name = "small-parts-01",          amount = 40},
+        {type = "item",  name = "small-parts-02",          amount = 20},
+        {type = "item",  name = "stainless-steel",         amount = 10},
+        {type = "item",  name = "filtration-media",        amount = 2},
+        {type = "item",  name = "kevlar",                  amount = 80},
+        {type = "fluid", name = "molten-titanium",         amount = 400},
     },
     category = "crafting-with-fluid"
 }
 RECIPE("power-armor"):set_fields {
     ingredients = {
-        {"processing-unit",       80},
-        {"biobattery",            12},
-        {"small-parts-01",        120},
-        {"small-parts-02",        100},
-        {"small-parts-03",        80},
-        {"super-steel",           20},
-        {"nanofibrils",           6},
-        {"electronics-mk03",      20},
-        {"mechanical-parts-03",   20},
-        {"utility-box-mk03",      1},
-        {"hydraulic-system-mk01", 2},
-        {"cooling-tower-mk02",    1},
-        {"mositial-nx",           20},
-        {"kevlar",                100},
-        {type = "fluid",          name = "molten-nexelit", amount = 600},
+        {type = "item",  name = "processing-unit",       amount = 80},
+        {type = "item",  name = "biobattery",            amount = 12},
+        {type = "item",  name = "small-parts-01",        amount = 120},
+        {type = "item",  name = "small-parts-02",        amount = 100},
+        {type = "item",  name = "small-parts-03",        amount = 80},
+        {type = "item",  name = "super-steel",           amount = 20},
+        {type = "item",  name = "nanofibrils",           amount = 6},
+        {type = "item",  name = "electronics-mk03",      amount = 20},
+        {type = "item",  name = "mechanical-parts-03",   amount = 20},
+        {type = "item",  name = "utility-box-mk03",      amount = 1},
+        {type = "item",  name = "hydraulic-system-mk01", amount = 2},
+        {type = "item",  name = "cooling-tower-mk02",    amount = 1},
+        {type = "item",  name = "mositial-nx",           amount = 20},
+        {type = "item",  name = "kevlar",                amount = 100},
+        {type = "fluid", name = "molten-nexelit",        amount = 600},
     },
     category = "crafting-with-fluid"
 }
 RECIPE("power-armor-mk2"):set_fields {
     ingredients = {
-        {"intelligent-unit",      115},
-        {"quantum-battery",       12},
-        {"supercapacitor",        12},
-        {"small-parts-02",        100},
-        {"small-parts-03",        120},
-        {"electronics-mk04",      30},
-        {"mechanical-parts-04",   30},
-        {"utility-box-mk04",      1},
-        {"hydraulic-system-mk02", 2},
-        {"cooling-tower-mk02",    1},
-        {"sc-engine",             6},
-        {"vacuum-pump-mk04",      2},
-        {"ht-pipes",              10},
-        {"metallic-glass",        20},
-        {"nxzngd",                40},
-        {"reduced-nexelit",       20},
-        {"biopolymer",            115},
-        {"beacon",                1},
-        {"kevlar",                120},
-        {type = "fluid",          name = "molten-super-steel", amount = 800},
+        {type = "item",  name = "intelligent-unit",      amount = 115},
+        {type = "item",  name = "quantum-battery",       amount = 12},
+        {type = "item",  name = "supercapacitor",        amount = 12},
+        {type = "item",  name = "small-parts-02",        amount = 100},
+        {type = "item",  name = "small-parts-03",        amount = 120},
+        {type = "item",  name = "electronics-mk04",      amount = 30},
+        {type = "item",  name = "mechanical-parts-04",   amount = 30},
+        {type = "item",  name = "utility-box-mk04",      amount = 1},
+        {type = "item",  name = "hydraulic-system-mk02", amount = 2},
+        {type = "item",  name = "cooling-tower-mk02",    amount = 1},
+        {type = "item",  name = "sc-engine",             amount = 6},
+        {type = "item",  name = "vacuum-pump-mk04",      amount = 2},
+        {type = "item",  name = "ht-pipes",              amount = 10},
+        {type = "item",  name = "metallic-glass",        amount = 20},
+        {type = "item",  name = "nxzngd",                amount = 40},
+        {type = "item",  name = "reduced-nexelit",       amount = 20},
+        {type = "item",  name = "biopolymer",            amount = 115},
+        {type = "item",  name = "beacon",                amount = 1},
+        {type = "item",  name = "kevlar",                amount = 120},
+        {type = "fluid", name = "molten-super-steel",    amount = 800},
     },
     category = "crafting-with-fluid"
 }
 RECIPE("fission-reactor-equipment"):set_fields {
     ingredients = {
-        {"low-density-structure", 40},
-        {"gastrocapacitor",       10},
-        {"intelligent-unit",      20},
-        {"mechanical-parts-03",   10},
-        {"efficiency-module-3",   2},
-        {"blanket",               1},
-        {"divertor",              2},
-        {"big-electric-pole",     1},
-        {"biopolymer",            135},
+        {type = "item", name = "low-density-structure", amount = 40},
+        {type = "item", name = "gastrocapacitor",       amount = 10},
+        {type = "item", name = "intelligent-unit",      amount = 20},
+        {type = "item", name = "mechanical-parts-03",   amount = 10},
+        {type = "item", name = "efficiency-module-3",   amount = 2},
+        {type = "item", name = "blanket",               amount = 1},
+        {type = "item", name = "divertor",              amount = 2},
+        {type = "item", name = "big-electric-pole",     amount = 1},
+        {type = "item", name = "biopolymer",            amount = 135},
     },
     category = "crafting"
 }
 RECIPE("personal-fusion-cell"):set_fields {
     ingredients = {
-        {"sc-unit",                2},
-        {"reinforced-wall-shield", 1},
-        {"cryocooler",             1},
-        {"hts-coil",               8},
-        {"super-alloy",            10},
-        {"bioreceptor",            1},
-        {"iron-nanoparticles",     2},
-        {"small-parts-03",         10},
-        {"kondo-processor",        1},
-        {"medium-electric-pole",   1},
-        {type = "fluid",           name = "deuterium", amount = 100},
-        {type = "fluid",           name = "tritium",   amount = 100},
+        {type = "item",  name = "sc-unit",                amount = 2},
+        {type = "item",  name = "reinforced-wall-shield", amount = 1},
+        {type = "item",  name = "cryocooler",             amount = 1},
+        {type = "item",  name = "hts-coil",               amount = 8},
+        {type = "item",  name = "super-alloy",            amount = 10},
+        {type = "item",  name = "bioreceptor",            amount = 1},
+        {type = "item",  name = "iron-nanoparticles",     amount = 2},
+        {type = "item",  name = "small-parts-03",         amount = 10},
+        {type = "item",  name = "kondo-processor",        amount = 1},
+        {type = "item",  name = "medium-electric-pole",   amount = 1},
+        {type = "fluid", name = "deuterium",              amount = 100},
+        {type = "fluid", name = "tritium",                amount = 100},
     },
     category = "crafting-with-fluid"
 }
 RECIPE("personal-fusion-cell-refuel"):set_fields {
     ingredients = {
-        {"personal-fusion-cell-used", 1},
-        {type = "fluid",              name = "deuterium", amount = 100},
-        {type = "fluid",              name = "tritium",   amount = 100},
+        {type = "item",  name = "personal-fusion-cell-used", amount = 1},
+        {type = "fluid", name = "deuterium",                 amount = 100},
+        {type = "fluid", name = "tritium",                   amount = 100},
     },
     category = "crafting-with-fluid"
 }
 RECIPE("belt-immunity-equipment"):set_fields {
     ingredients = {
-        {"brake-mk01",         1},
-        {"intermetallics",     5},
-        {"electronic-circuit", 5},
+        {type = "item", name = "brake-mk01",         amount = 1},
+        {type = "item", name = "intermetallics",     amount = 5},
+        {type = "item", name = "electronic-circuit", amount = 5},
     },
     category = "crafting"
 }
 RECIPE("night-vision-equipment"):set_fields {
     ingredients = {
-        {"lens",               2},
-        {"small-parts-01",     10},
-        {"electronic-circuit", 5},
-        {"plastic-bar",        5},
+        {type = "item", name = "lens",               amount = 2},
+        {type = "item", name = "small-parts-01",     amount = 10},
+        {type = "item", name = "electronic-circuit", amount = 5},
+        {type = "item", name = "plastic-bar",        amount = 5},
     },
     category = "crafting"
 }
 RECIPE("personal-roboport-mk2-equipment"):set_fields {
     ingredients = {
-        {"py-ze",                       1},
-        {"small-parts-01",              10},
-        {"advanced-circuit",            5},
-        {"mechanical-parts-01",         2},
-        {"personal-roboport-equipment", 5},
-        {"aluminium-plate",             20},
+        {type = "item", name = "py-ze",                       amount = 1},
+        {type = "item", name = "small-parts-01",              amount = 10},
+        {type = "item", name = "advanced-circuit",            amount = 5},
+        {type = "item", name = "mechanical-parts-01",         amount = 2},
+        {type = "item", name = "personal-roboport-equipment", amount = 5},
+        {type = "item", name = "aluminium-plate",             amount = 20},
     },
     category = "crafting"
 }
 RECIPE("solar-panel-equipment"):set_fields {
     ingredients = {
-        {"solar-panel-mk01",     1},
-        {"plastic-bar",          5},
-        {"lithium",              10},
-        {"medium-electric-pole", 1}
+        {type = "item", name = "solar-panel-mk01",     amount = 1},
+        {type = "item", name = "plastic-bar",          amount = 5},
+        {type = "item", name = "lithium",              amount = 10},
+        {type = "item", name = "medium-electric-pole", amount = 1}
     },
     category = "crafting"
 }
 RECIPE("exoskeleton-equipment"):set_fields {
     ingredients = {
-        {"neuromorphic-chip",       1},
-        {"low-density-structure",   4},
-        {"hydraulic-system-mk02",   2},
-        {"mechanical-parts-03",     1},
-        {"sc-engine",               1},
-        {"brake-mk04",              1},
-        {"nano-mesh",               1},
-        {"gearbox-mk04",            1},
-        {"super-steel",             10},
-        {"processing-unit",         10},
-        {"metastable-quasicrystal", 1},
-        {"small-parts-03",          30},
+        {type = "item", name = "neuromorphic-chip",       amount = 1},
+        {type = "item", name = "low-density-structure",   amount = 4},
+        {type = "item", name = "hydraulic-system-mk02",   amount = 2},
+        {type = "item", name = "mechanical-parts-03",     amount = 1},
+        {type = "item", name = "sc-engine",               amount = 1},
+        {type = "item", name = "brake-mk04",              amount = 1},
+        {type = "item", name = "nano-mesh",               amount = 1},
+        {type = "item", name = "gearbox-mk04",            amount = 1},
+        {type = "item", name = "super-steel",             amount = 10},
+        {type = "item", name = "processing-unit",         amount = 10},
+        {type = "item", name = "metastable-quasicrystal", amount = 1},
+        {type = "item", name = "small-parts-03",          amount = 30},
     },
     category = "crafting"
 }

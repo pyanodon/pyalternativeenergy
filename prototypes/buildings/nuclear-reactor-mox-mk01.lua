@@ -17,10 +17,10 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nuclear-reactor-mox-mk01", 1}
+        {type = "item", name = "nuclear-reactor-mox-mk01", amount = 1}
     },
     results = {
-        {"nuclear-reactor-mk01", 1},
+        {type = "item", name = "nuclear-reactor-mk01", amount = 1},
     }
 }:add_unlock("nuclear-power")
 

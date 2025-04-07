@@ -213,13 +213,13 @@ data.raw["assembling-machine"]["pulp-mill-mk03"].energy_usage = "2MW"
 data.raw["assembling-machine"]["pulp-mill-mk04"].energy_usage = "3MW"
 
 RECIPE("nexelit-battery-recharge"):remove_unlock("railway-mk03"):add_unlock("battery-mk02")
-data.raw.recipe["nexelit-battery"].results = {{"used-nexelit-battery", 1}}
+data.raw.recipe["nexelit-battery"].results = {{type = "item", name = "used-nexelit-battery", amount = 1}}
 RECIPE("quantum-battery-recharge"):remove_unlock("railway-mk04"):add_unlock("battery-mk04")
-data.raw.recipe["quantum-battery"].results = {{"used-quantum-battery", 1}}
+data.raw.recipe["quantum-battery"].results = {{type = "item", name = "used-quantum-battery", amount = 1}}
 
 RECIPE("random-science-pack"):remove_unlock("quantum").hidden = true
 
 RECIPE("pa-diamond"):remove_unlock("nucleo-mk02"):add_unlock("nucleo-mk03").energy_required = data.raw.recipe["pa-diamond"].energy_required * 2
 
-RECIPE("coarse-tar"):remove_ingredient("coarse"):add_ingredient {"coarse", 1}.energy_required = 3
+RECIPE("coarse-tar"):remove_ingredient("coarse"):add_ingredient {type = "item", name = "coarse", amount = 1}.energy_required = 3
 RECIPE("coarse-tar").results = {{type = "fluid", name = "tar", amount = 70}}

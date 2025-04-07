@@ -85,9 +85,9 @@ RECIPE("reheat-outlet-gas-1"):remove_unlock("hot-air-mk03"):set_fields {hidden =
 RECIPE("reheat-outlet-gas-2"):replace_ingredient("combustion-mixture1", {type = "fluid", name = "hot-molten-salt", amount = 50, minimum_temperature = 1995})
 table.insert(RECIPE("reheat-outlet-gas-2").results, {type = "fluid", name = "molten-salt", amount = 50})
 
-RECIPE("fast-inserter-2"):replace_ingredient("electronic-circuit", {"controler-mk01", 2}):add_ingredient {"electronics-mk01", 2}:add_ingredient {"gearbox-mk01", 1}:replace_ingredient("steel-plate", "nbfe-alloy")
-RECIPE("long-handed-inserter-2"):replace_ingredient("duralumin", "fenxsb-alloy"):add_ingredient {"nichrome", 2}
-RECIPE("bulk-inserter-2"):replace_ingredient("titanium-plate", {"self-assembly-monolayer", 2})
+RECIPE("fast-inserter-2"):replace_ingredient("electronic-circuit", {type = "item", name = "controler-mk01", amount = 2}):add_ingredient {type = "item", name = "electronics-mk01", amount = 2}:add_ingredient {type = "item", name = "gearbox-mk01", amount = 1}:replace_ingredient("steel-plate", "nbfe-alloy")
+RECIPE("long-handed-inserter-2"):replace_ingredient("duralumin", "fenxsb-alloy"):add_ingredient {type = "item", name = "nichrome", amount = 2}
+RECIPE("bulk-inserter-2"):replace_ingredient("titanium-plate", {type = "item", name = "self-assembly-monolayer", amount = 2})
 
 --pyPH--
 data.raw["assembling-machine"]["coalbed-mk02"].energy_usage             = "2MW"

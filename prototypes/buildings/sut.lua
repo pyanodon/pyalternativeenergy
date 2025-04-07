@@ -177,12 +177,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"small-parts-02", 1},
-        {"py-asphalt",     2},
-        {"glass",          20},
-        {"mirror-mk03",    1}
+        {type = "item", name = "small-parts-02", amount = 1},
+        {type = "item", name = "py-asphalt",     amount = 2},
+        {type = "item", name = "glass",          amount = 20},
+        {type = "item", name = "mirror-mk03",    amount = 1}
     },
-    results = {{"sut-panel", 2}}
+    results = {{type = "item", name = "sut-panel", amount = 2}}
 }:add_unlock("thermal-mk03")
 
 ITEM {

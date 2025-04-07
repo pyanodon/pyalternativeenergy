@@ -335,8 +335,8 @@ RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
 
 RECIPE("space-science-pack"):replace_ingredient("yellow-cake", "pu-238")
 
-RECIPE("casting-lead-container"):add_ingredient {"sb-oxide", 4}
-RECIPE("hotair-casting-lead-container"):add_ingredient {"sb-oxide", 4}
+RECIPE("casting-lead-container"):add_ingredient {type = "item", name = "sb-oxide", amount = 4}
+RECIPE("hotair-casting-lead-container"):add_ingredient {type = "item", name = "sb-oxide", amount = 4}
 
 RECIPE {
     type = "recipe",
@@ -345,12 +345,12 @@ RECIPE {
     energy_required = 15,
     ingredients =
     {
-        {"aluminium-plate", 5},
-        {"u-235",           3},
-        {"u-238",           15}
+        {type = "item", name = "aluminium-plate", amount = 5},
+        {type = "item", name = "u-235",           amount = 3},
+        {type = "item", name = "u-238",           amount = 15}
     },
     results = {
-        {"uranium-fuel-cell", 1}
+        {type = "item", name = "uranium-fuel-cell", amount = 1}
     },
 } --:add_unlock('uranium-mining')
 
@@ -362,12 +362,12 @@ RECIPE {
 		energy_required = 15,
 		ingredients =
 			{
-				{"aluminium-plate", 5},
-				{"pu-239", 5},
-				{"u-238", 10}
+				{type = "item", name = "aluminium-plate", amount = 5},
+				{type = "item", name = "pu-239", amount = 5},
+				{type = "item", name = "u-238", amount = 10}
 			},
 		results = {
-				{"uranium-fuel-cell-mk02", 1}
+				{type = "item", name = "uranium-fuel-cell-mk02", amount = 1}
 		},
 	}--:add_unlock('uranium-mining')
 ]] --
@@ -379,11 +379,11 @@ RECIPE {
     energy_required = 15,
     ingredients =
     {
-        {"aluminium-plate", 5},
-        {"u-233",           20},
+        {type = "item", name = "aluminium-plate", amount = 5},
+        {type = "item", name = "u-233",           amount = 20},
     },
     results = {
-        {"uranium-fuel-cell-mk03", 1}
+        {type = "item", name = "uranium-fuel-cell-mk03", amount = 1}
     },
 }:add_unlock("nuclear-power-mk03") --returns 2
 
@@ -394,11 +394,11 @@ RECIPE {
     energy_required = 15,
     ingredients =
     {
-        {"aluminium-plate", 5},
-        {"u-235",           10},
+        {type = "item", name = "aluminium-plate", amount = 5},
+        {type = "item", name = "u-235",           amount = 10},
     },
     results = {
-        {"uranium-fuel-cell-mk04", 1}
+        {type = "item", name = "uranium-fuel-cell-mk04", amount = 1}
     },
 }:add_unlock("nuclear-power-mk04") --returns 3
 

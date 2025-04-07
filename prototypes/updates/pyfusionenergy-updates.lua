@@ -139,11 +139,11 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {"fusion-reactor-mk01",    2},
-        {"reinforced-wall-shield", 2000},
+        {type = "item", name = "fusion-reactor-mk01",    amount = 2},
+        {type = "item", name = "reinforced-wall-shield", amount = 2000},
     },
     results = {
-        {"fusion-reactor-mk02", 1}
+        {type = "item", name = "fusion-reactor-mk02", amount = 1}
     },
 }
 

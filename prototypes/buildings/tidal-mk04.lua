@@ -51,8 +51,8 @@ ENTITY {
     collision_mask = {layers = {object = true, train = true}},                            -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
     center_collision_mask = {layers = {water_tile = true, object = true, player = true}}, -- to test that tile directly under the pump is ground
     tile_buildability_rules = {
-        {area = {{-2, -5}, {2, 1}}, required_tiles = {layers = {water_tile = true}}, colliding_tiles = {layers = {ground_tile = true}}, remove_on_collision = true},
-        {area = {{-2, 1.6}, {2, 5}}, required_tiles = {layers = {ground_tile = true}}, colliding_tiles = {layers = {water_tile = true}}, remove_on_collision = true}
+        {area = {{-2, -5}, {2, 1}},  required_tiles = {layers = {water_tile = true}},  colliding_tiles = {layers = {ground_tile = true}}, remove_on_collision = true},
+        {area = {{-2, 1.6}, {2, 5}}, required_tiles = {layers = {ground_tile = true}}, colliding_tiles = {layers = {water_tile = true}},  remove_on_collision = true}
     },
     energy_source = {
         type = "electric",

@@ -8,23 +8,23 @@ RECIPE {
     enabled = false,
     ingredients =
     {
-        {"aerial-blimp-mk03",       1},
-        {"shaft-mk04",              2},
-        {"anemometer-mk04",         4},
-        {"solar-panel-mk02",        1},
-        {"intelligent-unit",        1},
-        {"metastable-quasicrystal", 10},
-        {"low-density-structure",   100},
-        {"hyperelastic-material",   20},
-        {"carbon-aerogel",          40},
-        {"quantum-battery",         5},
-        {"cf",                      200},
-        {"electronics-mk04",        2},
-        {"controler-mk04",          2},
-        {"mechanical-parts-04",     1},
-        {type = "fluid",            name = "helium3", amount = 400},
+        {type = "item",  name = "aerial-blimp-mk03",       amount = 1},
+        {type = "item",  name = "shaft-mk04",              amount = 2},
+        {type = "item",  name = "anemometer-mk04",         amount = 4},
+        {type = "item",  name = "solar-panel-mk02",        amount = 1},
+        {type = "item",  name = "intelligent-unit",        amount = 1},
+        {type = "item",  name = "metastable-quasicrystal", amount = 10},
+        {type = "item",  name = "low-density-structure",   amount = 100},
+        {type = "item",  name = "hyperelastic-material",   amount = 20},
+        {type = "item",  name = "carbon-aerogel",          amount = 40},
+        {type = "item",  name = "quantum-battery",         amount = 5},
+        {type = "item",  name = "cf",                      amount = 200},
+        {type = "item",  name = "electronics-mk04",        amount = 2},
+        {type = "item",  name = "controler-mk04",          amount = 2},
+        {type = "item",  name = "mechanical-parts-04",     amount = 1},
+        {type = "fluid", name = "helium3",                 amount = 400},
     },
-    result = "aerial-blimp-mk04"
+    results = {{type = "item", name = "aerial-blimp-mk04", amount = 1}}
 }:add_unlock("renewable-mk04")
 
 ITEM {

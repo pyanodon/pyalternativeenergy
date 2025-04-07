@@ -8,23 +8,23 @@ RECIPE {
     enabled = false,
     ingredients =
     {
-        {"aerial-blimp-mk01",       1},
-        {"shaft-mk02",              2},
-        {"anemometer-mk02",         4},
-        {"advanced-circuit",        5},
-        {"small-parts-02",          100},
-        {"self-assembly-monolayer", 40},
-        {"utility-box-mk02",        2},
-        {"controler-mk02",          2},
-        {"rubber",                  60},
-        {"aluminium-plate",         200},
-        {"nexelit-battery",         100},
-        {"eva",                     80},
-        {"mechanical-parts-02",     1},
-        {"electronics-mk02",        2},
-        {type = "fluid",            name = "hydrogen", amount = 4000},
+        {type = "item",  name = "aerial-blimp-mk01",       amount = 1},
+        {type = "item",  name = "shaft-mk02",              amount = 2},
+        {type = "item",  name = "anemometer-mk02",         amount = 4},
+        {type = "item",  name = "advanced-circuit",        amount = 5},
+        {type = "item",  name = "small-parts-02",          amount = 100},
+        {type = "item",  name = "self-assembly-monolayer", amount = 40},
+        {type = "item",  name = "utility-box-mk02",        amount = 2},
+        {type = "item",  name = "controler-mk02",          amount = 2},
+        {type = "item",  name = "rubber",                  amount = 60},
+        {type = "item",  name = "aluminium-plate",         amount = 200},
+        {type = "item",  name = "nexelit-battery",         amount = 100},
+        {type = "item",  name = "eva",                     amount = 80},
+        {type = "item",  name = "mechanical-parts-02",     amount = 1},
+        {type = "item",  name = "electronics-mk02",        amount = 2},
+        {type = "fluid", name = "hydrogen",                amount = 4000},
     },
-    result = "aerial-blimp-mk02"
+    results = {{type = "item", name = "aerial-blimp-mk02", amount = 1}}
 }:add_unlock("renewable-mk02")
 
 ITEM {
