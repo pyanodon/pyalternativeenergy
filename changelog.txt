@@ -7,6 +7,7 @@ Date: ?
     - Reduced the size of nexelit substations from 5x5 -> 4x4. Migration note: existing substations will remain 5x5 and are marked with a (legacy) tag. Resolves https://github.com/pyanodon/pybugreports/issues/845
     - Added a casting recipe for shafts mk01.
     - Removed productivity from a Numal bioprinting and data array recipes to match 1.1.
+    - Fixed rocket silos not accepting vitrified glass.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.21
 Date: 2025-3-3

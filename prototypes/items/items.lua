@@ -351,7 +351,9 @@ ITEM {
     flags = {},
     subgroup = "py-nuclear",
     order = "a",
-    stack_size = 100
+    stack_size = 100,
+    weight = tons / 500,
+    send_to_orbit_mode = "automated",
 }
 
 ITEM {
