@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.22
-Date: ?
+Date: 2025-4-3
   Changes:
     - Citric acid no longer accepts productivity modules. Resolves https://github.com/pyanodon/pybugreports/issues/938
     - Added a new recipe to recycle barrels back into steel. Resolves https://github.com/pyanodon/pybugreports/issues/902
