@@ -910,82 +910,84 @@ data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].energy_consumption
 
 data.raw.furnace["electric-furnace"].energy_usage = "10MW"
 data.raw.furnace["electric-furnace"].crafting_speed = 8
-data.raw.furnace["electric-furnace"].energy_source = {
-    type = "heat",
-    max_temperature = 1000,
-    specific_heat = "1MJ",
-    max_transfer = "2GW",
-    min_working_temperature = 500,
-    minimum_glow_temperature = 350,
-    connections =
-    {
+if not mods.pystellarexpedition then
+    data.raw.furnace["electric-furnace"].energy_source = {
+        type = "heat",
+        max_temperature = 1000,
+        specific_heat = "1MJ",
+        max_transfer = "2GW",
+        min_working_temperature = 500,
+        minimum_glow_temperature = 350,
+        connections =
         {
-            position = {1.2, 0},
-            direction = defines.direction.east
+            {
+                position = {1.2, 0},
+                direction = defines.direction.east
+            },
+            {
+                position = {-1.2, 0},
+                direction = defines.direction.west
+            }
         },
-        {
-            position = {-1.2, 0},
-            direction = defines.direction.west
-        }
-    },
-    pipe_covers =
-        make_4way_animation_from_spritesheet
-        {
-            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings.png",
-            width = 64,
-            height = 64,
-            direction_count = 4,
-            scale = 0.5
-        },
-    heat_pipe_covers =
-        make_4way_animation_from_spritesheet(
-            apply_heat_pipe_glow {
-                filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+        pipe_covers =
+            make_4way_animation_from_spritesheet
+            {
+                filename = "__base__/graphics/entity/heat-exchanger/heatex-endings.png",
                 width = 64,
                 height = 64,
                 direction_count = 4,
                 scale = 0.5
-            }),
-    heat_picture =
-    {
-        north = apply_heat_pipe_glow
-            {
-                filename = "__base__/graphics/entity/heat-exchanger/heatex-N-heated.png",
-                priority = "extra-high",
-                width = 44,
-                height = 96,
-                shift = util.by_pixel(-0.5, 8.5),
-                scale = 0.5
             },
-        east = apply_heat_pipe_glow
-            {
-                filename = "__base__/graphics/entity/heat-exchanger/heatex-E-heated.png",
-                priority = "extra-high",
-                width = 80,
-                height = 80,
-                shift = util.by_pixel(-21, -13),
-                scale = 0.5
-            },
-        south = apply_heat_pipe_glow
-            {
-                filename = "__base__/graphics/entity/heat-exchanger/heatex-S-heated.png",
-                priority = "extra-high",
-                width = 28,
-                height = 40,
-                shift = util.by_pixel(-1, -30),
-                scale = 0.5
-            },
-        west = apply_heat_pipe_glow
-            {
-                filename = "__base__/graphics/entity/heat-exchanger/heatex-W-heated.png",
-                priority = "extra-high",
-                width = 64,
-                height = 76,
-                shift = util.by_pixel(23, -13),
-                scale = 0.5
-            }
+        heat_pipe_covers =
+            make_4way_animation_from_spritesheet(
+                apply_heat_pipe_glow {
+                    filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+                    width = 64,
+                    height = 64,
+                    direction_count = 4,
+                    scale = 0.5
+                }),
+        heat_picture =
+        {
+            north = apply_heat_pipe_glow
+                {
+                    filename = "__base__/graphics/entity/heat-exchanger/heatex-N-heated.png",
+                    priority = "extra-high",
+                    width = 44,
+                    height = 96,
+                    shift = util.by_pixel(-0.5, 8.5),
+                    scale = 0.5
+                },
+            east = apply_heat_pipe_glow
+                {
+                    filename = "__base__/graphics/entity/heat-exchanger/heatex-E-heated.png",
+                    priority = "extra-high",
+                    width = 80,
+                    height = 80,
+                    shift = util.by_pixel(-21, -13),
+                    scale = 0.5
+                },
+            south = apply_heat_pipe_glow
+                {
+                    filename = "__base__/graphics/entity/heat-exchanger/heatex-S-heated.png",
+                    priority = "extra-high",
+                    width = 28,
+                    height = 40,
+                    shift = util.by_pixel(-1, -30),
+                    scale = 0.5
+                },
+            west = apply_heat_pipe_glow
+                {
+                    filename = "__base__/graphics/entity/heat-exchanger/heatex-W-heated.png",
+                    priority = "extra-high",
+                    width = 64,
+                    height = 76,
+                    shift = util.by_pixel(23, -13),
+                    scale = 0.5
+                }
+        }
     }
-}
+end
 
 ITEM("space-science-pack", "tool"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
 ITEM("space-science-pack", "tool"):set("icon_size", 64)
