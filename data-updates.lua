@@ -110,8 +110,8 @@ RECIPE("py-logistic-robot-mk01"):add_ingredient {type = "item", name = "gearbox-
 RECIPE("py-logistic-robot-mk02"):add_ingredient {type = "item", name = "gearbox-mk02", amount = 1}:add_ingredient {type = "item", name = "rayon", amount = 3}
 RECIPE("py-logistic-robot-mk04"):add_ingredient {type = "item", name = "gearbox-mk04", amount = 1}:replace_ingredient("py-logistic-robot-mk01", "py-logistic-robot-mk03"):add_ingredient {type = "item", name = "quantum-battery", amount = 1}:add_ingredient {type = "item", name = "nano-mesh", amount = 2}:add_ingredient {type = "item", name = "sc-engine", amount = 1}
 
-RECIPE("py-construction-robot-mk01"):add_ingredient {"battery-mk01", 2}
-RECIPE("py-logistic-robot-mk01"):add_ingredient {"battery-mk01", 2}
+RECIPE("py-construction-robot-mk01"):add_ingredient {type = "item", name = "battery-mk01", amount = 2}
+RECIPE("py-logistic-robot-mk01"):add_ingredient {type = "item", name = "battery-mk01", amount = 2}
 
 RECIPE("subcritical-water-01").category = "heat-exchanger"
 RECIPE("subcritical-water-02").category = "heat-exchanger"

@@ -422,8 +422,8 @@ RECIPE("uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
 RECIPE("explosive-uranium-cannon-shell"):replace_ingredient("uranium-238", "u-238")
 RECIPE("logistic-science-pack"):add_ingredient {type = "item", name = "battery-mk01", amount = 3}
 
-RECIPE("inserter"):clear_ingredients():add_ingredient {"burner-inserter", 1}:add_ingredient {"electronic-circuit", 2}
-    :add_ingredient {"small-parts-01", 3}:add_ingredient {"duralumin", 1}
+RECIPE("inserter"):clear_ingredients():add_ingredient {type = "item", name = "burner-inserter", amount = 1}:add_ingredient {type = "item", name = "electronic-circuit", amount = 2}
+    :add_ingredient {type = "item", name = "small-parts-01", amount = 3}:add_ingredient {type = "item", name = "duralumin", amount = 1}
 RECIPE("long-handed-inserter"):set_fields {
     ingredients = {
         {type = "item", name = "inserter",           amount = 1},

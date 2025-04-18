@@ -156,7 +156,7 @@ RECIPE("seaweed-crop-mk02"):add_ingredient {type = "item", name = "self-assembly
 RECIPE("zungror-lair-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 5}
 RECIPE("fluid-drill-mk03"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 RECIPE("flora-collector-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 6}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 2}
-RECIPE("rc-mk02"):add_ingredient {"eva", 100}:add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 12}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 10}
+RECIPE("rc-mk02"):add_ingredient {type = "item", name = "eva", amount = 100}:add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 12}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 10}
 RECIPE("outpost-aerial"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 5}
 
 
