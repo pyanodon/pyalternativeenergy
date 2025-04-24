@@ -2,7 +2,8 @@
 Version: 3.1.23
 Date: tba
   Internal:
-    - remove shorthands in recipe declarations
+    - Remove shorthands in recipe declarations.
+    - Buffed solar. MK02 7MW -> 21MW. MK03 14MW -> 70MW. MK04 35MW -> 350MW.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.22
 Date: 2025-4-3

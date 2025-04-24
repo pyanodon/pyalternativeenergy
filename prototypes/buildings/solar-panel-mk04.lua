@@ -83,5 +83,5 @@ ENTITY {
     },
     integration_patch_render_layer = "object",
     impact_category = "metal-large",
-    production = "35MW"
+    production = "350MW"
 }

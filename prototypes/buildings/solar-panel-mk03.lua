@@ -54,7 +54,7 @@ ENTITY {
         render_no_power_icon = false,
         input_flow_limit = "0W"
     },
-    energy_production = "14MW",
+    energy_production = "70MW",
     animation =
     {
         layers = {
