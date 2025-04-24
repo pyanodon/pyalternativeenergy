@@ -1,13 +1,13 @@
 --TECHNOLOGY--
 TECHNOLOGY("quantum"):add_prereq("machines-mk02")
-TECHNOLOGY("nano-tech"):add_prereq("photonics"):add_prereq("battery-mk04"):add_prereq("mof"):add_prereq("nano-mesh"):add_prereq("biofet")
+TECHNOLOGY("quantum-processor"):add_prereq("photonics"):add_prereq("battery-mk04"):add_prereq("mof"):add_prereq("nano-mesh"):add_prereq("biofet")
 -- TECHNOLOGY("nucleo"):remove_pack('chemical-science-pack'):remove_prereq('energy-2'):remove_prereq('boron-mk02'):add_prereq('uranium-mining')
 TECHNOLOGY("ht-robotics"):add_prereq("advanced-robotics")
 TECHNOLOGY("microfibers"):remove_pack("production-science-pack")
 TECHNOLOGY("ethylene"):remove_pack("chemical-science-pack")
 TECHNOLOGY("re-magnet"):remove_pack("production-science-pack")
 TECHNOLOGY("earnshaw-theorem"):add_pack("military-science-pack")
-TECHNOLOGY("nano-tech"):add_pack("military-science-pack")
+TECHNOLOGY("quantum-processor"):add_pack("military-science-pack")
 TECHNOLOGY("schrodinger-antelope"):add_pack("military-science-pack")
 
 --BUILDINDS--
@@ -85,7 +85,7 @@ RECIPE("pa-propene"):remove_unlock("nucleo")
 RECIPE("pa-coal"):remove_unlock("nucleo")
 
 RECIPE("sodium-silicate"):remove_unlock("colloidal-silica"):add_unlock {"silicon-mk01"}
-RECIPE("quantum-dots"):remove_unlock("quantum"):add_unlock {"nano-tech"}
+RECIPE("quantum-dots"):remove_unlock("quantum"):add_unlock {"quantum-processor"}
 RECIPE("silica-powder"):remove_unlock("colloidal-silica"):add_unlock {"silicon-mk01"}
 RECIPE("saline-water"):remove_unlock("electrolysis"):add_unlock("electronics")
 RECIPE("electronic-circuit"):add_ingredient {type = "item", name = "battery-mk00", amount = 1}
@@ -101,7 +101,7 @@ RECIPE("nanochip"):add_ingredient {type = "item", name = "quantum-dots", amount 
 RECIPE("kondo-processor"):add_ingredient {type = "item", name = "nano-wires", amount = 3}
 RECIPE("pi-josephson-junction"):add_ingredient {type = "item", name = "mqdc", amount = 1}:add_ingredient {type = "item", name = "time-crystal", amount = 1}:add_ingredient {type = "item", name = "conductive-sheet", amount = 4}
 RECIPE("kondo-core"):add_ingredient {type = "item", name = "gaas", amount = 1}:add_ingredient {type = "item", name = "heavy-p-type", amount = 10}:add_ingredient {type = "item", name = "light-n", amount = 10}
-RECIPE("nanocrystaline-core"):remove_unlock("nano-tech"):add_unlock("battery-mk04")
+RECIPE("nanocrystaline-core"):remove_unlock("quantum-processor"):add_unlock("battery-mk04")
 RECIPE("crco-alloy"):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
 RECIPE("hotair-crco-alloy"):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
 
@@ -165,7 +165,7 @@ RECIPE {
         {type = "item", name = "light-n", amount = 20}
     },
     main_product = "light-n"
-}:add_unlock("nano-tech")
+}:add_unlock("quantum-processor")
 
 RECIPE {
     type = "recipe",

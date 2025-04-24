@@ -682,7 +682,7 @@ RECIPE {
         {type = "item", name = "ingap", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("nano-tech")
+}:add_unlock("quantum-processor")
 
 RECIPE {
     type = "recipe",
@@ -699,7 +699,7 @@ RECIPE {
         {type = "item", name = "ingaas", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("nano-tech")
+}:add_unlock("quantum-processor")
 
 RECIPE {
     type = "recipe",
@@ -719,7 +719,7 @@ RECIPE {
         {type = "item", name = "quantum-well", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("nano-tech")
+}:add_unlock("quantum-processor")
 
 RECIPE {
     type = "recipe",
@@ -736,7 +736,7 @@ RECIPE {
         {type = "item", name = "alag-grid", amount = 1},
     },
     --main_product = "eg-si",
-}:add_unlock("nano-tech")
+}:add_unlock("quantum-processor")
 
 RECIPE {
     type = "recipe",
