@@ -57,11 +57,11 @@ ENTITY {
         type = "electric",
         usage_priority = "primary-output",
 
-        buffer_capacity = "30MJ",
+        buffer_capacity = "40MJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = "30MW",
+    energy_production = "40W",
     energy_usage = "0kW",
     continuous_animation = true,
     placeable_position_visualization = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization),
