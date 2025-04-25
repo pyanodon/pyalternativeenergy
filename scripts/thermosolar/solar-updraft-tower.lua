@@ -44,7 +44,7 @@ end
 
 ---Updates power generation for the tower provided, or all towers if none provided.<br />
 ---If additional_cover_count is used, the power production is adjusted by that number of additional covers.
----@param tower entity? the tower to update, if <i>nil</i>, all towers are updated
+---@param tower LuaEntity? the tower to update, if <i>nil</i>, all towers are updated
 ---@param additional_cover_count integer? the amount of covers to add or remove from the power the tower generated. If <i>nil</i>, the radius is searched and the tiles are re-counted
 function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_count)
     if not tower then
@@ -189,7 +189,7 @@ py.on_event(py.events.on_destroyed(), function(event)
 end)
 
 py.on_event(defines.events.on_gui_opened, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local entity = event.entity
     if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= "sut" then return end
 
@@ -229,7 +229,7 @@ py.on_event(defines.events.on_gui_opened, function(event)
 end)
 
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
         local gui = player.gui.screen.sut_gui
         if gui then gui.destroy() end
