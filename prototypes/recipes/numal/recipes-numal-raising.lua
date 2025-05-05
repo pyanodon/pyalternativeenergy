@@ -8,6 +8,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-numal",
 	order = "c",
 	main_product = "numal-egg",
+	number_icons = true,
 	mats =
 	{
 		--py3
@@ -221,6 +222,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-numal",
 	order = "b",
 	main_product = "numal",
+	number_icons = true,
 	mats =
 	{
 		--py
