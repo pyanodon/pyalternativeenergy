@@ -128,11 +128,11 @@ py.register_on_nth_tick(9, "aerial9", "pyae", function()
     end
 end)
 
-remote.add_interface("pyae", {
-    ---@param func string
-    execute_on_nth_tick = function(func)
+py.on_event(defines.events.on_tick, function(event)
+    local func_list = remote.call("on_nth_tick", "query", "pyae", event.tick)
+    for _, func in pairs(func_list) do
         py.mod_nth_tick_funcs[func]()
     end
-})
+end)
 
 py.finalize_events()
