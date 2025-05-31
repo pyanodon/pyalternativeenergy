@@ -35,8 +35,10 @@ ITEM {
 }
 
 ENTITY {
-    type = "electric-energy-interface",
+    type = "solar-panel",
     name = "anti-solar",
+    performance_at_day = 0,
+    performance_at_night = 1,
     icon = "__pyalternativeenergygraphics__/graphics/icons/anti-solar.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
@@ -54,10 +56,8 @@ ENTITY {
         render_no_power_icon = false,
         input_flow_limit = "0W"
     },
-    energy_production = "100MW",
-    energy_usage = "0kW",
-    continuous_animation = true,
-    animation = {
+    production = "100MW",
+    picture = {
         layers = {
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/raw.png",

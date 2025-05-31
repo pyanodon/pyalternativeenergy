@@ -6,6 +6,7 @@ Date: tba
     - Buffed tidal power. MK02 30MW -> 40MW. MK03 40MW -> 90MW. MK04 75MW -> 400MW.
     - Numal recipe icons are now numbered.
     - Typo in Py Codex Entry for MHD Generator - "isotpoes" should be "isotopes". Resolves https://github.com/pyanodon/pybugreports/issues/980
+    - Greatly optimized the performance of anti-solar panels. Resolves https://github.com/pyanodon/pybugreports/issues/983
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.22
 Date: 2025-4-3

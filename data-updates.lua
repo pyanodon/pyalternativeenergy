@@ -171,7 +171,6 @@ local electric_energy_interfaces = {
     "multiblade-turbine-mk03",
     "solar-panel-mk02",
     "solar-panel-mk03",
-    "anti-solar"
 }
 
 for _, name in pairs(electric_energy_interfaces) do
