@@ -35,10 +35,12 @@ ITEM {
     stack_size = 10
 }
 
-ENTITY {
-    type = "electric-energy-interface",
+local tidal = ENTITY {
+    type = "simple-entity-with-owner",
     name = "tidal-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/tidal-mk03.png",
+    performance_at_day = 1,
+    performance_at_night = 1,
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "tidal-mk03"},
@@ -57,15 +59,12 @@ ENTITY {
     },
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
-
+        usage_priority = "solar",
         buffer_capacity = "90MJ",
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = "90MW",
-    energy_usage = "0kW",
-    continuous_animation = true,
+    production = "90MW",
     placeable_position_visualization = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization),
     created_effect = {
         type = "direct",
@@ -77,7 +76,7 @@ ENTITY {
             }
         }
     },
-    animations = {
+    picture = {
         south = {
             layers = {
                 {
@@ -463,3 +462,19 @@ ENTITY {
         },
     }
 }
+
+local solar_panel = table.deepcopy(tidal)
+solar_panel.hidden = true
+solar_panel.animation = nil
+solar_panel.minable = nil
+solar_panel.fast_replaceable_group = nil
+solar_panel.collision_box = {{-5.3, -5.3}, {5.3, 5.3}}
+solar_panel.localised_name = solar_panel.localised_name or {"entity-name." .. solar_panel.name}
+solar_panel.name = solar_panel.name .. '-solar'
+solar_panel.type = "solar-panel"
+solar_panel.created_effect = nil
+solar_panel.placeable_position_visualization = nil
+solar_panel.tile_buildability_rules = nil
+solar_panel.selectable_in_game = false
+solar_panel.picture = nil
+data:extend{solar_panel}

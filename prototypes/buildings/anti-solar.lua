@@ -51,7 +51,7 @@ ENTITY {
     --allowed_effects = {"speed", "consumption"},
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
+        usage_priority = "solar",
         buffer_capacity = "100MJ",
         render_no_power_icon = false,
         input_flow_limit = "0W"
