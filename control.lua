@@ -11,7 +11,7 @@ require "scripts/thermosolar/heliostat"
 require "scripts/solar"
 require "scripts/wind/wind"
 require "scripts/aerial"
-require "scripts/hydro"
+require "scripts/tidal"
 
 py.on_event(py.events.on_init(), function()
     storage.reactor_tanks = storage.reactor_tanks or {}

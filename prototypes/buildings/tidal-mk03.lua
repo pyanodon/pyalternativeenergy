@@ -469,12 +469,14 @@ solar_panel.animation = nil
 solar_panel.minable = nil
 solar_panel.fast_replaceable_group = nil
 solar_panel.collision_box = {{-5.3, -5.3}, {5.3, 5.3}}
+solar_panel.selection_box = {{-0, -0}, {0, 0}}
 solar_panel.localised_name = solar_panel.localised_name or {"entity-name." .. solar_panel.name}
-solar_panel.name = solar_panel.name .. '-solar'
+solar_panel.name = solar_panel.name .. "-solar"
 solar_panel.type = "solar-panel"
 solar_panel.created_effect = nil
 solar_panel.placeable_position_visualization = nil
 solar_panel.tile_buildability_rules = nil
 solar_panel.selectable_in_game = false
 solar_panel.picture = nil
+solar_panel.collision_mask = {layers = {}}
 data:extend{solar_panel}

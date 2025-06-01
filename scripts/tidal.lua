@@ -27,8 +27,9 @@ end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
-    if not entity.valid then return end
+    if not entity.valid or not entity.unit_number then return end
     local solar_panel = storage.tidal_plants[entity.unit_number]
+    storage.tidal_plants[entity.unit_number] = nil
     if not solar_panel or not solar_panel.valid then return end
-    solar_panel.destroy()    
+    solar_panel.destroy()
 end)
