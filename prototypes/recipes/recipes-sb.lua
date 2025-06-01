@@ -348,7 +348,7 @@ RECIPE {
     enabled = false,
     energy_required = 15,
     ingredients = {
-        {type = "fluid", name = "sb-conc",          amount = 100},
+        {type = "fluid", name = "sb-conc",          amount = 40},
         {type = "item",  name = "filtration-media", amount = 2},
     },
     results = {

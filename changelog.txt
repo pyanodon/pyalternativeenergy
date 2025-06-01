@@ -7,6 +7,7 @@ Date: tba
     - Numal recipe icons are now numbered.
     - Typo in Py Codex Entry for MHD Generator - "isotpoes" should be "isotopes". Resolves https://github.com/pyanodon/pybugreports/issues/980
     - Greatly optimized the performance of anti-solar panels. Resolves https://github.com/pyanodon/pybugreports/issues/983
+    - Buffed the output of antimony oxide in antimony stage 4 by a factor of 2.5X.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.22
 Date: 2025-4-3
