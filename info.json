@@ -1,6 +1,6 @@
 {
     "name": "pyalternativeenergy",
-    "version": "3.1.23",
+    "version": "3.1.24",
     "factorio_version": "2.0",
     "title": "Pyanodons Alternative Energy",
     "author": "Pyanodon, Nexela, Kingarthur, Notnotmelon, Mootykins, ShadowGlass, Archezekiel, Quintuple, Przemo",
@@ -8,7 +8,7 @@
     "homepage": "https://github.com/pyanodon/pyalternativeenergy",
     "description": "Contains POWER!",
     "dependencies": [
-        "base >= 2.0.33",
+        "base >= 2.0.48",
         "pyalienlife >= 3.0.33",
         "pyhightech >= 3.0.0",
         "~ pyalternativeenergygraphics >= 3.0.4",
