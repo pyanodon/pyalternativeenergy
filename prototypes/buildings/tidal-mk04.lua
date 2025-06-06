@@ -467,6 +467,7 @@ solar_panel.hidden = true
 solar_panel.animation = nil
 solar_panel.minable = nil
 solar_panel.fast_replaceable_group = nil
+table.insert(solar_panel.flags, "not-blueprintable")
 solar_panel.collision_box = {{-5.3, -5.3}, {5.3, 5.3}}
 solar_panel.selection_box = {{-0, -0}, {0, 0}}
 solar_panel.localised_name = solar_panel.localised_name or {"entity-name." .. solar_panel.name}
