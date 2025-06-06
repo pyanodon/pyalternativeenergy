@@ -62,7 +62,7 @@ local tidal = ENTITY {
         input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    production = "40W",
+    production = "40MW",
     placeable_position_visualization = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization),
     created_effect = {
         type = "direct",
