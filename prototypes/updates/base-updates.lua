@@ -465,7 +465,7 @@ RECIPE("medium-electric-pole"):add_unlock("electric-energy-distribution-1"):remo
 
 RECIPE("big-electric-pole"):remove_unlock("electric-energy-distribution-1"):add_unlock("electric-energy-distribution-2"):add_ingredient {type = "item", name = "concrete", amount = 4}:replace_ingredient("copper-cable", "tinned-cable")
 
-RECIPE("substation"):replace_ingredient("steel-plate", "super-steel"):remove_unlock("electric-energy-distribution-2"):add_unlock("electric-energy-distribution-4")
+RECIPE("substation"):replace_ingredient("steel-plate", "stainless-steel"):remove_unlock("electric-energy-distribution-2"):add_unlock("electric-energy-distribution-4")
 
 ITEM("uranium-235").hidden = true
 ITEM("uranium-238").hidden = true
