@@ -10,7 +10,7 @@
     "dependencies": [
         "base >= 2.0.48",
         "pyalienlife >= 3.0.33",
-        "pyhightech >= 3.0.0",
+        "pyhightech >= 3.0.15",
         "~ pyalternativeenergygraphics >= 3.0.4",
         "? enable-all-feature-flags",
         "(?) pyindustry",
