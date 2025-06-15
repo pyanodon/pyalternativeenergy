@@ -7,7 +7,7 @@ RECIPE {
         {type = "item", name = "concrete",       amount = 15},
         {type = "item", name = "niobium-plate",  amount = 5},
         {type = "item", name = "small-parts-02", amount = 20},
-        {type = "item", name = "steel-plate",    amount = 10},
+        {type = "item", name = "super-steel",    amount = 10},
         {type = "item", name = "nexelit-plate",  amount = 50},
     },
     results = {{type = "item", name = "nexelit-substation", amount = 1}}
