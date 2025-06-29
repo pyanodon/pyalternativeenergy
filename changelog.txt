@@ -1,12 +1,17 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.1.24
-Date: ???
+Version: 3.1.25
+Date: 2025-06-29
   Changes:
     - Mk04 fluid wagons now have 2 pump slots.
     - Changed nexelit substation to use super steel instead of normal steel
     - Changed substation to use stainless steel instead of normal steel
     - Fixed tidals proxy entity being copyable
     - Fixed tidal mk02 output being 1 million times lower than intended (W -> MW)
+---------------------------------------------------------------------------------------------------
+Version: 3.1.24
+Date: 2025-06-10
+  Changes:
+    - Resolve crashes.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.23
 Date: 2025-6-1
