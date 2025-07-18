@@ -2,6 +2,7 @@
 Version: 3.1.26
 Date: ????
   Changes:
+    - RTG Now produces 4GW instead of 40MW
     - Fixed neutron absorber showing wrong boric acid usage. Resolves https://github.com/pyanodon/pybugreports/issues/1056
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.25

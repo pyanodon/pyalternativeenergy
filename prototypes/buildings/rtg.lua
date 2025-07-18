@@ -60,7 +60,7 @@ ENTITY {
             pollution = 0
         },
     },
-    max_power_output = "40MW",
+    max_power_output = "4Gw",
     animation = {
         layers = {
             {
