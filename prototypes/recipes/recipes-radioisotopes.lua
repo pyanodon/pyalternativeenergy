@@ -259,6 +259,79 @@ RECIPE {
     order = "b"
 }:add_unlock("nuclear-power-mk02")
 
+-- notnotmelon 7/17/2025: Added new plutonium shuffling recipes to convert any excess plutonium isotopes into more useful forms.
+-- Adapted from pYHM.
+
+RECIPE {
+    type = "recipe",
+    name = "plutonium-shuffle-1",
+    category = "neutron-absorber",
+    enabled = false,
+    energy_required = 200 / 0.4517,
+    ingredients = {
+        {type = "fluid", name = "plutonium-peroxide", amount = 35},
+        {type = "item",  name = "pu-239",             amount = 1},
+        {type = "item",  name = "pu-241",             amount = 1},
+    },
+    results = {
+        {type = "item", name = "pu-240", amount = 1},
+        {type = "item", name = "pu-242", amount = 1},
+    },
+    main_product = "pu-240",
+}:add_unlock("uranium-processing")
+
+RECIPE {
+    type = "recipe",
+    name = "plutonium-shuffle-2",
+    category = "neutron-absorber",
+    enabled = false,
+    energy_required = 200 / 0.986,
+    ingredients = {
+        {type = "fluid", name = "plutonium-peroxide", amount = 35},
+        {type = "item",  name = "pu-239",             amount = 1},
+        {type = "item",  name = "pu-240",             amount = 1},
+    },
+    results = {
+        {type = "item", name = "pu-238", amount = 1},
+        {type = "item", name = "pu-242", amount = 1},
+    },
+    main_product = "pu-242",
+}:add_unlock("uranium-processing")
+
+RECIPE {
+    type = "recipe",
+    name = "plutonium-shuffle-3",
+    category = "neutron-absorber",
+    enabled = false,
+    energy_required = 200 / 0.71,
+    ingredients = {
+        {type = "fluid", name = "plutonium-peroxide", amount = 35},
+        {type = "item",  name = "pu-242",             amount = 2},
+    },
+    results = {
+        {type = "item", name = "pu-241", amount = 1},
+        {type = "item", name = "pu-239", amount = 1},
+    },
+    main_product = "pu-241",
+}:add_unlock("uranium-processing")
+
+RECIPE {
+    type = "recipe",
+    name = "plutonium-shuffle-4",
+    category = "neutron-absorber",
+    enabled = false,
+    energy_required = 200 / 0.362,
+    ingredients = {
+        {type = "fluid", name = "plutonium-peroxide", amount = 35},
+        {type = "item",  name = "pu-241",             amount = 1},
+        {type = "item",  name = "pu-242",             amount = 1},
+    },
+    results = {
+        {type = "item", name = "pu-239", amount = 1},
+        {type = "item", name = "pu-240", amount = 1},
+    },
+    main_product = "pu-239",
+}:add_unlock("uranium-processing")
 
 --pu-239 is used as mox fuel in the burner and weapons. extra can be burnt up into pu-238
 --pu239 can be bombarded to pu240 and again to pu241. pu241 decays to am241. am241 bombarded to am242 which decays to cm242. cm242 decays to pu238.
