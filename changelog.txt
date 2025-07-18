@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.26
+Date: ????
+  Changes:
+    - Fixed neutron absorber showing wrong boric acid usage. Resolves https://github.com/pyanodon/pybugreports/issues/1056
+---------------------------------------------------------------------------------------------------
 Version: 3.1.25
 Date: 2025-06-29
   Changes:
