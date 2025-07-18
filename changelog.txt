@@ -1,9 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.26
-Date: ???
   Changes:
     - Moved neutron absorber from "Nuclear Power - Stage 1" to "Uranium Processing".
     - Added 4 new plutonium shuffling recipes to convert any excess plutonium isotopes into more useful forms.
+    - Fixed neutron absorber showing wrong boric acid usage. Resolves https://github.com/pyanodon/pybugreports/issues/1056
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.25
 Date: 2025-06-29
