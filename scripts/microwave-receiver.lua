@@ -17,7 +17,7 @@ local function update_gui(gui)
     if not microwave_data then
         gui.destroy(); return
     end
-    
+
     local content_flow = gui.content_frame.content_flow
     content_flow.progressbar.value = microwave_data.allocated_satellites / MAX_SATELLITES_PER_RECIEVER
     content_flow.progressbar.caption = {
