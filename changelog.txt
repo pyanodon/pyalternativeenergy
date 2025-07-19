@@ -2,6 +2,7 @@
 Version: 3.1.26
 Date: ????
   Changes:
+    - RTG Now produces 4GW instead of 40MW
     - Fixed Microwave receiver GUI not opening on base 2.0.60 stable. Resolves https://github.com/pyanodon/pybugreports/issues/1105
     - Fixed neutron absorber showing wrong boric acid usage. Resolves https://github.com/pyanodon/pybugreports/issues/1056
 ---------------------------------------------------------------------------------------------------
