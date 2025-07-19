@@ -18,7 +18,7 @@ RECIPE {
     results = {
         {type = "item", name = "neutron-absorber-mk01", amount = 1}
     }
-}:add_unlock("nuclear-power")
+}:add_unlock("uranium-processing")
 
 RECIPE {
     type = "recipe",

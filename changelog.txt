@@ -2,6 +2,8 @@
 Version: 3.1.26
 Date: ????
   Changes:
+    - Moved neutron absorber from "Nuclear Power - Stage 1" to "Uranium Processing".
+    - Added 4 new plutonium shuffling recipes to convert any excess plutonium isotopes into more useful forms.
     - RTG Now produces 4GW instead of 40MW
     - Fixed Microwave receiver GUI not opening on base 2.0.60 stable. Resolves https://github.com/pyanodon/pybugreports/issues/1105
     - Fixed neutron absorber showing wrong boric acid usage. Resolves https://github.com/pyanodon/pybugreports/issues/1056
