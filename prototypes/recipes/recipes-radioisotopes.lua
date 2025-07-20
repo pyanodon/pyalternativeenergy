@@ -308,7 +308,7 @@ RECIPE {
     energy_required = 200 / 0.71,
     ingredients = {
         {type = "fluid", name = "plutonium-peroxide", amount = 35},
-        {type = "item",  name = "pu-242",             amount = 1},
+        {type = "item",  name = "pu-242",             amount = 2},
     },
     results = {
         {type = "item", name = "pu-241", amount = 1},
