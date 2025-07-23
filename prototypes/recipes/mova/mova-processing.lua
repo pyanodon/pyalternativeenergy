@@ -10,7 +10,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "washed-mova",       amount = 10},
-        {type = "fluid", name = "dirty-water-light", amount = 100}
+        {type = "fluid", name = "muddy-sludge", amount = 100}
     },
     main_product = "washed-mova",
     icon = "__pyalternativeenergygraphics__/graphics/icons/wash-mova.png",

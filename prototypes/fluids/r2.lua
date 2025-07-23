@@ -10,7 +10,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "r2",                amount = 50},
-        {type = "fluid", name = "dirty-water-heavy", amount = 50},
+        {type = "fluid", name = "tailings", amount = 50},
     },
     main_product = "r2",
 }:add_unlock("lithium-processing")

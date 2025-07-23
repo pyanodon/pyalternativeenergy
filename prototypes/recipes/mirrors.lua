@@ -87,7 +87,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "clean-glass-sheet", amount = 1},
-        {type = "fluid", name = "dirty-water-light", amount = 100},
+        {type = "fluid", name = "muddy-sludge", amount = 100},
     },
     main_product = "clean-glass-sheet",
     icon = "__pyalternativeenergygraphics__/graphics/icons/polished-glass-washer.png",

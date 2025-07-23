@@ -170,7 +170,7 @@ RECIPE {
     order = "c"
 }:add_unlock("excavation-2")
 
-FLUID("dirty-water-light"):subgroup_order("py-alternativeenergy-fluids", "c")
+FLUID("muddy-sludge"):subgroup_order("py-alternativeenergy-fluids", "c")
 
 --pycp
 data.raw["assembling-machine"]["solid-separator-mk02"].energy_usage = "3MW"

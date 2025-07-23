@@ -19,7 +19,6 @@ CODING:
 
 FYI:
 
-- there is no more "dirty-water". there is dirty-water-light (mud) and dirty-water-heavy(normal tailings)
 - mukmoux lard is called mukmoux-fat
 
 KING TODO:

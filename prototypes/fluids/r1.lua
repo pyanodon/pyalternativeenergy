@@ -11,7 +11,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "r1",                amount = 100},
-        {type = "fluid", name = "dirty-water-heavy", amount = 50},
+        {type = "fluid", name = "tailings", amount = 50},
     },
     main_product = "r1",
 }:add_unlock("lithium-processing")

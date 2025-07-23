@@ -1054,7 +1054,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "washed-ash",        amount = 5},
-        {type = "fluid", name = "dirty-water-light", amount = 50},
+        {type = "fluid", name = "muddy-sludge", amount = 50},
     },
     main_product = "washed-ash",
 }:add_unlock("py-science-pack-mk03")
@@ -1107,7 +1107,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "bio-ore",           amount = 1},
-        {type = "fluid", name = "dirty-water-light", amount = 50},
+        {type = "fluid", name = "muddy-sludge", amount = 50},
     },
     main_product = "bio-ore",
 }:add_unlock("py-science-pack-mk03")

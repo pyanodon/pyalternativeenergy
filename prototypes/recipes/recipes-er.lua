@@ -43,7 +43,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "er-oxide",          amount = 1},
-        {type = "fluid", name = "dirty-water-heavy", amount = 100},
+        {type = "fluid", name = "tailings", amount = 100},
 
     },
     main_product = "er-oxide",

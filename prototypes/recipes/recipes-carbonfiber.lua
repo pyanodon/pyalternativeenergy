@@ -155,7 +155,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "cf2",               amount = 1},
-        {type = "fluid", name = "dirty-water-heavy", amount = 50},
+        {type = "fluid", name = "tailings", amount = 50},
     },
     main_product = "cf2",
 }:add_unlock("carbon-fiber")
