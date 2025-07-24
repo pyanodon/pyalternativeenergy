@@ -89,10 +89,10 @@ RECIPE {
         {type = "item",  name = "gravel",   amount = 1},
     },
     results = {
-        {type = "fluid", name = "dirty-water-heavy", amount = 50},
+        {type = "fluid", name = "tailings", amount = 50},
     },
     allow_productivity = true,
-    main_product = "dirty-water-heavy"
+    main_product = "tailings"
 }:add_unlock("advanced-mining-facilities")
 
 --limestone
@@ -163,7 +163,7 @@ RECIPE {
     enabled = false,
     energy_required = 3,
     ingredients = {
-        {type = "fluid", name = "dirty-water-light", amount = 100},
+        {type = "fluid", name = "muddy-sludge", amount = 100},
     },
     results = {
         {type = "fluid", name = "water",  amount = 100},
@@ -182,7 +182,7 @@ RECIPE {
     energy_required = 5.5,
     ingredients = {
         {type = "item",  name = "filtration-media",  amount = 1},
-        {type = "fluid", name = "dirty-water-light", amount = 500}
+        {type = "fluid", name = "muddy-sludge", amount = 500}
     },
     results = {
         {type = "fluid", name = "water", amount = 500},
@@ -745,7 +745,7 @@ RECIPE {
         {type = "item",  name = "sand",    amount = 1},
     },
     results = {
-        {type = "fluid", name = "dirty-water-heavy", amount = 200},
+        {type = "fluid", name = "tailings", amount = 200},
         {type = "item",  name = "oil-sand",          amount = 3},
     },
     main_product = "oil-sand",
@@ -765,9 +765,9 @@ RECIPE {
         {type = "item",  name = "pure-sand",   amount = 10}
     },
     results = {
-        {type = "fluid", name = "dirty-water-light", amount = 150}
+        {type = "fluid", name = "muddy-sludge", amount = 150}
     },
-    main_product = "dirty-water-light",
+    main_product = "muddy-sludge",
     allow_productivity = true,
 }:add_unlock("filtration")
 

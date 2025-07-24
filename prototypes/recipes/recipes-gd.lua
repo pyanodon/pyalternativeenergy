@@ -29,7 +29,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "re-precipitate-01", amount = 1},
-        {type = "fluid", name = "dirty-water-light", amount = 50},
+        {type = "fluid", name = "muddy-sludge", amount = 50},
     },
     main_product = "re-precipitate-01",
 }:add_unlock("rare-earth-tech-mk02")
@@ -166,7 +166,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "th-oxide",          amount = 2},
-        {type = "fluid", name = "dirty-water-light", amount = 50},
+        {type = "fluid", name = "muddy-sludge", amount = 50},
     },
     main_product = "th-oxide",
 }:add_unlock("thorium")
@@ -202,7 +202,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "gd-oxalate",        amount = 1},
-        {type = "fluid", name = "dirty-water-light", amount = 100},
+        {type = "fluid", name = "muddy-sludge", amount = 100},
     },
     main_product = "gd-oxalate",
 }:add_unlock("gadolinium")

@@ -63,7 +63,7 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "guhcl",             amount = 1},
-        {type = "fluid", name = "dirty-water-light", amount = 100},
+        {type = "fluid", name = "muddy-sludge", amount = 100},
     },
     main_product = "guhcl",
 }:add_unlock("nano-mesh")
