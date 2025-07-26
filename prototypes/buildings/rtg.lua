@@ -53,14 +53,14 @@ ENTITY {
     {
         type = "burner",
         fuel_categories = {"fuelrod"},
-        effectivity = 50,
+        effectivity = 50000,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
         emissions_per_minute = {
             pollution = 0
         },
     },
-    max_power_output = "4GW",
+    max_power_output = "40GW",
     animation = {
         layers = {
             {
