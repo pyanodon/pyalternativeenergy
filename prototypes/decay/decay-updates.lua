@@ -137,10 +137,11 @@ ITEM("native-flora"):spoil("floraspollinin", 200 * minute)
 ITEM("native-flora").fuel_value = "175kJ"
 ITEM("native-flora").fuel_category = "biomass"
 
-RECIPE("dried-meat-01"):remove_unlock("rendering")
-RECIPE("guts-to-jerky"):remove_unlock("microbiology-mk01")
-data.raw.recipe["dried-meat-01"] = nil
-data.raw.recipe["guts-to-jerky"] = nil
+-- This shouldn't be a thing, as much as I love spoilage waiting for multiple hours for jerky is not fun!
+-- RECIPE("dried-meat-01"):remove_unlock("rendering")
+-- RECIPE("guts-to-jerky"):remove_unlock("microbiology-mk01")
+-- data.raw.recipe["dried-meat-01"] = nil
+-- data.raw.recipe["guts-to-jerky"] = nil
 
 ITEM("fish-egg"):spoil("biocrud", 30 * minute)
 ITEM("fish-egg-mk02"):spoil("fish-egg", hour)
