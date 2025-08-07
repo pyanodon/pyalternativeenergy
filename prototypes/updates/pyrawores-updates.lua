@@ -519,7 +519,7 @@ while duf > duf_min do
         },
         results = {
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100 * normalizer)},
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(math.min(u238 * 100 * normalizer, 10))}, -- cap the temperature range on final recipe
+            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(recipe_num == depleted_recipes and 10 or u238 * 100 * normalizer)}, -- cap the temperature range on final recipe
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium-depleted",
