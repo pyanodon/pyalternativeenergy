@@ -436,6 +436,9 @@ while enrichment < 100 do
         t = 4
     end
 
+    --averages the resulting temp to reduce temperature loss + prevent loops
+    local normalizer = (enrichment + u235)/(u235+u238)
+
     RECIPE {
         type = "recipe",
         name = recipe_name,
@@ -446,8 +449,8 @@ while enrichment < 100 do
             {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment * 100), maximum_temperature = math.floor(u235 * 100) - 0.000001}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100)},
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238 * 100)},
+            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(math.min(u235 * 100 * normalizer, 9999))}, -- cap the temperature range on final recipe
+            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238 * 100 * normalizer)}
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium",
@@ -502,6 +505,9 @@ while duf > duf_min do
 
     local name = string.format("%.2f", tostring(u238))
 
+    --averages the resulting temp to reduce temperature loss + prevent loops
+    local normalizer = (duf+u235)/(u235+u238)
+
     RECIPE {
         type = "recipe",
         name = "depleted-uf6-" .. string.gsub(name, "%.", "-"), --TODO:find a way to fix uf6 names
@@ -512,8 +518,8 @@ while duf > duf_min do
             {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf * 100), maximum_temperature = math.floor(u235 * 100) - 0.000001}
         },
         results = {
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100)},
-            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238 * 100)},
+            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100 * normalizer)},
+            {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(math.min(u238 * 100 * normalizer, 10))}, -- cap the temperature range on final recipe
         },
         main_product = "uf6",
         subgroup = "py-rawores-uranium-depleted",
