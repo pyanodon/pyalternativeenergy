@@ -46,6 +46,13 @@ ENTITY {
     fluid_usage_per_tick = 400,
     maximum_temperature = 4000,
     destroy_non_fuel_fluid = false,
+    custom_tooltip_fields = { -- remove whenever wube https://forums.factorio.com/viewtopic.php?t=130073
+      {
+        name = {"description.minimum-temperature"},
+        value = {"", "500", {"si-unit-degree-celsius"}},
+        order = 255
+      }
+    },
     resistances = {
         {
             type = "fire",

@@ -3,6 +3,7 @@ Version: 3.1.32
 Date: ????
   Changes:
     - Cooking meat is back in spoilage mode.
+    - Fixed MHD generator not showing a minimum temperature in the tooltip. Resolves https://github.com/pyanodon/pybugreports/issues/1100
     - Fixed Bulk Inserter 1 and 2 technologies not having the correct prerequesites and dependants. Resolves https://github.com/pyanodon/pybugreports/issues/1086 and https://github.com/pyanodon/pybugreports/issues/1099
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.31
