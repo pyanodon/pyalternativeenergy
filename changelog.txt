@@ -3,6 +3,8 @@ Version: ???
 Date: ????-??-??
   Changes:
     - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
+    - Uranium hexafluoride recipes are no longer lossy on temperature
+    - Uranium hexafluoride recipe steps can no longer be skipped. Resolves
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.31
 Date: 2025-07-20
