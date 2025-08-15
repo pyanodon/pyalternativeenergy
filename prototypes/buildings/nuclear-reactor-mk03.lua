@@ -51,7 +51,7 @@ ENTITY {
     forced_symmetry = "diagonal-pos",
     module_slots = 0,
     allowed_effects = {},
-    crafting_categories = {"nuclear-fission"},
+    crafting_categories = {"nuclear-fission", "nuclear-fission-2", "nuclear-fission-3"},
     crafting_speed = 10,
     source_inventory_size = 1,
     result_inventory_size = 1,
