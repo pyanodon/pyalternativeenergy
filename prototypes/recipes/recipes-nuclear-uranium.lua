@@ -235,6 +235,11 @@ RECIPE {
         {type = "fluid", name = "salt-solution",       amount = 140}
     },
     main_product = "high-energy-waste-1",
+    icons =
+    {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-1.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power-mk02")
@@ -255,6 +260,11 @@ RECIPE {
         {type = "fluid", name = "salt-solution",       amount = 80}
     },
     main_product = "high-energy-waste-1",
+    icons =
+    {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-1.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power-mk03")
@@ -275,6 +285,11 @@ RECIPE {
         {type = "fluid", name = "salt-solution",       amount = 20}
     },
     main_product = "high-energy-waste-1",
+    icons =
+    {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-1.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power-mk04")
