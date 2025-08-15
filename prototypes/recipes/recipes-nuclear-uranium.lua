@@ -207,12 +207,12 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "fluid", name = "reactor-waste-1",  amount = 100},
-        {type = "item",  name = "lithium-peroxide", amount = 20},
+        {type = "item",  name = "lithium-peroxide", amount = 10},
     },
     results = {
         {type = "fluid", name = "hot-molten-salt",     amount = 10000, temperature = 5000},
         {type = "item",  name = "high-energy-waste-1", amount = 40},
-        {type = "fluid", name = "salt-solution",       amount = 400}
+        {type = "fluid", name = "salt-solution",       amount = 200}
     },
     main_product = "high-energy-waste-1",
     subgroup = "py-nuclear-waste",

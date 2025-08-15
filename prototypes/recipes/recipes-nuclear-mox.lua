@@ -90,12 +90,12 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "reactor-waste-2",  amount = 200},
-        {type = "item",  name = "lithium-peroxide", amount = 40},
+        {type = "item",  name = "lithium-peroxide", amount = 20},
     },
     results = {
         {type = "fluid", name = "hot-molten-salt",     amount = 20000, temperature = 5000},
         {type = "item",  name = "high-energy-waste-2", amount = 80},
-        {type = "fluid", name = "salt-solution",       amount = 800}
+        {type = "fluid", name = "salt-solution",       amount = 400}
     },
     main_product = "high-energy-waste-2",
     subgroup = "py-nuclear-waste",

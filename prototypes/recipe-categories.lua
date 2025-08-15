@@ -33,7 +33,31 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "nuclear-fission-2"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-fission-3"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-fission-4"
+    },
+    {
+        type = "recipe-category",
         name = "nuclear-mox-fission"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-mox-fission-2"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-mox-fission-3"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-mox-fission-4"
     },
     {
         type = "recipe-category",
