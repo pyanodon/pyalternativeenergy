@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.33
+Date: ???
+  Changes:
+    - Rebalanced nuclear power to greatly reduce lithium peroxide input, scaling with tech level.
+    - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
+---------------------------------------------------------------------------------------------------
 Version: 3.1.32
 Date: 2025-08-12
   Changes:
