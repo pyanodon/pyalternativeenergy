@@ -5,6 +5,13 @@ Date: ????-??-??
     - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
     - Buffed the recipe speed of plutonium reshuffle by 4x.
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.32
+Date: 2025-08-12
+  Changes:
+    - Cooking meat is back in spoilage mode.
+    - Fixed MHD generator not showing a minimum temperature in the tooltip. Resolves https://github.com/pyanodon/pybugreports/issues/1100
+    - Fixed Bulk Inserter 1 and 2 technologies not having the correct prerequesites and dependants. Resolves https://github.com/pyanodon/pybugreports/issues/1086 and https://github.com/pyanodon/pybugreports/issues/1099
+---------------------------------------------------------------------------------------------------
 Version: 3.1.31
 Date: 2025-07-20
   Changes:
