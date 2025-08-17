@@ -5,12 +5,12 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "fluid", name = "fluorine-gas", amount = 100},
+        {type = "fluid", name = "fluorine-gas", amount = 200},
         {type = "item",  name = "lithium",      amount = 10},
-        {type = "item",  name = "th-oxide",     amount = 10}
+        {type = "item",  name = "th-oxide",     amount = 5}
     },
     results = {
-        {type = "fluid", name = "molten-fluoride-thorium", amount = 100}
+        {type = "fluid", name = "molten-fluoride-thorium", amount = 200}
     },
     subgroup = "py-nuclear",
     order = "g"
@@ -42,15 +42,15 @@ RECIPE {
     name = "pa-233-seperation",
     category = "centrifuging",
     enabled = false,
-    energy_required = 50,
+    energy_required = 20,
     ingredients = {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 1000},
-        {type = "fluid", name = "molten-aluminium",              amount = 100}
+        {type = "fluid", name = "molten-aluminium",              amount = 40}
     },
     results = {
-        {type = "fluid", name = "molten-fluoride-thorium", amount = 900},
+        {type = "fluid", name = "molten-fluoride-thorium", amount = 960},
         {type = "fluid", name = "hot-molten-salt",         amount = 10000, temperature = 5000},
-        {type = "item",  name = "pa-233",                  amount = 10}
+        {type = "item",  name = "pa-233",                  amount = 4}
     },
     main_product = "pa-233",
     subgroup = "py-nuclear",
