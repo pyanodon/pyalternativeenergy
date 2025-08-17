@@ -3,6 +3,7 @@ Version: ???
 Date: ????-??-??
   Changes:
     - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
+    - Buffed the recipe speed of plutonium reshuffle by 4x.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.31
 Date: 2025-07-20
