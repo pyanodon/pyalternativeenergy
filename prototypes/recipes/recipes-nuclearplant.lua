@@ -77,8 +77,6 @@ RECIPE {
     }
 }:add_unlock("nuclear-power-mk04")
 
-    main_product = "reactor-waste-14"
-}:add_unlock("nuclear-power-mk04")
 RECIPE {
     type = "recipe",
     name = "mox-molten-salt-01",
