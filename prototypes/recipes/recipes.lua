@@ -1320,7 +1320,7 @@ for fluid, metatable in pairs{
     local base_amount = steam_amount * (start_temp - end_temp) / (end_temp - base_temp)
     RECIPE{
       name = "cool-" .. fluid.name .. "-" .. start_temp .. "-to-" .. end_temp,
-      localised_name = {"?",{"recipe-name.steam-cooling-in-rhe", fluid.localised_name or {"fluid-name." .. fluid.name}, tostring(start_temp), tostring(end_temp)}},
+      localised_name = {"recipe-name.steam-cooling-in-rhe", fluid.localised_name or {"fluid-name." .. fluid.name}, tostring(start_temp), tostring(end_temp)},
       category = "heat-exchanger",
       enabled = false,
       energy_required = 20, -- some formula here
@@ -1329,6 +1329,7 @@ for fluid, metatable in pairs{
         {type = "fluid", name = metatable.base, amount = math.ceil(base_amount / 10) * 10}
       },
       results = {{type = "fluid", name = fluid.name, amount = steam_amount + math.floor(base_amount / 10) * 10, temperature = end_temp}},
+      show_amount_in_title = false,
       order = "c" .. i,
       icons = {
         {
