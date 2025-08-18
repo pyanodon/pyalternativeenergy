@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: ???
+Version: 3.2.0
 Date: ????-??-??
   Changes:
     - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
