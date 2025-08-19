@@ -4,6 +4,7 @@ Date: ????-??-??
   Changes:
     - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
     - Buffed the recipe speed of plutonium reshuffle by 4x.
+    - Removed efficiency modules from power plants. Already placed modules will continue to work, but beacons won't.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.32
 Date: 2025-08-12
