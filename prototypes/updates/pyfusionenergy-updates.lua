@@ -276,17 +276,16 @@ RECIPE {
         {type = "fluid", name = "liquid-nitrogen", amount = 30}
     },
     results = {
-        {type = "fluid", name = "critical-steam", amount = 10000, temperature = 5000},
-        {type = "fluid", name = "helium",         amount = 100},
-        {type = "fluid", name = "tritium",        amount = 60.1,  ignored_by_stats = 50, ignored_by_productivity = 50},
-        {type = "fluid", name = "nitrogen",       amount = 250},
+        {type = "fluid", name = "critical-steam", amount = 10000, temperature = 5000, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "helium",         amount = 100, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "tritium",        amount = 60.1,  ignored_by_stats = 50, ignored_by_productivity = 50, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "nitrogen",       amount = 250, show_details_in_recipe_tooltip = false},
     },
     --main_product= "blanket",
     icon = "__pyfusionenergygraphics__/graphics/icons/fusion-dt.png",
     icon_size = 32,
     subgroup = "py-fusion-items",
-    order = "e",
-    show_details_in_recipe_tooltip = false
+    order = "e"
 }:remove_unlock("fusion-mk02"):add_unlock("fusion-mk01")
 
 RECIPE {
@@ -301,17 +300,16 @@ RECIPE {
         {type = "fluid", name = "liquid-helium",   amount = 30},
     },
     results = {
-        {type = "fluid", name = "neutron", amount = 5000, temperature = 2000},
-        {type = "fluid", name = "helium",  amount = 150},
-        {type = "fluid", name = "tritium", amount = 50},
-        {type = "fluid", name = "helium3", amount = 50},
+        {type = "fluid", name = "neutron", amount = 5000, temperature = 2000, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "helium",  amount = 150, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "tritium", amount = 50, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "helium3", amount = 50, show_details_in_recipe_tooltip = false},
     },
     --main_product= "blanket",
     icon = "__pyfusionenergygraphics__/graphics/icons/fusion-deuterium.png",
     icon_size = 32,
     subgroup = "py-fusion-items",
-    order = "e",
-    show_details_in_recipe_tooltip = false
+    order = "e"
 }:remove_unlock("fusion-mk01"):add_unlock("fusion-mk02")
 
 RECIPE {
@@ -326,16 +324,15 @@ RECIPE {
         {type = "fluid", name = "liquid-helium", amount = 35}
     },
     results = {
-        {type = "fluid", name = "neutron", amount = 7500, temperature = 3000},
-        {type = "fluid", name = "helium",  amount = 175},
-        {type = "fluid", name = "proton",  amount = 20},
+        {type = "fluid", name = "neutron", amount = 7500, temperature = 3000, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "helium",  amount = 175, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "proton",  amount = 20, show_details_in_recipe_tooltip = false},
     },
     --main_product= "blanket",
     icon = "__pyfusionenergygraphics__/graphics/icons/fusion-he3.png",
     icon_size = 32,
     subgroup = "py-fusion-items",
-    order = "e",
-    show_details_in_recipe_tooltip = false
+    order = "e"
 }
 
 RECIPE {
@@ -350,15 +347,14 @@ RECIPE {
         {type = "fluid", name = "liquid-helium", amount = 10}
     },
     results = {
-        {type = "fluid", name = "neutron", amount = 10000, temperature = 4000},
-        {type = "fluid", name = "helium",  amount = 160}
+        {type = "fluid", name = "neutron", amount = 10000, temperature = 4000, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "helium",  amount = 160, show_details_in_recipe_tooltip = false}
     },
     --main_product= "blanket",
     icon = "__pyfusionenergygraphics__/graphics/icons/fusion-bh.png",
     icon_size = 32,
     subgroup = "py-fusion-items",
-    order = "e",
-    show_details_in_recipe_tooltip = false
+    order = "e"
 }
 
 RECIPE("antimatter-fusion"):remove_unlock("fusion-mk04")
