@@ -1304,3 +1304,46 @@ RECIPE {
         },
     }
 }
+
+-- STEAM CONVERSION
+-- transfer high temperature steam into low temperature steam based on the energy density, minus some percent due to the laws of thermodynamics or something
+for fluid, metatable in pairs{
+  steam = {base = "water", temps = {150, 250, 500, 1000, 2000}, unlocks = {""}},
+  ["pressured-steam"] = {base = "pressured-water", temps = {1000, 2000, 3000, 4000, 5000}}
+} do
+  local fluid = data.raw.fluid[fluid]
+  local base_temp = data.raw.fluid[metatable.base].default_temperature or 15
+  local steam_amount = 200
+  for i = 1, #metatable.temps - 1 do
+    local start_temp = metatable.temps[i+1]
+    local end_temp = metatable.temps[i]
+    local base_amount = steam_amount * (start_temp - end_temp) / (end_temp - base_temp)
+    RECIPE{
+      name = "cool-" .. fluid.name .. "-" .. start_temp .. "-to-" .. end_temp,
+      localised_name = {"recipe-name.steam-cooling-in-rhe", fluid.localised_name or {"fluid-name." .. fluid.name}, tostring(start_temp), tostring(end_temp)},
+      category = "heat-exchanger",
+      enabled = false,
+      energy_required = 20, -- some formula here
+      ingredients = {
+        {type = "fluid", name = fluid.name, amount = steam_amount, temperature = start_temp},
+        {type = "fluid", name = metatable.base, amount = math.ceil(base_amount / 10) * 10}
+      },
+      results = {{type = "fluid", name = fluid.name, amount = steam_amount + math.floor(base_amount / 10) * 10, temperature = end_temp}},
+      show_amount_in_title = false,
+      order = "c" .. i,
+      icons = {
+        {
+          icon = fluid.icon,
+          icon_size = fluid.icon_size
+        },
+        {
+          icon = "__base__/graphics/icons/signal/signal-thermometer-blue.png",
+          scale = 0.3,
+          shift = {-7, 7}
+        }
+      }
+    }:add_unlock("nonrenewable-mk0" .. i)
+  end
+end
+
+-- TODO subgroup, techs, locales
