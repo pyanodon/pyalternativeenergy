@@ -1309,14 +1309,14 @@ RECIPE({
 -- transfer high temperature steam into low temperature steam based on the energy density, minus some percent due to the laws of thermodynamics or something
 for fluid, metatable in pairs({
     steam = { base = "water", temps = { 150, 250, 500, 1000, 2000 }, unlocks = { "" } },
-    [ "pressured-steam" ] = { base = "pressured-water", temps = { 1000, 2000, 3000, 4000, 5000 } }
+    ["pressured-steam"] = { base = "pressured-water", temps = { 1000, 2000, 3000, 4000, 5000 } }
 }) do
-    local fluid = data.raw.fluid[ fluid ]
-    local base_temp = data.raw.fluid[ metatable.base ].default_temperature or 15
+    local fluid = data.raw.fluid[fluid]
+    local base_temp = data.raw.fluid[metatable.base].default_temperature or 15
     local steam_amount = 200
     for i = 1, #metatable.temps - 1 do
-        local start_temp = metatable.temps[ i + 1 ]
-        local end_temp = metatable.temps[ i ]
+        local start_temp = metatable.temps[i + 1]
+        local end_temp = metatable.temps[i]
         local base_amount = steam_amount * (start_temp - end_temp) / (end_temp - base_temp)
         RECIPE({
             name = "cool-" .. fluid.name .. "-" .. start_temp .. "-to-" .. end_temp,

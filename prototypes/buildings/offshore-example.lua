@@ -33,7 +33,7 @@ ENTITY({
     icon = "__base__/graphics/icons/offshore-pump.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation", "filter-directions" },
-    collision_mask = { layers = { object = true, train = true } },                        -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    collision_mask = { layers = { object = true, train = true } },                            -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
     center_collision_mask = { layers = { water_tile = true, object = true, player = true } }, -- to test that tile directly under the pump is ground
     fluid_box_tile_collision_test = { ground_tile = true },
     adjacent_tile_collision_test = { water_tile = true },
@@ -389,7 +389,7 @@ ENTITY({
         scale = 0.5,
         x = 3 * 64
     },
-    circuit_connector = circuit_connector_definitions[ "offshore-pump" ],
+    circuit_connector = circuit_connector_definitions["offshore-pump"],
     circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     water_reflection =
     {

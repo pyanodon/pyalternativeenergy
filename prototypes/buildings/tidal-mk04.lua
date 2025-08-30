@@ -50,11 +50,11 @@ local tidal = ENTITY({
     dying_explosion = "medium-explosion",
     collision_box = { { -3.3, -5.3 }, { 3.3, 5.3 } },
     selection_box = { { -3.5, -5.5 }, { 3.5, 5.5 } },
-    collision_mask = { layers = { object = true, train = true } },                        -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    collision_mask = { layers = { object = true, train = true } },                            -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
     center_collision_mask = { layers = { water_tile = true, object = true, player = true } }, -- to test that tile directly under the pump is ground
     tile_buildability_rules = {
-        { area = { { -2, -5 }, { 2, 1 } }, required_tiles = { layers = { water_tile = true } }, colliding_tiles = { layers = { ground_tile = true } }, remove_on_collision = true },
-        { area = { { -2, 1.6 }, { 2, 5 } }, required_tiles = { layers = { ground_tile = true } }, colliding_tiles = { layers = { water_tile = true } }, remove_on_collision = true }
+        { area = { { -2, -5 }, { 2, 1 } },  required_tiles = { layers = { water_tile = true } },  colliding_tiles = { layers = { ground_tile = true } }, remove_on_collision = true },
+        { area = { { -2, 1.6 }, { 2, 5 } }, required_tiles = { layers = { ground_tile = true } }, colliding_tiles = { layers = { water_tile = true } },  remove_on_collision = true }
     },
     energy_source = {
         type = "electric",
@@ -64,7 +64,7 @@ local tidal = ENTITY({
         render_no_power_icon = false
     },
     production = "400MW",
-    placeable_position_visualization = table.deepcopy(data.raw[ "offshore-pump" ][ "offshore-pump" ].placeable_position_visualization),
+    placeable_position_visualization = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization),
     created_effect = {
         type = "direct",
         action_delivery = {

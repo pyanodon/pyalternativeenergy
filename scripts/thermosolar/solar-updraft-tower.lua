@@ -23,7 +23,7 @@ end
 ---@param position {x: integer, y: integer} the position to check against the radius
 ---@param cover_count integer the number of glass covers to add or remove from the power generated
 local function update_parent_tower(position, cover_count)
-    local parent = (storage.solar_updraft_towers[ Solar_Updraft_Tower.last_unit or -1 ] or {}).entity
+    local parent = (storage.solar_updraft_towers[Solar_Updraft_Tower.last_unit or -1] or {}).entity
     -- Check our last-used tower
     if parent and is_in_radius(parent.position, position, Thermosolar.tower_range) then
         goto continue
@@ -54,7 +54,7 @@ function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_cou
         return
     end
 
-    local tower_data = storage.solar_updraft_towers[ tower.unit_number ]
+    local tower_data = storage.solar_updraft_towers[tower.unit_number]
     if not tower_data then return end
 
     if additional_cover_count then
@@ -90,7 +90,7 @@ local function clear_shine_effect(surface, position)
 end
 
 py.on_event(py.events.on_built_tile(), function(event)
-    local surface = game.surfaces[ event.surface_index ]
+    local surface = game.surfaces[event.surface_index]
 
     for _, tile in pairs(event.tiles) do
         local position = tile.position
@@ -128,7 +128,7 @@ py.on_event(py.events.on_built_tile(), function(event)
 end)
 
 py.on_event(py.events.on_mined_tile(), function(event)
-    local surface = game.surfaces[ event.surface_index ]
+    local surface = game.surfaces[event.surface_index]
     for _, tile in pairs(event.tiles) do
         if tile.old_tile.name == "sut-panel" then
             local position = tile.position
@@ -152,7 +152,7 @@ py.on_event(py.events.on_built(), function(event)
 
     local placement_restriction = surface.create_entity({ name = "sut-placement-distance", position = entity.position, force = entity.force })
     placement_restriction.destructible = false
-    storage.solar_updraft_towers[ entity.unit_number ] = { unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0 }
+    storage.solar_updraft_towers[entity.unit_number] = { unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0 }
     Solar_Updraft_Tower.update_power_generation(entity)
 end)
 
@@ -181,10 +181,10 @@ end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
-    local tower_data = storage.solar_updraft_towers[ entity.unit_number ]
+    local tower_data = storage.solar_updraft_towers[entity.unit_number]
     if not tower_data then return end
     if tower_data.placement_restriction.valid then tower_data.placement_restriction.destroy() end
-    storage.solar_updraft_towers[ entity.unit_number ] = nil
+    storage.solar_updraft_towers[entity.unit_number] = nil
     storage.update_sut_guis = not not next(storage.solar_updraft_towers)
 end)
 
@@ -237,7 +237,7 @@ py.on_event({ defines.events.on_gui_closed, defines.events.on_player_changed_sur
 end)
 
 function Solar_Updraft_Tower.update_gui(gui)
-    local tower_data = storage.solar_updraft_towers[ gui.tags.unit_number ]
+    local tower_data = storage.solar_updraft_towers[gui.tags.unit_number]
     if not tower_data then
         gui.destroy(); return
     end

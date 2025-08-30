@@ -119,7 +119,7 @@ ENTITY({
         volume = 1000,
         pipe_connections = {
             { flow_direction = "input-output", position = { 0, -4.5 }, direction = defines.direction.north },
-            { flow_direction = "input-output", position = { 0, 4.5 }, direction = defines.direction.south },
+            { flow_direction = "input-output", position = { 0, 4.5 },  direction = defines.direction.south },
         },
         filter = "molten-salt"
     },

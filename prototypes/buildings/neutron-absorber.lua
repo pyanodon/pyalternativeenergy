@@ -141,7 +141,7 @@ for i = 1, 4 do
                 volume = 200,
                 pipe_connections = {
                     { flow_direction = "input-output", position = { 0, -1.0 }, direction = defines.direction.north },
-                    { flow_direction = "input-output", position = { 0, 1.0 }, direction = defines.direction.south }
+                    { flow_direction = "input-output", position = { 0, 1.0 },  direction = defines.direction.south }
                 },
                 pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
@@ -190,7 +190,7 @@ for i = 1, 4 do
                         height = 416,
                         frame_count = 1,
                         shift = util.by_pixel(8, -56),
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         scale = 0.5,
                     },
                     {
@@ -213,7 +213,7 @@ for i = 1, 4 do
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 100,
                 pipe_connections = {
-                    { flow_direction = "input-output", position = { 1.0, 0.0 }, direction = defines.direction.east },
+                    { flow_direction = "input-output", position = { 1.0, 0.0 },  direction = defines.direction.east },
                     { flow_direction = "input-output", position = { -1.0, 0.0 }, direction = defines.direction.west }
                 }
             },
@@ -234,6 +234,6 @@ end
 -- thus we must use mode B.
 -- all recipes that produce sweet syrup cannot produce the fluid at default temp.
 
-data.raw.fluid[ "boric-acid" ].default_temperature = 0
-data.raw.fluid[ "boric-acid" ].max_temperature = 10
-data.raw.recipe[ "boric-acid" ].results[ 1 ].temperature = 10
+data.raw.fluid["boric-acid"].default_temperature = 0
+data.raw.fluid["boric-acid"].max_temperature = 10
+data.raw.recipe["boric-acid"].results[1].temperature = 10

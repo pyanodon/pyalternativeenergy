@@ -1,5 +1,5 @@
 if not feature_flags.spoiling then return end
-if not settings.startup[ "py-enable-decay" ].value then
+if not settings.startup["py-enable-decay"].value then
     return
 end
 
@@ -38,8 +38,8 @@ ITEM({
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-items",
-    order = data.raw.item[ "native-flora" ].order .. "j",
-    stack_size = data.raw.item[ "native-flora" ].stack_size,
+    order = data.raw.item["native-flora"].order .. "j",
+    stack_size = data.raw.item["native-flora"].stack_size,
     pictures = {
         { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mip/floraspollinin-1.png", scale = 1.2 },
         { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mip/floraspollinin-2.png", scale = 1.2 },
@@ -118,7 +118,7 @@ ITEM({
     flags = {},
     subgroup = "py-alienlife-items",
     order = "ga",
-    stack_size = data.raw.item[ "biomass" ].stack_size
+    stack_size = data.raw.item["biomass"].stack_size
 })
 
 ITEM({
@@ -135,7 +135,7 @@ ITEM({
     flags = {},
     subgroup = "py-alienlife-items",
     order = "ga",
-    stack_size = data.raw.item[ "biomass" ].stack_size
+    stack_size = data.raw.item["biomass"].stack_size
 }):spoil("biocrud", 3 * hour)
 
 RECIPE({

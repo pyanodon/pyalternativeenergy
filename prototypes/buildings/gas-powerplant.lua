@@ -136,7 +136,7 @@ for i = 1, 4 do
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 production_type = "input",
-                filter = ({ "natural-gas", "refined-natural-gas", "purified-natural-gas", "pure-natural-gas" })[ i ]
+                filter = ({ "natural-gas", "refined-natural-gas", "purified-natural-gas", "pure-natural-gas" })[i]
             },
             effectivity = 1,
             burns_fluid = true,
@@ -175,7 +175,7 @@ for i = 1, 4 do
                 },
             }
         },
-        energy_usage = ({ "6MW", "10MW", "15MW", "18MW" })[ i ],
+        energy_usage = ({ "6MW", "10MW", "15MW", "18MW" })[i],
         graphics_set = {
             working_visualisations = {
                 {
@@ -204,7 +204,7 @@ for i = 1, 4 do
                         frame_count = 80,
                         line_length = 10,
                         width = 192,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         height = 96,
                         animation_speed = 1 / 2,
                         draw_as_glow = true,
@@ -229,7 +229,7 @@ for i = 1, 4 do
                         frame_count = 1,
                         repeat_count = 80,
                         animation_speed = 1 / 2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(0, -80),
                     },
                     {
@@ -239,7 +239,7 @@ for i = 1, 4 do
                         frame_count = 1,
                         repeat_count = 80,
                         animation_speed = 1 / 2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         draw_as_glow = true,
                         shift = util.by_pixel(0, -80),
                     },
@@ -250,7 +250,7 @@ for i = 1, 4 do
                         frame_count = 1,
                         repeat_count = 80,
                         animation_speed = 1 / 2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(0, -80),
                     },
                     {

@@ -1,5 +1,5 @@
-data.raw.planet.nauvis.map_gen_settings.autoplace_controls[ "geothermal-crack" ] = {}
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings[ "geothermal-crack" ] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["geothermal-crack"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["geothermal-crack"] = {}
 
 data:extend({ {
     type = "autoplace-control",

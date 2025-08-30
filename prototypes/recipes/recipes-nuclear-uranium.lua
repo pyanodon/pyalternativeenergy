@@ -32,35 +32,35 @@ for _, recipe_name in pairs({
     "fuelrod-mk01-3",
 }) do
     RECIPE(recipe_name):remove_unlock("uranium-mk04"):remove_unlock("uranium-mk03"):remove_unlock("uranium-mk02"):remove_unlock("uranium-mk01")
-    data.raw.recipe[ recipe_name ] = nil
+    data.raw.recipe[recipe_name] = nil
 end
 
-data.raw.fluid[ "u-15" ] = nil
-data.raw.fluid[ "u-20" ] = nil
-data.raw.fluid[ "u-23" ] = nil
-data.raw.fluid[ "u-25" ] = nil
-data.raw.fluid[ "u-30" ] = nil
-data.raw.fluid[ "u-33" ] = nil
-data.raw.fluid[ "u-35" ] = nil
-data.raw.fluid[ "u-40" ] = nil
-data.raw.fluid[ "u-43" ] = nil
-data.raw.fluid[ "u-45" ] = nil
-data.raw.fluid[ "u-50" ] = nil
-data.raw.fluid[ "u-65" ] = nil
-data.raw.fluid[ "u-70" ] = nil
-data.raw.fluid[ "u-73" ] = nil
-data.raw.fluid[ "u-75" ] = nil
-data.raw.fluid[ "u-79" ] = nil
-data.raw.fluid[ "u-81" ] = nil
-data.raw.fluid[ "u-83" ] = nil
-data.raw.fluid[ "u-rich-pulp" ] = nil
-data.raw.fluid[ "u-waste" ] = nil
-data.raw.fluid[ "vanadium-mixture" ] = nil
-data.raw.fluid[ "mukmoux-oil" ] = nil
+data.raw.fluid["u-15"] = nil
+data.raw.fluid["u-20"] = nil
+data.raw.fluid["u-23"] = nil
+data.raw.fluid["u-25"] = nil
+data.raw.fluid["u-30"] = nil
+data.raw.fluid["u-33"] = nil
+data.raw.fluid["u-35"] = nil
+data.raw.fluid["u-40"] = nil
+data.raw.fluid["u-43"] = nil
+data.raw.fluid["u-45"] = nil
+data.raw.fluid["u-50"] = nil
+data.raw.fluid["u-65"] = nil
+data.raw.fluid["u-70"] = nil
+data.raw.fluid["u-73"] = nil
+data.raw.fluid["u-75"] = nil
+data.raw.fluid["u-79"] = nil
+data.raw.fluid["u-81"] = nil
+data.raw.fluid["u-83"] = nil
+data.raw.fluid["u-rich-pulp"] = nil
+data.raw.fluid["u-waste"] = nil
+data.raw.fluid["vanadium-mixture"] = nil
+data.raw.fluid["mukmoux-oil"] = nil
 
-data.raw.item[ "20-u-powder" ] = nil
-data.raw.item[ "40-u-powder" ] = nil
-data.raw.item[ "70-u-powder" ] = nil
+data.raw.item["20-u-powder"] = nil
+data.raw.item["40-u-powder"] = nil
+data.raw.item["70-u-powder"] = nil
 
 --BETA DECAY = lose an electron.
 

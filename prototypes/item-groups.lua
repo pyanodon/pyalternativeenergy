@@ -125,5 +125,5 @@ data:extend({
     },
 })
 
-data.raw.item[ "engine-unit" ].subgroup = "py-alternativeenergy-engine-units"
-data.raw.item[ "electric-engine-unit" ].subgroup = "py-alternativeenergy-engine-units"
+data.raw.item["engine-unit"].subgroup = "py-alternativeenergy-engine-units"
+data.raw.item["electric-engine-unit"].subgroup = "py-alternativeenergy-engine-units"

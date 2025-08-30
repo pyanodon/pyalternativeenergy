@@ -10,10 +10,10 @@ local function get_gui(player)
 end
 
 local function update_gui(gui)
-    local force = game.forces[ gui.tags.force ]
+    local force = game.forces[gui.tags.force]
     if not force or not force.valid then return end
 
-    local microwave_data = storage.microwave_receivers[ gui.tags.unit_number ]
+    local microwave_data = storage.microwave_receivers[gui.tags.unit_number]
     if not microwave_data then
         gui.destroy(); return
     end
@@ -114,14 +114,14 @@ end
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "microwave-receiver" then return end
-    storage.microwave_receivers[ entity.unit_number ] = { unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force }
+    storage.microwave_receivers[entity.unit_number] = { unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force }
     recalc_satellite_distribution(entity.force)
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "microwave-receiver" then return end
-    storage.microwave_receivers[ entity.unit_number ] = nil
+    storage.microwave_receivers[entity.unit_number] = nil
     recalc_satellite_distribution(entity.force)
 end)
 

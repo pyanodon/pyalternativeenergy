@@ -826,9 +826,9 @@ ITEM({
     stack_size = 100
 })
 
-data.raw[ "battery-equipment" ][ "battery-equipment" ].take_result = "battery-mk01"
-data.raw[ "battery-equipment" ][ "battery-equipment" ].localised_name = { "item-name.battery-mk01" }
-data.raw[ "battery-equipment" ][ "battery-equipment" ].energy_source.buffer_capacity = "50MJ"
+data.raw["battery-equipment"]["battery-equipment"].take_result = "battery-mk01"
+data.raw["battery-equipment"]["battery-equipment"].localised_name = { "item-name.battery-mk01" }
+data.raw["battery-equipment"]["battery-equipment"].energy_source.buffer_capacity = "50MJ"
 
 ITEM({
     type = "item",

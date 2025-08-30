@@ -243,7 +243,7 @@ do
     end
 end
 
-local smoke = table.deepcopy(data.raw[ "trivial-smoke" ][ "turbine-smoke" ])
+local smoke = table.deepcopy(data.raw["trivial-smoke"]["turbine-smoke"])
 smoke.duration = 400
 smoke.show_when_smoke_off = true
 smoke.name = "sut-smoke"

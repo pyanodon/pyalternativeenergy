@@ -108,7 +108,7 @@ local proto = ENTITY({
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
-new_proto.picture = proto.animations.layers[ 1 ]
+new_proto.picture = proto.animations.layers[1]
 new_proto.animations = nil
 new_proto.render_layer = "floor-mechanics"
 data:extend({ new_proto })

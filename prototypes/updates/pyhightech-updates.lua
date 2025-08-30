@@ -11,8 +11,8 @@ TECHNOLOGY("quantum-processor"):add_pack("military-science-pack")
 TECHNOLOGY("schrodinger-antelope"):add_pack("military-science-pack")
 
 --BUILDINDS--
-if RECIPE[ "quantum-computer" ] then
-    RECIPE[ "quantum-computer" ]
+if RECIPE["quantum-computer"] then
+    RECIPE["quantum-computer"]
         :remove_ingredient("gasturbinemk03")
         :add_ingredient({ type = "item", name = "metastable-quasicrystal", amount = 50 })
         :add_ingredient({ type = "item", name = "sc-engine", amount = 10 })
@@ -60,7 +60,7 @@ RECIPE("particle-accelerator-mk04"):add_ingredient({ type = "item", name = "meta
 RECIPE("electronics-factory-mk04"):add_ingredient({ type = "item", name = "metastable-quasicrystal", amount = 1 }):add_ingredient({ type = "item", name = "sc-engine", amount = 1 }):add_ingredient({ type = "item", name = "mechanical-parts-03", amount = 1 })
 RECIPE("pulp-mill-mk04"):add_ingredient({ type = "item", name = "metastable-quasicrystal", amount = 5 }):add_ingredient({ type = "item", name = "sc-engine", amount = 1 }):add_ingredient({ type = "item", name = "mechanical-parts-03", amount = 1 })
 RECIPE("nano-assembler-mk04"):add_ingredient({ type = "item", name = "metastable-quasicrystal", amount = 15 }):add_ingredient({ type = "item", name = "sc-engine", amount = 4 }):add_ingredient({ type = "item", name = "mechanical-parts-03", amount = 1 })
-if RECIPE[ "blackhole" ] then RECIPE("blackhole"):add_ingredient({ type = "item", name = "metastable-quasicrystal", amount = 15 }):add_ingredient({ type = "item", name = "sc-engine", amount = 4 }):add_ingredient({ type = "item", name = "mechanical-parts-03", amount = 1 }) end
+if RECIPE["blackhole"] then RECIPE("blackhole"):add_ingredient({ type = "item", name = "metastable-quasicrystal", amount = 15 }):add_ingredient({ type = "item", name = "sc-engine", amount = 4 }):add_ingredient({ type = "item", name = "mechanical-parts-03", amount = 1 }) end
 
 RECIPE("solar-panel-mk03"):add_ingredient({ type = "item", name = "biopolymer", amount = 50 }):add_ingredient({ type = "item", name = "carbon-aerogel", amount = 20 }):add_ingredient({ type = "item", name = "carbon-nanotube", amount = 20 })
 RECIPE("solar-panel-mk04"):replace_ingredient("control-unit", "intelligent-unit"):add_ingredient({ type = "item", name = "superconductor-servomechanims", amount = 5 }):add_ingredient({ type = "item", name = "quantum-dots", amount = 10 }):add_ingredient({ type = "item", name = "hyperelastic-material", amount = 20 })
@@ -90,7 +90,7 @@ RECIPE("silica-powder"):remove_unlock("colloidal-silica"):add_unlock({ "silicon-
 RECIPE("saline-water"):remove_unlock("electrolysis"):add_unlock("electronics")
 RECIPE("electronic-circuit"):add_ingredient({ type = "item", name = "battery-mk00", amount = 1 })
 RECIPE("electronic-circuit"):set_fields({ results = { { type = "item", name = "electronic-circuit", amount = 3 } } })
-local recipe = table.deepcopy(data.raw.recipe[ "electronic-circuit" ])
+local recipe = table.deepcopy(data.raw.recipe["electronic-circuit"])
 recipe.name = "electronic-circuit-2"
 recipe.results = { { type = "item", name = "electronic-circuit", amount = 5 } }
 data:extend({ recipe })
@@ -116,7 +116,7 @@ RECIPE("py-logistic-robot-mk04"):add_ingredient({ type = "item", name = "metasta
 RECIPE("lithium-chloride"):remove_ingredient("reo"):add_ingredient({ type = "item", name = "lithium-hydroxide", amount = 1 })
 RECIPE("nexelit-battery"):remove_unlock("py-accumulator-mk01"):add_unlock({ "battery-mk02" })
 RECIPE("nanochip"):add_ingredient({ type = "item", name = "milfe", amount = 1 })
-RECIPE("carbon-nanotube"):add_ingredient({ type = "item", name = "milfe", amount = 1 }).results[ 1 ].amount = 5
+RECIPE("carbon-nanotube"):add_ingredient({ type = "item", name = "milfe", amount = 1 }).results[1].amount = 5
 RECIPE("parametric-oscilator"):add_ingredient({ type = "item", name = "milfe", amount = 1 })
 RECIPE("quantum-well"):add_ingredient({ type = "item", name = "milfe", amount = 1 })
 RECIPE("quantum-dots"):add_ingredient({ type = "item", name = "milfe", amount = 1 })
@@ -126,10 +126,12 @@ RECIPE("paradiamatic-resistor"):add_ingredient({ type = "item", name = "nano-mes
 --RECIPE("cage-antilope"):add_ingredient({type = "item", name = "nano-mesh", amount = 1})
 RECIPE("volumetric-capacitor"):add_ingredient({ type = "item", name = "nano-mesh", amount = 1 })
 RECIPE("pa-proton"):replace_ingredient("uranium-235", "u-235")
-RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si"):set_fields({ results = {
-    { type = "fluid", name = "flue-gas",      amount = 100 },
-    { type = "item",  name = "silicon-wafer", amount = 2 }
-} })
+RECIPE("silicon-wafer"):replace_ingredient("silicon", "eg-si"):set_fields({
+    results = {
+        { type = "fluid", name = "flue-gas",      amount = 100 },
+        { type = "item",  name = "silicon-wafer", amount = 2 }
+    }
+})
 RECIPE("silicon"):remove_unlock("semiconductor-doping"):add_unlock("silicon-mk01")
 RECIPE("lithium-chloride"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
 RECIPE("lithium-niobate"):remove_unlock("biobattery"):add_unlock("lithium-niobate")
@@ -187,38 +189,38 @@ RECIPE({
 }):add_unlock("semiconductor-doping-mk02")
 
 --pyHT--
-data.raw[ "assembling-machine" ][ "chipshooter-mk02" ].energy_usage = "1MW"
-data.raw[ "assembling-machine" ][ "chipshooter-mk03" ].energy_usage = "2MW"
-data.raw[ "assembling-machine" ][ "chipshooter-mk04" ].energy_usage = "3MW"
-data.raw[ "assembling-machine" ][ "clay-pit-mk02" ].energy_usage = "1MW"
-data.raw[ "assembling-machine" ][ "clay-pit-mk03" ].energy_usage = "2MW"
-data.raw[ "assembling-machine" ][ "clay-pit-mk04" ].energy_usage = "3MW"
-data.raw[ "assembling-machine" ][ "electronics-factory-mk02" ].energy_usage = "1MW"
-data.raw[ "assembling-machine" ][ "electronics-factory-mk03" ].energy_usage = "2MW"
-data.raw[ "assembling-machine" ][ "electronics-factory-mk04" ].energy_usage = "3MW"
-data.raw[ "assembling-machine" ][ "fbreactor-mk02" ].energy_usage = "1MW"
-data.raw[ "assembling-machine" ][ "fbreactor-mk03" ].energy_usage = "2MW"
-data.raw[ "assembling-machine" ][ "fbreactor-mk04" ].energy_usage = "3MW"
-data.raw[ "assembling-machine" ][ "moondrop-greenhouse-mk02" ].energy_usage = "1MW"
-data.raw[ "assembling-machine" ][ "moondrop-greenhouse-mk03" ].energy_usage = "2MW"
-data.raw[ "assembling-machine" ][ "moondrop-greenhouse-mk04" ].energy_usage = "3MW"
-data.raw[ "assembling-machine" ][ "nano-assembler-mk02" ].energy_usage = "1MW"
-data.raw[ "assembling-machine" ][ "nano-assembler-mk03" ].energy_usage = "2MW"
+data.raw["assembling-machine"]["chipshooter-mk02"].energy_usage = "1MW"
+data.raw["assembling-machine"]["chipshooter-mk03"].energy_usage = "2MW"
+data.raw["assembling-machine"]["chipshooter-mk04"].energy_usage = "3MW"
+data.raw["assembling-machine"]["clay-pit-mk02"].energy_usage = "1MW"
+data.raw["assembling-machine"]["clay-pit-mk03"].energy_usage = "2MW"
+data.raw["assembling-machine"]["clay-pit-mk04"].energy_usage = "3MW"
+data.raw["assembling-machine"]["electronics-factory-mk02"].energy_usage = "1MW"
+data.raw["assembling-machine"]["electronics-factory-mk03"].energy_usage = "2MW"
+data.raw["assembling-machine"]["electronics-factory-mk04"].energy_usage = "3MW"
+data.raw["assembling-machine"]["fbreactor-mk02"].energy_usage = "1MW"
+data.raw["assembling-machine"]["fbreactor-mk03"].energy_usage = "2MW"
+data.raw["assembling-machine"]["fbreactor-mk04"].energy_usage = "3MW"
+data.raw["assembling-machine"]["moondrop-greenhouse-mk02"].energy_usage = "1MW"
+data.raw["assembling-machine"]["moondrop-greenhouse-mk03"].energy_usage = "2MW"
+data.raw["assembling-machine"]["moondrop-greenhouse-mk04"].energy_usage = "3MW"
+data.raw["assembling-machine"]["nano-assembler-mk02"].energy_usage = "1MW"
+data.raw["assembling-machine"]["nano-assembler-mk03"].energy_usage = "2MW"
 --data.raw['assembling-machine']['nano-assembler-mk04'].energy_usage = "3MW"
-data.raw[ "assembling-machine" ][ "pcb-factory-mk02" ].energy_usage = "1MW"
-data.raw[ "assembling-machine" ][ "pcb-factory-mk03" ].energy_usage = "2MW"
-data.raw[ "assembling-machine" ][ "pcb-factory-mk04" ].energy_usage = "3MW"
-data.raw[ "assembling-machine" ][ "pulp-mill-mk02" ].energy_usage = "1MW"
-data.raw[ "assembling-machine" ][ "pulp-mill-mk03" ].energy_usage = "2MW"
-data.raw[ "assembling-machine" ][ "pulp-mill-mk04" ].energy_usage = "3MW"
+data.raw["assembling-machine"]["pcb-factory-mk02"].energy_usage = "1MW"
+data.raw["assembling-machine"]["pcb-factory-mk03"].energy_usage = "2MW"
+data.raw["assembling-machine"]["pcb-factory-mk04"].energy_usage = "3MW"
+data.raw["assembling-machine"]["pulp-mill-mk02"].energy_usage = "1MW"
+data.raw["assembling-machine"]["pulp-mill-mk03"].energy_usage = "2MW"
+data.raw["assembling-machine"]["pulp-mill-mk04"].energy_usage = "3MW"
 
 RECIPE("nexelit-battery-recharge"):remove_unlock("railway-mk03"):add_unlock("battery-mk02")
 RECIPE("quantum-battery-recharge"):remove_unlock("railway-mk04"):add_unlock("battery-mk04")
-data.raw.recipe[ "quantum-battery" ].results = { { type = "item", name = "used-quantum-battery", amount = 1 } }
+data.raw.recipe["quantum-battery"].results = { { type = "item", name = "used-quantum-battery", amount = 1 } }
 
 RECIPE("random-science-pack"):remove_unlock("quantum").hidden = true
 
-RECIPE("pa-diamond"):remove_unlock("nucleo-mk02"):add_unlock("nucleo-mk03").energy_required = data.raw.recipe[ "pa-diamond" ].energy_required * 2
+RECIPE("pa-diamond"):remove_unlock("nucleo-mk02"):add_unlock("nucleo-mk03").energy_required = data.raw.recipe["pa-diamond"].energy_required * 2
 
 RECIPE("coarse-tar"):remove_ingredient("coarse"):add_ingredient({ type = "item", name = "coarse", amount = 1 }).energy_required = 3
 RECIPE("coarse-tar").results = { { type = "fluid", name = "tar", amount = 70 } }

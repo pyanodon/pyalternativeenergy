@@ -136,7 +136,7 @@ for i = 1, 4 do
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,
             emissions_per_minute = {
-                pollution = ({ 360, 450, 540, 630 })[ i ],
+                pollution = ({ 360, 450, 540, 630 })[i],
             },
             smoke = {
                 {
@@ -196,7 +196,7 @@ for i = 1, 4 do
                         repeat_count = 151,
                         animation_speed = 1 / 3,
                         shift = util.by_pixel(0, 144),
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/coal-powerplant/r1.png",

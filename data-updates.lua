@@ -143,7 +143,7 @@ for name, variance in pairs(require("scripts.wind.variation")) do
     variance = { "entity-description.variance", tostring(variance * 100) }
     -- Handle the surrogate items that show in electric stats, too
     for _, suffix in pairs({ "", "-blank" }) do
-        local entity = data.raw[ "electric-energy-interface" ][ name .. suffix ]
+        local entity = data.raw["electric-energy-interface"][name .. suffix]
         if entity then
             if entity.localised_description then
                 entity.localised_description = { "", entity.localised_description, "\n", variance }
@@ -170,8 +170,8 @@ local electric_energy_interfaces = {
 }
 
 for _, name in pairs(electric_energy_interfaces) do
-    local item = data.raw.item[ name ]
-    local entity = data.raw[ "electric-energy-interface" ][ name ]
+    local item = data.raw.item[name]
+    local entity = data.raw["electric-energy-interface"][name]
     local output = { "entity-description.max-output", tostring(entity.energy_production) }
     if item.localised_description then
         item.localised_description = { "", item.localised_description, "\n", (output) }
@@ -189,9 +189,9 @@ for _, resource in pairs(data.raw.resource) do
     end
 end
 
-if feature_flags.space_travel and not data.raw.armor[ "mech-armor" ] then
-    data.raw.armor[ "power-armor" ].provides_flight = true
-    data.raw.armor[ "power-armor-mk2" ].provides_flight = true
+if feature_flags.space_travel and not data.raw.armor["mech-armor"] then
+    data.raw.armor["power-armor"].provides_flight = true
+    data.raw.armor["power-armor-mk2"].provides_flight = true
 end
 
 --gather recipes for module changes

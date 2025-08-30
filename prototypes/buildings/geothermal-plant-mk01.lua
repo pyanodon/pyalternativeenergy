@@ -51,8 +51,8 @@ ENTITY({
         volume = 200,
         pipe_connections = {
             { flow_direction = "input-output", position = { -5.0, 0 }, direction = defines.direction.west },
-            { flow_direction = "input-output", position = { 5.0, 0 }, direction = defines.direction.east },
-            { flow_direction = "input-output", position = { 0, 5.0 }, direction = defines.direction.south },
+            { flow_direction = "input-output", position = { 5.0, 0 },  direction = defines.direction.east },
+            { flow_direction = "input-output", position = { 0, 5.0 },  direction = defines.direction.south },
         },
         filter = "pressured-water",
     },
@@ -77,7 +77,7 @@ ENTITY({
     },
     monitor_visualization_tint = { r = 78, g = 173, b = 255 },
     --base_render_layer = "lower-object-above-shadow",
-    circuit_connector = circuit_connector_definitions[ "geothermal-plant-mk01" ],
+    circuit_connector = circuit_connector_definitions["geothermal-plant-mk01"],
     circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     graphics_set = {
         animation = {

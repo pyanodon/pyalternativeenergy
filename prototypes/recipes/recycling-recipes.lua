@@ -36,8 +36,8 @@ RECIPE({
     },
     main_product = "pressured-air"
 }):add_unlock("nitrogen-mk01")
-data.raw.recipe[ "purest-nitrogen-gas" ].localised_name = { "recipe-name.fractional-distillation" }
-data.raw.recipe[ "purest-nitrogen-gas" ].localised_description = { "recipe-description.fractional-distillation" }
+data.raw.recipe["purest-nitrogen-gas"].localised_name = { "recipe-name.fractional-distillation" }
+data.raw.recipe["purest-nitrogen-gas"].localised_description = { "recipe-description.fractional-distillation" }
 
 --oxygen
 
@@ -419,7 +419,7 @@ RECIPE({
     },
     allow_productivity = true,
     main_product = "carbolic-oil",
-    crafting_machine_tint = { primary = FLUID[ "carbolic-oil" ].base_color, secondary = defines.color.deeppink }
+    crafting_machine_tint = { primary = FLUID["carbolic-oil"].base_color, secondary = defines.color.deeppink }
 }):add_unlock("rendering")
 
 --sodium hydroxide
@@ -579,7 +579,7 @@ RECIPE({
     },
     allow_productivity = true,
     main_product = "creosote",
-    crafting_machine_tint = RECIPE[ "creosote" ].crafting_machine_tint
+    crafting_machine_tint = RECIPE["creosote"].crafting_machine_tint
 }):add_unlock("creosote")
 
 --refined natural gas

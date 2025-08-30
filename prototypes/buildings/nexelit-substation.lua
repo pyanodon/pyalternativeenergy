@@ -121,8 +121,8 @@ ENTITY({
 })
 
 -- https://github.com/pyanodon/pybugreports/issues/845
-if not mods[ "pystellarexpedition" ] then
-    local legacy = table.deepcopy(data.raw[ "electric-pole" ][ "nexelit-substation" ])
+if not mods["pystellarexpedition"] then
+    local legacy = table.deepcopy(data.raw["electric-pole"]["nexelit-substation"])
     legacy.collision_box = { { -2.2, -2.2 }, { 2.2, 2.2 } }
     legacy.selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } }
     legacy.placeable_by = { item = "nexelit-substation", count = 1 }

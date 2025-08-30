@@ -158,7 +158,7 @@ for i = 1, 4 do
                 pipe_connections = {
                     { flow_direction = "input", position = { 0, 3.0 }, direction = defines.direction.south }
                 },
-                pipe_covers = table.deepcopy(data.raw[ "pipe-to-ground" ][ "ht-pipes-to-ground" ].fluid_box.pipe_covers),
+                pipe_covers = table.deepcopy(data.raw["pipe-to-ground"]["ht-pipes-to-ground"].fluid_box.pipe_covers),
                 production_type = "input",
             },
             emissions_per_minute = {
@@ -178,7 +178,7 @@ for i = 1, 4 do
                 }
             }
         },
-        energy_usage = power_usage_by_tier[ i ],
+        energy_usage = power_usage_by_tier[i],
         mining_power = 1,
         resource_searching_radius = 4.49 + ((i - 1) * 3),
         resource_drain_rate_percent = 200 * (2 ^ -i),
@@ -188,7 +188,7 @@ for i = 1, 4 do
             width = 12,
             height = 12
         },
-        circuit_connector = circuit_connector_definitions[ "antimony-drill-mkxx" ],
+        circuit_connector = circuit_connector_definitions["antimony-drill-mkxx"],
         circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
         graphics_set = {
             animation = {
@@ -256,7 +256,7 @@ for i = 1, 4 do
                         frame_count = 1,
                         repeat_count = 50,
                         draw_as_glow = true,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         blend_mode = "additive",
                         animation_speed = 0.3,
                         shift = util.by_pixel(-0, -128),
@@ -272,7 +272,7 @@ for i = 1, 4 do
         }
     })
 
-    if not mods[ "pystellarexpedition" ] then
+    if not mods["pystellarexpedition"] then
         local legacy_entity = table.deepcopy(entity)
         legacy_entity.name = "antimonium-drill-mk0" .. i
         legacy_entity.energy_source = old_energy_source()

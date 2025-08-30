@@ -60,7 +60,7 @@ ENTITY({
 })
 
 -- create sprites for solar tower panels
-local panel = data.raw[ "simple-entity-with-owner" ][ "solar-tower-panel0" ]
+local panel = data.raw["simple-entity-with-owner"]["solar-tower-panel0"]
 do
     local i = 1
     for y = 0, 768 - 192, 192 do

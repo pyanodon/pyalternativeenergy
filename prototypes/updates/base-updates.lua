@@ -347,10 +347,10 @@ TECHNOLOGY({
     order = "c-k-f-e"
 })
 
-data.raw.technology[ "uranium-processing" ].enabled = true
-data.raw.technology[ "uranium-processing" ].hidden = false
-data.raw.technology[ "uranium-mining" ].enabled = false
-data.raw.technology[ "uranium-mining" ].hidden = true
+data.raw.technology["uranium-processing"].enabled = true
+data.raw.technology["uranium-processing"].hidden = false
+data.raw.technology["uranium-mining"].enabled = false
+data.raw.technology["uranium-mining"].hidden = true
 
 TECHNOLOGY("uranium-processing").research_trigger = nil
 TECHNOLOGY("uranium-processing"):add_pack("py-science-pack-2")
@@ -375,13 +375,13 @@ RECIPE("assembling-machine-3"):remove_ingredient("small-parts-02"):add_ingredien
 
 --modify heat exchanger
 --data.raw.boiler['heat-exchanger'].target_temperature = 500
-data.raw.boiler[ "heat-exchanger" ].energy_consumption = "125MW"
+data.raw.boiler["heat-exchanger"].energy_consumption = "125MW"
 --data.raw.boiler['heat-exchanger'].energy_source.max_temperature = 2000
-data.raw.boiler[ "heat-exchanger" ].energy_source.specific_heat = "500MJ"
+data.raw.boiler["heat-exchanger"].energy_source.specific_heat = "500MJ"
 --data.raw.boiler['heat-exchanger'].energy_source.max_transfer = '8GW'
 
-data.raw.generator[ "steam-turbine" ].effectivity = 0.5
-data.raw.generator[ "steam-turbine" ].fluid_usage_per_tick = 1
+data.raw.generator["steam-turbine"].effectivity = 0.5
+data.raw.generator["steam-turbine"].fluid_usage_per_tick = 1
 
 RECIPE("electric-furnace"):remove_ingredient("super-steel")
 
@@ -409,9 +409,9 @@ RECIPE("nuclear-reactor"):add_unlock("uranium-processing"):remove_ingredient("su
 --data.raw.reactor['nuclear-reactor'].energy_source.effectivity = 0.2
 --data.raw.reactor['nuclear-reactor'].heat_buffer.connections = nil
 
-data.raw.technology[ "atomic-bomb" ].prerequisites = {}
+data.raw.technology["atomic-bomb"].prerequisites = {}
 TECHNOLOGY("atomic-bomb"):add_prereq("uranium-processing")
-data.raw.technology[ "atomic-bomb" ].unit.ingredients = {
+data.raw.technology["atomic-bomb"].unit.ingredients = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack",   1 },
     { "py-science-pack-2",       1 }
@@ -485,7 +485,7 @@ ITEM("productivity-module-3").effect.consumption = 2.0
 
 ENTITY("beacon"):set_fields({ energy_usage = "2MW", hidden = true, hidden_by_factoriopedia = true })
 
-data.raw.tool[ "space-science-pack" ].stack_size = 200
+data.raw.tool["space-science-pack"].stack_size = 200
 
 RECIPE({
     type = "recipe",
@@ -622,7 +622,7 @@ RECIPE({
     results = { { type = "item", name = "productivity-module-3", amount = 1 } }
 })
 
-if mods[ "quality" ] then
+if mods["quality"] then
     RECIPE({
         type = "recipe",
         name = "quality-module",
@@ -683,17 +683,17 @@ if mods[ "quality" ] then
     })
 end
 
-data.raw.furnace[ "steel-furnace" ].energy_usage = "6MW"
-data.raw.furnace[ "steel-furnace" ].crafting_speed = 4
-data.raw.furnace[ "steel-furnace" ].energy_source.type = "fluid"
-data.raw.furnace[ "steel-furnace" ].energy_source.destroy_non_fuel_fluid = false
-data.raw.furnace[ "steel-furnace" ].energy_source.burns_fluid = true
-data.raw.furnace[ "steel-furnace" ].energy_source.scale_fluid_usage = true
-data.raw.furnace[ "steel-furnace" ].energy_source.fluid_usage_per_tick = 2
-data.raw.furnace[ "steel-furnace" ].energy_source.fluid_box = {
+data.raw.furnace["steel-furnace"].energy_usage = "6MW"
+data.raw.furnace["steel-furnace"].crafting_speed = 4
+data.raw.furnace["steel-furnace"].energy_source.type = "fluid"
+data.raw.furnace["steel-furnace"].energy_source.destroy_non_fuel_fluid = false
+data.raw.furnace["steel-furnace"].energy_source.burns_fluid = true
+data.raw.furnace["steel-furnace"].energy_source.scale_fluid_usage = true
+data.raw.furnace["steel-furnace"].energy_source.fluid_usage_per_tick = 2
+data.raw.furnace["steel-furnace"].energy_source.fluid_box = {
     volume = 200,
     pipe_connections = {
-        { flow_direction = "input-output", position = { 0.5, 0.5 }, direction = defines.direction.south },
+        { flow_direction = "input-output", position = { 0.5, 0.5 },  direction = defines.direction.south },
         { flow_direction = "input-output", position = { 0.5, -0.5 }, direction = defines.direction.north }
     },
     pipe_covers = py.pipe_covers(false, true, true, true),
@@ -701,10 +701,10 @@ data.raw.furnace[ "steel-furnace" ].energy_source.fluid_box = {
     production_type = "input",
 }
 
-data.raw[ "roboport" ][ "py-ze" ].energy_usage = "350kW"
-data.raw[ "roboport" ][ "py-ze-mk02" ].energy_usage = "700kW"
-data.raw[ "roboport" ][ "py-ze-mk03" ].energy_usage = "1MW"
-data.raw[ "roboport" ][ "py-ze-mk04" ].energy_usage = "2MW"
+data.raw["roboport"]["py-ze"].energy_usage = "350kW"
+data.raw["roboport"]["py-ze-mk02"].energy_usage = "700kW"
+data.raw["roboport"]["py-ze-mk03"].energy_usage = "1MW"
+data.raw["roboport"]["py-ze-mk04"].energy_usage = "2MW"
 
 RECIPE("py-ze-mk02"):remove_unlock("py-accumulator-mk02"):add_unlock("robotics"):replace_ingredient("iron-gear-wheel", "small-parts-02"):add_ingredient({ type = "item", name = "self-assembly-monolayer", amount = 1 }):add_ingredient({ type = "item", name = "mechanical-parts-02", amount = 1 }):add_ingredient({ type = "item", name = "eva", amount = 20 })
 RECIPE("py-ze-mk03"):remove_unlock("py-accumulator-mk03"):add_unlock("advanced-robotics"):replace_ingredient("iron-gear-wheel", "small-parts-03"):add_ingredient({ type = "item", name = "ns-material", amount = 1 }):add_ingredient({ type = "item", name = "mechanical-parts-03", amount = 1 }):replace_ingredient("plastic-bar", "biopolymer"):add_ingredient({ type = "item", name = "super-steel", amount = 15 }):add_ingredient({ type = "item", name = "cf", amount = 10 }):add_ingredient({ type = "item", name = "heavy-fermion", amount = 5 }):add_ingredient({ type = "item", name = "superconductor", amount = 3 })
@@ -893,12 +893,12 @@ RECIPE("exoskeleton-equipment"):set_fields({
     category = "crafting"
 })
 
-data.raw.technology[ "solar-panel-equipment" ].prerequisites = { "solar-mk01", "modular-armor" }
-data.raw.technology[ "night-vision-equipment" ].prerequisites = { "personal-roboport-equipment" }
-data.raw.technology[ "belt-immunity-equipment" ].prerequisites = { "personal-roboport-equipment" }
-data.raw.technology[ "exoskeleton-equipment" ].prerequisites = { "bio-implants", "power-armor" }
-data.raw.technology[ "fission-reactor-equipment" ].prerequisites = { "power-armor", "fusion-mk02" }
-data.raw.technology[ "personal-roboport-mk2-equipment" ].prerequisites = { "solar-panel-equipment", "modular-armor", "personal-roboport-equipment" }
+data.raw.technology["solar-panel-equipment"].prerequisites = { "solar-mk01", "modular-armor" }
+data.raw.technology["night-vision-equipment"].prerequisites = { "personal-roboport-equipment" }
+data.raw.technology["belt-immunity-equipment"].prerequisites = { "personal-roboport-equipment" }
+data.raw.technology["exoskeleton-equipment"].prerequisites = { "bio-implants", "power-armor" }
+data.raw.technology["fission-reactor-equipment"].prerequisites = { "power-armor", "fusion-mk02" }
+data.raw.technology["personal-roboport-mk2-equipment"].prerequisites = { "solar-panel-equipment", "modular-armor", "personal-roboport-equipment" }
 
 TECHNOLOGY("solar-panel-equipment"):add_pack("chemical-science-pack")
 --TECHNOLOGY('night-vision-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
@@ -906,13 +906,13 @@ TECHNOLOGY("solar-panel-equipment"):add_pack("chemical-science-pack")
 TECHNOLOGY("personal-roboport-mk2-equipment"):remove_pack("military-science-pack"):remove_pack("production-science-pack")
 TECHNOLOGY("energy-shield-equipment"):add_pack("chemical-science-pack")
 
-data.raw[ "movement-bonus-equipment" ][ "exoskeleton-equipment" ].movement_bonus = 2
-data.raw[ "movement-bonus-equipment" ][ "exoskeleton-equipment" ].energy_consumption = "750kW"
+data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].movement_bonus = 2
+data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].energy_consumption = "750kW"
 
-data.raw.furnace[ "electric-furnace" ].energy_usage = "10MW"
-data.raw.furnace[ "electric-furnace" ].crafting_speed = 8
+data.raw.furnace["electric-furnace"].energy_usage = "10MW"
+data.raw.furnace["electric-furnace"].crafting_speed = 8
 if not mods.pystellarexpedition then
-    data.raw.furnace[ "electric-furnace" ].energy_source = {
+    data.raw.furnace["electric-furnace"].energy_source = {
         type = "heat",
         max_temperature = 1000,
         specific_heat = "1MJ",
@@ -993,7 +993,7 @@ end
 ITEM("space-science-pack", "tool"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
 ITEM("space-science-pack", "tool"):set("icon_size", 64)
 
-data.raw.recipe[ "empty-boric-acid-barrel" ].results[ 1 ].temperature = 10
+data.raw.recipe["empty-boric-acid-barrel"].results[1].temperature = 10
 
 RECIPE({
     type = "recipe",
@@ -1336,6 +1336,6 @@ data:extend({
     }
 })
 
-data.raw[ "accumulator" ][ "accumulator" ].energy_source.buffer_capacity = "150MJ"
-data.raw[ "accumulator" ][ "accumulator" ].energy_source.input_flow_limit = "1MW"
-data.raw[ "accumulator" ][ "accumulator" ].energy_source.output_flow_limit = "1MW"
+data.raw["accumulator"]["accumulator"].energy_source.buffer_capacity = "150MJ"
+data.raw["accumulator"]["accumulator"].energy_source.input_flow_limit = "1MW"
+data.raw["accumulator"]["accumulator"].energy_source.output_flow_limit = "1MW"

@@ -93,9 +93,9 @@ ENTITY({
     impact_category = "metal-large",
 })
 
-local entity = data.raw[ "electric-energy-interface" ][ "solar-panel-mk02" ]
+local entity = data.raw["electric-energy-interface"]["solar-panel-mk02"]
 local day_length = 12500 + 5000 + 5000
-local frame_count = entity.animation.layers[ 1 ].frame_count
+local frame_count = entity.animation.layers[1].frame_count
 local animation_speed = 1 / day_length * frame_count
-entity.animation.layers[ 1 ].animation_speed = animation_speed
-entity.animation.layers[ 2 ].animation_speed = animation_speed
+entity.animation.layers[1].animation_speed = animation_speed
+entity.animation.layers[2].animation_speed = animation_speed

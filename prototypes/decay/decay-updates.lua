@@ -1,5 +1,5 @@
 if not feature_flags.spoiling then return end
-if not settings.startup[ "py-enable-decay" ].value then
+if not settings.startup["py-enable-decay"].value then
     return
 end
 
@@ -33,7 +33,7 @@ RECIPE("jacket-bio-ore")
 ITEM("animal-eye"):spoil("biomass", 30 * minute)
 RECIPE("acetaldehyde-1"):replace_ingredient("plastic-bar", { type = "item", name = "barrel", amount = 1 })
 RECIPE("acetaldehyde-2"):replace_ingredient("plastic-bar", { type = "item", name = "barrel", amount = 1 })
-ITEM("acetaldehyde"):spoil("barrel", 30 * second).stack_size = data.raw.item[ "barrel" ].stack_size
+ITEM("acetaldehyde"):spoil("barrel", 30 * second).stack_size = data.raw.item["barrel"].stack_size
 ITEM("time-crystal"):spoil("time-crystal", hour)
 ITEM("bio-ore"):spoil("biocarnation", hour)
 ITEM("er-oxide"):spoil("impure-er-oxide", hour)
@@ -46,7 +46,7 @@ ITEM("biocarnation"):spoil("advanced-substrate", 2 * hour)
 ITEM("cm-250"):spoil("plutonium-oxide", minute * 8300)
 ITEM("pa-233"):spoil("u-233", 27 * second) -- realistic time is 27 days
 RECIPE("pa233-u233"):remove_unlock("nuclear-power-mk03")
-data.raw.recipe[ "pa233-u233" ] = nil
+data.raw.recipe["pa233-u233"] = nil
 ITEM("po-210"):spoil("reduced-lead", 138.4 * minute)
 ITEM("pu-238"):spoil("u-234", 87.7 * minute)
 ITEM("pu-239"):spoil("u-235", 24100 * minute)
@@ -70,7 +70,7 @@ for i = 232, 240 do
     ITEM("u-" .. i):spoil("uranium-oxide", 50 * minute)
 end
 ITEM("uranium-oxide"):spoil("ash", day)
-data.raw.recipe[ "uranium-seperation" ]:replace_ingredient("u238", { type = "item", name = "u238", amount = 10, probability = 0.25 }):add_ingredient({ type = "item", name = "ash", amount = 10, probability = 0.425 })
+data.raw.recipe["uranium-seperation"]:replace_ingredient("u238", { type = "item", name = "u238", amount = 10, probability = 0.25 }):add_ingredient({ type = "item", name = "ash", amount = 10, probability = 0.425 })
 
 ITEM("high-energy-waste-2"):spoil("high-energy-waste-1", 5 * minute)
 ITEM("high-energy-waste-1"):spoil("ash", 5 * minute)
@@ -101,19 +101,19 @@ local meaty_foods = {
 }
 
 local meat_to_remove = {
-    [ "meat" ] = true,
-    [ "guts" ] = true,
-    [ "skin" ] = true,
-    [ "bonemeal" ] = true,
-    [ "mukmoux-fat" ] = true,
+    ["meat"] = true,
+    ["guts"] = true,
+    ["skin"] = true,
+    ["bonemeal"] = true,
+    ["mukmoux-fat"] = true,
 }
 
 for _, food in pairs(meaty_foods) do
-    if not data.raw.recipe[ food ] then error(food) end
+    if not data.raw.recipe[food] then error(food) end
     food = RECIPE(food)
     local removed_count = 0
     for _, ingredient in pairs(food.ingredients) do
-        if meat_to_remove[ ingredient.name ] then
+        if meat_to_remove[ingredient.name] then
             removed_count = removed_count + ingredient.amount
         end
     end
@@ -199,10 +199,10 @@ ITEM("negasium"):spoil("paragen", 37 * minute)
 ITEM("paragen"):spoil("solidified-sarcorus", 31 * minute)
 ITEM("solidified-sarcorus"):spoil("chitin", 29 * minute)
 
-ITEM("sea-sponge-sprouts-mk04"):spoil("sea-sponge-sprouts-mk03", 2 * minute).stack_size = data.raw.item[ "ore-quartz" ].stack_size
-ITEM("sea-sponge-sprouts-mk03"):spoil("sea-sponge-sprouts-mk02", 4 * minute).stack_size = data.raw.item[ "ore-quartz" ].stack_size
-ITEM("sea-sponge-sprouts-mk02"):spoil("sea-sponge-sprouts", 8 * minute).stack_size = data.raw.item[ "ore-quartz" ].stack_size
-ITEM("sea-sponge-sprouts"):spoil("ore-quartz", 16 * minute).stack_size = data.raw.item[ "ore-quartz" ].stack_size
+ITEM("sea-sponge-sprouts-mk04"):spoil("sea-sponge-sprouts-mk03", 2 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
+ITEM("sea-sponge-sprouts-mk03"):spoil("sea-sponge-sprouts-mk02", 4 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
+ITEM("sea-sponge-sprouts-mk02"):spoil("sea-sponge-sprouts", 8 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
+ITEM("sea-sponge-sprouts"):spoil("ore-quartz", 16 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
 
 ITEM("yotoi-fruit-mk04"):spoil("yotoi-fruit-mk03", 32 * minute)
 ITEM("yotoi-fruit-mk03"):spoil("yotoi-fruit-mk02", 16 * minute)

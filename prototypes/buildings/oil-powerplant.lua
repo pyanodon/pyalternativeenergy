@@ -136,7 +136,7 @@ for i = 1, 4 do
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 production_type = "input",
-                filter = ({ "kerosene", "fuel-oil", "diesel", "gasoline" })[ i ]
+                filter = ({ "kerosene", "fuel-oil", "diesel", "gasoline" })[i]
             },
             effectivity = 1,
             burns_fluid = true,
@@ -161,7 +161,7 @@ for i = 1, 4 do
                 },
             }
         },
-        energy_usage = ({ "10MW", "20MW", "30MW", "40MW" })[ i ],
+        energy_usage = ({ "10MW", "20MW", "30MW", "40MW" })[i],
         graphics_set = {
             working_visualisations = {
                 {
@@ -323,7 +323,7 @@ for i = 1, 4 do
                         height = 768,
                         frame_count = 1,
                         --repeat_count = 151,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(0, -176),
                     },
                     {

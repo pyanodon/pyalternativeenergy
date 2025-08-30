@@ -5,7 +5,7 @@ for i = 1, 4 do
         name = turbine_name .. "-accumulator",
         localised_name = { "entity-name." .. turbine_name },
         localised_description = { "entity-description." .. turbine_name },
-        icon = data.raw[ "item-with-tags" ][ turbine_name ].icon,
+        icon = data.raw["item-with-tags"][turbine_name].icon,
         icon_size = 64,
         hidden = true,
         flags = { "not-on-map", "placeable-off-grid", "not-flammable", "hide-alt-info" },
@@ -163,7 +163,7 @@ ENTITY({
         circuit_wire_connection_point
     },
     circuit_wire_max_distance = 9,
-    circuit_connector_sprites = _G.circuit_connector_definitions[ "accumulator" ].sprites,
+    circuit_connector_sprites = _G.circuit_connector_definitions["accumulator"].sprites,
     item_slot_count = 10,
     integration_patch_render_layer = "lower-object-above-shadow",
     integration_patch = {
