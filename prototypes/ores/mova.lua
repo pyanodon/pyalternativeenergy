@@ -1,26 +1,26 @@
-ENTITY {
+ENTITY({
     type = "resource",
     name = "mova",
     category = "mova",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mova.png",
     icon_size = 64,
-    flags = {"placeable-neutral"},
+    flags = { "placeable-neutral" },
     order = "a-b-a",
-    map_color = {r = 0.545, g = 0.596, b = 0.674},
+    map_color = { r = 0.545, g = 0.596, b = 0.674 },
     minable = {
 
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = "item", name = "mova", amount = 1}
+            { type = "item", name = "mova", amount = 1 }
         },
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
     },
     starting_area = false,
-    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    stage_counts = {800},
+    collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    stage_counts = { 800 },
     stages = {
         sheet = {
             filename = "__pyalternativeenergygraphics__/graphics/entity/crops/mova.png",
@@ -33,17 +33,17 @@ ENTITY {
             shift = util.by_pixel(0, -16),
         },
     }
-}
+})
 
 
-data:extend {
+data:extend({
     {
         type = "tree",
         name = "mova-fake",
         hidden = true,
         icon = "__pyalternativeenergygraphics__/graphics/icons/mova.png",
         icon_size = 64,
-        flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
+        flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
         minable =
         {
             count = 4,
@@ -51,10 +51,10 @@ data:extend {
             mining_time = 0.5,
             result = "wood"
         },
-        emissions_per_second = {pollution = -0.001},
+        emissions_per_second = { pollution = -0.001 },
         max_health = 20,
-        collision_box = {{0, 0}, {0, 0}},
-        selection_box = {{0, 0}, {0, 0}},
+        collision_box = { { 0, 0 }, { 0, 0 } },
+        selection_box = { { 0, 0 }, { 0, 0 } },
         drawing_box_vertical_extension = 1.8,
         subgroup = "trees",
         order = "a[tree]-c[dry-tree]",
@@ -74,4 +74,4 @@ data:extend {
             },
         }
     }
-}
+})

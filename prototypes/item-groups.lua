@@ -1,4 +1,4 @@
-data:extend {
+data:extend({
     {
         type = "item-group",
         name = "py-alternativeenergy",
@@ -123,7 +123,7 @@ data:extend {
         group = "py-rawores",
         order = "bma"
     },
-}
+})
 
-data.raw.item["engine-unit"].subgroup = "py-alternativeenergy-engine-units"
-data.raw.item["electric-engine-unit"].subgroup = "py-alternativeenergy-engine-units"
+data.raw.item[ "engine-unit" ].subgroup = "py-alternativeenergy-engine-units"
+data.raw.item[ "electric-engine-unit" ].subgroup = "py-alternativeenergy-engine-units"

@@ -1,5 +1,5 @@
 local base_path = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk01/%s%d%s.png"
-for index, direction in pairs {
+for index, direction in pairs({
     "south",
     "southwest",
     "west",
@@ -8,8 +8,8 @@ for index, direction in pairs {
     "northeast",
     "east",
     "southeast"
-} do
-    data:extend {{
+}) do
+    data:extend({ {
         type = "animation",
         name = "multiblade-turbine-mk01-" .. direction,
         layers = {
@@ -44,5 +44,5 @@ for index, direction in pairs {
                 draw_as_shadow = true
             } or nil
         }
-    }}
+    } })
 end

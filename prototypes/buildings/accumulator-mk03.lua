@@ -1,24 +1,24 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "accumulator-mk03",
     energy_required = 1,
     category = "advanced-crafting",
     enabled = false,
     ingredients = {
-        {type = "item", name = "supercapacitor",  amount = 15},
-        {type = "item", name = "processing-unit", amount = 10},
-        {type = "item", name = "super-steel",     amount = 50},
-        {type = "item", name = "nano-wires",      amount = 10},  --tinned cable
-        {type = "item", name = "nexelit-plate",   amount = 100}, -- {type = "item", name = "nexelit-plate", amount = 60},
-        {type = "item", name = "optical-fiber",   amount = 50},
-        {type = "item", name = "biopolymer",      amount = 20},
+        { type = "item", name = "supercapacitor",  amount = 15 },
+        { type = "item", name = "processing-unit", amount = 10 },
+        { type = "item", name = "super-steel",     amount = 50 },
+        { type = "item", name = "nano-wires",      amount = 10 }, --tinned cable
+        { type = "item", name = "nexelit-plate",   amount = 100 }, -- {type = "item", name = "nexelit-plate", amount = 60},
+        { type = "item", name = "optical-fiber",   amount = 50 },
+        { type = "item", name = "biopolymer",      amount = 20 },
     },
     results = {
-        {type = "item", name = "accumulator-mk03", amount = 1},
+        { type = "item", name = "accumulator-mk03", amount = 1 },
     }
-}:add_unlock("py-accumulator-mk03")
+}):add_unlock("py-accumulator-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "accumulator-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/accumulator-mk03.png",
@@ -28,19 +28,19 @@ ITEM {
     order = "a",
     place_result = "accumulator-mk03",
     stack_size = 50
-}
+})
 
-ENTITY {
+ENTITY({
     type = "accumulator",
     name = "accumulator-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/accumulator-mk03.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "accumulator-mk03"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.1, result = "accumulator-mk03" },
     max_health = 150,
     corpse = "medium-remnants",
-    collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     energy_source = {
         type = "electric",
         buffer_capacity = "150GJ",
@@ -122,7 +122,7 @@ ENTITY {
             },
         },
         charge_cooldown = 30,
-        charge_light = {intensity = 1, size = 12, color = {r = 0.219, g = 0.835, b = 0.188}},
+        charge_light = { intensity = 1, size = 12, color = { r = 0.219, g = 0.835, b = 0.188 } },
         discharge_animation = {
             layers = {
                 {
@@ -162,7 +162,7 @@ ENTITY {
             },
         },
         discharge_cooldown = 60,
-        discharge_light = {intensity = 1, size = 12, color = {r = 0.862, g = 0.117, b = 0.117}},
+        discharge_light = { intensity = 1, size = 12, color = { r = 0.862, g = 0.117, b = 0.117 } },
     },
     impact_category = "metal-large",
     working_sound = {
@@ -179,17 +179,17 @@ ENTITY {
     circuit_connector = {
         points = {
             shadow = {
-                red = {0.984375, 1.10938},
-                green = {0.890625, 1.10938}
+                red = { 0.984375, 1.10938 },
+                green = { 0.890625, 1.10938 }
             },
             wire = {
-                red = {0.6875, 0.59375},
-                green = {0.6875, 0.71875}
+                red = { 0.6875, 0.59375 },
+                green = { 0.6875, 0.71875 }
             }
         },
     },
     circuit_wire_max_distance = 9,
-    default_output_signal = {type = "virtual", name = "signal-A"},
-    circuit_connector_sprites = _G.circuit_connector_definitions["accumulator"].sprites,
+    default_output_signal = { type = "virtual", name = "signal-A" },
+    circuit_connector_sprites = _G.circuit_connector_definitions[ "accumulator" ].sprites,
     fast_replaceable_group = "py-accumulator"
-}
+})

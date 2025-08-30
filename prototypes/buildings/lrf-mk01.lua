@@ -1,25 +1,25 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "lrf-building-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "iron-plate",          amount = 600},
-        {type = "item", name = "steel-plate",         amount = 200},
-        {type = "item", name = "glass",               amount = 200},
-        {type = "item", name = "pipe",                amount = 100},
-        {type = "item", name = "small-parts-01",      amount = 1000},
-        {type = "item", name = "steam-engine",        amount = 10},
-        {type = "item", name = "electronic-circuit",  amount = 100},
-        {type = "item", name = "intermetallics",      amount = 50},
-        {type = "item", name = "mechanical-parts-01", amount = 5},
+        { type = "item", name = "iron-plate",          amount = 600 },
+        { type = "item", name = "steel-plate",         amount = 200 },
+        { type = "item", name = "glass",               amount = 200 },
+        { type = "item", name = "pipe",                amount = 100 },
+        { type = "item", name = "small-parts-01",      amount = 1000 },
+        { type = "item", name = "steam-engine",        amount = 10 },
+        { type = "item", name = "electronic-circuit",  amount = 100 },
+        { type = "item", name = "intermetallics",      amount = 50 },
+        { type = "item", name = "mechanical-parts-01", amount = 5 },
     },
     results = {
-        {type = "item", name = "lrf-building-mk01", amount = 1}
+        { type = "item", name = "lrf-building-mk01", amount = 1 }
     }
-}:add_unlock("thermal-mk01")
+}):add_unlock("thermal-mk01")
 
-ITEM {
+ITEM({
     type = "item",
     name = "lrf-building-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk01.png",
@@ -29,26 +29,26 @@ ITEM {
     order = "aa",
     place_result = "lrf-building-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "lrf-building-mk01",
     fixed_recipe = "lrf-steam-1",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-building-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "lrf-building-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "lrf-building-mk01" },
     fast_replaceable_group = "lrf-building-mk01",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-7.8, -7.8}, {7.8, 7.8}},
-    selection_box = {{-8.0, -8.0}, {8.0, 8.0}},
+    collision_box = { { -7.8, -7.8 }, { 7.8, 7.8 } },
+    selection_box = { { -8.0, -8.0 }, { 8.0, 8.0 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 0,
     --allowed_effects = {'speed', 'consumption'},
-    crafting_categories = {"lrf"},
+    crafting_categories = { "lrf" },
     crafting_speed = 1,
     energy_source = {
         type = "electric",
@@ -121,7 +121,7 @@ ENTITY {
                     width = 512,
                     height = 608,
                     frame_count = 1,
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
                     shift = util.by_pixel(0, -48)
                 },
                 {
@@ -139,37 +139,37 @@ ENTITY {
     fluid_boxes = {
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.5, -7.5}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 2.5, -7.5 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.5, 7.5}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { -2.5, 7.5 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-2.5, -7.5}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { -2.5, -7.5 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {2.5, 7.5}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 2.5, 7.5 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 2.0},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 0.70},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 2.0 },
+        idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/lrf.ogg", volume = 0.70 },
         apparent_volume = 2.5
     }
-}
+})

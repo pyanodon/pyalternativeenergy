@@ -1,26 +1,26 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "microwave-receiver",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "nxsb-alloy",           amount = 40},
-        {type = "item", name = "processing-unit",      amount = 15},
-        {type = "item", name = "ns-material",          amount = 50},
-        {type = "item", name = "small-parts-03",       amount = 150},
-        {type = "item", name = "graphene-roll",        amount = 25},
-        {type = "item", name = "plastic-bar",          amount = 100},
-        {type = "item", name = "super-steel",          amount = 100},
-        {type = "item", name = "electric-engine-unit", amount = 10},
-        {type = "item", name = "aerogel",              amount = 20},
-        {type = "item", name = "mechanical-parts-03",  amount = 4},
+        { type = "item", name = "nxsb-alloy",           amount = 40 },
+        { type = "item", name = "processing-unit",      amount = 15 },
+        { type = "item", name = "ns-material",          amount = 50 },
+        { type = "item", name = "small-parts-03",       amount = 150 },
+        { type = "item", name = "graphene-roll",        amount = 25 },
+        { type = "item", name = "plastic-bar",          amount = 100 },
+        { type = "item", name = "super-steel",          amount = 100 },
+        { type = "item", name = "electric-engine-unit", amount = 10 },
+        { type = "item", name = "aerogel",              amount = 20 },
+        { type = "item", name = "mechanical-parts-03",  amount = 4 },
     },
     results = {
-        {type = "item", name = "microwave-receiver", amount = 1}
+        { type = "item", name = "microwave-receiver", amount = 1 }
     }
-}:add_unlock("microwave-receiver")
+}):add_unlock("microwave-receiver")
 
-ITEM {
+ITEM({
     type = "item",
     name = "microwave-receiver",
     icon = "__pyalternativeenergygraphics__/graphics/icons/microwave-receiver.png",
@@ -30,20 +30,20 @@ ITEM {
     order = "f",
     place_result = "microwave-receiver",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "electric-energy-interface",
     name = "microwave-receiver",
     icon = "__pyalternativeenergygraphics__/graphics/icons/microwave-receiver.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "microwave-receiver"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.1, result = "microwave-receiver" },
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.3, -4.3}, {4.3, 4.3}},
-    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
+    collision_box = { { -4.3, -4.3 }, { 4.3, 4.3 } },
+    selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
     continuous_animation = true,
     energy_source = {
         type = "electric",
@@ -148,4 +148,4 @@ ENTITY {
     },
 
     impact_category = "metal-large",
-}
+})

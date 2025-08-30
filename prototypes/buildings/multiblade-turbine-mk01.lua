@@ -1,22 +1,22 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "multiblade-turbine-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "small-electric-pole", amount = 6},
-        {type = "item", name = "small-parts-01",      amount = 4},
-        {type = "item", name = "stone-brick",         amount = 20},
-        {type = "item", name = "inductor1",           amount = 18},
-        {type = "item", name = "steel-plate",         amount = 10},
-        {type = "item", name = "fish",                amount = 5},
+        { type = "item", name = "small-electric-pole", amount = 6 },
+        { type = "item", name = "small-parts-01",      amount = 4 },
+        { type = "item", name = "stone-brick",         amount = 20 },
+        { type = "item", name = "inductor1",           amount = 18 },
+        { type = "item", name = "steel-plate",         amount = 10 },
+        { type = "item", name = "fish",                amount = 5 },
     },
     results = {
-        {type = "item", name = "multiblade-turbine-mk01", amount = 1}
+        { type = "item", name = "multiblade-turbine-mk01", amount = 1 }
     }
-}:add_unlock("steel-processing")
+}):add_unlock("steel-processing")
 
-ITEM {
+ITEM({
     type = "item",
     name = "multiblade-turbine-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
@@ -26,23 +26,23 @@ ITEM {
     order = "z",
     place_result = "multiblade-turbine-mk01",
     stack_size = 10
-}
+})
 
-local proto = ENTITY {
+local proto = ENTITY({
     type = "electric-energy-interface",
     name = "multiblade-turbine-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    collision_mask = {layers = {wind_layer = true, object = true, water_tile = true}},
-    minable = {mining_time = 0.5, result = "multiblade-turbine-mk01"},
-    placeable_by = {item = "multiblade-turbine-mk01", count = 1},
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = { layers = { wind_layer = true, object = true, water_tile = true } },
+    minable = { mining_time = 0.5, result = "multiblade-turbine-mk01" },
+    placeable_by = { item = "multiblade-turbine-mk01", count = 1 },
     fast_replaceable_group = "multiblade-turbine-mk01",
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     energy_source = {
         type = "electric",
         usage_priority = "primary-output",
@@ -87,40 +87,40 @@ local proto = ENTITY {
             },
         }
     },
-    localised_name = {"entity-name.multiblade-turbine-mk01"},
-    localised_description = {"entity-description.multiblade-turbine-mk01"}
-}
+    localised_name = { "entity-name.multiblade-turbine-mk01" },
+    localised_description = { "entity-description.multiblade-turbine-mk01" }
+})
 
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
-new_proto.picture = proto.animations.layers[1]
+new_proto.picture = proto.animations.layers[ 1 ]
 new_proto.animations = nil
 new_proto.render_layer = "floor-mechanics"
-data:extend {new_proto}
+data:extend({ new_proto })
 
-data:extend {{
+data:extend({ {
     type = "simple-entity-with-force",
     name = "multiblade-turbine-mk01-collision",
     render_layer = "ground-layer-1",
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "not-on-map"},
-    collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
-    collision_mask = {layers = {wind_layer = true}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    flags = { "placeable-neutral", "player-creation", "not-on-map" },
+    collision_box = { { -13.4, -13.4 }, { 13.4, 13.4 } },
+    collision_mask = { layers = { wind_layer = true } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     selectable_in_game = false,
     picture = util.empty_sprite(),
     created_effect = {
         type = "area",
         radius = 13.4,
-        collision_mask = {layers = {wind_layer = true}},
+        collision_mask = { layers = { wind_layer = true } },
         action_delivery = {
             type = "instant",
-            target_effects = {{
+            target_effects = { {
                 type = "script",
                 effect_id = "turbine-area"
-            }}
+            } }
         }
     }
-}}
+} })

@@ -64,79 +64,79 @@ steb 6b: Pu-sol3 + heat -> PuO2 + offgas
 
 --MOX fuel
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "pu239-uf6",
     category = "centrifuging",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item", name = "pu-239", amount = 8},
-        {type = "item", name = "u-238",  amount = 100},
+        { type = "item", name = "pu-239", amount = 8 },
+        { type = "item", name = "u-238",  amount = 100 },
     },
     results = {
-        {type = "fluid", name = "puo2", amount = 250, temperature = 9999}
+        { type = "fluid", name = "puo2", amount = 250, temperature = 9999 }
     },
     main_product = "puo2",
     subgroup = "py-nuclear",
     order = "g"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "mox-fuel-seperation",
     category = "fluid-separator",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "reactor-waste-2",  amount = 200},
-        {type = "item",  name = "lithium-peroxide", amount = 40},
+        { type = "fluid", name = "reactor-waste-2",  amount = 200 },
+        { type = "item",  name = "lithium-peroxide", amount = 40 },
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt",     amount = 20000, temperature = 5000},
-        {type = "item",  name = "high-energy-waste-2", amount = 80},
-        {type = "fluid", name = "salt-solution",       amount = 800}
+        { type = "fluid", name = "hot-molten-salt",     amount = 20000, temperature = 5000 },
+        { type = "item",  name = "high-energy-waste-2", amount = 80 },
+        { type = "fluid", name = "salt-solution",       amount = 800 }
     },
     main_product = "high-energy-waste-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "waste-mox-disolving",
     category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item",  name = "high-energy-waste-2", amount = 20},
-        {type = "fluid", name = "sulfuric-acid",       amount = 200}
+        { type = "item",  name = "high-energy-waste-2", amount = 20 },
+        { type = "fluid", name = "sulfuric-acid",       amount = 200 }
     },
     results = {
-        {type = "item", name = "plutonium-oxide-mox", amount = 20}
+        { type = "item", name = "plutonium-oxide-mox", amount = 20 }
     },
     main_product = "plutonium-oxide-mox",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "plutonium-seperation-2",
     category = "pa",
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "plutonium-oxide-mox", amount = 50},
+        { type = "item", name = "plutonium-oxide-mox", amount = 50 },
     },
     results = {
-        {type = "item", name = "pu-238", amount = 150, probability = 0.4},
-        {type = "item", name = "pu-239", amount = 50,  probability = 0.2},
-        {type = "item", name = "pu-240", amount = 150, probability = 0.5},
-        {type = "item", name = "pu-241", amount = 80,  probability = 0.05},
-        {type = "item", name = "pu-242", amount = 150, probability = 0.6},
+        { type = "item", name = "pu-238", amount = 150, probability = 0.4 },
+        { type = "item", name = "pu-239", amount = 50,  probability = 0.2 },
+        { type = "item", name = "pu-240", amount = 150, probability = 0.5 },
+        { type = "item", name = "pu-241", amount = 80,  probability = 0.05 },
+        { type = "item", name = "pu-242", amount = 150, probability = 0.6 },
     },
     main_product = "pu-242",
     subgroup = "py-nuclear",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")

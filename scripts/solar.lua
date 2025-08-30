@@ -2,8 +2,8 @@ Solar = {}
 Solar.events = {}
 
 Solar.animated_solarpanels = {
-    ["solar-panel-mk02"] = true,
-    ["solar-panel-mk03"] = true
+    [ "solar-panel-mk02" ] = true,
+    [ "solar-panel-mk03" ] = true
 }
 
 py.on_event(py.events.on_init(), function()
@@ -15,35 +15,35 @@ Solar.sync_solarpanels = function()
     local new = {}
     for k, panel in pairs(storage.unsynced_solarpanels) do
         if not panel.valid then
-            storage.solarpanels[k] = nil
+            storage.solarpanels[ k ] = nil
             return
         end
 
         local surface = panel.surface
         local time = surface.daytime
         if surface.morning <= time and time < (surface.morning + 100 / surface.ticks_per_day) then
-            local new_panel = surface.create_entity {
+            local new_panel = surface.create_entity({
                 name = panel.name,
                 force = panel.force,
                 position = panel.position,
                 player = panel.last_user,
                 create_build_effect_smoke = false
-            }
+            })
             new_panel.operable = false
-            storage.solarpanels[panel.unit_number] = nil
-            storage.solarpanels[new_panel.unit_number] = new_panel
+            storage.solarpanels[ panel.unit_number ] = nil
+            storage.solarpanels[ new_panel.unit_number ] = new_panel
             panel.destroy()
         else
-            new[panel.unit_number] = panel
+            new[ panel.unit_number ] = panel
         end
     end
     storage.unsynced_solarpanels = new
 end
 
-Solar.events[100] = function()
+Solar.events[ 100 ] = function()
     for k, panel in pairs(storage.solarpanels) do
         if not panel.valid then
-            storage.solarpanels[k] = nil
+            storage.solarpanels[ k ] = nil
             return
         end
 
@@ -56,7 +56,7 @@ Solar.events[100] = function()
             panel.active = false
             panel.custom_status = {
                 diode = defines.entity_status_diode.red,
-                label = {(panel.name == "anti-solar") and "entity-status.requires-moonlight" or "entity-status.requires-sunlight"}
+                label = { (panel.name == "anti-solar") and "entity-status.requires-moonlight" or "entity-status.requires-sunlight" }
             }
         else
             panel.power_production = panel.prototype.get_max_energy_production() * daylight * panel.surface.solar_power_multiplier
@@ -73,15 +73,15 @@ end
 
 Solar.events.on_built = function(event)
     local entity = event.entity
-    if not Solar.animated_solarpanels[entity.name] then return end
-    storage.solarpanels[entity.unit_number] = entity
-    storage.unsynced_solarpanels[entity.unit_number] = entity
+    if not Solar.animated_solarpanels[ entity.name ] then return end
+    storage.solarpanels[ entity.unit_number ] = entity
+    storage.unsynced_solarpanels[ entity.unit_number ] = entity
     entity.operable = false
 end
 
 Solar.events.on_destroyed = function(event)
     local entity = event.entity
-    if not Solar.animated_solarpanels[entity.name] then return end
-    storage.solarpanels[entity.unit_number] = nil
-    storage.unsynced_solarpanels[entity.unit_number] = nil
+    if not Solar.animated_solarpanels[ entity.name ] then return end
+    storage.solarpanels[ entity.unit_number ] = nil
+    storage.unsynced_solarpanels[ entity.unit_number ] = nil
 end

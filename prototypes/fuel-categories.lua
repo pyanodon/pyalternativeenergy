@@ -1,5 +1,5 @@
 data:extend
-{
+({
     {
         type = "fuel-category",
         name = "control-rod"
@@ -12,4 +12,4 @@ data:extend
         type = "fuel-category",
         name = "nuke"
     }
-}
+})

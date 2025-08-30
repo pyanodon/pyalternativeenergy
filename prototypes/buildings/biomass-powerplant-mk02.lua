@@ -1,28 +1,28 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-biomass-powerplant-mk02",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "py-biomass-powerplant-mk01", amount = 1},
-        {type = "item", name = "nexelit-plate",              amount = 300},
-        {type = "item", name = "advanced-circuit",           amount = 100},
-        {type = "item", name = "aluminium-plate",            amount = 100},
-        {type = "item", name = "neuroprocessor",             amount = 20},
-        {type = "item", name = "small-parts-02",             amount = 150},
-        {type = "item", name = "niobium-pipe",               amount = 50},
-        {type = "item", name = "engine-unit",                amount = 20},
-        {type = "item", name = "eva",                        amount = 50},
-        {type = "item", name = "stainless-steel",            amount = 100},
-        {type = "item", name = "self-assembly-monolayer",    amount = 40},
-        {type = "item", name = "mechanical-parts-02",        amount = 5},
+        { type = "item", name = "py-biomass-powerplant-mk01", amount = 1 },
+        { type = "item", name = "nexelit-plate",              amount = 300 },
+        { type = "item", name = "advanced-circuit",           amount = 100 },
+        { type = "item", name = "aluminium-plate",            amount = 100 },
+        { type = "item", name = "neuroprocessor",             amount = 20 },
+        { type = "item", name = "small-parts-02",             amount = 150 },
+        { type = "item", name = "niobium-pipe",               amount = 50 },
+        { type = "item", name = "engine-unit",                amount = 20 },
+        { type = "item", name = "eva",                        amount = 50 },
+        { type = "item", name = "stainless-steel",            amount = 100 },
+        { type = "item", name = "self-assembly-monolayer",    amount = 40 },
+        { type = "item", name = "mechanical-parts-02",        amount = 5 },
     },
     results = {
-        {type = "item", name = "py-biomass-powerplant-mk02", amount = 1}
+        { type = "item", name = "py-biomass-powerplant-mk02", amount = 1 }
     }
-}:add_unlock("biomassplant-mk02")
+}):add_unlock("biomassplant-mk02")
 
-ITEM {
+ITEM({
     type = "item",
     name = "py-biomass-powerplant-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/biomass-powerplant-mk02.png",
@@ -32,36 +32,36 @@ ITEM {
     order = "a",
     place_result = "py-biomass-powerplant-mk02",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "py-biomass-powerplant-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/biomass-powerplant-mk02.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "py-biomass-powerplant-mk02"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.1, result = "py-biomass-powerplant-mk02" },
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
-    selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
+    collision_box = { { -7.3, -7.3 }, { 7.3, 7.3 } },
+    selection_box = { { -7.5, -7.5 }, { 7.5, 7.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 2,
-    allowed_effects = {"consumption", "speed", "pollution"},
-    crafting_categories = {"biomass-powerplant-mk02"},
+    allowed_effects = { "consumption", "speed", "pollution" },
+    crafting_categories = { "biomass-powerplant-mk02" },
     crafting_speed = 2,
     energy_source =
     {
         type = "burner",
-        fuel_categories = {"biomass"},
+        fuel_categories = { "biomass" },
         effectivity = 1,
         light_flicker =
         {
             minimum_intensity = 0,
             maximum_intensity = 0,
             light_intensity_to_size_coefficient = 0,
-            color = {0, 0, 0},
+            color = { 0, 0, 0 },
         },
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
@@ -80,7 +80,7 @@ ENTITY {
                 slow_down_factor = 1,
                 starting_vertical_speed = 0.09,
                 starting_frame_deviation = 60,
-                color = {r = 0.2, g = 0.2, b = 0.2},
+                color = { r = 0.2, g = 0.2, b = 0.2 },
             },
         }
     },
@@ -156,7 +156,7 @@ ENTITY {
                     frame_count = 1,
                     repeat_count = 50,
                     animation_speed = 1 / 2,
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 },
                     shift = util.by_pixel(0, -80),
                 },
                 {
@@ -197,45 +197,45 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-3.0, 7.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { -3.0, 7.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {3.0, 7.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { 3.0, 7.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {0.0, -7.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { 0.0, -7.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {3.0, -7.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { 3.0, -7.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-3.0, -7.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { -3.0, -7.0 }, direction = defines.direction.north } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/biomass-powerplant.ogg", volume = 0.70},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/biomass-powerplant.ogg", volume = 0.1},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/biomass-powerplant.ogg", volume = 0.70 },
+        idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/biomass-powerplant.ogg", volume = 0.1 },
         apparent_volume = 0.45
     },
     fast_replaceable_group = "biomass-power"
-}
+})

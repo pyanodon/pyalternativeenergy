@@ -1,20 +1,20 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "nexelit-power-pole",
     energy_required = 1,
     category = "crafting",
     enabled = false,
     ingredients = {
-        {type = "item", name = "refined-concrete", amount = 5},
-        {type = "item", name = "stainless-steel",  amount = 1},
-        {type = "item", name = "nexelit-plate",    amount = 3},
+        { type = "item", name = "refined-concrete", amount = 5 },
+        { type = "item", name = "stainless-steel",  amount = 1 },
+        { type = "item", name = "nexelit-plate",    amount = 3 },
     },
     results = {
-        {type = "item", name = "nexelit-power-pole", amount = 1},
+        { type = "item", name = "nexelit-power-pole", amount = 1 },
     }
-}:add_unlock("electric-energy-distribution-3")
+}):add_unlock("electric-energy-distribution-3")
 
-ITEM {
+ITEM({
     type = "item",
     name = "nexelit-power-pole",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nexelit-power-pole.png",
@@ -24,15 +24,15 @@ ITEM {
     order = "b",
     place_result = "nexelit-power-pole",
     stack_size = 50
-}
+})
 
-ENTITY {
+ENTITY({
     type = "electric-pole",
     name = "nexelit-power-pole",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nexelit-power-pole.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "nexelit-power-pole"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.1, result = "nexelit-power-pole" },
     max_health = 100,
     corpse = "medium-electric-pole-remnants",
     dying_explosion = "medium-electric-pole-explosion",
@@ -49,8 +49,8 @@ ENTITY {
             percent = 100
         },
     },
-    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    collision_box = { { -0.15, -0.15 }, { 0.15, 0.15 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     --damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2},{0.2, 0.2}}),
     drawing_box_vertical_extension = 1.8,
     maximum_wire_distance = 18,
@@ -173,4 +173,4 @@ ENTITY {
         rotate = false,
         orientation_to_variation = false
     }
-}
+})

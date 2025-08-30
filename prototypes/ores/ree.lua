@@ -1,44 +1,44 @@
-local resource_autoplace = require "resource-autoplace"
+local resource_autoplace = require("resource-autoplace")
 
-data.raw.planet.nauvis.map_gen_settings.autoplace_controls["ree"] = {}
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["ree"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls[ "ree" ] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings[ "ree" ] = {}
 
-data:extend {{
+data:extend({ {
     type = "autoplace-control",
     category = "resource",
     name = "ree",
     richness = true,
     order = "p"
-}}
+} })
 
 -- data:extend{{
 --     type = "noise-layer",
 --     name = "ree"
 -- }}
 
-ENTITY {
+ENTITY({
     type = "resource",
     name = "ree",
     category = "ree", --maybe here
     icon = "__pyhightechgraphics__/graphics/icons/mip/re-01.png",
     icon_size = 64,
-    flags = {"placeable-neutral"},
+    flags = { "placeable-neutral" },
     order = "a-b-a",
-    map_color = {r = 0.356, g = 0.305, b = 0.274},
+    map_color = { r = 0.356, g = 0.305, b = 0.274 },
     minable = {
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = "item", name = "rare-earth-ore", amount = 1}
+            { type = "item", name = "rare-earth-ore", amount = 1 }
         },
         fluid_amount = 100,
         required_fluid = "naphtha"
     },
-    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     tree_removal_probability = 0.7,
     tree_removal_max_distance = 32 * 32,
-    autoplace = resource_autoplace.resource_autoplace_settings {
+    autoplace = resource_autoplace.resource_autoplace_settings({
         name = "ree",
         order = "b",
         base_density = 10,
@@ -49,8 +49,8 @@ ENTITY {
         regular_rq_factor_multiplier = 1,
         starting_rq_factor_multiplier = 2,
         candidate_spot_count = 20
-    },
-    stage_counts = {20000, 13000, 10000, 5000, 3000, 1000, 500, 100},
+    }),
+    stage_counts = { 20000, 13000, 10000, 5000, 3000, 1000, 500, 100 },
     stages = {
         sheet = {
             filename = "__pyalternativeenergygraphics__/graphics/ore/ree/ree.png",
@@ -62,4 +62,4 @@ ENTITY {
             scale = 0.5
         }
     }
-}
+})

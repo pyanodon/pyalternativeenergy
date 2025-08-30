@@ -1,6 +1,6 @@
 --NUCLEAR ITEMS
 
-ITEM {
+ITEM({
     type = "item",
     name = "control-rod",
     icon = "__pyalternativeenergygraphics__/graphics/icons/control-rod.png",
@@ -33,9 +33,9 @@ ITEM {
     fuel_category = "control-rod",
     fuel_value = "10MJ",
     burnt_result = "used-control-rod"
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "used-control-rod",
     icon = "__pyalternativeenergygraphics__/graphics/icons/used-control-rod.png",
@@ -44,9 +44,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "high-energy-waste-1",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-1.png",
@@ -55,9 +55,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "high-energy-waste-2",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-2.png",
@@ -66,9 +66,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "thorium-232",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-232.png",
@@ -77,9 +77,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "th-233",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-233.png",
@@ -88,9 +88,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pa-233",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pa-233.png",
@@ -99,9 +99,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "uranium-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/uranium-oxide.png",
@@ -110,9 +110,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-232",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-232.png",
@@ -121,9 +121,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-233",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-233.png",
@@ -132,9 +132,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-234",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-234.png",
@@ -143,9 +143,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-235",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-235.png",
@@ -154,9 +154,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-236",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-236.png",
@@ -165,9 +165,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-237",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-237.png",
@@ -176,9 +176,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-238",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-238.png",
@@ -187,9 +187,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-239",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-239.png",
@@ -198,9 +198,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "u-240",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-240.png",
@@ -209,9 +209,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "plutonium-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/plutonium-oxide.png",
@@ -220,9 +220,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "plutonium-oxide-mox",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/plutonium-oxide-mox.png",
@@ -231,9 +231,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pu-238",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-238.png",
@@ -242,9 +242,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pu-239",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-239.png",
@@ -253,9 +253,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pu-240",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
@@ -264,9 +264,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pu-241",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-241.png",
@@ -275,9 +275,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pu-242",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-242.png",
@@ -286,9 +286,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "americium-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/americium-oxide.png",
@@ -297,9 +297,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "am-241",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/am-241.png",
@@ -308,9 +308,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "am-243",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/am-243.png",
@@ -319,9 +319,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cm-250",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/cm-250.png",
@@ -330,9 +330,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "po-210",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/po-210.png",
@@ -341,9 +341,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "vitrified-glass",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/vitrified-glass.png",
@@ -354,9 +354,9 @@ ITEM {
     stack_size = 100,
     weight = tons / 500,
     send_to_orbit_mode = "automated",
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-hpo-pu",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/sb-hpo-pu.png",
@@ -365,9 +365,9 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-chloride",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sb-chloride.png",
@@ -376,11 +376,11 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 100
-}
+})
 
 --ANTIMONY
 
-ITEM {
+ITEM({
     type = "item",
     name = "antimonium-ore",
     icon = "__pyalternativeenergygraphics__/graphics/icons/antimonium-ore.png",
@@ -389,9 +389,9 @@ ITEM {
     subgroup = "py-rawores-antimony",
     order = "aaa",
     stack_size = 50
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-grade-01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/grade-1-sb.png",
@@ -400,9 +400,9 @@ ITEM {
     subgroup = "py-rawores-antimony",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-grade-02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/grade-2-sb.png",
@@ -411,9 +411,9 @@ ITEM {
     subgroup = "py-rawores-antimony",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-grade-03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/grade-3-sb.png",
@@ -422,9 +422,9 @@ ITEM {
     subgroup = "py-rawores-antimony",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-grade-04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/grade-4-sb.png",
@@ -433,9 +433,9 @@ ITEM {
     subgroup = "py-rawores-antimony",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-crushed",
     icon = "__pyalternativeenergygraphics__/graphics/icons/crushed-sb.png",
@@ -444,9 +444,9 @@ ITEM {
     subgroup = "py-rawores-antimony",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-dust",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sb-dust.png",
@@ -455,9 +455,9 @@ ITEM {
     subgroup = "py-rawores-antimony",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "lead-acetate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lead-acetate.png",
@@ -466,9 +466,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "yellow-dextrine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/yellow-dextrine.png",
@@ -477,9 +477,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sodium-cyanate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sodium-cyanate.png",
@@ -488,9 +488,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "high-purified-sb",
     icon = "__pyalternativeenergygraphics__/graphics/icons/high-purified-sb.png",
@@ -499,9 +499,9 @@ ITEM {
     subgroup = "py-rawores-antimony",
     order = "aac",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sb-oxide.png",
@@ -510,11 +510,11 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aaz",
     stack_size = 100
-}
+})
 
 --THORIUM
 
-ITEM {
+ITEM({
     type = "item",
     name = "re-precipitate-01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/re-precipitate-01.png",
@@ -523,9 +523,9 @@ ITEM {
     subgroup = "py-hightech-items",
     order = "cd",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "re-precipitate-02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/re-precipitate-02.png",
@@ -534,9 +534,9 @@ ITEM {
     subgroup = "py-hightech-items",
     order = "cd",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "th-dust",
     icon = "__pyalternativeenergygraphics__/graphics/icons/th-dust.png",
@@ -545,9 +545,9 @@ ITEM {
     subgroup = "py-rawores-thorium",
     order = "aa",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "th-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/th-oxide.png",
@@ -556,11 +556,11 @@ ITEM {
     subgroup = "py-rawores-thorium",
     order = "ab",
     stack_size = 100
-}
+})
 
 --GADOLINIUM
 
-ITEM {
+ITEM({
     type = "item",
     name = "gd-oxalate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gd-oxalate.png",
@@ -569,9 +569,9 @@ ITEM {
     subgroup = "py-rawores-gd",
     order = "aa",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "gd-mixture",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gd-mixture.png",
@@ -580,9 +580,9 @@ ITEM {
     subgroup = "py-rawores-gd",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "crystalized-gd",
     icon = "__pyalternativeenergygraphics__/graphics/icons/crystalized-gd.png",
@@ -591,9 +591,9 @@ ITEM {
     subgroup = "py-rawores-gd",
     order = "ac",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "impure-gd",
     icon = "__pyalternativeenergygraphics__/graphics/icons/impure-gd.png",
@@ -602,9 +602,9 @@ ITEM {
     subgroup = "py-rawores-gd",
     order = "ad",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "gd-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gd-oxide.png",
@@ -613,9 +613,9 @@ ITEM {
     subgroup = "py-rawores-gd",
     order = "ae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "gd-crystal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gd-crystal.png",
@@ -624,9 +624,9 @@ ITEM {
     subgroup = "py-rawores-gd",
     order = "af",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "gd-metal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gd-metal.png",
@@ -635,11 +635,11 @@ ITEM {
     subgroup = "py-rawores-gd",
     order = "ag",
     stack_size = 100
-}
+})
 
 --ETC
 
-ITEM {
+ITEM({
     type = "item",
     name = "ammonium-oxalate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ammonium-oxalate.png",
@@ -648,9 +648,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "oxalic-acid",
     icon = "__pyalternativeenergygraphics__/graphics/icons/oxalic-acid.png",
@@ -659,9 +659,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "lithium",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-plate.png",
@@ -670,9 +670,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "eg-si",
     icon = "__pyalternativeenergygraphics__/graphics/icons/eg-si.png",
@@ -681,9 +681,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "polycrystalline-slab",
     icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-slab.png",
@@ -692,9 +692,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "polycrystalline-plate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-plate.png",
@@ -703,9 +703,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "crucible",
     icon = "__pyalternativeenergygraphics__/graphics/icons/crucible.png",
@@ -714,9 +714,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "diamond-wire",
     icon = "__pyalternativeenergygraphics__/graphics/icons/diamond-wire.png",
@@ -725,9 +725,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "anti-reflex-glass",
     icon = "__pyalternativeenergygraphics__/graphics/icons/anti-reflex-glass.png",
@@ -736,9 +736,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "polycrystalline-cell",
     icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-cell.png",
@@ -747,9 +747,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "alag-alloy",
     icon = "__pyalternativeenergygraphics__/graphics/icons/alag-alloy.png",
@@ -758,9 +758,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "passivation-layer",
     icon = "__pyalternativeenergygraphics__/graphics/icons/passivation-layer.png",
@@ -769,9 +769,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "quartz-crucible",
     icon = "__pyalternativeenergygraphics__/graphics/icons/quartz-crucible.png",
@@ -780,9 +780,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "eva",
     icon = "__pyalternativeenergygraphics__/graphics/icons/eva.png",
@@ -791,9 +791,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "monocrystalline-slab",
     icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-slab.png",
@@ -802,9 +802,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "monocrystalline-plate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-plate.png",
@@ -813,9 +813,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "monocrystalline-cell",
     icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-cell.png",
@@ -824,13 +824,13 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-data.raw["battery-equipment"]["battery-equipment"].take_result = "battery-mk01"
-data.raw["battery-equipment"]["battery-equipment"].localised_name = {"item-name.battery-mk01"}
-data.raw["battery-equipment"]["battery-equipment"].energy_source.buffer_capacity = "50MJ"
+data.raw[ "battery-equipment" ][ "battery-equipment" ].take_result = "battery-mk01"
+data.raw[ "battery-equipment" ][ "battery-equipment" ].localised_name = { "item-name.battery-mk01" }
+data.raw[ "battery-equipment" ][ "battery-equipment" ].energy_source.buffer_capacity = "50MJ"
 
-ITEM {
+ITEM({
     type = "item",
     name = "battery-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk01.png",
@@ -840,9 +840,9 @@ ITEM {
     order = "a",
     stack_size = 100,
     place_as_equipment_result = "battery-equipment",
-    localised_name = {"item-name.battery-mk01"},
-    localised_description = {"item-description.battery-mk01"}
-}
+    localised_name = { "item-name.battery-mk01" },
+    localised_description = { "item-description.battery-mk01" }
+})
 
 --[[data:extend{{
     type = 'battery-equipment',
@@ -862,7 +862,7 @@ ITEM {
     localised_name = {'item-name.battery-mk00'},
 }}--]]
 
-ITEM {
+ITEM({
     type = "item",
     name = "battery-mk00",
     icon = "__pyalternativeenergygraphics__/graphics/icons/battery-mk00.png",
@@ -872,11 +872,11 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100,
-    localised_name = {"item-name.battery-mk00"},
+    localised_name = { "item-name.battery-mk00" },
     --place_as_equipment_result = 'battery-mk00'
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "flo",
     icon = "__pyalternativeenergygraphics__/graphics/icons/flo.png",
@@ -885,9 +885,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "lfo",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lfo.png",
@@ -896,9 +896,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "dbr",
     icon = "__pyalternativeenergygraphics__/graphics/icons/dbr.png",
@@ -907,9 +907,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "micro-cavity-core",
     icon = "__pyalternativeenergygraphics__/graphics/icons/micro-cavity-core.png",
@@ -918,12 +918,12 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-data:extend {{
+data:extend({ {
     type = "battery-equipment",
-    categories = {"armor"},
-    shape = {width = 2, height = 2, type = "full"},
+    categories = { "armor" },
+    shape = { width = 2, height = 2, type = "full" },
     name = "quantum-battery",
     sprite = {
         width = 64,
@@ -935,12 +935,12 @@ data:extend {{
         buffer_capacity = "2GJ",
         usage_priority = "tertiary"
     },
-    localised_name = {"item-name.quantum-battery"},
-    localised_description = {"item-description.used-quantum-battery"},
+    localised_name = { "item-name.quantum-battery" },
+    localised_description = { "item-description.used-quantum-battery" },
     take_result = "used-quantum-battery"
-}}
+} })
 
-ITEM {
+ITEM({
     type = "item",
     name = "quantum-battery",
     icon = "__pyalternativeenergygraphics__/graphics/icons/quantum-battery.png",
@@ -954,9 +954,9 @@ ITEM {
     subgroup = "py-battery-equipment",
     order = "d",
     stack_size = 10,
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "used-quantum-battery",
     icon = "__pyalternativeenergygraphics__/graphics/icons/used-quantum-battery.png",
@@ -966,10 +966,10 @@ ITEM {
     order = "db",
     stack_size = 10,
     place_as_equipment_result = "quantum-battery",
-    localised_name = {"item-name.used-quantum-battery"},
-}
+    localised_name = { "item-name.used-quantum-battery" },
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "1d-photonic-crystal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/1d-photonic-crystal.png",
@@ -978,9 +978,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "nxsb-alloy",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nxsb-alloy.png",
@@ -989,9 +989,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "fenxsb-alloy",
     icon = "__pyalternativeenergygraphics__/graphics/icons/fenxsb.png",
@@ -1000,9 +1000,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-1",
     order = "aa",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "vitreloy",
     icon = "__pyalternativeenergygraphics__/graphics/icons/vitreloy.png",
@@ -1011,9 +1011,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-1",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "intermetallics",
     icon = "__pyalternativeenergygraphics__/graphics/icons/intermetallics.png",
@@ -1022,9 +1022,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-1",
     order = "az",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ptcda",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ptcda.png",
@@ -1033,9 +1033,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-1",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "self-assembly-monolayer",
     icon = "__pyalternativeenergygraphics__/graphics/icons/self-assembly-monolayer.png",
@@ -1044,9 +1044,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-1",
     order = "bz",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "nbalti",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nbalti.png",
@@ -1055,9 +1055,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-1",
     order = "bb",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "crmoni",
     icon = "__pyalternativeenergygraphics__/graphics/icons/crmoni.png",
@@ -1066,9 +1066,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-1",
     order = "bc",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "citric-acid",
     icon = "__pyalternativeenergygraphics__/graphics/icons/citric-acid.png",
@@ -1077,9 +1077,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sodium-citrate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sodium-citrate.png",
@@ -1088,9 +1088,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cb",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "metallic-core",
     icon = "__pyalternativeenergygraphics__/graphics/icons/metallic-core.png",
@@ -1099,9 +1099,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cc",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "silica-shell",
     icon = "__pyalternativeenergygraphics__/graphics/icons/silica-shell.png",
@@ -1110,9 +1110,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cd",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "plasmonic-core",
     icon = "__pyalternativeenergygraphics__/graphics/icons/plasmonic-core.png",
@@ -1121,9 +1121,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "ce",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "diethylaniline",
     icon = "__pyalternativeenergygraphics__/graphics/icons/diethylaniline.png",
@@ -1132,9 +1132,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cf",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "3-diethylaminophenol",
     icon = "__pyalternativeenergygraphics__/graphics/icons/3-diethylaminophenol.png",
@@ -1143,9 +1143,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cg",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "phthalic-anhydride",
     icon = "__pyalternativeenergygraphics__/graphics/icons/phthalic-anhydride.png",
@@ -1154,9 +1154,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "ch",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "rhodamine-b",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rhodamine-b.png",
@@ -1165,9 +1165,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "ci",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "fluorophore",
     icon = "__pyalternativeenergygraphics__/graphics/icons/fluorophore.png",
@@ -1176,9 +1176,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cj",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "lithium-niobate-nano",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-niobate-nano.png",
@@ -1187,9 +1187,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "ck",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "dieletric-layer",
     icon = "__pyalternativeenergygraphics__/graphics/icons/dieletric-layer.png",
@@ -1198,9 +1198,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cl",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "core-shell",
     icon = "__pyalternativeenergygraphics__/graphics/icons/core-shell.png",
@@ -1209,9 +1209,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cy",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ns-material",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ns-material.png",
@@ -1220,9 +1220,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-2",
     order = "cz",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "metastable-quasicrystal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/metastable-quasicrystal.png",
@@ -1231,9 +1231,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-3",
     order = "az",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "time-crystal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/time-crystal.png",
@@ -1242,9 +1242,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-3",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "quasicrystal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/quasicrystal.png",
@@ -1253,9 +1253,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-3",
     order = "ac",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "photon-deposited-quartz",
     icon = "__pyalternativeenergygraphics__/graphics/icons/photon-deposited-quartz.png",
@@ -1264,9 +1264,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-3",
     order = "aa",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mositial-nx",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mositial-nx.png",
@@ -1275,9 +1275,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-1",
     order = "z",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pbsb-alloy",
     icon = "__pyalternativeenergygraphics__/graphics/icons/pbsb-alloy.png",
@@ -1286,9 +1286,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "nxzngd",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nxzngd.png",
@@ -1297,9 +1297,9 @@ ITEM {
     subgroup = "py-alternativeenergy-intermetallics-3",
     order = "y",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "fdtd",
     icon = "__pyalternativeenergygraphics__/graphics/icons/fdtd.png",
@@ -1308,9 +1308,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "fbg",
     icon = "__pyalternativeenergygraphics__/graphics/icons/fbg.png",
@@ -1319,9 +1319,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "dieletric-mirror",
     icon = "__pyalternativeenergygraphics__/graphics/icons/dieletric-mirror.png",
@@ -1330,9 +1330,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "animal-reflectors",
     icon = "__pyalternativeenergygraphics__/graphics/icons/animal-reflectors.png",
@@ -1341,9 +1341,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "inverse-opal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/inverse-opal.png",
@@ -1352,9 +1352,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "photonic-crystal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/photonic-crystal.png",
@@ -1363,9 +1363,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "hardener",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hardener.png",
@@ -1374,9 +1374,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "glycidylamine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/glycidylamine.png",
@@ -1385,9 +1385,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "photonic-chip",
     icon = "__pyalternativeenergygraphics__/graphics/icons/photonic-chip.png",
@@ -1396,9 +1396,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "gaas",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gaas.png",
@@ -1407,9 +1407,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ti-n",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ti-n.png",
@@ -1418,32 +1418,32 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "animal-eye",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mips/e1.png",
     icon_size = 64,
 
     pictures = {
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e1.png", scale = 0.66},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e2.png", scale = 0.66},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e3.png", scale = 0.66},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e4.png", scale = 0.66},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e5.png", scale = 0.66},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e6.png", scale = 0.66},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e7.png", scale = 0.66},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e8.png", scale = 0.66},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e9.png", scale = 0.66},
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e1.png", scale = 0.66 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e2.png", scale = 0.66 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e3.png", scale = 0.66 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e4.png", scale = 0.66 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e5.png", scale = 0.66 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e6.png", scale = 0.66 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e7.png", scale = 0.66 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e8.png", scale = 0.66 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e9.png", scale = 0.66 },
     },
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "aaa",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ingap",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ingap.png",
@@ -1452,9 +1452,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ingaas",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ingaas.png",
@@ -1463,9 +1463,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "arsenic",
     icon = "__pyalternativeenergygraphics__/graphics/icons/arsenic.png",
@@ -1474,9 +1474,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mqdc",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mqdc.png",
@@ -1485,9 +1485,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "crude-top-layer",
     icon = "__pyalternativeenergygraphics__/graphics/icons/crude-top-layer.png",
@@ -1496,9 +1496,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "tio2",
     icon = "__pyalternativeenergygraphics__/graphics/icons/tio2.png",
@@ -1507,9 +1507,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "transparent-anode",
     icon = "__pyalternativeenergygraphics__/graphics/icons/transparent-anode.png",
@@ -1518,9 +1518,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "triphenylanime",
     icon = "__pyalternativeenergygraphics__/graphics/icons/triphenylanime.png",
@@ -1529,9 +1529,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "bt",
     icon = "__pyalternativeenergygraphics__/graphics/icons/bt.png",
@@ -1540,9 +1540,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cyanoacetate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/cyanoacetate.png",
@@ -1551,9 +1551,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cyanoacrylate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/cyanoacrylate.png",
@@ -1562,9 +1562,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "photosensitive-dye",
     icon = "__pyalternativeenergygraphics__/graphics/icons/photosensitive-dye.png",
@@ -1573,9 +1573,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "conductive-sheet",
     icon = "__pyalternativeenergygraphics__/graphics/icons/conductive-sheet.png",
@@ -1584,9 +1584,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "czts-slab",
     icon = "__pyalternativeenergygraphics__/graphics/icons/czts-slab.png",
@@ -1595,9 +1595,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "czts-plate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/czts-plate.png",
@@ -1606,9 +1606,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "dsnc-cell",
     icon = "__pyalternativeenergygraphics__/graphics/icons/dsnc-cell.png",
@@ -1617,9 +1617,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "aae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mqdc",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mqdc.png",
@@ -1628,9 +1628,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ingap",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ingap.png",
@@ -1639,9 +1639,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ingaas",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ingaas.png",
@@ -1650,9 +1650,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "arsenic",
     icon = "__pyalternativeenergygraphics__/graphics/icons/arsenic.png",
@@ -1661,9 +1661,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "alag-grid",
     icon = "__pyalternativeenergygraphics__/graphics/icons/alag-grid.png",
@@ -1672,9 +1672,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "quantum-well",
     icon = "__pyalternativeenergygraphics__/graphics/icons/quantum-well.png",
@@ -1683,9 +1683,9 @@ ITEM {
     subgroup = "py-hightech-quantum",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "microwave-satellite",
     icon = "__pyalternativeenergygraphics__/graphics/icons/microwave-satellite.png",
@@ -1696,9 +1696,9 @@ ITEM {
     stack_size = 1,
     weight = 200e3,
     send_to_orbit_mode = "automated"
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "dodecanoic-acid",
     icon = "__pyalternativeenergygraphics__/graphics/icons/dodecanoic-acid.png",
@@ -1707,9 +1707,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "dodecylamine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/dda.png",
@@ -1718,9 +1718,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "iron-nanoparticles",
     icon = "__pyalternativeenergygraphics__/graphics/icons/iron-nanoparticles.png",
@@ -1729,9 +1729,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "milfe",
     icon = "__pyalternativeenergygraphics__/graphics/icons/milfe.png",
@@ -1740,9 +1740,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "nanocarrier",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nanocarrier.png",
@@ -1751,9 +1751,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "tbp",
     icon = "__pyalternativeenergygraphics__/graphics/icons/tbp.png",
@@ -1762,9 +1762,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sb-silicate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sb-silicate.png",
@@ -1773,9 +1773,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pyridine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/pyridine.png",
@@ -1784,7 +1784,7 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
 -- ITEM {
 --     type = "item",
@@ -1797,7 +1797,7 @@ ITEM {
 --     stack_size = 100
 -- }
 
-ITEM {
+ITEM({
     type = "item",
     name = "lithium-hydroxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-hydroxide.png",
@@ -1806,9 +1806,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "lithium-carbonate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-carbonate.png",
@@ -1817,9 +1817,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "acetaldehyde",
     icon = "__pyalternativeenergygraphics__/graphics/icons/acetaldehyde.png",
@@ -1828,9 +1828,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "acrylonitrile",
     icon = "__pyalternativeenergygraphics__/graphics/icons/acrylonitrile.png",
@@ -1839,9 +1839,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pan",
     icon = "__pyalternativeenergygraphics__/graphics/icons/pan.png",
@@ -1850,9 +1850,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "oxidized-pan-fiber",
     icon = "__pyalternativeenergygraphics__/graphics/icons/oxidized-pan-fiber.png",
@@ -1861,9 +1861,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pre-carbon-fiber",
     icon = "__pyalternativeenergygraphics__/graphics/icons/pre-cf.png",
@@ -1872,9 +1872,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cf1",
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf1.png",
@@ -1883,9 +1883,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cf2",
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf2.png",
@@ -1894,9 +1894,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "dry-cf",
     icon = "__pyalternativeenergygraphics__/graphics/icons/dry-cf.png",
@@ -1905,9 +1905,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cf",
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf.png",
@@ -1916,9 +1916,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ba",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "rotor",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rotor.png",
@@ -1927,9 +1927,9 @@ ITEM {
     subgroup = "py-alternativeenergy-engine-units",
     order = "i[electric-engine-unit]",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "stator",
     icon = "__pyalternativeenergygraphics__/graphics/icons/stator.png",
@@ -1938,9 +1938,9 @@ ITEM {
     subgroup = "py-alternativeenergy-engine-units",
     order = "i[electric-engine-unit]",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "erbium",
     icon = "__pyalternativeenergygraphics__/graphics/icons/erbium.png",
@@ -1949,9 +1949,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ernico",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ernico.png",
@@ -1960,9 +1960,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "er-oxalate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/er-oxalate.png",
@@ -1971,9 +1971,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "er-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/er-oxide.png",
@@ -1982,9 +1982,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "impure-er-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/impure-er-oxide.png",
@@ -1993,9 +1993,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "fan",
     icon = "__pyalternativeenergygraphics__/graphics/icons/fan.png",
@@ -2004,9 +2004,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "hts-coil",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hts-coil.png",
@@ -2015,9 +2015,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "magnetic-ring",
     icon = "__pyalternativeenergygraphics__/graphics/icons/magnetic-ring.png",
@@ -2026,9 +2026,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "rotor-m",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rotor-m.png",
@@ -2037,9 +2037,9 @@ ITEM {
     subgroup = "py-alternativeenergy-engine-units",
     order = "j[electric-engine-unit]",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sc-engine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sc-engine.png",
@@ -2048,9 +2048,9 @@ ITEM {
     subgroup = "py-alternativeenergy-engine-units",
     order = "j[electric-engine-unit]",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "sc-stator",
     icon = "__pyalternativeenergygraphics__/graphics/icons/sc-stator.png",
@@ -2059,9 +2059,9 @@ ITEM {
     subgroup = "py-alternativeenergy-engine-units",
     order = "j[electric-engine-unit]",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ybco-monocrystal",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ybco-monocrystal.png",
@@ -2070,9 +2070,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "air-duct",
     icon = "__pyalternativeenergygraphics__/graphics/icons/air-duct.png",
@@ -2081,9 +2081,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cryostat",
     icon = "__pyalternativeenergygraphics__/graphics/icons/cryostat.png",
@@ -2092,9 +2092,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cryocooler",
     icon = "__pyalternativeenergygraphics__/graphics/icons/cryocooler.png",
@@ -2103,9 +2103,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "libr",
     icon = "__pyalternativeenergygraphics__/graphics/icons/libr.png",
@@ -2114,9 +2114,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "hfip",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hfip.png",
@@ -2125,9 +2125,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "guhcl",
     icon = "__pyalternativeenergygraphics__/graphics/icons/guhcl.png",
@@ -2136,9 +2136,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "rpc-mesh",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rpc-mesh.png",
@@ -2147,9 +2147,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "nano-mesh",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nano-mesh.png",
@@ -2158,9 +2158,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "crude-salt",
     icon = "__pyalternativeenergygraphics__/graphics/icons/crude-salt.png",
@@ -2169,9 +2169,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "hbr",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hbr.png",
@@ -2180,9 +2180,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ammonium-mixture",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ammonium-mixture.png",
@@ -2191,9 +2191,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "hexafluoroacetone",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hexafluoroacetone.png",
@@ -2202,9 +2202,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "triethoxysilane",
     icon = "__pyalternativeenergygraphics__/graphics/icons/triethoxysilane.png",
@@ -2213,9 +2213,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "phenothiazine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/phenothiazine.png",
@@ -2224,9 +2224,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "neodymium-nitrate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/neodymium-nitrate.png",
@@ -2235,9 +2235,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "nickel-nitrate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nickel-nitrate.png",
@@ -2246,9 +2246,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "pvp",
     icon = "__pyalternativeenergygraphics__/graphics/icons/pvp.png",
@@ -2257,9 +2257,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "gbl",
     icon = "__pyalternativeenergygraphics__/graphics/icons/gbl.png",
@@ -2268,9 +2268,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "butynediol",
     icon = "__pyalternativeenergygraphics__/graphics/icons/butynediol.png",
@@ -2279,9 +2279,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "perovskite-nickelate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/perovskite-nickelate.png",
@@ -2290,9 +2290,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "bioreceptor",
     icon = "__pyalternativeenergygraphics__/graphics/icons/bioreceptors.png",
@@ -2301,9 +2301,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "aptes",
     icon = "__pyalternativeenergygraphics__/graphics/icons/aptes.png",
@@ -2312,9 +2312,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "biofet",
     icon = "__pyalternativeenergygraphics__/graphics/icons/biofet.png",
@@ -2323,11 +2323,11 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ca",
     stack_size = 100
-}
+})
 
 ----MOVA-----
 
-ITEM {
+ITEM({
     type = "item",
     name = "replicator-mova",
     icon = "__pyalternativeenergygraphics__/graphics/icons/replicator-mova.png",
@@ -2338,9 +2338,9 @@ ITEM {
     stack_size = 1,
     weight = 1,
     send_to_orbit_mode = "automated"
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mova",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mova.png",
@@ -2349,9 +2349,9 @@ ITEM {
     subgroup = "py-alienlife-mova",
     order = "a",
     stack_size = 50
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ammonium-sulfate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ammonium-sulfate.png",
@@ -2360,9 +2360,9 @@ ITEM {
     subgroup = "py-rawores-items",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "guaiacol",
     icon = "__pyalternativeenergygraphics__/graphics/icons/guaiacol.png",
@@ -2371,9 +2371,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mpa",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mpa.png",
@@ -2382,9 +2382,9 @@ ITEM {
     subgroup = "py-alienlife-genetics",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "nanozymes",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nanozymes.png",
@@ -2393,9 +2393,9 @@ ITEM {
     subgroup = "py-alienlife-genetics",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "washed-mova",
     icon = "__pyalternativeenergygraphics__/graphics/icons/washed-mova.png",
@@ -2404,9 +2404,9 @@ ITEM {
     subgroup = "py-alienlife-mova",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "polished-glass-surface",
     icon = "__pyalternativeenergygraphics__/graphics/icons/polished-glass-surface.png",
@@ -2415,9 +2415,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "clean-glass-sheet",
     icon = "__pyalternativeenergygraphics__/graphics/icons/clean-glass-sheet.png",
@@ -2426,9 +2426,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "stannous-chloride",
     icon = "__pyalternativeenergygraphics__/graphics/icons/stannous-chloride.png",
@@ -2437,9 +2437,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "prepared-glass",
     icon = "__pyalternativeenergygraphics__/graphics/icons/prepared-glass.png",
@@ -2448,9 +2448,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "crude-mirror",
     icon = "__pyalternativeenergygraphics__/graphics/icons/crude-mirror.png",
@@ -2459,9 +2459,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "silver-nitrate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/silver-nitrate.png",
@@ -2470,9 +2470,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "polishing-wheel",
     icon = "__pyalternativeenergygraphics__/graphics/icons/polishing-wheel.png",
@@ -2481,9 +2481,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mirror-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror.png",
@@ -2492,9 +2492,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mirror-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk02.png",
@@ -2503,9 +2503,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "dab",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mirror-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk03.png",
@@ -2514,9 +2514,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "dac",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mirror-mk04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk04.png",
@@ -2525,9 +2525,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "dad",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "cerium-oxide",
     icon = "__pyalternativeenergygraphics__/graphics/icons/cerium-oxide.png",
@@ -2536,9 +2536,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "axis-tracker",
     icon = "__pyalternativeenergygraphics__/graphics/icons/axis-tracker.png",
@@ -2547,9 +2547,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "da",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "acrylic",
     icon = "__pyalternativeenergygraphics__/graphics/icons/acrylic.png",
@@ -2558,9 +2558,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "dae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "ometad",
     icon = "__pyalternativeenergygraphics__/graphics/icons/ometad.png",
@@ -2569,9 +2569,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "dae",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "aeroorgan",
     icon = "__pyalternativeenergygraphics__/graphics/icons/aeroorgan.png",
@@ -2580,86 +2580,86 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "d",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "blood-numal",
     icons = {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
+        { icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = { -8, -8 } }
     },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "chitin-numal",
     icons = {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",       scale = 0.25, shift = {-8, -8}}
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
+        { icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",       scale = 0.25, shift = { -8, -8 } }
     },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "guts-numal",
     icons = {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
+        { icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = { -8, -8 } }
     },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "meat-numal",
     icons = {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
+        { icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = { -8, -8 } }
     },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "skin-numal",
     icons = {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         scale = 0.25, shift = {-8, -8}}
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
+        { icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         scale = 0.25, shift = { -8, -8 } }
     },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-numal",
     order = "a",
     stack_size = 100
-}
+})
 
 --------------NUMAL-------------------
 
-ITEM {
+ITEM({
     type = "module",
     name = "numal",
     icons =
     {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
         --{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
     },
     icon_size = 64,
@@ -2669,17 +2669,17 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "q-a",
     stack_size = 50,
-    effect = {speed = 1, pollution = 1},
+    effect = { speed = 1, pollution = 1 },
     limitation = {},
-}
+})
 
-ITEM {
+ITEM({
     type = "module",
     name = "numal-mk02",
     icons =
     {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
+        { icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png" },
     },
     icon_size = 64,
     category = "numal",
@@ -2688,17 +2688,17 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "q-b",
     stack_size = 50,
-    effect = {speed = 1.5, pollution = 1},
+    effect = { speed = 1.5, pollution = 1 },
     limitation = {},
-}
+})
 
-ITEM {
+ITEM({
     type = "module",
     name = "numal-mk03",
     icons =
     {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
+        { icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png" },
     },
     icon_size = 64,
     category = "numal",
@@ -2707,17 +2707,17 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "q-c",
     stack_size = 50,
-    effect = {speed = 2, pollution = 1},
+    effect = { speed = 2, pollution = 1 },
     limitation = {},
-}
+})
 
-ITEM {
+ITEM({
     type = "module",
     name = "numal-mk04",
     icons =
     {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png" },
+        { icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png" },
     },
     icon_size = 64,
     category = "numal",
@@ -2726,11 +2726,11 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "q-d",
     stack_size = 50,
-    effect = {speed = 2.5, pollution = 1},
+    effect = { speed = 2.5, pollution = 1 },
     limitation = {},
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "numal-egg",
     icon = "__pyalternativeenergygraphics__/graphics/icons/numal-egg.png",
@@ -2739,9 +2739,9 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "numal-food-01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/numal-food-01.png",
@@ -2750,9 +2750,9 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "numal-food-02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/numal-food-02.png",
@@ -2761,9 +2761,9 @@ ITEM {
     subgroup = "py-alienlife-numal",
     order = "a",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "numal-codex",
     icon = "__pyalternativeenergygraphics__/graphics/icons/numal-codex.png",
@@ -2772,11 +2772,11 @@ ITEM {
     subgroup = "py-alienlife-codex",
     order = "x",
     stack_size = 100
-}
+})
 
 ---STIRLING---
 
-ITEM {
+ITEM({
     type = "item",
     name = "stirling-engine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/stirling-engine.png",
@@ -2785,9 +2785,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "eaa",
     stack_size = 10
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "regenerator",
     icon = "__pyalternativeenergygraphics__/graphics/icons/regenerator.png",
@@ -2796,9 +2796,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "eab",
     stack_size = 10
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "heatsink",
     icon = "__pyalternativeenergygraphics__/graphics/icons/heatsink.png",
@@ -2807,9 +2807,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "eac",
     stack_size = 10
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "displacer",
     icon = "__pyalternativeenergygraphics__/graphics/icons/displacer.png",
@@ -2818,11 +2818,11 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "ead",
     stack_size = 10
-}
+})
 
 ---bio-ore---
 
-ITEM {
+ITEM({
     type = "item",
     name = "enriched-ash",
     icon = "__pyalternativeenergygraphics__/graphics/icons/enriched-ash.png",
@@ -2831,9 +2831,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "fa",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "washed-ash",
     icon = "__pyalternativeenergygraphics__/graphics/icons/washed-ash.png",
@@ -2842,9 +2842,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "fb",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "processed-ash",
     icon = "__pyalternativeenergygraphics__/graphics/icons/processed-ash.png",
@@ -2853,9 +2853,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "fc",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "advanced-substrate",
     icon = "__pyalternativeenergygraphics__/graphics/icons/advanced-substrate.png",
@@ -2864,9 +2864,9 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "fd",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "bio-ore",
     icon = "__pyalternativeenergygraphics__/graphics/icons/bio-ore.png",
@@ -2875,139 +2875,139 @@ ITEM {
     subgroup = "py-alternativeenergy-items",
     order = "fe",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mechanical-parts-01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mips/mp101.png",
     icon_size = 64,
 
     pictures = {
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp101.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp102.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp103.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp104.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp105.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp106.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp107.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp108.png", scale = 0.6},
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp101.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp102.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp103.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp104.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp105.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp106.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp107.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp108.png", scale = 0.6 },
     },
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ga",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mechanical-parts-02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mips/mp201.png",
     icon_size = 64,
 
     pictures = {
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp201.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp202.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp203.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp204.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp205.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp206.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp207.png", scale = 0.6},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp208.png", scale = 0.6},
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp201.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp202.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp203.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp204.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp205.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp206.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp207.png", scale = 0.6 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp208.png", scale = 0.6 },
     },
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ga",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mechanical-parts-03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mips/mp301.png",
     icon_size = 64,
 
     pictures = {
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp301.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp302.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp303.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp304.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp305.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp306.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp307.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp308.png", scale = 0.60},
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp301.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp302.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp303.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp304.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp305.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp306.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp307.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp308.png", scale = 0.60 },
     },
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ga",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "mechanical-parts-04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mips/mp401.png",
     icon_size = 64,
 
     pictures = {
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp401.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp402.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp403.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp404.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp405.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp406.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp407.png", scale = 0.60},
-        {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp408.png", scale = 0.60},
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp401.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp402.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp403.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp404.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp405.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp406.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp407.png", scale = 0.60 },
+        { size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp408.png", scale = 0.60 },
     },
     flags = {},
     subgroup = "py-alternativeenergy-items",
     order = "ga",
     stack_size = 100
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "numal-codex-mk02",
     icons =
     {
-        {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png",},
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22},
+        { icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk02.png", },
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22 },
     },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex-mk02",
     order = "k",
     stack_size = 50
-}
+})
 
 
-ITEM {
+ITEM({
     type = "item",
     name = "numal-codex-mk03",
     icons =
     {
-        {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png",},
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22},
+        { icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk03.png", },
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22 },
     },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex-mk03",
     order = "k",
     stack_size = 50
-}
+})
 
 
-ITEM {
+ITEM({
     type = "item",
     name = "numal-codex-mk04",
     icons =
     {
-        {icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png",},
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22},
+        { icon = "__pyalienlifegraphics3__/graphics/icons/codex-mk04.png", },
+        { icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", scale = 0.22 },
     },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-codex-mk04",
     order = "k",
     stack_size = 50
-}
+})

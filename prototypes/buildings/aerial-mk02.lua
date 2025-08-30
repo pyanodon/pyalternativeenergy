@@ -1,7 +1,7 @@
 ---@diagnostic disable: missing-parameter
-local util = require "util"
+local util = require("util")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "aerial-blimp-mk02",
     energy_required = 50,
@@ -9,26 +9,26 @@ RECIPE {
     enabled = false,
     ingredients =
     {
-        {type = "item",  name = "aerial-blimp-mk01",       amount = 1},
-        {type = "item",  name = "shaft-mk02",              amount = 2},
-        {type = "item",  name = "anemometer-mk02",         amount = 4},
-        {type = "item",  name = "advanced-circuit",        amount = 5},
-        {type = "item",  name = "small-parts-02",          amount = 100},
-        {type = "item",  name = "self-assembly-monolayer", amount = 40},
-        {type = "item",  name = "utility-box-mk02",        amount = 2},
-        {type = "item",  name = "controler-mk02",          amount = 2},
-        {type = "item",  name = "rubber",                  amount = 60},
-        {type = "item",  name = "aluminium-plate",         amount = 200},
-        {type = "item",  name = "nexelit-battery",         amount = 100},
-        {type = "item",  name = "eva",                     amount = 80},
-        {type = "item",  name = "mechanical-parts-02",     amount = 1},
-        {type = "item",  name = "electronics-mk02",        amount = 2},
-        {type = "fluid", name = "hydrogen",                amount = 4000},
+        { type = "item",  name = "aerial-blimp-mk01",       amount = 1 },
+        { type = "item",  name = "shaft-mk02",              amount = 2 },
+        { type = "item",  name = "anemometer-mk02",         amount = 4 },
+        { type = "item",  name = "advanced-circuit",        amount = 5 },
+        { type = "item",  name = "small-parts-02",          amount = 100 },
+        { type = "item",  name = "self-assembly-monolayer", amount = 40 },
+        { type = "item",  name = "utility-box-mk02",        amount = 2 },
+        { type = "item",  name = "controler-mk02",          amount = 2 },
+        { type = "item",  name = "rubber",                  amount = 60 },
+        { type = "item",  name = "aluminium-plate",         amount = 200 },
+        { type = "item",  name = "nexelit-battery",         amount = 100 },
+        { type = "item",  name = "eva",                     amount = 80 },
+        { type = "item",  name = "mechanical-parts-02",     amount = 1 },
+        { type = "item",  name = "electronics-mk02",        amount = 2 },
+        { type = "fluid", name = "hydrogen",                amount = 4000 },
     },
-    results = {{type = "item", name = "aerial-blimp-mk02", amount = 1}}
-}:add_unlock("renewable-mk02")
+    results = { { type = "item", name = "aerial-blimp-mk02", amount = 1 } }
+}):add_unlock("renewable-mk02")
 
-ITEM {
+ITEM({
     type = "item-with-tags",
     name = "aerial-blimp-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk02.png",
@@ -37,21 +37,21 @@ ITEM {
     order = "b",
     place_result = "aerial-blimp-mk02",
     stack_size = 1,
-    flags = {"not-stackable"}
-}
+    flags = { "not-stackable" }
+})
 
 data:extend
-{
+({
     {
-        ai_settings = {do_separation = false, path_resolution_modifier = -5},
+        ai_settings = { do_separation = false, path_resolution_modifier = -5 },
         type = "unit",
-        additional_pastable_entities = {"aerial-blimp-mk01", "aerial-blimp-mk02", "aerial-blimp-mk03", "aerial-blimp-mk04"},
+        additional_pastable_entities = { "aerial-blimp-mk01", "aerial-blimp-mk02", "aerial-blimp-mk03", "aerial-blimp-mk04" },
         name = "aerial-blimp-mk02",
         selection_priority = 49,
         icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk02.png",
         icon_size = 64,
-        flags = {"placeable-player", "placeable-enemy", "placeable-off-grid"},
-        minable = {mining_time = 0.5, result = "aerial-blimp-mk02"},
+        flags = { "placeable-player", "placeable-enemy", "placeable-off-grid" },
+        minable = { mining_time = 0.5, result = "aerial-blimp-mk02" },
         max_health = 25,
         order = "b-b-a",
         subgroup = "enemies",
@@ -66,8 +66,8 @@ data:extend
         immune_to_tree_impacts = true,
         has_belt_immunity = true,
         immune_to_rock_impacts = true,
-        collision_mask = {layers = {}, not_colliding_with_itself = true},
-        selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+        collision_mask = { layers = {}, not_colliding_with_itself = true },
+        selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
         attack_parameters = {
             type = "projectile",
             range = 0,
@@ -79,7 +79,7 @@ data:extend
         vision_distance = 0,
         movement_speed = 0.04,
         distance_per_frame = 0.18,
-        absorptions_to_join_attack = {pollution = 0},
+        absorptions_to_join_attack = { pollution = 0 },
         distraction_cooldown = 0,
         --corpse = 'arthurian-corpse',
         dying_explosion = "blood-explosion-small",
@@ -124,4 +124,4 @@ data:extend
         },
         render_layer = "air-object"
     }
-}
+})

@@ -7,37 +7,37 @@ py.on_event(py.events.on_init(), function(event)
     storage.solar_updraft_towers = storage.solar_updraft_towers or {}
     storage.tower_circles = storage.tower_circles or {}
     storage.heliostat_towers = storage.heliostat_towers or {}
-    local steam = prototypes.fluid["pressured-steam"]
+    local steam = prototypes.fluid[ "pressured-steam" ]
     local joules_per_unit = steam.heat_capacity * steam.max_temperature
     -- https://github.com/pyanodon/pyalternativeenergy/commit/18a30a5faddbcf7674b7993a223c3bf9babc65aa
-    local _, fluid_usage_per_tick = pcall(function() return prototypes.entity["steam-turbine-mk04"].get_fluid_usage_per_tick() end)
+    local _, fluid_usage_per_tick = pcall(function() return prototypes.entity[ "steam-turbine-mk04" ].get_fluid_usage_per_tick() end)
     if type(fluid_usage_per_tick) == "string" then fluid_usage_per_tick = nil end
-    fluid_usage_per_tick = fluid_usage_per_tick or prototypes.entity["steam-turbine-mk04"].fluid_usage_per_tick
+    fluid_usage_per_tick = fluid_usage_per_tick or prototypes.entity[ "steam-turbine-mk04" ].fluid_usage_per_tick
     local mk04_max_output_in_w = fluid_usage_per_tick * joules_per_unit * 60
     storage.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * mk04_max_output_in_w
     storage.energy_per_heliostat = storage.heliostat_tower_max_power_output / Heliostat.max_heliostats
 end)
 
 local tower_circle_render_items = {
-    ["sut"] = true,
-    ["sut-panel"] = true,
-    ["solar-tower-building"] = true,
-    ["solar-tower-panel"] = true
+    [ "sut" ] = true,
+    [ "sut-panel" ] = true,
+    [ "solar-tower-building" ] = true,
+    [ "solar-tower-panel" ] = true
 }
 
 local function draw_circle(tower_data)
-    if not storage.tower_circles[tower_data.unit_number] then
-        storage.tower_circles[tower_data.unit_number] = rendering.draw_circle {
-            draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = Thermosolar.tower_range,
+    if not storage.tower_circles[ tower_data.unit_number ] then
+        storage.tower_circles[ tower_data.unit_number ] = rendering.draw_circle({
+            draw_on_ground = true, color = { r = 100, g = 53.3, b = 0, a = 0.5 }, radius = Thermosolar.tower_range,
             target = tower_data.entity, filled = true, surface = tower_data.entity.surface
-        }.id
+        }).id
     end
 end
 
 Thermosolar.events.on_player_cursor_stack_changed = function(event)
     for _, player in pairs(game.connected_players) do
         local stack = player.cursor_stack
-        if stack and stack.valid_for_read and tower_circle_render_items[stack.name] then
+        if stack and stack.valid_for_read and tower_circle_render_items[ stack.name ] then
             for _, tower_data in pairs(storage.solar_updraft_towers) do
                 draw_circle(tower_data)
             end

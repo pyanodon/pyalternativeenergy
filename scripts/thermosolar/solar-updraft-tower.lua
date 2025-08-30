@@ -23,7 +23,7 @@ end
 ---@param position {x: integer, y: integer} the position to check against the radius
 ---@param cover_count integer the number of glass covers to add or remove from the power generated
 local function update_parent_tower(position, cover_count)
-    local parent = (storage.solar_updraft_towers[Solar_Updraft_Tower.last_unit or -1] or {}).entity
+    local parent = (storage.solar_updraft_towers[ Solar_Updraft_Tower.last_unit or -1 ] or {}).entity
     -- Check our last-used tower
     if parent and is_in_radius(parent.position, position, Thermosolar.tower_range) then
         goto continue
@@ -54,13 +54,13 @@ function Solar_Updraft_Tower.update_power_generation(tower, additional_cover_cou
         return
     end
 
-    local tower_data = storage.solar_updraft_towers[tower.unit_number]
+    local tower_data = storage.solar_updraft_towers[ tower.unit_number ]
     if not tower_data then return end
 
     if additional_cover_count then
         tower_data.glass_covers = tower_data.glass_covers + additional_cover_count
     else
-        tower_data.glass_covers = tower.surface.count_tiles_filtered {position = tower.position, radius = Thermosolar.tower_range, name = "sut-panel"}
+        tower_data.glass_covers = tower.surface.count_tiles_filtered({ position = tower.position, radius = Thermosolar.tower_range, name = "sut-panel" })
     end
     tower_data.max_production = (tower_data.glass_covers * Solar_Updraft_Tower.power_generated_per_cover + tower.prototype.get_max_energy_production()) * tower.surface.solar_power_multiplier
     tower.power_production = tower_data.max_production * Thermosolar.calc_daylight(tower.surface)
@@ -85,12 +85,12 @@ local function clear_shine_effect(surface, position)
 
     local proxy = surface.find_entity("sut-panel-" .. sprite_num, position)
     if proxy and proxy.valid then
-        proxy.destroy {raise_destroy = true}
+        proxy.destroy({ raise_destroy = true })
     end
 end
 
 py.on_event(py.events.on_built_tile(), function(event)
-    local surface = game.surfaces[event.surface_index]
+    local surface = game.surfaces[ event.surface_index ]
 
     for _, tile in pairs(event.tiles) do
         local position = tile.position
@@ -116,10 +116,10 @@ py.on_event(py.events.on_built_tile(), function(event)
             sprite_num = 31 - sprite_num
         end
 
-        local entity = surface.create_entity {
+        local entity = surface.create_entity({
             name = "sut-panel-" .. sprite_num,
             position = tile.position
-        }
+        })
         entity.destructible = false
         entity.minable_flag = false
 
@@ -128,7 +128,7 @@ py.on_event(py.events.on_built_tile(), function(event)
 end)
 
 py.on_event(py.events.on_mined_tile(), function(event)
-    local surface = game.surfaces[event.surface_index]
+    local surface = game.surfaces[ event.surface_index ]
     for _, tile in pairs(event.tiles) do
         if tile.old_tile.name == "sut-panel" then
             local position = tile.position
@@ -143,16 +143,16 @@ py.on_event(py.events.on_built(), function(event)
     if entity.name ~= "sut" then return end
     local surface = entity.surface
 
-    rendering.draw_animation {
+    rendering.draw_animation({
         animation = "sut-panel-base",
         render_layer = "floor",
         target = entity,
         surface = surface
-    }
+    })
 
-    local placement_restriction = surface.create_entity {name = "sut-placement-distance", position = entity.position, force = entity.force}
+    local placement_restriction = surface.create_entity({ name = "sut-placement-distance", position = entity.position, force = entity.force })
     placement_restriction.destructible = false
-    storage.solar_updraft_towers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0}
+    storage.solar_updraft_towers[ entity.unit_number ] = { unit_number = entity.unit_number, entity = entity, placement_restriction = placement_restriction, glass_covers = 0 }
     Solar_Updraft_Tower.update_power_generation(entity)
 end)
 
@@ -167,7 +167,7 @@ py.register_on_nth_tick(60, "sut", "pyae", function()
         else
             entity.active = true
             local smokestack = activity == 1 and "sut-smokestack" or "sut-smokestack-weak"
-            surface.create_entity {name = smokestack, position = {entity.position.x, entity.position.y - 28}}
+            surface.create_entity({ name = smokestack, position = { entity.position.x, entity.position.y - 28 } })
         end
 
         entity.power_production = tower_data.max_production * activity
@@ -181,10 +181,10 @@ end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
-    local tower_data = storage.solar_updraft_towers[entity.unit_number]
+    local tower_data = storage.solar_updraft_towers[ entity.unit_number ]
     if not tower_data then return end
     if tower_data.placement_restriction.valid then tower_data.placement_restriction.destroy() end
-    storage.solar_updraft_towers[entity.unit_number] = nil
+    storage.solar_updraft_towers[ entity.unit_number ] = nil
     storage.update_sut_guis = not not next(storage.solar_updraft_towers)
 end)
 
@@ -194,41 +194,41 @@ py.on_event(defines.events.on_gui_opened, function(event)
     if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= "sut" then return end
 
     if player.gui.screen.sut_gui then player.gui.screen.sut_gui.destroy() end
-    local main_frame = player.gui.screen.add {type = "frame", name = "sut_gui", caption = entity.prototype.localised_name, direction = "vertical"}
-    main_frame.tags = {unit_number = entity.unit_number}
+    local main_frame = player.gui.screen.add({ type = "frame", name = "sut_gui", caption = entity.prototype.localised_name, direction = "vertical" })
+    main_frame.tags = { unit_number = entity.unit_number }
     main_frame.auto_center = true
     main_frame.style.vertically_stretchable = true
     player.opened = main_frame
 
-    local content_frame = main_frame.add {type = "frame", name = "content_frame", style = "inside_shallow_frame_with_padding"}
+    local content_frame = main_frame.add({ type = "frame", name = "content_frame", style = "inside_shallow_frame_with_padding" })
 
-    local camera_frame = content_frame.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
-    local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = {entity.position.x, entity.position.y - 9}, surface_index = entity.surface.index}
+    local camera_frame = content_frame.add({ type = "frame", name = "camera_frame", style = "py_nice_frame" })
+    local camera = camera_frame.add({ type = "camera", name = "camera", style = "py_caravan_camera", position = { entity.position.x, entity.position.y - 9 }, surface_index = entity.surface.index })
     camera.visible = true
     camera.style.height = 420
     camera.style.width = 200
     camera.zoom = 0.4
 
-    local content_flow = content_frame.add {type = "flow", name = "content_flow", direction = "vertical"}
+    local content_flow = content_frame.add({ type = "flow", name = "content_flow", direction = "vertical" })
     content_flow.style.vertical_spacing = 8
     content_flow.style.left_margin = 4
     content_flow.style.vertical_align = "center"
     content_flow.style.width = 220
 
-    content_flow.add {type = "progressbar", name = "progressbar", style = "electric_satisfaction_statistics_progressbar"}.style.horizontally_stretchable = true
+    content_flow.add({ type = "progressbar", name = "progressbar", style = "electric_satisfaction_statistics_progressbar" }).style.horizontally_stretchable = true
 
-    content_flow.add {type = "line"}
+    content_flow.add({ type = "line" })
 
-    content_flow.add {type = "label", name = "total_covers"}
-    content_flow.add {type = "label", name = "average_generation"}
-    content_flow.add {type = "label", name = "daylight"}
-    content_flow.add {type = "label", caption = {"sut-gui.range", Thermosolar.tower_range}}
-    content_flow.add {type = "label", caption = {"sut-gui.energy-per-cover", py.format_energy(Solar_Updraft_Tower.power_generated_per_cover, "W")}}
+    content_flow.add({ type = "label", name = "total_covers" })
+    content_flow.add({ type = "label", name = "average_generation" })
+    content_flow.add({ type = "label", name = "daylight" })
+    content_flow.add({ type = "label", caption = { "sut-gui.range", Thermosolar.tower_range } })
+    content_flow.add({ type = "label", caption = { "sut-gui.energy-per-cover", py.format_energy(Solar_Updraft_Tower.power_generated_per_cover, "W") } })
 
     Solar_Updraft_Tower.update_gui(main_frame)
 end)
 
-py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
+py.on_event({ defines.events.on_gui_closed, defines.events.on_player_changed_surface }, function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
         local gui = player.gui.screen.sut_gui
@@ -237,7 +237,7 @@ py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surf
 end)
 
 function Solar_Updraft_Tower.update_gui(gui)
-    local tower_data = storage.solar_updraft_towers[gui.tags.unit_number]
+    local tower_data = storage.solar_updraft_towers[ gui.tags.unit_number ]
     if not tower_data then
         gui.destroy(); return
     end
@@ -246,10 +246,10 @@ function Solar_Updraft_Tower.update_gui(gui)
     local daylight = Thermosolar.calc_daylight(surface)
 
     content_flow.progressbar.value = daylight
-    content_flow.progressbar.caption = {"sut-gui.energy", py.format_energy(tower_data.entity.power_production, "W"), py.format_energy(tower_data.max_production, "W")}
-    content_flow.total_covers.caption = {"sut-gui.total-covers", tower_data.glass_covers}
-    content_flow.average_generation.caption = {"sut-gui.average-generation", py.format_energy(tower_data.max_production * Thermosolar.calc_average_daylight(surface), "W")}
-    content_flow.daylight.caption = {"sut-gui.daylight", floor(daylight * 100)}
+    content_flow.progressbar.caption = { "sut-gui.energy", py.format_energy(tower_data.entity.power_production, "W"), py.format_energy(tower_data.max_production, "W") }
+    content_flow.total_covers.caption = { "sut-gui.total-covers", tower_data.glass_covers }
+    content_flow.average_generation.caption = { "sut-gui.average-generation", py.format_energy(tower_data.max_production * Thermosolar.calc_average_daylight(surface), "W") }
+    content_flow.daylight.caption = { "sut-gui.daylight", floor(daylight * 100) }
 end
 
 function Solar_Updraft_Tower.update_all_guis()

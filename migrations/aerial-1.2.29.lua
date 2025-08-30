@@ -40,32 +40,32 @@ if storage.aerial_data then -- There's data to migrate
         -- It's not nil now
         ---@cast network_id integer
         local name = entity.name
-        local accumulator = accumulators[network_id][name]
+        local accumulator = accumulators[ network_id ][ name ]
         local first_pole
         -- There's already an accumulator on this network
         if accumulator then
             goto skip_accumulator
         end
         -- Is there a pole we can use for placement?
-        first_pole = poles_by_network[network_id][1]
+        first_pole = poles_by_network[ network_id ][ 1 ]
         first_pole = first_pole and first_pole.entity
         -- Yep
         if first_pole and first_pole.valid then
-            accumulator = entity.surface.create_entity {
+            accumulator = entity.surface.create_entity({
                 name = name .. "-accumulator",
                 position = first_pole.position,
                 force = entity.force,
                 create_build_effect_smoke = false
-            }
+            })
             accumulator.destructible = false
             accumulator.operable = false
             accumulator.power_production = 0
             accumulator.power_usage = 0
-            accumulators[network_id][name] = accumulator
+            accumulators[ network_id ][ name ] = accumulator
         end
         ::skip_accumulator::
         -- Finally, move the relevant data into the new table
-        aerial_data[unit_number] = {
+        aerial_data[ unit_number ] = {
             entity = entity,
             target = target,
             network_id = network_id,
@@ -75,13 +75,13 @@ if storage.aerial_data then -- There's data to migrate
             last_20 = struct.last_20
         }
         -- and add to our counts
-        aerial_counts[network_id][name] = (aerial_counts[network_id][name] or 0) + 1
+        aerial_counts[ network_id ][ name ] = (aerial_counts[ network_id ][ name ] or 0) + 1
         ::continue::
     end
     -- Update the accumulators
     for network_id, type_list in pairs(aerial_counts) do
         for type_name, type_count in pairs(type_list) do
-            local accumulator = accumulators[network_id][type_name]
+            local accumulator = accumulators[ network_id ][ type_name ]
             if accumulator and accumulator.valid then
                 accumulator.electric_buffer_size = accumulator.prototype.electric_energy_source_prototype.buffer_capacity * type_count
                 accumulator.energy = accumulator.electric_buffer_size

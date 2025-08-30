@@ -1,99 +1,99 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-coal-powerplant-mk01",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "electric-mining-drill", amount = 10},
-        {type = "item", name = "electronic-circuit",    amount = 100},
-        {type = "item", name = "iron-gear-wheel",       amount = 300},
-        {type = "item", name = "gasifier",              amount = 3},
-        {type = "item", name = "steel-plate",           amount = 200},
-        {type = "item", name = "steam-engine",          amount = 20},
-        {type = "item", name = "intermetallics",        amount = 50},
-        {type = "item", name = "mechanical-parts-01",   amount = 3},
+        { type = "item", name = "electric-mining-drill", amount = 10 },
+        { type = "item", name = "electronic-circuit",    amount = 100 },
+        { type = "item", name = "iron-gear-wheel",       amount = 300 },
+        { type = "item", name = "gasifier",              amount = 3 },
+        { type = "item", name = "steel-plate",           amount = 200 },
+        { type = "item", name = "steam-engine",          amount = 20 },
+        { type = "item", name = "intermetallics",        amount = 50 },
+        { type = "item", name = "mechanical-parts-01",   amount = 3 },
     },
     results = {
-        {type = "item", name = "py-coal-powerplant-mk01", amount = 1}
+        { type = "item", name = "py-coal-powerplant-mk01", amount = 1 }
     }
-}:add_unlock("coalplant-mk01")
+}):add_unlock("coalplant-mk01")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-coal-powerplant-mk02",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "py-coal-powerplant-mk01", amount = 1},
-        {type = "item", name = "self-assembly-monolayer", amount = 30},
-        {type = "item", name = "stainless-steel",         amount = 100},
-        {type = "item", name = "duralumin",               amount = 50},
-        {type = "item", name = "titanium-plate",          amount = 100},
-        {type = "item", name = "concrete",                amount = 80},
-        {type = "item", name = "small-parts-02",          amount = 100},
-        {type = "item", name = "engine-unit",             amount = 20},
-        {type = "item", name = "advanced-circuit",        amount = 50},
-        {type = "item", name = "mechanical-parts-02",     amount = 5},
+        { type = "item", name = "py-coal-powerplant-mk01", amount = 1 },
+        { type = "item", name = "self-assembly-monolayer", amount = 30 },
+        { type = "item", name = "stainless-steel",         amount = 100 },
+        { type = "item", name = "duralumin",               amount = 50 },
+        { type = "item", name = "titanium-plate",          amount = 100 },
+        { type = "item", name = "concrete",                amount = 80 },
+        { type = "item", name = "small-parts-02",          amount = 100 },
+        { type = "item", name = "engine-unit",             amount = 20 },
+        { type = "item", name = "advanced-circuit",        amount = 50 },
+        { type = "item", name = "mechanical-parts-02",     amount = 5 },
     },
     results = {
-        {type = "item", name = "py-coal-powerplant-mk02", amount = 1}
+        { type = "item", name = "py-coal-powerplant-mk02", amount = 1 }
     }
-}:add_unlock("coalplant-mk02")
+}):add_unlock("coalplant-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-coal-powerplant-mk03",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "py-coal-powerplant-mk02", amount = 1},
-        {type = "item", name = "ns-material",             amount = 40},
-        {type = "item", name = "processing-unit",         amount = 50},
-        {type = "item", name = "acrylic",                 amount = 50},
-        {type = "item", name = "cf",                      amount = 100},
-        {type = "item", name = "glass-fiber",             amount = 100},
-        {type = "item", name = "super-steel",             amount = 100},
-        {type = "item", name = "low-density-structure",   amount = 100},
-        {type = "item", name = "electric-engine-unit",    amount = 20},
-        {type = "item", name = "small-parts-03",          amount = 300},
-        {type = "item", name = "mechanical-parts-03",     amount = 5},
+        { type = "item", name = "py-coal-powerplant-mk02", amount = 1 },
+        { type = "item", name = "ns-material",             amount = 40 },
+        { type = "item", name = "processing-unit",         amount = 50 },
+        { type = "item", name = "acrylic",                 amount = 50 },
+        { type = "item", name = "cf",                      amount = 100 },
+        { type = "item", name = "glass-fiber",             amount = 100 },
+        { type = "item", name = "super-steel",             amount = 100 },
+        { type = "item", name = "low-density-structure",   amount = 100 },
+        { type = "item", name = "electric-engine-unit",    amount = 20 },
+        { type = "item", name = "small-parts-03",          amount = 300 },
+        { type = "item", name = "mechanical-parts-03",     amount = 5 },
 
     },
     results = {
-        {type = "item", name = "py-coal-powerplant-mk03", amount = 1}
+        { type = "item", name = "py-coal-powerplant-mk03", amount = 1 }
     }
-}:add_unlock("coalplant-mk03")
+}):add_unlock("coalplant-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-coal-powerplant-mk04",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "py-coal-powerplant-mk03",       amount = 1},
-        {type = "item", name = "small-parts-03",                amount = 300},
-        {type = "item", name = "super-alloy",                   amount = 200},
-        {type = "item", name = "intelligent-unit",              amount = 50},
-        {type = "item", name = "metastable-quasicrystal",       amount = 20},
-        {type = "item", name = "superconductor-servomechanims", amount = 50},
-        {type = "item", name = "control-unit",                  amount = 20},
-        {type = "item", name = "ti-n",                          amount = 100},
-        {type = "item", name = "metallic-glass",                amount = 50},
-        {type = "item", name = "sc-engine",                     amount = 8},
-        {type = "item", name = "nbti-alloy",                    amount = 200},
-        {type = "item", name = "mechanical-parts-04",           amount = 5},
+        { type = "item", name = "py-coal-powerplant-mk03",       amount = 1 },
+        { type = "item", name = "small-parts-03",                amount = 300 },
+        { type = "item", name = "super-alloy",                   amount = 200 },
+        { type = "item", name = "intelligent-unit",              amount = 50 },
+        { type = "item", name = "metastable-quasicrystal",       amount = 20 },
+        { type = "item", name = "superconductor-servomechanims", amount = 50 },
+        { type = "item", name = "control-unit",                  amount = 20 },
+        { type = "item", name = "ti-n",                          amount = 100 },
+        { type = "item", name = "metallic-glass",                amount = 50 },
+        { type = "item", name = "sc-engine",                     amount = 8 },
+        { type = "item", name = "nbti-alloy",                    amount = 200 },
+        { type = "item", name = "mechanical-parts-04",           amount = 5 },
     },
     results = {
-        {type = "item", name = "py-coal-powerplant-mk04", amount = 1}
+        { type = "item", name = "py-coal-powerplant-mk04", amount = 1 }
     }
-}:add_unlock("coalplant-mk04")
+}):add_unlock("coalplant-mk04")
 
 for i = 1, 4 do
     local name = "py-coal-powerplant-mk0" .. i
     local icon = "__pyalternativeenergygraphics__/graphics/icons/coal-powerplant-mk0" .. i .. ".png"
     local icon_size = 64
 
-    ITEM {
+    ITEM({
         type = "item",
         name = name,
         icon = icon,
@@ -103,40 +103,40 @@ for i = 1, 4 do
         order = "a",
         place_result = name,
         stack_size = 10
-    }
+    })
 
-    ENTITY {
+    ENTITY({
         type = "assembling-machine",
         name = name,
         icon = icon,
         icon_size = icon_size,
-        flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.1, result = name},
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.1, result = name },
         max_health = 500 * i,
         corpse = "big-remnants",
         dying_explosion = "big-explosion",
-        collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
-        selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
+        collision_box = { { -6.3, -6.3 }, { 6.3, 6.3 } },
+        selection_box = { { -6.5, -6.5 }, { 6.5, 6.5 } },
         forced_symmetry = "diagonal-pos",
         module_slots = i,
-        allowed_effects = {"consumption", "speed", "pollution"},
-        crafting_categories = {(i == 1) and "coal-powerplant" or ("coal-powerplant-mk0" .. i)},
+        allowed_effects = { "consumption", "speed", "pollution" },
+        crafting_categories = { (i == 1) and "coal-powerplant" or ("coal-powerplant-mk0" .. i) },
         fixed_recipe = "coal-molten-salt-0" .. i,
         crafting_speed = i,
         energy_source = {
             type = "burner",
-            fuel_categories = {"chemical"},
+            fuel_categories = { "chemical" },
             effectivity = 1,
             light_flicker = {
                 minimum_intensity = 0,
                 maximum_intensity = 0,
                 light_intensity_to_size_coefficient = 0,
-                color = {0, 0, 0},
+                color = { 0, 0, 0 },
             },
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,
             emissions_per_minute = {
-                pollution = ({360, 450, 540, 630})[i],
+                pollution = ({ 360, 450, 540, 630 })[ i ],
             },
             smoke = {
                 {
@@ -149,7 +149,7 @@ for i = 1, 4 do
                     slow_down_factor = 1,
                     starting_vertical_speed = 0.07,
                     starting_frame_deviation = 60,
-                    color = {r = 0.2, g = 0.2, b = 0.2},
+                    color = { r = 0.2, g = 0.2, b = 0.2 },
                 },
                 {
                     name = "smoke",
@@ -161,7 +161,7 @@ for i = 1, 4 do
                     slow_down_factor = 1,
                     starting_vertical_speed = 0.07,
                     starting_frame_deviation = 60,
-                    color = {r = 0.2, g = 0.2, b = 0.2},
+                    color = { r = 0.2, g = 0.2, b = 0.2 },
                 },
             },
         },
@@ -196,7 +196,7 @@ for i = 1, 4 do
                         repeat_count = 151,
                         animation_speed = 1 / 3,
                         shift = util.by_pixel(0, 144),
-                        tint = py.tints[i],
+                        tint = py.tints[ i ],
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/coal-powerplant/r1.png",
@@ -454,53 +454,53 @@ for i = 1, 4 do
             --1
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {0.0, 6.0}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { 0.0, 6.0 }, direction = defines.direction.south } }
             },
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {-3.0, 6.0}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { -3.0, 6.0 }, direction = defines.direction.south } }
             },
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {3.0, 6.0}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { 3.0, 6.0 }, direction = defines.direction.south } }
             },
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {0.0, -6.0}, direction = defines.direction.north}}
+                pipe_connections = { { flow_direction = "output", position = { 0.0, -6.0 }, direction = defines.direction.north } }
             },
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {3.0, -6.0}, direction = defines.direction.north}}
+                pipe_connections = { { flow_direction = "output", position = { 3.0, -6.0 }, direction = defines.direction.north } }
             },
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {-3.0, -6.0}, direction = defines.direction.north}}
+                pipe_connections = { { flow_direction = "output", position = { -3.0, -6.0 }, direction = defines.direction.north } }
             },
         },
         impact_category = "metal-large",
         working_sound = {
-            sound = {filename = "__pyalternativeenergygraphics__/sounds/coal-powerplant.ogg", volume = 0.7},
-            idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/coal-powerplant.ogg", volume = 0.1},
+            sound = { filename = "__pyalternativeenergygraphics__/sounds/coal-powerplant.ogg", volume = 0.7 },
+            idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/coal-powerplant.ogg", volume = 0.1 },
             apparent_volume = 0.45
         },
         fast_replaceable_group = "coal-power"
-    }
+    })
 end

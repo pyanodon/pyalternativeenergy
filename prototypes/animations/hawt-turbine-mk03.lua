@@ -1,5 +1,5 @@
 local base_path = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/%s%d.png"
-for index, direction in pairs {
+for index, direction in pairs({
     "south",
     "southwest",
     "west",
@@ -8,8 +8,8 @@ for index, direction in pairs {
     "northeast",
     "east",
     "southeast"
-} do
-    data:extend {{
+}) do
+    data:extend({ {
         type = "animation",
         name = "hawt-turbine-mk03-" .. direction,
         layers = {
@@ -43,5 +43,5 @@ for index, direction in pairs {
                 draw_as_glow = true
             },
         }
-    }}
+    } })
 end

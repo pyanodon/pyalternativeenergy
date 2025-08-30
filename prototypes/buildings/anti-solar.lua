@@ -1,28 +1,28 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "anti-solar",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "laser-module",        amount = 3},
-        {type = "item", name = "processing-unit",     amount = 30},
-        {type = "item", name = "super-steel",         amount = 35},
-        {type = "item", name = "nbfe-alloy",          amount = 20},
-        {type = "item", name = "graphene-roll",       amount = 30},
-        {type = "item", name = "cobalt-nx",           amount = 10},
-        {type = "item", name = "nano-wires",          amount = 10},
-        {type = "item", name = "biopolymer",          amount = 40},
-        {type = "item", name = "ns-material",         amount = 20},
-        {type = "item", name = "dsnc-cell",           amount = 16},
-        {type = "item", name = "anti-reflex-glass",   amount = 20},
-        {type = "item", name = "mechanical-parts-04", amount = 4},
+        { type = "item", name = "laser-module",        amount = 3 },
+        { type = "item", name = "processing-unit",     amount = 30 },
+        { type = "item", name = "super-steel",         amount = 35 },
+        { type = "item", name = "nbfe-alloy",          amount = 20 },
+        { type = "item", name = "graphene-roll",       amount = 30 },
+        { type = "item", name = "cobalt-nx",           amount = 10 },
+        { type = "item", name = "nano-wires",          amount = 10 },
+        { type = "item", name = "biopolymer",          amount = 40 },
+        { type = "item", name = "ns-material",         amount = 20 },
+        { type = "item", name = "dsnc-cell",           amount = 16 },
+        { type = "item", name = "anti-reflex-glass",   amount = 20 },
+        { type = "item", name = "mechanical-parts-04", amount = 4 },
     },
     results = {
-        {type = "item", name = "anti-solar", amount = 5}
+        { type = "item", name = "anti-solar", amount = 5 }
     }
-}:add_unlock("anti-solar")
+}):add_unlock("anti-solar")
 
-ITEM {
+ITEM({
     type = "item",
     name = "anti-solar",
     icon = "__pyalternativeenergygraphics__/graphics/icons/anti-solar.png",
@@ -32,22 +32,22 @@ ITEM {
     order = "a",
     place_result = "anti-solar",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "solar-panel",
     name = "anti-solar",
     performance_at_day = 0,
     performance_at_night = 1,
     icon = "__pyalternativeenergygraphics__/graphics/icons/anti-solar.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "anti-solar"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "anti-solar" },
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "solar-panel-explosion",
-    collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
-    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+    collision_box = { { -2.8, -2.8 }, { 2.8, 2.8 } },
+    selection_box = { { -3.0, -3.0 }, { 3.0, 3.0 } },
     --allowed_effects = {"speed", "consumption"},
     energy_source = {
         type = "electric",
@@ -106,4 +106,4 @@ ENTITY {
         }
     },
     impact_category = "metal",
-}
+})

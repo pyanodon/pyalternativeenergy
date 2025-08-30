@@ -1,35 +1,35 @@
 local factor = 100
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "steam-turbine-mk04",
     energy_required = 5,
     enabled = true,
     ingredients = {
-        {type = "item", name = "concrete",                amount = 30 * factor},
-        {type = "item", name = "super-alloy",             amount = 30 * factor},
-        {type = "item", name = "electronics-mk04",        amount = 1 * factor},
-        {type = "item", name = "low-density-structure",   amount = 10 * factor},
-        {type = "item", name = "nbfe-alloy",              amount = 10 * factor},
-        {type = "item", name = "gearbox-mk04",            amount = 1 * factor},
-        {type = "item", name = "brake-mk04",              amount = 2 * factor},
-        {type = "item", name = "nxzngd",                  amount = 8 * factor},
-        {type = "item", name = "cf",                      amount = 50 * factor},
-        {type = "item", name = "fes",                     amount = 3 * factor},
-        {type = "item", name = "shaft-mk04",              amount = 1 * factor},
-        {type = "item", name = "metastable-quasicrystal", amount = 1 * factor},
-        {type = "item", name = "hyperelastic-material",   amount = 10 * factor},
-        {type = "item", name = "biopolymer",              amount = 30 * factor},
-        {type = "item", name = "controler-mk04",          amount = 4 * factor},
-        {type = "item", name = "centrifuge-mk03",         amount = 5},
-        {type = "item", name = "steam-turbine-mk03",      amount = 1},
+        { type = "item", name = "concrete",                amount = 30 * factor },
+        { type = "item", name = "super-alloy",             amount = 30 * factor },
+        { type = "item", name = "electronics-mk04",        amount = 1 * factor },
+        { type = "item", name = "low-density-structure",   amount = 10 * factor },
+        { type = "item", name = "nbfe-alloy",              amount = 10 * factor },
+        { type = "item", name = "gearbox-mk04",            amount = 1 * factor },
+        { type = "item", name = "brake-mk04",              amount = 2 * factor },
+        { type = "item", name = "nxzngd",                  amount = 8 * factor },
+        { type = "item", name = "cf",                      amount = 50 * factor },
+        { type = "item", name = "fes",                     amount = 3 * factor },
+        { type = "item", name = "shaft-mk04",              amount = 1 * factor },
+        { type = "item", name = "metastable-quasicrystal", amount = 1 * factor },
+        { type = "item", name = "hyperelastic-material",   amount = 10 * factor },
+        { type = "item", name = "biopolymer",              amount = 30 * factor },
+        { type = "item", name = "controler-mk04",          amount = 4 * factor },
+        { type = "item", name = "centrifuge-mk03",         amount = 5 },
+        { type = "item", name = "steam-turbine-mk03",      amount = 1 },
     },
     results = {
-        {type = "item", name = "steam-turbine-mk04", amount = 1}
+        { type = "item", name = "steam-turbine-mk04", amount = 1 }
     }
-}:add_unlock("nonrenewable-mk04")
+}):add_unlock("nonrenewable-mk04")
 
-ITEM {
+ITEM({
     type = "item",
     name = "steam-turbine-mk04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/steam-turbine-mk04.png",
@@ -39,15 +39,15 @@ ITEM {
     order = "e",
     place_result = "steam-turbine-mk04",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "generator",
     name = "steam-turbine-mk04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/steam-turbine-mk04.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "steam-turbine-mk04"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "steam-turbine-mk04" },
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 1,
@@ -60,8 +60,8 @@ ENTITY {
             percent = 70
         }
     },
-    collision_box = {{-2.6, -11}, {2.6, 11}},
-    selection_box = {{-3.0, -11.5}, {3.0, 11.5}},
+    collision_box = { { -2.6, -11 }, { 2.6, 11 } },
+    selection_box = { { -3.0, -11.5 }, { 3.0, 11.5 } },
     fluid_input = {
         name = "pressured-steam",
         amount = 0.0,
@@ -70,33 +70,33 @@ ENTITY {
     fluid_box = {
         volume = 120000,
         pipe_covers = py.pipe_covers(true, true, true, true),
-        pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+        pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
         production_type = "input-output",
         filter = "pressured-steam",
         minimum_temperature = 500.0,
         pipe_connections = {
-            {flow_direction = "input-output", position = {2.5, 6.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 6.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -6.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -6.5}, direction = defines.direction.west},
+            { flow_direction = "input-output", position = { 2.5, 6.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, 6.5 }, direction = defines.direction.west },
+            { flow_direction = "input-output", position = { 2.5, -6.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, -6.5 }, direction = defines.direction.west },
 
 
-            {flow_direction = "input-output", position = {2.5, 7.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 7.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -7.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -7.5}, direction = defines.direction.west},
+            { flow_direction = "input-output", position = { 2.5, 7.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, 7.5 }, direction = defines.direction.west },
+            { flow_direction = "input-output", position = { 2.5, -7.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, -7.5 }, direction = defines.direction.west },
 
 
-            {flow_direction = "input-output", position = {2.5, 8.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 8.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -8.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -8.5}, direction = defines.direction.west},
+            { flow_direction = "input-output", position = { 2.5, 8.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, 8.5 }, direction = defines.direction.west },
+            { flow_direction = "input-output", position = { 2.5, -8.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, -8.5 }, direction = defines.direction.west },
 
 
-            {flow_direction = "input-output", position = {2.5, 5.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 5.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -5.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -5.5}, direction = defines.direction.west},
+            { flow_direction = "input-output", position = { 2.5, 5.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, 5.5 }, direction = defines.direction.west },
+            { flow_direction = "input-output", position = { 2.5, -5.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, -5.5 }, direction = defines.direction.west },
         }
     },
     energy_source = {
@@ -174,8 +174,8 @@ ENTITY {
     smoke = {
         {
             name = "turbine-smoke",
-            north_position = {-0.0, 2.5},
-            east_position = {-4.9, -4.5},
+            north_position = { -0.0, 2.5 },
+            east_position = { -4.9, -4.5 },
             frequency = 5 / 16,
             starting_vertical_speed = 0.1,
             slow_down_factor = 0.6,
@@ -186,8 +186,8 @@ ENTITY {
     performance_to_sound_speedup = 0.3,
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk03.ogg"},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk03.ogg", volume = 0.45},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk03.ogg" },
+        idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk03.ogg", volume = 0.45 },
         apparent_volume = 2.5
     }
-}
+})

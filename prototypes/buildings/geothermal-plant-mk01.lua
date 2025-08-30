@@ -1,20 +1,20 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "geothermal-plant-mk01",
     energy_required = 15,
     enabled = false,
     ingredients = {
-        {type = "item", name = "electric-mining-drill", amount = 4},
-        {type = "item", name = "steel-plate",           amount = 30},
-        {type = "item", name = "electronic-circuit",    amount = 10},
-        {type = "item", name = "engine-unit",           amount = 10},
+        { type = "item", name = "electric-mining-drill", amount = 4 },
+        { type = "item", name = "steel-plate",           amount = 30 },
+        { type = "item", name = "electronic-circuit",    amount = 10 },
+        { type = "item", name = "engine-unit",           amount = 10 },
     },
     results = {
-        {type = "item", name = "geothermal-plant-mk01", amount = 1}
+        { type = "item", name = "geothermal-plant-mk01", amount = 1 }
     }
-}:add_unlock("geothermal-power-mk01")
+}):add_unlock("geothermal-power-mk01")
 
-ITEM {
+ITEM({
     type = "item",
     name = "geothermal-plant-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/geothermal-plant-mk01.png",
@@ -24,21 +24,21 @@ ITEM {
     order = "a",
     place_result = "geothermal-plant-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "mining-drill",
     name = "geothermal-plant-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/geothermal-plant-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "geothermal-plant-mk01"},
-    resource_categories = {"geothermal-crack"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "geothermal-plant-mk01" },
+    resource_categories = { "geothermal-crack" },
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.2, -5.2 }, { 5.2, 5.2 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     energy_source =
     {
         type = "electric",
@@ -50,9 +50,9 @@ ENTITY {
         pipe_covers = _G.pipecoverspictures(),
         volume = 200,
         pipe_connections = {
-            {flow_direction = "input-output", position = {-5.0, 0}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {5.0, 0},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {0, 5.0},  direction = defines.direction.south},
+            { flow_direction = "input-output", position = { -5.0, 0 }, direction = defines.direction.west },
+            { flow_direction = "input-output", position = { 5.0, 0 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { 0, 5.0 }, direction = defines.direction.south },
         },
         filter = "pressured-water",
     },
@@ -61,23 +61,23 @@ ENTITY {
         volume = 1000,
         pipe_covers = py.pipe_covers(false, true, true, true),
         pipe_connections = {
-            {flow_direction = "output", position = {0, -5.0}, direction = defines.direction.north}
+            { flow_direction = "output", position = { 0, -5.0 }, direction = defines.direction.north }
         },
         production_type = "output",
     },
     energy_usage = "1MW",
     mining_speed = 2.5,
     resource_searching_radius = 0.49,
-    vector_to_place_result = {0, 0},
+    vector_to_place_result = { 0, 0 },
     radius_visualisation_picture =
     {
         filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
         width = 12,
         height = 12
     },
-    monitor_visualization_tint = {r = 78, g = 173, b = 255},
+    monitor_visualization_tint = { r = 78, g = 173, b = 255 },
     --base_render_layer = "lower-object-above-shadow",
-    circuit_connector = circuit_connector_definitions["geothermal-plant-mk01"],
+    circuit_connector = circuit_connector_definitions[ "geothermal-plant-mk01" ],
     circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     graphics_set = {
         animation = {
@@ -158,8 +158,8 @@ ENTITY {
     impact_category = "metal-large",
     working_sound =
     {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/geothermal-plant.ogg", volume = 0.5},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/geothermal-plant.ogg", volume = 0.5 },
         apparent_volume = 0.5
     },
     fast_replaceable_group = "geothermal-plant",
-}
+})

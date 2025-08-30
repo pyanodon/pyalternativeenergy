@@ -1,26 +1,26 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "centrifuge-mk03",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "centrifuge-mk02",      amount = 1},
-        {type = "item", name = "titanium-plate",       amount = 40},
-        {type = "item", name = "processing-unit",      amount = 10},
-        {type = "item", name = "ns-material",          amount = 10},
-        {type = "item", name = "small-parts-03",       amount = 100},
-        {type = "item", name = "graphene-roll",        amount = 25},
-        {type = "item", name = "plastic-bar",          amount = 100},
-        {type = "item", name = "electric-engine-unit", amount = 10},
-        {type = "item", name = "aerogel",              amount = 20},
-        {type = "item", name = "mechanical-parts-03",  amount = 1},
+        { type = "item", name = "centrifuge-mk02",      amount = 1 },
+        { type = "item", name = "titanium-plate",       amount = 40 },
+        { type = "item", name = "processing-unit",      amount = 10 },
+        { type = "item", name = "ns-material",          amount = 10 },
+        { type = "item", name = "small-parts-03",       amount = 100 },
+        { type = "item", name = "graphene-roll",        amount = 25 },
+        { type = "item", name = "plastic-bar",          amount = 100 },
+        { type = "item", name = "electric-engine-unit", amount = 10 },
+        { type = "item", name = "aerogel",              amount = 20 },
+        { type = "item", name = "mechanical-parts-03",  amount = 1 },
     },
     results = {
-        {type = "item", name = "centrifuge-mk03", amount = 1}
+        { type = "item", name = "centrifuge-mk03", amount = 1 }
     }
-}:add_unlock("machines-mk04")
+}):add_unlock("machines-mk04")
 
-ITEM {
+ITEM({
     type = "item",
     name = "centrifuge-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/centrifuge-mk03.png",
@@ -30,24 +30,24 @@ ITEM {
     order = "a",
     place_result = "centrifuge-mk03",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "centrifuge-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/centrifuge-mk03.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "centrifuge-mk03"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.1, result = "centrifuge-mk03" },
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = { { -3.3, -3.3 }, { 3.3, 3.3 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 3,
-    allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-    crafting_categories = {"centrifuging"},
+    allowed_effects = { "consumption", "speed", "pollution", "productivity" },
+    crafting_categories = { "centrifuging" },
     crafting_speed = 3,
     energy_source = {
         type = "electric",
@@ -120,7 +120,7 @@ ENTITY {
                     line_length = 9,
                     animation_speed = 0.7,
                     shift = util.by_pixel(0, 0),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/centrifuge/top.png",
@@ -141,7 +141,7 @@ ENTITY {
                     line_length = 1,
                     animation_speed = 0.7,
                     shift = util.by_pixel(0, -144),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                 },
             }
         },
@@ -151,38 +151,38 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {1.0, 3.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { 1.0, 3.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-1.0, 3.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { -1.0, 3.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {1.0, -3.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { 1.0, -3.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-1.0, -3.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { -1.0, -3.0 }, direction = defines.direction.north } }
         },
     },
     impact_category = "metal-large",
     working_sound =
     {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/centrifuge.ogg", volume = 0.25 },
         apparent_volume = 0.5
     },
     fast_replaceable_group = "centrifuge"
-}
+})

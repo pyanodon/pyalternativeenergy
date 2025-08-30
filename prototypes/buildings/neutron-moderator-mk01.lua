@@ -1,27 +1,27 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "neutron-moderator-mk01",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "electronic-circuit",  amount = 35},
-        {type = "item", name = "iron-gear-wheel",     amount = 120},
-        {type = "item", name = "iron-plate",          amount = 50},
-        {type = "item", name = "concrete",            amount = 40},
-        {type = "item", name = "steel-plate",         amount = 50},
-        {type = "item", name = "duralumin",           amount = 20},
-        {type = "item", name = "steam-engine",        amount = 1},
-        {type = "item", name = "glass",               amount = 100},
-        {type = "item", name = "niobium-pipe",        amount = 10},
-        {type = "item", name = "mechanical-parts-01", amount = 2},
-        {type = "item", name = "intermetallics",      amount = 10},
+        { type = "item", name = "electronic-circuit",  amount = 35 },
+        { type = "item", name = "iron-gear-wheel",     amount = 120 },
+        { type = "item", name = "iron-plate",          amount = 50 },
+        { type = "item", name = "concrete",            amount = 40 },
+        { type = "item", name = "steel-plate",         amount = 50 },
+        { type = "item", name = "duralumin",           amount = 20 },
+        { type = "item", name = "steam-engine",        amount = 1 },
+        { type = "item", name = "glass",               amount = 100 },
+        { type = "item", name = "niobium-pipe",        amount = 10 },
+        { type = "item", name = "mechanical-parts-01", amount = 2 },
+        { type = "item", name = "intermetallics",      amount = 10 },
     },
     results = {
-        {type = "item", name = "neutron-moderator-mk01", amount = 1}
+        { type = "item", name = "neutron-moderator-mk01", amount = 1 }
     }
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-ITEM {
+ITEM({
     type = "item",
     name = "neutron-moderator-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/neutron-moderator-mk01.png",
@@ -31,28 +31,28 @@ ITEM {
     order = "a",
     place_result = "neutron-moderator-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "neutron-moderator-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/neutron-moderator-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "neutron-moderator-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.1, result = "neutron-moderator-mk01" },
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "solar-panel-explosion",
-    collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 1,
-    allowed_effects = {"speed", "consumption"},
-    crafting_categories = {"neutron-moderator"},
+    allowed_effects = { "speed", "consumption" },
+    crafting_categories = { "neutron-moderator" },
     crafting_speed = 1,
     energy_source = {
         type = "burner",
-        fuel_categories = {"control-rod"},
+        fuel_categories = { "control-rod" },
         effectivity = 1,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
@@ -115,7 +115,7 @@ ENTITY {
                     height = 288,
                     frame_count = 1,
                     shift = util.by_pixel(0, -64),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/neutron-moderator/sh.png",
@@ -140,33 +140,33 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {1.0, 2.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { 1.0, 2.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-1.0, 2.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { -1.0, 2.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {1.0, -2.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { 1.0, -2.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-1.0, -2.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { -1.0, -2.0 }, direction = defines.direction.north } }
         },
     },
     impact_category = "metal-large",
     fast_replaceable_group = "neutron-mod"
-}
+})

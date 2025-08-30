@@ -7,27 +7,27 @@ local pipes = {
     }
 }
 
-local pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.05, -0.75}, nil, nil, pipes)
+local pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { -0.05, -0.75 }, nil, nil, pipes)
 local pipe_covers = py.pipe_covers(true, true, true, true)
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-electric-boiler",
     energy_required = 2,
     enabled = false,
     ingredients = {
-        {type = "item", name = "lab",                   amount = 1},
-        {type = "item", name = "iron-plate",            amount = 100},
-        {type = "item", name = "electric-mining-drill", amount = 3},
-        {type = "item", name = "gasifier",              amount = 1},
-        {type = "item", name = "small-parts-01",        amount = 20},
+        { type = "item", name = "lab",                   amount = 1 },
+        { type = "item", name = "iron-plate",            amount = 100 },
+        { type = "item", name = "electric-mining-drill", amount = 3 },
+        { type = "item", name = "gasifier",              amount = 1 },
+        { type = "item", name = "small-parts-01",        amount = 20 },
     },
     results = {
-        {type = "item", name = "py-electric-boiler", amount = 1}
+        { type = "item", name = "py-electric-boiler", amount = 1 }
     }
-}:add_unlock("energy-1")
+}):add_unlock("energy-1")
 
-ITEM {
+ITEM({
     type = "item",
     name = "py-electric-boiler",
     icon = "__pyalternativeenergygraphics__/graphics/icons/electric-boiler.png",
@@ -37,34 +37,34 @@ ITEM {
     order = "b",
     place_result = "py-electric-boiler",
     stack_size = 10
-}
+})
 
-RECIPE {
+RECIPE({
     name = "electric-boiler-water-to-steam",
     type = "recipe",
     category = "electric-boiler",
     enabled = false,
     energy_required = 5,
-    ingredients = {{
+    ingredients = { {
         type = "fluid",
         name = "water",
         amount = 60 * 5
-    }},
-    results = {{
+    } },
+    results = { {
         type = "fluid",
         name = "steam",
         amount = 60 * 5,
         temperature = 250
-    }},
+    } },
     main_product = "steam"
-}:add_unlock("energy-1")
+}):add_unlock("energy-1")
 
-ENTITY {
+ENTITY({
     name = "py-electric-boiler",
     type = "assembling-machine",
     icon = "__pyalternativeenergygraphics__/graphics/icons/electric-boiler.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
+    flags = { "placeable-neutral", "player-creation" },
     minable = {
         mining_time = 0.5,
         result = "py-electric-boiler"
@@ -79,8 +79,8 @@ ENTITY {
             pipe_covers = pipe_covers,
             pipe_picture = pipe_picture,
             pipe_connections = {
-                {flow_direction = "input-output", position = {1.0, 0},  direction = defines.direction.east},
-                {flow_direction = "input-output", position = {-1.0, 0}, direction = defines.direction.west}
+                { flow_direction = "input-output", position = { 1.0, 0 }, direction = defines.direction.east },
+                { flow_direction = "input-output", position = { -1.0, 0 }, direction = defines.direction.west }
             },
             volume = 200,
             filter = "water"
@@ -90,8 +90,8 @@ ENTITY {
             pipe_covers = pipe_covers,
             pipe_picture = pipe_picture,
             pipe_connections = {
-                {flow_direction = "input-output", position = {0, 1.0},  direction = defines.direction.south},
-                {flow_direction = "input-output", position = {0, -1.0}, direction = defines.direction.north},
+                { flow_direction = "input-output", position = { 0, 1.0 }, direction = defines.direction.south },
+                { flow_direction = "input-output", position = { 0, -1.0 }, direction = defines.direction.north },
             },
             volume = 200,
             filter = "steam"
@@ -111,8 +111,8 @@ ENTITY {
             percent = 30
         }
     },
-    collision_box = {{-1.29, -1.29}, {1.29, 1.29}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = { { -1.29, -1.29 }, { 1.29, 1.29 } },
+    selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     forced_symmetry = "diagonal-pos",
     working_sound = {
         sound = {
@@ -122,7 +122,7 @@ ENTITY {
         max_sounds_per_prototype = 3
     },
     graphics_set = {
-        working_visualisations = {{
+        working_visualisations = { {
             fadeout = true,
             constant_speed = true,
             animation = {
@@ -150,7 +150,7 @@ ENTITY {
                     }
                 }
             }
-        }},
+        } },
         animation = {
             layers = {
                 {
@@ -172,10 +172,10 @@ ENTITY {
         },
     },
     module_slots = 3,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
     show_recipe_icon = false,
     show_recipe_icon_on_map = false,
-    crafting_categories = {"electric-boiler"},
+    crafting_categories = { "electric-boiler" },
     energy_usage = "25MW",
     energy_source = {
         type = "electric",
@@ -185,4 +185,4 @@ ENTITY {
         }
     },
     crafting_speed = 1,
-}
+})

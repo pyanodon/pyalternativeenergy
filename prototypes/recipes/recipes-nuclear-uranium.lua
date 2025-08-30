@@ -4,7 +4,7 @@ RECIPE("bhoddos-mk03"):remove_ingredient("70-u-powder")
 RECIPE("fuelrod-mk01"):remove_unlock("advanced-material-processing-2")
 
 --removing old enrichement recipes
-for _, recipe_name in pairs {
+for _, recipe_name in pairs({
     "u-15",
     "u-15-2",
     "u-20",
@@ -30,37 +30,37 @@ for _, recipe_name in pairs {
     "fuelrod-mk01",
     "fuelrod-mk01-2",
     "fuelrod-mk01-3",
-} do
+}) do
     RECIPE(recipe_name):remove_unlock("uranium-mk04"):remove_unlock("uranium-mk03"):remove_unlock("uranium-mk02"):remove_unlock("uranium-mk01")
-    data.raw.recipe[recipe_name] = nil
+    data.raw.recipe[ recipe_name ] = nil
 end
 
-data.raw.fluid["u-15"] = nil
-data.raw.fluid["u-20"] = nil
-data.raw.fluid["u-23"] = nil
-data.raw.fluid["u-25"] = nil
-data.raw.fluid["u-30"] = nil
-data.raw.fluid["u-33"] = nil
-data.raw.fluid["u-35"] = nil
-data.raw.fluid["u-40"] = nil
-data.raw.fluid["u-43"] = nil
-data.raw.fluid["u-45"] = nil
-data.raw.fluid["u-50"] = nil
-data.raw.fluid["u-65"] = nil
-data.raw.fluid["u-70"] = nil
-data.raw.fluid["u-73"] = nil
-data.raw.fluid["u-75"] = nil
-data.raw.fluid["u-79"] = nil
-data.raw.fluid["u-81"] = nil
-data.raw.fluid["u-83"] = nil
-data.raw.fluid["u-rich-pulp"] = nil
-data.raw.fluid["u-waste"] = nil
-data.raw.fluid["vanadium-mixture"] = nil
-data.raw.fluid["mukmoux-oil"] = nil
+data.raw.fluid[ "u-15" ] = nil
+data.raw.fluid[ "u-20" ] = nil
+data.raw.fluid[ "u-23" ] = nil
+data.raw.fluid[ "u-25" ] = nil
+data.raw.fluid[ "u-30" ] = nil
+data.raw.fluid[ "u-33" ] = nil
+data.raw.fluid[ "u-35" ] = nil
+data.raw.fluid[ "u-40" ] = nil
+data.raw.fluid[ "u-43" ] = nil
+data.raw.fluid[ "u-45" ] = nil
+data.raw.fluid[ "u-50" ] = nil
+data.raw.fluid[ "u-65" ] = nil
+data.raw.fluid[ "u-70" ] = nil
+data.raw.fluid[ "u-73" ] = nil
+data.raw.fluid[ "u-75" ] = nil
+data.raw.fluid[ "u-79" ] = nil
+data.raw.fluid[ "u-81" ] = nil
+data.raw.fluid[ "u-83" ] = nil
+data.raw.fluid[ "u-rich-pulp" ] = nil
+data.raw.fluid[ "u-waste" ] = nil
+data.raw.fluid[ "vanadium-mixture" ] = nil
+data.raw.fluid[ "mukmoux-oil" ] = nil
 
-data.raw.item["20-u-powder"] = nil
-data.raw.item["40-u-powder"] = nil
-data.raw.item["70-u-powder"] = nil
+data.raw.item[ "20-u-powder" ] = nil
+data.raw.item[ "40-u-powder" ] = nil
+data.raw.item[ "70-u-powder" ] = nil
 
 --BETA DECAY = lose an electron.
 
@@ -99,44 +99,44 @@ data.raw.item["70-u-powder"] = nil
 --need pu238 for rtg for satelite limited amount from uranium. thorium can be used as a better breeding source as it can produce only pu238 which removes the need to spend effort seperating the pu238 from higher isotopes.
 --isotope seperation is hard and expensive. most pu238 made from neutron bombardment of neptunium-237 itself made from u236 separated from spent fuel which thorium is a good sorce for a more pure pu238. can also be made from americium thru curium. pu239 can be bombarded to pu240 and again to pu241. pu241 decays to am241. am241 bombarded to am242 which decays to cm242. cm242 decays to pu238. during element changes it also easier seperation of the elements chemically vs isotope seperation of mixed plutonium.
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "control-rod",
     category = "crafting",
     enabled = false,
     energy_required = 1,
     ingredients = {
-        {type = "item", name = "lithium",         amount = 10},
-        {type = "item", name = "lead-plate",      amount = 5},
-        {type = "item", name = "stainless-steel", amount = 3},
-        {type = "item", name = "boron",           amount = 10},
+        { type = "item", name = "lithium",         amount = 10 },
+        { type = "item", name = "lead-plate",      amount = 5 },
+        { type = "item", name = "stainless-steel", amount = 3 },
+        { type = "item", name = "boron",           amount = 10 },
     },
     results = {
-        {type = "item", name = "control-rod", amount = 1}
+        { type = "item", name = "control-rod", amount = 1 }
     },
     subgroup = "py-nuclear",
     order = "g"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "used-control-rod",
     category = "electrolyzer",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "used-control-rod", amount = 1},
-        {type = "fluid", name = "hot-molten-salt",  amount = 50},
+        { type = "item",  name = "used-control-rod", amount = 1 },
+        { type = "fluid", name = "hot-molten-salt",  amount = 50 },
     },
     results = {
-        {type = "fluid", name = "tritium",     amount = 5},
-        {type = "item",  name = "control-rod", amount = 1, probability = 0.5},
-        {type = "fluid", name = "molten-salt", amount = 50},
+        { type = "fluid", name = "tritium",     amount = 5 },
+        { type = "item",  name = "control-rod", amount = 1, probability = 0.5 },
+        { type = "fluid", name = "molten-salt", amount = 50 },
     },
     main_product = "tritium"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "neutron-absorbston",
     category = "neutron-absorber",
@@ -145,12 +145,12 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = "fluid", name = "neutron", amount = 50}
+        { type = "fluid", name = "neutron", amount = 50 }
     },
     results = {},
     subgroup = "py-nuclear",
     order = "g"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
 --PUREX
 
@@ -180,520 +180,520 @@ steb 6b: Pu-sol3 + heat -> PuO2 + offgas
 --mostly u238 from light enrichment
 
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "tbp-2",
     ingredients =
     {
-        {type = "fluid", name = "phosphoryl-chloride", amount = 50},
-        {type = "item",  name = "barrel",              amount = 1},
-        {type = "item",  name = "pyridine",            amount = 1},
-        {type = "fluid", name = "butanol",             amount = 50}
+        { type = "fluid", name = "phosphoryl-chloride", amount = 50 },
+        { type = "item",  name = "barrel",              amount = 1 },
+        { type = "item",  name = "pyridine",            amount = 1 },
+        { type = "fluid", name = "butanol",             amount = 50 }
     },
     results =
     {
-        {type = "item",  name = "tbp",               amount = 1},
-        {type = "fluid", name = "hydrogen-chloride", amount = 30},
+        { type = "item",  name = "tbp",               amount = 1 },
+        { type = "fluid", name = "hydrogen-chloride", amount = 30 },
     },
     main_product = "tbp",
     category = "electrolyzer"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "lithium-salt-fuel-seperation",
     category = "fluid-separator",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "reactor-waste-1",  amount = 100},
-        {type = "item",  name = "lithium-peroxide", amount = 20},
+        { type = "fluid", name = "reactor-waste-1",  amount = 100 },
+        { type = "item",  name = "lithium-peroxide", amount = 20 },
     },
     results = {
-        {type = "fluid", name = "hot-molten-salt",     amount = 10000, temperature = 5000},
-        {type = "item",  name = "high-energy-waste-1", amount = 40},
-        {type = "fluid", name = "salt-solution",       amount = 400}
+        { type = "fluid", name = "hot-molten-salt",     amount = 10000, temperature = 5000 },
+        { type = "item",  name = "high-energy-waste-1", amount = 40 },
+        { type = "fluid", name = "salt-solution",       amount = 400 }
     },
     main_product = "high-energy-waste-1",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "waste-uranium-disolving",
     category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "high-energy-waste-1", amount = 5},
-        {type = "fluid", name = "sulfuric-acid",       amount = 50}
+        { type = "item",  name = "high-energy-waste-1", amount = 5 },
+        { type = "fluid", name = "sulfuric-acid",       amount = 50 }
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-1", amount = 100}
+        { type = "fluid", name = "purex-concentrate-1", amount = 100 }
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-washing-1",
     category = "hydroclassifier",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-1", amount = 60},
-        {type = "item",  name = "tbp",                 amount = 1},
-        {type = "fluid", name = "kerosene",            amount = 100},
+        { type = "fluid", name = "purex-concentrate-1", amount = 60 },
+        { type = "item",  name = "tbp",                 amount = 1 },
+        { type = "fluid", name = "kerosene",            amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-2", amount = 60},
-        {type = "fluid", name = "purex-waste-1",       amount = 30},
+        { type = "fluid", name = "purex-concentrate-2", amount = 60 },
+        { type = "fluid", name = "purex-waste-1",       amount = 30 },
     },
     main_product = "purex-concentrate-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-washing-2",
     category = "fluid-separator",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-2", amount = 80},
-        {type = "fluid", name = "acetone",             amount = 100},
+        { type = "fluid", name = "purex-concentrate-2", amount = 80 },
+        { type = "fluid", name = "acetone",             amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-3", amount = 50},
-        {type = "fluid", name = "purex-concentrate-4", amount = 50},
-        {type = "fluid", name = "purex-waste-1",       amount = 20},
+        { type = "fluid", name = "purex-concentrate-3", amount = 50 },
+        { type = "fluid", name = "purex-concentrate-4", amount = 50 },
+        { type = "fluid", name = "purex-waste-1",       amount = 20 },
     },
     main_product = "purex-concentrate-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-washing-3",
     category = "compressor",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-4", amount = 100},
-        {type = "fluid", name = "naphtha",             amount = 100},
+        { type = "fluid", name = "purex-concentrate-4", amount = 100 },
+        { type = "fluid", name = "naphtha",             amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-5",    amount = 50},
-        {type = "fluid", name = "purex-pu-concentrate-2", amount = 50},
-        {type = "fluid", name = "purex-waste-1",          amount = 10},
+        { type = "fluid", name = "purex-concentrate-5",    amount = 50 },
+        { type = "fluid", name = "purex-pu-concentrate-2", amount = 50 },
+        { type = "fluid", name = "purex-waste-1",          amount = 10 },
     },
     main_product = "purex-concentrate-5",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-washing-4",
     category = "fluid-separator",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-3", amount = 80},
+        { type = "fluid", name = "purex-concentrate-3", amount = 80 },
     },
     results = {
-        {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
-        {type = "fluid", name = "purex-concentrate-4",   amount = 60},
-        {type = "fluid", name = "purex-waste-1",         amount = 5},
+        { type = "fluid", name = "purex-u-concentrate-1", amount = 40 },
+        { type = "fluid", name = "purex-concentrate-4",   amount = 60 },
+        { type = "fluid", name = "purex-waste-1",         amount = 5 },
     },
     main_product = "purex-concentrate-4",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
 --purex waste
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-waste-washing-1",
     category = "fluid-separator",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-waste-1",     amount = 200},
-        {type = "fluid", name = "hydrogen-chloride", amount = 100},
+        { type = "fluid", name = "purex-waste-1",     amount = 200 },
+        { type = "fluid", name = "hydrogen-chloride", amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-1", amount = 25},
-        {type = "fluid", name = "purex-waste-2",       amount = 40},
-        {type = "item",  name = "sb-chloride",         amount = 5}
+        { type = "fluid", name = "purex-concentrate-1", amount = 25 },
+        { type = "fluid", name = "purex-waste-2",       amount = 40 },
+        { type = "item",  name = "sb-chloride",         amount = 5 }
     },
     main_product = "purex-waste-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-waste-washing-2",
     category = "hydroclassifier",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-waste-2", amount = 100},
-        {type = "fluid", name = "chlorine",      amount = 100},
+        { type = "fluid", name = "purex-waste-2", amount = 100 },
+        { type = "fluid", name = "chlorine",      amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-5", amount = 40},
-        {type = "fluid", name = "purex-waste-3",       amount = 40},
+        { type = "fluid", name = "purex-concentrate-5", amount = 40 },
+        { type = "fluid", name = "purex-waste-3",       amount = 40 },
     },
     main_product = "purex-waste-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-waste-vitrification",
     category = "bof",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "purex-waste-3",   amount = 250},
-        {type = "item",  name = "stainless-steel", amount = 2},
-        {type = "item",  name = "sugar",           amount = 5},
-        {type = "fluid", name = "molten-glass",    amount = 50}
+        { type = "fluid", name = "purex-waste-3",   amount = 250 },
+        { type = "item",  name = "stainless-steel", amount = 2 },
+        { type = "item",  name = "sugar",           amount = 5 },
+        { type = "fluid", name = "molten-glass",    amount = 50 }
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-5",   amount = 15},
-        {type = "fluid", name = "purex-u-concentrate-1", amount = 20},
-        {type = "item",  name = "molybdenum-ore",        amount = 5},
-        {type = "item",  name = "vitrified-glass",       amount = 1},
+        { type = "fluid", name = "purex-concentrate-5",   amount = 15 },
+        { type = "fluid", name = "purex-u-concentrate-1", amount = 20 },
+        { type = "item",  name = "molybdenum-ore",        amount = 5 },
+        { type = "item",  name = "vitrified-glass",       amount = 1 },
     },
     main_product = "vitrified-glass",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-raffinate-vitrification",
     category = "bof",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "purex-raffinate", amount = 200},
-        {type = "item",  name = "stainless-steel", amount = 2},
-        {type = "item",  name = "sugar",           amount = 5},
-        {type = "fluid", name = "molten-glass",    amount = 50}
+        { type = "fluid", name = "purex-raffinate", amount = 200 },
+        { type = "item",  name = "stainless-steel", amount = 2 },
+        { type = "item",  name = "sugar",           amount = 5 },
+        { type = "fluid", name = "molten-glass",    amount = 50 }
     },
     results = {
-        {type = "fluid", name = "purex-concentrate-5",   amount = 40},
-        {type = "fluid", name = "purex-u-concentrate-1", amount = 40},
-        {type = "item",  name = "molybdenum-ore",        amount = 5},
-        {type = "item",  name = "vitrified-glass",       amount = 1},
+        { type = "fluid", name = "purex-concentrate-5",   amount = 40 },
+        { type = "fluid", name = "purex-u-concentrate-1", amount = 40 },
+        { type = "item",  name = "molybdenum-ore",        amount = 5 },
+        { type = "item",  name = "vitrified-glass",       amount = 1 },
     },
     main_product = "vitrified-glass",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
 
 --plutonium washing
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "plutonium-washing-1",
     category = "hydroclassifier",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-concentrate-5", amount = 100},
-        {type = "fluid", name = "sulfuric-acid",       amount = 100},
+        { type = "fluid", name = "purex-concentrate-5", amount = 100 },
+        { type = "fluid", name = "sulfuric-acid",       amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-pu-concentrate-1", amount = 40},
-        {type = "fluid", name = "purex-concentrate-3",    amount = 40},
-        {type = "fluid", name = "purex-waste-1",          amount = 5},
+        { type = "fluid", name = "purex-pu-concentrate-1", amount = 40 },
+        { type = "fluid", name = "purex-concentrate-3",    amount = 40 },
+        { type = "fluid", name = "purex-waste-1",          amount = 5 },
     },
     main_product = "purex-pu-concentrate-1",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "plutonium-washing-2",
     category = "hydroclassifier",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-pu-concentrate-1", amount = 100},
-        {type = "fluid", name = "sulfuric-acid",          amount = 100},
+        { type = "fluid", name = "purex-pu-concentrate-1", amount = 100 },
+        { type = "fluid", name = "sulfuric-acid",          amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-pu-concentrate-2", amount = 40},
-        {type = "fluid", name = "purex-concentrate-4",    amount = 40},
-        {type = "fluid", name = "purex-raffinate",        amount = 30},
+        { type = "fluid", name = "purex-pu-concentrate-2", amount = 40 },
+        { type = "fluid", name = "purex-concentrate-4",    amount = 40 },
+        { type = "fluid", name = "purex-raffinate",        amount = 30 },
     },
     main_product = "purex-pu-concentrate-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "plutonium-washing-3",
     category = "flotation",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-pu-concentrate-2", amount = 100},
-        {type = "fluid", name = "sulfuric-acid",          amount = 100},
+        { type = "fluid", name = "purex-pu-concentrate-2", amount = 100 },
+        { type = "fluid", name = "sulfuric-acid",          amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-pu-concentrate-3", amount = 25},
-        {type = "fluid", name = "purex-u-concentrate-1",  amount = 100},
-        {type = "fluid", name = "purex-raffinate",        amount = 20},
+        { type = "fluid", name = "purex-pu-concentrate-3", amount = 25 },
+        { type = "fluid", name = "purex-u-concentrate-1",  amount = 100 },
+        { type = "fluid", name = "purex-raffinate",        amount = 20 },
     },
     main_product = "purex-pu-concentrate-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "plutonium-peroxide",
     category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-pu-concentrate-3", amount = 100},
-        {type = "fluid", name = "hydrogen-peroxide",      amount = 100}
+        { type = "fluid", name = "purex-pu-concentrate-3", amount = 100 },
+        { type = "fluid", name = "hydrogen-peroxide",      amount = 100 }
     },
     results = {
-        {type = "fluid", name = "plutonium-peroxide", amount = 50}
+        { type = "fluid", name = "plutonium-peroxide", amount = 50 }
     },
     main_product = "plutonium-peroxide",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "plutonium",
     category = "evaporator",
     enabled = false,
     energy_required = 2,
     ingredients = {
-        {type = "fluid", name = "plutonium-peroxide", amount = 100},
-        {type = "fluid", name = "ethanol",            amount = 50}
+        { type = "fluid", name = "plutonium-peroxide", amount = 100 },
+        { type = "fluid", name = "ethanol",            amount = 50 }
     },
     results = {
-        {type = "item", name = "plutonium-oxide", amount = 10}
+        { type = "item", name = "plutonium-oxide", amount = 10 }
     },
     --main_product = "plutonium-oxide",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("uranium-processing")
+}):add_unlock("uranium-processing")
 
 --URANIUM
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "uranium-washing-1",
     category = "hydroclassifier",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-u-concentrate-1", amount = 100},
+        { type = "fluid", name = "purex-u-concentrate-1", amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-u-concentrate-2", amount = 50},
-        {type = "fluid", name = "purex-raffinate",       amount = 30},
+        { type = "fluid", name = "purex-u-concentrate-2", amount = 50 },
+        { type = "fluid", name = "purex-raffinate",       amount = 30 },
     },
     main_product = "purex-u-concentrate-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk02")
+}):add_unlock("nuclear-power-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "uranium-washing-2",
     category = "hydroclassifier",
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "fluid", name = "purex-u-concentrate-2", amount = 50},
-        {type = "item",  name = "tbp",                   amount = 1},
-        {type = "fluid", name = "kerosene",              amount = 100},
+        { type = "fluid", name = "purex-u-concentrate-2", amount = 50 },
+        { type = "item",  name = "tbp",                   amount = 1 },
+        { type = "fluid", name = "kerosene",              amount = 100 },
     },
     results = {
-        {type = "fluid", name = "purex-u-concentrate-3", amount = 10},
-        {type = "fluid", name = "purex-raffinate",       amount = 10},
-        {type = "item",  name = "tbp",                   amount = 1, probability = 0.5, ignored_by_productivity = 1},
+        { type = "fluid", name = "purex-u-concentrate-3", amount = 10 },
+        { type = "fluid", name = "purex-raffinate",       amount = 10 },
+        { type = "item",  name = "tbp",                   amount = 1, probability = 0.5, ignored_by_productivity = 1 },
     },
     main_product = "purex-u-concentrate-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk02")
+}):add_unlock("nuclear-power-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "uranium",
     category = "evaporator",
     enabled = false,
     energy_required = 1,
     ingredients = {
-        {type = "fluid", name = "purex-u-concentrate-3", amount = 10},
+        { type = "fluid", name = "purex-u-concentrate-3", amount = 10 },
     },
     results = {
-        {type = "item", name = "uranium-oxide", amount = 1}
+        { type = "item", name = "uranium-oxide", amount = 1 }
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk02")
+}):add_unlock("nuclear-power-mk02")
 
 --purex raffinate
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-raffinate-1",
     category = "pan",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-raffinate", amount = 150},
-        {type = "fluid", name = "ammonia",         amount = 50}
+        { type = "fluid", name = "purex-raffinate", amount = 150 },
+        { type = "fluid", name = "ammonia",         amount = 50 }
     },
     results = {
-        {type = "item",  name = "niobium-ore",       amount = 5},
-        {type = "fluid", name = "purex-raffinate-2", amount = 50},
+        { type = "item",  name = "niobium-ore",       amount = 5 },
+        { type = "fluid", name = "purex-raffinate-2", amount = 50 },
     },
     main_product = "purex-raffinate-2",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03")
+}):add_unlock("nuclear-power-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-raffinate-2",
     category = "hydroclassifier",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-raffinate-2",   amount = 150},
-        {type = "fluid", name = "acid-strip-solution", amount = 40}
+        { type = "fluid", name = "purex-raffinate-2",   amount = 150 },
+        { type = "fluid", name = "acid-strip-solution", amount = 40 }
     },
     results = {
-        {type = "fluid", name = "purex-raffinate-3", amount = 50},
-        {type = "fluid", name = "re-pulp-01",        amount = 50},
+        { type = "fluid", name = "purex-raffinate-3", amount = 50 },
+        { type = "fluid", name = "re-pulp-01",        amount = 50 },
     },
     main_product = "purex-raffinate-3",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03")
+}):add_unlock("nuclear-power-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "purex-raffinate-3",
     category = "pan",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "purex-raffinate-3", amount = 100},
-        {type = "item",  name = "sodium-carbonate",  amount = 4}
+        { type = "fluid", name = "purex-raffinate-3", amount = 100 },
+        { type = "item",  name = "sodium-carbonate",  amount = 4 }
     },
     results = {
-        {type = "fluid", name = "ac", amount = 50},
+        { type = "fluid", name = "ac", amount = 50 },
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03")
+}):add_unlock("nuclear-power-mk03")
 
 --ac reduction
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "ac-oxygenated",
     category = "hydroclassifier",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "ac",     amount = 80},
-        {type = "fluid", name = "oxygen", amount = 200}
+        { type = "fluid", name = "ac",     amount = 80 },
+        { type = "fluid", name = "oxygen", amount = 200 }
     },
     results = {
-        {type = "fluid", name = "ac-oxygenated", amount = 40},
+        { type = "fluid", name = "ac-oxygenated", amount = 40 },
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03")
+}):add_unlock("nuclear-power-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "americium-reduction",
     category = "pan",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "ac-oxygenated", amount = 60},
-        {type = "item",  name = "th-oxide",      amount = 10}
+        { type = "fluid", name = "ac-oxygenated", amount = 60 },
+        { type = "item",  name = "th-oxide",      amount = 10 }
     },
     results = {
-        {type = "fluid", name = "c-oxygenated",    amount = 20},
-        {type = "item",  name = "americium-oxide", amount = 5},
+        { type = "fluid", name = "c-oxygenated",    amount = 20 },
+        { type = "item",  name = "americium-oxide", amount = 5 },
     },
     main_product = "americium-oxide",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03") --thorium is a reducing agent and therefore should be an oxide
+}):add_unlock("nuclear-power-mk03") --thorium is a reducing agent and therefore should be an oxide
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "curium-reduction",
     category = "hpf",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "fluid", name = "c-oxygenated", amount = 60},
-        {type = "item",  name = "lithium",      amount = 3}
+        { type = "fluid", name = "c-oxygenated", amount = 60 },
+        { type = "item",  name = "lithium",      amount = 3 }
     },
     results = {
-        {type = "item", name = "cm-250", amount = 2},
+        { type = "item", name = "cm-250", amount = 2 },
     },
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03") --lithium is a reducing agent and therefore should be an oxide
+}):add_unlock("nuclear-power-mk03") --lithium is a reducing agent and therefore should be an oxide
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "sb-chloride-to-ore",
     category = "hpf",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "sb-chloride", amount = 10},
-        {type = "fluid", name = "water",       amount = 200}
+        { type = "item",  name = "sb-chloride", amount = 10 },
+        { type = "fluid", name = "water",       amount = 200 }
     },
     results = {
-        {type = "item",  name = "antimonium-ore",    amount = 4},
-        {type = "fluid", name = "hydrogen-chloride", amount = 50}
+        { type = "item",  name = "antimonium-ore",    amount = 4 },
+        { type = "fluid", name = "hydrogen-chloride", amount = 50 }
     },
     main_product = "antimonium-ore",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("nuclear-power-mk03")
+}):add_unlock("nuclear-power-mk03")
 
 --MANHATTEN PROJECT--
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "split-yellowcake",
     enabled = false,
@@ -703,18 +703,18 @@ RECIPE {
     icon_size = 64,
     ingredients =
     {
-        {type = "item", name = "yellow-cake", amount = 10},
+        { type = "item", name = "yellow-cake", amount = 10 },
     },
     results = {
-        {type = "item", name = "u-235", amount = 10, probability = 0.1},
-        {type = "item", name = "u-238", amount = 10, probability = 0.9}
+        { type = "item", name = "u-235", amount = 10, probability = 0.1 },
+        { type = "item", name = "u-238", amount = 10, probability = 0.9 }
     },
     --main_product = "u-235",
     subgroup = "py-nuclear-waste",
     order = "b"
-}:add_unlock("uranium-processing")
+}):add_unlock("uranium-processing")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "fuel-cell-dissolve",
     enabled = false,
@@ -722,17 +722,17 @@ RECIPE {
     category = "mixer",
     ingredients =
     {
-        {type = "item",  name = "depleted-uranium-fuel-cell", amount = 10},
-        {type = "item",  name = "sodium-hydroxide",           amount = 15},
-        {type = "fluid", name = "water",                      amount = 250},
-        {type = "fluid", name = "sulfuric-acid",              amount = 250}
+        { type = "item",  name = "depleted-uranium-fuel-cell", amount = 10 },
+        { type = "item",  name = "sodium-hydroxide",           amount = 15 },
+        { type = "fluid", name = "water",                      amount = 250 },
+        { type = "fluid", name = "sulfuric-acid",              amount = 250 }
     },
     results = {
-        {type = "fluid", name = "sb-phosphate-1", amount = 100}
+        { type = "fluid", name = "sb-phosphate-1", amount = 100 }
     },
-}:add_unlock("uranium-processing")
+}):add_unlock("uranium-processing")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "antimony-phosphate",
     enabled = false,
@@ -740,18 +740,18 @@ RECIPE {
     category = "centrifuging",
     ingredients =
     {
-        {type = "fluid", name = "sb-phosphate-1",  amount = 5},
-        {type = "item",  name = "sb-oxide",        amount = 5},
-        {type = "fluid", name = "phosphoric-acid", amount = 250}
+        { type = "fluid", name = "sb-phosphate-1",  amount = 5 },
+        { type = "item",  name = "sb-oxide",        amount = 5 },
+        { type = "fluid", name = "phosphoric-acid", amount = 250 }
     },
     results = {
-        {type = "item",  name = "sb-hpo-pu",           amount = 10},
-        {type = "fluid", name = "purex-concentrate-1", amount = 100}
+        { type = "item",  name = "sb-hpo-pu",           amount = 10 },
+        { type = "fluid", name = "purex-concentrate-1", amount = 100 }
     },
     main_product = "sb-hpo-pu",
-}:add_unlock("uranium-processing")
+}):add_unlock("uranium-processing")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "plutonium-oxidation",
     enabled = false,
@@ -759,17 +759,17 @@ RECIPE {
     category = "centrifuging",
     ingredients =
     {
-        {type = "item",  name = "sb-hpo-pu",         amount = 5},
-        {type = "fluid", name = "hydrogen-peroxide", amount = 250}
+        { type = "item",  name = "sb-hpo-pu",         amount = 5 },
+        { type = "fluid", name = "hydrogen-peroxide", amount = 250 }
     },
     results = {
-        {type = "fluid", name = "plutonium-peroxide", amount = 100},
-        {type = "fluid", name = "sb-phosphate-2",     amount = 100}
+        { type = "fluid", name = "plutonium-peroxide", amount = 100 },
+        { type = "fluid", name = "sb-phosphate-2",     amount = 100 }
     },
     main_product = "plutonium-peroxide",
-}:add_unlock("uranium-processing")
+}):add_unlock("uranium-processing")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "antimony-phosphate-2",
     enabled = false,
@@ -777,20 +777,20 @@ RECIPE {
     category = "mixer",
     ingredients =
     {
-        {type = "fluid", name = "sb-phosphate-2",   amount = 200},
-        {type = "item",  name = "sb-oxide",         amount = 5},
-        {type = "fluid", name = "phosphoric-acid",  amount = 250},
-        {type = "item",  name = "ammonium-mixture", amount = 3},
+        { type = "fluid", name = "sb-phosphate-2",   amount = 200 },
+        { type = "item",  name = "sb-oxide",         amount = 5 },
+        { type = "fluid", name = "phosphoric-acid",  amount = 250 },
+        { type = "item",  name = "ammonium-mixture", amount = 3 },
     },
     results = {
-        {type = "fluid", name = "plutonium-peroxide",  amount = 100},
-        {type = "fluid", name = "purex-concentrate-1", amount = 100},
-        {type = "fluid", name = "sb-phosphate-3",      amount = 100}
+        { type = "fluid", name = "plutonium-peroxide",  amount = 100 },
+        { type = "fluid", name = "purex-concentrate-1", amount = 100 },
+        { type = "fluid", name = "sb-phosphate-3",      amount = 100 }
     },
     main_product = "plutonium-peroxide",
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "plutonium-oxidation-2",
     enabled = false,
@@ -798,32 +798,32 @@ RECIPE {
     category = "mixer",
     ingredients =
     {
-        {type = "fluid", name = "sb-phosphate-3", amount = 200},
-        {type = "item",  name = "oxalic-acid",    amount = 8},
+        { type = "fluid", name = "sb-phosphate-3", amount = 200 },
+        { type = "item",  name = "oxalic-acid",    amount = 8 },
     },
     results = {
-        {type = "fluid", name = "plutonium-peroxide", amount = 100},
-        {type = "fluid", name = "purex-raffinate",    amount = 100}
+        { type = "fluid", name = "plutonium-peroxide", amount = 100 },
+        { type = "fluid", name = "purex-raffinate",    amount = 100 }
     },
     main_product = "plutonium-peroxide",
-}:add_unlock("nuclear-power-mk02")
+}):add_unlock("nuclear-power-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "yellow-cake-uf6",
     category = "hydroclassifier", --pyfe screener
     enabled = false,
     energy_required = 4,
     ingredients = {
-        {type = "item",  name = "yellow-cake",       amount = 5},
-        {type = "fluid", name = "hydrofluoric-acid", amount = 50},
-        {type = "fluid", name = "fluorine-gas",      amount = 50}
+        { type = "item",  name = "yellow-cake",       amount = 5 },
+        { type = "fluid", name = "hydrofluoric-acid", amount = 50 },
+        { type = "fluid", name = "fluorine-gas",      amount = 50 }
     },
     results = {
-        {type = "fluid", name = "uf6", amount = 100, temperature = 70},
+        { type = "fluid", name = "uf6", amount = 100, temperature = 70 },
     },
     main_product = "uf6",
     icon = "__pyraworesgraphics__/graphics/icons/powdered-u-screening.png",
     icon_size = 32,
     subgroup = "py-nuclear",
-}:add_unlock("uranium-mk01")
+}):add_unlock("uranium-mk01")

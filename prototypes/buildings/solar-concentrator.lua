@@ -1,25 +1,25 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "solar-concentrator",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "small-parts-02",          amount = 200},
-        {type = "item", name = "niobium-plate",           amount = 100},
-        {type = "item", name = "advanced-circuit",        amount = 30},
-        {type = "item", name = "concrete",                amount = 200},
-        {type = "item", name = "eva",                     amount = 80},
-        {type = "item", name = "self-assembly-monolayer", amount = 20},
-        {type = "item", name = "engine-unit",             amount = 30},
-        {type = "item", name = "solder",                  amount = 50},
-        {type = "item", name = "mechanical-parts-02",     amount = 5},
+        { type = "item", name = "small-parts-02",          amount = 200 },
+        { type = "item", name = "niobium-plate",           amount = 100 },
+        { type = "item", name = "advanced-circuit",        amount = 30 },
+        { type = "item", name = "concrete",                amount = 200 },
+        { type = "item", name = "eva",                     amount = 80 },
+        { type = "item", name = "self-assembly-monolayer", amount = 20 },
+        { type = "item", name = "engine-unit",             amount = 30 },
+        { type = "item", name = "solder",                  amount = 50 },
+        { type = "item", name = "mechanical-parts-02",     amount = 5 },
     },
     results = {
-        {type = "item", name = "solar-concentrator", amount = 1}
+        { type = "item", name = "solar-concentrator", amount = 1 }
     }
-}:add_unlock("thermal-mk02")
+}):add_unlock("thermal-mk02")
 
-ITEM {
+ITEM({
     type = "item",
     name = "solar-concentrator",
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-concentrator.png",
@@ -29,26 +29,26 @@ ITEM {
     order = "ba",
     place_result = "solar-concentrator",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "solar-concentrator",
     fixed_recipe = "lrf-steam-2",
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-concentrator.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "solar-concentrator"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "solar-concentrator" },
     fast_replaceable_group = "solar-concentrator",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
-    selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
+    collision_box = { { -6.3, -6.3 }, { 6.3, 6.3 } },
+    selection_box = { { -6.5, -6.5 }, { 6.5, 6.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 0,
     --allowed_effects = {'speed', 'consumption'},
-    crafting_categories = {"lrf2"},
+    crafting_categories = { "lrf2" },
     crafting_speed = 1,
     energy_source = {
         type = "electric",
@@ -63,7 +63,7 @@ ENTITY {
             {
                 effect = "uranium-glow",
                 fadeout = true,
-                light = {intensity = 1.3, size = 30, shift = {0.0, 0.0}, color = {r = 0.584, g = 1.0, b = 1.0}}
+                light = { intensity = 1.3, size = 30, shift = { 0.0, 0.0 }, color = { r = 0.584, g = 1.0, b = 1.0 } }
             },
             {
                 north_position = util.by_pixel(-96, 16),
@@ -174,37 +174,37 @@ ENTITY {
     fluid_boxes = {
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2, -6.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 2, -6.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-3, 6.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { -3, 6.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-3, -6.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { -3, -6.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {2, 6.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 2, 6.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 0.5},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 0.1},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 0.5 },
+        idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 0.1 },
         apparent_volume = 2.5
     }
-}
+})

@@ -1,46 +1,46 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "nuclear-molten-salt-01",
     category = "nuclear-fission",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "molten-salt", amount = 20000},
+        { type = "fluid", name = "molten-salt", amount = 20000 },
     },
     results = {
-        {type = "fluid", name = "reactor-waste-1", amount = 200},
-        {type = "fluid", name = "neutron",         amount = 200, temperature = 100},
+        { type = "fluid", name = "reactor-waste-1", amount = 200 },
+        { type = "fluid", name = "neutron",         amount = 200, temperature = 100 },
     },
     main_product = "reactor-waste-1"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "mox-molten-salt-01",
     category = "nuclear-mox-fission",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "molten-salt", amount = 20000},
+        { type = "fluid", name = "molten-salt", amount = 20000 },
     },
     results = {
-        {type = "fluid", name = "reactor-waste-2", amount = 200},
-        {type = "fluid", name = "neutron",         amount = 200, temperature = 100},
+        { type = "fluid", name = "reactor-waste-2", amount = 200 },
+        { type = "fluid", name = "neutron",         amount = 200, temperature = 100 },
     },
     main_product = "reactor-waste-2"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "thermal-neutron",
     category = "neutron-moderator",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "fluid", name = "neutron", amount = 200, ignored_by_stats = 200},
+        { type = "fluid", name = "neutron", amount = 200, ignored_by_stats = 200 },
     },
     results = {
-        {type = "fluid", name = "neutron", amount = 200, temperature = 1000, ignored_by_stats = 200, ignored_by_productivity = 200},
+        { type = "fluid", name = "neutron", amount = 200, temperature = 1000, ignored_by_stats = 200, ignored_by_productivity = 200 },
     },
     main_product = "neutron"
-}:add_unlock("nuclear-power")
+}):add_unlock("nuclear-power")

@@ -1,5 +1,5 @@
 if not feature_flags.spoiling then return end
-if not settings.startup["py-enable-decay"].value then
+if not settings.startup[ "py-enable-decay" ].value then
     return
 end
 
@@ -20,20 +20,20 @@ ITEM("animal-sample-01"):spoil("plasmids", hour)
 
 RECIPE("jacket-bio-ore")
 :multiply_result_amount("bio-ore", 0.1)
-:add_result {
+:add_result({
     name = "nanozymes",
     type = "item",
     amount = 1,
     probability = 0.90,
     ignored_by_stats = 1,
     ignored_by_productivity = 1
-}
+})
 .allow_productivity = true
 
 ITEM("animal-eye"):spoil("biomass", 30 * minute)
-RECIPE("acetaldehyde-1"):replace_ingredient("plastic-bar", {type = "item", name = "barrel", amount = 1})
-RECIPE("acetaldehyde-2"):replace_ingredient("plastic-bar", {type = "item", name = "barrel", amount = 1})
-ITEM("acetaldehyde"):spoil("barrel", 30 * second).stack_size = data.raw.item["barrel"].stack_size
+RECIPE("acetaldehyde-1"):replace_ingredient("plastic-bar", { type = "item", name = "barrel", amount = 1 })
+RECIPE("acetaldehyde-2"):replace_ingredient("plastic-bar", { type = "item", name = "barrel", amount = 1 })
+ITEM("acetaldehyde"):spoil("barrel", 30 * second).stack_size = data.raw.item[ "barrel" ].stack_size
 ITEM("time-crystal"):spoil("time-crystal", hour)
 ITEM("bio-ore"):spoil("biocarnation", hour)
 ITEM("er-oxide"):spoil("impure-er-oxide", hour)
@@ -46,7 +46,7 @@ ITEM("biocarnation"):spoil("advanced-substrate", 2 * hour)
 ITEM("cm-250"):spoil("plutonium-oxide", minute * 8300)
 ITEM("pa-233"):spoil("u-233", 27 * second) -- realistic time is 27 days
 RECIPE("pa233-u233"):remove_unlock("nuclear-power-mk03")
-data.raw.recipe["pa233-u233"] = nil
+data.raw.recipe[ "pa233-u233" ] = nil
 ITEM("po-210"):spoil("reduced-lead", 138.4 * minute)
 ITEM("pu-238"):spoil("u-234", 87.7 * minute)
 ITEM("pu-239"):spoil("u-235", 24100 * minute)
@@ -70,7 +70,7 @@ for i = 232, 240 do
     ITEM("u-" .. i):spoil("uranium-oxide", 50 * minute)
 end
 ITEM("uranium-oxide"):spoil("ash", day)
-data.raw.recipe["uranium-seperation"]:replace_ingredient("u238", {type = "item", name = "u238", amount = 10, probability = 0.25}):add_ingredient {type = "item", name = "ash", amount = 10, probability = 0.425}
+data.raw.recipe[ "uranium-seperation" ]:replace_ingredient("u238", { type = "item", name = "u238", amount = 10, probability = 0.25 }):add_ingredient({ type = "item", name = "ash", amount = 10, probability = 0.425 })
 
 ITEM("high-energy-waste-2"):spoil("high-energy-waste-1", 5 * minute)
 ITEM("high-energy-waste-1"):spoil("ash", 5 * minute)
@@ -85,7 +85,7 @@ ITEM("brain"):spoil("dried-meat", 16 * hour)
 
 ITEM("manure"):spoil("rich-clay", 5.5 * hour)
 
-RECIPE("fertilizer-3"):add_ingredient {type = "item", name = "biocrud", amount = 2}
+RECIPE("fertilizer-3"):add_ingredient({ type = "item", name = "biocrud", amount = 2 })
 
 local meaty_foods = {
     "kmauts-ration",
@@ -101,19 +101,19 @@ local meaty_foods = {
 }
 
 local meat_to_remove = {
-    ["meat"] = true,
-    ["guts"] = true,
-    ["skin"] = true,
-    ["bonemeal"] = true,
-    ["mukmoux-fat"] = true,
+    [ "meat" ] = true,
+    [ "guts" ] = true,
+    [ "skin" ] = true,
+    [ "bonemeal" ] = true,
+    [ "mukmoux-fat" ] = true,
 }
 
 for _, food in pairs(meaty_foods) do
-    if not data.raw.recipe[food] then error(food) end
+    if not data.raw.recipe[ food ] then error(food) end
     food = RECIPE(food)
     local removed_count = 0
     for _, ingredient in pairs(food.ingredients) do
-        if meat_to_remove[ingredient.name] then
+        if meat_to_remove[ ingredient.name ] then
             removed_count = removed_count + ingredient.amount
         end
     end
@@ -121,15 +121,15 @@ for _, food in pairs(meaty_foods) do
     for meat in pairs(meat_to_remove) do
         food:remove_ingredient(meat)
     end
-    food:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}
+    food:add_ingredient({ type = "item", name = "dried-meat", amount = removed_count })
 end
 
-for _, workers_food in pairs {
+for _, workers_food in pairs({
     "workers-food",
     "workers-food-02",
     "workers-food-03",
-} do
-    RECIPE(workers_food):add_ingredient {type = "item", name = "dried-meat", amount = 5}
+}) do
+    RECIPE(workers_food):add_ingredient({ type = "item", name = "dried-meat", amount = 5 })
 end
 
 ITEM("native-flora"):spoil("floraspollinin", 200 * minute)
@@ -148,13 +148,13 @@ ITEM("fish-egg-mk02"):spoil("fish-egg", hour)
 ITEM("fish-egg-mk03"):spoil("fish-egg-mk02", 2 * hour)
 ITEM("fish-egg-mk04"):spoil("fish-egg-mk03", 4 * hour)
 
-RECIPE("biomass-molten-salt-01"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-02"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-03"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-04"):add_ingredient {type = "item", name = "biocrud", amount = 1}
+RECIPE("biomass-molten-salt-01"):add_ingredient({ type = "item", name = "biocrud", amount = 1 })
+RECIPE("biomass-molten-salt-02"):add_ingredient({ type = "item", name = "biocrud", amount = 1 })
+RECIPE("biomass-molten-salt-03"):add_ingredient({ type = "item", name = "biocrud", amount = 1 })
+RECIPE("biomass-molten-salt-04"):add_ingredient({ type = "item", name = "biocrud", amount = 1 })
 
 RECIPE("bacteria-2"):remove_unlock("microbiology-mk04"):add_unlock("microbiology-mk03")
-RECIPE("perfect-samples"):add_ingredient {type = "item", name = "rich-biocrud", amount = 3}
+RECIPE("perfect-samples"):add_ingredient({ type = "item", name = "rich-biocrud", amount = 3 })
 
 ITEM("perfect-samples"):spoil("rich-biocrud", 30 * minute)
 ITEM("magnetic-organ"):spoil("biocrud", hour)
@@ -199,16 +199,16 @@ ITEM("negasium"):spoil("paragen", 37 * minute)
 ITEM("paragen"):spoil("solidified-sarcorus", 31 * minute)
 ITEM("solidified-sarcorus"):spoil("chitin", 29 * minute)
 
-ITEM("sea-sponge-sprouts-mk04"):spoil("sea-sponge-sprouts-mk03", 2 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
-ITEM("sea-sponge-sprouts-mk03"):spoil("sea-sponge-sprouts-mk02", 4 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
-ITEM("sea-sponge-sprouts-mk02"):spoil("sea-sponge-sprouts", 8 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
-ITEM("sea-sponge-sprouts"):spoil("ore-quartz", 16 * minute).stack_size = data.raw.item["ore-quartz"].stack_size
+ITEM("sea-sponge-sprouts-mk04"):spoil("sea-sponge-sprouts-mk03", 2 * minute).stack_size = data.raw.item[ "ore-quartz" ].stack_size
+ITEM("sea-sponge-sprouts-mk03"):spoil("sea-sponge-sprouts-mk02", 4 * minute).stack_size = data.raw.item[ "ore-quartz" ].stack_size
+ITEM("sea-sponge-sprouts-mk02"):spoil("sea-sponge-sprouts", 8 * minute).stack_size = data.raw.item[ "ore-quartz" ].stack_size
+ITEM("sea-sponge-sprouts"):spoil("ore-quartz", 16 * minute).stack_size = data.raw.item[ "ore-quartz" ].stack_size
 
 ITEM("yotoi-fruit-mk04"):spoil("yotoi-fruit-mk03", 32 * minute)
 ITEM("yotoi-fruit-mk03"):spoil("yotoi-fruit-mk02", 16 * minute)
 ITEM("yotoi-fruit-mk02"):spoil("yotoi-fruit", 8 * minute)
 ITEM("yotoi-fruit"):spoil("yotoi-seeds", 4 * minute)
-RECIPE("yotoi-seeds"):add_result_amount("yotoi-seeds", 4):add_result {type = "item", name = "yotoi-leaves", amount = 1}.main_product = "yotoi-seeds"
+RECIPE("yotoi-seeds"):add_result_amount("yotoi-seeds", 4):add_result({ type = "item", name = "yotoi-leaves", amount = 1 }).main_product = "yotoi-seeds"
 
 ITEM("wood-seedling-mk04"):spoil("wood-seeds-mk04", 6 * hour)
 ITEM("wood-seedling-mk03"):spoil("wood-seeds-mk03", 4 * hour)

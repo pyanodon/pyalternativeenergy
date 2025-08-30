@@ -1,99 +1,99 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-oil-powerplant-mk01",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate",         amount = 100},
-        {type = "item", name = "small-parts-01",      amount = 200},
-        {type = "item", name = "duralumin",           amount = 50},
-        {type = "item", name = "pipe",                amount = 200},
-        {type = "item", name = "gas-refinery-mk01",   amount = 1},
-        {type = "item", name = "electronic-circuit",  amount = 100},
-        {type = "item", name = "distilator",          amount = 1},
-        {type = "item", name = "intermetallics",      amount = 40},
-        {type = "item", name = "steam-engine",        amount = 20},
-        {type = "item", name = "mechanical-parts-01", amount = 3},
+        { type = "item", name = "steel-plate",         amount = 100 },
+        { type = "item", name = "small-parts-01",      amount = 200 },
+        { type = "item", name = "duralumin",           amount = 50 },
+        { type = "item", name = "pipe",                amount = 200 },
+        { type = "item", name = "gas-refinery-mk01",   amount = 1 },
+        { type = "item", name = "electronic-circuit",  amount = 100 },
+        { type = "item", name = "distilator",          amount = 1 },
+        { type = "item", name = "intermetallics",      amount = 40 },
+        { type = "item", name = "steam-engine",        amount = 20 },
+        { type = "item", name = "mechanical-parts-01", amount = 3 },
     },
     results = {
-        {type = "item", name = "py-oil-powerplant-mk01", amount = 1}
+        { type = "item", name = "py-oil-powerplant-mk01", amount = 1 }
     }
-}:add_unlock("oilplant-mk01")
+}):add_unlock("oilplant-mk01")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-oil-powerplant-mk02",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "py-oil-powerplant-mk01",  amount = 1},
-        {type = "item", name = "small-parts-02",          amount = 100},
-        {type = "item", name = "stainless-steel",         amount = 50},
-        {type = "item", name = "advanced-circuit",        amount = 50},
-        {type = "item", name = "plastic-bar",             amount = 200},
-        {type = "item", name = "eva",                     amount = 50},
-        {type = "item", name = "engine-unit",             amount = 20},
-        {type = "item", name = "niobium-pipe",            amount = 200},
-        {type = "item", name = "self-assembly-monolayer", amount = 20},
-        {type = "item", name = "mechanical-parts-02",     amount = 5},
+        { type = "item", name = "py-oil-powerplant-mk01",  amount = 1 },
+        { type = "item", name = "small-parts-02",          amount = 100 },
+        { type = "item", name = "stainless-steel",         amount = 50 },
+        { type = "item", name = "advanced-circuit",        amount = 50 },
+        { type = "item", name = "plastic-bar",             amount = 200 },
+        { type = "item", name = "eva",                     amount = 50 },
+        { type = "item", name = "engine-unit",             amount = 20 },
+        { type = "item", name = "niobium-pipe",            amount = 200 },
+        { type = "item", name = "self-assembly-monolayer", amount = 20 },
+        { type = "item", name = "mechanical-parts-02",     amount = 5 },
     },
     results = {
-        {type = "item", name = "py-oil-powerplant-mk02", amount = 1}
+        { type = "item", name = "py-oil-powerplant-mk02", amount = 1 }
     }
-}:add_unlock("oilplant-mk02")
+}):add_unlock("oilplant-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-oil-powerplant-mk03",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "py-oil-powerplant-mk02", amount = 1},
-        {type = "item", name = "small-parts-03",         amount = 100},
-        {type = "item", name = "super-steel",            amount = 200},
-        {type = "item", name = "processing-unit",        amount = 100},
-        {type = "item", name = "cf",                     amount = 100},
-        {type = "item", name = "acrylic",                amount = 100},
-        {type = "item", name = "low-density-structure",  amount = 50},
-        {type = "item", name = "electric-engine-unit",   amount = 20},
-        {type = "item", name = "aerogel",                amount = 100},
-        {type = "item", name = "ns-material",            amount = 30},
-        {type = "item", name = "mechanical-parts-03",    amount = 5},
+        { type = "item", name = "py-oil-powerplant-mk02", amount = 1 },
+        { type = "item", name = "small-parts-03",         amount = 100 },
+        { type = "item", name = "super-steel",            amount = 200 },
+        { type = "item", name = "processing-unit",        amount = 100 },
+        { type = "item", name = "cf",                     amount = 100 },
+        { type = "item", name = "acrylic",                amount = 100 },
+        { type = "item", name = "low-density-structure",  amount = 50 },
+        { type = "item", name = "electric-engine-unit",   amount = 20 },
+        { type = "item", name = "aerogel",                amount = 100 },
+        { type = "item", name = "ns-material",            amount = 30 },
+        { type = "item", name = "mechanical-parts-03",    amount = 5 },
     },
     results = {
-        {type = "item", name = "py-oil-powerplant-mk03", amount = 1}
+        { type = "item", name = "py-oil-powerplant-mk03", amount = 1 }
     }
-}:add_unlock("oilplant-mk03")
+}):add_unlock("oilplant-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-oil-powerplant-mk04",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "py-oil-powerplant-mk03",        amount = 1},
-        {type = "item", name = "ti-n",                          amount = 50},
-        {type = "item", name = "nbfe-alloy",                    amount = 40},
-        {type = "item", name = "science-coating",               amount = 15},
-        {type = "item", name = "carbon-aerogel",                amount = 100},
-        {type = "item", name = "super-alloy",                   amount = 200},
-        {type = "item", name = "intelligent-unit",              amount = 10},
-        {type = "item", name = "superconductor-servomechanims", amount = 10},
-        {type = "item", name = "metastable-quasicrystal",       amount = 10},
-        {type = "item", name = "metallic-glass",                amount = 40},
-        {type = "item", name = "mechanical-parts-04",           amount = 5},
+        { type = "item", name = "py-oil-powerplant-mk03",        amount = 1 },
+        { type = "item", name = "ti-n",                          amount = 50 },
+        { type = "item", name = "nbfe-alloy",                    amount = 40 },
+        { type = "item", name = "science-coating",               amount = 15 },
+        { type = "item", name = "carbon-aerogel",                amount = 100 },
+        { type = "item", name = "super-alloy",                   amount = 200 },
+        { type = "item", name = "intelligent-unit",              amount = 10 },
+        { type = "item", name = "superconductor-servomechanims", amount = 10 },
+        { type = "item", name = "metastable-quasicrystal",       amount = 10 },
+        { type = "item", name = "metallic-glass",                amount = 40 },
+        { type = "item", name = "mechanical-parts-04",           amount = 5 },
     },
     results = {
-        {type = "item", name = "py-oil-powerplant-mk04", amount = 1}
+        { type = "item", name = "py-oil-powerplant-mk04", amount = 1 }
     }
-}:add_unlock("oilplant-mk04")
+}):add_unlock("oilplant-mk04")
 
 for i = 1, 4 do
     local name = "py-oil-powerplant-mk0" .. i
     local icon = "__pyalternativeenergygraphics__/graphics/icons/oil-powerplant-mk0" .. i .. ".png"
     local icon_size = 64
 
-    ITEM {
+    ITEM({
         type = "item",
         name = name,
         icon = icon,
@@ -103,24 +103,24 @@ for i = 1, 4 do
         order = "a",
         place_result = name,
         stack_size = 10
-    }
+    })
 
-    ENTITY {
+    ENTITY({
         type = "assembling-machine",
         name = name,
         icon = icon,
         icon_size = icon_size,
-        flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.1, result = name},
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.1, result = name },
         max_health = 500 * i,
         corpse = "big-remnants",
         dying_explosion = "big-explosion",
-        collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
-        selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
+        collision_box = { { -6.3, -6.3 }, { 6.3, 6.3 } },
+        selection_box = { { -6.5, -6.5 }, { 6.5, 6.5 } },
         forced_symmetry = "diagonal-pos",
         module_slots = i,
-        allowed_effects = {"consumption", "speed", "pollution"},
-        crafting_categories = {"oil-powerplant"},
+        allowed_effects = { "consumption", "speed", "pollution" },
+        crafting_categories = { "oil-powerplant" },
         crafting_speed = i,
         energy_source = {
             type = "fluid",
@@ -131,12 +131,12 @@ for i = 1, 4 do
             fluid_box = {
                 volume = 200 * i,
                 pipe_connections = {
-                    {flow_direction = "input", position = {0, 6.0}, direction = defines.direction.south}
+                    { flow_direction = "input", position = { 0, 6.0 }, direction = defines.direction.south }
                 },
                 pipe_covers = py.pipe_covers(false, true, true, true),
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 production_type = "input",
-                filter = ({"kerosene", "fuel-oil", "diesel", "gasoline"})[i]
+                filter = ({ "kerosene", "fuel-oil", "diesel", "gasoline" })[ i ]
             },
             effectivity = 1,
             burns_fluid = true,
@@ -145,7 +145,7 @@ for i = 1, 4 do
                 minimum_intensity = 0,
                 maximum_intensity = 0,
                 light_intensity_to_size_coefficient = 0,
-                color = {0, 0, 0},
+                color = { 0, 0, 0 },
             },
             smoke = {
                 {
@@ -161,7 +161,7 @@ for i = 1, 4 do
                 },
             }
         },
-        energy_usage = ({"10MW", "20MW", "30MW", "40MW"})[i],
+        energy_usage = ({ "10MW", "20MW", "30MW", "40MW" })[ i ],
         graphics_set = {
             working_visualisations = {
                 {
@@ -323,7 +323,7 @@ for i = 1, 4 do
                         height = 768,
                         frame_count = 1,
                         --repeat_count = 151,
-                        tint = py.tints[i],
+                        tint = py.tints[ i ],
                         shift = util.by_pixel(0, -176),
                     },
                     {
@@ -366,46 +366,46 @@ for i = 1, 4 do
             --1
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {-3.0, 6.0}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { -3.0, 6.0 }, direction = defines.direction.south } }
             },
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {3.0, 6.0}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { 3.0, 6.0 }, direction = defines.direction.south } }
             },
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {0.0, -6.0}, direction = defines.direction.north}}
+                pipe_connections = { { flow_direction = "output", position = { 0.0, -6.0 }, direction = defines.direction.north } }
             },
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {3.0, -6.0}, direction = defines.direction.north}}
+                pipe_connections = { { flow_direction = "output", position = { 3.0, -6.0 }, direction = defines.direction.north } }
             },
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {-3.0, -6.0}, direction = defines.direction.north}}
+                pipe_connections = { { flow_direction = "output", position = { -3.0, -6.0 }, direction = defines.direction.north } }
             },
         },
         impact_category = "metal-large",
         working_sound = {
-            sound = {filename = "__pyalternativeenergygraphics__/sounds/oil-powerplant.ogg", volume = 0.8},
-            idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/oil-powerplant.ogg", volume = 0.1},
+            sound = { filename = "__pyalternativeenergygraphics__/sounds/oil-powerplant.ogg", volume = 0.8 },
+            idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/oil-powerplant.ogg", volume = 0.1 },
             apparent_volume = 0.45
         },
         fast_replaceable_group = "oil-power"
-    }
+    })
 end

@@ -1,27 +1,27 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "mdh",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fusion-reactor-mk01",     amount = 10},
-        {type = "item", name = "re-magnet",               amount = 1000},
-        {type = "item", name = "intelligent-unit",        amount = 500},
-        {type = "item", name = "nano-wires",              amount = 4000},
-        {type = "item", name = "super-alloy",             amount = 500},
-        {type = "item", name = "super-steel",             amount = 1000},
-        {type = "item", name = "metastable-quasicrystal", amount = 50},
-        {type = "item", name = "sc-engine",               amount = 20},
-        {type = "item", name = "sc-unit",                 amount = 200},
-        {type = "item", name = "hts-coil",                amount = 4000},
-        {type = "item", name = "mechanical-parts-04",     amount = 50}
+        { type = "item", name = "fusion-reactor-mk01",     amount = 10 },
+        { type = "item", name = "re-magnet",               amount = 1000 },
+        { type = "item", name = "intelligent-unit",        amount = 500 },
+        { type = "item", name = "nano-wires",              amount = 4000 },
+        { type = "item", name = "super-alloy",             amount = 500 },
+        { type = "item", name = "super-steel",             amount = 1000 },
+        { type = "item", name = "metastable-quasicrystal", amount = 50 },
+        { type = "item", name = "sc-engine",               amount = 20 },
+        { type = "item", name = "sc-unit",                 amount = 200 },
+        { type = "item", name = "hts-coil",                amount = 4000 },
+        { type = "item", name = "mechanical-parts-04",     amount = 50 }
     },
     results = {
-        {type = "item", name = "mdh", amount = 1}
+        { type = "item", name = "mdh", amount = 1 }
     },
-}:add_unlock("fusion-mk02")
+}):add_unlock("fusion-mk02")
 
-ITEM {
+ITEM({
     type = "item",
     name = "mdh",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mdh.png",
@@ -31,15 +31,15 @@ ITEM {
     order = "a",
     place_result = "mdh",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "generator",
     name = "mdh",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mdh.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "mdh"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "mdh" },
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 1,
@@ -47,11 +47,11 @@ ENTITY {
     maximum_temperature = 4000,
     destroy_non_fuel_fluid = false,
     custom_tooltip_fields = { -- remove whenever wube https://forums.factorio.com/viewtopic.php?t=130073
-      {
-        name = {"description.minimum-temperature"},
-        value = {"", "500", {"si-unit-degree-celsius"}},
-        order = 255
-      }
+        {
+            name = { "description.minimum-temperature" },
+            value = { "", "500", { "si-unit-degree-celsius" } },
+            order = 255
+        }
     },
     resistances = {
         {
@@ -59,8 +59,8 @@ ENTITY {
             percent = 70
         }
     },
-    collision_box = {{-2.8, -7.8}, {2.8, 7.8}},
-    selection_box = {{-3.0, -8.0}, {3.0, 8.0}},
+    collision_box = { { -2.8, -7.8 }, { 2.8, 7.8 } },
+    selection_box = { { -3.0, -8.0 }, { 3.0, 8.0 } },
     fluid_input = {
         name = "neutron",
         amount = 0.0,
@@ -69,15 +69,15 @@ ENTITY {
     fluid_box = {
         volume = 24000 / 60,
         pipe_covers = py.pipe_covers(true, true, true, true),
-        pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+        pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
         production_type = "input-output",
         filter = "neutron",
         minimum_temperature = 500.0,
         pipe_connections = {
-            {flow_direction = "input-output", position = {2.5, 5.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 5.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -5.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -5.5}, direction = defines.direction.west},
+            { flow_direction = "input-output", position = { 2.5, 5.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, 5.5 }, direction = defines.direction.west },
+            { flow_direction = "input-output", position = { 2.5, -5.5 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -2.5, -5.5 }, direction = defines.direction.west },
         }
     },
     energy_source = {
@@ -159,8 +159,8 @@ ENTITY {
     performance_to_sound_speedup = 1,
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pypetroleumhandlinggraphics__/sounds/gas-extractor.ogg", volume = 0.45},
-        idle_sound = {filename = "__pypetroleumhandlinggraphics__/sounds/gas-extractor.ogg", volume = 0.35},
+        sound = { filename = "__pypetroleumhandlinggraphics__/sounds/gas-extractor.ogg", volume = 0.45 },
+        idle_sound = { filename = "__pypetroleumhandlinggraphics__/sounds/gas-extractor.ogg", volume = 0.35 },
         apparent_volume = 1.5
     }
-}
+})

@@ -1,20 +1,20 @@
-data.raw.planet.nauvis.map_gen_settings.autoplace_controls["geothermal-crack"] = {}
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["geothermal-crack"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls[ "geothermal-crack" ] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings[ "geothermal-crack" ] = {}
 
-data:extend {{
+data:extend({ {
     type = "autoplace-control",
     category = "resource",
     name = "geothermal-crack",
     richness = true,
     order = "r-co"
-}}
+} })
 
 -- data:extend{{
 --     type = "noise-layer",
 --     name = "geothermal-crack"
 -- }}
 
-data:extend {
+data:extend({
     {
         type = "noise-expression",
         name = "py_geothermal_crack_starting_area",
@@ -43,17 +43,17 @@ data:extend {
         name = "py_geothermal_crack_richness",
         expression = "2^16 * var('distance') * var('control:geothermal-crack:richness')"
     }
-}
+})
 
-data:extend {{
+data:extend({ {
     type = "resource",
     name = "geothermal-crack",
     category = "geothermal-crack",
     icon = "__pyalternativeenergygraphics__/graphics/icons/geothermal-crack.png",
     icon_size = 64,
-    flags = {"placeable-neutral"},
+    flags = { "placeable-neutral" },
     order = "a-b-a",
-    map_color = {r = 0.639, g = 0.074, b = 0.007},
+    map_color = { r = 0.639, g = 0.074, b = 0.007 },
     highlight = true,
     map_grid = false,
     minable = {
@@ -71,11 +71,11 @@ data:extend {{
         required_fluid = "pressured-water"
     },
     resource_patch_search_radius = 12,
-    collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.3, -5.3 }, { 5.3, 5.3 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     tree_removal_probability = 0.7,
     tree_removal_max_distance = 32 * 32,
-    collision_mask = {layers = {resource = true}},
+    collision_mask = { layers = { resource = true } },
     autoplace = {
         name = "geothermal-crack",
         order = "b-geothermal-crac",
@@ -85,7 +85,7 @@ data:extend {{
         -- We return the richness here, which is just the quantity the resource tile yields
         richness_expression = "py_geothermal_crack_richness"
     },
-    stage_counts = {0},
+    stage_counts = { 0 },
     stages = {
         layers = {
             {
@@ -109,4 +109,4 @@ data:extend {{
             }
         }
     }
-}}
+} })

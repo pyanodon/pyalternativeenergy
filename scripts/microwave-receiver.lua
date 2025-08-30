@@ -10,10 +10,10 @@ local function get_gui(player)
 end
 
 local function update_gui(gui)
-    local force = game.forces[gui.tags.force]
+    local force = game.forces[ gui.tags.force ]
     if not force or not force.valid then return end
 
-    local microwave_data = storage.microwave_receivers[gui.tags.unit_number]
+    local microwave_data = storage.microwave_receivers[ gui.tags.unit_number ]
     if not microwave_data then
         gui.destroy(); return
     end
@@ -26,13 +26,13 @@ local function update_gui(gui)
         "    ",
         py.format_energy(microwave_data.allocated_satellites * POWER_PRODUCTION_PER_SATELLITE_WATTS, "W")
     }
-    content_flow.total_launched.caption = {"microwave-receiver-gui.launched-satellites", force.get_item_launched("microwave-satellite")}
+    content_flow.total_launched.caption = { "microwave-receiver-gui.launched-satellites", force.get_item_launched("microwave-satellite") }
 
     local total_built = 0
     for _, microwave_data in pairs(storage.microwave_receivers) do
         if microwave_data.force == force then total_built = total_built + 1 end
     end
-    content_flow.total_built.caption = {"microwave-receiver-gui.total-receivers", total_built}
+    content_flow.total_built.caption = { "microwave-receiver-gui.total-receivers", total_built }
 end
 
 local function create_gui(player, entity)
@@ -47,36 +47,36 @@ local function create_gui(player, entity)
         end
     end
 
-    local main_frame = player.gui.screen.add {type = "frame", name = "microwave_receiver_gui", caption = entity.prototype.localised_name, direction = "vertical"}
+    local main_frame = player.gui.screen.add({ type = "frame", name = "microwave_receiver_gui", caption = entity.prototype.localised_name, direction = "vertical" })
     main_frame.style.width = 340
-    main_frame.tags = {unit_number = entity.unit_number, force = player.force.name}
+    main_frame.tags = { unit_number = entity.unit_number, force = player.force.name }
     main_frame.auto_center = true
     player.opened = main_frame
 
-    local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
-    local content_flow = content_frame.add {type = "flow", name = "content_flow", direction = "vertical"}
+    local content_frame = main_frame.add({ type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding" })
+    local content_flow = content_frame.add({ type = "flow", name = "content_flow", direction = "vertical" })
     content_flow.style.vertical_spacing = 8
-    content_flow.style.margin = {-4, 0, -4, 0}
+    content_flow.style.margin = { -4, 0, -4, 0 }
     content_flow.style.vertical_align = "center"
 
-    local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
+    local status_flow = content_flow.add({ type = "flow", name = "status_flow", direction = "horizontal" })
     status_flow.style.vertical_align = "center"
-    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
+    local status_sprite = status_flow.add({ type = "sprite", name = "status_sprite" })
     status_sprite.resize_to_sprite = false
-    status_sprite.style.size = {16, 16}
+    status_sprite.style.size = { 16, 16 }
     status_sprite.sprite = "utility/status_working"
-    status_flow.add {type = "label", name = "status_text"}.caption = {"entity-status.working"}
+    status_flow.add({ type = "label", name = "status_text" }).caption = { "entity-status.working" }
 
-    local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
-    local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = {entity.position.x, entity.position.y - 2}, surface_index = entity.surface.index}
+    local camera_frame = content_flow.add({ type = "frame", name = "camera_frame", style = "py_nice_frame" })
+    local camera = camera_frame.add({ type = "camera", name = "camera", style = "py_caravan_camera", position = { entity.position.x, entity.position.y - 2 }, surface_index = entity.surface.index })
     camera.visible = true
     camera.style.height = 180
     camera.zoom = 0.5
 
-    content_flow.add {type = "progressbar", name = "progressbar", style = "electric_satisfaction_statistics_progressbar"}.style.horizontally_stretchable = true
-    content_flow.add {type = "line"}
-    content_flow.add {type = "label", name = "total_launched"}
-    content_flow.add {type = "label", name = "total_built"}
+    content_flow.add({ type = "progressbar", name = "progressbar", style = "electric_satisfaction_statistics_progressbar" }).style.horizontally_stretchable = true
+    content_flow.add({ type = "line" })
+    content_flow.add({ type = "label", name = "total_launched" })
+    content_flow.add({ type = "label", name = "total_built" })
 
     update_gui(main_frame)
 end
@@ -114,14 +114,14 @@ end
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "microwave-receiver" then return end
-    storage.microwave_receivers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force}
+    storage.microwave_receivers[ entity.unit_number ] = { unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force }
     recalc_satellite_distribution(entity.force)
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "microwave-receiver" then return end
-    storage.microwave_receivers[entity.unit_number] = nil
+    storage.microwave_receivers[ entity.unit_number ] = nil
     recalc_satellite_distribution(entity.force)
 end)
 
@@ -146,7 +146,7 @@ py.on_event(defines.events.on_gui_opened, function(event)
     create_gui(player, entity)
 end)
 
-py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
+py.on_event({ defines.events.on_gui_closed, defines.events.on_player_changed_surface }, function(event)
     local player = game.get_player(event.player_index)
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
         local gui = get_gui(player)

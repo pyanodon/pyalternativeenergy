@@ -1,26 +1,26 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "tidal-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "pipe",                amount = 20},
-        {type = "item", name = "steel-plate",         amount = 100},
-        {type = "item", name = "refined-concrete",    amount = 50},
-        {type = "item", name = "iron-gear-wheel",     amount = 100},
-        {type = "item", name = "duralumin",           amount = 30},
-        {type = "item", name = "intermetallics",      amount = 10},
-        {type = "item", name = "shaft-mk01",          amount = 3},
-        {type = "item", name = "brake-mk01",          amount = 3},
-        {type = "item", name = "utility-box-mk01",    amount = 2},
-        {type = "item", name = "gearbox-mk01",        amount = 3},
-        {type = "item", name = "electronic-circuit",  amount = 20},
-        {type = "item", name = "mechanical-parts-01", amount = 10},
+        { type = "item", name = "pipe",                amount = 20 },
+        { type = "item", name = "steel-plate",         amount = 100 },
+        { type = "item", name = "refined-concrete",    amount = 50 },
+        { type = "item", name = "iron-gear-wheel",     amount = 100 },
+        { type = "item", name = "duralumin",           amount = 30 },
+        { type = "item", name = "intermetallics",      amount = 10 },
+        { type = "item", name = "shaft-mk01",          amount = 3 },
+        { type = "item", name = "brake-mk01",          amount = 3 },
+        { type = "item", name = "utility-box-mk01",    amount = 2 },
+        { type = "item", name = "gearbox-mk01",        amount = 3 },
+        { type = "item", name = "electronic-circuit",  amount = 20 },
+        { type = "item", name = "mechanical-parts-01", amount = 10 },
     },
-    results = {{type = "item", name = "tidal-mk01", amount = 1}}
-}:add_unlock("tidal-mk01")
+    results = { { type = "item", name = "tidal-mk01", amount = 1 } }
+}):add_unlock("tidal-mk01")
 
-ITEM {
+ITEM({
     type = "item",
     name = "tidal-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/tidal-mk01.png",
@@ -30,29 +30,29 @@ ITEM {
     order = "d",
     place_result = "tidal-mk01",
     stack_size = 10
-}
+})
 
-local tidal = ENTITY {
+local tidal = ENTITY({
     type = "simple-entity-with-owner",
     name = "tidal-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/tidal-mk01.png",
     performance_at_day = 1,
     performance_at_night = 1,
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "tidal-mk01"},
-    placeable_by = {item = "tidal-mk01", count = 1},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "tidal-mk01" },
+    placeable_by = { item = "tidal-mk01", count = 1 },
     fast_replaceable_group = "tidal",
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
-    selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
-    collision_mask = {layers = {object = true, train = true}},                            -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
-    center_collision_mask = {layers = {water_tile = true, object = true, player = true}}, -- to test that tile directly under the pump is ground
+    collision_box = { { -3.3, -5.3 }, { 3.3, 5.3 } },
+    selection_box = { { -3.5, -5.5 }, { 3.5, 5.5 } },
+    collision_mask = { layers = { object = true, train = true } },                        -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    center_collision_mask = { layers = { water_tile = true, object = true, player = true } }, -- to test that tile directly under the pump is ground
     tile_buildability_rules = {
-        {area = {{-2, -5}, {2, 1}},  required_tiles = {layers = {water_tile = true}},  colliding_tiles = {layers = {ground_tile = true}}, remove_on_collision = true},
-        {area = {{-2, 1.6}, {2, 5}}, required_tiles = {layers = {ground_tile = true}}, colliding_tiles = {layers = {water_tile = true}},  remove_on_collision = true}
+        { area = { { -2, -5 }, { 2, 1 } }, required_tiles = { layers = { water_tile = true } }, colliding_tiles = { layers = { ground_tile = true } }, remove_on_collision = true },
+        { area = { { -2, 1.6 }, { 2, 5 } }, required_tiles = { layers = { ground_tile = true } }, colliding_tiles = { layers = { water_tile = true } }, remove_on_collision = true }
     },
     energy_source = {
         type = "electric",
@@ -62,7 +62,7 @@ local tidal = ENTITY {
         render_no_power_icon = false
     },
     production = "6MW",
-    placeable_position_visualization = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization),
+    placeable_position_visualization = table.deepcopy(data.raw[ "offshore-pump" ][ "offshore-pump" ].placeable_position_visualization),
     created_effect = {
         type = "direct",
         action_delivery = {
@@ -99,7 +99,7 @@ local tidal = ENTITY {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/mask.png",
                     width = 224,
                     height = 192,
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
@@ -199,7 +199,7 @@ local tidal = ENTITY {
                     repeat_count = 50,
                     frame_count = 1,
                     shift = util.by_pixel(-112, -16),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/turbine.png",
@@ -293,7 +293,7 @@ local tidal = ENTITY {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/mask.png",
                     width = 224,
                     height = 192,
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
@@ -387,7 +387,7 @@ local tidal = ENTITY {
                     repeat_count = 50,
                     frame_count = 1,
                     shift = util.by_pixel(112, -16),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/turbine.png",
@@ -458,7 +458,7 @@ local tidal = ENTITY {
             },
         },
     }
-}
+})
 
 local solar_panel = table.deepcopy(tidal)
 solar_panel.hidden = true
@@ -466,9 +466,9 @@ solar_panel.animation = nil
 solar_panel.minable = nil
 solar_panel.fast_replaceable_group = nil
 table.insert(solar_panel.flags, "not-blueprintable")
-solar_panel.collision_box = {{-5.3, -5.3}, {5.3, 5.3}}
-solar_panel.selection_box = {{-0, -0}, {0, 0}}
-solar_panel.localised_name = solar_panel.localised_name or {"entity-name." .. solar_panel.name}
+solar_panel.collision_box = { { -5.3, -5.3 }, { 5.3, 5.3 } }
+solar_panel.selection_box = { { -0, -0 }, { 0, 0 } }
+solar_panel.localised_name = solar_panel.localised_name or { "entity-name." .. solar_panel.name }
 solar_panel.name = solar_panel.name .. "-solar"
 solar_panel.type = "solar-panel"
 solar_panel.created_effect = nil
@@ -476,5 +476,5 @@ solar_panel.placeable_position_visualization = nil
 solar_panel.tile_buildability_rules = nil
 solar_panel.selectable_in_game = false
 solar_panel.picture = nil
-solar_panel.collision_mask = {layers = {}}
-data:extend {solar_panel}
+solar_panel.collision_mask = { layers = {} }
+data:extend({ solar_panel })

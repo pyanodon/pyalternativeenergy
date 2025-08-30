@@ -1,26 +1,26 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "simik-boiler",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "super-steel",          amount = 15},
-        {type = "item", name = "niobium-pipe",         amount = 10},
-        {type = "item", name = "processing-unit",      amount = 10},
-        {type = "item", name = "simik",                amount = 1},
-        {type = "item", name = "electric-engine-unit", amount = 15},
-        {type = "item", name = "nbfe-alloy",           amount = 20},
-        {type = "item", name = "nbti-alloy",           amount = 10},
-        {type = "item", name = "tin-plate",            amount = 20},
-        {type = "item", name = "ns-material",          amount = 20},
-        {type = "item", name = "small-parts-03",       amount = 80}
+        { type = "item", name = "super-steel",          amount = 15 },
+        { type = "item", name = "niobium-pipe",         amount = 10 },
+        { type = "item", name = "processing-unit",      amount = 10 },
+        { type = "item", name = "simik",                amount = 1 },
+        { type = "item", name = "electric-engine-unit", amount = 15 },
+        { type = "item", name = "nbfe-alloy",           amount = 20 },
+        { type = "item", name = "nbti-alloy",           amount = 10 },
+        { type = "item", name = "tin-plate",            amount = 20 },
+        { type = "item", name = "ns-material",          amount = 20 },
+        { type = "item", name = "small-parts-03",       amount = 80 }
     },
     results = {
-        {type = "item", name = "simik-boiler", amount = 1}
+        { type = "item", name = "simik-boiler", amount = 1 }
     }
-}:add_unlock("domestication-mk04")
+}):add_unlock("domestication-mk04")
 
-ITEM {
+ITEM({
     type = "item",
     name = "simik-boiler",
     icon = "__pyalternativeenergygraphics__/graphics/icons/generator-3.png",
@@ -30,7 +30,7 @@ ITEM {
     order = "a",
     place_result = "simik-boiler",
     stack_size = 10
-}
+})
 
 local pipe = {
     south = {
@@ -41,35 +41,35 @@ local pipe = {
     }
 }
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "simik-boiler",
     icon = "__pyalternativeenergygraphics__/graphics/icons/generator-3.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "simik-boiler"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "simik-boiler" },
     fast_replaceable_group = "simik-boiler",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.3, -5.3 }, { 5.3, 5.3 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 3,
-    allowed_effects = {"consumption", "speed", "pollution"},
-    crafting_categories = {"simik-boiler"},
+    allowed_effects = { "consumption", "speed", "pollution" },
+    crafting_categories = { "simik-boiler" },
     crafting_speed = 1,
     energy_source =
     {
         type = "burner",
-        fuel_categories = {"simik"},
+        fuel_categories = { "simik" },
         effectivity = 1,
         light_flicker =
         {
             minimum_intensity = 0,
             maximum_intensity = 0,
             light_intensity_to_size_coefficient = 0,
-            color = {0, 0, 0},
+            color = { 0, 0, 0 },
         },
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
@@ -227,55 +227,55 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}}
+            secondary_draw_orders = { north = 0, east = 0, south = 8, west = 0 },
+            pipe_connections = { { flow_direction = "input", position = { -2.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
-            pipe_connections = {{flow_direction = "input", position = {2.0, -5.0}, direction = defines.direction.north}}
+            secondary_draw_orders = { north = 0, east = 0, south = 8, west = 0 },
+            pipe_connections = { { flow_direction = "input", position = { 2.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
-            pipe_connections = {{flow_direction = "output", position = {2.0, 5.0}, direction = defines.direction.south}}
+            secondary_draw_orders = { north = 0, east = 0, south = 8, west = 0 },
+            pipe_connections = { { flow_direction = "output", position = { 2.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 5.0}, direction = defines.direction.south}}
+            secondary_draw_orders = { north = 0, east = 0, south = 8, west = 0 },
+            pipe_connections = { { flow_direction = "output", position = { -2.0, 5.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/simik-boiler.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/simik-boiler.ogg", volume = 0.3},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/simik-boiler.ogg", volume = 0.9 },
+        idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/simik-boiler.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})
 -- Swap to niobium pipes
-for _, fluid_box in pairs(data.raw["assembling-machine"]["simik-boiler"].fluid_boxes) do
+for _, fluid_box in pairs(data.raw[ "assembling-machine" ][ "simik-boiler" ].fluid_boxes) do
     -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
     if type(fluid_box) == "boolean" then
         break
     end
     if fluid_box.pipe_covers.south.layers then
-        fluid_box.pipe_covers.south.layers[1].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
-        fluid_box.pipe_covers.south.layers[2].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
+        fluid_box.pipe_covers.south.layers[ 1 ].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
+        fluid_box.pipe_covers.south.layers[ 2 ].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
     end
     -- Move cover up to compensate
     fluid_box.pipe_picture.south.scale = 0.5
-    fluid_box.pipe_picture.south.shift = {0, -2.33}
+    fluid_box.pipe_picture.south.shift = { 0, -2.33 }
 end

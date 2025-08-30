@@ -1,29 +1,29 @@
-local sounds = require "__base__/prototypes/entity/sounds"
+local sounds = require("__base__/prototypes/entity/sounds")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "mk04-locomotive",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "super-alloy",             amount = 150},
-        {type = "item", name = "biopolymer",              amount = 200},
-        {type = "item", name = "intelligent-unit",        amount = 5},
-        {type = "item", name = "nexelit-plate",           amount = 20},
-        {type = "item", name = "electronics-mk04",        amount = 2},
-        {type = "item", name = "cf",                      amount = 100},
-        {type = "item", name = "sc-engine",               amount = 5},
-        {type = "item", name = "metastable-quasicrystal", amount = 2},
-        {type = "item", name = "small-parts-03",          amount = 300},
-        {type = "item", name = "metallic-glass",          amount = 10},
-        {type = "item", name = "low-density-structure",   amount = 20},
+        { type = "item", name = "super-alloy",             amount = 150 },
+        { type = "item", name = "biopolymer",              amount = 200 },
+        { type = "item", name = "intelligent-unit",        amount = 5 },
+        { type = "item", name = "nexelit-plate",           amount = 20 },
+        { type = "item", name = "electronics-mk04",        amount = 2 },
+        { type = "item", name = "cf",                      amount = 100 },
+        { type = "item", name = "sc-engine",               amount = 5 },
+        { type = "item", name = "metastable-quasicrystal", amount = 2 },
+        { type = "item", name = "small-parts-03",          amount = 300 },
+        { type = "item", name = "metallic-glass",          amount = 10 },
+        { type = "item", name = "low-density-structure",   amount = 20 },
     },
     results = {
-        {type = "item", name = "mk04-locomotive", amount = 1}
+        { type = "item", name = "mk04-locomotive", amount = 1 }
     }
-}:add_unlock("railway-mk04")
+}):add_unlock("railway-mk04")
 
-ITEM {
+ITEM({
     type = "item-with-entity-data",
     name = "mk04-locomotive",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mk04-locomotive.png",
@@ -33,23 +33,23 @@ ITEM {
     order = "da",
     place_result = "mk04-locomotive",
     stack_size = 5
-}
+})
 
-ENTITY {
+ENTITY({
     type = "locomotive",
     name = "mk04-locomotive",
     icon = "__pyalternativeenergygraphics__/graphics/icons/mk04-locomotive.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
-    minable = {mining_time = 0.5, result = "mk04-locomotive"},
-    mined_sound = {filename = "__core__/sound/deconstruct-large.ogg", volume = 0.8},
+    flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
+    minable = { mining_time = 0.5, result = "mk04-locomotive" },
+    mined_sound = { filename = "__core__/sound/deconstruct-large.ogg", volume = 0.8 },
     max_health = 1000,
     corpse = "locomotive-remnants",
     dying_explosion = "locomotive-explosion",
-    collision_box = {{-0.6, -2.5}, {0.6, 2.5}},
-    selection_box = {{-1, -3.0}, {1, 3.0}},
+    collision_box = { { -0.6, -2.5 }, { 0.6, 2.5 } },
+    selection_box = { { -1, -3.0 }, { 1, 3.0 } },
     --damaged_trigger_effect = hit_effects.entity(),
-    drawing_box_vertical_extension = data.raw["locomotive"]["locomotive"].drawing_box_vertical_extension,
+    drawing_box_vertical_extension = data.raw[ "locomotive" ][ "locomotive" ].drawing_box_vertical_extension,
     alert_icon_shift = util.by_pixel(0, -24),
     weight = 900,
     max_speed = 1.7,
@@ -93,7 +93,7 @@ ENTITY {
     energy_source =
     {
         type = "burner",
-        fuel_categories = {"quantum"},
+        fuel_categories = { "quantum" },
         effectivity = 1,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
@@ -107,7 +107,7 @@ ENTITY {
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/light-cone.png",
                 priority = "extra-high",
-                flags = {"light"},
+                flags = { "light" },
                 draw_as_glow = true,
                 scale = 1,
                 width = 240,
@@ -123,22 +123,22 @@ ENTITY {
     stand_by_light = {
         {
             minimum_darkness = 0.3,
-            color = {1, 0.1, 0.05, 0},
-            shift = {-0.6, 3.5},
+            color = { 1, 0.1, 0.05, 0 },
+            shift = { -0.6, 3.5 },
             size = 2,
             intensity = 0.6,
             add_perspective = true
         },
         {
             minimum_darkness = 0.3,
-            color = {1, 0.1, 0.05, 0},
-            shift = {0.6, 3.5},
+            color = { 1, 0.1, 0.05, 0 },
+            shift = { 0.6, 3.5 },
             size = 2,
             intensity = 0.6,
             add_perspective = true
         }
     },
-    color = {r = 1, g = 0.0, b = 0.0},
+    color = { r = 1, g = 0.0, b = 0.0 },
     pictures =
     {
         rotated =
@@ -178,7 +178,7 @@ ENTITY {
                 },
                 {
                     priority = "very-low",
-                    flags = {"mask"},
+                    flags = { "mask" },
                     dice = 4,
                     width = 480,
                     height = 512,
@@ -215,7 +215,7 @@ ENTITY {
                 {
                     priority = "very-low",
                     dice = 4,
-                    flags = {"shadow"},
+                    flags = { "shadow" },
                     width = 240,
                     height = 256,
                     direction_count = 256,
@@ -250,15 +250,15 @@ ENTITY {
     minimap_representation =
     {
         filename = "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/icon-map.png",
-        flags = {"icon"},
-        size = {20, 44},
+        flags = { "icon" },
+        size = { 20, 44 },
         scale = 0.4
     },
     selected_minimap_representation =
     {
         filename = "__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/icon-map-selected.png",
-        flags = {"icon"},
-        size = {20, 44},
+        flags = { "icon" },
+        size = { 20, 44 },
         scale = 0.4
     },
     --wheels = standard_train_wheels,
@@ -277,7 +277,7 @@ ENTITY {
     },
     drive_over_tie_trigger = {
         type = "play-sound",
-        sound = sound_variations("__base__/sound/train-tie", 6, 0.4, {volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3)})
+        sound = sound_variations("__base__/sound/train-tie", 6, 0.4, { volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3) })
     },
     tie_distance = 30,
     impact_category = "default",
@@ -297,8 +297,8 @@ ENTITY {
         max_sounds_per_prototype = 2,
         -- use_doppler_shift = false
     },
-    open_sound = {filename = "__pyalternativeenergygraphics__/sounds/locomotive-open.ogg", volume = 0.6},
-    close_sound = {filename = "__pyalternativeenergygraphics__/sounds/locomotive-close.ogg", volume = 0.6},
+    open_sound = { filename = "__pyalternativeenergygraphics__/sounds/locomotive-open.ogg", volume = 0.6 },
+    close_sound = { filename = "__pyalternativeenergygraphics__/sounds/locomotive-close.ogg", volume = 0.6 },
     sound_minimum_speed = 0.5,
     sound_scaling_ratio = 0.35,
     water_reflection = {
@@ -315,4 +315,4 @@ ENTITY {
         rotate = true,
         orientation_to_variation = false
     },
-}
+})

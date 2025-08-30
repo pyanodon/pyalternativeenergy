@@ -1,18 +1,18 @@
-data:extend {{
+data:extend({ {
     type = "collision-layer",
     name = "sut"
-}}
+} })
 
-data:extend {{
+data:extend({ {
     type = "tile",
     name = "sut-panel",
     layer = 100,
-    map_color = {1, 1, 1},
-    absorptions_per_second = {pollution = 0},
-    minable = {mining_time = 0.1, result = "sut-panel"},
-    collision_mask = {layers = {ground_tile = true, sut = true}},
+    map_color = { 1, 1, 1 },
+    absorptions_per_second = { pollution = 0 },
+    minable = { mining_time = 0.1, result = "sut-panel" },
+    collision_mask = { layers = { ground_tile = true, sut = true } },
     check_collision_with_entities = true,
-    placeable_by = {item = "sut-panel", count = 1},
+    placeable_by = { item = "sut-panel", count = 1 },
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png",
     icon_size = 64,
     decorative_removal_probability = 1,
@@ -47,34 +47,34 @@ data:extend {{
         }
     },
     walking_speed_modifier = 3.5
-}}
+} })
 
-data:extend {{
+data:extend({ {
     type = "collision-layer",
     name = "sut_placement_distance"
-}}
+} })
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "sut",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "glass",                amount = 1000},
-        {type = "item", name = "small-parts-02",       amount = 400},
-        {type = "item", name = "stainless-steel",      amount = 500},
-        {type = "item", name = "electric-engine-unit", amount = 18},
-        {type = "item", name = "ns-material",          amount = 20},
-        {type = "item", name = "advanced-circuit",     amount = 10},
-        {type = "item", name = "concrete",             amount = 100},
-        {type = "item", name = "mechanical-parts-03",  amount = 1},
+        { type = "item", name = "glass",                amount = 1000 },
+        { type = "item", name = "small-parts-02",       amount = 400 },
+        { type = "item", name = "stainless-steel",      amount = 500 },
+        { type = "item", name = "electric-engine-unit", amount = 18 },
+        { type = "item", name = "ns-material",          amount = 20 },
+        { type = "item", name = "advanced-circuit",     amount = 10 },
+        { type = "item", name = "concrete",             amount = 100 },
+        { type = "item", name = "mechanical-parts-03",  amount = 1 },
     },
     results = {
-        {type = "item", name = "sut", amount = 1}
+        { type = "item", name = "sut", amount = 1 }
     }
-}:add_unlock("thermal-mk03")
+}):add_unlock("thermal-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "sut",
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png",
@@ -84,20 +84,20 @@ ITEM {
     order = "ca",
     place_result = "sut",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "electric-energy-interface",
     name = "sut",
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 10, result = "sut"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 10, result = "sut" },
     max_health = 3250,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-8.7, -8.7}, {8.7, 8.7}},
-    selection_box = {{-9, -9}, {9, 9}},
+    collision_box = { { -8.7, -8.7 }, { 8.7, 8.7 } },
+    selection_box = { { -9, -9 }, { 9, 9 } },
     continuous_animation = true,
     energy_source = {
         type = "electric",
@@ -133,34 +133,34 @@ ENTITY {
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 0.70},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 1.0 },
+        idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 0.70 },
         apparent_volume = 2.5
     },
     render_layer = "entity-info-icon",
-    collision_mask = {layers = {item = true, object = true, player = true, water_tile = true, sut = true, sut_placement_distance = true}}
-}
+    collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, sut = true, sut_placement_distance = true } }
+})
 
-data:extend {{
+data:extend({ {
     type = "simple-entity-with-force",
     name = "sut-placement-distance",
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "not-on-map"},
-    collision_box = {{-200, -200}, {200, 200}},
-    collision_mask = {layers = {sut_placement_distance = true}},
+    flags = { "placeable-neutral", "player-creation", "not-on-map" },
+    collision_box = { { -200, -200 }, { 200, 200 } },
+    collision_mask = { layers = { sut_placement_distance = true } },
     selectable_in_game = false,
     picture = {
         filename = "__core__/graphics/empty.png",
         width = 1,
         height = 1
     }
-}}
+} })
 
-data:extend {{
+data:extend({ {
     type = "animation",
     name = "sut-panel-base",
-    flags = {"terrain"},
+    flags = { "terrain" },
     filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/bottom.png",
     frame_count = 10,
     line_length = 2,
@@ -169,23 +169,23 @@ data:extend {{
     animation_speed = 0.3,
     scale = 0.9473,
     shift = util.by_pixel(1, 278 + 32)
-}}
+} })
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "sut-panel",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "small-parts-02", amount = 1},
-        {type = "item", name = "py-asphalt",     amount = 2},
-        {type = "item", name = "glass",          amount = 20},
-        {type = "item", name = "mirror-mk03",    amount = 1}
+        { type = "item", name = "small-parts-02", amount = 1 },
+        { type = "item", name = "py-asphalt",     amount = 2 },
+        { type = "item", name = "glass",          amount = 20 },
+        { type = "item", name = "mirror-mk03",    amount = 1 }
     },
-    results = {{type = "item", name = "sut-panel", amount = 2}}
-}:add_unlock("thermal-mk03")
+    results = { { type = "item", name = "sut-panel", amount = 2 } }
+}):add_unlock("thermal-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "sut-panel",
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png",
@@ -206,44 +206,44 @@ ITEM {
         condition_size = 1
     },
     stack_size = 1000,
-    localised_name = {"tile-name.sut-panel"},
-    localised_description = {"tile-description.sut-panel"}
-}
+    localised_name = { "tile-name.sut-panel" },
+    localised_description = { "tile-description.sut-panel" }
+})
 
 do
     local i = 1
     for y = 0, 128 - 64, 64 do
         for x = 0, 1920 - 64, 64 do
-            data:extend {{
+            data:extend({ {
                 type = "simple-entity",
                 name = "sut-panel-" .. i,
                 picture = {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/tile/glass.png",
                     priority = "high",
-                    flags = {"terrain"},
+                    flags = { "terrain" },
                     width = 64,
                     height = 64,
                     x = x,
                     y = y,
                     scale = 0.5,
                     shift = util.by_pixel(16, 16),
-                    tint = {1, 1, 1, 0.7}
+                    tint = { 1, 1, 1, 0.7 }
                 },
                 icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-tower.png",
                 icon_size = 64,
-                collision_mask = {layers = {}},
-                collision_box = {{0, 0}, {0, 0}},
+                collision_mask = { layers = {} },
+                collision_box = { { 0, 0 }, { 0, 0 } },
                 hidden = true,
-                flags = {"not-on-map", "not-flammable", "not-rotatable", "not-in-kill-statistics",},
+                flags = { "not-on-map", "not-flammable", "not-rotatable", "not-in-kill-statistics", },
                 selectable_in_game = false,
                 render_layer = "wires"
-            }}
+            } })
             i = i + 1
         end
     end
 end
 
-local smoke = table.deepcopy(data.raw["trivial-smoke"]["turbine-smoke"])
+local smoke = table.deepcopy(data.raw[ "trivial-smoke" ][ "turbine-smoke" ])
 smoke.duration = 400
 smoke.show_when_smoke_off = true
 smoke.name = "sut-smoke"
@@ -252,42 +252,42 @@ smoke.fade_away_duration = 340
 smoke.affected_by_wind = true
 smoke.start_scale = 0.4
 smoke.end_scale = 2
-smoke.color = {0.5, 0.5, 0.5, 0.2}
+smoke.color = { 0.5, 0.5, 0.5, 0.2 }
 smoke.movement_slow_down_factor = 1
-data:extend {smoke}
+data:extend({ smoke })
 
-data:extend {{
+data:extend({ {
     name = "sut-smokestack",
     type = "fire",
     hidden = true,
-    damage_per_tick = {amount = 0, type = "physical"},
+    damage_per_tick = { amount = 0, type = "physical" },
     spread_delay = 0,
     spread_delay_deviation = 0,
-    smoke = {{
+    smoke = { {
         name = "sut-smoke",
         frequency = 1,
         starting_vertical_speed = 0.4
-    }},
+    } },
     maximum_lifetime = 60,
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png",
     icon_size = 64,
     localised_name = ""
-}}
+} })
 
-data:extend {{
+data:extend({ {
     name = "sut-smokestack-weak",
     type = "fire",
     hidden = true,
-    damage_per_tick = {amount = 0, type = "physical"},
+    damage_per_tick = { amount = 0, type = "physical" },
     spread_delay = 0,
     spread_delay_deviation = 0,
-    smoke = {{
+    smoke = { {
         name = "sut-smoke",
         frequency = 0.31,
         starting_vertical_speed = 0.4
-    }},
+    } },
     maximum_lifetime = 60,
     icon = "__pyalternativeenergygraphics__/graphics/icons/updraft-panel.png",
     icon_size = 64,
     localised_name = ""
-}}
+} })

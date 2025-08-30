@@ -1,25 +1,25 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "py-rtg",
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "super-steel",         amount = 50},
-        {type = "item", name = "iron-plate",          amount = 20},
-        {type = "item", name = "processing-unit",     amount = 5},
-        {type = "item", name = "nbfe-alloy",          amount = 20},
-        {type = "item", name = "glass",               amount = 25},
-        {type = "item", name = "graphene-roll",       amount = 30},
-        {type = "item", name = "ns-material",         amount = 20},
-        {type = "item", name = "small-parts-03",      amount = 100},
-        {type = "item", name = "mechanical-parts-03", amount = 1},
+        { type = "item", name = "super-steel",         amount = 50 },
+        { type = "item", name = "iron-plate",          amount = 20 },
+        { type = "item", name = "processing-unit",     amount = 5 },
+        { type = "item", name = "nbfe-alloy",          amount = 20 },
+        { type = "item", name = "glass",               amount = 25 },
+        { type = "item", name = "graphene-roll",       amount = 30 },
+        { type = "item", name = "ns-material",         amount = 20 },
+        { type = "item", name = "small-parts-03",      amount = 100 },
+        { type = "item", name = "mechanical-parts-03", amount = 1 },
     },
     results = {
-        {type = "item", name = "py-rtg", amount = 1}
+        { type = "item", name = "py-rtg", amount = 1 }
     }
-}:add_unlock("nuclear-power-mk02")
+}):add_unlock("nuclear-power-mk02")
 
-ITEM {
+ITEM({
     type = "item",
     name = "py-rtg",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rtg.png",
@@ -29,20 +29,20 @@ ITEM {
     order = "a",
     place_result = "py-rtg",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "burner-generator",
     name = "py-rtg",
     icon = "__pyalternativeenergygraphics__/graphics/icons/rtg.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "py-rtg"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.1, result = "py-rtg" },
     max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "solar-panel-explosion",
-    collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     energy_source =
     {
         type = "electric",
@@ -52,7 +52,7 @@ ENTITY {
     burner =
     {
         type = "burner",
-        fuel_categories = {"fuelrod"},
+        fuel_categories = { "fuelrod" },
         effectivity = 7000,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
@@ -105,4 +105,4 @@ ENTITY {
         }
     },
     impact_category = "metal-large",
-}
+})

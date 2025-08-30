@@ -1,4 +1,4 @@
-data:extend {
+data:extend({
     {
         type = "recipe-category",
         name = "lrf"
@@ -46,7 +46,7 @@ data:extend {
     {
         type = "recipe-category",
         name = "numal",
-        allowed_module_categories = {"numal"},
+        allowed_module_categories = { "numal" },
         modules_required = true
     },
     {
@@ -118,4 +118,4 @@ data:extend {
         type = "resource-category",
         name = "mova"
     },
-}
+})

@@ -1,17 +1,17 @@
-require "__pypostprocessing__.lib"
+require("__pypostprocessing__.lib")
 
-local farms = require "scripts/farming"
+local farms = require("scripts/farming")
 local events = defines.events
 
-require "scripts/wiki/text-pages"
-require "scripts/microwave-receiver"
-require "scripts/thermosolar/shared"
-require "scripts/thermosolar/solar-updraft-tower"
-require "scripts/thermosolar/heliostat"
-require "scripts/solar"
-require "scripts/wind/wind"
-require "scripts/aerial"
-require "scripts/tidal"
+require("scripts/wiki/text-pages")
+require("scripts/microwave-receiver")
+require("scripts/thermosolar/shared")
+require("scripts/thermosolar/solar-updraft-tower")
+require("scripts/thermosolar/heliostat")
+require("scripts/solar")
+require("scripts/wind/wind")
+require("scripts/aerial")
+require("scripts/tidal")
 
 py.on_event(py.events.on_init(), function()
     storage.reactor_tanks = storage.reactor_tanks or {}
@@ -45,27 +45,27 @@ py.on_event(py.events.on_built(), function(event)
         elseif direction == defines.direction.west then
             x = -1
         end
-        surface.create_entity {
+        surface.create_entity({
             name = "tidal-mk" .. string.match(E.name, "%d+"),
-            position = {E.position.x + x, E.position.y + y},
+            position = { E.position.x + x, E.position.y + y },
             force = E.force,
             direction = E.direction
-        }
+        })
         E.destroy()
     elseif string.match(E.name, "lrf%-panel") ~= nil then
-        storage.lrf_panels[E.unit_number] = E
+        storage.lrf_panels[ E.unit_number ] = E
     elseif E.name == "stirling-concentrator" then
-        storage.stirling[E.unit_number] = E
+        storage.stirling[ E.unit_number ] = E
     end
 end)
 
 local REQUIRES_SUNLIGHT = {
     diode = defines.entity_status_diode.red,
-    label = {"entity-status.requires-sunlight"}
+    label = { "entity-status.requires-sunlight" }
 }
 
 py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
-    local active = Thermosolar.calc_daylight(game.surfaces["nauvis"]) > 0.5 -- TODO: fix for multisurface
+    local active = Thermosolar.calc_daylight(game.surfaces[ "nauvis" ]) > 0.5 -- TODO: fix for multisurface
     for _, panel in pairs(storage.lrf_panels) do
         if panel.valid then
             panel.active = active
@@ -80,8 +80,8 @@ py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
     end
 end)
 
-py.register_on_nth_tick(100, "solar", "pyae", Solar.events[100])
-py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
+py.register_on_nth_tick(100, "solar", "pyae", Solar.events[ 100 ])
+py.register_on_nth_tick(61, "wind", "pyae", Wind.events[ 61 ])
 
 py.on_event(py.events.on_destroyed(), function(event)
     Solar.events.on_destroyed(event)
@@ -92,15 +92,15 @@ py.on_event(py.events.on_destroyed(), function(event)
     local E = event.entity
     if not E.valid or not E.unit_number then return end
     if string.match(E.name, "lrf%-panel") ~= nil then
-        storage.lrf_panels[E.unit_number] = nil
+        storage.lrf_panels[ E.unit_number ] = nil
     elseif E.name == "stirling-concentrator" then
-        storage.stirling[E.unit_number] = nil
+        storage.stirling[ E.unit_number ] = nil
     end
 end)
 
 py.on_event(events.on_gui_opened, Heliostat.events.on_gui_opened)
 
-py.on_event({events.on_gui_closed, events.on_player_changed_surface}, function(event)
+py.on_event({ events.on_gui_closed, events.on_player_changed_surface }, function(event)
     Heliostat.events.on_gui_closed(event)
     Aerial.events.on_gui_closed(event)
 end)
@@ -108,10 +108,10 @@ end)
 py.on_event(events.on_player_cursor_stack_changed, Thermosolar.events.on_player_cursor_stack_changed)
 py.on_event(events.on_ai_command_completed, Aerial.events.on_ai_command_completed)
 py.on_event(defines.events.on_script_trigger_effect, Wind.events.on_script_trigger_effect)
-py.register_on_nth_tick(117, "aerial117", "pyae", Aerial.events[117])
-py.register_on_nth_tick(301, "aerial301", "pyae", Aerial.events[301])
+py.register_on_nth_tick(117, "aerial117", "pyae", Aerial.events[ 117 ])
+py.register_on_nth_tick(301, "aerial301", "pyae", Aerial.events[ 301 ])
 --1h+1tick
-py.register_on_nth_tick(60 * 60 * 60 + 1, "aerialfuckinghuge", "pyae", Aerial.events[60 * 60 * 60 + 1])
+py.register_on_nth_tick(60 * 60 * 60 + 1, "aerialfuckinghuge", "pyae", Aerial.events[ 60 * 60 * 60 + 1 ])
 py.on_event(py.events.on_entity_clicked(), Aerial.events.on_open_gui)
 
 py.register_on_nth_tick(9, "aerial9", "pyae", function()
@@ -124,7 +124,7 @@ end)
 py.on_event(defines.events.on_tick, function(event)
     local func_list = remote.call("on_nth_tick", "query", "pyae", event.tick)
     for _, func in pairs(func_list) do
-        py.mod_nth_tick_funcs[func]()
+        py.mod_nth_tick_funcs[ func ]()
     end
 end)
 

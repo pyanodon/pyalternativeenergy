@@ -1,30 +1,30 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "vawt-turbine-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "shaft-mk04",              amount = 1},
-        {type = "item", name = "anemometer-mk04",         amount = 1},
-        {type = "item", name = "gearbox-mk04",            amount = 1},
-        {type = "item", name = "intelligent-unit",        amount = 5},
-        {type = "item", name = "small-parts-03",          amount = 400},
-        {type = "item", name = "metastable-quasicrystal", amount = 5},
-        {type = "item", name = "low-density-structure",   amount = 50},
-        {type = "item", name = "nxzngd",                  amount = 4},
-        {type = "item", name = "hyperelastic-material",   amount = 4},
-        {type = "item", name = "biopolymer",              amount = 40},
-        {type = "item", name = "cf",                      amount = 200},
-        {type = "item", name = "fes",                     amount = 1},
-        {type = "item", name = "electronics-mk04",        amount = 2},
-        {type = "item", name = "controler-mk04",          amount = 1},
+        { type = "item", name = "shaft-mk04",              amount = 1 },
+        { type = "item", name = "anemometer-mk04",         amount = 1 },
+        { type = "item", name = "gearbox-mk04",            amount = 1 },
+        { type = "item", name = "intelligent-unit",        amount = 5 },
+        { type = "item", name = "small-parts-03",          amount = 400 },
+        { type = "item", name = "metastable-quasicrystal", amount = 5 },
+        { type = "item", name = "low-density-structure",   amount = 50 },
+        { type = "item", name = "nxzngd",                  amount = 4 },
+        { type = "item", name = "hyperelastic-material",   amount = 4 },
+        { type = "item", name = "biopolymer",              amount = 40 },
+        { type = "item", name = "cf",                      amount = 200 },
+        { type = "item", name = "fes",                     amount = 1 },
+        { type = "item", name = "electronics-mk04",        amount = 2 },
+        { type = "item", name = "controler-mk04",          amount = 1 },
     },
     results = {
-        {type = "item", name = "vawt-turbine-mk04", amount = 1}
+        { type = "item", name = "vawt-turbine-mk04", amount = 1 }
     }
-}:add_unlock("wind-mk04")
+}):add_unlock("wind-mk04")
 
-ITEM {
+ITEM({
     type = "item",
     name = "vawt-turbine-mk04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk04.png",
@@ -34,22 +34,22 @@ ITEM {
     order = "d",
     place_result = "vawt-turbine-mk04",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "electric-energy-interface",
     name = "vawt-turbine-mk04",
     icon = "__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk04.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    collision_mask = {layers = {wind_layer = true, object = true, player = true, water_tile = true}},
-    minable = {mining_time = 0.5, result = "vawt-turbine-mk04"},
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = { layers = { wind_layer = true, object = true, player = true, water_tile = true } },
+    minable = { mining_time = 0.5, result = "vawt-turbine-mk04" },
     fast_replaceable_group = "vawt-turbine",
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = { { -2.2, -2.2 }, { 2.2, 2.2 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     continuous_animation = true,
     energy_source = {
         type = "electric",
@@ -62,8 +62,8 @@ ENTITY {
     energy_production = "85MW",
     energy_usage = "0kW",
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/vawt-turbine-mk04.ogg", volume = 0.65},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/vawt-turbine-mk04.ogg", volume = 0.45},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/vawt-turbine-mk04.ogg", volume = 0.65 },
+        idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/vawt-turbine-mk04.ogg", volume = 0.45 },
         apparent_volume = 2.5
     },
     -- This should be the same as any animation on the assembler style buildings so if it doesnt work right just copy the animation section from one of them.
@@ -186,20 +186,20 @@ ENTITY {
             },
         }
     }
-}
+})
 
 data:extend
-{
+({
     {
         type = "simple-entity-with-force",
         name = "vawt-turbine-mk04-collision",
         render_layer = "wires-above",
         icon = "__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk04.png",
         icon_size = 64,
-        flags = {"placeable-neutral", "player-creation", "not-on-map"},
-        collision_box = {{-17.4, -17.4}, {17.4, 17.4}},
-        collision_mask = {layers = {wind_layer = true}},
-        selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+        flags = { "placeable-neutral", "player-creation", "not-on-map" },
+        collision_box = { { -17.4, -17.4 }, { 17.4, 17.4 } },
+        collision_mask = { layers = { wind_layer = true } },
+        selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
         selectable_in_game = false,
         picture = {
             filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
@@ -209,14 +209,14 @@ data:extend
         created_effect = {
             type = "area",
             radius = 17.4,
-            collision_mask = {layers = {wind_layer = true}},
+            collision_mask = { layers = { wind_layer = true } },
             action_delivery = {
                 type = "instant",
-                target_effects = {{
+                target_effects = { {
                     type = "script",
                     effect_id = "turbine-area"
-                }}
+                } }
             }
         }
     }
-}
+})

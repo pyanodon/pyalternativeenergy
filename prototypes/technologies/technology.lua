@@ -1,17 +1,17 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "  ",
     icon = "  ",
     icon_size = 128,
     order = "  ",
     upgrade = true,
-    prerequisites = {"  "},
+    prerequisites = { "  " },
     effects = {},
     unit = {
         count = 30,
         ingredients = {
-            {"  ", 1}
+            { "  ", 1 }
         },
         time = 35
     }
-}
+})

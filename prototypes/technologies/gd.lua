@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "gadolinium",
     icon = "__pyalternativeenergygraphics__/graphics/technology/gd.png",
@@ -9,11 +9,11 @@ TECHNOLOGY {
     unit = {
         count = 250,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack",   1},
-            {"chemical-science-pack",   1},
-            {"py-science-pack-3",       1},
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack",   1 },
+            { "chemical-science-pack",   1 },
+            { "py-science-pack-3",       1 },
         },
         time = 60
     }
-}
+})

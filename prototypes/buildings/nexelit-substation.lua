@@ -1,19 +1,19 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "nexelit-substation",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete",       amount = 15},
-        {type = "item", name = "niobium-plate",  amount = 5},
-        {type = "item", name = "small-parts-02", amount = 20},
-        {type = "item", name = "super-steel",    amount = 10},
-        {type = "item", name = "nexelit-plate",  amount = 50},
+        { type = "item", name = "concrete",       amount = 15 },
+        { type = "item", name = "niobium-plate",  amount = 5 },
+        { type = "item", name = "small-parts-02", amount = 20 },
+        { type = "item", name = "super-steel",    amount = 10 },
+        { type = "item", name = "nexelit-plate",  amount = 50 },
     },
-    results = {{type = "item", name = "nexelit-substation", amount = 1}}
-}:add_unlock("electric-energy-distribution-5")
+    results = { { type = "item", name = "nexelit-substation", amount = 1 } }
+}):add_unlock("electric-energy-distribution-5")
 
-ITEM {
+ITEM({
     type = "item",
     name = "nexelit-substation",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nexelit-substation.png",
@@ -23,21 +23,21 @@ ITEM {
     order = "b",
     place_result = "nexelit-substation",
     stack_size = 50
-}
+})
 
-ENTITY {
+ENTITY({
     type = "electric-pole",
     name = "nexelit-substation",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nexelit-substation.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "nexelit-substation"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.1, result = "nexelit-substation" },
     max_health = 600,
     corpse = "substation-remnants",
     dying_explosion = "substation-explosion",
     track_coverage_during_build_by_moving = true,
-    collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
-    selection_box = {{-2, -2}, {2, 2}},
+    collision_box = { { -1.8, -1.8 }, { 1.8, 1.8 } },
+    selection_box = { { -2, -2 }, { 2, 2 } },
     maximum_wire_distance = 60,
     supply_area_distance = 30,
     pictures =
@@ -118,14 +118,14 @@ ENTITY {
         height = 12,
         priority = "extra-high-no-scale"
     }
-}
+})
 
 -- https://github.com/pyanodon/pybugreports/issues/845
-if not mods["pystellarexpedition"] then
-    local legacy = table.deepcopy(data.raw["electric-pole"]["nexelit-substation"])
-    legacy.collision_box = {{-2.2, -2.2}, {2.2, 2.2}}
-    legacy.selection_box = {{-2.5, -2.5}, {2.5, 2.5}}
-    legacy.placeable_by = {item = "nexelit-substation", count = 1}
+if not mods[ "pystellarexpedition" ] then
+    local legacy = table.deepcopy(data.raw[ "electric-pole" ][ "nexelit-substation" ])
+    legacy.collision_box = { { -2.2, -2.2 }, { 2.2, 2.2 } }
+    legacy.selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } }
+    legacy.placeable_by = { item = "nexelit-substation", count = 1 }
     legacy.pictures = {
         layers = {
             {
@@ -182,6 +182,6 @@ if not mods["pystellarexpedition"] then
     }
     legacy.name = "nexelit-substation-legacy"
     legacy.hidden = true
-    legacy.localised_name = {"", {"entity-name.nexelit-substation"}, " (Legacy)"}
-    data:extend {legacy}
+    legacy.localised_name = { "", { "entity-name.nexelit-substation" }, " (Legacy)" }
+    data:extend({ legacy })
 end

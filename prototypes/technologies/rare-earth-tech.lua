@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "rare-earth-tech-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/technology/rare-earth-tech-mk02.png",
@@ -9,10 +9,10 @@ TECHNOLOGY {
     unit = {
         count = 50,
         ingredients = {
-            {"automation-science-pack", 2},
-            {"logistic-science-pack",   1},
-            {"chemical-science-pack",   1}
+            { "automation-science-pack", 2 },
+            { "logistic-science-pack",   1 },
+            { "chemical-science-pack",   1 }
         },
         time = 65
     }
-}
+})

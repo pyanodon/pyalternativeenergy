@@ -1,46 +1,46 @@
-FLUID {
+FLUID({
     type = "fluid",
     name = "solar-concentration",
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-tower.png",
     icon_size = 64,
     default_temperature = 0, -- less than 15 = liquid / equal a 15 = gas
-    base_color = {r = 255, g = 165, b = 0},
-    flow_color = {r = 255, g = 165, b = 0},
+    base_color = { r = 255, g = 165, b = 0 },
+    flow_color = { r = 255, g = 165, b = 0 },
     max_temperature = 10000,
     heat_capacity = "32kJ",
     gas_temperature = -1,
     subgroup = "py-nuclear",
     order = "c",
     hidden = true
-}
+})
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "solar-tower-building",
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete",                amount = 1000},
-        {type = "item", name = "super-alloy",             amount = 1000},
-        {type = "item", name = "cf",                      amount = 500},
-        {type = "item", name = "biopolymer",              amount = 800},
-        {type = "item", name = "niobium-pipe",            amount = 800},
-        {type = "item", name = "metallic-glass",          amount = 300},
-        {type = "item", name = "glass",                   amount = 1000},
-        {type = "item", name = "nbfe-alloy",              amount = 1000},
-        {type = "item", name = "science-coating",         amount = 500},
-        {type = "item", name = "carbon-aerogel",          amount = 1000},
-        {type = "item", name = "metastable-quasicrystal", amount = 50},
-        {type = "item", name = "intelligent-unit",        amount = 10},
-        {type = "item", name = "low-density-structure",   amount = 400},
-        {type = "item", name = "mechanical-parts-04",     amount = 10}
+        { type = "item", name = "concrete",                amount = 1000 },
+        { type = "item", name = "super-alloy",             amount = 1000 },
+        { type = "item", name = "cf",                      amount = 500 },
+        { type = "item", name = "biopolymer",              amount = 800 },
+        { type = "item", name = "niobium-pipe",            amount = 800 },
+        { type = "item", name = "metallic-glass",          amount = 300 },
+        { type = "item", name = "glass",                   amount = 1000 },
+        { type = "item", name = "nbfe-alloy",              amount = 1000 },
+        { type = "item", name = "science-coating",         amount = 500 },
+        { type = "item", name = "carbon-aerogel",          amount = 1000 },
+        { type = "item", name = "metastable-quasicrystal", amount = 50 },
+        { type = "item", name = "intelligent-unit",        amount = 10 },
+        { type = "item", name = "low-density-structure",   amount = 400 },
+        { type = "item", name = "mechanical-parts-04",     amount = 10 }
     },
     results = {
-        {type = "item", name = "solar-tower-building", amount = 1}
+        { type = "item", name = "solar-tower-building", amount = 1 }
     }
-}:add_unlock("thermal-mk04")
+}):add_unlock("thermal-mk04")
 
-ITEM {
+ITEM({
     type = "item",
     name = "solar-tower-building",
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-tower.png",
@@ -50,7 +50,7 @@ ITEM {
     order = "da",
     place_result = "solar-tower-building",
     stack_size = 10
-}
+})
 
 local structure = {
     layers = {
@@ -172,29 +172,29 @@ local fire_glow = {
     height = 1
 }
 
-ENTITY {
+ENTITY({
     type = "boiler",
     name = "solar-tower-building",
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-tower.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 20, result = "solar-tower-building"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 20, result = "solar-tower-building" },
     max_health = 5500,
     corpse = "boiler-remnants",
     impact_category = "metal-large",
     mode = "output-to-separate-pipe",
-    collision_box = {{-9.8, -9.8}, {9.8, 9.8}},
-    collision_mask = {layers = {item = true, object = true, player = true, water_tile = true, sut_placement_distance = true}},
-    selection_box = {{-10.0, -10.0}, {10.0, 10.0}},
+    collision_box = { { -9.8, -9.8 }, { 9.8, 9.8 } },
+    collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, sut_placement_distance = true } },
+    selection_box = { { -10.0, -10.0 }, { 10.0, 10.0 } },
     target_temperature = 5000,
     fluid_box = {
         volume = 10000,
         pipe_covers = py.pipe_covers(false, true, true, true),
         pipe_connections = {
-            {flow_direction = "input", position = {7.5, 9.5},  direction = defines.direction.south},
-            {flow_direction = "input", position = {6.5, 9.5},  direction = defines.direction.south},
-            {flow_direction = "input", position = {-7.5, 9.5}, direction = defines.direction.south},
-            {flow_direction = "input", position = {-6.5, 9.5}, direction = defines.direction.south}
+            { flow_direction = "input", position = { 7.5, 9.5 }, direction = defines.direction.south },
+            { flow_direction = "input", position = { 6.5, 9.5 }, direction = defines.direction.south },
+            { flow_direction = "input", position = { -7.5, 9.5 }, direction = defines.direction.south },
+            { flow_direction = "input", position = { -6.5, 9.5 }, direction = defines.direction.south }
         },
         production_type = "input",
         filter = "molten-salt"
@@ -203,10 +203,10 @@ ENTITY {
         volume = 10000,
         pipe_covers = py.pipe_covers(false, true, true, true),
         pipe_connections = {
-            {flow_direction = "output", position = {7.5, -9.5},  direction = defines.direction.north},
-            {flow_direction = "output", position = {6.5, -9.5},  direction = defines.direction.north},
-            {flow_direction = "output", position = {-7.5, -9.5}, direction = defines.direction.north},
-            {flow_direction = "output", position = {-6.5, -9.5}, direction = defines.direction.north},
+            { flow_direction = "output", position = { 7.5, -9.5 }, direction = defines.direction.north },
+            { flow_direction = "output", position = { 6.5, -9.5 }, direction = defines.direction.north },
+            { flow_direction = "output", position = { -7.5, -9.5 }, direction = defines.direction.north },
+            { flow_direction = "output", position = { -6.5, -9.5 }, direction = defines.direction.north },
         },
         production_type = "output",
         filter = "hot-molten-salt"
@@ -222,7 +222,7 @@ ENTITY {
             volume = 100,
             pipe_connections = {},
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             production_type = "input",
             filter = "solar-concentration"
         },
@@ -262,4 +262,4 @@ ENTITY {
             fire_glow = fire_glow,
         },
     }
-}
+})

@@ -1,21 +1,21 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "offshore-test",
     energy_required = 0.5,
     enabled = true,
     ingredients = {
-        {type = "item", name = "electric-mining-drill", amount = 5},
-        {type = "item", name = "electronic-circuit",    amount = 10},
-        {type = "item", name = "iron-gear-wheel",       amount = 40},
-        {type = "item", name = "aluminium-plate",       amount = 20},
-        {type = "item", name = "engine-unit",           amount = 2},
+        { type = "item", name = "electric-mining-drill", amount = 5 },
+        { type = "item", name = "electronic-circuit",    amount = 10 },
+        { type = "item", name = "iron-gear-wheel",       amount = 40 },
+        { type = "item", name = "aluminium-plate",       amount = 20 },
+        { type = "item", name = "engine-unit",           amount = 2 },
     },
     results = {
-        {type = "item", name = "offshore-test", amount = 1}
+        { type = "item", name = "offshore-test", amount = 1 }
     }
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "offshore-test",
     icon = "__pyalternativeenergygraphics__/graphics/icons/antimonium-drill-mk01.png",
@@ -25,21 +25,21 @@ ITEM {
     order = "a",
     place_result = "offshore-test",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "offshore-pump",
     name = "offshore-test",
     icon = "__base__/graphics/icons/offshore-pump.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "filter-directions"},
-    collision_mask = {layers = {object = true, train = true}},                            -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
-    center_collision_mask = {layers = {water_tile = true, object = true, player = true}}, -- to test that tile directly under the pump is ground
-    fluid_box_tile_collision_test = {ground_tile = true},
-    adjacent_tile_collision_test = {water_tile = true},
-    adjacent_tile_collision_mask = {layers = {ground_tile = true}}, -- to prevent building on edge of map :(
-    adjacent_tile_collision_box = {{-1, -2}, {1, -1}},
-    minable = {mining_time = 0.1, result = "offshore-test"},
+    flags = { "placeable-neutral", "player-creation", "filter-directions" },
+    collision_mask = { layers = { object = true, train = true } },                        -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    center_collision_mask = { layers = { water_tile = true, object = true, player = true } }, -- to test that tile directly under the pump is ground
+    fluid_box_tile_collision_test = { ground_tile = true },
+    adjacent_tile_collision_test = { water_tile = true },
+    adjacent_tile_collision_mask = { layers = { ground_tile = true } }, -- to prevent building on edge of map :(
+    adjacent_tile_collision_box = { { -1, -2 }, { 1, -1 } },
+    minable = { mining_time = 0.1, result = "offshore-test" },
     max_health = 150,
     corpse = "offshore-pump-remnants",
     dying_explosion = "offshore-pump-explosion",
@@ -55,8 +55,8 @@ ENTITY {
             percent = 30
         }
     },
-    collision_box = {{-0.6, -1.05}, {0.6, 0.3}},
-    selection_box = {{-0.6, -1.49}, {0.6, 0.49}},
+    collision_box = { { -0.6, -1.05 }, { 0.6, 0.3 } },
+    selection_box = { { -0.6, -1.49 }, { 0.6, 0.49 } },
     --damaged_trigger_effect = hit_effects.entity(),
     fluid_box =
     {
@@ -67,7 +67,7 @@ ENTITY {
         pipe_connections =
         {
             {
-                position = {0, 1},
+                position = { 0, 1 },
                 type = "output"
             }
         }
@@ -389,7 +389,7 @@ ENTITY {
         scale = 0.5,
         x = 3 * 64
     },
-    circuit_connector = circuit_connector_definitions["offshore-pump"],
+    circuit_connector = circuit_connector_definitions[ "offshore-pump" ],
     circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     water_reflection =
     {
@@ -406,4 +406,4 @@ ENTITY {
         rotate = false,
         orientation_to_variation = true
     }
-}
+})

@@ -1,24 +1,24 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "lrf-panel-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "axis-tracker",       amount = 2},
-        {type = "item", name = "mirror-mk01",        amount = 25},
-        {type = "item", name = "steel-plate",        amount = 50},
-        {type = "item", name = "duralumin",          amount = 20},
-        {type = "item", name = "quartz-tube",        amount = 10},
-        {type = "item", name = "small-parts-01",     amount = 100},
-        {type = "item", name = "utility-box-mk01",   amount = 1},
-        {type = "item", name = "electronic-circuit", amount = 5},
+        { type = "item", name = "axis-tracker",       amount = 2 },
+        { type = "item", name = "mirror-mk01",        amount = 25 },
+        { type = "item", name = "steel-plate",        amount = 50 },
+        { type = "item", name = "duralumin",          amount = 20 },
+        { type = "item", name = "quartz-tube",        amount = 10 },
+        { type = "item", name = "small-parts-01",     amount = 100 },
+        { type = "item", name = "utility-box-mk01",   amount = 1 },
+        { type = "item", name = "electronic-circuit", amount = 5 },
     },
     results = {
-        {type = "item", name = "lrf-panel-mk01", amount = 1}
+        { type = "item", name = "lrf-panel-mk01", amount = 1 }
     }
-}:add_unlock("thermal-mk01")
+}):add_unlock("thermal-mk01")
 
-ITEM {
+ITEM({
     type = "item",
     name = "lrf-panel-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
@@ -28,7 +28,7 @@ ITEM {
     order = "ab",
     place_result = "lrf-panel-mk01",
     stack_size = 50
-}
+})
 
 local north_south = {
     layers = {
@@ -44,7 +44,7 @@ local north_south = {
             width = 160,
             height = 416,
             frame_count = 1,
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+            tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
             shift = util.by_pixel(0, -16)
         },
         {
@@ -73,7 +73,7 @@ local east_west = {
             width = 320,
             height = 160,
             frame_count = 1,
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+            tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
             shift = util.by_pixel(0, -0)
         },
         {
@@ -95,21 +95,21 @@ local empty = {
     height = 1
 }
 
-ENTITY {
+ENTITY({
     type = "boiler",
     name = "lrf-panel-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/lrf-panel-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "lrf-panel-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "lrf-panel-mk01" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-2.2, -4.8}, {2.2, 4.8}},
-    selection_box = {{-2.5, -5.0}, {2.5, 5.0}},
+    collision_box = { { -2.2, -4.8 }, { 2.2, 4.8 } },
+    selection_box = { { -2.5, -5.0 }, { 2.5, 5.0 } },
     mode = "heat-fluid-inside",
     target_temperature = 5000,
-    energy_source = {type = "void"},
+    energy_source = { type = "void" },
     energy_consumption = "600kW",
     burning_cooldown = 0,
     fluid_box = {
@@ -118,8 +118,8 @@ ENTITY {
         pipe_covers = py.pipe_covers(false, false, true, true),
         volume = 1000,
         pipe_connections = {
-            {flow_direction = "input-output", position = {0, -4.5}, direction = defines.direction.north},
-            {flow_direction = "input-output", position = {0, 4.5},  direction = defines.direction.south},
+            { flow_direction = "input-output", position = { 0, -4.5 }, direction = defines.direction.north },
+            { flow_direction = "input-output", position = { 0, 4.5 }, direction = defines.direction.south },
         },
         filter = "molten-salt"
     },
@@ -129,7 +129,7 @@ ENTITY {
         volume = 1,
     },
     impact_category = "metal-large",
-    placeable_by = {item = "stirling-concentrator", count = 1},
+    placeable_by = { item = "stirling-concentrator", count = 1 },
     pictures = {
         north = {
             structure = north_south,
@@ -152,4 +152,4 @@ ENTITY {
             fire_glow = empty,
         },
     }
-}
+})

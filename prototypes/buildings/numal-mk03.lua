@@ -1,28 +1,28 @@
 local MODULE_SLOTS = 16
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "numal-reef-mk03",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "numal-reef-mk02",      amount = 1},
-        {type = "item", name = "ticocr-alloy",         amount = 50},
-        {type = "item", name = "phosphate-glass",      amount = 100},
-        {type = "item", name = "py-heat-exchanger",    amount = 1},
-        {type = "item", name = "electric-engine-unit", amount = 5},
-        {type = "item", name = "sc-unit",              amount = 20},
-        {type = "item", name = "cf",                   amount = 100},
-        {type = "item", name = "ns-material",          amount = 20},
-        {type = "item", name = "small-parts-03",       amount = 200},
-        {type = "item", name = "neuromorphic-chip",    amount = 30},
-        {type = "item", name = "processing-unit",      amount = 50},
-        {type = "item", name = "mechanical-parts-03",  amount = 2},
+        { type = "item", name = "numal-reef-mk02",      amount = 1 },
+        { type = "item", name = "ticocr-alloy",         amount = 50 },
+        { type = "item", name = "phosphate-glass",      amount = 100 },
+        { type = "item", name = "py-heat-exchanger",    amount = 1 },
+        { type = "item", name = "electric-engine-unit", amount = 5 },
+        { type = "item", name = "sc-unit",              amount = 20 },
+        { type = "item", name = "cf",                   amount = 100 },
+        { type = "item", name = "ns-material",          amount = 20 },
+        { type = "item", name = "small-parts-03",       amount = 200 },
+        { type = "item", name = "neuromorphic-chip",    amount = 30 },
+        { type = "item", name = "processing-unit",      amount = 50 },
+        { type = "item", name = "mechanical-parts-03",  amount = 2 },
     },
-    results = {{type = "item", name = "numal-reef-mk03", amount = 1}}
-}:add_unlock("numal-mk03")
+    results = { { type = "item", name = "numal-reef-mk03", amount = 1 } }
+}):add_unlock("numal-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "numal-reef-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/numal-mk03.png",
@@ -32,29 +32,29 @@ ITEM {
     order = "a",
     place_result = "numal-reef-mk03",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "numal-reef-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/numal-mk03.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "numal-reef-mk03"},
-    placeable_by = {item = "numal-reef-mk03", count = 1},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "numal-reef-mk03" },
+    placeable_by = { item = "numal-reef-mk03", count = 1 },
     fast_replaceable_group = "numal",
     next_upgrade = "numal-reef-mk04",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_mask = data.raw["assembling-machine"]["numal-reef-mk01"].collision_mask,
-    collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
-    selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
+    collision_mask = data.raw[ "assembling-machine" ][ "numal-reef-mk01" ].collision_mask,
+    collision_box = { { -3.3, -5.3 }, { 3.3, 5.3 } },
+    selection_box = { { -3.5, -5.5 }, { 3.5, 5.5 } },
     forced_symmetry = "diagonal-pos",
     draw_entity_info_icon_background = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"numal"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "numal" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "numal-reef-mk01"),
     energy_source = {
         type = "electric",
@@ -105,7 +105,7 @@ ENTITY {
                         repeat_count = 150,
                         animation_speed = 0.5,
                         shift = util.by_pixel(0, -32),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/north/raw-bot-mask.png",
@@ -115,7 +115,7 @@ ENTITY {
                         line_length = 20,
                         animation_speed = 0.5,
                         shift = util.by_pixel(64, 48),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/north/raw-top-mask.png",
@@ -125,7 +125,7 @@ ENTITY {
                         line_length = 20,
                         animation_speed = 0.5,
                         shift = util.by_pixel(-80, 32),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/north/ao.png",
@@ -261,7 +261,7 @@ ENTITY {
                         repeat_count = 150,
                         animation_speed = 0.5,
                         shift = util.by_pixel(0, -0),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-bot-mask.png",
@@ -271,7 +271,7 @@ ENTITY {
                         line_length = 20,
                         animation_speed = 0.5,
                         shift = util.by_pixel(-64, -96),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/raw-top-mask.png",
@@ -281,7 +281,7 @@ ENTITY {
                         line_length = 20,
                         animation_speed = 0.5,
                         shift = util.by_pixel(80, -112),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/ao.png",
@@ -408,7 +408,7 @@ ENTITY {
                         repeat_count = 150,
                         animation_speed = 0.5,
                         shift = util.by_pixel(-0, -32),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/east/raw-anim-mask.png",
@@ -418,7 +418,7 @@ ENTITY {
                         line_length = 20,
                         animation_speed = 0.5,
                         shift = util.by_pixel(64, -48),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/east/ao-fix.png",
@@ -545,7 +545,7 @@ ENTITY {
                         repeat_count = 150,
                         animation_speed = 0.5,
                         shift = util.by_pixel(0, -32),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-bot-mask.png",
@@ -555,7 +555,7 @@ ENTITY {
                         line_length = 20,
                         animation_speed = 0.5,
                         shift = util.by_pixel(-64, 32),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/west/raw-top-mask.png",
@@ -565,7 +565,7 @@ ENTITY {
                         line_length = 20,
                         animation_speed = 0.5,
                         shift = util.by_pixel(-64, -112),
-                        tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                        tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 },
                     },
                     {
                         filename = "__pyalternativeenergygraphics__/graphics/entity/numal/west/ao.png",
@@ -715,18 +715,18 @@ ENTITY {
         -- 1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { 0, 5.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalternativeenergygraphics__/sounds/numal.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/numal.ogg", volume = 0.65},
+        sound = { filename = "__pyalternativeenergygraphics__/sounds/numal.ogg", volume = 1.0 },
+        idle_sound = { filename = "__pyalternativeenergygraphics__/sounds/numal.ogg", volume = 0.65 },
         apparent_volume = 0.45
     },
     -- Blacklist from squeak through
     squeak_behaviour = false
-}
+})

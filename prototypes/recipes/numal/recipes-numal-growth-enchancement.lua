@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "numal-improved",
 	category = "numal",
 	--module_limitations = 'numal',
@@ -11,12 +11,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "numal",        amount = 1},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "numal",        amount = 1 },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-numal", amount = 2},
+				{ name = "meat-numal", amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "anabolic-rna"
@@ -26,7 +26,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -39,14 +39,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 2},
+				{ name = "gh",           remove_item = true },
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 2 },
 			},
 			results =
 			{
-				{name = "meat-numal", remove_item = true},
-				{name = "guts-numal", amount = 1},
+				{ name = "meat-numal", remove_item = true },
+				{ name = "guts-numal", amount = 1 },
 			},
 			crafting_speed = 180,
 			tech = "antitumor"
@@ -56,7 +56,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -69,14 +69,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "antitumor",       remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "antitumor",       remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-numal",  remove_item = true},
-				{name = "blood-numal", amount = 2},
+				{ name = "guts-numal",  remove_item = true },
+				{ name = "blood-numal", amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "recombinant-ery"
@@ -85,7 +85,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -98,14 +98,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "blood-numal",  remove_item = true},
-				{name = "chitin-numal", amount = 2},
+				{ name = "blood-numal",  remove_item = true },
+				{ name = "chitin-numal", amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "reca"
@@ -114,7 +114,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -124,4 +124,4 @@ py.autorecipes {
 			tech = "reca"
 		},
 	}
-}
+})
