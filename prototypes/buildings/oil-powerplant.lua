@@ -120,6 +120,7 @@ for i = 1, 4 do
         forced_symmetry = "diagonal-pos",
         module_slots = i,
         allowed_effects = {"consumption", "speed", "pollution"},
+        allowed_module_categories = {"speed"},
         crafting_categories = {"oil-powerplant"},
         crafting_speed = i,
         energy_source = {
