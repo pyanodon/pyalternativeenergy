@@ -11,6 +11,7 @@ Date: ????
   Changes:
     - Added recipes to convert steam and pressurized steam into cooler forms
     - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
+    - Buff higher tiers of rare earth mining drills to have lower resource drain and larger mining area
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.32
 Date: 2025-08-12
