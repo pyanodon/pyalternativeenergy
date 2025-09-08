@@ -11,5 +11,6 @@ FLUID {
     gas_temperature = -1,
     subgroup = "py-nuclear",
     order = "c",
-    hidden = true
+    hidden = true,
+    auto_barrel = false
 }
