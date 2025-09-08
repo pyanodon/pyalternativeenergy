@@ -1040,7 +1040,7 @@ RECIPE {
         {type = "fluid", name = "carbon-dioxide", amount = 50},
     },
     main_product = "enriched-ash",
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 RECIPE {
     type = "recipe",
@@ -1057,7 +1057,7 @@ RECIPE {
         {type = "fluid", name = "muddy-sludge", amount = 50},
     },
     main_product = "washed-ash",
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 RECIPE {
     type = "recipe",
@@ -1073,7 +1073,7 @@ RECIPE {
         {type = "item", name = "processed-ash", amount = 5},
     },
     --main_product = "washed-ash",
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 RECIPE {
     type = "recipe",
@@ -1091,7 +1091,7 @@ RECIPE {
         {type = "item", name = "advanced-substrate", amount = 1},
     },
     --main_product = "washed-ash",
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 RECIPE {
     type = "recipe",
@@ -1110,7 +1110,7 @@ RECIPE {
         {type = "fluid", name = "muddy-sludge", amount = 50},
     },
     main_product = "bio-ore",
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 RECIPE {
     type = "recipe",

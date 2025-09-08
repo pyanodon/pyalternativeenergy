@@ -245,7 +245,7 @@ RECIPE {
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "h",
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 ITEM {
     type = "item",
