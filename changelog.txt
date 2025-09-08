@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
     - Removed barreling recipes for internal "void" and "solar-concentration" fluids.
+    - Added Dutch locale (thanks, QatSquirrel!)
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.33
 Date: 2025-08-23
