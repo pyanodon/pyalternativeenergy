@@ -194,6 +194,8 @@ if feature_flags.space_travel and not data.raw.armor["mech-armor"] then
     data.raw.armor["power-armor-mk2"].provides_flight = true
 end
 
+data.raw.technology["oil-processing"]:add_pack("logistic-science-pack")
+
 --gather recipes for module changes
 local recipes_list =
 {
