@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/eva.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"renewable-mk02"},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 250,
