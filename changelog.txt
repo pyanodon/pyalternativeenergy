@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Added recipes to convert steam and pressurized steam into cooler forms
     - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
+    - Most space science pack technologies are now prereqs of pyrrhic victory.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.32
 Date: 2025-08-12
