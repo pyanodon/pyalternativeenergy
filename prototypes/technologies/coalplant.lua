@@ -23,7 +23,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"nonrenewable-mk02", "coalplant-mk01"},
-    dependencies = {"coalplant-mk01"},
     effects = {},
     unit = {
         count = 500,
@@ -43,7 +42,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"nonrenewable-mk03", "coalplant-mk02"},
-    dependencies = {"coalplant-mk02"},
     effects = {},
     unit = {
         count = 500,
@@ -66,7 +64,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"nonrenewable-mk04", "coalplant-mk03"},
-    dependencies = {"coalplant-mk03"},
     effects = {},
     unit = {
         count = 500,

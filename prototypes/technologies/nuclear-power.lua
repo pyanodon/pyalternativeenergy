@@ -29,7 +29,6 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/nuclear-mk02.png",
     effects = {},
     prerequisites = {"uranium-mk02", "nonrenewable-mk02", "nuclear-power"},
-    dependencies = {"nuclear-power"},
     unit =
     {
         ingredients =
@@ -54,8 +53,6 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/nuclear-mk03.png",
     effects = {},
     prerequisites = {"uranium-mk03", "nonrenewable-mk03", "nuclear-power-mk02"},
-    dependencies = {"nuclear-power-mk02"},
-    unit =
     {
         ingredients =
         {
@@ -81,7 +78,6 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/nuclear-mk04.png",
     effects = {},
     prerequisites = {"uranium-mk04", "nonrenewable-mk04", "nuclear-power-mk03"},
-    dependencies = {"nuclear-power-mk03"},
     unit =
     {
         ingredients =

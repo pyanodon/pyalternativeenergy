@@ -5,7 +5,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"renewable-mk01", "nonrenewable-mk01"},
-    dependencies = {"renewable-mk01"},
     effects = {},
     unit = {
         count = 500,
@@ -24,7 +23,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"renewable-mk02", "nonrenewable-mk02", "biomassplant-mk01"},
-    dependencies = {"biomassplant-mk01"},
     effects = {},
     unit = {
         count = 500,
@@ -44,7 +42,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"renewable-mk03", "nonrenewable-mk03", "biomassplant-mk02"},
-    dependencies = {"biomassplant-mk02"},
     effects = {},
     unit = {
         count = 500,
@@ -67,7 +64,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"renewable-mk04", "nonrenewable-mk04", "biomassplant-mk03"},
-    dependencies = {"biomassplant-mk03"},
     effects = {},
     unit = {
         count = 500,

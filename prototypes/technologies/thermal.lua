@@ -5,7 +5,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"solar-power-mk01"},
-    dependencies = {"solar-power-mk01"},
     effects = {},
     unit = {
         count = 300,
@@ -25,7 +24,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"thermal-mk01", "solar-power-mk02"},
-    dependencies = {"thermal-mk01", "solar-power-mk02"},
     effects = {},
     unit = {
         count = 400,
@@ -47,7 +45,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"thermal-mk02", "solar-power-mk03"},
-    dependencies = {"thermal-mk02", "solar-power-mk03"},
     effects = {},
     unit = {
         count = 500,
@@ -71,7 +68,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"thermal-mk03", "solar-power-mk04"},
-    dependencies = {"thermal-mk03", "solar-power-mk04"},
     effects = {},
     unit = {
         count = 600,

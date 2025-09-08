@@ -22,8 +22,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/machine-comp-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"machine-components-mk01"},
+    prerequisites = {"machine-components-mk01"},
     effects = {},
     unit = {
         count = 500,
@@ -42,8 +41,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/machine-comp-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"machine-components-mk02"},
+    prerequisites = {"machine-components-mk02"},
     effects = {},
     unit = {
         count = 500,
@@ -65,8 +63,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/machine-comp-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"machine-components-mk03"},
+    prerequisites = {"machine-components-mk03"},
     effects = {},
     unit = {
         count = 500,
