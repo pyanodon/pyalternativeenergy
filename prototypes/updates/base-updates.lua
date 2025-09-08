@@ -353,6 +353,7 @@ data.raw.technology["uranium-mining"].enabled = false
 data.raw.technology["uranium-mining"].hidden = true
 
 TECHNOLOGY("uranium-processing").research_trigger = nil
+TECHNOLOGY("uranium-processing").prerequisites = {}
 TECHNOLOGY("uranium-processing"):add_pack("py-science-pack-2")
 
 TECHNOLOGY("kovarex-enrichment-process"):set_fields {enabled = false, hidden = true}

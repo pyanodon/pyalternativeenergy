@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon_size = 128,
     icon = "__pyalternativeenergygraphics__/graphics/technology/nuclear-mk01.png",
     effects = {},
-    prerequisites = {"uranium-mk01", "nonrenewable-mk01"},
+    prerequisites = {"uranium-processing", "nonrenewable-mk01"},
     unit =
     {
         ingredients =
@@ -13,7 +13,6 @@ TECHNOLOGY {
             {"py-science-pack-1",       1},
             {"logistic-science-pack",   1},
             {"py-science-pack-2",       1},
-            {"chemical-science-pack",   1},
             --{'py-science-pack-3', 1},
         },
         time = 30,
