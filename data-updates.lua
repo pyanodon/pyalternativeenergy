@@ -50,6 +50,7 @@ RECIPE("tar-to-nickel"):set_fields {energy_required = 10}
 RECIPE("honey-comb"):set_fields {energy_required = 1}
 RECIPE("honey-comb-buffed"):set_fields {energy_required = 3}
 
+data.raw.technology["pyrrhic"]:add_prereq("mass-production")
 data.raw.technology["pyrrhic"]:add_prereq("machines-mk05")
 data.raw.technology["pyrrhic"]:add_prereq("oil-machines-mk04")
 data.raw.technology["pyrrhic"]:add_prereq("smelters-mk04")
