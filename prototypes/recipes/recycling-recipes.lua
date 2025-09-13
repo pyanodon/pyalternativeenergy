@@ -769,7 +769,7 @@ RECIPE {
     },
     main_product = "muddy-sludge",
     allow_productivity = true,
-}:add_unlock("filtration")
+}:add_unlock("vanadium-processing")
 
 -- oleochemicals
 

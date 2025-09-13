@@ -192,10 +192,9 @@ RECIPE {
     },
     results =
     {
-        {type = "item",  name = "tbp",               amount = 1},
+        {type = "item",  name = "tbp",               amount = 1, autotech_ignore = true},
         {type = "fluid", name = "hydrogen-chloride", amount = 30},
     },
-    autotech_is_not_primary_recipe = true,
     main_product = "tbp",
     category = "electrolyzer"
 }:add_unlock("nuclear-power")
