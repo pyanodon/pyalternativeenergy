@@ -494,7 +494,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ti-overflow-waste", amount = 30},
-        {type = "fluid", name = "mibc",              amount = 30},
+        {type = "fluid", name = "mibc",              amount = 30, autotech_ignore = true},
     },
     allow_productivity = true,
     main_product = "mibc",
