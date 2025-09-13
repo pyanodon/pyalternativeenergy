@@ -50,16 +50,16 @@ RECIPE("tar-to-nickel"):set_fields {energy_required = 10}
 RECIPE("honey-comb"):set_fields {energy_required = 1}
 RECIPE("honey-comb-buffed"):set_fields {energy_required = 3}
 
-data.raw.technology["pyrrhic"]:add_prereq("excavation-3")
-data.raw.technology["pyrrhic"]:add_prereq("mounts-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("machines-mk05")
 data.raw.technology["pyrrhic"]:add_prereq("oil-machines-mk04")
-data.raw.technology["pyrrhic"]:add_prereq("nexelit-mk05")
 data.raw.technology["pyrrhic"]:add_prereq("smelters-mk04")
-data.raw.technology["pyrrhic"]:add_prereq("silver-mk05")
 data.raw.technology["pyrrhic"]:add_prereq("nuclear-power-mk04")
 data.raw.technology["pyrrhic"]:add_prereq("electronics-machines-4")
 data.raw.technology["pyrrhic"]:add_prereq("tholin-mk04")
 data.raw.technology["pyrrhic"]:add_prereq("land-animals-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("mycology-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("botany-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("biotech-machines-mk04")
 
 RECIPE {
     type = "recipe",
