@@ -6,7 +6,9 @@ Date: ???
     - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
     - Removed barreling recipes for internal "void" and "solar-concentration" fluids.
     - Added Dutch locale (thanks, QatSquirrel!)
-    - Added new recipe for sodium-carbonate from salt-solution loosely based on the Solvay process.
+    - Added new recipe for sodium-carbonate from salt-solution based on the Solvay process. Resolves https://github.com/pyanodon/pybugreports/issues/970
+    - Added new recipes for nuclear reactors designed to consume less lithium peroxide per GW, scaling with tech level. (https://github.com/pyanodon/pyalternativeenergy/pull/116) (Massive thanks to Majildian & Xayad!)
+    - Added 6 new nuclear reactor waste fluids produced by aformentioned recipes. Can be processed into high-energy waste 1, high-energy waste 2, and hot molten salt based.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.33
 Date: ????
