@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.34
+Date: ???
+  Changes:
+    - Some space science pack technologies are now prereqs of pyrrhic victory.
+    - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
+    - Removed barreling recipes for internal "void" and "solar-concentration" fluids.
+    - Added Dutch locale (thanks, QatSquirrel!)
+    - Added new recipe for sodium-carbonate from salt-solution loosely based on the Solvay process.
+---------------------------------------------------------------------------------------------------
 Version: 3.1.33
 Date: ????
   Changes:
