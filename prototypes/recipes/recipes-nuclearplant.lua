@@ -28,11 +28,6 @@ RECIPE {
         {type = "fluid", name = "neutron",          amount = 200, temperature = 100},
     },
     main_product = "reactor-waste-12",
-    icons =
-    {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/reactor-waste-1.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-    }
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -49,11 +44,6 @@ RECIPE {
         {type = "fluid", name = "neutron",          amount = 200, temperature = 100},
     },
     main_product = "reactor-waste-13",
-    icons =
-    {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/reactor-waste-1.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-    }
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -70,11 +60,6 @@ RECIPE {
         {type = "fluid", name = "neutron",          amount = 200, temperature = 100},
     },
     main_product = "reactor-waste-14",
-    icons =
-    {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/reactor-waste-1.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-    }
 }:add_unlock("nuclear-power-mk04")
 
 RECIPE {
@@ -107,11 +92,6 @@ RECIPE {
         {type = "fluid", name = "neutron",          amount = 200, temperature = 100},
     },
     main_product = "reactor-waste-22",
-    icons =
-    {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/reactor-waste-2.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-    }
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -128,11 +108,6 @@ RECIPE {
         {type = "fluid", name = "neutron",          amount = 200, temperature = 100},
     },
     main_product = "reactor-waste-23",
-    icons =
-    {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/reactor-waste-2.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-    }
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -149,11 +124,6 @@ RECIPE {
         {type = "fluid", name = "neutron",          amount = 200, temperature = 100},
     },
     main_product = "reactor-waste-24",
-    icons =
-    {
-        {icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/reactor-waste-2.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-    }
 }:add_unlock("nuclear-power-mk04")
 
 RECIPE {

@@ -215,6 +215,11 @@ RECIPE {
         {type = "fluid", name = "salt-solution",       amount = 400}
     },
     main_product = "high-energy-waste-1",
+    icons =
+    {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-1.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
+    },
     subgroup = "py-nuclear-waste",
     order = "b"
 }:add_unlock("nuclear-power")
