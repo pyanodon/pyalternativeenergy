@@ -771,6 +771,7 @@ RECIPE {
         {type = "fluid", name = "molten-salt", amount = 100, temperature = 1000},
     },
     --main_product = "eg-si",
+    icons = py.composite_icon("molten-salt", "salt"),
 }:add_unlock("energy-1")
 
 RECIPE {

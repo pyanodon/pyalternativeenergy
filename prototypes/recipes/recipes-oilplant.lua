@@ -10,6 +10,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 1000},
     },
+    icons = py.composite_icon("hot-molten-salt", "kerosene"),
 }:add_unlock("oilplant-mk01")
 
 RECIPE {
@@ -24,6 +25,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 2000},
     },
+    icons = py.composite_icon("hot-molten-salt", "fuel-oil"),
 }:add_unlock("oilplant-mk02")
 
 RECIPE {
@@ -38,6 +40,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 3000},
     },
+    icons = py.composite_icon("hot-molten-salt", "diesel"),
 }:add_unlock("oilplant-mk03")
 
 RECIPE {
@@ -52,4 +55,5 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 4000},
     },
+    icons = py.composite_icon("hot-molten-salt", "gasoline"),
 }:add_unlock("oilplant-mk04")
