@@ -192,7 +192,7 @@ RECIPE {
     },
     results =
     {
-        {type = "item",  name = "tbp",               amount = 1, autotech_ignore = true},
+        {type = "item",  name = "tbp",               amount = 1, autotech_is_not_primary_source = true},
         {type = "fluid", name = "hydrogen-chloride", amount = 30},
     },
     main_product = "tbp",
