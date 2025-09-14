@@ -102,7 +102,8 @@ TECHNOLOGY {
         ingredients =
         {
             {"automation-science-pack", 1},
-            {"logistic-science-pack",   1}
+            {"logistic-science-pack",   1},
+            {"military-science-pack",   1},
         },
         time = 60
     },
@@ -122,7 +123,7 @@ TECHNOLOGY {
             modifier = 0.1
         }
     },
-    prerequisites = {"machines-mk03", "mining-productivity-4"},
+    prerequisites = {"mining-productivity-4"},
     unit =
     {
         count = 250,
@@ -130,7 +131,7 @@ TECHNOLOGY {
         {
             {"automation-science-pack", 1},
             {"logistic-science-pack",   1},
-            {"chemical-science-pack",   1}
+            {"py-science-pack-2",   1}
         },
         time = 60
     },
@@ -178,7 +179,7 @@ TECHNOLOGY {
             modifier = 0.1
         }
     },
-    prerequisites = {"machines-mk04", "mining-productivity-6"},
+    prerequisites = {"mining-productivity-6"},
     unit =
     {
         count = 250,
@@ -187,7 +188,7 @@ TECHNOLOGY {
             {"automation-science-pack", 1},
             {"logistic-science-pack",   1},
             {"chemical-science-pack",   1},
-            {"production-science-pack", 1}
+            {"py-science-pack-3", 1}
         },
         time = 60
     },
@@ -236,7 +237,7 @@ TECHNOLOGY {
             modifier = 0.1
         }
     },
-    prerequisites = {"machines-mk05", "mining-productivity-8"},
+    prerequisites = {"mining-productivity-8"},
     unit =
     {
         count = 250,
@@ -246,7 +247,7 @@ TECHNOLOGY {
             {"logistic-science-pack",   1},
             {"chemical-science-pack",   1},
             {"production-science-pack", 1},
-            {"utility-science-pack",    1}
+            {"py-science-pack-4",    1}
         },
         time = 60
     },
@@ -266,7 +267,7 @@ TECHNOLOGY {
             modifier = 0.1
         }
     },
-    prerequisites = {"machines-mk05", "mining-productivity-9"},
+    prerequisites = {"mining-productivity-9"},
     unit =
     {
         count = 250,
