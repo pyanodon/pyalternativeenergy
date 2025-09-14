@@ -828,3 +828,27 @@ RECIPE {
     order = "aa",
     allow_productivity = false,
 }:add_unlock("fluid-handling")
+
+-- salt solution
+
+RECIPE {
+    type = "recipe",
+    name = "solvay-process",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+        {type = "item",  name = "limestone",     amount = 5},
+        {type = "fluid", name = "ammonia",       amount = 100},
+        {type = "fluid", name = "salt-solution", amount = 100},
+    },
+    results = {
+        {type = "item",  name = "sodium-carbonate", amount = 2},
+        {type = "fluid", name = "ammonia",          amount = 95, ignored_by_productivity = 95, ignored_by_stats = 95},
+    },
+    main_product = "sodium-carbonate",
+    subgroup = "py-rawores-items",
+    order = "a",
+    allow_productivity = true,
+    localised_name = {"recipe-name.solvay-process"}
+}:add_unlock("nuclear-power")
