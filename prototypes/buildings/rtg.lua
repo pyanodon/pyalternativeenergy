@@ -53,7 +53,7 @@ ENTITY {
     {
         type = "burner",
         fuel_categories = {"fuelrod"},
-        effectivity = 50000,
+        effectivity = 7000,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
         emissions_per_minute = {

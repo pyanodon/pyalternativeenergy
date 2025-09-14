@@ -483,7 +483,7 @@ ITEM("productivity-module").effect.consumption = 1.2
 ITEM("productivity-module-2").effect.consumption = 1.5
 ITEM("productivity-module-3").effect.consumption = 2.0
 
-ENTITY("beacon", "beacon").energy_usage = "2MW"
+ENTITY("beacon"):set_fields{energy_usage = "2MW", hidden = true, hidden_by_factoriopedia = true}
 
 data.raw.tool["space-science-pack"].stack_size = 200
 

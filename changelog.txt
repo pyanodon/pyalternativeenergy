@@ -1,11 +1,21 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.1.33
-Date: ???
+Version: 3.2.0
+Date: ????-??-??
   Changes:
+    - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
+    - Buffed the recipe speed of plutonium reshuffle by 4x.
+    - Removed efficiency modules from power plants. Already placed modules will continue to work, but beacons won't.
     - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
     - Buffed the recipe speed of plutonium reshuffle by 4x.
     - Rebalanced nuclear power to greatly reduce lithium peroxide input, scaling with tech level.
     - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
+---------------------------------------------------------------------------------------------------
+Version: 3.1.33
+Date: ????
+  Changes:
+    - Added recipes to convert steam and pressurized steam into cooler forms
+    - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
+    - Buff higher tiers of rare earth mining drills to have lower resource drain and larger mining area
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.32
 Date: 2025-08-12

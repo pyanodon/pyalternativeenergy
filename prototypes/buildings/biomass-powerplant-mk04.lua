@@ -49,6 +49,7 @@ ENTITY {
     forced_symmetry = "diagonal-pos",
     module_slots = 4,
     allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_module_categories = {"speed"},
     crafting_categories = {"biomass-powerplant-mk04"},
     crafting_speed = 4,
     energy_source =
