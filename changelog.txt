@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.1.33
-Date: ????
+Version: 3.1.34
+Date: ???
   Changes:
     - Remade tech tree with autotech 2.0. Science pack cost comparasion:
     - automation: n/a -> trigger
@@ -14,10 +14,16 @@ Date: ????
     - utility: 1500 -> 4000
     - space: 1000 -> 4500
     - phyrric: 3000 -> 10000
-    - Added recipes to convert steam and pressurized steam into cooler forms
-    - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
     - Some space science pack technologies are now prereqs of pyrrhic victory.
     - Removed the "MIBC" technology. The mibc recipe is now unlocked with titanium stage 2.
+    - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
+    - Removed barreling recipes for internal "void" and "solar-concentration" fluids.
+    - Added Dutch locale (thanks, QatSquirrel!)
+---------------------------------------------------------------------------------------------------
+Version: 3.1.33
+Date: 2025-08-23
+  Changes:
+    - Added recipes to convert steam and pressurized steam into cooler forms
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.32
 Date: 2025-08-12
