@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
-Date: ????
+Date: 2025-09-15
   Changes:
     - Fixed some techs having a too-fast cycle time
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
