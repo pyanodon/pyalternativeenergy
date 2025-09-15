@@ -4,7 +4,7 @@ TECHNOLOGY("plastics"):remove_pack("logistic-science-pack")
 TECHNOLOGY("machines-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("machines-mk04"):add_pack("military-science-pack")
 
-TECHNOLOGY("uranium-mk01"):add_pack("chemical-science-pack")
+TECHNOLOGY("uranium-mk01"):add_pack("py-science-pack-3")
 TECHNOLOGY("uranium-mk02"):add_pack("production-science-pack")
 TECHNOLOGY("uranium-mk03"):add_pack("utility-science-pack")
 TECHNOLOGY("uranium-mk04"):add_pack("space-science-pack")
