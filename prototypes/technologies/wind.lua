@@ -23,7 +23,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"wind-mk01", "renewable-mk02"},
-    dependencies = {"wind-mk01"},
     effects = {},
     unit = {
         count = 250,
@@ -43,7 +42,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"wind-mk02", "renewable-mk03"},
-    dependencies = {"wind-mk02"},
     effects = {},
     unit = {
         count = 350,
@@ -66,7 +64,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"wind-mk03", "renewable-mk04", "intermetallics-mk04"},
-    dependencies = {"wind-mk03"},
     effects = {},
     unit = {
         count = 450,

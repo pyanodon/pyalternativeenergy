@@ -4,7 +4,7 @@ TECHNOLOGY("plastics"):remove_pack("logistic-science-pack")
 TECHNOLOGY("machines-mk01"):add_pack("py-science-pack-1")
 TECHNOLOGY("machines-mk04"):add_pack("military-science-pack")
 
-TECHNOLOGY("uranium-mk01"):add_pack("chemical-science-pack")
+TECHNOLOGY("uranium-mk01"):add_pack("py-science-pack-3")
 TECHNOLOGY("uranium-mk02"):add_pack("production-science-pack")
 TECHNOLOGY("uranium-mk03"):add_pack("utility-science-pack")
 TECHNOLOGY("uranium-mk04"):add_pack("space-science-pack")
@@ -603,3 +603,6 @@ end
 data.raw["mining-drill"]["uranium-mine"].input_fluid_box = nil
 ITEM("uranium-mine").subgroup = "py-alternativeenergy-special-buildings"
 ITEM("uranium-mine").order = "s[uranium]b"
+
+RECIPE("mibc"):remove_unlock("mibc"):add_unlock("titanium-mk02")
+data.raw.technology["mibc"] = nil

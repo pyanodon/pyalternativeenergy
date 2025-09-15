@@ -24,7 +24,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"solar-power-mk01", "renewable-mk02", "eva"},
-    dependencies = {"solar-power-mk01"},
     effects = {},
     unit = {
         count = 250,
@@ -45,7 +44,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"solar-power-mk02", "renewable-mk03"},
-    dependencies = {"solar-power-mk02"},
     effects = {},
     unit = {
         count = 350,
@@ -68,7 +66,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"solar-power-mk03", "renewable-mk04"},
-    dependencies = {"solar-power-mk03"},
     effects = {
         {type = "unlock-recipe", recipe = "he-04"},
         {type = "unlock-recipe", recipe = "he-05"}

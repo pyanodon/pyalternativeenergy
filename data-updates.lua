@@ -50,6 +50,18 @@ RECIPE("tar-to-nickel"):set_fields {energy_required = 10}
 RECIPE("honey-comb"):set_fields {energy_required = 1}
 RECIPE("honey-comb-buffed"):set_fields {energy_required = 3}
 
+data.raw.technology["pyrrhic"]:add_prereq("mass-production")
+data.raw.technology["pyrrhic"]:add_prereq("machines-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("oil-machines-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("smelters-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("nuclear-power-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("electronics-machines-4")
+data.raw.technology["pyrrhic"]:add_prereq("tholin-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("land-animals-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("mycology-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("botany-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("biotech-machines-mk04")
+
 RECIPE {
     type = "recipe",
     name = "solvent-separation",
@@ -183,6 +195,23 @@ for _, name in pairs(electric_energy_interfaces) do
     entity.energy_source.buffer_capacity = entity.energy_production
 end
 
+local molten_salt_recipes = {
+    "biomass-molten-salt-0",
+    "coal-molten-salt-0",
+    "gas-molten-salt-0",
+    "oil-molten-salt-0",
+}
+-- Add the mk01..mk04 color bars to the hot-molten-salt recipes
+for _, name in pairs(molten_salt_recipes) do
+    for mk = 1, 4, 1 do
+        local recipe = name .. mk
+        table.insert(data.raw.recipe[recipe].icons, {
+            icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. mk .. ".png",
+            icon_size = 64,
+        })
+    end
+end
+
 for _, resource in pairs(data.raw.resource) do
     if not resource.selection_priority then
         resource.selection_priority = 40
@@ -193,6 +222,8 @@ if feature_flags.space_travel and not data.raw.armor["mech-armor"] then
     data.raw.armor["power-armor"].provides_flight = true
     data.raw.armor["power-armor-mk2"].provides_flight = true
 end
+
+data.raw.technology["oil-processing"]:add_pack("logistic-science-pack")
 
 --gather recipes for module changes
 local recipes_list =

@@ -1,21 +1,41 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.2.0
-Date: ????-??-??
+Version: 4.0.0
+Date: ???
   Changes:
     - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
     - Buffed the recipe speed of plutonium reshuffle by 4x.
     - Removed efficiency modules from power plants. Already placed modules will continue to work, but beacons won't.
-    - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
-    - Buffed the recipe speed of plutonium reshuffle by 4x.
     - Rebalanced nuclear power to greatly reduce lithium peroxide input, scaling with tech level.
     - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
+    - Buff higher tiers of rare earth mining drills to have lower resource drain
+      and larger mining area
+---------------------------------------------------------------------------------------------------
+Version: 3.1.34
+Date: ???
+  Changes:
+    - Remade tech tree with autotech 2.0. Science pack cost comparasion:
+    - automation: n/a -> trigger
+    - py1: 100 -> 100
+    - logi: 360 -> 300
+    - py2: 1300 -> 800
+    - chem: 2000 -> 1400
+    - py3: 2250 -> 1750
+    - prod: 1750 -> 2250
+    - py4: 2250 -> 3000
+    - utility: 1500 -> 3300
+    - space: 1000 -> 3600
+    - phyrric: 3000 -> 8000
+    - Some space science pack technologies are now prereqs of pyrrhic victory.
+    - Removed the "MIBC" technology. The mibc recipe is now unlocked with titanium stage 2.
+    - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
+    - Removed barreling recipes for internal "void" and "solar-concentration" fluids.
+    - Added Dutch locale (thanks, QatSquirrel!)
+    - Update hot-molten-salt recipe icons to make them easier to tell apart
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.33
-Date: ????
+Date: 2025-08-23
   Changes:
     - Added recipes to convert steam and pressurized steam into cooler forms
-    - Hid the vanilla beacon entity from selection menus, factoriopedia, and other GUIs
-    - Buff higher tiers of rare earth mining drills to have lower resource drain and larger mining area
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.32
 Date: 2025-08-12

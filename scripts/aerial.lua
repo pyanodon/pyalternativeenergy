@@ -222,7 +222,7 @@ local function add_pole(pole_entity)
     if not network_id then
         return
     end
-    local unit_number = pole_entity.unit_number
+    local unit_number = pole_entity.unit_number --[[@as integer]]
     local pole = {
         entity = pole_entity,
         network_id = network_id,
@@ -377,6 +377,7 @@ local function get_or_create_accumulator(aerial_entity, network_override)
             return get_or_create_accumulator(aerial_entity)
         end
         -- Yep, we have a pole to base on
+        ---@diagnostic disable-next-line: cast-local-type
         accumulator = aerial_entity.surface.create_entity {
             name = name .. "-accumulator",
             position = first_pole.position,
@@ -472,7 +473,7 @@ local function refresh_networks()
             if network_id then
                 -- One is an array, one is a list. This allows ease of selecting a random pole.
                 local index = #storage.aerials.poles_by_network[network_id] + 1
-                local unit_number = pole.unit_number
+                local unit_number = pole.unit_number --[[@as integer]]
                 local pole_data = {
                     entity = pole,
                     list_index = index,
@@ -814,7 +815,7 @@ Aerial.events[117] = function()
         local chest = aerial_base.chest
         if invalid then
             if chest.valid then
-                local inventory = chest.get_inventory(defines.inventory.chest)
+                local inventory = chest.get_inventory(defines.inventory.chest) --[[@as LuaInventory]]
                 local position = chest.position
                 local force = chest.force
                 -- Spill the inventory and mark the items on the ground for deconstruction
@@ -861,7 +862,7 @@ Aerial.events[117] = function()
         -- Parse our input signals for blimp signals indicating the target count in the current network
         local desired_turbines = {}
         for _, signal in pairs(combinator.get_signals(defines.wire_connector_id.combinator_input_red, defines.wire_connector_id.combinator_input_green) or {}) do
-            local name = signal.signal.name
+            local name = signal.signal.name --[[@as string]]
             if turbine_names[name] then
                 desired_turbines[name] = signal.count
             end
@@ -874,7 +875,7 @@ Aerial.events[117] = function()
 
         -- Doing empty/full out here does mean we can't both release and return in the same update
         -- (if we start empty or full) but muh performance
-        local inventory = chest.get_inventory(defines.inventory.chest)
+        local inventory = chest.get_inventory(defines.inventory.chest) --[[@as LuaInventory]]
         local is_empty = inventory.is_empty()
         local is_full = (not is_empty) and inventory.is_full()
 
@@ -973,7 +974,7 @@ local function find_target(aerial)
     local name = entity.name
 
     -- Store the previous target
-    local previous_target = aerial.target
+    local previous_target = aerial.target --[[@as LuaEntity?]]
     if not exists_and_valid(previous_target) then
         previous_target = nil
     end
@@ -1007,7 +1008,7 @@ local function find_target(aerial)
         -- and adjust it to the new entity count
         if accumulator and accumulator.valid then
             -- Update the entry
-            network_id = accumulator.electric_network_id
+            network_id = accumulator.electric_network_id --[[@as integer]]
             -- Decrement the old network and increment the new
             increment_turbine_count(aerial.network_id, name, -1)
             increment_turbine_count(network_id, name, 1)
@@ -1053,6 +1054,7 @@ local function find_target(aerial)
             end
         end
     until target and target ~= previous_target
+    --[[@cast target LuaEntity]]
 
     -- now send our pathfinding command
     aerial.target = target
@@ -1174,7 +1176,7 @@ Aerial.events.on_destroyed = function(event)
     -- Turbine?
     if aerial then
         if event.player_index then
-            local player = game.get_player(event.player_index)
+            local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
             local main_frame = player.gui.screen.aerial_gui
             if main_frame and main_frame.tags.unit_number == entity.unit_number then
                 main_frame.destroy()
@@ -1217,7 +1219,7 @@ Aerial.events.on_destroyed = function(event)
         -- Dump the chest into the player inventory and spill any excess
         local chest = base.chest
         if exists_and_valid(chest) then
-            local inventory = chest.get_inventory(defines.inventory.chest)
+            local inventory = chest.get_inventory(defines.inventory.chest) --[[@as LuaInventory]]
             local player = event.player_index and game.get_player(event.player_index)
             for i = 1, #inventory do
                 local stack = inventory[i]
@@ -1324,8 +1326,8 @@ local function build_aerial_base_gui(player, base)
 end
 
 Aerial.events.on_open_gui = function(event)
-    local player = game.get_player(event.player_index)
-    local entity = player.selected
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
+    local entity = player.selected --[[@as LuaEntity]]
     if not exists_and_valid(entity) or not entity.unit_number then
         return
     end
@@ -1353,7 +1355,7 @@ Aerial.events.on_open_gui = function(event)
 end
 
 Aerial.events.on_gui_closed = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local gui_type = event.gui_type or player.opened_gui_type
     if gui_type == defines.gui_type.custom then
         local gui = player.gui.screen.aerial_gui
@@ -1398,7 +1400,7 @@ function Aerial.update_gui(player)
     -- We add the energy that the blimp holds but hasn't yet added to the accumulator to the total
     local fake_energy, distance_bonus = calc_stored_energy(aerial)
     local stored_energy = accumulator.energy + fake_energy
-    local max_energy = accumulator.electric_buffer_size
+    local max_energy = accumulator.electric_buffer_size --[[@as number]]
     stored_energy = math.min(stored_energy, max_energy)
     local progress = stored_energy / max_energy
     -- NaN?
@@ -1412,10 +1414,10 @@ function Aerial.update_gui(player)
     local last_20 = aerial.last_20
     distance_bonus = math.ceil(distance_bonus * 1000) / 10
     if last_20 then
-        distance_bonus = tostring(distance_bonus)
+        distance_bonus_string = tostring(distance_bonus)
         -- Add the trailing .0 if there's no decimal value
-        if not distance_bonus:find("%.") then
-            distance_bonus = distance_bonus .. ".0"
+        if not distance_bonus_string:find("%.") then
+            distance_bonus_string = distance_bonus_string .. ".0"
         end
         local count = #last_20
         local sum = 0
@@ -1423,7 +1425,7 @@ function Aerial.update_gui(player)
             sum = sum + last_20[I]
         end
         local average = math.ceil(sum / count * 1000) / 10
-        content_flow.distance_bonus.caption = {"aerial-gui.rpm-bonus-avg", distance_bonus, count, average}
+        content_flow.distance_bonus.caption = {"aerial-gui.rpm-bonus-avg", distance_bonus_string, count, average}
     else
         content_flow.distance_bonus.caption = {"aerial-gui.rpm-bonus", distance_bonus}
     end
@@ -1440,12 +1442,12 @@ function Aerial.update_gui(player)
         local distance = math.max(0, calc_distance(target.position, entity.position) - 5)
         local seconds = distance / travel_speeds[entity.name]
         local minutes = math.floor(seconds / 60)
-        seconds = tostring(math.floor(seconds % 60))
+        seconds_string = tostring(math.floor(seconds % 60))
         -- zero-pad the seconds to a length of two digits
-        if #seconds == 1 then
-            seconds = "0" .. seconds
+        if #seconds_string == 1 then
+            seconds_string = "0" .. seconds_string
         end
-        content_flow.arrival.caption = {"aerial-gui.eta", minutes, seconds}
+        content_flow.arrival.caption = {"aerial-gui.eta", minutes, seconds_string}
     end
 
     local electric_network_id = aerial.network_id
