@@ -791,7 +791,7 @@ RECIPE("power-armor-mk2"):set_fields {
         {type = "item",  name = "hydraulic-system-mk02", amount = 2},
         {type = "item",  name = "cooling-tower-mk02",    amount = 1},
         {type = "item",  name = "sc-engine",             amount = 6},
-        {type = "item",  name = "vacuum-pump-mk04",      amount = 2},
+        {type = "item",  name = "vacuum-pump-mk03",      amount = 2},
         {type = "item",  name = "ht-pipes",              amount = 10},
         {type = "item",  name = "metallic-glass",        amount = 20},
         {type = "item",  name = "nxzngd",                amount = 40},
