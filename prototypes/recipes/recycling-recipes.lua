@@ -494,7 +494,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ti-overflow-waste", amount = 30},
-        {type = "fluid", name = "mibc",              amount = 30},
+        {type = "fluid", name = "mibc",              amount = 30, autotech_is_not_primary_source = true},
     },
     allow_productivity = true,
     main_product = "mibc",
@@ -769,7 +769,7 @@ RECIPE {
     },
     main_product = "muddy-sludge",
     allow_productivity = true,
-}:add_unlock("filtration")
+}:add_unlock("vanadium-processing")
 
 -- oleochemicals
 

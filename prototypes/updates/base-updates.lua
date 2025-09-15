@@ -102,7 +102,8 @@ TECHNOLOGY {
         ingredients =
         {
             {"automation-science-pack", 1},
-            {"logistic-science-pack",   1}
+            {"logistic-science-pack",   1},
+            {"military-science-pack",   1},
         },
         time = 60
     },
@@ -122,7 +123,7 @@ TECHNOLOGY {
             modifier = 0.1
         }
     },
-    prerequisites = {"machines-mk03", "mining-productivity-4"},
+    prerequisites = {"mining-productivity-4"},
     unit =
     {
         count = 250,
@@ -130,7 +131,7 @@ TECHNOLOGY {
         {
             {"automation-science-pack", 1},
             {"logistic-science-pack",   1},
-            {"chemical-science-pack",   1}
+            {"py-science-pack-2",   1}
         },
         time = 60
     },
@@ -178,7 +179,7 @@ TECHNOLOGY {
             modifier = 0.1
         }
     },
-    prerequisites = {"machines-mk04", "mining-productivity-6"},
+    prerequisites = {"mining-productivity-6"},
     unit =
     {
         count = 250,
@@ -187,7 +188,7 @@ TECHNOLOGY {
             {"automation-science-pack", 1},
             {"logistic-science-pack",   1},
             {"chemical-science-pack",   1},
-            {"production-science-pack", 1}
+            {"py-science-pack-3", 1}
         },
         time = 60
     },
@@ -236,7 +237,7 @@ TECHNOLOGY {
             modifier = 0.1
         }
     },
-    prerequisites = {"machines-mk05", "mining-productivity-8"},
+    prerequisites = {"mining-productivity-8"},
     unit =
     {
         count = 250,
@@ -246,7 +247,7 @@ TECHNOLOGY {
             {"logistic-science-pack",   1},
             {"chemical-science-pack",   1},
             {"production-science-pack", 1},
-            {"utility-science-pack",    1}
+            {"py-science-pack-4",    1}
         },
         time = 60
     },
@@ -266,7 +267,7 @@ TECHNOLOGY {
             modifier = 0.1
         }
     },
-    prerequisites = {"machines-mk05", "mining-productivity-9"},
+    prerequisites = {"mining-productivity-9"},
     unit =
     {
         count = 250,
@@ -351,8 +352,11 @@ data.raw.technology["uranium-processing"].enabled = true
 data.raw.technology["uranium-processing"].hidden = false
 data.raw.technology["uranium-mining"].enabled = false
 data.raw.technology["uranium-mining"].hidden = true
+data.raw.recipe["satellite"]:remove_unlock("rocket-silo"):add_unlock("space-science-pack")
+data.raw.technology["rocket-silo"].prerequisites = {}
 
 TECHNOLOGY("uranium-processing").research_trigger = nil
+TECHNOLOGY("uranium-processing").prerequisites = {}
 TECHNOLOGY("uranium-processing"):add_pack("py-science-pack-2")
 
 TECHNOLOGY("kovarex-enrichment-process"):set_fields {enabled = false, hidden = true}
@@ -898,7 +902,7 @@ data.raw.technology["night-vision-equipment"].prerequisites = {"personal-robopor
 data.raw.technology["belt-immunity-equipment"].prerequisites = {"personal-roboport-equipment"}
 data.raw.technology["exoskeleton-equipment"].prerequisites = {"bio-implants", "power-armor"}
 data.raw.technology["fission-reactor-equipment"].prerequisites = {"power-armor", "fusion-mk02"}
-data.raw.technology["personal-roboport-mk2-equipment"].prerequisites = {"solar-panel-equipment", "modular-armor", "personal-roboport-equipment"}
+data.raw.technology["personal-roboport-mk2-equipment"].prerequisites = {"modular-armor", "personal-roboport-equipment"}
 
 TECHNOLOGY("solar-panel-equipment"):add_pack("chemical-science-pack")
 --TECHNOLOGY('night-vision-equipment'):remove_pack('logistic-science-pack'):add_pack('py-science-pack-1')
