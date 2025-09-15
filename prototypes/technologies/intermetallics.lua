@@ -23,7 +23,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"machines-mk02", "intermetallics-mk01"},
-    dependencies = {"intermetallics-mk01"},
     effects = {},
     unit = {
         count = 250,
@@ -43,7 +42,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"machines-mk03", "intermetallics-mk02", "mof", "carbon-fiber"},
-    dependencies = {"intermetallics-mk02"},
     effects = {},
     unit = {
         count = 350,
@@ -66,7 +64,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"machines-mk04", "intermetallics-mk03"},
-    dependencies = {"intermetallics-mk03"},
     effects = {},
     unit = {
         count = 450,

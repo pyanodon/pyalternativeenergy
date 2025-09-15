@@ -1,7 +1,5 @@
 --TECHNOLOGY--
-TECHNOLOGY("quantum"):add_prereq("machines-mk02")
 TECHNOLOGY("quantum-processor"):add_prereq("photonics"):add_prereq("battery-mk04"):add_prereq("mof"):add_prereq("nano-mesh"):add_prereq("biofet")
--- TECHNOLOGY("nucleo"):remove_pack('chemical-science-pack'):remove_prereq('energy-2'):remove_prereq('boron-mk02'):add_prereq('uranium-mining')
 TECHNOLOGY("ht-robotics"):add_prereq("advanced-robotics")
 TECHNOLOGY("microfibers"):remove_pack("production-science-pack")
 TECHNOLOGY("ethylene"):remove_pack("chemical-science-pack")
@@ -85,7 +83,7 @@ RECIPE("pa-propene"):remove_unlock("nucleo")
 RECIPE("pa-coal"):remove_unlock("nucleo")
 
 RECIPE("sodium-silicate"):remove_unlock("colloidal-silica"):add_unlock {"silicon-mk01"}
-RECIPE("quantum-dots"):remove_unlock("quantum"):add_unlock {"quantum-processor"}
+RECIPE("quantum-dots"):remove_unlock("space-science-pack"):add_unlock {"quantum-processor"}
 RECIPE("silica-powder"):remove_unlock("colloidal-silica"):add_unlock {"silicon-mk01"}
 RECIPE("saline-water"):remove_unlock("electrolysis"):add_unlock("electronics")
 RECIPE("electronic-circuit"):add_ingredient {type = "item", name = "battery-mk00", amount = 1}
@@ -216,7 +214,7 @@ RECIPE("nexelit-battery-recharge"):remove_unlock("railway-mk03"):add_unlock("bat
 RECIPE("quantum-battery-recharge"):remove_unlock("railway-mk04"):add_unlock("battery-mk04")
 data.raw.recipe["quantum-battery"].results = {{type = "item", name = "used-quantum-battery", amount = 1}}
 
-RECIPE("random-science-pack"):remove_unlock("quantum").hidden = true
+RECIPE("random-science-pack"):remove_unlock("space-science-pack").hidden = true
 
 RECIPE("pa-diamond"):remove_unlock("nucleo-mk02"):add_unlock("nucleo-mk03").energy_required = data.raw.recipe["pa-diamond"].energy_required * 2
 

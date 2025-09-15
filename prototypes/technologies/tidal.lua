@@ -23,7 +23,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tidal-mk01", "renewable-mk02", "machine-components-mk02"},
-    dependencies = {"tidal-mk01"},
     effects = {},
     unit = {
         count = 250,
@@ -43,7 +42,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tidal-mk02", "renewable-mk03", "machine-components-mk03"},
-    dependencies = {"tidal-mk02"},
     effects = {},
     unit = {
         count = 350,
@@ -64,7 +62,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tidal-mk03", "renewable-mk04", "machine-components-mk04"},
-    dependencies = {"tidal-mk03"},
     effects = {},
     unit = {
         count = 450,

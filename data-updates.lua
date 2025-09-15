@@ -50,6 +50,18 @@ RECIPE("tar-to-nickel"):set_fields {energy_required = 10}
 RECIPE("honey-comb"):set_fields {energy_required = 1}
 RECIPE("honey-comb-buffed"):set_fields {energy_required = 3}
 
+data.raw.technology["pyrrhic"]:add_prereq("mass-production")
+data.raw.technology["pyrrhic"]:add_prereq("machines-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("oil-machines-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("smelters-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("nuclear-power-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("electronics-machines-4")
+data.raw.technology["pyrrhic"]:add_prereq("tholin-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("land-animals-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("mycology-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("botany-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("biotech-machines-mk04")
+
 RECIPE {
     type = "recipe",
     name = "solvent-separation",
@@ -193,6 +205,8 @@ if feature_flags.space_travel and not data.raw.armor["mech-armor"] then
     data.raw.armor["power-armor"].provides_flight = true
     data.raw.armor["power-armor-mk2"].provides_flight = true
 end
+
+data.raw.technology["oil-processing"]:add_pack("logistic-science-pack")
 
 --gather recipes for module changes
 local recipes_list =
