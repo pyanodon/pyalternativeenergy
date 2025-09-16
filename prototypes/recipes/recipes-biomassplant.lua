@@ -11,6 +11,7 @@ RECIPE {
         {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 1000},
 
     },
+    order = "z-[molten-salt]-[plant-biomass-mk01]",
     icons = py.composite_icon("hot-molten-salt", "biomass"),
 }:add_unlock("biomassplant-mk01")
 
@@ -26,6 +27,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 2000},
     },
+    order = "z-[molten-salt]-[plant-biomass-mk02]",
     icons = py.composite_icon("hot-molten-salt", "biomass"),
 }:add_unlock("biomassplant-mk02")
 
@@ -41,6 +43,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 3000},
     },
+    order = "z-[molten-salt]-[plant-biomass-mk03]",
     icons = py.composite_icon("hot-molten-salt", "biomass"),
 }:add_unlock("biomassplant-mk03")
 
@@ -56,5 +59,6 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 400, temperature = 4000},
     },
+    order = "z-[molten-salt]-[plant-biomass-mk04]",
     icons = py.composite_icon("hot-molten-salt", "biomass"),
 }:add_unlock("biomassplant-mk04")
