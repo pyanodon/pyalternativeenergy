@@ -9,6 +9,6 @@ FLUID {
     max_temperature = 5000,
     --gas_temperature = 5000,
     subgroup = "py-alternativeenergy-fluids",
-    order = "c",
+    order = "z-[molten-salt]",
     auto_barrel = false
 }

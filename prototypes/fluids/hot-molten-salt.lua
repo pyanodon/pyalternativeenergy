@@ -10,6 +10,6 @@ FLUID {
     heat_capacity = "1kJ",
     gas_temperature = 5000,
     subgroup = "py-alternativeenergy-fluids",
-    order = "c",
+    order = "z-[molten-salt-hot]",
     auto_barrel = false
 }

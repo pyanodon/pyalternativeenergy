@@ -10,6 +10,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 1000},
     },
+    order = "z-[molten-salt]-[plant-coal-mk01]",
     icons = py.composite_icon("hot-molten-salt", "coal"),
 }:add_unlock("coalplant-mk01")
 
@@ -25,6 +26,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 2000},
     },
+    order = "z-[molten-salt]-[plant-coal-mk02]",
     icons = py.composite_icon("hot-molten-salt", "coal"),
 }:add_unlock("coalplant-mk02")
 
@@ -40,6 +42,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 3000},
     },
+    order = "z-[molten-salt]-[plant-coal-mk03]",
     icons = py.composite_icon("hot-molten-salt", "coal"),
 }:add_unlock("coalplant-mk03")
 
@@ -55,5 +58,6 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-molten-salt", amount = 500, temperature = 4000},
     },
+    order = "z-[molten-salt]-[plant-coal-mk04]",
     icons = py.composite_icon("hot-molten-salt", "coal"),
 }:add_unlock("coalplant-mk04")
