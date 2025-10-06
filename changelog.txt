@@ -6,6 +6,7 @@ Date: ???
     - Updated Simplified Chinese locale courtesy of @alone on Discord
     - Update hot-molten-salt recipe ordering to group them together
     - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn. 
+    - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
 Date: 2025-09-15
