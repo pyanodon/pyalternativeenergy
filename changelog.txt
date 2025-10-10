@@ -1,9 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.36
-Date: ???
+Date: ??
   Changes:
     - Align temperature ranges in reheat recipes to rest of the modpack
-    - Updated Simplified Chinese locale courtesy of @alone on Discord
     - Update hot-molten-salt recipe ordering to group them together
     - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn. 
 ---------------------------------------------------------------------------------------------------
