@@ -1326,7 +1326,7 @@ for fluid, metatable in pairs{
       enabled = false,
       energy_required = 20, -- some formula here
       ingredients = {
-        {type = "fluid", name = fluid.name, amount = steam_amount, min_temperature = start_temp},
+        {type = "fluid", name = fluid.name, amount = steam_amount, minimum_temperature = start_temp},
         {type = "fluid", name = metatable.base, amount = math.ceil(base_amount / 10) * 10}
       },
       results = {{type = "fluid", name = fluid.name, amount = steam_amount + math.floor(base_amount / 10) * 10, temperature = end_temp}},
