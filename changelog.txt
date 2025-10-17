@@ -6,6 +6,7 @@ Date: ??
     - Updated steam cooling recipes to specify a minimum temperature instead of an exact requirement
     - Update hot-molten-salt recipe ordering to group them together
     - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn. 
+    - Shaft mk02 recipe now affected by productivity.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
 Date: 2025-09-15
