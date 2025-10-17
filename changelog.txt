@@ -3,6 +3,7 @@ Version: 3.1.36
 Date: ??
   Changes:
     - Align temperature ranges in reheat recipes to rest of the modpack
+    - Updated steam cooling recipes to specify a minimum temperature instead of an exact requirement
     - Update hot-molten-salt recipe ordering to group them together
     - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn. 
 ---------------------------------------------------------------------------------------------------
