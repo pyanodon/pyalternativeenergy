@@ -7,8 +7,8 @@ Date: ???
     - Removed efficiency modules from power plants. Already placed modules will continue to work, but beacons won't.
     - Rebalanced nuclear power to greatly reduce lithium peroxide input, scaling with tech level.
     - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
-    - Buff higher tiers of rare earth mining drills to have lower resource drain
-      and larger mining area
+    - Buff higher tiers of rare earth mining drills to have lower resource drain and larger mining area
+    - Fixed tar refining tops with chitin having different fluid outputs from the normal variation. Resolves https://github.com/pyanodon/pybugreports/issues/1240
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.34
 Date: 2025-09-15

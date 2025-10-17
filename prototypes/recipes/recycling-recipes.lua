@@ -414,8 +414,8 @@ RECIPE {
         {type = "fluid", name = "steam",      amount = 50, minimum_temperature = 250},
     },
     results = {
-        {type = "fluid", name = "carbolic-oil",    amount = 100},
-        {type = "fluid", name = "naphthalene-oil", amount = 50},
+        {type = "fluid", name = "carbolic-oil",    amount = 100, fluidbox_index = 3},
+        {type = "fluid", name = "naphthalene-oil", amount = 50, fluidbox_index = 4},
     },
     allow_productivity = true,
     main_product = "carbolic-oil",
