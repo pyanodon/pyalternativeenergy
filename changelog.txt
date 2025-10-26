@@ -5,7 +5,8 @@ Date: ??
     - Align temperature ranges in reheat recipes to rest of the modpack
     - Updated steam cooling recipes to specify a minimum temperature instead of an exact requirement
     - Update hot-molten-salt recipe ordering to group them together
-    - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn. 
+    - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn.
+    - Fixed that tidal powerplants could have pipe-to-grounds placed on them
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
 Date: 2025-09-15
