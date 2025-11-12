@@ -2,6 +2,7 @@
 Version: 3.1.36
 Date: ??
   Changes:
+    - Added Spanish locale courtesy of @Ruby-Nova
     - Align temperature ranges in reheat recipes to rest of the modpack
     - Changed high pressure steam turbine mk04 fluid connections to input only so that it can consume the full 120k/s, circumventing an engine limitation at 60k/s
     - Updated steam cooling recipes to specify a minimum temperature instead of an exact requirement
