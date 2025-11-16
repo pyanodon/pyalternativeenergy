@@ -98,7 +98,7 @@ RECIPE {
         {type = "item",  name = "cobalt-sulfate-02", amount = 2},
     },
     results = {
-        {type = "item", name = "ernico", amount = 1},
+        {type = "item", name = "ernico", amount = 3},
     },
     --main_product = "eg-si",
 }:add_unlock("alloys-mk05")
