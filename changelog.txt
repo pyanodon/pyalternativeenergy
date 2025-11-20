@@ -10,6 +10,7 @@ Date: ??
     - Update hot-molten-salt recipe ordering to group them together
     - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn.
     - Fixed that tidal powerplants could have pipe-to-grounds placed on them
+    - Renamed the used control rod -> control rod recipe to Used Control Rod reprocessing
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
 Date: 2025-09-15
