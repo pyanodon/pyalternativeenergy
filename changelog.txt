@@ -14,6 +14,7 @@ Date: ??
     - Fixed certain recipes missing layered icons. Resolves https://github.com/pyanodon/pybugreports/issues/1268
     - Fixed bad english in microwave transmitter satellite locale. Resolves https://github.com/pyanodon/pybugreports/issues/1293
     - Fixed capitalization on nuclear fuel fuel cateogry. Resolves https://github.com/pyanodon/pybugreports/issues/1291
+    - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
 Date: 2025-09-15
