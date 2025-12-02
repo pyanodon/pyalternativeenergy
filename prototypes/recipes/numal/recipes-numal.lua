@@ -149,5 +149,6 @@ RECIPE {
     results = {
         {type = "item", name = "antimonium-ore", amount = 10},
     },
+    icons = py.composite_icon("antimonium-ore", "numal-ink")
     --main_product = "cocoon",
 }:add_unlock("molecular-decohesion-mk03")

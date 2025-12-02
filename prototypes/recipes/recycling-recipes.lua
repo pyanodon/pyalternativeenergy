@@ -210,7 +210,7 @@ RECIPE {
         {type = "item", name = "ash", amount = 1},
     },
     allow_productivity = true,
-    main_product = "ash"
+    icons = py.composite_icon("ash", "coal-gas")
 }:add_unlock("coal-processing-1")
 
 --slacked lime
@@ -249,7 +249,7 @@ RECIPE {
         {type = "item", name = "ore-lead", amount = 5},
     },
     allow_productivity = true,
-    main_product = "ore-lead",
+    icons = py.composite_icon("ore-lead", "skin")
 }:add_unlock("molecular-decohesion")
 
 RECIPE {
@@ -304,7 +304,7 @@ RECIPE {
         {type = "item", name = "kerogen", amount = 8},
     },
     allow_productivity = true,
-    main_product = "kerogen",
+    icons = py.composite_icon("kerogen", "bones")
 }:add_unlock("molecular-decohesion")
 
 --guts
@@ -322,7 +322,7 @@ RECIPE {
         {type = "fluid", name = "acetic-acid", amount = 60},
     },
     allow_productivity = true,
-    main_product = "acetic-acid",
+    icons = py.composite_icon("acetic-acid", "guts")
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
