@@ -71,32 +71,32 @@ ENTITY {
         volume = 120000,
         pipe_covers = py.pipe_covers(true, true, true, true),
         pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-        production_type = "input-output",
+        production_type = "input",
         filter = "pressured-steam",
         minimum_temperature = 500.0,
         pipe_connections = {
-            {flow_direction = "input-output", position = {2.5, 6.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 6.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -6.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -6.5}, direction = defines.direction.west},
+            {flow_direction = "input", position = {2.5, 6.5},   direction = defines.direction.east},
+            {flow_direction = "input", position = {-2.5, 6.5},  direction = defines.direction.west},
+            {flow_direction = "input", position = {2.5, -6.5},  direction = defines.direction.east},
+            {flow_direction = "input", position = {-2.5, -6.5}, direction = defines.direction.west},
 
 
-            {flow_direction = "input-output", position = {2.5, 7.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 7.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -7.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -7.5}, direction = defines.direction.west},
+            {flow_direction = "input", position = {2.5, 7.5},   direction = defines.direction.east},
+            {flow_direction = "input", position = {-2.5, 7.5},  direction = defines.direction.west},
+            {flow_direction = "input", position = {2.5, -7.5},  direction = defines.direction.east},
+            {flow_direction = "input", position = {-2.5, -7.5}, direction = defines.direction.west},
 
 
-            {flow_direction = "input-output", position = {2.5, 8.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 8.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -8.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -8.5}, direction = defines.direction.west},
+            {flow_direction = "input", position = {2.5, 8.5},   direction = defines.direction.east},
+            {flow_direction = "input", position = {-2.5, 8.5},  direction = defines.direction.west},
+            {flow_direction = "input", position = {2.5, -8.5},  direction = defines.direction.east},
+            {flow_direction = "input", position = {-2.5, -8.5}, direction = defines.direction.west},
 
 
-            {flow_direction = "input-output", position = {2.5, 5.5},   direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, 5.5},  direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.5, -5.5},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {-2.5, -5.5}, direction = defines.direction.west},
+            {flow_direction = "input", position = {2.5, 5.5},   direction = defines.direction.east},
+            {flow_direction = "input", position = {-2.5, 5.5},  direction = defines.direction.west},
+            {flow_direction = "input", position = {2.5, -5.5},  direction = defines.direction.east},
+            {flow_direction = "input", position = {-2.5, -5.5}, direction = defines.direction.west},
         }
     },
     energy_source = {

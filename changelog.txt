@@ -1,11 +1,19 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.36
-Date: ???
+Date: ??
   Changes:
+    - MK04 trains now tilt on rail ramps
+    - Added Spanish locale courtesy of @Ruby-Nova
     - Align temperature ranges in reheat recipes to rest of the modpack
-    - Updated Simplified Chinese locale courtesy of @alone on Discord
+    - Changed high pressure steam turbine mk04 fluid connections to input only so that it can consume the full 120k/s, circumventing an engine limitation at 60k/s
+    - Updated steam cooling recipes to specify a minimum temperature instead of an exact requirement
     - Update hot-molten-salt recipe ordering to group them together
-    - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn. 
+    - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn.
+    - Fixed that tidal powerplants could have pipe-to-grounds placed on them
+    - Renamed the used control rod -> control rod recipe to Used Control Rod reprocessing
+    - Fixed certain recipes missing layered icons. Resolves https://github.com/pyanodon/pybugreports/issues/1268
+    - Fixed bad english in microwave transmitter satellite locale. Resolves https://github.com/pyanodon/pybugreports/issues/1293
+    - Fixed capitalization on nuclear fuel fuel cateogry. Resolves https://github.com/pyanodon/pybugreports/issues/1291
     - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
