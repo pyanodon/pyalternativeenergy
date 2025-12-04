@@ -37,7 +37,6 @@ local proto = ENTITY {
     name = "hawt-turbine-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk01.png",
     icon_size = 64,
-    hidden = true,
     flags = {"placeable-neutral", "player-creation",},
     collision_mask = {layers = {wind_layer = true, object = true, player = true, water_tile = true}},
     minable = {mining_time = 0.5, result = "hawt-turbine-mk01"},
