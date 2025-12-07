@@ -1289,7 +1289,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "petroleum-gas", amount = 200},
-        {type = "fluid", name = "bacteria-2",    amount_min = 40, amount_max = 70, ignored_by_productivity = 50, ignored_by_stats = 50},
+        {type = "fluid", name = "bacteria-2",    amount_min = 40, amount_max = 70, ignored_by_productivity = 50, ignored_by_stats = 50, autotech_is_not_primary_source = true},
     },
     subgroup = "py-hightech-fluids",
     main_product = "petroleum-gas",
