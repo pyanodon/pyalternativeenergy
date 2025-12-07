@@ -9,7 +9,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 200},
+        {type = "fluid", name = "molten-salt",     amount = 200, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 1000},
     },
     main_product = "pressured-steam",
@@ -26,7 +26,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 2000},
     },
     main_product = "pressured-steam",
@@ -43,7 +43,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 3000},
     },
     main_product = "pressured-steam",
@@ -60,7 +60,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 4000},
     },
     main_product = "pressured-steam",
@@ -77,7 +77,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 5000},
     },
     main_product = "pressured-steam",
