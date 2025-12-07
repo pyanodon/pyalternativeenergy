@@ -16,6 +16,7 @@ Date: ??
     - Fixed capitalization on nuclear fuel fuel cateogry. Resolves https://github.com/pyanodon/pybugreports/issues/1291
     - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
     - Fixed HAWT turbines not being selectable in deconstruction planner. Resolves https://github.com/pyanodon/pybugreports/issues/1272
+    - Fixed Energy Generation not being a prerequesite for Non Renewables. Resolves https://github.com/pyanodon/pybugreports/issues/1308
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
 Date: 2025-09-15
