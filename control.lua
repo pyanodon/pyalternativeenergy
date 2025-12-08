@@ -12,6 +12,7 @@ require "scripts/solar"
 require "scripts/wind/wind"
 require "scripts/aerial"
 require "scripts/tidal"
+local mova_data = require "scripts/crops/farm-mova"
 
 py.on_event(py.events.on_init(), function()
     storage.reactor_tanks = storage.reactor_tanks or {}
@@ -20,6 +21,7 @@ py.on_event(py.events.on_init(), function()
     for farm, farm_data in pairs(farms) do
         remote.call("pyfarm", "register", farm, farm_data.domain, farm_data.default_module)
     end
+    remote.call("py_smart_farming", "add_launch_products", mova_data)
 end)
 
 py.on_event(py.events.on_built(), function(event)
