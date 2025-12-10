@@ -2,6 +2,7 @@
 Version: 3.1.36
 Date: ??
   Changes:
+    - MHD Entry in pycodex no longer shows information about non existing antimatter fusion recipe.
     - MK04 trains now tilt on rail ramps
     - Added Spanish locale courtesy of @Ruby-Nova
     - Align temperature ranges in reheat recipes to rest of the modpack
