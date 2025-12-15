@@ -33,7 +33,7 @@ ITEM {
 }
 
 local proto = ENTITY {
-    type = "electric-energy-interface",
+    type = "solar-panel",
     name = "hawt-turbine-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk01.png",
     icon_size = 64,
@@ -50,13 +50,14 @@ local proto = ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
+        usage_priority = "solar",
         buffer_capacity = "5MJ",
-        input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = "5MW",
-    energy_usage = "0kW",
+    production = "50kW",
+    solar_coefficient_property = "py-wind-speed",
+    performance_at_day = 1,
+    performance_at_night = 1,
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk01.ogg", volume = 0.85},

@@ -167,7 +167,7 @@ for name, variance in pairs(require "scripts.wind.variation") do
 end
 
 local electric_energy_interfaces = {
-    "hawt-turbine-mk01",
+    -- "hawt-turbine-mk01",
     "hawt-turbine-mk02",
     "hawt-turbine-mk03",
     "hawt-turbine-mk04",
