@@ -268,7 +268,7 @@ Wind.events[61] = function()
             end
             if details.entity.valid and animated_turbines[details.turbine_type] then
                 Wind.draw_windmill(details, direction)
-            else
+            elseif not details.entity.valid then
                 _ = details.collision.valid and details.collision.destroy()
                 if details.anim_id then
                     local animation = rendering.get_object_by_id(details.anim_id)
