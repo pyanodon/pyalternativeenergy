@@ -151,20 +151,20 @@ end
 --ENERGY COSTS--
 
 --ENERGY PRODUCTION DESCRIPTION --
-for name, variance in pairs(require "scripts.wind.variation") do
-    variance = {"entity-description.variance", tostring(variance * 100)}
-    -- Handle the surrogate items that show in electric stats, too
-    for _, suffix in pairs {"", "-blank"} do
-        local entity = data.raw["electric-energy-interface"][name .. suffix]
-        if entity then
-            if entity.localised_description then
-                entity.localised_description = {"", entity.localised_description, "\n", variance}
-            else
-                entity.localised_description = {"?", {"", {"entity-description." .. name}, "\n", variance}, variance}
-            end
-        end
-    end
-end
+-- for name, variance in pairs(require "scripts.wind.variation") do
+--     variance = {"entity-description.variance", tostring(variance * 100)}
+--     -- Handle the surrogate items that show in electric stats, too
+--     for _, suffix in pairs {"", "-blank"} do
+--         local entity = data.raw["electric-energy-interface"][name .. suffix]
+--         if entity then
+--             if entity.localised_description then
+--                 entity.localised_description = {"", entity.localised_description, "\n", variance}
+--             else
+--                 entity.localised_description = {"?", {"", {"entity-description." .. name}, "\n", variance}, variance}
+--             end
+--         end
+--     end
+-- end
 
 local electric_energy_interfaces = {
     -- "hawt-turbine-mk01",
