@@ -26,7 +26,6 @@ local animated_turbines = {
     ["multiblade"] = true
 }
 
-local variation = require "scripts.wind.variation"
 -- TODO check animation changes
 local draw_animation = rendering.draw_animation
 
