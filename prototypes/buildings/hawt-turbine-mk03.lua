@@ -29,7 +29,7 @@ ITEM {
 }
 
 local proto = ENTITY {
-    type = "electric-energy-interface",
+    type = "solar-panel",
     name = "hawt-turbine-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk03.png",
     icon_size = 64,
@@ -46,49 +46,40 @@ local proto = ENTITY {
     selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
+        usage_priority = "solar",
         buffer_capacity = "50MJ",
-        input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = "50MW",
-    energy_usage = "0kW",
+    production = "2.5MW",
+    solar_coefficient_property = "py-wind-speed",
+    performance_at_day = 1,
+    performance_at_night = 1,
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk03.ogg", volume = 0.85},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk03.ogg", volume = 0.6},
         apparent_volume = 2.5
     },
-    continuous_animation = true,
-    animations = {
+    picture = {
         layers = {
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/r4.png",
                 width = 192,
                 height = 416,
-                line_length = 10,
-                frame_count = 20,
                 shift = util.by_pixel(0, -112),
-                animation_speed = 1,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/s4.png",
                 width = 287,
                 height = 160,
-                line_length = 5,
-                frame_count = 20,
                 shift = util.by_pixel(44, 16),
-                animation_speed = 1,
                 draw_as_shadow = true,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk03/l4.png",
                 width = 192,
                 height = 416,
-                line_length = 10,
-                frame_count = 20,
                 shift = util.by_pixel(0, -112),
-                animation_speed = 1,
                 draw_as_glow = true,
             },
         }
@@ -100,10 +91,8 @@ local proto = ENTITY {
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
-new_proto.picture = table.deepcopy(proto.animations.layers[1])
+new_proto.picture = table.deepcopy(proto.picture.layers[1])
 new_proto.picture.filename = new_proto.picture.filename:gsub("r4", "base-mk03")
-new_proto.animations = nil
-new_proto.render_layer = "lower-object-above-shadow"
 data:extend {new_proto}
 
 data:extend

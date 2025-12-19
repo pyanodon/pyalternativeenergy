@@ -54,7 +54,7 @@ local proto = ENTITY {
         buffer_capacity = "5MJ",
         render_no_power_icon = false
     },
-    production = "50kW",
+    production = "100kW",
     solar_coefficient_property = "py-wind-speed",
     performance_at_day = 1,
     performance_at_night = 1,
@@ -70,38 +70,26 @@ local proto = ENTITY {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/r4.png",
                 width = 224,
                 height = 288,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 0.4
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/a4.png",
                 width = 224,
                 height = 288,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 0.4
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/s4.png",
                 width = 256,
                 height = 224,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 0.4,
                 draw_as_shadow = true
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk01/l4.png",
                 width = 224,
                 height = 288,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -20),
-                animation_speed = 0.13,
                 draw_as_glow = true
             }
         }
@@ -115,8 +103,6 @@ local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
 new_proto.picture = table.deepcopy(proto.picture.layers[1])
 new_proto.picture.filename = new_proto.picture.filename:gsub("r4", "base-mk01")
--- new_proto.picture = nil
-new_proto.render_layer = "lower-object-above-shadow"
 data:extend {new_proto}
 
 data:extend
