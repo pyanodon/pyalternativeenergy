@@ -29,7 +29,7 @@ ITEM {
 }
 
 local proto = ENTITY {
-    type = "electric-energy-interface",
+    type = "solar-panel",
     name = "hawt-turbine-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk02.png",
     icon_size = 64,
@@ -46,59 +46,46 @@ local proto = ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
-
+        usage_priority = "solar",
         buffer_capacity = "25MJ",
-        input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = "25MW",
-    energy_usage = "0kW",
+    production = "500kW",
+    solar_coefficient_property = "py-wind-speed",
+    performance_at_day = 1,
+    performance_at_night = 1,
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk02.ogg", volume = 1.2},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk02.ogg", volume = 0.8},
         apparent_volume = 2.5
     },
-    continuous_animation = true,
-    animations = {
+    picture = {
         layers = {
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk02/r4.png",
                 width = 224,
                 height = 352,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -64),
-                animation_speed = 0.35,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk02/a4.png",
                 width = 224,
                 height = 352,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -64),
-                animation_speed = 0.35,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk02/s4.png",
                 width = 256,
                 height = 224,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(16, 0),
-                animation_speed = 0.35,
                 draw_as_shadow = true,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/hawt-turbine-mk02/l4.png",
                 width = 224,
                 height = 352,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -64),
-                animation_speed = 0.35,
                 draw_as_glow = true,
             },
         }
@@ -110,41 +97,36 @@ local proto = ENTITY {
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
-new_proto.picture = table.deepcopy(proto.animations.layers[1])
+new_proto.picture = table.deepcopy(proto.picture.layers[1])
 new_proto.picture.filename = new_proto.picture.filename:gsub("r4", "base-mk02")
-new_proto.animations = nil
-new_proto.render_layer = "lower-object-above-shadow"
 data:extend {new_proto}
 
-data:extend
-{
-    {
-        type = "simple-entity-with-force",
-        name = "hawt-turbine-mk02-collision",
-        render_layer = "wires-above",
-        icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk02.png",
-        icon_size = 64,
-        flags = {"placeable-neutral", "player-creation", "not-on-map"},
-        collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
+data:extend {{
+    type = "simple-entity-with-force",
+    name = "hawt-turbine-mk02-collision",
+    render_layer = "wires-above",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/hawt-turbine-mk02.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "player-creation", "not-on-map"},
+    collision_box = {{-13.4, -13.4}, {13.4, 13.4}},
+    collision_mask = {layers = {wind_layer = true}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    selectable_in_game = false,
+    picture = {
+        filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
+        width = 4,
+        height = 4,
+    },
+    created_effect = {
+        type = "area",
+        radius = 13.4,
         collision_mask = {layers = {wind_layer = true}},
-        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-        selectable_in_game = false,
-        picture = {
-            filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-            width = 4,
-            height = 4,
-        },
-        created_effect = {
-            type = "area",
-            radius = 13.4,
-            collision_mask = {layers = {wind_layer = true}},
-            action_delivery = {
-                type = "instant",
-                target_effects = {{
-                    type = "script",
-                    effect_id = "turbine-area"
-                }}
-            }
+        action_delivery = {
+            type = "instant",
+            target_effects = {{
+                type = "script",
+                effect_id = "turbine-area"
+            }}
         }
     }
-}
+}}
