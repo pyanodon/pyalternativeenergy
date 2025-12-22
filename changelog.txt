@@ -18,6 +18,7 @@ Date: ??
     - Fixed HAWT turbines not being selectable in deconstruction planner. Resolves https://github.com/pyanodon/pybugreports/issues/1272
     - Fixed Energy Generation not being a prerequesite for Non Renewables. Resolves https://github.com/pyanodon/pybugreports/issues/1308
     - Fixed Biopolymer not depending on Microbiology Stage 4. Resolves https://github.com/pyanodon/pybugreports/issues/1310
+    - Re-added research cost halving when entering a new tier before Py4
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
 Date: 2025-09-15
