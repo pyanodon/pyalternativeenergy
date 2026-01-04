@@ -122,6 +122,7 @@ for i = 1, 4 do
         allowed_effects = {"consumption", "speed", "pollution"},
         allowed_module_categories = {"speed"},
         crafting_categories = {"gas-powerplant"},
+        fixed_recipe = "gas-molten-salt-0" .. i,
         crafting_speed = i,
         energy_source = {
             type = "fluid",

@@ -8,6 +8,7 @@ Date: ???
     - Rebalanced nuclear power to greatly reduce lithium peroxide input, scaling with tech level.
     - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
     - Buff higher tiers of rare earth mining drills to have lower resource drain and larger mining area
+    - Fixed that oil, gas, and biomass powerplants could use any tier recipe. Resolves https://github.com/pyanodon/pybugreports/issues/1332
     - Fixed tar refining tops with chitin having different fluid outputs from the normal variation. Resolves https://github.com/pyanodon/pybugreports/issues/1240
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.34

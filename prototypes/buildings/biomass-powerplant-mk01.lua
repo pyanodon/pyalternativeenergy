@@ -48,6 +48,7 @@ ENTITY {
     allowed_effects = {"consumption", "speed", "pollution"},
     allowed_module_categories = {"speed"},
     crafting_categories = {"biomass-powerplant"},
+    fixed_recipe = "biomass-molten-salt-01",
     crafting_speed = 1,
     energy_source =
     {
