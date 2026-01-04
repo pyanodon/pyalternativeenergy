@@ -50,6 +50,7 @@ ENTITY {
     module_slots = 4,
     allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"biomass-powerplant-mk04"},
+    fixed_recipe = "biomass-molten-salt-04",
     crafting_speed = 4,
     energy_source =
     {

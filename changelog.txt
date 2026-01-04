@@ -5,6 +5,7 @@ Date: ???
   Changes:
     - Added German locale courtesy of @Spunk42
     - Fixed smart farms not working on reload. Resolves https://github.com/pyanodon/pybugreports/issues/1346
+    - Fixed that biomass, oil, and gas powerplants could use any tier recipe. Resolves https://github.com/pyanodon/pybugreports/issues/1332
     - Fixed that mova smart farm recipe 2 had the same ingredients as recipe 3. Resolves https://github.com/pyanodon/pybugreports/issues/1271
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.36
