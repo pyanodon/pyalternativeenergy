@@ -121,6 +121,7 @@ for i = 1, 4 do
         module_slots = i,
         allowed_effects = {"consumption", "speed", "pollution"},
         crafting_categories = {"gas-powerplant"},
+        fixed_recipe = "gas-molten-salt-0" .. i,
         crafting_speed = i,
         energy_source = {
             type = "fluid",
