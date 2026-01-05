@@ -1,7 +1,7 @@
 
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.37
-Date: ???
+Date: 2026-01-05
   Changes:
     - Added German locale courtesy of @Spunk42
     - Fixed smart farms not working on reload. Resolves https://github.com/pyanodon/pybugreports/issues/1346
