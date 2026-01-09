@@ -35,8 +35,10 @@ ITEM {
     stack_size = 10
 }
 
+local frame_sequence = py.range(1, 50)
+
 ENTITY {
-    type = "electric-energy-interface",
+    type = "solar-panel",
     name = "vawt-turbine-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk02.png",
     icon_size = 64,
@@ -52,76 +54,76 @@ ENTITY {
     continuous_animation = true,
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
-
+        usage_priority = "solar",
         buffer_capacity = "20MJ",
-        input_flow_limit = "0W",
         render_no_power_icon = false
     },
-    energy_production = "20MW",
-    energy_usage = "0kW",
+    production = "4MW",
+    solar_coefficient_property = "py-wind-speed",
+    performance_at_day = 1,
+    performance_at_night = 1,
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/vawt-turbine-mk02.ogg", volume = 0.75},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/vawt-turbine-mk02.ogg", volume = 0.55},
         apparent_volume = 2.5
     },
-    -- This should be the same as any animation on the assembler style buildings so if it doesnt work right just copy the animation section from one of them.
-    animation =
-    {
-        layers =
-        {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/vawt-turbine-mk02/r.png",
-                width = 224,
-                height = 320,
-                line_length = 9,
-                frame_count = 50,
-                shift = util.by_pixel(0, -48),
-                animation_speed = 0.3,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/vawt-turbine-mk02/sh.png",
-                width = 64,
-                height = 224,
-                line_length = 9,
-                frame_count = 50,
-                shift = util.by_pixel(144, 0),
-                animation_speed = 0.3,
-                --draw_as_shadow = true
-            },
-        }
-    }
-}
-
-data:extend
-{
-    {
-        type = "simple-entity-with-force",
-        name = "vawt-turbine-mk02-collision",
-        render_layer = "wires-above",
-        icon = "__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk02.png",
-        icon_size = 64,
-        flags = {"placeable-neutral", "player-creation", "not-on-map"},
-        collision_box = {{-17.4, -17.4}, {17.4, 17.4}},
-        collision_mask = {layers = {wind_layer = true}},
-        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-        selectable_in_game = false,
-        picture = {
-            filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
-            width = 4,
-            height = 4,
-        },
-        created_effect = {
-            type = "area",
-            radius = 17.4,
-            collision_mask = {layers = {wind_layer = true}},
-            action_delivery = {
-                type = "instant",
-                target_effects = {{
-                    type = "script",
-                    effect_id = "turbine-area"
-                }}
+    stateless_visualisation = {
+        animation = {
+            sheets = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/vawt-turbine-mk02/r.png",
+                    width = 224,
+                    height = 320,
+                    line_length = 9,
+                    frame_count = 54,
+                    shift = util.by_pixel(0, -48),
+                    animation_speed = 0.3,
+                    variation_count = 1,
+                    frame_sequence = frame_sequence
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/vawt-turbine-mk02/sh.png",
+                    width = 64,
+                    height = 224,
+                    line_length = 9,
+                    frame_count = 54,
+                    shift = util.by_pixel(144, 0),
+                    animation_speed = 0.3,
+                    variation_count = 1,
+                    frame_sequence = frame_sequence
+                    --draw_as_shadow = true
+                }
             }
         }
     }
 }
+
+data:extend {{
+    type = "simple-entity-with-force",
+    name = "vawt-turbine-mk02-collision",
+    render_layer = "wires-above",
+    icon = "__pyalternativeenergygraphics__/graphics/icons/vawt-turbine-mk02.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "player-creation", "not-on-map"},
+    collision_box = {{-17.4, -17.4}, {17.4, 17.4}},
+    collision_mask = {layers = {wind_layer = true}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    selectable_in_game = false,
+    picture = {
+        filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
+        width = 4,
+        height = 4,
+    },
+    created_effect = {
+        type = "area",
+        radius = 17.4,
+        collision_mask = {layers = {wind_layer = true}},
+        action_delivery = {
+            type = "instant",
+            target_effects = {{
+                type = "script",
+                effect_id = "turbine-area"
+            }}
+        }
+    }
+}}

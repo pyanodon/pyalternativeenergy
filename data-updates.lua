@@ -150,48 +150,44 @@ end
 
 --ENERGY COSTS--
 
---ENERGY PRODUCTION DESCRIPTION --
-for name, variance in pairs(require "scripts.wind.variation") do
-    variance = {"entity-description.variance", tostring(variance * 100)}
-    -- Handle the surrogate items that show in electric stats, too
-    for _, suffix in pairs {"", "-blank"} do
-        local entity = data.raw["electric-energy-interface"][name .. suffix]
-        if entity then
-            if entity.localised_description then
-                entity.localised_description = {"", entity.localised_description, "\n", variance}
-            else
-                entity.localised_description = {"?", {"", {"entity-description." .. name}, "\n", variance}, variance}
-            end
-        end
-    end
-end
-
-local electric_energy_interfaces = {
+-- add wind data to entity tooltip fields
+for _, name in pairs{
     "hawt-turbine-mk01",
     "hawt-turbine-mk02",
     "hawt-turbine-mk03",
     "hawt-turbine-mk04",
+    "hawt-turbine-mk01-blank",
+    "hawt-turbine-mk02-blank",
+    "hawt-turbine-mk03-blank",
+    "hawt-turbine-mk04-blank",
     "vawt-turbine-mk01",
     "vawt-turbine-mk02",
     "vawt-turbine-mk03",
     "vawt-turbine-mk04",
     "multiblade-turbine-mk01",
     "multiblade-turbine-mk03",
+    "multiblade-turbine-mk01-blank",
+    "multiblade-turbine-mk03-blank",
+} do
+    local entity = data.raw["solar-panel"][name]
+    entity.custom_tooltip_fields = entity.custom_tooltip_fields or {}
+    entity.custom_tooltip_fields[#entity.custom_tooltip_fields+1] = {
+        name = {"entity-description.output-per-kmph"},
+        value = entity.production
+    }
+end
+
+-- add relevant data to custom solar panel descriptions
+for _, name in pairs{
     "solar-panel-mk02",
     "solar-panel-mk03",
-}
-
-for _, name in pairs(electric_energy_interfaces) do
-    local item = data.raw.item[name]
+} do
     local entity = data.raw["electric-energy-interface"][name]
-    local output = {"entity-description.max-output", tostring(entity.energy_production)}
-    if item.localised_description then
-        item.localised_description = {"", item.localised_description, "\n", (output)}
-    elseif entity.localised_description then
-        item.localised_description = {"", entity.localised_description, "\n", output}
-    else
-        item.localised_description = {"?", {"", {"entity-description." .. name}, "\n", output}, output}
-    end
+    entity.custom_tooltip_fields = entity.custom_tooltip_fields or {}
+    entity.custom_tooltip_fields[#entity.custom_tooltip_fields+1] = {
+        name = {"entity-description.max-output"},
+        value = entity.energy_production
+    }
     entity.energy_source.buffer_capacity = entity.energy_production
 end
 
