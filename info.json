@@ -12,6 +12,7 @@
         "pyalienlife >= 3.0.45",
         "pyhightech >= 3.0.15",
         "~ pyalternativeenergygraphics >= 3.0.4",
+        "~ pypostprocessing >= 3.0.42",
         "? enable-all-feature-flags",
         "(?) pyindustry",
         "! wret-beacon-rebalance-mod",

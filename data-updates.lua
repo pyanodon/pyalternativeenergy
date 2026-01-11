@@ -195,23 +195,6 @@ for _, name in pairs(electric_energy_interfaces) do
     entity.energy_source.buffer_capacity = entity.energy_production
 end
 
-local molten_salt_recipes = {
-    "biomass-molten-salt-0",
-    "coal-molten-salt-0",
-    "gas-molten-salt-0",
-    "oil-molten-salt-0",
-}
--- Add the mk01..mk04 color bars to the hot-molten-salt recipes
-for _, name in pairs(molten_salt_recipes) do
-    for mk = 1, 4, 1 do
-        local recipe = name .. mk
-        table.insert(data.raw.recipe[recipe].icons, {
-            icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. mk .. ".png",
-            icon_size = 64,
-        })
-    end
-end
-
 for _, resource in pairs(data.raw.resource) do
     if not resource.selection_priority then
         resource.selection_priority = 40
