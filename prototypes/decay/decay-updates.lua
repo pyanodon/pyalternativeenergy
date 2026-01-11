@@ -148,11 +148,6 @@ ITEM("fish-egg-mk02"):spoil("fish-egg", hour)
 ITEM("fish-egg-mk03"):spoil("fish-egg-mk02", 2 * hour)
 ITEM("fish-egg-mk04"):spoil("fish-egg-mk03", 4 * hour)
 
-RECIPE("biomass-molten-salt-01"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-02"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-03"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-04"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-
 RECIPE("bacteria-2"):remove_unlock("microbiology-mk04"):add_unlock("microbiology-mk03")
 RECIPE("perfect-samples"):add_ingredient {type = "item", name = "rich-biocrud", amount = 3}
 
