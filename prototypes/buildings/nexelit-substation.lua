@@ -81,6 +81,8 @@ ENTITY {
         }
     },
     impact_category = "metal-large",
+    open_sound = { filename = "__base__/sound/electric-network-open.ogg", volume = 0.6 },
+    close_sound = { filename = "__base__/sound/electric-network-close.ogg", volume = 0.6 },
     working_sound =
     {
         sound =

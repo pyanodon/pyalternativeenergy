@@ -1,4 +1,8 @@
-
+---------------------------------------------------------------------------------------------------
+Version: 3.1.38
+Date: ????
+  Changes:
+    - Fixed nexelit power pole and substation not having open and close sound effects. Resolves https://github.com/pyanodon/pybugreports/issues/1371
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.37
 Date: 2026-01-05
