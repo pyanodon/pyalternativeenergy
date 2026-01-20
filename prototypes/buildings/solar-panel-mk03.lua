@@ -34,56 +34,47 @@ ITEM {
 }
 
 ENTITY {
-    type = "electric-energy-interface",
+    type = "solar-panel",
     name = "solar-panel-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/solar-panel-mk03.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "solar-panel-mk03"},
-    fast_replaceable_group = "solar-panel-mk03",
     max_health = 400,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
+    fast_replaceable_group = "solar-panel",
+    corpse = "solar-panel-remnants",
+    dying_explosion = "solar-panel-explosion",
     collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
-    continuous_animation = true,
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
-        buffer_capacity = "14MJ",
-        render_no_power_icon = false,
-        input_flow_limit = "0W"
+        usage_priority = "solar"
     },
-    energy_production = "70MW",
-    animation =
-    {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/raw.png",
-                width = 384,
-                height = 416,
-                line_length = 5,
-                frame_count = 10,
-                shift = util.by_pixel(32, -48)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/sh.png",
-                width = 384,
-                height = 416,
-                line_length = 5,
-                frame_count = 10,
-                shift = util.by_pixel(32, -48),
-                draw_as_shadow = true
-            },
+    stateless_visualisation = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/raw.png",
+                    width = 384,
+                    height = 416,
+                    line_length = 5,
+                    frame_count = 10,
+                    animation_speed = 1 / 67500,
+                    shift = util.by_pixel(32, -48)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk03/sh.png",
+                    width = 384,
+                    height = 416,
+                    line_length = 5,
+                    frame_count = 10,
+                    animation_speed = 1 / 67500,
+                    shift = util.by_pixel(32, -48),
+                    draw_as_shadow = true
+                },
+            }
         }
     },
-
     impact_category = "metal-large",
+    production = "70MW"
 }
-
-local entity = data.raw["electric-energy-interface"]["solar-panel-mk03"]
-local day_length = 12500 + 5000 + 5000
-local frame_count = entity.animation.layers[1].frame_count
-local animation_speed = 1 / day_length * frame_count
-entity.animation.layers[1].animation_speed = animation_speed
-entity.animation.layers[2].animation_speed = animation_speed

@@ -8,7 +8,6 @@ require "scripts/microwave-receiver"
 require "scripts/thermosolar/shared"
 require "scripts/thermosolar/solar-updraft-tower"
 require "scripts/thermosolar/heliostat"
-require "scripts/solar"
 require "scripts/wind/wind"
 require "scripts/aerial"
 require "scripts/tidal"
@@ -23,7 +22,6 @@ py.on_event(py.events.on_init(), function()
 end)
 
 py.on_event(py.events.on_built(), function(event)
-    Solar.events.on_built(event)
     Heliostat.events.on_built(event)
     Wind.events.on_built(event)
     Aerial.events.on_built(event)
@@ -80,11 +78,9 @@ py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
     end
 end)
 
-py.register_on_nth_tick(100, "solar", "pyae", Solar.events[100])
 py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
 
 py.on_event(py.events.on_destroyed(), function(event)
-    Solar.events.on_destroyed(event)
     Heliostat.events.on_destroyed(event)
     Wind.events.on_destroyed(event)
     Aerial.events.on_destroyed(event)
