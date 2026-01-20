@@ -177,20 +177,6 @@ for _, name in pairs{
     }
 end
 
--- add relevant data to custom solar panel descriptions
-for _, name in pairs{
-    "solar-panel-mk02",
-    "solar-panel-mk03",
-} do
-    local entity = data.raw["electric-energy-interface"][name]
-    entity.custom_tooltip_fields = entity.custom_tooltip_fields or {}
-    entity.custom_tooltip_fields[#entity.custom_tooltip_fields+1] = {
-        name = {"entity-description.max-output"},
-        value = entity.energy_production
-    }
-    entity.energy_source.buffer_capacity = entity.energy_production
-end
-
 local molten_salt_recipes = {
     "biomass-molten-salt-0",
     "coal-molten-salt-0",
