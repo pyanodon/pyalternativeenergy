@@ -65,6 +65,54 @@ ENTITY {
     },
     energy_usage = "1000kW",
     graphics_set = {
+	
+		working_visualisations =
+		{
+			{
+				north_animation = {
+
+					filename = "__pyalternativeenergygraphics__/graphics/entity/numal/north/all.png",
+					frame_count = 150,
+					line_length = 15,
+					width = 192,
+					height = 192,
+					shift = util.by_pixel(16, -76),
+					animation_speed = 0.4
+
+				},
+				south_animation = {
+					filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/all.png",
+					frame_count = 150,
+					line_length = 15,
+					width = 160,
+					height = 192,
+					shift = util.by_pixel(0, -16),
+					animation_speed = 0.4
+				},
+				west_animation = {
+
+					filename = "__pyalternativeenergygraphics__/graphics/entity/numal/east/all.png",
+					frame_count = 150,
+					line_length = 15,
+					width = 192,
+					height = 192,
+					shift = util.by_pixel(-48, -48),
+					animation_speed = 0.4
+
+				},
+				east_animation = {
+
+					filename = "__pyalternativeenergygraphics__/graphics/entity/numal/west/all.png",
+					frame_count = 150,
+					line_length = 15,
+					width = 192,
+					height = 160,
+					shift = util.by_pixel(45, -64),
+					animation_speed = 0.4
+				}
+			},
+		},
+	
         animation = {
             north = {
                 layers = {
