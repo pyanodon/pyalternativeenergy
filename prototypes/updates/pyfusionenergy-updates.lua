@@ -23,7 +23,7 @@ RECIPE("nmf-mk01"):add_ingredient {type = "item", name = "intermetallics", amoun
 RECIPE("secondary-crusher-mk01"):remove_unlock("machines-mk01"):add_unlock("crusher-2") --:add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("thickener-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 7}
 RECIPE("gas-separator-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}
-RECIPE("hydrocyclone-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}:remove_unlock("vanadium-processing"):add_unlock("iron-mk02")
+RECIPE("hydrocyclone-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}:remove_unlock("advanced-mining-facilities"):add_unlock("iron-mk02")
 --RECIPE("automated-screener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("centrifugal-pan-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}
 RECIPE("compressor-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 6}
