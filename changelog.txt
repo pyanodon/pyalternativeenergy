@@ -3,8 +3,11 @@ Version: 3.1.38
 Date: ????
   Changes:
     - Fixed numal reef animations. Resolves https://github.com/pyanodon/pybugreports/issues/1365
+    - MHD Entry in pycodex no longer shows information about non existing antimatter fusion recipe.
     - Fixed nexelit power pole and substation not having open and close sound effects. Resolves https://github.com/pyanodon/pybugreports/issues/1371
     - Fixed hydrocyclone mk01 being in both advanced mining facilities and iron stage 2. Resolves https://github.com/pyanodon/pybugreports/issues/1355
+    - Increased steam cooling speed by 5x. Resolves https://github.com/pyanodon/pybugreports/issues/1380
+    - Removed the period from smart farm mova package technology locale
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.37
 Date: 2026-01-05
