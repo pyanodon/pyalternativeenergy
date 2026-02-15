@@ -1324,7 +1324,7 @@ for fluid, metatable in pairs{
       localised_name = {"recipe-name.steam-cooling-in-rhe", fluid.localised_name or {"fluid-name." .. fluid.name}, tostring(start_temp), tostring(end_temp)},
       category = "heat-exchanger",
       enabled = false,
-      energy_required = 20, -- some formula here
+      energy_required = 4,
       ingredients = {
         {type = "fluid", name = fluid.name, amount = steam_amount, minimum_temperature = start_temp},
         {type = "fluid", name = metatable.base, amount = math.ceil(base_amount / 10) * 10}
