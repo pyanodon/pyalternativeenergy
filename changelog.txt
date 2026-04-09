@@ -8,6 +8,8 @@ Date: ????
     - Fixed hydrocyclone mk01 being in both advanced mining facilities and iron stage 2. Resolves https://github.com/pyanodon/pybugreports/issues/1355
     - Increased steam cooling speed by 5x. Resolves https://github.com/pyanodon/pybugreports/issues/1380
     - Removed the period from smart farm mova package technology locale
+    - Fixed numal rendering icon being inconsistent. Resolves https://github.com/pyanodon/pybugreports/issues/1080
+    - Updated specialized numal rendering icons to reflect normal rendering icon
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.37
 Date: 2026-01-05

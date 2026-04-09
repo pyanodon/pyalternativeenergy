@@ -42,8 +42,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "numal-mk01",
 			name = "full-render-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/rendering-numal.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",     draw_background = false},
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", draw_background = true}
+			}
 		},
 		--guts numal rendering
 		{
@@ -65,8 +67,9 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-num",
 			icons = {
-				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",     draw_background = false},
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",   scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -86,7 +89,8 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-num",
 			icons = {
-				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",       draw_background = false},
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png",   draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -106,8 +110,9 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-num",
 			icons = {
-				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",       scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",     draw_background = false},
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",        scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -126,8 +131,9 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-num",
 			icons = {
-				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",     draw_background = false},
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",   scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
