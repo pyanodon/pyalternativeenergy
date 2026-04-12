@@ -48,10 +48,10 @@ local tidal = ENTITY {
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
-    selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
-    collision_mask = {layers = {object = true, train = true}},                            -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
-    center_collision_mask = {layers = {water_tile = true, object = true, player = true}}, -- to test that tile directly under the pump is ground
+    collision_box = {{-2.7, -5.3}, {2.7, 5.3}},
+    selection_box = {{-2.9, -5.4}, {2.9, 5.4}},
+    collision_mask = {layers = {object = true, train = true, is_object = true, is_lower_object = true}}, -- collide just with object-layer(s) and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    center_collision_mask = {layers = {water_tile = true, object = true, player = true}},                -- to test that tile directly under the pump is ground
     tile_buildability_rules = {
         {area = {{-2, -5}, {2, 1}},  required_tiles = {layers = {water_tile = true}},  colliding_tiles = {layers = {ground_tile = true}}, remove_on_collision = true},
         {area = {{-2, 1.6}, {2, 5}}, required_tiles = {layers = {ground_tile = true}}, colliding_tiles = {layers = {water_tile = true}},  remove_on_collision = true}
@@ -85,7 +85,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     frame_count = 1,
                     repeat_count = 50,
-                    shift = util.by_pixel(0, 80),
+                    shift = util.by_pixel(0, 70),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/raw-half.png",
@@ -95,7 +95,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(0, -128),
+                    shift = util.by_pixel(0, -138),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/mask.png",
@@ -105,7 +105,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(0, -128),
+                    shift = util.by_pixel(0, -138),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/turbine.png",
@@ -115,7 +115,7 @@ local tidal = ENTITY {
                     line_length = 8,
                     frame_count = 50,
                     animation_speed = 1 / 5,
-                    shift = util.by_pixel(0, 80),
+                    shift = util.by_pixel(0, 70),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/ao-half.png",
@@ -125,7 +125,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(0, -128),
+                    shift = util.by_pixel(0, -138),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/sh-half.png",
@@ -136,7 +136,7 @@ local tidal = ENTITY {
                     frame_count = 1,
                     repeat_count = 50,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(0, -128),
+                    shift = util.by_pixel(0, -138),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/sh-down.png",
@@ -146,7 +146,7 @@ local tidal = ENTITY {
                     frame_count = 1,
                     repeat_count = 50,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(0, 80),
+                    shift = util.by_pixel(0, 70),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/l-land.png",
@@ -157,7 +157,7 @@ local tidal = ENTITY {
                     frame_count = 50,
                     animation_speed = 1 / 5,
                     draw_as_glow = true,
-                    shift = util.by_pixel(0, -128),
+                    shift = util.by_pixel(0, -138),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/north/l-turbines.png",
@@ -168,7 +168,7 @@ local tidal = ENTITY {
                     frame_count = 50,
                     animation_speed = 1 / 5,
                     draw_as_glow = true,
-                    shift = util.by_pixel(0, 80),
+                    shift = util.by_pixel(0, 70),
                 },
 
             }
@@ -182,7 +182,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     frame_count = 1,
                     repeat_count = 50,
-                    shift = util.by_pixel(96, -16),
+                    shift = util.by_pixel(96, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/raw-half.png",
@@ -191,7 +191,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(-112, -16),
+                    shift = util.by_pixel(-112, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/mask.png",
@@ -200,7 +200,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(-112, -16),
+                    shift = util.by_pixel(-112, -6),
                     tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
                 },
                 {
@@ -210,7 +210,7 @@ local tidal = ENTITY {
                     line_length = 8,
                     frame_count = 50,
                     animation_speed = 1 / 5,
-                    shift = util.by_pixel(96, -16),
+                    shift = util.by_pixel(96, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/ao.png",
@@ -219,7 +219,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(-112, -16),
+                    shift = util.by_pixel(-112, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/ao-turbine.png",
@@ -228,7 +228,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     frame_count = 1,
                     repeat_count = 50,
-                    shift = util.by_pixel(96, -16),
+                    shift = util.by_pixel(96, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/sh.png",
@@ -238,7 +238,7 @@ local tidal = ENTITY {
                     repeat_count = 50,
                     frame_count = 1,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(-112, -16),
+                    shift = util.by_pixel(-112, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/sh-turbine.png",
@@ -248,7 +248,7 @@ local tidal = ENTITY {
                     frame_count = 1,
                     repeat_count = 50,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(96, -16),
+                    shift = util.by_pixel(96, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/l-land.png",
@@ -257,7 +257,7 @@ local tidal = ENTITY {
                     line_length = 8,
                     frame_count = 50,
                     draw_as_glow = true,
-                    shift = util.by_pixel(-112, -16),
+                    shift = util.by_pixel(-112, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/east/l-turbines.png",
@@ -267,7 +267,7 @@ local tidal = ENTITY {
                     frame_count = 50,
                     draw_as_glow = true,
                     animation_speed = 1 / 5,
-                    shift = util.by_pixel(96, -16),
+                    shift = util.by_pixel(96, -6),
                 },
             }
         },
@@ -280,7 +280,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     frame_count = 1,
                     repeat_count = 50,
-                    shift = util.by_pixel(0, -80),
+                    shift = util.by_pixel(0, -90),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/raw.png",
@@ -289,7 +289,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(0, 128),
+                    shift = util.by_pixel(0, 118),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/mask.png",
@@ -299,7 +299,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(0, 128),
+                    shift = util.by_pixel(0, 118),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/turbine.png",
@@ -308,7 +308,7 @@ local tidal = ENTITY {
                     line_length = 8,
                     frame_count = 50,
                     animation_speed = 1 / 5,
-                    shift = util.by_pixel(0, -80),
+                    shift = util.by_pixel(0, -90),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/ao.png",
@@ -317,7 +317,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(0, 128),
+                    shift = util.by_pixel(0, 118),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/sh.png",
@@ -327,7 +327,7 @@ local tidal = ENTITY {
                     frame_count = 1,
                     repeat_count = 50,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(0, 128),
+                    shift = util.by_pixel(0, 118),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/sh-down.png",
@@ -337,7 +337,7 @@ local tidal = ENTITY {
                     frame_count = 1,
                     repeat_count = 50,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(0, -80),
+                    shift = util.by_pixel(0, -90),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/l-land.png",
@@ -347,7 +347,7 @@ local tidal = ENTITY {
                     frame_count = 50,
                     animation_speed = 1 / 5,
                     draw_as_glow = true,
-                    shift = util.by_pixel(-5, 132),
+                    shift = util.by_pixel(-5, 122),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/south/l-turbine.png",
@@ -357,7 +357,7 @@ local tidal = ENTITY {
                     frame_count = 50,
                     animation_speed = 1 / 5,
                     draw_as_glow = true,
-                    shift = util.by_pixel(-2, -80),
+                    shift = util.by_pixel(-2, -90),
                 },
             }
         },
@@ -370,7 +370,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     frame_count = 1,
                     repeat_count = 50,
-                    shift = util.by_pixel(-96, -0),
+                    shift = util.by_pixel(-96, 10),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/raw.png",
@@ -379,7 +379,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(112, -16),
+                    shift = util.by_pixel(112, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/mask.png",
@@ -388,7 +388,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(112, -16),
+                    shift = util.by_pixel(112, -6),
                     tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
                 },
                 {
@@ -398,7 +398,7 @@ local tidal = ENTITY {
                     line_length = 8,
                     frame_count = 50,
                     animation_speed = 1 / 5,
-                    shift = util.by_pixel(-96, -0),
+                    shift = util.by_pixel(-96, 10),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/ao.png",
@@ -407,7 +407,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     repeat_count = 50,
                     frame_count = 1,
-                    shift = util.by_pixel(112, -16),
+                    shift = util.by_pixel(112, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/ao-turb.png",
@@ -416,7 +416,7 @@ local tidal = ENTITY {
                     line_length = 1,
                     frame_count = 1,
                     repeat_count = 50,
-                    shift = util.by_pixel(-96, 0),
+                    shift = util.by_pixel(-96, 10),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/sh.png",
@@ -426,7 +426,7 @@ local tidal = ENTITY {
                     repeat_count = 50,
                     frame_count = 1,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(112, -16),
+                    shift = util.by_pixel(112, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/sh-down.png",
@@ -436,7 +436,7 @@ local tidal = ENTITY {
                     frame_count = 1,
                     repeat_count = 50,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(-96, -0),
+                    shift = util.by_pixel(-96, 10),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/l-land.png",
@@ -445,7 +445,7 @@ local tidal = ENTITY {
                     line_length = 8,
                     frame_count = 50,
                     draw_as_glow = true,
-                    shift = util.by_pixel(112, -16),
+                    shift = util.by_pixel(112, -6),
                 },
                 {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/tidal/west/l-turbines.png",
@@ -455,7 +455,7 @@ local tidal = ENTITY {
                     frame_count = 50,
                     draw_as_glow = true,
                     animation_speed = 1 / 5,
-                    shift = util.by_pixel(-96, -0),
+                    shift = util.by_pixel(-96, 10),
                 },
             },
         },
