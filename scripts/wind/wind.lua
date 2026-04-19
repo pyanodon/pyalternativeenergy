@@ -192,6 +192,14 @@ end
 
 py.on_event(py.events.on_init(), function(event)
     storage.windmill = storage.windmill or {}
+    for _, planet in pairs(game.planets) do
+        -- reset 
+        if planet.surface then
+            planet.surface.set_property("py-wind-speed-variance", planet.prototype.surface_properties["py-wind-speed-variance"])
+            planet.surface.set_property("py-wind-speed-min", planet.prototype.surface_properties["py-wind-speed-min"])
+            planet.surface.set_property("py-wind-speed-max", planet.prototype.surface_properties["py-wind-speed-max"])
+        end
+    end
 end)
 
 function Wind.draw_windmill(windmill_data, direction)
@@ -249,33 +257,36 @@ Wind.events[61] = function()
     for _, surface in pairs(game.surfaces) do
         -- windspeed calculations
         local variance = surface.get_property("py-wind-speed-variance")
-        local min_speed = surface.get_property("py-wind-speed-min")
-        local max_speed = surface.get_property("py-wind-speed-max")
-        local wind_speed = Wind.calculate_wind_speed(variance) * (max_speed - min_speed) + min_speed -- adjusted to [min, max]
-        surface.set_property("py-wind-speed", wind_speed)
+        -- skip surfaces that do not change
+        if variance ~= 0 then
+            local min_speed = surface.get_property("py-wind-speed-min")
+            local max_speed = surface.get_property("py-wind-speed-max")
+            local wind_speed = Wind.calculate_wind_speed(variance) * (max_speed - min_speed) + min_speed -- adjusted to [min, max]
+            surface.set_property("py-wind-speed", wind_speed)
 
-        -- wind direction calculations
-        local direction = Wind.calculate_wind_direction(surface)
-        local key, details = storage.last_windmill, nil
-        local max_iter = 0
-        repeat
-            max_iter = max_iter + 1
-            key, details = next(storage.windmill, key)
-            -- Empty table or end of list
-            if not key or not details then
-                break
-            end
-            if details.entity.valid and animated_turbines[details.turbine_type] then
-                Wind.draw_windmill(details, direction)
-            elseif not details.entity.valid then
-                _ = details.collision.valid and details.collision.destroy()
-                if details.anim_id then
-                    local animation = rendering.get_object_by_id(details.anim_id)
-                    if animation then animation.destroy() end
+            -- wind direction calculations
+            local direction = Wind.calculate_wind_direction(surface)
+            local key, details = storage.last_windmill, nil
+            local max_iter = 0
+            repeat
+                max_iter = max_iter + 1
+                key, details = next(storage.windmill, key)
+                -- Empty table or end of list
+                if not key or not details then
+                    break
                 end
-                storage.windmill[key] = nil
-            end
-        until max_iter > 101
-        storage.last_windmill = key
+                if details.entity.valid and animated_turbines[details.turbine_type] then
+                    Wind.draw_windmill(details, direction)
+                elseif not details.entity.valid then
+                    _ = details.collision.valid and details.collision.destroy()
+                    if details.anim_id then
+                        local animation = rendering.get_object_by_id(details.anim_id)
+                        if animation then animation.destroy() end
+                    end
+                    storage.windmill[key] = nil
+                end
+            until max_iter > 101
+            storage.last_windmill = key
+        end
     end
 end
