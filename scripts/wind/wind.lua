@@ -193,11 +193,11 @@ end
 py.on_event(py.events.on_init(), function(event)
     storage.windmill = storage.windmill or {}
     for _, planet in pairs(game.planets) do
-        -- reset 
+        -- reset properties
         if planet.surface then
-            planet.surface.set_property("py-wind-speed-variance", planet.prototype.surface_properties["py-wind-speed-variance"])
-            planet.surface.set_property("py-wind-speed-min", planet.prototype.surface_properties["py-wind-speed-min"])
-            planet.surface.set_property("py-wind-speed-max", planet.prototype.surface_properties["py-wind-speed-max"])
+            planet.surface.set_property("py-wind-speed-variance", planet.prototype.surface_properties["py-wind-speed-variance"] or planet.surface.get_property("py-wind-speed-variance"))
+            planet.surface.set_property("py-wind-speed-min", planet.prototype.surface_properties["py-wind-speed-min"] or planet.surface.get_property("py-wind-speed-min"))
+            planet.surface.set_property("py-wind-speed-max", planet.prototype.surface_properties["py-wind-speed-max"] or planet.surface.get_property("py-wind-speed-max"))
         end
     end
 end)

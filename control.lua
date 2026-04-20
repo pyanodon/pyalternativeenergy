@@ -79,6 +79,7 @@ py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
 end)
 
 py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
+py.register_on_nth_tick(83, "tidal", "pyae", Tidal.events[83])
 
 py.on_event(py.events.on_destroyed(), function(event)
     Heliostat.events.on_destroyed(event)
