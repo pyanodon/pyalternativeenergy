@@ -68,15 +68,15 @@ function Tidal.calculate_tide_height(variance)
 end
 
 Tidal.events[83] = function()
-    for _, surface in pairs(game.surfaces) do
+    for _, planet in pairs(game.planets) do
         -- tide height calculations
-        local variance = surface.get_property("py-tide-height-variance")
+        local variance = planet.surface and planet.surface.get_property("py-tide-height-variance")
         -- skip surfaces that do not change
-        if variance ~= 0 then
-            local min_height = surface.get_property("py-tide-height-min")
-            local max_height = surface.get_property("py-tide-height-max")
+        if variance and variance ~= 0 then
+            local min_height = planet.surface.get_property("py-tide-height-min")
+            local max_height = planet.surface.get_property("py-tide-height-max")
             local tide_height = Tidal.calculate_tide_height(variance) * (max_height - min_height) + min_height -- adjusted to [min, max]
-            surface.set_property("py-tide-height", tide_height)
+            planet.surface.set_property("py-tide-height", tide_height)
         end
     end
 end
