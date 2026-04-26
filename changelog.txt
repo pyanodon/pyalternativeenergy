@@ -11,6 +11,7 @@ Date: ????
     - Removed the period from smart farm mova package technology locale
     - Fixed numal rendering icon being inconsistent. Resolves https://github.com/pyanodon/pybugreports/issues/1080
     - Updated specialized numal rendering icons to reflect normal rendering icon
+    - Shaft mk02 recipe now affected by productivity.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.37
 Date: 2026-01-05
