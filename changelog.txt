@@ -2,6 +2,7 @@
 Version: 4.0.0
 Date: ???
   Changes:
+    - Erbium Nickel Cobalt Alloy 2 recipe now produces 5 alloy instead of 1.
     - Antimony Drills now display correct power consumption and dont allow efficency modules. Resolves https://github.com/pyanodon/pybugreports/issues/1007
     - Buffed the recipe speed of plutonium reshuffle by 4x.
     - Removed efficiency modules from power plants. Already placed modules will continue to work, but beacons won't.
