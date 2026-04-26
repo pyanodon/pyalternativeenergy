@@ -133,7 +133,7 @@ RECIPE {
         {type = "item",  name = "control-rod", amount = 1, probability = 0.5},
         {type = "fluid", name = "molten-salt", amount = 50},
     },
-    main_product = "tritium"
+    main_product = "control-rod"
 }:add_unlock("nuclear-power")
 
 RECIPE {

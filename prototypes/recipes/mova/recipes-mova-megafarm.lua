@@ -26,7 +26,6 @@ RECIPE {
         {type = "item",  name = "stone",          amount = 100},
         {type = "fluid", name = "carbon-dioxide", amount = 1000},
         {type = "fluid", name = "water",          amount = 3000},
-        {type = "item",  name = "soil",           amount = 150},
     },
     results = {
         {type = "item", name = "mova", amount = tile_count * 2},

@@ -1,12 +1,45 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.1.36
-Date: ???
+Version: 3.1.38
+Date: ????
   Changes:
-    - Align temperature ranges in reheat recipes to rest of the modpack
-    - Updated Simplified Chinese locale courtesy of @alone on Discord
-    - Update hot-molten-salt recipe ordering to group them together
-    - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn. 
+    - Fixed rare earth naming inconsistencies in english. Resolves https://github.com/pyanodon/pybugreports/issues/1294
+    - Fixed numal reef animations. Resolves https://github.com/pyanodon/pybugreports/issues/1365
+    - MHD Entry in pycodex no longer shows information about non existing antimatter fusion recipe.
+    - Fixed nexelit power pole and substation not having open and close sound effects. Resolves https://github.com/pyanodon/pybugreports/issues/1371
+    - Fixed hydrocyclone mk01 being in both advanced mining facilities and iron stage 2. Resolves https://github.com/pyanodon/pybugreports/issues/1355
+    - Increased steam cooling speed by 5x. Resolves https://github.com/pyanodon/pybugreports/issues/1380
+    - Removed the period from smart farm mova package technology locale
+    - Fixed numal rendering icon being inconsistent. Resolves https://github.com/pyanodon/pybugreports/issues/1080
+    - Updated specialized numal rendering icons to reflect normal rendering icon
     - Shaft mk02 recipe now affected by productivity.
+---------------------------------------------------------------------------------------------------
+Version: 3.1.37
+Date: 2026-01-05
+  Changes:
+    - Added German locale courtesy of @Spunk42
+    - Fixed smart farms not working on reload. Resolves https://github.com/pyanodon/pybugreports/issues/1346
+    - Fixed that mova smart farm recipe 2 had the same ingredients as recipe 3. Resolves https://github.com/pyanodon/pybugreports/issues/1271
+---------------------------------------------------------------------------------------------------
+Version: 3.1.36
+Date: 2025-12-28
+  Changes:
+    - MK04 trains now tilt on rail ramps
+    - Added Spanish locale courtesy of @Ruby-Nova
+    - Align temperature ranges in reheat recipes to rest of the modpack
+    - Changed high pressure steam turbine mk04 fluid connections to input only so that it can consume the full 120k/s, circumventing an engine limitation at 60k/s
+    - Updated steam cooling recipes to specify a minimum temperature instead of an exact requirement
+    - Update hot-molten-salt recipe ordering to group them together
+    - Updated the descriptions of oil powerplants and gas powerplants to specify the fuel they burn.
+    - Fixed that tidal powerplants could have pipe-to-grounds placed on them
+    - Renamed the used control rod -> control rod recipe to Used Control Rod reprocessing
+    - Fixed certain recipes missing layered icons. Resolves https://github.com/pyanodon/pybugreports/issues/1268
+    - Fixed bad english in microwave transmitter satellite locale. Resolves https://github.com/pyanodon/pybugreports/issues/1293
+    - Fixed capitalization on nuclear fuel fuel cateogry. Resolves https://github.com/pyanodon/pybugreports/issues/1291
+    - Added recycling recipe for Salt Solution. Resolves https://github.com/pyanodon/pybugreports/issues/970
+    - Fixed HAWT turbines not being selectable in deconstruction planner. Resolves https://github.com/pyanodon/pybugreports/issues/1272
+    - Fixed Energy Generation not being a prerequesite for Non Renewables. Resolves https://github.com/pyanodon/pybugreports/issues/1308
+    - Fixed Biopolymer not depending on Microbiology Stage 4. Resolves https://github.com/pyanodon/pybugreports/issues/1310
+    - Re-added research cost halving when entering a new tier before Py4
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.35
 Date: 2025-09-15
