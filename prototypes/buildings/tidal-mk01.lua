@@ -63,6 +63,12 @@ local tidal = ENTITY {
     },
     production = "800kW",
     placeable_position_visualization = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization),
+    custom_tooltip_fields = {
+        {
+            name = {"entity-description.output-per-meter"},
+            value = "800kW"
+        }
+    },
     created_effect = {
         type = "direct",
         action_delivery = {
@@ -294,6 +300,7 @@ table.insert(solar_panel.flags, "not-blueprintable")
 solar_panel.collision_box = {{-5.3, -5.3}, {5.3, 5.3}}
 solar_panel.selection_box = {{-0, -0}, {0, 0}}
 solar_panel.localised_name = solar_panel.localised_name or {"entity-name." .. solar_panel.name}
+solar_panel.localised_description = solar_panel.localised_description or {"entity-name." .. solar_panel.name}
 solar_panel.name = solar_panel.name .. "-solar"
 solar_panel.type = "solar-panel"
 solar_panel.created_effect = nil
