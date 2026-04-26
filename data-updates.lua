@@ -389,6 +389,7 @@ local recipes_list =
     "sc-stator",
     "self-assembly-monolayer",
     "shaft-mk01",
+    "shaft-mk02",
     "silica-shell",
     "silicon-wafer-2",
     "silicon-wafer-3",
