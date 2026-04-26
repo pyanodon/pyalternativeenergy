@@ -42,8 +42,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "numal-mk01",
 			name = "full-render-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/rendering-numal.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",     draw_background = false},
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", draw_background = true}
+			}
 		},
 		--guts numal rendering
 		{
