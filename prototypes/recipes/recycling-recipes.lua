@@ -319,7 +319,7 @@ RECIPE {
         {type = "item", name = "guts", amount = 20},
     },
     results = {
-        {type = "fluid", name = "acetic-acid", amount = 60},
+        {type = "fluid", name = "acetic-acid", amount = 60, autotech_is_not_primary_source = true},
     },
     allow_productivity = true,
     icons = py.composite_icon("acetic-acid", "guts")
