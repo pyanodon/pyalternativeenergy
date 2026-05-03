@@ -13,6 +13,7 @@ Date: ???
     - Updated specialized numal rendering icons to reflect normal rendering icon
     - Shaft mk02 recipe now affected by productivity.
     - Remove guts as a potential primary source for Acetic Acid
+    - Fixed superior floating locomotive fuel icon positioning. Resolves https://github.com/pyanodon/pybugreports/issues/1406
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.37
 Date: 2026-01-05
