@@ -11,6 +11,7 @@ Date: ???
     - Buff higher tiers of rare earth mining drills to have lower resource drain and larger mining area
     - Fixed that oil, gas, and biomass powerplants could use any tier recipe. Resolves https://github.com/pyanodon/pybugreports/issues/1332
     - Fixed tar refining tops with chitin having different fluid outputs from the normal variation. Resolves https://github.com/pyanodon/pybugreports/issues/1240
+    - Nuclear isotope processing recipes will inherit their decay state from ingredients where possible. Resolves https://github.com/pyanodon/pybugreports/issues/1327
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.34
 Date: 2025-09-15
