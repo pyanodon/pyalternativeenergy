@@ -127,3 +127,6 @@ data.raw.item["carbon-black"].fuel_category                             = "bioma
 data.raw.item["carbon-black"].fuel_emissions_multiplier                 = 3.5
 data.raw.item["carbon-black"].fuel_acceleration_multiplier              = 0.8
 data.raw.item["carbon-black"].fuel_top_speed_multiplier                 = 0.8
+
+-- update oil burner
+data.raw.boiler["oil-boiler-mk01"].energy_source.fluid_box.pipe_connections[1].connection_category = "fuel-injector"
