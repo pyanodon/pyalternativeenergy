@@ -121,8 +121,8 @@ for i = 1, 4 do
         module_slots = i,
         allowed_effects = {"consumption", "speed", "pollution"},
         allowed_module_categories = {"speed"},
-        crafting_categories = {(i == 1) and "coal-powerplant" or ("coal-powerplant-mk0" .. i)},
-        fixed_recipe = "coal-molten-salt-0" .. i,
+        crafting_categories = {"powerplant-mk0" .. i},
+        fixed_recipe = "molten-salt-0" .. i,
         crafting_speed = i,
         energy_source = {
             type = "burner",

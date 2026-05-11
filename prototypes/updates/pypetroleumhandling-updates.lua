@@ -81,7 +81,7 @@ RECIPE("small-parts-03"):replace_ingredient("rubber", {type = "item", name = "cf
 RECIPE("reheat-coke-gas"):replace_ingredient("combustion-mixture1", {type = "fluid", name = "hot-molten-salt", amount = 50, minimum_temperature = 995})
 table.insert(RECIPE("reheat-coke-gas").results, {type = "fluid", name = "molten-salt", amount = 50})
 
-RECIPE("reheat-outlet-gas-1"):remove_unlock("hot-air-mk03"):set_fields {hidden = true}
+RECIPE("reheat-outlet-gas-1"):remove_unlock("hot-air-mk03"):hide()
 RECIPE("reheat-outlet-gas-2"):replace_ingredient("combustion-mixture1", {type = "fluid", name = "hot-molten-salt", amount = 50, minimum_temperature = 1995})
 table.insert(RECIPE("reheat-outlet-gas-2").results, {type = "fluid", name = "molten-salt", amount = 50})
 

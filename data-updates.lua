@@ -101,7 +101,7 @@ RECIPE("ht-locomotive"):add_ingredient {type = "item", name = "ns-material", amo
 RECIPE("ht-generic-wagon"):add_ingredient {type = "item", name = "ns-material", amount = 2}:add_ingredient {type = "item", name = "super-steel", amount = 10}
 RECIPE("ht-generic-fluid-wagon"):add_ingredient {type = "item", name = "ns-material", amount = 2}:add_ingredient {type = "item", name = "super-steel", amount = 10}
 
-TECHNOLOGY("nuclear-fuel-reprocessing"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("nuclear-fuel-reprocessing"):hide().enabled = false
 RECIPE("lithium-peroxide"):remove_unlock("filtration-mk02"):add_unlock("lithium-processing"):add_ingredient {type = "item", name = "lithium-hydroxide", amount = 2}
 RECIPE("low-density-structure"):add_ingredient {type = "item", name = "cf", amount = 10}
 RECIPE("arithmetic-combinator"):add_ingredient {type = "item", name = "battery", amount = 1}
@@ -134,6 +134,7 @@ for _, recipe in pairs(data.raw.recipe) do
 
     if recipe.category == "combustion" then
         recipe.hidden = true
+        recipe.hidden_in_factoriopedia = true
         for t, tech in pairs(data.raw.technology) do
             if tech.effects ~= nil then
                 for e, effect in pairs(tech.effects) do
@@ -175,23 +176,6 @@ for _, name in pairs{
         name = {"entity-description.output-per-kmph"},
         value = entity.production
     }
-end
-
-local molten_salt_recipes = {
-    "biomass-molten-salt-0",
-    "coal-molten-salt-0",
-    "gas-molten-salt-0",
-    "oil-molten-salt-0",
-}
--- Add the mk01..mk04 color bars to the hot-molten-salt recipes
-for _, name in pairs(molten_salt_recipes) do
-    for mk = 1, 4, 1 do
-        local recipe = name .. mk
-        table.insert(data.raw.recipe[recipe].icons, {
-            icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. mk .. ".png",
-            icon_size = 64,
-        })
-    end
 end
 
 for _, resource in pairs(data.raw.resource) do

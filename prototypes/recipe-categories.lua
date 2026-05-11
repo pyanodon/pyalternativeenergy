@@ -73,45 +73,21 @@ data:extend {
         allowed_module_categories = {"numal"},
         modules_required = true
     },
-    {
+    { -- categories are kept per tier since factoriopedia can't tell that a thing has a fixed recipe
         type = "recipe-category",
-        name = "coal-powerplant"
+        name = "powerplant-mk01"
     },
     {
         type = "recipe-category",
-        name = "coal-powerplant-mk02"
+        name = "powerplant-mk02"
     },
     {
         type = "recipe-category",
-        name = "coal-powerplant-mk03"
+        name = "powerplant-mk03"
     },
     {
         type = "recipe-category",
-        name = "coal-powerplant-mk04"
-    },
-    {
-        type = "recipe-category",
-        name = "biomass-powerplant"
-    },
-    {
-        type = "recipe-category",
-        name = "biomass-powerplant-mk02"
-    },
-    {
-        type = "recipe-category",
-        name = "biomass-powerplant-mk03"
-    },
-    {
-        type = "recipe-category",
-        name = "biomass-powerplant-mk04"
-    },
-    {
-        type = "recipe-category",
-        name = "oil-powerplant"
-    },
-    {
-        type = "recipe-category",
-        name = "gas-powerplant"
+        name = "powerplant-mk04"
     },
     {
         type = "recipe-category",

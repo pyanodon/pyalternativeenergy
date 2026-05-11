@@ -50,7 +50,8 @@ ENTITY {
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "pollution"},
     allowed_module_categories = {"speed"},
-    crafting_categories = {"biomass-powerplant-mk02"},
+    crafting_categories = {"powerplant-mk02"},
+    fixed_recipe = py.spoilage_enabled() and "biomass-molten-salt-02" or "molten-salt-02",
     crafting_speed = 2,
     energy_source =
     {

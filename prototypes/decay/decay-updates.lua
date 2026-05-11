@@ -148,11 +148,6 @@ ITEM("fish-egg-mk02"):spoil("fish-egg", hour)
 ITEM("fish-egg-mk03"):spoil("fish-egg-mk02", 2 * hour)
 ITEM("fish-egg-mk04"):spoil("fish-egg-mk03", 4 * hour)
 
-RECIPE("biomass-molten-salt-01"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-02"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-03"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-RECIPE("biomass-molten-salt-04"):add_ingredient {type = "item", name = "biocrud", amount = 1}
-
 RECIPE("bacteria-2"):remove_unlock("microbiology-mk04"):add_unlock("microbiology-mk03")
 RECIPE("perfect-samples"):add_ingredient {type = "item", name = "rich-biocrud", amount = 3}
 
@@ -225,8 +220,37 @@ ITEM("myoglobin"):spoil("meat", 12 * minute)
 ITEM("resilin"):spoil("myoglobin", 444 * minute)
 ITEM("albumin"):spoil("urea", 10 * minute)
 
+local allow_decay_propogation = {
+    ["cm-250"] = true,
+    ["pa-233"] = true,
+    ["po-210"] = true,
+    ["pu-238"] = true,
+    ["pu-239"] = true,
+    ["pu-240"] = true,
+    ["pu-241"] = true,
+    ["pu-242"] = true,
+    ["th-233"] = true,
+    ["plutonium-shuffle-1"] = true,
+    ["plutonium-shuffle-2"] = true,
+    ["plutonium-shuffle-3"] = true,
+    ["plutonium-shuffle-4"] = true,
+    ["pu-238-transmutation"] = true,
+    ["pu-239-transmutation"] = true,
+    ["pu-240-transmutation"] = true,
+    ["pu-241-transmutation"] = true,
+    ["pu-242-transmutation"] = true,
+    ["uranium-seperation"] = true,
+    ["u232-u233"] = true,
+    ["u234-u235"] = true,
+    ["u236-u237"] = true,
+    ["u237-pu238"] = true,
+    ["u238-pu239"] = true,
+    ["u234-po210"] = true,
+    ["pa-uranium-235"] = true,
+}
+
 for _, recipe in pairs(data.raw.recipe) do
-    recipe.result_is_always_fresh = true
+    recipe.result_is_always_fresh = not allow_decay_propogation[recipe.name]
 end
 
 -- Raw ores
