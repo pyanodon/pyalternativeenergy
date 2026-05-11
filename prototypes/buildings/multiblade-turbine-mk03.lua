@@ -29,7 +29,7 @@ ITEM {
 }
 
 local proto = ENTITY {
-    type = "electric-energy-interface",
+    type = "solar-panel",
     name = "multiblade-turbine-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/multiblade-turbine-mk03.png",
     icon_size = 64,
@@ -45,58 +45,45 @@ local proto = ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     energy_source = {
         type = "electric",
-        usage_priority = "primary-output",
-        buffer_capacity = "34MW",
-        input_flow_limit = "0W",
+        usage_priority = "solar",
+        buffer_capacity = "34MJ",
         render_no_power_icon = false
     },
-    energy_production = "34MW",
-    energy_usage = "0kW",
+    production = "7MW",
+    solar_coefficient_property = "py-wind-speed",
+    performance_at_day = 1,
+    performance_at_night = 1,
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/multiblade-turbine-mk03.ogg", volume = 0.85},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/multiblade-turbine-mk03.ogg", volume = 0.6},
         apparent_volume = 2.5
     },
-    continuous_animation = true,
-    animations = {
+    picture = {
         layers = {
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
                 width = 288,
                 height = 288,
-                line_length = 1,
-                frame_count = 1,
-                repeat_count = 30,
-                animation_speed = 0.5,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/r4.png",
                 width = 288,
                 height = 352,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -32),
-                animation_speed = 0.25,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/s4.png",
                 width = 320,
                 height = 224,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(44, 16),
-                animation_speed = 0.25,
                 draw_as_shadow = true,
             },
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/l4.png",
                 width = 288,
                 height = 352,
-                line_length = 6,
-                frame_count = 30,
                 shift = util.by_pixel(0, -32),
-                animation_speed = 0.25,
                 draw_as_glow = true,
             },
         }
@@ -108,9 +95,7 @@ local proto = ENTITY {
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
-new_proto.picture = proto.animations.layers[1]
-new_proto.animations = nil
-new_proto.render_layer = "floor-mechanics"
+new_proto.picture = table.deepcopy(proto.picture.layers[1])
 data:extend {new_proto}
 
 data:extend {{

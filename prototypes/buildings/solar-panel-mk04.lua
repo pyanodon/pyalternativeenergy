@@ -45,8 +45,7 @@ ENTITY {
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-5.8, -5.8}, {5.8, 5.8}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
-    energy_source =
-    {
+    energy_source = {
         type = "electric",
         usage_priority = "solar"
     },
@@ -55,10 +54,8 @@ ENTITY {
         width = 1,
         height = 1
     },
-    integration_patch =
-    {
-        layers =
-        {
+    integration_patch = {
+        layers = {
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk04/raw.png",
                 width = 384,
