@@ -13,6 +13,11 @@ Date: ???
     - Fixed tar refining tops with chitin having different fluid outputs from the normal variation. Resolves https://github.com/pyanodon/pybugreports/issues/1240
     - Nuclear isotope processing recipes will inherit their decay state from ingredients where possible. Resolves https://github.com/pyanodon/pybugreports/issues/1327
     - Fixed that tidal powerplant collisions were larger than their visual area. Resolves https://github.com/pyanodon/pybugreports/issues/1428
+    - Updated wind turbines to be solar panels modulated by surface properties instead of individual EEIs, significantly increasing performance.
+    - Updated tidal powerplants to be solar panels modulated by surface properties, adding variance to the output.
+    - Converted solar panel mk02/mk03 to stateless visualizations from LuaRendering, increasing performance.
+    - Converted VAWTs to stateless visualizations from LuaRendering, increasing performance.
+    - Fixed that tidal powerplant animations did not work.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.34
 Date: 2025-09-15
