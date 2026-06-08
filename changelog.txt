@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.38
-Date: ???
+Date: 2026-06-08
   Changes:
     - Fixed rare earth naming inconsistencies in english. Resolves https://github.com/pyanodon/pybugreports/issues/1294
     - Fixed numal reef animations. Resolves https://github.com/pyanodon/pybugreports/issues/1365
