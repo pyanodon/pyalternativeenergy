@@ -1,3 +1,8 @@
+---@class Thermosolar
+---@field events {[string]: function}
+---@field tower_range uint
+---@field calc_daylight fun(surface: LuaSurface): number
+---@field calc_average_daylight fun(surface: LuaSurface): number
 Thermosolar = {}
 Thermosolar.events = {}
 
@@ -72,6 +77,7 @@ function Thermosolar.calc_daylight(surface)
     elseif sunrise_start <= time and time < day_start then
         time_multiplier = 1 + (day_start - time) * (1 / (sunrise_start - day_start))
     end
+    ---@diagnostic disable-next-line: return-type-mismatch
     return time_multiplier
 end
 
