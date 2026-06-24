@@ -62,18 +62,13 @@ ENTITY {
     },
     collision_box = {{-2.6, -7.5}, {2.6, 7.5}},
     selection_box = {{-3.0, -8.0}, {3.0, 8.0}},
-    fluid_input = {
-        name = "pressured-steam",
-        amount = 0.0,
-        minimum_temperature = 2000.0
-    },
     fluid_box = {
         volume = 12000,
         pipe_covers = py.pipe_covers(true, true, true, true),
         pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         production_type = "input-output",
         filter = "pressured-steam",
-        minimum_temperature = 500.0,
+        minimum_temperature = 2000,
         pipe_connections = {
             {flow_direction = "input-output", position = {2.5, 5},   direction = defines.direction.east},
             {flow_direction = "input-output", position = {-2.5, 5},  direction = defines.direction.west},
@@ -91,51 +86,58 @@ ENTITY {
         type = "electric",
         usage_priority = "secondary-output",
     },
-    horizontal_animation = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk03/hor-raw.png",
-                width = 512,
-                height = 224,
-                frame_count = 10,
-                line_length = 3,
-                shift = util.by_pixel(0, -16),
-                animation_speed = 2.5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk03/hor-sh.png",
-                width = 544,
-                height = 160,
-                frame_count = 10,
-                line_length = 3,
-                shift = util.by_pixel(16, 16),
-                animation_speed = 2.5,
-                draw_as_shadow = true,
-            },
+    two_direction_only = true,
+    pictures = {
+        north = {
+            animation = {
+                layers = {
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk03/ver-raw.png",
+                        width = 192,
+                        height = 544,
+                        frame_count = 8,
+                        line_length = 4,
+                        shift = util.by_pixel(0, -16),
+                        animation_speed = 2.5,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk03/ver-sh.png",
+                        width = 224,
+                        height = 480,
+                        frame_count = 8,
+                        line_length = 4,
+                        shift = util.by_pixel(16, 16),
+                        animation_speed = 2.5,
+                        draw_as_shadow = true,
+                    }
+                }
+            }
         },
-    },
-    vertical_animation = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk03/ver-raw.png",
-                width = 192,
-                height = 544,
-                frame_count = 8,
-                line_length = 4,
-                shift = util.by_pixel(0, -16),
-                animation_speed = 2.5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk03/ver-sh.png",
-                width = 224,
-                height = 480,
-                frame_count = 8,
-                line_length = 4,
-                shift = util.by_pixel(16, 16),
-                animation_speed = 2.5,
-                draw_as_shadow = true,
-            },
-        },
+        east = {
+            animation = {
+                layers = {
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk03/hor-raw.png",
+                        width = 512,
+                        height = 224,
+                        frame_count = 10,
+                        line_length = 3,
+                        shift = util.by_pixel(0, -16),
+                        animation_speed = 2.5,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk03/hor-sh.png",
+                        width = 544,
+                        height = 160,
+                        frame_count = 10,
+                        line_length = 3,
+                        shift = util.by_pixel(16, 16),
+                        animation_speed = 2.5,
+                        draw_as_shadow = true,
+                    }
+                }
+            }
+        }
     },
     smoke = {
         {
@@ -144,16 +146,15 @@ ENTITY {
             east_position = {-2.5, -2.5},
             frequency = 5 / 16,
             starting_vertical_speed = 0.08,
-            slow_down_factor = 1,
+            vertical_speed_slowdown = 1,
             starting_frame_deviation = 60
         },
     },
-    min_perceived_performance = 0.1,
-    performance_to_sound_speedup = 0.3,
+    perceived_performance = {minimum = 0.1},
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk03.ogg"},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk03.ogg", volume = 0.45},
-        apparent_volume = 2.5
+        activity_to_speed_modifiers = {multiplier = 0.3}
     }
 }

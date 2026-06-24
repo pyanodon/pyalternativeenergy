@@ -152,7 +152,7 @@ RECIPE("nas-battery"):replace_ingredient("lead-plate", "pbsb-alloy"):remove_unlo
 RECIPE {
     type = "recipe",
     name = "mining-antimony",
-    category = "ground-borer",
+    categories = {"ground-borer"},
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -274,7 +274,7 @@ data.raw["recipe"]["power-house-mk04"] = nil
 --tailings dust
 
 RECIPE("tailings-classification"):remove_unlock("separation")
-RECIPE("tailings-classification"):add_unlock("fluid-processing-machines-1").category = "solid-separator"
+RECIPE("tailings-classification"):add_unlock("fluid-processing-machines-1").categories = {"solid-separator"}
 data.raw.recipe["tailings-classification"].energy_required = 1
 data.raw.recipe["tailings-classification"].results = {
     data.raw.recipe["tailings-classification"].results[1],

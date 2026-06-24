@@ -61,11 +61,6 @@ ENTITY {
     },
     collision_box = {{-2.8, -7.8}, {2.8, 7.8}},
     selection_box = {{-3.0, -8.0}, {3.0, 8.0}},
-    fluid_input = {
-        name = "neutron",
-        amount = 0.0,
-        minimum_temperature = 900.0
-    },
     fluid_box = {
         volume = 24000 / 60,
         pipe_covers = py.pipe_covers(true, true, true, true),
@@ -87,80 +82,86 @@ ENTITY {
             pollution = 0.0
         },
     },
-    horizontal_animation = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/h-raw.png",
-                width = 512,
-                height = 256,
-                frame_count = 20,
-                line_length = 4,
-                shift = util.by_pixel(0, -32),
-                animation_speed = 1 / 5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/h-l.png",
-                width = 128,
-                height = 32,
-                frame_count = 20,
-                line_length = 4,
-                shift = util.by_pixel(-90, -48),
-                animation_speed = 1 / 5,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/h-sh.png",
-                width = 530,
-                height = 164,
-                frame_count = 1,
-                line_length = 1,
-                repeat_count = 20,
-                shift = util.by_pixel(16, 16),
-                animation_speed = 1 / 5,
-                draw_as_shadow = true,
-            },
+    two_direction_only = true,
+    pictures = {
+        north = {
+            animation = {
+                layers = {
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/v-raw.png",
+                        width = 192,
+                        height = 576,
+                        frame_count = 20,
+                        line_length = 10,
+                        shift = util.by_pixel(0, -32),
+                        animation_speed = 1 / 5,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/v-l.png",
+                        width = 32,
+                        height = 128,
+                        frame_count = 20,
+                        line_length = 10,
+                        shift = util.by_pixel(2, 34),
+                        animation_speed = 1 / 5,
+                        draw_as_glow = true,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/v-sh.png",
+                        width = 220,
+                        height = 486,
+                        frame_count = 1,
+                        line_length = 1,
+                        repeat_count = 20,
+                        shift = util.by_pixel(16, 16),
+                        animation_speed = 1 / 5,
+                        draw_as_shadow = true,
+                    }
+                }
+            }
         },
+        east = {
+            animation = {
+                layers = {
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/h-raw.png",
+                        width = 512,
+                        height = 256,
+                        frame_count = 20,
+                        line_length = 4,
+                        shift = util.by_pixel(0, -32),
+                        animation_speed = 1 / 5,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/h-l.png",
+                        width = 128,
+                        height = 32,
+                        frame_count = 20,
+                        line_length = 4,
+                        shift = util.by_pixel(-90, -48),
+                        animation_speed = 1 / 5,
+                        draw_as_glow = true,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/h-sh.png",
+                        width = 530,
+                        height = 164,
+                        frame_count = 1,
+                        line_length = 1,
+                        repeat_count = 20,
+                        shift = util.by_pixel(16, 16),
+                        animation_speed = 1 / 5,
+                        draw_as_shadow = true,
+                    }
+                }
+            }
+        }
     },
-    vertical_animation = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/v-raw.png",
-                width = 192,
-                height = 576,
-                frame_count = 20,
-                line_length = 10,
-                shift = util.by_pixel(0, -32),
-                animation_speed = 1 / 5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/v-l.png",
-                width = 32,
-                height = 128,
-                frame_count = 20,
-                line_length = 10,
-                shift = util.by_pixel(2, 34),
-                animation_speed = 1 / 5,
-                draw_as_glow = true,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/mdh/v-sh.png",
-                width = 220,
-                height = 486,
-                frame_count = 1,
-                line_length = 1,
-                repeat_count = 20,
-                shift = util.by_pixel(16, 16),
-                animation_speed = 1 / 5,
-                draw_as_shadow = true,
-            },
-        },
-    },
-    min_perceived_performance = 1,
-    performance_to_sound_speedup = 1,
+    perceived_performance = {minimum = 1},
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pypetroleumhandlinggraphics__/sounds/gas-extractor.ogg", volume = 0.45},
         idle_sound = {filename = "__pypetroleumhandlinggraphics__/sounds/gas-extractor.ogg", volume = 0.35},
-        apparent_volume = 1.5
+        activity_to_speed_modifiers = {multiplier = 1}
     }
 }

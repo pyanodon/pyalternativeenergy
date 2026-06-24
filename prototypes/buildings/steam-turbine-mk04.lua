@@ -62,114 +62,116 @@ ENTITY {
     },
     collision_box = {{-2.6, -11}, {2.6, 11}},
     selection_box = {{-3.0, -11.5}, {3.0, 11.5}},
-    fluid_input = {
-        name = "pressured-steam",
-        amount = 0.0,
-        minimum_temperature = 3000.0
-    },
     fluid_box = {
         volume = 120000,
         pipe_covers = py.pipe_covers(true, true, true, true),
         pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         production_type = "input",
         filter = "pressured-steam",
-        minimum_temperature = 500.0,
+        minimum_temperature = 3000,
         pipe_connections = {
-            {flow_direction = "input", position = {2.5, 6.5},   direction = defines.direction.east},
-            {flow_direction = "input", position = {-2.5, 6.5},  direction = defines.direction.west},
-            {flow_direction = "input", position = {2.5, -6.5},  direction = defines.direction.east},
-            {flow_direction = "input", position = {-2.5, -6.5}, direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, 6.5},   direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, 6.5},  direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, -6.5},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, -6.5}, direction = defines.direction.west},
 
 
-            {flow_direction = "input", position = {2.5, 7.5},   direction = defines.direction.east},
-            {flow_direction = "input", position = {-2.5, 7.5},  direction = defines.direction.west},
-            {flow_direction = "input", position = {2.5, -7.5},  direction = defines.direction.east},
-            {flow_direction = "input", position = {-2.5, -7.5}, direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, 7.5},   direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, 7.5},  direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, -7.5},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, -7.5}, direction = defines.direction.west},
 
 
-            {flow_direction = "input", position = {2.5, 8.5},   direction = defines.direction.east},
-            {flow_direction = "input", position = {-2.5, 8.5},  direction = defines.direction.west},
-            {flow_direction = "input", position = {2.5, -8.5},  direction = defines.direction.east},
-            {flow_direction = "input", position = {-2.5, -8.5}, direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, 8.5},   direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, 8.5},  direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, -8.5},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, -8.5}, direction = defines.direction.west},
 
 
-            {flow_direction = "input", position = {2.5, 5.5},   direction = defines.direction.east},
-            {flow_direction = "input", position = {-2.5, 5.5},  direction = defines.direction.west},
-            {flow_direction = "input", position = {2.5, -5.5},  direction = defines.direction.east},
-            {flow_direction = "input", position = {-2.5, -5.5}, direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, 5.5},   direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, 5.5},  direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.5, -5.5},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {-2.5, -5.5}, direction = defines.direction.west},
         }
     },
     energy_source = {
         type = "electric",
         usage_priority = "secondary-output",
     },
-    horizontal_animation = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/r-h-down.png",
-                width = 736,
-                height = 288,
-                frame_count = 1,
-                line_length = 1,
-                repeat_count = 30,
-                shift = util.by_pixel(0, -48),
-                animation_speed = 2.5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/h-anim.png",
-                width = 288,
-                height = 288,
-                frame_count = 30,
-                line_length = 6,
-                shift = util.by_pixel(96, -48),
-                animation_speed = 2.5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/sh-h.png",
-                width = 736,
-                height = 192,
-                frame_count = 1,
-                line_length = 1,
-                repeat_count = 30,
-                shift = util.by_pixel(32, -0),
-                animation_speed = 2.5,
-                draw_as_shadow = true,
-            },
+    two_direction_only = true,
+    pictures = {
+        north = {
+            animation = {
+                layers = {
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/r-v-down.png",
+                        width = 224,
+                        height = 320,
+                        frame_count = 1,
+                        line_length = 1,
+                        repeat_count = 30,
+                        shift = util.by_pixel(-16, 208),
+                        animation_speed = 2.5,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/v-anim.png",
+                        width = 192,
+                        height = 448,
+                        frame_count = 30,
+                        line_length = 10,
+                        shift = util.by_pixel(0, -176),
+                        animation_speed = 2.5,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/sh-v.png",
+                        width = 224,
+                        height = 768,
+                        frame_count = 1,
+                        line_length = 1,
+                        repeat_count = 30,
+                        shift = util.by_pixel(32, -16),
+                        animation_speed = 2.5,
+                        draw_as_shadow = true,
+                    },
+                }
+            }
         },
-    },
-    vertical_animation = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/r-v-down.png",
-                width = 224,
-                height = 320,
-                frame_count = 1,
-                line_length = 1,
-                repeat_count = 30,
-                shift = util.by_pixel(-16, 208),
-                animation_speed = 2.5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/v-anim.png",
-                width = 192,
-                height = 448,
-                frame_count = 30,
-                line_length = 10,
-                shift = util.by_pixel(0, -176),
-                animation_speed = 2.5,
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/sh-v.png",
-                width = 224,
-                height = 768,
-                frame_count = 1,
-                line_length = 1,
-                repeat_count = 30,
-                shift = util.by_pixel(32, -16),
-                animation_speed = 2.5,
-                draw_as_shadow = true,
-            },
-        },
+        east = {
+            animation = {
+                layers = {
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/r-h-down.png",
+                        width = 736,
+                        height = 288,
+                        frame_count = 1,
+                        line_length = 1,
+                        repeat_count = 30,
+                        shift = util.by_pixel(0, -48),
+                        animation_speed = 2.5,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/h-anim.png",
+                        width = 288,
+                        height = 288,
+                        frame_count = 30,
+                        line_length = 6,
+                        shift = util.by_pixel(96, -48),
+                        animation_speed = 2.5,
+                    },
+                    {
+                        filename = "__pyalternativeenergygraphics__/graphics/entity/steam-turbine-mk04/sh-h.png",
+                        width = 736,
+                        height = 192,
+                        frame_count = 1,
+                        line_length = 1,
+                        repeat_count = 30,
+                        shift = util.by_pixel(32, -0),
+                        animation_speed = 2.5,
+                        draw_as_shadow = true,
+                    }
+                }
+            }
+        }
     },
     smoke = {
         {
@@ -178,16 +180,15 @@ ENTITY {
             east_position = {-4.9, -4.5},
             frequency = 5 / 16,
             starting_vertical_speed = 0.1,
-            slow_down_factor = 0.6,
+            vertical_speed_slowdown = 0.6,
             starting_frame_deviation = 60
         },
     },
-    min_perceived_performance = 0.1,
-    performance_to_sound_speedup = 0.3,
+    perceived_performance = {minimum = 0.1},
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk03.ogg"},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/steam-turbine-mk03.ogg", volume = 0.45},
-        apparent_volume = 2.5
+        activity_to_speed_modifiers = {multiplier = 0.3}
     }
 }

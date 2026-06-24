@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "accumulator-mk03",
     energy_required = 1,
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     ingredients = {
         {type = "item", name = "supercapacitor",  amount = 15},
@@ -55,7 +55,6 @@ ENTITY {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/raw.png",
                     width = 160,
                     height = 287,
-                    frame_count = 1,
                     line_length = 1,
                     --blend_mode = "additive",
                     --draw_as_glow = true,
@@ -65,7 +64,6 @@ ENTITY {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/idle.png",
                     width = 160,
                     height = 256,
-                    frame_count = 1,
                     line_length = 1,
                     --blend_mode = "additive",
                     draw_as_glow = true,
@@ -75,7 +73,6 @@ ENTITY {
                     filename = "__pyalternativeenergygraphics__/graphics/entity/accumulator-mk03/sh.png",
                     width = 192,
                     height = 160,
-                    frame_count = 1,
                     line_length = 1,
                     --blend_mode = "multiplicative",
                     draw_as_shadow = true,
@@ -187,9 +184,9 @@ ENTITY {
                 green = {0.6875, 0.71875}
             }
         },
+        sprites = _G.circuit_connector_definitions["accumulator"].sprites
     },
     circuit_wire_max_distance = 9,
     default_output_signal = {type = "virtual", name = "signal-A"},
-    circuit_connector_sprites = _G.circuit_connector_definitions["accumulator"].sprites,
     fast_replaceable_group = "py-accumulator"
 }

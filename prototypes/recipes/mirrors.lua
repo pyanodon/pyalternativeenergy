@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "mirror-mk01",
-    category = "advanced-foundry",
+    categories = {"advanced-foundry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -24,7 +24,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cerium-oxide",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -43,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "polishing-wheel",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -60,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "polished-glass-surface",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -77,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "clean-glass-sheet",
-    category = "washer",
+    categories = {"washer"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -99,7 +99,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "stannous-chloride",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -116,7 +116,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "silver-nitrate",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -134,7 +134,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "prepared-glass",
-    category = "glassworks",
+    categories = {"glassworks"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -150,7 +150,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crude-mirror",
-    category = "glassworks",
+    categories = {"glassworks"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -169,7 +169,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crude-mirror-2",
-    category = "glassworks",
+    categories = {"glassworks"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -188,7 +188,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "axis-tracker",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -211,7 +211,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mirror-mk02",
-    category = "glassworks",
+    categories = {"glassworks"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -231,7 +231,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "acrylic",
-    category = "distilator",
+    categories = {"distilator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -251,7 +251,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mirror-mk03",
-    category = "gas-separator",
+    categories = {"gas-separator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -273,7 +273,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ometad",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -291,7 +291,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mirror-mk04",
-    category = "nano",
+    categories = {"nano"},
     enabled = false,
     energy_required = 20,
     ingredients = {

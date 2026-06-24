@@ -301,8 +301,12 @@ require "prototypes.animations.hawt-turbine-mk01"
 require "prototypes.animations.hawt-turbine-mk02"
 require "prototypes.animations.hawt-turbine-mk03"
 require "prototypes.animations.hawt-turbine-mk04"
+require "prototypes.animations.tidal"
 
 require "prototypes.decay.decay"
+
+--(( OTHER ))
+require "prototypes.surface-properties"
 
 data.raw.fluid["crude-oil"].subgroup = "test"
 data.raw.fluid["gasoline"].subgroup = "test"

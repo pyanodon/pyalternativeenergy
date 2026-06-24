@@ -48,7 +48,6 @@ ENTITY {
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
     selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
-    --allowed_effects = {"speed", "consumption"},
     energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -57,51 +56,47 @@ ENTITY {
         input_flow_limit = "0W"
     },
     production = "100MW",
-    picture = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/raw.png",
-                width = 192,
-                height = 192,
-                frame_count = 70,
-                line_length = 10,
-                animation_speed = 0.3,
-                --blend_mode = "additive",
-                --draw_as_glow = true,
-                shift = util.by_pixel(0, -0)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/ao.png",
-                width = 192,
-                height = 192,
-                frame_count = 70,
-                line_length = 10,
-                animation_speed = 0.3,
-                --blend_mode = "multiplicative",
-                --draw_as_shadow = true,
-                shift = util.by_pixel(0, -0)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/l.png",
-                width = 192,
-                height = 224,
-                frame_count = 70,
-                line_length = 10,
-                animation_speed = 0.3,
-                --blend_mode = "multiplicative",
-                draw_as_glow = true,
-                shift = util.by_pixel(0, -16)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/sh.png",
-                width = 192,
-                height = 192,
-                frame_count = 70,
-                line_length = 10,
-                animation_speed = 0.3,
-                --blend_mode = "additive",
-                draw_as_shadow = true,
-                shift = util.by_pixel(16, -0)
+    stateless_visualisation = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/raw.png",
+                    width = 192,
+                    height = 192,
+                    frame_count = 70,
+                    line_length = 10,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(0, -0)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/ao.png",
+                    width = 192,
+                    height = 192,
+                    frame_count = 70,
+                    line_length = 10,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(0, -0)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/l.png",
+                    width = 192,
+                    height = 224,
+                    frame_count = 70,
+                    line_length = 10,
+                    animation_speed = 0.3,
+                    draw_as_glow = true,
+                    shift = util.by_pixel(0, -16)
+                },
+                {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/anti-solar/sh.png",
+                    width = 192,
+                    height = 192,
+                    frame_count = 70,
+                    line_length = 10,
+                    animation_speed = 0.3,
+                    draw_as_shadow = true,
+                    shift = util.by_pixel(16, -0)
+                }
             }
         }
     },

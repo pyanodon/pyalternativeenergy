@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "coal-molten-salt-01",
-    category = "coal-powerplant",
+    categories = {"coal-powerplant"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "coal-molten-salt-02",
-    category = "coal-powerplant-mk02",
+    categories = {"coal-powerplant-mk02"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -33,7 +33,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "coal-molten-salt-03",
-    category = "coal-powerplant-mk03",
+    categories = {"coal-powerplant-mk03"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -49,7 +49,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "coal-molten-salt-04",
-    category = "coal-powerplant-mk04",
+    categories = {"coal-powerplant-mk04"},
     enabled = false,
     energy_required = 80,
     ingredients = {

@@ -62,9 +62,9 @@ ENTITY {
         },
     },
     energy_usage = "180MW",
-    mining_power = 1,
+
     resource_searching_radius = 6.49,
-    vector_to_place_result = {0, -2.65},
+    vector_to_place_result = {0, -2.8},
     radius_visualisation_picture = {
         filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
         width = 12,
@@ -110,6 +110,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pycoalprocessinggraphics__/sounds/borax-mine.ogg"},
         idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/borax-mine.ogg", volume = 0.3},
-        apparent_volume = 2.5
     }
 }

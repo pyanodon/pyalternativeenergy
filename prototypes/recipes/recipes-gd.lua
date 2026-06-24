@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "re-pulp-01",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -20,7 +20,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "re-precipitate-01",
-    category = "carbonfilter",
+    categories = {"carbonfilter"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "re-pulp-02",
-    category = "leaching",
+    categories = {"leaching"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -55,7 +55,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "re-precipitate-02",
-    category = "carbonfilter",
+    categories = {"carbonfilter"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -64,7 +64,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "re-precipitate-02", amount = 1},
-        {type = "item", name = "uranium-ore",       amount = 1, probability = 0.5},
+        {type = "item", name = "uranium-ore",       amount = 1, independent_probability = 0.5},
     },
     main_product = "re-precipitate-02",
 }:add_unlock("rare-earth-tech-mk02")
@@ -72,7 +72,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "re-pulp-03",
-    category = "pan",
+    categories = {"pan"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -90,7 +90,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "re-pulp-04",
-    category = "rectisol",
+    categories = {"rectisol"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -106,7 +106,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "stripped-th",
-    category = "wet-scrubber",
+    categories = {"wet-scrubber"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -122,7 +122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "th-dust",
-    category = "centrifuging",
+    categories = {"centrifuging"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -138,7 +138,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "th-oxalate",
-    category = "agitator",
+    categories = {"agitator"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -155,7 +155,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "th-oxide",
-    category = "carbonfilter",
+    categories = {"carbonfilter"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -176,7 +176,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gd-mixture",
-    category = "rectisol",
+    categories = {"rectisol"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -192,7 +192,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gd-oxalate",
-    category = "agitator",
+    categories = {"agitator"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -210,7 +210,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gd-crystal",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -226,7 +226,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gd-stripped-solution",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -242,7 +242,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crystalized-gd",
-    category = "centrifuging",
+    categories = {"centrifuging"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -258,7 +258,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "impure-gd",
-    category = "upgrader",
+    categories = {"upgrader"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -273,7 +273,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gd-oxide",
-    category = "washer",
+    categories = {"washer"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -291,7 +291,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gd-metal",
-    category = "bof",
+    categories = {"bof"},
     enabled = false,
     energy_required = 20,
     ingredients = {

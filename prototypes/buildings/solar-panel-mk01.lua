@@ -3,7 +3,7 @@ RECIPE {
     name = "solar-panel-mk01",
     energy_required = 10,
     enabled = false,
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     ingredients = {
         {type = "item",  name = "intermetallics",       amount = 5},
         {type = "item",  name = "aluminium-plate",      amount = 5},
@@ -46,8 +46,7 @@ ENTITY {
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
     selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
-    energy_source =
-    {
+    energy_source = {
         type = "electric",
         usage_priority = "solar"
     },
@@ -56,10 +55,8 @@ ENTITY {
         width = 1,
         height = 1
     },
-    integration_patch =
-    {
-        layers =
-        {
+    integration_patch = {
+        layers = {
             {
                 filename = "__pyalternativeenergygraphics__/graphics/entity/solar-panel-mk01/raw.png",
                 width = 256,

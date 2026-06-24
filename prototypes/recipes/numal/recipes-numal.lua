@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "numal",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 400,
     ingredients = {
@@ -15,18 +15,19 @@ RECIPE {
         {type = "item",  name = "numal-codex",            amount = 1},
         {type = "item",  name = "earth-generic-sample",   amount = 2},
         {type = "item",  name = "strorix-unknown-sample", amount = 5}, --add alien sample from pyALiens mod here.
-        {type = "fluid", name = "fetal-serum",            amount = 100},
         {type = "fluid", name = "artificial-blood",       amount = 200},
+        {type = "fluid", name = "fetal-serum",            amount = 100},
     },
     results = {
         {type = "item", name = "numal", amount = 1},
     },
+    icons = py.composite_icon("numal", "numal-codex")
 }:add_unlock("numal-mk01")
 
 RECIPE {
     type = "recipe",
     name = "numal-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -44,7 +45,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "numal-food-01",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -65,7 +66,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "numal-food-02",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -134,13 +135,12 @@ RECIPE {
     results = {
         {type = 'item', name = 'numal', amount = 10},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 ]] --
 RECIPE {
     type = "recipe",
     name = "numal-ink-to-antimony",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {

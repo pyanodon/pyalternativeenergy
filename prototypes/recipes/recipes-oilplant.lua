@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "oil-molten-salt-01",
-    category = "oil-powerplant",
+    categories = {"oil-powerplant"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oil-molten-salt-02",
-    category = "oil-powerplant",
+    categories = {"oil-powerplant"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -33,7 +33,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oil-molten-salt-03",
-    category = "oil-powerplant",
+    categories = {"oil-powerplant"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -49,7 +49,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oil-molten-salt-04",
-    category = "oil-powerplant",
+    categories = {"oil-powerplant"},
     enabled = false,
     energy_required = 20,
     ingredients = {

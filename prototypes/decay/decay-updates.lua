@@ -24,7 +24,7 @@ RECIPE("jacket-bio-ore")
     name = "nanozymes",
     type = "item",
     amount = 1,
-    probability = 0.90,
+    independent_probability = 0.90,
     ignored_by_stats = 1,
     ignored_by_productivity = 1
 }
@@ -45,8 +45,7 @@ ITEM("biocarnation"):spoil("advanced-substrate", 2 * hour)
 --ITEM("am-243"):spoil("np-239", minute * 7370)
 ITEM("cm-250"):spoil("plutonium-oxide", minute * 8300)
 ITEM("pa-233"):spoil("u-233", 27 * second) -- realistic time is 27 days
-RECIPE("pa233-u233"):remove_unlock("nuclear-power-mk03")
-data.raw.recipe["pa233-u233"] = nil
+RECIPE("pa233-u233"):remove_unlock("nuclear-power-mk03"):hide()
 ITEM("po-210"):spoil("reduced-lead", 138.4 * minute)
 ITEM("pu-238"):spoil("u-234", 87.7 * minute)
 ITEM("pu-239"):spoil("u-235", 24100 * minute)
@@ -70,7 +69,7 @@ for i = 232, 240 do
     ITEM("u-" .. i):spoil("uranium-oxide", 50 * minute)
 end
 ITEM("uranium-oxide"):spoil("ash", day)
-data.raw.recipe["uranium-seperation"]:replace_ingredient("u238", {type = "item", name = "u238", amount = 10, probability = 0.25}):add_ingredient {type = "item", name = "ash", amount = 10, probability = 0.425}
+RECIPE("uranium-seperation"):replace_result("u-238", {type = "item", name = "u-238", amount = 10, shared_probability = {min = 0.325, max = 0.575}}):add_result {type = "item", name = "ash", amount = 10, shared_probability = {min = 0.575, max = 1.000}}
 
 ITEM("high-energy-waste-2"):spoil("high-energy-waste-1", 5 * minute)
 ITEM("high-energy-waste-1"):spoil("ash", 5 * minute)
@@ -225,8 +224,41 @@ ITEM("myoglobin"):spoil("meat", 12 * minute)
 ITEM("resilin"):spoil("myoglobin", 444 * minute)
 ITEM("albumin"):spoil("urea", 10 * minute)
 
+local allow_decay_propogation = {
+    ["cm-250"] = true,
+    ["pa-233"] = true,
+    ["po-210"] = true,
+    ["pu-238"] = true,
+    ["pu-239"] = true,
+    ["pu-240"] = true,
+    ["pu-241"] = true,
+    ["pu-242"] = true,
+    ["th-233"] = true,
+    ["plutonium-shuffle-1"] = true,
+    ["plutonium-shuffle-2"] = true,
+    ["plutonium-shuffle-3"] = true,
+    ["plutonium-shuffle-4"] = true,
+    ["pu-238-transmutation"] = true,
+    ["pu-239-transmutation"] = true,
+    ["pu-240-transmutation"] = true,
+    ["pu-241-transmutation"] = true,
+    ["pu-242-transmutation"] = true,
+    ["uranium-seperation"] = true,
+    ["u232-u233"] = true,
+    ["u234-u235"] = true,
+    ["u236-u237"] = true,
+    ["u237-pu238"] = true,
+    ["u238-pu239"] = true,
+    ["u234-po210"] = true,
+    ["pa-uranium-235"] = true,
+}
+
 for _, recipe in pairs(data.raw.recipe) do
-    recipe.result_is_always_fresh = true
+    for _, result in pairs(recipe.results or {}) do
+        if result.type == "item" and not allow_decay_propogation[recipe.name] then
+            result.always_fresh = true
+        end
+    end
 end
 
 -- Raw ores

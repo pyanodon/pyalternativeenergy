@@ -8,20 +8,20 @@
 RECIPE {
     type = "recipe",
     name = "uranium-seperation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 20,
     ingredients = {
         {type = "item", name = "uranium-oxide", amount = 10},
     },
     results = {
-        {type = "item", name = "u-232", amount = 10, probability = 0.01},
-        {type = "item", name = "u-233", amount = 10, probability = 0.01},
-        {type = "item", name = "u-234", amount = 10, probability = 0.025},
-        {type = "item", name = "u-235", amount = 10, probability = 0.1},
-        {type = "item", name = "u-236", amount = 10, probability = 0.08},
-        {type = "item", name = "u-237", amount = 1,  probability = 0.1},
-        {type = "item", name = "u-238", amount = 10, probability = 0.95},
+        {type = "item", name = "u-232", amount = 10, shared_probability = {min = 0.000, max = 0.010}},
+        {type = "item", name = "u-233", amount = 10, shared_probability = {min = 0.010, max = 0.020}},
+        {type = "item", name = "u-234", amount = 10, shared_probability = {min = 0.020, max = 0.045}},
+        {type = "item", name = "u-235", amount = 10, shared_probability = {min = 0.045, max = 0.145}},
+        {type = "item", name = "u-236", amount = 10, shared_probability = {min = 0.145, max = 0.225}},
+        {type = "item", name = "u-237", amount = 10, shared_probability = {min = 0.225, max = 0.325}},
+        {type = "item", name = "u-238", amount = 10, shared_probability = {min = 0.325, max = 1.000}},
     },
     main_product = "u-238",
     subgroup = "py-nuclear",
@@ -31,7 +31,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u232-u233",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -39,7 +39,7 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item", name = "u-233", amount = 5, probability = 0.999},
+        {type = "item", name = "u-233", amount = 5, independent_probability = 0.999},
     },
     main_product = "u-233",
     subgroup = "py-nuclear",
@@ -49,7 +49,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u234-u235",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -57,7 +57,7 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item", name = "u-235", amount = 8, probability = 0.999},
+        {type = "item", name = "u-235", amount = 8, independent_probability = 0.999},
     },
     -- main_product = "u-233",
     subgroup = "py-nuclear",
@@ -67,7 +67,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u236-u237",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -75,8 +75,8 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 10}
     },
     results = {
-        {type = "item", name = "u-236", amount = 10, probability = 0.999, ignored_by_stats = 10, ignored_by_productivity = 10},
-        {type = "item", name = "u-237", amount = 1,  probability = 0.1}
+        {type = "item", name = "u-236", amount = 10, independent_probability = 0.999, ignored_by_stats = 10, ignored_by_productivity = 10},
+        {type = "item", name = "u-237", amount = 1,  independent_probability = 0.1}
     },
     main_product = "u-237",
     subgroup = "py-nuclear",
@@ -86,7 +86,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u237-pu238",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -94,8 +94,8 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item", name = "pu-238", amount = 10, probability = 0.999},
-        {type = "item", name = "u-238",  amount = 1,  probability = 0.001}
+        {type = "item", name = "pu-238", amount = 10, independent_probability = 0.999},
+        {type = "item", name = "u-238",  amount = 1,  independent_probability = 0.001}
     },
     main_product = "pu-238",
     subgroup = "py-nuclear",
@@ -105,7 +105,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u238-pu239",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -113,8 +113,8 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 20, maximum_temperature = 200}
     },
     results = {
-        {type = "item", name = "pu-239", amount = 9, probability = 0.999},
-        {type = "item", name = "u-237",  amount = 1, probability = 0.01}
+        {type = "item", name = "pu-239", amount = 9, independent_probability = 0.999},
+        {type = "item", name = "u-237",  amount = 1, independent_probability = 0.01}
     },
     main_product = "pu-239",
     subgroup = "py-nuclear",
@@ -124,7 +124,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u234-po210",
-    category = "neutron-moderator",
+    categories = {"neutron-moderator"},
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -132,7 +132,7 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 20}
     },
     results = {
-        {type = "item",  name = "po-210", amount = 10, probability = 0.999},
+        {type = "item",  name = "po-210", amount = 10, independent_probability = 0.999},
         {type = "fluid", name = "helium", amount = 20}
     },
     main_product = "po-210",
@@ -145,7 +145,7 @@ RECIPE {
     name = "fuel-cell-mk03-dissolve",
     enabled = false,
     energy_required = 15,
-    category = "mixer",
+    categories = {"mixer"},
     ingredients =
     {
         {type = "item",  name = "used-up-uranium-fuel-cell-mk03", amount = 10},
@@ -163,7 +163,7 @@ RECIPE {
     name = "fuel-cell-mk04-dissolve",
     enabled = false,
     energy_required = 15,
-    category = "mixer",
+    categories = {"mixer"},
     ingredients =
     {
         {type = "item",  name = "used-up-uranium-fuel-cell-mk04", amount = 10},
@@ -204,7 +204,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-fuel-reprocessing",
-    category = "centrifuging",
+    categories = {"centrifuging"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -223,18 +223,18 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-seperation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 5,
     ingredients = {
         {type = "item", name = "plutonium-oxide", amount = 5},
     },
     results = {
-        {type = "item", name = "pu-238", amount = 15, probability = 0.02},
-        {type = "item", name = "pu-239", amount = 15, probability = 0.53},
-        {type = "item", name = "pu-240", amount = 15, probability = 0.25},
-        {type = "item", name = "pu-241", amount = 15, probability = 0.15},
-        {type = "item", name = "pu-242", amount = 15, probability = 0.5},
+        {type = "item", name = "pu-238", amount = 15, independent_probability = 0.02},
+        {type = "item", name = "pu-239", amount = 15, independent_probability = 0.53},
+        {type = "item", name = "pu-240", amount = 15, independent_probability = 0.25},
+        {type = "item", name = "pu-241", amount = 15, independent_probability = 0.15},
+        {type = "item", name = "pu-242", amount = 15, independent_probability = 0.5},
     },
     main_product = "pu-239",
     subgroup = "py-nuclear",
@@ -244,7 +244,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pu-238-transmutation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -265,7 +265,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-shuffle-1",
-    category = "neutron-absorber",
+    categories = {"neutron-absorber"},
     enabled = false,
     energy_required = 200 / 0.4517,
     ingredients = {
@@ -284,7 +284,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-shuffle-2",
-    category = "neutron-absorber",
+    categories = {"neutron-absorber"},
     enabled = false,
     energy_required = 200 / 0.986,
     ingredients = {
@@ -303,7 +303,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-shuffle-3",
-    category = "neutron-absorber",
+    categories = {"neutron-absorber"},
     enabled = false,
     energy_required = 200 / 0.71,
     ingredients = {
@@ -321,7 +321,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-shuffle-4",
-    category = "neutron-absorber",
+    categories = {"neutron-absorber"},
     enabled = false,
     energy_required = 200 / 0.362,
     ingredients = {
@@ -342,7 +342,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pu-239-transmutation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -360,7 +360,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pu-240-transmutation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -378,7 +378,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pu-241-transmutation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -398,7 +398,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pu-242-transmutation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -420,15 +420,15 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "americium-seperation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 10,
     ingredients = {
         {type = "item", name = "americium-oxide", amount = 5},
     },
     results = {
-        {type = "item", name = "am-241", amount = 5, probability = 0.5},
-        {type = "item", name = "am-243", amount = 5, probability = 0.5},
+        {type = "item", name = "am-241", amount = 5, independent_probability = 0.5},
+        {type = "item", name = "am-243", amount = 5, independent_probability = 0.5},
     },
     main_product = "am-241",
     subgroup = "py-nuclear",
@@ -438,7 +438,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "am-241-transmutation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -456,7 +456,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "am-243-transmutation",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -476,7 +476,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "am-243-transmutation-2",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -494,7 +494,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cm-250-neutrons",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 10,
     ingredients = {

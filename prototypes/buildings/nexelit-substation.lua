@@ -35,7 +35,6 @@ ENTITY {
     max_health = 600,
     corpse = "substation-remnants",
     dying_explosion = "substation-explosion",
-    track_coverage_during_build_by_moving = true,
     collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
     selection_box = {{-2, -2}, {2, 2}},
     maximum_wire_distance = 60,

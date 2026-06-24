@@ -48,11 +48,11 @@ ENTITY {
     collision_mask = {layers = {object = true, ground_tile = true, train = true}},
     collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
-    forced_symmetry = "diagonal-pos",
     draw_entity_info_icon_background = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"numal"},
+    effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
@@ -715,7 +715,7 @@ ENTITY {
             production_type = "input",
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {0, 5.0}, direction = defines.direction.south}}
         },
     },
@@ -723,8 +723,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/numal.ogg", volume = 1.0},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/numal.ogg", volume = 0.65},
-        apparent_volume = 0.45
     },
-    -- Blacklist from squeak through
-    squeak_behaviour = false
 }

@@ -143,14 +143,14 @@ table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofl
 
 RECIPE("py-science-pack-3"):add_ingredient {type = "item", name = "re-magnet", amount = 1}
 
-RECIPE("fiber"):set_fields {energy_required = 5}.category = "ball-mill"
+RECIPE("fiber"):set_fields {energy_required = 5}.categories = {"ball-mill"}
 
 ----EXCLUSIVE RECIPES----
 
 RECIPE {
     type = "recipe",
     name = "light-n2",
-    category = "gas-separator",
+    categories = {"gas-separator"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -168,7 +168,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "p-dope2",
-    category = "gas-separator",
+    categories = {"gas-separator"},
     enabled = false,
     energy_required = 5,
     ingredients = {

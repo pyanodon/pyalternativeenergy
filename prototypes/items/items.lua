@@ -2670,7 +2670,6 @@ ITEM {
     order = "q-a",
     stack_size = 50,
     effect = {speed = 1, pollution = 1},
-    limitation = {},
 }
 
 ITEM {
@@ -2689,7 +2688,6 @@ ITEM {
     order = "q-b",
     stack_size = 50,
     effect = {speed = 1.5, pollution = 1},
-    limitation = {},
 }
 
 ITEM {
@@ -2708,7 +2706,6 @@ ITEM {
     order = "q-c",
     stack_size = 50,
     effect = {speed = 2, pollution = 1},
-    limitation = {},
 }
 
 ITEM {
@@ -2727,7 +2724,6 @@ ITEM {
     order = "q-d",
     stack_size = 50,
     effect = {speed = 2.5, pollution = 1},
-    limitation = {},
 }
 
 ITEM {

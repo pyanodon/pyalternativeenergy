@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "mova-super-1",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -19,7 +19,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-2",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-3",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -54,7 +54,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-4",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -74,7 +74,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-5",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -95,7 +95,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-6",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -116,7 +116,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-7",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -137,7 +137,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-8",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -158,7 +158,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-9",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -180,7 +180,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mova-super-10",
-    category = "mova-farm",
+    categories = {"mova-farm"},
     enabled = false,
     energy_required = 60,
     ingredients = {

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "acrylonitrile",
-    category = "fbreactor",
+    categories = {"fbreactor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -21,7 +21,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "acrylonitrile-2",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "acrylonitrile-3",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -61,7 +61,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "methyl-acrylate-2",
-    category = "methanol",
+    categories = {"methanol"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -79,7 +79,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pan",
-    category = "centrifuging",
+    categories = {"centrifuging"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -95,7 +95,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oxidized-pan-fiber",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -111,7 +111,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pre-carbon-fiber",
-    category = "advanced-foundry",
+    categories = {"advanced-foundry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -128,7 +128,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cf1",
-    category = "electrolyzer",
+    categories = {"electrolyzer"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -146,7 +146,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cf2",
-    category = "washer",
+    categories = {"washer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -163,7 +163,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dry-cf",
-    category = "evaporator",
+    categories = {"evaporator"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -179,7 +179,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cf",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {

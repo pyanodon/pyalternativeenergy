@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "organic-pulp-01",
-    category = "pulp",
+    categories = {"pulp"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -16,7 +16,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "organic-pulp-03",
-    category = "pulp",
+    categories = {"pulp"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -31,7 +31,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "organic-pulp-02",
-    category = "pulp",
+    categories = {"pulp"},
     enabled = false,
     energy_required = 20,
     ingredients = {

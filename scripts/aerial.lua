@@ -839,21 +839,21 @@ Aerial.events[117] = function()
 
         -- I guess we do this to make the combinator not use power and thus not flicker at low power? Seems weird...
         if animation.energy == 0 then
-            control.active = false
+            control.disabled_by_script = true
             goto continue
         end
 
         -- No power network
         local electric_network_id = animation.electric_network_id
         if not electric_network_id then
-            control.active = false
+            control.disabled_by_script = true
             goto continue
         end
 
         -- No poles on this network
         local all_poles = storage.aerials.poles_by_network[electric_network_id]
         if #all_poles == 0 then
-            control.active = false
+            control.disabled_by_script = true
             goto continue
         end
 
@@ -926,7 +926,7 @@ Aerial.events[117] = function()
             max_energy = max_energy_per_network[electric_network_id]
         end
 
-        control.active = true
+        control.disabled_by_script = false
         -- The first arg here is just what order it shows in the output, 1-8 are reserved for the item counts
         control.set_slot(9, {
             value = "signal-yellow",

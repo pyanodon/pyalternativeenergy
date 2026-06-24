@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "he-01",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -18,7 +18,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "he-02",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -35,7 +35,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "he-03",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -52,7 +52,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "he-04",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -69,7 +69,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "he-05",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -87,7 +87,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geo-he-00",
-    category = "rhe",
+    categories = {"rhe"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -104,7 +104,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geo-he-01",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -122,7 +122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geo-he-02",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -140,7 +140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geo-he-03",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {

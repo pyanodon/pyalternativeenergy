@@ -3,7 +3,7 @@ RECIPE {
     name = "stirling-concentrator",
     energy_required = 0.5,
     enabled = false,
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     ingredients = {
         {type = "fluid", name = "lubricant",               amount = 100},
         {type = "item",  name = "axis-tracker",            amount = 2},
@@ -75,7 +75,6 @@ ENTITY {
     collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     mode = "heat-fluid-inside",
-    target_temperature = 5000,
     energy_source = {type = "void"},
     energy_consumption = "1.6MW",
     burning_cooldown = 0,
@@ -83,7 +82,7 @@ ENTITY {
         production_type = "input-output",
         pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
         pipe_covers = py.pipe_covers(false, true, true, true),
-        volume = 1000,
+        volume = 100,
         pipe_connections = {
             {flow_direction = "input-output", position = {0, -2.0}, direction = defines.direction.north},
             {flow_direction = "input-output", position = {0, 2.0},  direction = defines.direction.south},

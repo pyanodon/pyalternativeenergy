@@ -1,29 +1,29 @@
 require "prototypes.decay.decay-updates"
 
 --MOVED RECIPES CATEGORIES
-RECIPE("honey-comb").category = "centrifuging"
-RECIPE("honey-comb-buffed").category = "centrifuging"
-RECIPE("nickel-tailings").category = "centrifuging"
-RECIPE("xylenol-2").category = "centrifuging"
-RECIPE("al-tailings-separation").category = "centrifuging"
-RECIPE("simik-blood-to-oleochemicals").category = "centrifuging"
-RECIPE("chromite-concentrate").category = "centrifuging"
-RECIPE("vanabins").category = "centrifuging"
-RECIPE("clean-rf-gel").category = "centrifuging"
-RECIPE("gold-precipitate").category = "centrifuging"
-RECIPE("serine").category = "centrifuging"
-RECIPE("albumin-1").category = "centrifuging"
-RECIPE("outlet-gas-02").category = "centrifuging"
-RECIPE("serine").category = "centrifuging"
-RECIPE("tar-to-nickel").category = "centrifuging"
-RECIPE("bitumen-to-nickel").category = "centrifuging"
-RECIPE("nickel-prepared-solution").category = "centrifuging"
-RECIPE("chromium-rejects").category = "centrifuging"
-RECIPE("nuclear-fuel-reprocessing-mk02").category = "centrifuging"
-RECIPE("nuclear-fuel-reprocessing-mk03").category = "centrifuging"
-RECIPE("nuclear-fuel-reprocessing-mk04").category = "centrifuging"
-RECIPE("nuclear-fuel-reprocessing-mk05").category = "centrifuging"
-RECIPE("plutonium-fuel-reprocessing").category = "centrifuging"
+RECIPE("honey-comb").categories = {"centrifuging"}
+RECIPE("honey-comb-buffed").categories = {"centrifuging"}
+RECIPE("nickel-tailings").categories = {"centrifuging"}
+RECIPE("xylenol-2").categories = {"centrifuging"}
+RECIPE("al-tailings-separation").categories = {"centrifuging"}
+RECIPE("simik-blood-to-oleochemicals").categories = {"centrifuging"}
+RECIPE("chromite-concentrate").categories = {"centrifuging"}
+RECIPE("vanabins").categories = {"centrifuging"}
+RECIPE("clean-rf-gel").categories = {"centrifuging"}
+RECIPE("gold-precipitate").categories = {"centrifuging"}
+RECIPE("serine").categories = {"centrifuging"}
+RECIPE("albumin-1").categories = {"centrifuging"}
+RECIPE("outlet-gas-02").categories = {"centrifuging"}
+RECIPE("serine").categories = {"centrifuging"}
+RECIPE("tar-to-nickel").categories = {"centrifuging"}
+RECIPE("bitumen-to-nickel").categories = {"centrifuging"}
+RECIPE("nickel-prepared-solution").categories = {"centrifuging"}
+RECIPE("chromium-rejects").categories = {"centrifuging"}
+RECIPE("nuclear-fuel-reprocessing-mk02").categories = {"centrifuging"}
+RECIPE("nuclear-fuel-reprocessing-mk03").categories = {"centrifuging"}
+RECIPE("nuclear-fuel-reprocessing-mk04").categories = {"centrifuging"}
+RECIPE("nuclear-fuel-reprocessing-mk05").categories = {"centrifuging"}
+RECIPE("plutonium-fuel-reprocessing").categories = {"centrifuging"}
 
 --adjusting all centrifudge recipe speeds
 RECIPE("uranium-processing"):set_fields {energy_required = 40}
@@ -65,7 +65,7 @@ data.raw.technology["pyrrhic"]:add_prereq("biotech-machines-mk04")
 RECIPE {
     type = "recipe",
     name = "solvent-separation",
-    category = "centrifuging",
+    categories = {"centrifuging"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -125,8 +125,8 @@ RECIPE("py-logistic-robot-mk04"):add_ingredient {type = "item", name = "gearbox-
 RECIPE("py-construction-robot-mk01"):add_ingredient {type = "item", name = "battery-mk01", amount = 2}
 RECIPE("py-logistic-robot-mk01"):add_ingredient {type = "item", name = "battery-mk01", amount = 2}
 
-RECIPE("subcritical-water-01").category = "heat-exchanger"
-RECIPE("subcritical-water-02").category = "heat-exchanger"
+RECIPE("subcritical-water-01").categories = {"heat-exchanger"}
+RECIPE("subcritical-water-02").categories = {"heat-exchanger"}
 
 for _, recipe in pairs(data.raw.recipe) do
     recipe:replace_ingredient("battery", "battery-mk01")
@@ -150,49 +150,31 @@ end
 
 --ENERGY COSTS--
 
---ENERGY PRODUCTION DESCRIPTION --
-for name, variance in pairs(require "scripts.wind.variation") do
-    variance = {"entity-description.variance", tostring(variance * 100)}
-    -- Handle the surrogate items that show in electric stats, too
-    for _, suffix in pairs {"", "-blank"} do
-        local entity = data.raw["electric-energy-interface"][name .. suffix]
-        if entity then
-            if entity.localised_description then
-                entity.localised_description = {"", entity.localised_description, "\n", variance}
-            else
-                entity.localised_description = {"?", {"", {"entity-description." .. name}, "\n", variance}, variance}
-            end
-        end
-    end
-end
-
-local electric_energy_interfaces = {
+-- add wind data to entity tooltip fields
+for _, name in pairs{
     "hawt-turbine-mk01",
     "hawt-turbine-mk02",
     "hawt-turbine-mk03",
     "hawt-turbine-mk04",
+    "hawt-turbine-mk01-blank",
+    "hawt-turbine-mk02-blank",
+    "hawt-turbine-mk03-blank",
+    "hawt-turbine-mk04-blank",
     "vawt-turbine-mk01",
     "vawt-turbine-mk02",
     "vawt-turbine-mk03",
     "vawt-turbine-mk04",
     "multiblade-turbine-mk01",
     "multiblade-turbine-mk03",
-    "solar-panel-mk02",
-    "solar-panel-mk03",
-}
-
-for _, name in pairs(electric_energy_interfaces) do
-    local item = data.raw.item[name]
-    local entity = data.raw["electric-energy-interface"][name]
-    local output = {"entity-description.max-output", tostring(entity.energy_production)}
-    if item.localised_description then
-        item.localised_description = {"", item.localised_description, "\n", (output)}
-    elseif entity.localised_description then
-        item.localised_description = {"", entity.localised_description, "\n", output}
-    else
-        item.localised_description = {"?", {"", {"entity-description." .. name}, "\n", output}, output}
-    end
-    entity.energy_source.buffer_capacity = entity.energy_production
+    "multiblade-turbine-mk01-blank",
+    "multiblade-turbine-mk03-blank",
+} do
+    local entity = data.raw["solar-panel"][name]
+    entity.custom_tooltip_fields = entity.custom_tooltip_fields or {}
+    entity.custom_tooltip_fields[#entity.custom_tooltip_fields+1] = {
+        name = {"entity-description.output-per-kmph"},
+        value = entity.production
+    }
 end
 
 local molten_salt_recipes = {

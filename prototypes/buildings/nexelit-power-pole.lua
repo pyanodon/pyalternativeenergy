@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "nexelit-power-pole",
     energy_required = 1,
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     ingredients = {
         {type = "item", name = "refined-concrete", amount = 5},
@@ -36,7 +36,6 @@ ENTITY {
     max_health = 100,
     corpse = "medium-electric-pole-remnants",
     dying_explosion = "medium-electric-pole-explosion",
-    track_coverage_during_build_by_moving = true,
     fast_replaceable_group = "electric-pole",
     resistances =
     {

@@ -487,9 +487,9 @@ ITEM("productivity-module").effect.consumption = 1.2
 ITEM("productivity-module-2").effect.consumption = 1.5
 ITEM("productivity-module-3").effect.consumption = 2.0
 
-ENTITY("beacon"):set_fields{energy_usage = "2MW", hidden = true, hidden_by_factoriopedia = true}
+ENTITY("beacon"):set_fields{energy_usage = "2MW"}:hide()
 
-data.raw.tool["space-science-pack"].stack_size = 200
+data.raw.item["space-science-pack"].stack_size = 200
 
 RECIPE {
     type = "recipe",
@@ -687,9 +687,12 @@ if mods["quality"] then
     }
 end
 
+data.raw.furnace["steel-furnace"].energy_source.type = "fluid"
+data.raw.furnace["steel-furnace"].energy_source.fuel_categories = nil
+data.raw.furnace["steel-furnace"].energy_source.fuel_inventory_size = nil
+data.raw.furnace["steel-furnace"].energy_source.burnt_inventory_size = nil
 data.raw.furnace["steel-furnace"].energy_usage = "6MW"
 data.raw.furnace["steel-furnace"].crafting_speed = 4
-data.raw.furnace["steel-furnace"].energy_source.type = "fluid"
 data.raw.furnace["steel-furnace"].energy_source.destroy_non_fuel_fluid = false
 data.raw.furnace["steel-furnace"].energy_source.burns_fluid = true
 data.raw.furnace["steel-furnace"].energy_source.scale_fluid_usage = true
@@ -756,7 +759,7 @@ RECIPE("modular-armor"):set_fields {
         {type = "item",  name = "kevlar",                  amount = 80},
         {type = "fluid", name = "molten-titanium",         amount = 400},
     },
-    category = "crafting-with-fluid"
+    categories = {"crafting-with-fluid"}
 }
 RECIPE("power-armor"):set_fields {
     ingredients = {
@@ -776,7 +779,7 @@ RECIPE("power-armor"):set_fields {
         {type = "item",  name = "kevlar",                amount = 100},
         {type = "fluid", name = "molten-nexelit",        amount = 600},
     },
-    category = "crafting-with-fluid"
+    categories = {"crafting-with-fluid"}
 }
 RECIPE("power-armor-mk2"):set_fields {
     ingredients = {
@@ -801,7 +804,7 @@ RECIPE("power-armor-mk2"):set_fields {
         {type = "item",  name = "kevlar",                amount = 120},
         {type = "fluid", name = "molten-super-steel",    amount = 800},
     },
-    category = "crafting-with-fluid"
+    categories = {"crafting-with-fluid"}
 }
 RECIPE("fission-reactor-equipment"):set_fields {
     ingredients = {
@@ -815,7 +818,7 @@ RECIPE("fission-reactor-equipment"):set_fields {
         {type = "item", name = "big-electric-pole",     amount = 1},
         {type = "item", name = "biopolymer",            amount = 135},
     },
-    category = "crafting"
+    categories = {"crafting"}
 }
 RECIPE("personal-fusion-cell"):set_fields {
     ingredients = {
@@ -832,7 +835,7 @@ RECIPE("personal-fusion-cell"):set_fields {
         {type = "fluid", name = "deuterium",              amount = 100},
         {type = "fluid", name = "tritium",                amount = 100},
     },
-    category = "crafting-with-fluid"
+    categories = {"crafting-with-fluid"}
 }
 RECIPE("personal-fusion-cell-refuel"):set_fields {
     ingredients = {
@@ -840,7 +843,7 @@ RECIPE("personal-fusion-cell-refuel"):set_fields {
         {type = "fluid", name = "deuterium",                 amount = 100},
         {type = "fluid", name = "tritium",                   amount = 100},
     },
-    category = "crafting-with-fluid"
+    categories = {"crafting-with-fluid"}
 }
 RECIPE("belt-immunity-equipment"):set_fields {
     ingredients = {
@@ -848,7 +851,7 @@ RECIPE("belt-immunity-equipment"):set_fields {
         {type = "item", name = "intermetallics",     amount = 5},
         {type = "item", name = "electronic-circuit", amount = 5},
     },
-    category = "crafting"
+    categories = {"crafting"}
 }
 RECIPE("night-vision-equipment"):set_fields {
     ingredients = {
@@ -857,7 +860,7 @@ RECIPE("night-vision-equipment"):set_fields {
         {type = "item", name = "electronic-circuit", amount = 5},
         {type = "item", name = "plastic-bar",        amount = 5},
     },
-    category = "crafting"
+    categories = {"crafting"}
 }
 RECIPE("personal-roboport-mk2-equipment"):set_fields {
     ingredients = {
@@ -868,7 +871,7 @@ RECIPE("personal-roboport-mk2-equipment"):set_fields {
         {type = "item", name = "personal-roboport-equipment", amount = 5},
         {type = "item", name = "aluminium-plate",             amount = 20},
     },
-    category = "crafting"
+    categories = {"crafting"}
 }
 RECIPE("solar-panel-equipment"):set_fields {
     ingredients = {
@@ -877,7 +880,7 @@ RECIPE("solar-panel-equipment"):set_fields {
         {type = "item", name = "lithium",              amount = 10},
         {type = "item", name = "medium-electric-pole", amount = 1}
     },
-    category = "crafting"
+    categories = {"crafting"}
 }
 RECIPE("exoskeleton-equipment"):set_fields {
     ingredients = {
@@ -894,7 +897,7 @@ RECIPE("exoskeleton-equipment"):set_fields {
         {type = "item", name = "metastable-quasicrystal", amount = 1},
         {type = "item", name = "small-parts-03",          amount = 30},
     },
-    category = "crafting"
+    categories = {"crafting"}
 }
 
 data.raw.technology["solar-panel-equipment"].prerequisites = {"solar-mk01", "modular-armor"}
@@ -1002,7 +1005,7 @@ data.raw.recipe["empty-boric-acid-barrel"].results[1].temperature = 10
 RECIPE {
     type = "recipe",
     name = "nuclear-artillery-shell",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1028,7 +1031,6 @@ data:extend {
         ammo_category = "artillery-shell",
         ammo_type =
         {
-            category = "artillery-shell",
             target_type = "position",
             action =
             {
@@ -1078,7 +1080,6 @@ data:extend {
         {
             filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
             flags = {"icon"},
-            frame_count = 1,
             width = 64,
             height = 64,
             priority = "high",
@@ -1102,7 +1103,6 @@ data:extend {
                     {
                         type = "destroy-cliffs",
                         radius = 9,
-                        explosion = "explosion"
                     },
                     {
                         type = "create-entity",
@@ -1110,7 +1110,6 @@ data:extend {
                     },
                     {
                         type = "camera-effect",
-                        effect = "screen-burn",
                         duration = 60,
                         ease_in_duration = 5,
                         ease_out_duration = 60,

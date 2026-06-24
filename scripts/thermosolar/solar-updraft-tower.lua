@@ -163,9 +163,9 @@ py.register_on_nth_tick(60, "sut", "pyae", function()
         local activity = Thermosolar.calc_daylight(surface)
 
         if activity == 0 then
-            entity.active = false
+            entity.disabled_by_script = true
         else
-            entity.active = true
+            entity.disabled_by_script = false
             local smokestack = activity == 1 and "sut-smokestack" or "sut-smokestack-weak"
             surface.create_entity {name = smokestack, position = {entity.position.x, entity.position.y - 28}}
         end

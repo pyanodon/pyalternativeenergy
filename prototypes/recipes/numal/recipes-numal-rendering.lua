@@ -18,7 +18,7 @@ local IMP_SPECIAL = 20
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	--module_limitations = 'numal',
 	subgroup = "py-alienlife-numal",
 	order = "b",

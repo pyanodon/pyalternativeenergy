@@ -8,7 +8,6 @@ require "scripts/microwave-receiver"
 require "scripts/thermosolar/shared"
 require "scripts/thermosolar/solar-updraft-tower"
 require "scripts/thermosolar/heliostat"
-require "scripts/solar"
 require "scripts/wind/wind"
 require "scripts/aerial"
 require "scripts/tidal"
@@ -32,7 +31,6 @@ py.on_event(py.events.on_init(), function()
 end)
 
 py.on_event(py.events.on_built(), function(event)
-    Solar.events.on_built(event)
     Heliostat.events.on_built(event)
     Wind.events.on_built(event)
     Aerial.events.on_built(event)
@@ -74,26 +72,25 @@ local REQUIRES_SUNLIGHT = {
 }
 
 py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
-    local active = Thermosolar.calc_daylight(game.surfaces["nauvis"]) > 0.5 -- TODO: fix for multisurface
+    local disabled = Thermosolar.calc_daylight(game.surfaces["nauvis"]) < 0.5 -- TODO: fix for multisurface
     for _, panel in pairs(storage.lrf_panels) do
         if panel.valid then
-            panel.active = active
-            panel.custom_status = (not active) and REQUIRES_SUNLIGHT or nil
+            panel.disabled_by_script = disabled
+            panel.custom_status = disabled and REQUIRES_SUNLIGHT or nil
         end
     end
     for _, panel in pairs(storage.stirling) do
         if panel.valid then
-            panel.active = active
-            panel.custom_status = (not active) and REQUIRES_SUNLIGHT or nil
+            panel.disabled_by_script = disabled
+            panel.custom_status = disabled and REQUIRES_SUNLIGHT or nil
         end
     end
 end)
 
-py.register_on_nth_tick(100, "solar", "pyae", Solar.events[100])
 py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
+py.register_on_nth_tick(83, "tidal", "pyae", Tidal.events[83])
 
 py.on_event(py.events.on_destroyed(), function(event)
-    Solar.events.on_destroyed(event)
     Heliostat.events.on_destroyed(event)
     Wind.events.on_destroyed(event)
     Aerial.events.on_destroyed(event)

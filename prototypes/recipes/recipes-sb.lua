@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "sb-grade-01",
-    category = "screener",
+    categories = {"screener"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -13,7 +13,7 @@ RECIPE {
         {type = "item", name = "sb-grade-01", amount = 5},
         {type = "item", name = "sb-grade-02", amount = 3},
         {type = "item", name = "stone",       amount = 2},
-        {type = "item", name = "iron-oxide",  amount = 1, probability = 0.3},
+        {type = "item", name = "iron-oxide",  amount = 1, independent_probability = 0.3},
     },
     main_product = "sb-grade-02",
 }:add_unlock("antimony-mk01")
@@ -21,7 +21,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-grade-02",
-    category = "crusher",
+    categories = {"crusher"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -29,7 +29,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "sb-grade-02", amount = 10},
-        {type = "item", name = "stone",       amount = 2, probability = 0.2},
+        {type = "item", name = "stone",       amount = 2, independent_probability = 0.2},
     },
     main_product = "sb-grade-02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/crush-sb.png",
@@ -41,14 +41,14 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-grade-03",
-    category = "screener",
+    categories = {"screener"},
     enabled = false,
     energy_required = 10,
     ingredients = {
         {type = "item", name = "sb-grade-02", amount = 10}
     },
     results = {
-        {type = "item", name = "sb-grade-03", amount = 2, probability = 0.4},
+        {type = "item", name = "sb-grade-03", amount = 2, independent_probability = 0.4},
         {type = "item", name = "sb-grade-04", amount = 5},
         {type = "item", name = "gravel",      amount = 3},
     },
@@ -58,7 +58,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-grade-04",
-    category = "secondary-crusher",
+    categories = {"secondary-crusher"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -75,7 +75,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-oxide-01",
-    category = "bof",
+    categories = {"bof"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -95,7 +95,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-crushed",
-    category = "ball-mill",
+    categories = {"ball-mill"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -111,7 +111,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-dust",
-    category = "classifier",
+    categories = {"classifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -119,7 +119,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "sb-dust",     amount = 1},
-        {type = "item", name = "sb-grade-04", amount = 1, probability = 0.5},
+        {type = "item", name = "sb-grade-04", amount = 1, independent_probability = 0.5},
     },
     main_product = "sb-dust",
 }:add_unlock("antimony-mk02")
@@ -127,7 +127,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-pulp-01",
-    category = "agitator",
+    categories = {"agitator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-pulp-02",
-    category = "flotation",
+    categories = {"flotation"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -154,7 +154,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "sb-pulp-02", amount = 50},
-        {type = "fluid", name = "sb-58-conc", amount = 50, probability = 0.2},
+        {type = "fluid", name = "sb-58-conc", amount = 50, independent_probability = 0.2},
     },
     main_product = "sb-pulp-02",
 }:add_unlock("antimony-mk02")
@@ -165,7 +165,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-oxide-02",
-    category = "bof",
+    categories = {"bof"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -183,7 +183,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-oxide-02a",
-    category = "bof",
+    categories = {"bof"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -203,7 +203,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-pulp-03",
-    category = "hydrocyclone",
+    categories = {"hydrocyclone"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -220,7 +220,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-pulp-04",
-    category = "flotation",
+    categories = {"flotation"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -238,7 +238,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-low-conc",
-    category = "flotation",
+    categories = {"flotation"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -256,7 +256,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-11-conc",
-    category = "grease",
+    categories = {"grease"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -274,7 +274,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-58-conc",
-    category = "pan",
+    categories = {"pan"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -293,7 +293,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-pulp-05",
-    category = "flotation",
+    categories = {"flotation"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -310,7 +310,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-final-conc",
-    category = "jig",
+    categories = {"jig"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -327,7 +327,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-conc",
-    category = "centrifuging",
+    categories = {"centrifuging"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -344,7 +344,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "high-purified-sb",
-    category = "carbonfilter",
+    categories = {"carbonfilter"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -361,7 +361,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-oxide-04",
-    category = "bof",
+    categories = {"bof"},
     enabled = false,
     energy_required = 10,
     ingredients = {
