@@ -49,14 +49,37 @@ ENTITY {
     --allowed_effects = {'speed', 'consumption'},
     crafting_categories = {"lrf2"},
     crafting_speed = 1,
-    energy_source = {
-        type = "electric",
-        usage_priority = "primary-input",
+    energy_source = { -- consume 25/s at 3kC
+        type = "fluid",
         emissions_per_minute = {
             pollution = 1
-        }
+        },
+        burns_fluid = false,
+        scale_fluid_usage = true,
+        destroy_non_fluid_fuel = false,
+        maximum_temperature = 3000,
+        fluid_box = {
+            production_type = "input",
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            volume = 100,
+            filter = "molten-salt",
+            minimum_temperature = 3000,
+            pipe_connections = {{flow_direction = "input", position = {-3, 6.0}, direction = defines.direction.south}}
+        },
+        output_fluid_box = {
+            production_type = "output",
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            volume = 100,
+            pipe_connections = {{flow_direction = "output", position = {2, 6.0}, direction = defines.direction.south}}
+        },
+        spent_fluid = {
+            name = "molten-salt",
+            temperature = 1000
+        },
     },
-    energy_usage = "60MW",
+    energy_usage = "50MW",
     graphics_set = {
         working_visualisations = {
             {
@@ -173,25 +196,11 @@ ENTITY {
             pipe_connections = {{flow_direction = "input", position = {2, -6.0}, direction = defines.direction.north}}
         },
         {
-            production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
-            pipe_connections = {{flow_direction = "input", position = {-3, 6.0}, direction = defines.direction.south}}
-        },
-        {
             production_type = "output",
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-3, -6.0}, direction = defines.direction.north}}
-        },
-        {
-            production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {2, 6.0}, direction = defines.direction.south}}
         },
     },
     impact_category = "metal-large",

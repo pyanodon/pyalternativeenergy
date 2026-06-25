@@ -64,6 +64,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
             filter = "molten-salt",
+            minimum_temperature = 2000,
             pipe_connections = {{flow_direction = "input", position = {-2.5, 7.5}, direction = defines.direction.south}}
         },
         output_fluid_box = {
