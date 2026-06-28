@@ -6,7 +6,7 @@ Date: ???
     - Removed unnecessary prototype values to clear up the log
     - Updated vector_to_place_result so items shouldn't drop on the floor. Resolves https://github.com/pyanodon/pybugreports/issues/1486
     - Fixed that many buildings did not have certain pipe covers rendered
-    - Fixed that the LFR building would consume more energy the hotter the molten salt, without producing any more output. Resolves https://github.com/pyanodon/pybugreports/issues/1438
+    - Fixed that molten salt thermosolar would consume more energy the hotter the molten salt, without producing any more output. Resolves https://github.com/pyanodon/pybugreports/issues/1438
     - Updated wind turbines to be solar panels modulated by surface properties instead of individual EEIs, significantly increasing performance. Resolves https://github.com/pyanodon/pybugreports/issues/499
     - Converted solar panel mk02/mk03 to stateless visualizations from LuaRendering, increasing performance.
     - Converted VAWTs to stateless visualizations from LuaRendering, increasing performance.
@@ -34,6 +34,7 @@ Date: ???
     - Nerfed uranium separation (without decay) to output u-238 67.5% of the time instead of 95% of the time
     - Uranium separation now uses shared probability, so you will always get 10 items out for 10 items consumed
     - Reduced most fluidbox sizes from 1000 to 100
+    - Returned the passthrough pipe connections to the High Pressure Steam Turbine Mk04
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.38
 Date: ???
