@@ -189,6 +189,7 @@ for i = 1, 4 do
         },
         circuit_connector = circuit_connector_definitions["antimony-drill-mkxx"],
         circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
+        tall = true,
         graphics_set = {
             animation = {
                 layers = {

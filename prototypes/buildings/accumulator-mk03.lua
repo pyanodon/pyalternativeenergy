@@ -48,6 +48,7 @@ ENTITY {
         input_flow_limit = "5GW",
         output_flow_limit = "5GW"
     },
+    tall = true,
     chargable_graphics = {
         picture = {
             layers = {

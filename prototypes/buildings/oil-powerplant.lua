@@ -161,6 +161,7 @@ for i = 1, 4 do
             }
         },
         energy_usage = ({"10MW", "20MW", "30MW", "40MW"})[i],
+        tall = true,
         graphics_set = {
             working_visualisations = {
                 {

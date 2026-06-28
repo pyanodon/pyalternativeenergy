@@ -74,6 +74,7 @@ ENTITY {
         maximum_temperature = 250,
     },
     energy_usage = "300kW",
+    tall = true,
     graphics_set = {
         working_visualisations = {
             {

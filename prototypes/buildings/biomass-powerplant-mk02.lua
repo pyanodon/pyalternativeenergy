@@ -83,6 +83,7 @@ ENTITY {
         }
     },
     energy_usage = "5MW",
+    tall = true,
     graphics_set = {
         working_visualisations = {
             {

@@ -120,6 +120,7 @@ ENTITY {
         },
         max_sounds_per_prototype = 3
     },
+    tall = true,
     graphics_set = {
         working_visualisations = {{
             fadeout = true,

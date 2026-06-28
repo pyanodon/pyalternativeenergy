@@ -35,6 +35,7 @@ Date: ???
     - Uranium separation now uses shared probability, so you will always get 10 items out for 10 items consumed
     - Reduced most fluidbox sizes from 1000 to 100
     - Returned the passthrough pipe connections to the High Pressure Steam Turbine Mk04
+    - Added the following entities to be hidden when visibility of tall entities is toggled: accumulator mk03, antimony drill, biomass powerplant, oil powerplant, electric boiler, megadar, nuclear reactor mk01 and mk02, simik boiler
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.38
 Date: ???
