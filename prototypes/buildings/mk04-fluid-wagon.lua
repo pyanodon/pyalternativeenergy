@@ -48,6 +48,7 @@ ENTITY {
     selection_box = {{-1.2, -1.7}, {1.2, 1.7}},
     --damaged_trigger_effect = hit_effects.entity(),
     vertical_selection_shift = -0.5,
+    fast_replaceable_group = "fluid-wagon",
     weight = 400,
     max_speed = 1.7,
     braking_force = 25,

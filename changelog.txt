@@ -36,6 +36,7 @@ Date: ???
     - Reduced most fluidbox sizes from 1000 to 100
     - Returned the passthrough pipe connections to the High Pressure Steam Turbine Mk04
     - Added the following entities to be hidden when visibility of tall entities is toggled: accumulator mk03, antimony drill, biomass powerplant, oil powerplant, electric boiler, megadar, nuclear reactor mk01 and mk02, simik boiler
+    - Allowed the superior floating locomotive, cargo wagon, and fluid wagon to be used with the upgrade planner to upgrade trains
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.38
 Date: ???
