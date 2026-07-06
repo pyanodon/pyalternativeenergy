@@ -37,6 +37,7 @@ Date: ???
     - Returned the passthrough pipe connections to the High Pressure Steam Turbine Mk04
     - Added the following entities to be hidden when visibility of tall entities is toggled: accumulator mk03, antimony drill, biomass powerplant, oil powerplant, electric boiler, megadar, nuclear reactor mk01 and mk02, simik boiler
     - Allowed the superior floating locomotive, cargo wagon, and fluid wagon to be used with the upgrade planner to upgrade trains
+    - Moved oleochemical input on on rubber-from-oleochemicals to south fluidbox for consistency with other rubber recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1500
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.38
 Date: ???

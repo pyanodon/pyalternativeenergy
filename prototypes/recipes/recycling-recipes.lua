@@ -796,8 +796,8 @@ RECIPE {
     enabled = false,
     energy_required = 6,
     ingredients = {
-        {type = "fluid", name = "oleochemicals", amount = 350},
         {type = "fluid", name = "polybutadiene", amount = 20},
+        {type = "fluid", name = "oleochemicals", amount = 350},
         {type = "item",  name = "carbon-black",  amount = 10},
         {type = "item",  name = "latex",         amount = 1},
         {type = "item",  name = "sulfur",        amount = 2},
