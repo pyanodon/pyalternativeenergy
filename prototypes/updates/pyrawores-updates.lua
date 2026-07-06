@@ -432,6 +432,10 @@ while enrichment < 100 do
         t = 4
     end
 
+
+    local max_temp = math.floor(u235 * 100)
+    local negative_mod = 10 ^ -(5 - math.floor(math.log(max_temp, 10))) -- Negative modifier loses one decimal for each order of magnitude the temp gains
+
     RECIPE {
         type = "recipe",
         name = recipe_name,
@@ -439,7 +443,7 @@ while enrichment < 100 do
         enabled = false,
         energy_required = 1,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment * 100), maximum_temperature = math.floor(u235 * 100) - 0.000001}
+            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment * 100), maximum_temperature = max_temp - negative_mod}
         },
         results = {
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100)},
@@ -498,6 +502,9 @@ while duf > duf_min do
 
     local name = string.format("%.2f", tostring(u238))
 
+    local max_temp = math.floor(u235 * 100)
+    local negative_mod = 10 ^ -(5 - math.floor(math.log(max_temp, 10))) -- Negative modifier loses one decimal for each order of magnitude the temp gains
+
     RECIPE {
         type = "recipe",
         name = "depleted-uf6-" .. string.gsub(name, "%.", "-"), --TODO:find a way to fix uf6 names
@@ -505,7 +512,7 @@ while duf > duf_min do
         enabled = false,
         energy_required = 1,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf * 100), maximum_temperature = math.floor(u235 * 100) - 0.000001}
+            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf * 100), maximum_temperature = max_temp - negative_mod}
         },
         results = {
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100)},
@@ -528,7 +535,6 @@ end
 RECIPE {
     type = "recipe",
     name = "Depleted-uf6-to-u-oxide",
-    categories = {"evaporator"},
     enabled = false,
     energy_required = 2,
     ingredients = {
