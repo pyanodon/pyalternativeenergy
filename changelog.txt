@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.0
 Date: ???
+  Breaking Changes:
+    - Updated tidal powerplants to be solar panels modulated by surface properties, similar to wind turbines, adding variance to the output.
   Changes:
     - Updated to Factorio 2.1
     - Removed unnecessary prototype values to clear up the log
@@ -21,7 +23,6 @@ Date: ???
     - Buffed Multiblade Mk01 power output from 550kW to 1.2MW, on average
     - Buffed Multiblade Mk03 power output from 34MW to 90MW, on average
     - Fixed that tidal powerplant collisions were larger than their visual area. Resolves https://github.com/pyanodon/pybugreports/issues/1428
-    - Updated tidal powerplants to be solar panels modulated by surface properties, similar to wind turbines, adding variance to the output.
     - Fixed that tidal powerplant animations did not work.
     - Buffed Tidal Mk01 power output from a constant 6MW to 8MW on average
     - Buffed Tidal Mk02 power output from a constant 40MW to 60MW on average
