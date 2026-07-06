@@ -4,6 +4,9 @@ Date: ???
   Breaking Changes:
     - Updated tidal powerplants to be solar panels modulated by surface properties, similar to wind turbines, adding variance to the output.
     - Fixed incorrect temperature requirements from rounding in low-temperature uranium hexafluoride recipes
+    - Moved oleochemical input on on rubber-from-oleochemicals to south fluidbox for consistency with other rubber recipes. Reolves https://github.com/pyanodon/pybugreports/issues/1500
+    - [space-age] Fixed that uranium separation was not properly updated when decay was enabled. The recipe should be outputting ash, not using it...
+    - Nerfed uranium separation (without decay) to output u-238 67.5% of the time instead of 95% of the time (see below for relevant buffs)
   Changes:
     - Updated to Factorio 2.1
     - Removed unnecessary prototype values to clear up the log
@@ -31,15 +34,12 @@ Date: ???
     - Buffed Tidal Mk04 power output from a constant 400MW to 500MW on average
     - Fixed that the antisolar animation did not work
     - Nuclear isotope processing recipes will inherit their decay state from ingredients where possible. Resolves https://github.com/pyanodon/pybugreports/issues/1327
-    - [space-age] Fixed that uranium separation was not properly updated when decay was enabled. The recipe should be outputting ash, not using it...
     - Buffed uranium separation to output 10 u-237 instead of 1
-    - Nerfed uranium separation (without decay) to output u-238 67.5% of the time instead of 95% of the time
     - Uranium separation now uses shared probability, so you will always get 10 items out for 10 items consumed
     - Reduced most fluidbox sizes from 1000 to 100
     - Returned the passthrough pipe connections to the High Pressure Steam Turbine Mk04
     - Added the following entities to be hidden when visibility of tall entities is toggled: accumulator mk03, antimony drill, biomass powerplant, oil powerplant, electric boiler, megadar, nuclear reactor mk01 and mk02, simik boiler
     - Allowed the superior floating locomotive, cargo wagon, and fluid wagon to be used with the upgrade planner to upgrade trains
-    - Moved oleochemical input on on rubber-from-oleochemicals to south fluidbox for consistency with other rubber recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1500
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.38
 Date: ???
