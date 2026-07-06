@@ -535,6 +535,7 @@ end
 RECIPE {
     type = "recipe",
     name = "Depleted-uf6-to-u-oxide",
+    categories = {"evaporator"},
     enabled = false,
     energy_required = 2,
     ingredients = {
