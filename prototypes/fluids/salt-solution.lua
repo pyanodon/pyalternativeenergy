@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "salt-solution",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -9,7 +9,7 @@ RECIPE {
         {type = "fluid", name = "geothermal-water", amount = 150},
     },
     results = {
-        {type = "item",  name = "pu-238",        amount = 1,  probability = 0.01},
+        {type = "item",  name = "pu-238",        amount = 1,  independent_probability = 0.01},
         {type = "fluid", name = "salt-solution", amount = 100},
     },
     main_product = "salt-solution",

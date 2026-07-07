@@ -47,7 +47,6 @@ data:extend {
         type = "recipe-category",
         name = "numal",
         allowed_module_categories = {"numal"},
-        modules_required = true
     },
     {
         type = "recipe-category",

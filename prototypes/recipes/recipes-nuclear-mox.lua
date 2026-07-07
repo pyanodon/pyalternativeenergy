@@ -67,7 +67,7 @@ steb 6b: Pu-sol3 + heat -> PuO2 + offgas
 RECIPE {
     type = "recipe",
     name = "pu239-uf6",
-    category = "centrifuging",
+    categories = {"centrifuging"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -85,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mox-fuel-seperation",
-    category = "fluid-separator",
+    categories = {"fluid-separator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -105,7 +105,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "waste-mox-disolving",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -123,18 +123,18 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-seperation-2",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 5,
     ingredients = {
         {type = "item", name = "plutonium-oxide-mox", amount = 50},
     },
     results = {
-        {type = "item", name = "pu-238", amount = 150, probability = 0.4},
-        {type = "item", name = "pu-239", amount = 50,  probability = 0.2},
-        {type = "item", name = "pu-240", amount = 150, probability = 0.5},
-        {type = "item", name = "pu-241", amount = 80,  probability = 0.05},
-        {type = "item", name = "pu-242", amount = 150, probability = 0.6},
+        {type = "item", name = "pu-238", amount = 150, independent_probability = 0.4},
+        {type = "item", name = "pu-239", amount = 50,  independent_probability = 0.2},
+        {type = "item", name = "pu-240", amount = 150, independent_probability = 0.5},
+        {type = "item", name = "pu-241", amount = 80,  independent_probability = 0.05},
+        {type = "item", name = "pu-242", amount = 150, independent_probability = 0.6},
     },
     main_product = "pu-242",
     subgroup = "py-nuclear",

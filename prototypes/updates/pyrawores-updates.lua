@@ -125,12 +125,12 @@ RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessin
 RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
-RECIPE("fuelrod-mk01-1"):add_ingredient {type = "item", name = "pu-239", amount = 1}:replace_ingredient("coke", "graphite"):add_unlock("uranium-processing"):set_fields {category = "crafting"}
+RECIPE("fuelrod-mk01-1"):add_ingredient {type = "item", name = "pu-239", amount = 1}:replace_ingredient("coke", "graphite"):add_unlock("uranium-processing"):set_fields {categories = {"crafting"}}
 
 RECIPE {
     type = "recipe",
     name = "fuelrod-mk02",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -174,7 +174,6 @@ ITEM {
                 size = 64,
                 filename = "__pyalternativeenergygraphics__/graphics/icons/po-210-nuclear-fuel.png",
                 scale = 0.25,
-                mipmap_count = 1
             },
             {
                 draw_as_light = true,
@@ -182,7 +181,6 @@ ITEM {
                 size = 64,
                 filename = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fuel-light.png",
                 scale = 0.25,
-                mipmap_count = 1
             }
         }
     },
@@ -210,7 +208,6 @@ ITEM {
                 size = 64,
                 filename = "__pyalternativeenergygraphics__/graphics/icons/used-po-210-nuclear-fuel.png",
                 scale = 0.25,
-                mipmap_count = 1
             },
             {
                 draw_as_light = true,
@@ -218,7 +215,6 @@ ITEM {
                 size = 64,
                 filename = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fuel-light.png",
                 scale = 0.25,
-                mipmap_count = 1
             }
         }
     },
@@ -259,7 +255,7 @@ RECIPE("grade-2-u-crush"):remove_unlock("uranium-mk01"):add_unlock("uranium-proc
 RECIPE {
     type = "recipe",
     name = "u-pulp-01",
-    category = "leaching",
+    categories = {"leaching"},
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -278,7 +274,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u-pulp-02",
-    category = "leaching", --pyfe agitator
+    categories = {"leaching"}, --pyfe agitator
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -296,7 +292,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u-pulp-03",
-    category = "leaching",
+    categories = {"leaching"},
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -314,7 +310,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u-rich-pulp",
-    category = "chemistry", --agitator
+    categories = {"chemistry"}, --agitator
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -436,14 +432,18 @@ while enrichment < 100 do
         t = 4
     end
 
+
+    local max_temp = math.floor(u235 * 100)
+    local negative_mod = 10 ^ -(5 - math.floor(math.log(max_temp, 10))) -- Negative modifier loses one decimal for each order of magnitude the temp gains
+
     RECIPE {
         type = "recipe",
         name = recipe_name,
-        category = "gas-separator",
+        categories = {"gas-separator"},
         enabled = false,
         energy_required = 1,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment * 100), maximum_temperature = math.floor(u235 * 100) - 0.000001}
+            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment * 100), maximum_temperature = max_temp - negative_mod}
         },
         results = {
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100)},
@@ -502,14 +502,17 @@ while duf > duf_min do
 
     local name = string.format("%.2f", tostring(u238))
 
+    local max_temp = math.floor(u235 * 100)
+    local negative_mod = 10 ^ -(5 - math.floor(math.log(max_temp, 10))) -- Negative modifier loses one decimal for each order of magnitude the temp gains
+
     RECIPE {
         type = "recipe",
         name = "depleted-uf6-" .. string.gsub(name, "%.", "-"), --TODO:find a way to fix uf6 names
-        category = "gas-separator",
+        categories = {"gas-separator"},
         enabled = false,
         energy_required = 1,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf * 100), maximum_temperature = math.floor(u235 * 100) - 0.000001}
+            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf * 100), maximum_temperature = max_temp - negative_mod}
         },
         results = {
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100)},
@@ -532,7 +535,7 @@ end
 RECIPE {
     type = "recipe",
     name = "Depleted-uf6-to-u-oxide",
-    category = "evaporator",
+    categories = {"evaporator"},
     enabled = false,
     energy_required = 2,
     ingredients = {

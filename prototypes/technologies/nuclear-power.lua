@@ -52,6 +52,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/nuclear-mk03.png",
     effects = {},
     prerequisites = {"uranium-mk03", "nonrenewable-mk03", "nuclear-power-mk02"},
+    unit =
     {
         ingredients =
         {

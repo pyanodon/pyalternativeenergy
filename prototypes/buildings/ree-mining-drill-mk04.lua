@@ -49,7 +49,7 @@ ENTITY {
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     input_fluid_box = {
-        pipe_picture = _G.assembler2pipepictures(),
+        pipe_picture = py.pipe_pictures("assembling-machine-2"),
         pipe_covers = _G.pipecoverspictures(),
         volume = 200,
         pipe_connections = {
@@ -68,9 +68,8 @@ ENTITY {
         },
     },
     energy_usage = "1200kW",
-    mining_power = 1,
     resource_searching_radius = 3.49,
-    vector_to_place_result = {0, -2.65},
+    vector_to_place_result = {0, -2.8},
     radius_visualisation_picture = {
         filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
         width = 12,
@@ -107,6 +106,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pycoalprocessinggraphics__/sounds/borax-mine.ogg"},
         idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/borax-mine.ogg", volume = 0.3},
-        apparent_volume = 2.5
     }
 }

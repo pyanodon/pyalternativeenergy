@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "blade-mk01",
-    category = "wpu",
+    categories = {"wpu"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -19,7 +19,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaw-drive-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vane-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -54,7 +54,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "utility-box-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -73,7 +73,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tower-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -90,7 +90,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "shaft-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -107,7 +107,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "shaft-mk01-casting",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -126,7 +126,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rotor-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nacelle-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -169,7 +169,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gearbox-mk01",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -188,7 +188,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "electronics-mk01",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -211,7 +211,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "controler-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -230,7 +230,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brake-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -251,7 +251,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "anemometer-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -269,7 +269,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "blade-mk02",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -286,7 +286,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rotor-mk02",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -306,7 +306,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaw-drive-mk02",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -330,7 +330,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vane-mk02",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -346,7 +346,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "anemometer-mk02",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -364,7 +364,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "utility-box-mk02",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -384,7 +384,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tower-mk02",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -404,7 +404,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "shaft-mk02",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -421,7 +421,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gearbox-mk02",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -444,7 +444,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "electronics-mk02",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -469,7 +469,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "controler-mk02",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -491,7 +491,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brake-mk02",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -512,7 +512,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nacelle-mk02",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -539,7 +539,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "blade-mk03",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -557,7 +557,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rotor-mk03",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -579,7 +579,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaw-drive-mk03",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -603,7 +603,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vane-mk03",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -620,7 +620,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "anemometer-mk03",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -641,7 +641,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "utility-box-mk03",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -662,7 +662,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tower-mk03",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -684,7 +684,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "shaft-mk03",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -702,7 +702,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gearbox-mk03",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -728,7 +728,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "electronics-mk03",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -757,7 +757,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "controler-mk03",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -778,7 +778,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brake-mk03",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -800,7 +800,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hydraulic-system-mk01",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -819,7 +819,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nacelle-mk03",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -847,7 +847,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "inside-turbine",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -874,7 +874,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hydraulic-system-mk02",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -896,7 +896,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaw-drive-mk04",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -921,7 +921,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "utility-box-mk04",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -942,7 +942,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tower-mk04",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -964,7 +964,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "shaft-mk04",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -982,7 +982,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gearbox-mk04",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -1008,7 +1008,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "electronics-mk04",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -1038,7 +1038,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "controler-mk04",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -1059,7 +1059,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brake-mk04",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -1081,7 +1081,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "anemometer-mk04",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -1103,7 +1103,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fes",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -1124,7 +1124,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "heating-system",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -1147,7 +1147,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nacelle-mk04",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 40,
     ingredients = {

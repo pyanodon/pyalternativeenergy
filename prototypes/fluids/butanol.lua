@@ -12,7 +12,7 @@ RECIPE {
         {type = "fluid", name = "butanol", amount = 50}
     },
     main_product = "butanol",
-    category = "electrolyzer"
+    categories = {"electrolyzer"}
 }:add_unlock("tbp")
 
 FLUID {

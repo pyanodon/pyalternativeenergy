@@ -102,7 +102,7 @@ data.raw.item["70-u-powder"] = nil
 RECIPE {
     type = "recipe",
     name = "control-rod",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -121,7 +121,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "used-control-rod",
-    category = "electrolyzer",
+    categories = {"electrolyzer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -130,7 +130,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "tritium",     amount = 5},
-        {type = "item",  name = "control-rod", amount = 1, probability = 0.5},
+        {type = "item",  name = "control-rod", amount = 1, independent_probability = 0.5},
         {type = "fluid", name = "molten-salt", amount = 50},
     },
     main_product = "control-rod"
@@ -139,7 +139,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "neutron-absorbston",
-    category = "neutron-absorber",
+    categories = {"neutron-absorber"},
     icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/neutron.png",
     icon_size = 64,
     enabled = false,
@@ -196,13 +196,13 @@ RECIPE {
         {type = "fluid", name = "hydrogen-chloride", amount = 30},
     },
     main_product = "tbp",
-    category = "electrolyzer"
+    categories = {"electrolyzer"}
 }:add_unlock("nuclear-power")
 
 RECIPE {
     type = "recipe",
     name = "lithium-salt-fuel-seperation",
-    category = "fluid-separator",
+    categories = {"fluid-separator"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -222,7 +222,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "waste-uranium-disolving",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -240,7 +240,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-washing-1",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -260,7 +260,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-washing-2",
-    category = "fluid-separator",
+    categories = {"fluid-separator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -280,7 +280,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-washing-3",
-    category = "compressor",
+    categories = {"compressor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -300,7 +300,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-washing-4",
-    category = "fluid-separator",
+    categories = {"fluid-separator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -321,7 +321,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-waste-washing-1",
-    category = "fluid-separator",
+    categories = {"fluid-separator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -341,7 +341,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-waste-washing-2",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -360,7 +360,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-waste-vitrification",
-    category = "bof",
+    categories = {"bof"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -384,7 +384,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-raffinate-vitrification",
-    category = "bof",
+    categories = {"bof"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -410,7 +410,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-washing-1",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -430,7 +430,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-washing-2",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -450,7 +450,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-washing-3",
-    category = "flotation",
+    categories = {"flotation"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -470,7 +470,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-peroxide",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -488,7 +488,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium",
-    category = "evaporator",
+    categories = {"evaporator"},
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -508,7 +508,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uranium-washing-1",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -526,7 +526,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uranium-washing-2",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -537,7 +537,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "purex-u-concentrate-3", amount = 10},
         {type = "fluid", name = "purex-raffinate",       amount = 10},
-        {type = "item",  name = "tbp",                   amount = 1, probability = 0.5, ignored_by_productivity = 1},
+        {type = "item",  name = "tbp",                   amount = 1, independent_probability = 0.5, ignored_by_productivity = 1},
     },
     main_product = "purex-u-concentrate-3",
     subgroup = "py-nuclear-waste",
@@ -547,7 +547,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uranium",
-    category = "evaporator",
+    categories = {"evaporator"},
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -565,7 +565,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-raffinate-1",
-    category = "pan",
+    categories = {"pan"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -584,7 +584,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-raffinate-2",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -603,7 +603,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purex-raffinate-3",
-    category = "pan",
+    categories = {"pan"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -622,7 +622,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ac-oxygenated",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -639,7 +639,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "americium-reduction",
-    category = "pan",
+    categories = {"pan"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -658,7 +658,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "curium-reduction",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -675,7 +675,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-chloride-to-ore",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -698,7 +698,7 @@ RECIPE {
     name = "split-yellowcake",
     enabled = false,
     energy_required = 10,
-    category = "pa",
+    categories = {"pa"},
     icon = "__pyalternativeenergygraphics__/graphics/icons/pa-yellow-cake.png",
     icon_size = 64,
     ingredients =
@@ -706,8 +706,8 @@ RECIPE {
         {type = "item", name = "yellow-cake", amount = 10},
     },
     results = {
-        {type = "item", name = "u-235", amount = 10, probability = 0.1},
-        {type = "item", name = "u-238", amount = 10, probability = 0.9}
+        {type = "item", name = "u-235", amount = 10, independent_probability = 0.1},
+        {type = "item", name = "u-238", amount = 10, independent_probability = 0.9}
     },
     --main_product = "u-235",
     subgroup = "py-nuclear-waste",
@@ -719,7 +719,7 @@ RECIPE {
     name = "fuel-cell-dissolve",
     enabled = false,
     energy_required = 15,
-    category = "mixer",
+    categories = {"mixer"},
     ingredients =
     {
         {type = "item",  name = "depleted-uranium-fuel-cell", amount = 10},
@@ -737,7 +737,7 @@ RECIPE {
     name = "antimony-phosphate",
     enabled = false,
     energy_required = 100,
-    category = "centrifuging",
+    categories = {"centrifuging"},
     ingredients =
     {
         {type = "fluid", name = "sb-phosphate-1",  amount = 5},
@@ -756,7 +756,7 @@ RECIPE {
     name = "plutonium-oxidation",
     enabled = false,
     energy_required = 100,
-    category = "centrifuging",
+    categories = {"centrifuging"},
     ingredients =
     {
         {type = "item",  name = "sb-hpo-pu",         amount = 5},
@@ -774,7 +774,7 @@ RECIPE {
     name = "antimony-phosphate-2",
     enabled = false,
     energy_required = 15,
-    category = "mixer",
+    categories = {"mixer"},
     ingredients =
     {
         {type = "fluid", name = "sb-phosphate-2",   amount = 200},
@@ -795,7 +795,7 @@ RECIPE {
     name = "plutonium-oxidation-2",
     enabled = false,
     energy_required = 15,
-    category = "mixer",
+    categories = {"mixer"},
     ingredients =
     {
         {type = "fluid", name = "sb-phosphate-3", amount = 200},
@@ -811,7 +811,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yellow-cake-uf6",
-    category = "hydroclassifier", --pyfe screener
+    categories = {"hydroclassifier"}, --pyfe screener
     enabled = false,
     energy_required = 4,
     ingredients = {

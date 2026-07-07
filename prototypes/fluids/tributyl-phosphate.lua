@@ -12,7 +12,7 @@ RECIPE {
         {type = "fluid", name = "hydrogen-chloride",  amount = 30},
     },
     main_product = "tributyl-phosphate",
-    category = "electrolyzer"
+    categories = {"electrolyzer"}
 }:add_unlock("nuclear-power")
 
 FLUID {

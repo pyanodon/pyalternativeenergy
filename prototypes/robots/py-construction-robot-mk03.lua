@@ -4,7 +4,7 @@ RECIPE {
     type = "recipe",
     name = "py-construction-robot-mk03",
     energy_required = 15,
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "processing-unit",            amount = 2},
@@ -54,7 +54,6 @@ ENTITY {
     selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
     max_payload_size = 3,
     speed = 0.17,
-    transfer_distance = 0.5,
     max_energy = "3MJ",
     energy_per_tick = "0.06kJ",
     speed_multiplier_when_out_of_energy = 0.2,
@@ -203,6 +202,5 @@ ENTITY {
         }
     },
     working_sound = sounds.construction_robot(0.5),
-    cargo_centered = {0.0, 0.2},
     construction_vector = {0.30, 0.22}
 }

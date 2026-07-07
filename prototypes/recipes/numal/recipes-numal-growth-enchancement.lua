@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "numal-improved",
-	category = "numal",
+	categories = {"numal"},
 	--module_limitations = 'numal',
 	subgroup = "py-alienlife-numal",
 	order = "b",

@@ -42,11 +42,10 @@ ENTITY {
     energy_source =
     {
         type = "electric",
-        emissions_per_second_per_watt = 0,
         usage_priority = "secondary-input"
     },
     input_fluid_box = {
-        pipe_picture = _G.assembler2pipepictures(),
+        pipe_picture = py.pipe_pictures("assembling-machine-2"),
         pipe_covers = _G.pipecoverspictures(),
         volume = 200,
         pipe_connections = {
@@ -159,7 +158,6 @@ ENTITY {
     working_sound =
     {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/geothermal-plant.ogg", volume = 0.5},
-        apparent_volume = 0.5
     },
     fast_replaceable_group = "geothermal-plant",
 }

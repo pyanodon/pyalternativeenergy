@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "er-oxalate",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "impure-er-oxide",
-    category = "upgrader",
+    categories = {"upgrader"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -34,7 +34,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "er-oxide",
-    category = "washer",
+    categories = {"washer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -52,7 +52,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "erbium",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -70,7 +70,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ernico",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -88,7 +88,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ernico-2",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -106,7 +106,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ybco-monocrystal",
-    category = "sinter",
+    categories = {"sinter"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -124,7 +124,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fan",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -142,7 +142,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "air-duct",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -160,7 +160,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cryostat",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -181,7 +181,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cryocooler",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -199,7 +199,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sc-engine",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -225,7 +225,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rotor-m",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -245,7 +245,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "magnetic-ring",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -262,7 +262,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sc-stator",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -280,7 +280,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hts-coil",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {

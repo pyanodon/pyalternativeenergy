@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "numal-egg",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"numal"},
 	module_limitations = "numal",
 	subgroup = "py-alienlife-numal",
@@ -217,7 +217,7 @@ RECIPE {
 
 py.autorecipes {
 	name = "numal-raising",
-	category = "numal",
+	categories = {"numal"},
 	module_limitations = "numal",
 	subgroup = "py-alienlife-numal",
 	order = "b",

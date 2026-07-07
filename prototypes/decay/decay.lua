@@ -6,7 +6,7 @@ end
 RECIPE {
     name = "floraspollinin-reprocessing",
     type = "recipe",
-    category = "nursery",
+    categories = {"nursery"},
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -63,7 +63,7 @@ RECIPE {
         {type = "fluid", name = "steam",   amount = 5, temperature = 150},
     },
     energy_required = 2,
-    category = "compressor",
+    categories = {"compressor"},
     enabled = false,
     main_product = "biocrud",
     allow_productivity = false,
@@ -82,7 +82,7 @@ RECIPE {
         {type = "fluid", name = "bio-oil", amount = 100},
     },
     energy_required = 15,
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     main_product = "biocrud",
     enabled = false,
     allow_productivity = true,
@@ -91,7 +91,7 @@ RECIPE {
 RECIPE {
     name = "ash",
     type = "recipe",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -141,7 +141,7 @@ ITEM {
 RECIPE {
     name = "biocrud-reprocessing",
     type = "recipe",
-    category = "plankton",
+    categories = {"plankton"},
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -153,15 +153,15 @@ RECIPE {
     allow_productivity = true,
     results = {
         {type = "item",  name = "carbon-black",      amount_min = 1, amount_max = 2},
-        {type = "item",  name = "native-flora",      amount = 1,     probability = 0.8},
-        {type = "item",  name = "moss",              amount = 1,     probability = 0.5},
-        {type = "item",  name = "fawogae-spore",     amount = 1,     probability = 0.3},
-        {type = "item",  name = "cellulose",         amount = 1,     probability = 0.15},
-        {type = "item",  name = "agar",              amount = 1,     probability = 0.1},
-        {type = "item",  name = "fungal-substrate",  amount = 1,     probability = 0.05},
-        {type = "item",  name = "fawogae-substrate", amount = 1,     probability = 0.025},
-        {type = "item",  name = "seeds-extract-01",  amount = 1,     probability = 0.015},
-        {type = "item",  name = "arqad-maggot",      amount = 1,     probability = 0.01},
+        {type = "item",  name = "native-flora",      amount = 1,     independent_probability = 0.8},
+        {type = "item",  name = "moss",              amount = 1,     independent_probability = 0.5},
+        {type = "item",  name = "fawogae-spore",     amount = 1,     independent_probability = 0.3},
+        {type = "item",  name = "cellulose",         amount = 1,     independent_probability = 0.15},
+        {type = "item",  name = "agar",              amount = 1,     independent_probability = 0.1},
+        {type = "item",  name = "fungal-substrate",  amount = 1,     independent_probability = 0.05},
+        {type = "item",  name = "fawogae-substrate", amount = 1,     independent_probability = 0.025},
+        {type = "item",  name = "seeds-extract-01",  amount = 1,     independent_probability = 0.015},
+        {type = "item",  name = "arqad-maggot",      amount = 1,     independent_probability = 0.01},
         {type = "fluid", name = "zogna-bacteria",    amount = 5},
     },
     icons = {
@@ -184,7 +184,7 @@ RECIPE {
 RECIPE {
     name = "rich-biocrud-reprocessing",
     type = "recipe",
-    category = "plankton",
+    categories = {"plankton"},
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -196,15 +196,15 @@ RECIPE {
     allow_productivity = true,
     results = {
         {type = "item",  name = "carbon-black",          amount_min = 1, amount_max = 2},
-        {type = "item",  name = "biocrud",               amount = 1,     probability = 0.8},
-        {type = "item",  name = "bedding",               amount = 1,     probability = 0.5},
-        {type = "item",  name = "bio-ore",               amount = 1,     probability = 0.3},
-        {type = "item",  name = "yaedols",               amount = 1,     probability = 0.15},
-        {type = "item",  name = "collagen",              amount = 1,     probability = 0.1},
-        {type = "item",  name = "fungal-substrate-03",   amount = 1,     probability = 0.05},
-        {type = "item",  name = "sub-denier-microfiber", amount = 1,     probability = 0.025},
-        {type = "item",  name = "alien-sample-03",       amount = 1,     probability = 0.015},
-        {type = "item",  name = "brain-cartridge-04",    amount = 1,     probability = 0.01},
+        {type = "item",  name = "biocrud",               amount = 1,     independent_probability = 0.8},
+        {type = "item",  name = "bedding",               amount = 1,     independent_probability = 0.5},
+        {type = "item",  name = "bio-ore",               amount = 1,     independent_probability = 0.3},
+        {type = "item",  name = "yaedols",               amount = 1,     independent_probability = 0.15},
+        {type = "item",  name = "collagen",              amount = 1,     independent_probability = 0.1},
+        {type = "item",  name = "fungal-substrate-03",   amount = 1,     independent_probability = 0.05},
+        {type = "item",  name = "sub-denier-microfiber", amount = 1,     independent_probability = 0.025},
+        {type = "item",  name = "alien-sample-03",       amount = 1,     independent_probability = 0.015},
+        {type = "item",  name = "brain-cartridge-04",    amount = 1,     independent_probability = 0.01},
         {type = "fluid", name = "mutant-enzymes",        amount = 5},
     },
     icons = {
@@ -227,7 +227,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "biocarnation-harvesting",
-    category = "fwf",
+    categories = {"fwf"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -235,11 +235,11 @@ RECIPE {
     },
     allow_productivity = true,
     results = {
-        {type = "item", name = "advanced-substrate", amount = 1,      probability = 0.25},
+        {type = "item", name = "advanced-substrate", amount = 1,      independent_probability = 0.25},
         {type = "item", name = "native-flora",       amount_min = 45, amount_max = 65},
-        {type = "item", name = "fawogae",            amount = 3,      probability = 0.75},
-        {type = "item", name = "navens",             amount = 2,      probability = 0.65},
-        {type = "item", name = "yaedols",            amount = 1,      probability = 0.55},
+        {type = "item", name = "fawogae",            amount = 3,      independent_probability = 0.75},
+        {type = "item", name = "navens",             amount = 2,      independent_probability = 0.65},
+        {type = "item", name = "yaedols",            amount = 1,      independent_probability = 0.55},
     },
     icon = "__pyalternativeenergygraphics__/graphics/icons/biocarnation.png",
     icon_size = 64,
@@ -260,7 +260,7 @@ ITEM {
 RECIPE {
     name = "biocrud-to-wastewater",
     type = "recipe",
-    category = "pulp",
+    categories = {"pulp"},
     ingredients = {
         {type = "item",  name = "biocrud",   amount = 5},
         {type = "fluid", name = "water",     amount = 250},
@@ -270,7 +270,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "waste-water", amount = 250},
         {type = "fluid", name = "a-molasse",   amount = 5}, -- should not be ignored by productivity
-        {type = "item",  name = "biocrud",     amount = 1,  probability = 0.5, ignored_by_stats = 2}
+        {type = "item",  name = "biocrud",     amount = 1,  independent_probability = 0.5, ignored_by_stats = 2}
     },
     main_product = "waste-water",
     allow_productivity = true,
@@ -295,7 +295,7 @@ RECIPE {
         {type = "fluid", name = "carbon-dioxide", amount = 340},
         {type = "item",  name = "carbon-black",   amount = 5},
     },
-    category = "distilator",
+    categories = {"distilator"},
     main_product = "syngas",
     localised_name = {"recipe-name.biocrud-pyrolysis"},
     localised_description = {"recipe-description.biocrud-pyrolysis"},

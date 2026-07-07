@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "aniline-01",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "aniline-02",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 10,
     ingredients = {

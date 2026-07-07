@@ -1,4 +1,46 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.0
+Date: ???
+  Breaking Changes:
+    - Updated tidal powerplants to be solar panels modulated by surface properties, similar to wind turbines, adding variance to the output.
+    - Fixed incorrect temperature requirements from rounding in low-temperature uranium hexafluoride recipes
+    - Moved oleochemical input on on rubber-from-oleochemicals to south fluidbox for consistency with other rubber recipes. Reolves https://github.com/pyanodon/pybugreports/issues/1500
+    - [space-age] Fixed that uranium separation was not properly updated when decay was enabled. The recipe should be outputting ash, not using it...
+    - Nerfed uranium separation (without decay) to output u-238 67.5% of the time instead of 95% of the time (see below for relevant buffs)
+  Changes:
+    - Updated to Factorio 2.1
+    - Removed unnecessary prototype values to clear up the log
+    - Updated vector_to_place_result so items shouldn't drop on the floor. Resolves https://github.com/pyanodon/pybugreports/issues/1486
+    - Fixed that many buildings did not have certain pipe covers rendered
+    - Fixed that molten salt thermosolar would consume more energy the hotter the molten salt, without producing any more output. Resolves https://github.com/pyanodon/pybugreports/issues/1438
+    - Updated wind turbines to be solar panels modulated by surface properties instead of individual EEIs, significantly increasing performance. Resolves https://github.com/pyanodon/pybugreports/issues/499
+    - Converted solar panel mk02/mk03 to stateless visualizations from LuaRendering, increasing performance.
+    - Converted VAWTs to stateless visualizations from LuaRendering, increasing performance.
+    - Buffed VAWT Mk01 power output from 4MW to 4.8MW, on average
+    - Buffed VAWT Mk02 power output from 20MW to 24MW, on average
+    - Buffed VAWT Mk03 power output from 50MW to 150MW, on average
+    - Buffed VAWT Mk04 power output from 85MW to 270MW, on average
+    - Buffed HAWT Mk01 power output from 5MW to 6MW, on average
+    - Buffed HAWT Mk02 power output from 25MW to 30MW, on average
+    - Buffed HAWT Mk03 power output from 50MW to 150MW, on average
+    - Buffed HAWT Mk04 power output from 80MW to 240MW, on average
+    - Buffed Multiblade Mk01 power output from 550kW to 1.2MW, on average
+    - Buffed Multiblade Mk03 power output from 34MW to 90MW, on average
+    - Fixed that tidal powerplant collisions were larger than their visual area. Resolves https://github.com/pyanodon/pybugreports/issues/1428
+    - Fixed that tidal powerplant animations did not work.
+    - Buffed Tidal Mk01 power output from a constant 6MW to 8MW on average
+    - Buffed Tidal Mk02 power output from a constant 40MW to 60MW on average
+    - Buffed Tidal Mk03 power output from a constant 90MW to 160MW on average
+    - Buffed Tidal Mk04 power output from a constant 400MW to 500MW on average
+    - Fixed that the antisolar animation did not work
+    - Nuclear isotope processing recipes will inherit their decay state from ingredients where possible. Resolves https://github.com/pyanodon/pybugreports/issues/1327
+    - Buffed uranium separation to output 10 u-237 instead of 1
+    - Uranium separation now uses shared probability, so you will always get 10 items out for 10 items consumed
+    - Reduced most fluidbox sizes from 1000 to 100
+    - Returned the passthrough pipe connections to the High Pressure Steam Turbine Mk04
+    - Added the following entities to be hidden when visibility of tall entities is toggled: accumulator mk03, antimony drill, biomass powerplant, oil powerplant, electric boiler, megadar, nuclear reactor mk01 and mk02, simik boiler
+    - Allowed the superior floating locomotive, cargo wagon, and fluid wagon to be used with the upgrade planner to upgrade trains
+---------------------------------------------------------------------------------------------------
 Version: 3.1.38
 Date: 2026-06-08
   Changes:

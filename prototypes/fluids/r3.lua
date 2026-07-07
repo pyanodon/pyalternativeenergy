@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "r3",
-    category = "evaporator",
+    categories = {"evaporator"},
     enabled = false,
     energy_required = 10,
     ingredients = {

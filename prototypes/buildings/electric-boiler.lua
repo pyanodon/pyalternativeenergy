@@ -42,7 +42,7 @@ ITEM {
 RECIPE {
     name = "electric-boiler-water-to-steam",
     type = "recipe",
-    category = "electric-boiler",
+    categories = {"electric-boiler"},
     enabled = false,
     energy_required = 5,
     ingredients = {{
@@ -113,7 +113,6 @@ ENTITY {
     },
     collision_box = {{-1.29, -1.29}, {1.29, 1.29}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    forced_symmetry = "diagonal-pos",
     working_sound = {
         sound = {
             filename = "__base__/sound/boiler.ogg",
@@ -121,6 +120,7 @@ ENTITY {
         },
         max_sounds_per_prototype = 3
     },
+    tall = true,
     graphics_set = {
         working_visualisations = {{
             fadeout = true,
