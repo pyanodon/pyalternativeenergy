@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.0
-Date: ???
+Date: 2026-07-07
   Breaking Changes:
     - Updated tidal powerplants to be solar panels modulated by surface properties, similar to wind turbines, adding variance to the output.
     - Fixed incorrect temperature requirements from rounding in low-temperature uranium hexafluoride recipes
