@@ -47,6 +47,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
+    use_mirroring = true,
     module_slots = 3,
     allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"biomass-powerplant-mk03"},

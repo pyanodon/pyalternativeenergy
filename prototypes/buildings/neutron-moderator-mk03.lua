@@ -46,6 +46,7 @@ ENTITY {
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    use_mirroring = true,
     module_slots = 3,
     allowed_effects = {"speed", "consumption"},
     crafting_categories = {"neutron-moderator"},

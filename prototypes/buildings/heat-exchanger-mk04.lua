@@ -38,6 +38,7 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    use_mirroring = true,
     module_slots = 4,
     allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"heat-exchanger"},

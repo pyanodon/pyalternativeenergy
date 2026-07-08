@@ -48,6 +48,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
+    use_mirroring = true,
     module_slots = 0,
     allowed_effects = {},
     crafting_categories = {"nuclear-mox-fission"},

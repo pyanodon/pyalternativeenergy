@@ -48,6 +48,7 @@ ENTITY {
     collision_mask = {layers = {object = true, ground_tile = true, train = true}},
     collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
+    use_mirroring = true,
     draw_entity_info_icon_background = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},

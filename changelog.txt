@@ -1,9 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.2
+Date: ???
+  Changes:
+    - Fixed missing rendering on migrated wind turbines
+    - Restored mirroring for buildings
+---------------------------------------------------------------------------------------------------
 Version: 3.2.1
 Date: 2026-07-08
   Changes:
     - Fixed combustion recipes not being removed
-    - Fixed missing rendering on migrated wind turbines
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.0
 Date: 2026-07-07

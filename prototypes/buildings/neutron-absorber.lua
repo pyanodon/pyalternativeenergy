@@ -126,6 +126,7 @@ for i = 1, 4 do
         dying_explosion = "solar-panel-explosion",
         collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
         selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+        use_mirroring = true,
         crafting_categories = {"neutron-absorber"},
         crafting_speed = i,
         energy_source = {

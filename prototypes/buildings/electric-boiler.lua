@@ -113,6 +113,7 @@ ENTITY {
     },
     collision_box = {{-1.29, -1.29}, {1.29, 1.29}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    use_mirroring = true,
     working_sound = {
         sound = {
             filename = "__base__/sound/boiler.ogg",
