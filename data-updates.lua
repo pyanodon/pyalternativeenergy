@@ -132,7 +132,7 @@ for _, recipe in pairs(data.raw.recipe) do
     recipe:replace_ingredient("battery", "battery-mk01")
     recipe:replace_result("battery", "battery-mk01")
 
-    if recipe.category == "combustion" then
+    if table.find(recipe.categories or {}, "combustion") then
         recipe.hidden = true
         for t, tech in pairs(data.raw.technology) do
             if tech.effects ~= nil then
