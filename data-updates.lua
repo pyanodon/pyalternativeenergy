@@ -172,8 +172,8 @@ for _, name in pairs{
     local entity = data.raw["solar-panel"][name]
     entity.custom_tooltip_fields = entity.custom_tooltip_fields or {}
     entity.custom_tooltip_fields[#entity.custom_tooltip_fields+1] = {
-        name = {"entity-description.output-per-kmph"},
-        value = entity.production
+        name = {"entity-tooltip.output"},
+        value = {"entity-tooltip.output-per-kmph", entity.production}
     }
 end
 
