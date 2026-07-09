@@ -57,8 +57,8 @@ local tidal = ENTITY {
     placeable_position_visualization = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization),
     custom_tooltip_fields = {
         {
-            name = {"entity-description.output-per-meter"},
-            value = "16MW"
+        name = {"entity-tooltip.output"},
+        value = {"entity-tooltip.output-per-meter", "16MW"}
         }
     },
     created_effect = {
