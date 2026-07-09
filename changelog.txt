@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.2
-Date: ???
+Date: 2026-07-09
   Changes:
     - Fixed missing rendering on migrated wind turbines
     - Restored mirroring for buildings
