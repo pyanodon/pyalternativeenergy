@@ -192,6 +192,7 @@ end
 
 py.on_event(py.events.on_init(), function(event)
     storage.windmill = storage.windmill or {}
+    storage.last_windmill = nil
     for _, planet in pairs(game.planets) do
         -- reset properties
         if planet.surface then

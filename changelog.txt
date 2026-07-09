@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.3
+Date: ???
+  Changes:
+    - Fixed crash using an old key for iteration after turbine migration. Resolves https://github.com/pyanodon/pybugreports/issues/1512
+---------------------------------------------------------------------------------------------------
 Version: 3.2.2
 Date: 2026-07-09
   Changes:
