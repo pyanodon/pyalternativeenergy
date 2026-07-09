@@ -306,7 +306,7 @@ solar_panel.energy_source = {
     input_flow_limit = "0W",
     render_no_power_icon = false
 }
-solar_panel.production = "6MW"
+solar_panel.production = "5MW"
 solar_panel.performance_at_day = 1
 solar_panel.performance_at_night = 1
 solar_panel.solar_coefficient_property = "py-tide-height"
