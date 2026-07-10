@@ -259,7 +259,7 @@ Wind.events[61] = function()
         -- windspeed calculations
         local variance = planet.surface and planet.surface.get_property("py-wind-speed-variance")
         -- skip surfaces that do not change
-        if variance ~= 0 then
+        if variance and variance ~= 0 then
             local surface = planet.surface
             local min_speed = surface.get_property("py-wind-speed-min")
             local max_speed = surface.get_property("py-wind-speed-max")
