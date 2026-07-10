@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.3
-Date: ???
+Date: 2026-07-10
   Changes:
     - Fixed crash using an old key for iteration after turbine migration. Resolves https://github.com/pyanodon/pybugreports/issues/1512
     - Fixed missing locale and incorrect numbers in tooltips for tidals
