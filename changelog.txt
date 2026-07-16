@@ -3,6 +3,7 @@ Version: 3.2.4
 Date: ???
   Changes:
     - Fixed wind crash when planets have a nil surface
+    - Fixed that tidal variance was better than advertised. Resolves https://github.com/pyanodon/pybugreports/issues/1516
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.3
 Date: 2026-07-10

@@ -64,7 +64,7 @@ local sin = math.sin
 local pi = math.pi
 function Tidal.calculate_tide_height(variance)
     local x = game.tick / 30000 * variance
-    return (sin(2 * x) + 1 / 2 + sin(3 * pi * x) + sin(9 * pi * x)) / 6 + 0.5
+    return (sin(2 * x) + sin(3 * pi * x) + sin(9 * pi * x)) / 6 + 0.5
 end
 
 Tidal.events[83] = function()
