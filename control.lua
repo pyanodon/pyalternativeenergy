@@ -1,6 +1,5 @@
 require "__pypostprocessing__.lib"
 
-local farms = require "scripts/farming"
 local events = defines.events
 
 require "scripts/wiki/text-pages"
@@ -25,9 +24,6 @@ py.on_event(py.events.on_init(), function()
     storage.reactor_tanks = storage.reactor_tanks or {}
     storage.lrf_panels = storage.lrf_panels or {}
     storage.stirling = storage.stirling or {}
-    for farm, farm_data in pairs(farms) do
-        remote.call("pyfarm", "register", farm, farm_data.domain, farm_data.default_module)
-    end
 end)
 
 py.on_event(py.events.on_built(), function(event)
