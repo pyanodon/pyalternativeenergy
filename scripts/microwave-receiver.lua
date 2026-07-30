@@ -1,5 +1,5 @@
 local MAX_SATELLITES_PER_RECIEVER = 15
-local POWER_PRODUCTION_PER_SATELLITE_WATTS = 80000
+local POWER_PRODUCTION_PER_SATELLITE_WATTS = 800000
 
 py.on_event(py.events.on_init(), function()
     storage.microwave_receivers = storage.microwave_receivers or {}
