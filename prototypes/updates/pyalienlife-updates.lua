@@ -489,6 +489,14 @@ data.raw["assembling-machine"]["zipir-reef-mk04"].energy_usage = "4MW"
 -- new farm building
 py.mod_data.farm_buildings["fish-farm-turd"] = {default_module = "fish", domain = "animal"}
 
+-- new smart farm recipes
+py.mod_data.recipe_gui.subgroups["mova-super"] = true
+py.mod_data.recipe_gui.alt_icons["mova-super"] = "mova"
+
+-- slaughterhouse and rc recipes
+py.mod_data.recipe_gui.subgroups["numal"] = true
+py.mod_data.recipe_gui.subgroups["zungror"] = true
+
 --pySE
 if not mods["pystellarexpedition"] then return end
 data.raw["assembling-machine"]["arqad-hive-mk01-with-cags"].energy_usage = "1MW"
