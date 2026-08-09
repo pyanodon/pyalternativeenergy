@@ -1228,6 +1228,23 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "depressurize-steam",
+    categories = {"vacuum"},
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 1000},
+    },
+    results = {
+        {type = "fluid", name = "steam", amount = 500, temperature = 1000},
+    },
+    subgroup = "py-alternativeenergy-fluids",
+    order = "s"
+}:add_unlock("nonrenewable-mk01")
+
+--[[
+RECIPE {
+    type = "recipe",
     name = "pressured-steam-into-steam-150",
     categories = {"vacuum"},
     enabled = false,
@@ -1273,6 +1290,7 @@ RECIPE {
     subgroup = "py-alternativeenergy-fluids",
     order = "s"
 }:add_unlock("thermal-mk02")
+]] --
 
 -- This buffs a recipe by the same name in py high tech.
 RECIPE {
@@ -1308,11 +1326,11 @@ RECIPE {
 
 -- STEAM CONVERSION
 -- transfer high temperature steam into low temperature steam based on the energy density, minus some percent due to the laws of thermodynamics or something
-for fluid, metatable in pairs{
-  steam = {base = "water", temps = {150, 250, 500, 1000, 2000}, unlocks = {""}},
+for f, metatable in pairs{
+  steam = {base = "water", temps = {150, 250, 500, 1000, 2000}},
   ["pressured-steam"] = {base = "pressured-water", temps = {1000, 2000, 3000, 4000, 5000}}
 } do
-  local fluid = data.raw.fluid[fluid]
+  local fluid = data.raw.fluid[f]
   local base_temp = data.raw.fluid[metatable.base].default_temperature or 15
   local steam_amount = 200
   for i = 1, #metatable.temps - 1 do
@@ -1324,12 +1342,12 @@ for fluid, metatable in pairs{
       localised_name = {"recipe-name.steam-cooling-in-rhe", fluid.localised_name or {"fluid-name." .. fluid.name}, tostring(start_temp), tostring(end_temp)},
       categories = {"heat-exchanger"},
       enabled = false,
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
         {type = "fluid", name = fluid.name, amount = steam_amount, minimum_temperature = start_temp},
         {type = "fluid", name = metatable.base, amount = math.ceil(base_amount / 10) * 10}
       },
-      results = {{type = "fluid", name = fluid.name, amount = steam_amount + math.floor(base_amount / 10) * 10, temperature = end_temp}},
+      results = {{type = "fluid", name = fluid.name, amount = steam_amount + math.floor(0.8 * base_amount / 10) * 10, temperature = end_temp}},
       order = "c" .. i,
       icons = {
         {
@@ -1342,7 +1360,7 @@ for fluid, metatable in pairs{
           shift = {-7, 7}
         }
       }
-    }:add_unlock("nonrenewable-mk0" .. i)
+    }:add_unlock("nonrenewable-mk0" .. (fluid.name == "steam" and math.max(i-1, 1) or i))
   end
 end
 

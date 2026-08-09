@@ -3,6 +3,10 @@ Version: 3.2.5
 Date: ????
   Changes:
     - Integrated farming buildings into pYAlienLife mod-data interface
+    - Reduced steam cooling efficiency from ~95% to ~80%. Doubled steam cooling speed
+    - Merged steam depressurization recipes to a single recipe that converts 1kC pressurized steam to 1kC steam at ~25% efficiency
+    - Moved steam depressurization from thermosolar to non-renewables 1
+    - Moved non-pressurized steam cooling recipes to be available earlier
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
 Date: 2026-07-18
