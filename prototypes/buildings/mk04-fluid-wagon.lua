@@ -49,10 +49,9 @@ ENTITY {
     --damaged_trigger_effect = hit_effects.entity(),
     vertical_selection_shift = -0.5,
     fast_replaceable_group = "fluid-wagon",
-    weight = 400,
-    max_speed = 1.7,
-    braking_force = 25,
-    friction_force = 0.30,
+    weight = 900,
+    braking_force = 35,
+    friction_force = 0.20,
     air_resistance = 0.0050,
     connection_distance = 2,
     joint_distance = 1.5, --igual to collision box works if the sprite is tight in the png
