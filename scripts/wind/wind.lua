@@ -210,7 +210,7 @@ function Wind.draw_windmill(windmill_data, direction)
             animation = windmill_data.base_name .. direction,
             surface = windmill_data.entity.surface,
             target = windmill_data.entity,
-            render_layer = "higher-object-above"
+            render_layer = "object"
         }.id
     elseif windmill_data.direction ~= direction then
         windmill_data.direction = direction
@@ -220,7 +220,7 @@ function Wind.draw_windmill(windmill_data, direction)
             animation = windmill_data.base_name .. direction,
             surface = windmill_data.entity.surface,
             target = windmill_data.entity,
-            render_layer = "higher-object-above"
+            render_layer = "object"
         }.id
     end
 end
