@@ -61,7 +61,7 @@ ENTITY {
         maximum_temperature = 2000,
         fluid_box = {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
             filter = "molten-salt",
@@ -70,7 +70,7 @@ ENTITY {
         },
         output_fluid_box = {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {2.5, 7.5}, direction = defines.direction.south}}
@@ -162,14 +162,14 @@ ENTITY {
     fluid_boxes = {
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
             pipe_connections = {{flow_direction = "input", position = {2.5, -7.5}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {-2.5, -7.5}, direction = defines.direction.north}}

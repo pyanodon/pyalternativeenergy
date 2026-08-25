@@ -64,7 +64,7 @@ ENTITY {
                 {flow_direction = "input-output", position = {-3.0, 6.0},  direction = defines.direction.south},
                 {flow_direction = "input-output", position = {-3.0, -6.0}, direction = defines.direction.north}
             },
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             production_type = "input-output",
             filter = "uf6"
@@ -134,14 +134,14 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "input", position = {0.0, 6.0}, direction = defines.direction.south}}
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "input", position = {3.0, 6.0}, direction = defines.direction.south}}
@@ -149,7 +149,7 @@ ENTITY {
         --[[
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "input", position = {3.0, 6.0}, direction = defines.direction.south}}
@@ -157,14 +157,14 @@ ENTITY {
         ]] --
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {2.0, -6.0}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-2.0, -6.0}, direction = defines.direction.north}}
