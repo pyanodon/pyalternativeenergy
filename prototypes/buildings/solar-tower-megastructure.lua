@@ -223,7 +223,7 @@ ENTITY {
             volume = 100,
             pipe_connections = {},
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             production_type = "input",
             filter = "solar-concentration"
         },

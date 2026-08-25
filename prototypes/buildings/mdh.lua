@@ -64,7 +64,7 @@ ENTITY {
     fluid_box = {
         volume = 24000 / 60,
         pipe_covers = py.pipe_covers(true, true, true, true),
-        pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+        pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
         production_type = "input-output",
         filter = "neutron",
         minimum_temperature = 500.0,
