@@ -10,6 +10,7 @@ Date: ????
     - Updated superior floating fluid wagon pump connections to more accurately fit the graphics. Resolves https://github.com/pyanodon/pybugreports/issues/1532
     - Fixed misaligned pipe connection graphics. Resolves https://github.com/pyanodon/pybugreports/issues/1540
     - Fixed that wind turbines rendered above other buildings. Resolves https://github.com/pyanodon/pybugreports/issues/1555
+    - Added a recommended dependency on cargo bays and unloaders. Requires space age to use
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
 Date: 2026-07-18
