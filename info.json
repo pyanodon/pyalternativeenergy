@@ -16,7 +16,8 @@
         "(?) pyindustry",
         "! wret-beacon-rebalance-mod",
         "! ResearchFog",
-        "! omnimatter_energy"
+        "! omnimatter_energy",
+        "+ cargo-bays-and-unloaders"
     ],
     "package": {
         "ignore": [],
