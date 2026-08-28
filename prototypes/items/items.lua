@@ -948,8 +948,6 @@ ITEM {
     flags = {},
     fuel_value = "1000MJ",
     fuel_category = "quantum",
-    fuel_acceleration_multiplier = 3.5,
-    fuel_top_speed_multiplier = 2.5,
     burnt_result = "used-quantum-battery",
     subgroup = "py-battery-equipment",
     order = "d",

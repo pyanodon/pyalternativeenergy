@@ -8,6 +8,16 @@ Date: ????
     - Moved steam depressurization from thermosolar to non-renewables 1
     - Moved non-pressurized steam cooling recipes to be available earlier
     - Updated superior floating fluid wagon pump connections to more accurately fit the graphics. Resolves https://github.com/pyanodon/pybugreports/issues/1532
+    - Removed speed cap on superior floating locomotive, cargo wagon, and fluid wagon
+    - Increased superior floating locomotive weight from 900 to 1000
+    - Increased superior floating locomotive braking force from 25 to 81
+    - Decreased superior floating locomotive friction from 0.4 to 0.2
+    - Increased superior floating locomotive air resistance from 0.0025 to 0.003
+    - Increased superior floating cargo wagon and fluid wagon weight to 400 to 900
+    - Decreased superior floating cargo wagon and fluid wagon friction by from 0.3 to 0.2
+    - Increased superior floating cargo wagon and fluid wagon braking force from 25 to 35
+    - Removed speed bonus from quantum battery
+    - Transferred 3.5x fuel acceleration multiplier from quantum battery directly to the superior floating locomotive
     - Fixed misaligned pipe connection graphics. Resolves https://github.com/pyanodon/pybugreports/issues/1540
     - Fixed that wind turbines rendered above other buildings. Resolves https://github.com/pyanodon/pybugreports/issues/1555
     - Added a recommended dependency on cargo bays and unloaders. Requires space age to use
