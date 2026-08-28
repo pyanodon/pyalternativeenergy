@@ -18,6 +18,9 @@ Date: ????
     - Increased superior floating cargo wagon and fluid wagon braking force from 25 to 35
     - Removed speed bonus from quantum battery
     - Transferred 3.5x fuel acceleration multiplier from quantum battery directly to the superior floating locomotive
+    - Fixed misaligned pipe connection graphics. Resolves https://github.com/pyanodon/pybugreports/issues/1540
+    - Fixed that wind turbines rendered above other buildings. Resolves https://github.com/pyanodon/pybugreports/issues/1555
+    - Added a recommended dependency on cargo bays and unloaders. Requires space age to use
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
 Date: 2026-07-18
