@@ -56,6 +56,7 @@ ENTITY {
         input_flow_limit = "0W"
     },
     production = "100MW",
+    draw_stateless_visualisations_in_ghost = true,
     stateless_visualisation = {
         animation = {
             layers = {

@@ -54,6 +54,7 @@ ENTITY {
         type = "electric",
         usage_priority = "solar"
     },
+    draw_stateless_visualisations_in_ghost = true,
     stateless_visualisation = {
         animation = {
             layers = {

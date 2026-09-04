@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.7
+Date: ????
+  Changes:
+    - Fixed that VAWT mk01-4, solar panel mk02-3, and anti-solar were invisible when placed as ghosts. Resolves https://github.com/pyanodon/pybugreports/issues/1513
+---------------------------------------------------------------------------------------------------
 Version: 3.2.6
 Date: 2026-08-29
   Changes:
