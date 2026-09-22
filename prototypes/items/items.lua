@@ -30,7 +30,7 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 50,
-    fuel_category = "control-rod",
+    fuel_categories = {"control-rod"},
     fuel_value = "10MJ",
     burnt_result = "used-control-rod"
 }
@@ -947,7 +947,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     fuel_value = "1000MJ",
-    fuel_category = "quantum",
+    fuel_categories = {"quantum"},
     burnt_result = "used-quantum-battery",
     subgroup = "py-battery-equipment",
     order = "d",
