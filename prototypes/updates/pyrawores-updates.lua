@@ -184,7 +184,7 @@ ITEM {
             }
         }
     },
-    fuel_category = "nuke",
+    fuel_categories = {"nuke"},
     fuel_value = "1.21GJ",
     fuel_acceleration_multiplier = 2.5,
     fuel_top_speed_multiplier = 2,
