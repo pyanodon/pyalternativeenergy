@@ -3,6 +3,7 @@ Version: 3.2.8
 Date: ????
   Changes:
     - Marked VAWTs to be hidden when visibility of tall entities is toggled
+    - Changed to ItemPrototype.fuel_categories
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.7
 Date: 2026-09-16
