@@ -1,3 +1,10 @@
+---@namespace PyAlternativeenergy
+---@type PyAlternativeenergyStorage
+storage = storage --[[@as PyAlternativeenergyStorage]]
+
+---@class (partial) PyAlternativeenergyStorage
+---@field tidal_plants table
+
 Tidal = {}
 Tidal.events = {}
 
@@ -5,7 +12,7 @@ py.on_event(py.events.on_init(), function()
     storage.tidal_plants = storage.tidal_plants or {}
     for _, planet in pairs(game.planets) do
         -- reset properties
-        if planet.surface then
+        if planet.surface and planet.prototype.surface_properties then
             planet.surface.set_property("py-tide-height-variance", planet.prototype.surface_properties["py-tide-height-variance"] or planet.surface.get_property("py-tide-height-variance"))
             planet.surface.set_property("py-tide-height-min", planet.prototype.surface_properties["py-tide-height-min"] or planet.surface.get_property("py-tide-height-min"))
             planet.surface.set_property("py-tide-height-max", planet.prototype.surface_properties["py-tide-height-max"] or planet.surface.get_property("py-tide-height-max"))
@@ -72,7 +79,7 @@ Tidal.events[83] = function()
         -- tide height calculations
         local variance = planet.surface and planet.surface.get_property("py-tide-height-variance")
         -- skip surfaces that do not change
-        if variance and variance ~= 0 then
+        if variance and variance ~= 0 and planet.surface then
             local min_height = planet.surface.get_property("py-tide-height-min")
             local max_height = planet.surface.get_property("py-tide-height-max")
             local tide_height = Tidal.calculate_tide_height(variance) * (max_height - min_height) + min_height -- adjusted to [min, max]

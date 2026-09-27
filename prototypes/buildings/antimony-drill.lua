@@ -283,6 +283,6 @@ for i = 1, 4 do
         legacy_entity.resource_searching_radius = 4.49
         legacy_entity.effect_receiver = nil
         legacy_entity.localised_description = {"entity-description.antimony-drill-mk0" .. i}
-        data:extend {legacy_entity}
+        data:extend {legacy_entity--[[@as data.EntityPrototype]]}
     end
 end

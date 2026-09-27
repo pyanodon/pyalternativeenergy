@@ -29,7 +29,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "numal", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -38,7 +38,7 @@ py.autorecipes {
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "brain",           amount = BASE_BRAIN},
 				{name = "numal-ink",       amount = BASE_SPECIAL},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "numal-mk01",
 			name = "full-render-num",

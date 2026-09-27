@@ -277,7 +277,7 @@ RECIPE("tailings-classification"):remove_unlock("separation")
 RECIPE("tailings-classification"):add_unlock("fluid-processing-machines-1").categories = {"solid-separator"}
 data.raw.recipe["tailings-classification"].energy_required = 1
 data.raw.recipe["tailings-classification"].results = {
-    data.raw.recipe["tailings-classification"].results[1],
+    data.raw.recipe["tailings-classification"].results--[[@cast -?]][1],
     {type = "item", name = "ore-titanium", amount = 1},
     {type = "item", name = "ore-tin",      amount = 1},
 }
