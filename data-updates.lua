@@ -50,17 +50,17 @@ RECIPE("tar-to-nickel"):set_fields {energy_required = 10}
 RECIPE("honey-comb"):set_fields {energy_required = 1}
 RECIPE("honey-comb-buffed"):set_fields {energy_required = 3}
 
-data.raw.technology["pyrrhic"]:add_prereq("mass-production")
-data.raw.technology["pyrrhic"]:add_prereq("machines-mk05")
-data.raw.technology["pyrrhic"]:add_prereq("oil-machines-mk04")
-data.raw.technology["pyrrhic"]:add_prereq("smelters-mk04")
-data.raw.technology["pyrrhic"]:add_prereq("nuclear-power-mk04")
-data.raw.technology["pyrrhic"]:add_prereq("electronics-machines-4")
-data.raw.technology["pyrrhic"]:add_prereq("tholin-mk04")
-data.raw.technology["pyrrhic"]:add_prereq("land-animals-mk05")
-data.raw.technology["pyrrhic"]:add_prereq("mycology-mk05")
-data.raw.technology["pyrrhic"]:add_prereq("botany-mk04")
-data.raw.technology["pyrrhic"]:add_prereq("biotech-machines-mk04")
+TECHNOLOGY("pyrrhic"):add_prereq("mass-production")
+TECHNOLOGY("pyrrhic"):add_prereq("machines-mk05")
+TECHNOLOGY("pyrrhic"):add_prereq("oil-machines-mk04")
+TECHNOLOGY("pyrrhic"):add_prereq("smelters-mk04")
+TECHNOLOGY("pyrrhic"):add_prereq("nuclear-power-mk04")
+TECHNOLOGY("pyrrhic"):add_prereq("electronics-machines-4")
+TECHNOLOGY("pyrrhic"):add_prereq("tholin-mk04")
+TECHNOLOGY("pyrrhic"):add_prereq("land-animals-mk05")
+TECHNOLOGY("pyrrhic"):add_prereq("mycology-mk05")
+TECHNOLOGY("pyrrhic"):add_prereq("botany-mk04")
+TECHNOLOGY("pyrrhic"):add_prereq("biotech-machines-mk04")
 
 RECIPE {
     type = "recipe",
@@ -129,10 +129,9 @@ RECIPE("subcritical-water-01").categories = {"heat-exchanger"}
 RECIPE("subcritical-water-02").categories = {"heat-exchanger"}
 
 for _, recipe in pairs(data.raw.recipe) do
-    recipe:replace_ingredient("battery", "battery-mk01")
-    recipe:replace_result("battery", "battery-mk01")
+    RECIPE(recipe):replace_ingredient("battery", "battery-mk01"):replace_result("battery", "battery-mk01")
 
-    if table.find(recipe.categories or {}, "combustion") then
+    if RECIPE(recipe):has_category("combustion") then
         recipe.hidden = true
         for t, tech in pairs(data.raw.technology) do
             if tech.effects ~= nil then
@@ -205,7 +204,7 @@ if feature_flags.space_travel and not data.raw.armor["mech-armor"] then
     data.raw.armor["power-armor-mk2"].provides_flight = true
 end
 
-data.raw.technology["oil-processing"]:add_pack("logistic-science-pack")
+TECHNOLOGY("oil-processing"):add_pack("logistic-science-pack")
 
 --gather recipes for module changes
 local recipes_list =
