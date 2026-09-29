@@ -1,8 +1,19 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.2.7
+Version: 3.2.9
 Date: ????
   Changes:
     - Updated German locale (thanks, Spunk42!)
+---------------------------------------------------------------------------------------------------
+Version: 3.2.8
+Date: 2026-09-22
+  Changes:
+    - Marked VAWTs to be hidden when visibility of tall entities is toggled
+    - Changed to ItemPrototype.fuel_categories
+---------------------------------------------------------------------------------------------------
+Version: 3.2.7
+Date: 2026-09-16
+  Changes:
+    - Fixed that VAWT mk01-4, solar panel mk02-3, and anti-solar were invisible when placed as ghosts. Resolves https://github.com/pyanodon/pybugreports/issues/1513
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.6
 Date: 2026-08-29

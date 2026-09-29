@@ -64,6 +64,8 @@ ENTITY {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/vawt-turbine-mk04.ogg", volume = 0.65},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/vawt-turbine-mk04.ogg", volume = 0.45},
     },
+    draw_stateless_visualisations_in_ghost = true,
+    tall = true,
     stateless_visualisation = {
         animation = {
             sheets = {

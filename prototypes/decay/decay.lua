@@ -47,7 +47,7 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mip/floraspollinin-4.png", scale = 1.2},
     },
     fuel_value = "450kJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }:spoil("biomass", 200 * minute)
 
 RECIPE {

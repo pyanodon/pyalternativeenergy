@@ -134,7 +134,7 @@ end
 ITEM("native-flora"):spoil("floraspollinin", 200 * minute)
 
 ITEM("native-flora").fuel_value = "175kJ"
-ITEM("native-flora").fuel_category = "biomass"
+ITEM("native-flora").fuel_categories = {"biomass"}
 
 -- This shouldn't be a thing, as much as I love spoilage waiting for multiple hours for jerky is not fun!
 -- RECIPE("dried-meat-01"):remove_unlock("rendering")
