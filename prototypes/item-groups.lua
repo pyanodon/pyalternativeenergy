@@ -39,6 +39,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-molten-salt",
+        group = "py-alternativeenergy",
+        order = "bb"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-items",
         group = "py-alternativeenergy",
         order = "bc"

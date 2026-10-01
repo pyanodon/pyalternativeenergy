@@ -9,7 +9,7 @@ FLUID {
     max_temperature = 5000,
     heat_capacity = "1kJ",
     gas_temperature = 5000,
-    subgroup = "py-alternativeenergy-fluids",
-    order = "z-[molten-salt-hot]",
+    subgroup = "py-alternativeenergy-molten-salt",
+    order = "z-b[molten-salt-hot]",
     auto_barrel = false
 }
