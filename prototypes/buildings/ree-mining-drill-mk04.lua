@@ -29,7 +29,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk04",
-    order = "a",
+    order = "b",
     place_result = "ree-mining-drill-mk04",
     stack_size = 10
 }

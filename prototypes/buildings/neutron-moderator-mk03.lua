@@ -29,7 +29,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk03",
-    order = "a",
+    order = "eb",
     place_result = "neutron-moderator-mk03",
     stack_size = 10
 }

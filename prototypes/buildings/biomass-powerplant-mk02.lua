@@ -29,7 +29,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk02",
-    order = "a",
+    order = "dc",
     place_result = "py-biomass-powerplant-mk02",
     stack_size = 10
 }

@@ -23,7 +23,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk02",
-    order = "d",
+    order = "fc",
     place_result = "hawt-turbine-mk02",
     stack_size = 10
 }

@@ -28,7 +28,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk03",
-    order = "d",
+    order = "fe",
     place_result = "solar-panel-mk03",
     stack_size = 10
 }
