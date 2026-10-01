@@ -1436,7 +1436,7 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e9.png", scale = 0.66},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alienlife-creature-product",
     order = "aaa",
     stack_size = 100
 }
