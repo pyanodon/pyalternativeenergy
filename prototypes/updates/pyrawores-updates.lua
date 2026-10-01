@@ -450,7 +450,7 @@ while enrichment < 100 do
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238 * 100)},
         },
         main_product = "uf6",
-        subgroup = "py-rawores-uranium",
+        subgroup = "py-rawores-uranium-uf6",
         order = string.format("uranium-%02u", recipe_num),
         localised_name = {"recipe-name.uf6", name},
         icon = "__pyalternativeenergygraphics__/graphics/icons/ut" .. t .. "-" .. l .. ".png",

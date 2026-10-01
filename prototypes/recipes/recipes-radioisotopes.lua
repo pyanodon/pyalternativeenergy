@@ -24,8 +24,8 @@ RECIPE {
         {type = "item", name = "u-238", amount = 10, shared_probability = {min = 0.325, max = 1.000}},
     },
     main_product = "u-238",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "92-238"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -42,8 +42,8 @@ RECIPE {
         {type = "item", name = "u-233", amount = 5, independent_probability = 0.999},
     },
     main_product = "u-233",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "92-233"
 }:add_unlock("nuclear-power-mk04")
 
 RECIPE {
@@ -59,9 +59,9 @@ RECIPE {
     results = {
         {type = "item", name = "u-235", amount = 8, independent_probability = 0.999},
     },
-    -- main_product = "u-233",
-    subgroup = "py-nuclear",
-    order = "b"
+    main_product = "u-235",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-235"
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -79,8 +79,8 @@ RECIPE {
         {type = "item", name = "u-237", amount = 1,  independent_probability = 0.1}
     },
     main_product = "u-237",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "92-237"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -98,8 +98,8 @@ RECIPE {
         {type = "item", name = "u-238",  amount = 1,  independent_probability = 0.001}
     },
     main_product = "pu-238",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-238"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -117,8 +117,8 @@ RECIPE {
         {type = "item", name = "u-237",  amount = 1, independent_probability = 0.01}
     },
     main_product = "pu-239",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-239"
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -136,8 +136,8 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 20}
     },
     main_product = "po-210",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "84-210"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -214,9 +214,7 @@ RECIPE {
         {type = "item", name = "u-238",           amount = 10},
         {type = "item", name = "plutonium-oxide", amount = 14}
     },
-    main_product = "plutonium-oxide",
-    subgroup = "py-nuclear",
-    order = "t",
+    main_product = "plutonium-oxide"
 }:add_unlock("uranium-processing")
 
 
@@ -237,8 +235,8 @@ RECIPE {
         {type = "item", name = "pu-242", amount = 15, independent_probability = 0.5},
     },
     main_product = "pu-239",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-239"
 }:add_unlock("uranium-processing")
 
 RECIPE {
@@ -255,8 +253,8 @@ RECIPE {
         {type = "item", name = "pu-239", amount = 8},
     },
     main_product = "pu-239",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-239"
 }:add_unlock("nuclear-power-mk02")
 
 -- notnotmelon 7/17/2025: Added new plutonium shuffling recipes to convert any excess plutonium isotopes into more useful forms.
@@ -353,8 +351,8 @@ RECIPE {
         {type = "item", name = "pu-240", amount = 20},
     },
     main_product = "pu-240",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-240"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -371,8 +369,8 @@ RECIPE {
         {type = "item", name = "pu-241", amount = 40},
     },
     main_product = "pu-241",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-241"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -391,8 +389,8 @@ RECIPE {
         {type = "item", name = "am-241", amount = 4},
     },
     main_product = "pu-242",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-242"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -410,8 +408,8 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 10},
     },
     main_product = "am-243",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "95-243"
 }:add_unlock("nuclear-power")
 
 
@@ -431,8 +429,8 @@ RECIPE {
         {type = "item", name = "am-243", amount = 5, independent_probability = 0.5},
     },
     main_product = "am-241",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "95-241"
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -449,8 +447,8 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 20},
     },
     main_product = "pu-238",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-238"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -467,8 +465,8 @@ RECIPE {
         {type = "fluid", name = "helium", amount = 10},
     },
     main_product = "pu-239",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-239"
 }:add_unlock("nuclear-power-mk02")
 
 --Curium
@@ -487,8 +485,8 @@ RECIPE {
         {type = "fluid", name = "neutron", amount = 200, temperature = 100},
     },
     main_product = "cm-250",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "96-250"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -503,7 +501,5 @@ RECIPE {
     results = {
         {type = "fluid", name = "neutron", amount = 2000, temperature = 100},
     },
-    main_product = "neutron",
-    subgroup = "py-nuclear",
-    order = "b"
+    main_product = "neutron"
 }:add_unlock("nuclear-power-mk02")

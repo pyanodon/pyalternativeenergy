@@ -11,9 +11,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "molten-fluoride-thorium", amount = 100}
-    },
-    subgroup = "py-nuclear",
-    order = "g"
+    }
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -32,9 +30,7 @@ RECIPE {
         {type = "fluid", name = "molten-fluoride-thorium-pa233", amount = 1000},
         {type = "fluid", name = "neutron",                       amount = 250, temperature = 100},
     },
-    main_product = "molten-fluoride-thorium-pa233",
-    subgroup = "py-nuclear",
-    order = "g"
+    main_product = "molten-fluoride-thorium-pa233"
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -53,15 +49,15 @@ RECIPE {
         {type = "item",  name = "pa-233",                  amount = 10}
     },
     main_product = "pa-233",
-    subgroup = "py-nuclear",
-    order = "g"
+    subgroup = "py-nuclear-isotopes",
+    order = "91-233"
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
     type = "recipe",
     name = "pa233-u233",
     categories = {"neutron-absorber"},
-    enabled = false,
+    enabled = true,
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "pa-233", amount = 10},
@@ -70,7 +66,7 @@ RECIPE {
         {type = "item", name = "u-233", amount = 10}
     },
     main_product = "u-233",
-    subgroup = "py-nuclear",
+    subgroup = "py-alternativeenergy-parts",
     order = "g"
 }:add_unlock("nuclear-power-mk03")
 
@@ -86,7 +82,5 @@ RECIPE {
     results = {
         {type = "fluid", name = "uf6", amount = 10, temperature = 9999}
     },
-    main_product = "uf6",
-    subgroup = "py-nuclear",
-    order = "g"
+    main_product = "uf6"
 }:add_unlock("nuclear-power-mk03")

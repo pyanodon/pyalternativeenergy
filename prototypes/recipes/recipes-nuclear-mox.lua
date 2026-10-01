@@ -77,9 +77,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "puo2", amount = 250, temperature = 9999}
     },
-    main_product = "puo2",
-    subgroup = "py-nuclear",
-    order = "g"
+    main_product = "puo2"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -97,9 +95,7 @@ RECIPE {
         {type = "item",  name = "high-energy-waste-2", amount = 80},
         {type = "fluid", name = "salt-solution",       amount = 800}
     },
-    main_product = "high-energy-waste-2",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "high-energy-waste-2"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -115,9 +111,7 @@ RECIPE {
     results = {
         {type = "item", name = "plutonium-oxide-mox", amount = 20}
     },
-    main_product = "plutonium-oxide-mox",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "plutonium-oxide-mox"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -137,6 +131,6 @@ RECIPE {
         {type = "item", name = "pu-242", amount = 150, independent_probability = 0.6},
     },
     main_product = "pu-242",
-    subgroup = "py-nuclear",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "94-244"
 }:add_unlock("nuclear-power")

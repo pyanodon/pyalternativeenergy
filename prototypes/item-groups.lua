@@ -93,15 +93,33 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-nuclear-waste",
+        name = "py-nuclear-isotopes",
         group = "py-alternativeenergy",
-        order = "nw"
+        order = "ni"
     },
     {
         type = "item-subgroup",
         name = "py-nuclear",
         group = "py-alternativeenergy",
         order = "nu"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-nuclear-waste",
+        group = "py-alternativeenergy",
+        order = "nw"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-nuclear-waste-fluids",
+        group = "py-alternativeenergy",
+        order = "nx"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-nuclear-purex",
+        group = "py-alternativeenergy",
+        order = "ny"
     },
     {
         type = "item-subgroup",
@@ -232,9 +250,15 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-rawores-uranium-depleted",
+        name = "py-rawores-uranium-uf6",
         group = "py-rawores",
         order = "bma"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-rawores-uranium-depleted",
+        group = "py-rawores",
+        order = "bmb"
     },
 }
 

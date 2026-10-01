@@ -9,6 +9,6 @@ FLUID {
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 1000,
     --gas_temperature = 15,
-    subgroup = "py-nuclear",
-    order = "c"
+    subgroup = "py-nuclear-waste-fluids",
+    order = "aa"
 }
