@@ -667,8 +667,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-plate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-lithium-processing",
+    order = "u",
     stack_size = 100
 }
 
@@ -1801,8 +1801,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-hydroxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-lithium-processing",
+    order = "t",
     stack_size = 100
 }
 
@@ -1812,8 +1812,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-carbonate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-lithium-processing",
+    order = "s",
     stack_size = 100
 }
 

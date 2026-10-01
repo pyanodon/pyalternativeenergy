@@ -45,6 +45,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-lithium-processing",
+        group = "py-alternativeenergy",
+        order = "bbx"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-items",
         group = "py-alternativeenergy",
         order = "bc"
@@ -132,3 +138,5 @@ data:extend {
 
 data.raw.item["engine-unit"].subgroup = "py-alternativeenergy-engine-units"
 data.raw.item["electric-engine-unit"].subgroup = "py-alternativeenergy-engine-units"
+data.raw.item["lithium-peroxide"].subgroup = "py-alternativeenergy-lithium-processing"
+data.raw.item["lithium-peroxide"].order = "v"
