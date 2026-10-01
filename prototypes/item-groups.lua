@@ -63,6 +63,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-chemicals",
+        group = "py-alternativeenergy",
+        order = "bc-a"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-carbon-fiber",
         group = "py-alternativeenergy",
         order = "bca"
@@ -271,6 +277,12 @@ data:extend {
         name = "py-rawores-uranium-depleted",
         group = "py-rawores",
         order = "bmb"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-bioash",
+        group = "py-rawores",
+        order = "xc"
     },
 }
 
