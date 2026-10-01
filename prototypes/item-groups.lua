@@ -99,6 +99,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-metals",
+        group = "py-alternativeenergy",
+        order = "bg"
+    },
+    {
+        type = "item-subgroup",
         name = "py-rawores-thorium",
         group = "py-rawores",
         order = "br"
@@ -246,6 +252,12 @@ data:extend {
         name = "py-alternativeenergy-engine-units",
         group = "py-alternativeenergy",
         order = "zz"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-tech",
+        group = "py-alternativeenergy",
+        order = "zzz"
     },
     --SPECIALS--
     {
