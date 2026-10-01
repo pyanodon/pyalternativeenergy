@@ -81,6 +81,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-photonics",
+        group = "py-alternativeenergy",
+        order = "bcc"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-intermetallics-1-2",
         group = "py-alternativeenergy",
         order = "bd"
@@ -101,19 +107,7 @@ data:extend {
         type = "item-subgroup",
         name = "py-alternativeenergy-metals",
         group = "py-alternativeenergy",
-        order = "bg"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-rawores-thorium",
-        group = "py-rawores",
-        order = "br"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-rawores-gd",
-        group = "py-rawores",
-        order = "bs"
+        order = "bh"
     },
     {
         type = "item-subgroup",
@@ -253,12 +247,6 @@ data:extend {
         group = "py-alternativeenergy",
         order = "zz"
     },
-    {
-        type = "item-subgroup",
-        name = "py-alternativeenergy-tech",
-        group = "py-alternativeenergy",
-        order = "zzz"
-    },
     --SPECIALS--
     {
         type = "item-subgroup",
@@ -271,6 +259,18 @@ data:extend {
         name = "py-alternativeenergy-thermosolar",
         group = "py-alternativeenergy",
         order = "ae"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-rawores-thorium",
+        group = "py-rawores",
+        order = "br"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-rawores-gd",
+        group = "py-rawores",
+        order = "bs"
     },
     {
         type = "item-subgroup",
@@ -296,6 +296,12 @@ data:extend {
         group = "py-rawores",
         order = "xc"
     },
+    {
+        type = "item-subgroup",
+        name = "py-hightech-silicon-processing",
+        group = "py-hightech",
+        order = "da"
+    },
 }
 
 data.raw.item["engine-unit"].subgroup = "py-alternativeenergy-engine-units"
@@ -303,3 +309,9 @@ data.raw.item["electric-engine-unit"].subgroup = "py-alternativeenergy-engine-un
 data.raw.item["electric-engine-unit"].order = "i[electric-engine-unit]c"
 data.raw.item["lithium-peroxide"].subgroup = "py-alternativeenergy-lithium-processing"
 data.raw.item["lithium-peroxide"].order = "v"
+data.raw.item["sodium-silicate"].subgroup = "py-hightech-silicon-processing"
+data.raw.item["sodium-silicate"].order = "ad"
+data.raw.item["silica-powder"].subgroup = "py-hightech-silicon-processing"
+data.raw.item["silica-powder"].order = "ae"
+data.raw.item["silicon"].subgroup = "py-hightech-silicon-processing"
+data.raw.item["silicon"].order = "af"
