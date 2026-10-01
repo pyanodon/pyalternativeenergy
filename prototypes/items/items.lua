@@ -733,7 +733,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/anti-reflex-glass.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "aae",
     stack_size = 100
 }
@@ -744,7 +744,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-cell.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "aae",
     stack_size = 100
 }
@@ -766,7 +766,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/passivation-layer.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "aae",
     stack_size = 100
 }
@@ -821,7 +821,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-cell.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "aae",
     stack_size = 100
 }
@@ -1513,7 +1513,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transparent-anode.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "aae",
     stack_size = 100
 }
@@ -1845,7 +1845,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/pan.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-carbon-fiber",
     order = "ba",
     stack_size = 100
 }
@@ -1856,7 +1856,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/oxidized-pan-fiber.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-carbon-fiber",
     order = "ba",
     stack_size = 100
 }
@@ -1867,7 +1867,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/pre-cf.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-carbon-fiber",
     order = "ba",
     stack_size = 100
 }
@@ -1878,7 +1878,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf1.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-carbon-fiber",
     order = "ba",
     stack_size = 100
 }
@@ -1889,7 +1889,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf2.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-carbon-fiber",
     order = "ba",
     stack_size = 100
 }
@@ -1900,7 +1900,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/dry-cf.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-carbon-fiber",
     order = "ba",
     stack_size = 100
 }
@@ -1911,7 +1911,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-carbon-fiber",
     order = "ba",
     stack_size = 100
 }
@@ -2142,7 +2142,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/rpc-mesh.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "ca",
     stack_size = 100
 }
@@ -2153,7 +2153,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nano-mesh.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "ca",
     stack_size = 100
 }
@@ -2410,7 +2410,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/polished-glass-surface.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "da",
     stack_size = 100
 }
@@ -2421,7 +2421,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/clean-glass-sheet.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "da",
     stack_size = 100
 }
@@ -2443,7 +2443,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/prepared-glass.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "da",
     stack_size = 100
 }
@@ -2454,7 +2454,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/crude-mirror.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "da",
     stack_size = 100
 }
@@ -2487,7 +2487,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "da",
     stack_size = 100
 }
@@ -2498,7 +2498,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "dab",
     stack_size = 100
 }
@@ -2509,7 +2509,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "dac",
     stack_size = 100
 }
@@ -2520,7 +2520,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "dad",
     stack_size = 100
 }
@@ -2542,7 +2542,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/axis-tracker.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-parts",
     order = "da",
     stack_size = 100
 }
@@ -2553,7 +2553,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/acrylic.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "dae",
     stack_size = 100
 }
@@ -2776,7 +2776,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/stirling-engine.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-parts",
     order = "eaa",
     stack_size = 10
 }
@@ -2787,7 +2787,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/regenerator.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-parts",
     order = "eab",
     stack_size = 10
 }
@@ -2798,7 +2798,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/heatsink.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-parts",
     order = "eac",
     stack_size = 10
 }
@@ -2809,7 +2809,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/displacer.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-parts",
     order = "ead",
     stack_size = 10
 }

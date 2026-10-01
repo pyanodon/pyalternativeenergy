@@ -63,6 +63,18 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-carbon-fiber",
+        group = "py-alternativeenergy",
+        order = "bca"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-panes",
+        group = "py-alternativeenergy",
+        order = "bcb"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-intermetallics-1-2",
         group = "py-alternativeenergy",
         order = "bd"
