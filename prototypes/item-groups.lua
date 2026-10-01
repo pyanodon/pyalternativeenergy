@@ -240,5 +240,6 @@ data:extend {
 
 data.raw.item["engine-unit"].subgroup = "py-alternativeenergy-engine-units"
 data.raw.item["electric-engine-unit"].subgroup = "py-alternativeenergy-engine-units"
+data.raw.item["electric-engine-unit"].order = "i[electric-engine-unit]c"
 data.raw.item["lithium-peroxide"].subgroup = "py-alternativeenergy-lithium-processing"
 data.raw.item["lithium-peroxide"].order = "v"

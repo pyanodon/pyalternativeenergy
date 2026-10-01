@@ -1923,7 +1923,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "i[electric-engine-unit]",
+    order = "i[electric-engine-unit]a",
     stack_size = 100
 }
 
@@ -1934,7 +1934,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "i[electric-engine-unit]",
+    order = "i[electric-engine-unit]b",
     stack_size = 100
 }
 
@@ -2033,7 +2033,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "j[electric-engine-unit]",
+    order = "j[electric-engine-unit]b",
     stack_size = 100
 }
 
@@ -2044,7 +2044,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "j[electric-engine-unit]",
+    order = "j[electric-engine-unit]c",
     stack_size = 100
 }
 
@@ -2055,7 +2055,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "j[electric-engine-unit]",
+    order = "j[electric-engine-unit]a",
     stack_size = 100
 }
 
