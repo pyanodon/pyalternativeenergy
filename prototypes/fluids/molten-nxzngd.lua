@@ -9,6 +9,6 @@ FLUID {
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 100,
     gas_temperature = 15,
-    subgroup = "py-alternativeenergy-intermetallics-3",
-    order = "z",
+    subgroup = "py-alternativeenergy-intermetallics-4",
+    order = "ya",
 }

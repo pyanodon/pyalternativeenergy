@@ -63,21 +63,21 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alternativeenergy-intermetallics-1",
+        name = "py-alternativeenergy-intermetallics-1-2",
         group = "py-alternativeenergy",
         order = "bd"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alternativeenergy-intermetallics-2",
-        group = "py-alternativeenergy",
-        order = "be"
     },
     {
         type = "item-subgroup",
         name = "py-alternativeenergy-intermetallics-3",
         group = "py-alternativeenergy",
         order = "bf"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-intermetallics-4",
+        group = "py-alternativeenergy",
+        order = "bg"
     },
     {
         type = "item-subgroup",
