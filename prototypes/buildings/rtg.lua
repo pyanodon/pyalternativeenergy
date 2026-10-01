@@ -26,7 +26,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
-    order = "a",
+    order = "d",
     place_result = "py-rtg",
     stack_size = 10
 }

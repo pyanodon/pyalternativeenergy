@@ -605,7 +605,7 @@ for _, layer in pairs(data.raw["mining-drill"]["uranium-mine"].graphics_set.anim
 end
 data.raw["mining-drill"]["uranium-mine"].input_fluid_box = nil
 ITEM("uranium-mine").subgroup = "py-alternativeenergy-special-buildings"
-ITEM("uranium-mine").order = "s[uranium]b"
+ITEM("uranium-mine").order = "aa"
 
 RECIPE("mibc"):remove_unlock("mibc"):add_unlock("titanium-mk02")
 data.raw.technology["mibc"] = nil

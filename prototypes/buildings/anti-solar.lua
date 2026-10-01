@@ -29,7 +29,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
-    order = "a",
+    order = "g",
     place_result = "anti-solar",
     stack_size = 10
 }

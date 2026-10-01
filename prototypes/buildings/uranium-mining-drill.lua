@@ -25,7 +25,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
-    order = "s[uranium]a",
+    order = "a",
     place_result = "uranium-mining-drill",
     stack_size = 10
 }

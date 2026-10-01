@@ -52,7 +52,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
-    order = "f",
+    order = "c",
     place_result = "aerial-base-combinator",
     stack_size = 10
 }
