@@ -111,6 +111,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-sc-engine",
+        group = "py-alternativeenergy",
+        order = "bi"
+    },
+    {
+        type = "item-subgroup",
         name = "py-nuclear-isotopes",
         group = "py-alternativeenergy",
         order = "ni"

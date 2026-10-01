@@ -1546,7 +1546,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/czts-slab.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "aae",
     stack_size = 100
 }
@@ -1557,7 +1557,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/czts-plate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "aae",
     stack_size = 100
 }
@@ -1955,7 +1955,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/fan.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -1977,7 +1977,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/magnetic-ring.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2021,7 +2021,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ybco-monocrystal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2032,7 +2032,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/air-duct.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2043,7 +2043,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cryostat.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2054,7 +2054,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cryocooler.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }

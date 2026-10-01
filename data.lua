@@ -308,8 +308,6 @@ require "prototypes.decay.decay"
 --(( OTHER ))
 require "prototypes.surface-properties"
 
-data.raw.fluid["crude-oil"].subgroup = "test"
-data.raw.fluid["gasoline"].subgroup = "test"
 data.raw.fluid["fatty-acids"].fuel_value = "1MJ"
 data.raw.fluid["hydrogen"].fuel_value = "100kJ"
 data.raw.fluid["pressured-hydrogen"].fuel_value = "1.25MJ"

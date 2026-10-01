@@ -97,8 +97,6 @@ RECIPE {
         {type = "fluid", name = "steam", amount = 300, temperature = 500},
     },
     main_product = "steam",
-    subgroup = "py-alternativeenergy-fluids",
-    order = "s"
 }:add_unlock("geothermal-power-mk01")
 
 RECIPE {
@@ -115,8 +113,6 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 1000},
     },
     main_product = "pressured-steam",
-    subgroup = "py-alternativeenergy-fluids",
-    order = "s"
 }:add_unlock("geothermal-power-mk02")
 
 RECIPE {
@@ -133,8 +129,6 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 100, temperature = 2000},
     },
     main_product = "pressured-steam",
-    subgroup = "py-alternativeenergy-fluids",
-    order = "s"
 }:add_unlock("geothermal-power-mk03")
 
 RECIPE {
@@ -151,6 +145,4 @@ RECIPE {
         {type = "fluid", name = "pressured-steam", amount = 125, temperature = 5000},
     },
     main_product = "pressured-steam",
-    subgroup = "py-alternativeenergy-fluids",
-    order = "s"
 }:add_unlock("geothermal-power-mk04")
