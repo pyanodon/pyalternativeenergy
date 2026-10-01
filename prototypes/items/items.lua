@@ -690,7 +690,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-hightech-silicon-processing",
-    order = "ba",
+    order = "bab",
     stack_size = 100
 }
 
@@ -701,7 +701,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-hightech-silicon-processing",
-    order = "bb",
+    order = "bbb",
     stack_size = 100
 }
 
@@ -711,8 +711,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/crucible.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "baa",
     stack_size = 100
 }
 
@@ -722,8 +722,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/diamond-wire.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "bba",
     stack_size = 100
 }
 
@@ -756,7 +756,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "aa",
     stack_size = 100
 }
 
@@ -789,7 +789,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "za",
     stack_size = 100
 }
 
@@ -904,8 +904,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/dbr.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "b",
     stack_size = 100
 }
 
@@ -916,7 +916,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "ae",
     stack_size = 100
 }
 
@@ -974,7 +974,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-photonics",
-    order = "aae",
+    order = "a",
     stack_size = 100
 }
 
@@ -1304,7 +1304,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-photonics",
-    order = "aae",
+    order = "f",
     stack_size = 100
 }
 
@@ -1315,7 +1315,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-photonics",
-    order = "i",
+    order = "g",
     stack_size = 100
 }
 
@@ -1326,7 +1326,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-photonics",
-    order = "f",
+    order = "e",
     stack_size = 100
 }
 
@@ -1337,7 +1337,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-photonics",
-    order = "aae",
+    order = "c",
     stack_size = 100
 }
 
@@ -1348,7 +1348,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-photonics",
-    order = "aae",
+    order = "d",
     stack_size = 100
 }
 
@@ -1359,7 +1359,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-photonics",
-    order = "aae",
+    order = "d",
     stack_size = 100
 }
 
@@ -1369,7 +1369,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/hardener.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-photonics",
+    subgroup = "py-alternativeenergy-chemicals",
     order = "aae",
     stack_size = 100
 }
@@ -1380,7 +1380,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/glycidylamine.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-photonics",
+    subgroup = "py-alternativeenergy-chemicals",
     order = "aae",
     stack_size = 100
 }
@@ -1392,7 +1392,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-photonics",
-    order = "aae",
+    order = "h",
     stack_size = 100
 }
 
@@ -1402,7 +1402,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/gaas.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-hightech-tier-4",
     order = "aae",
     stack_size = 100
 }
@@ -1448,7 +1448,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "ac",
     stack_size = 100
 }
 
@@ -1525,7 +1525,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "ad",
     stack_size = 100
 }
 
@@ -1536,7 +1536,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "ab",
     stack_size = 100
 }
 
@@ -1580,7 +1580,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    order = "af",
     stack_size = 100
 }
 
@@ -1681,7 +1681,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    order = "ba",
     stack_size = 100
 }
 
@@ -1692,7 +1692,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    order = "bb",
     stack_size = 100
 }
 
@@ -1703,7 +1703,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    order = "ca",
     stack_size = 100
 }
 
@@ -2121,7 +2121,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "zc",
     stack_size = 100
 }
 
@@ -2143,7 +2143,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "zb",
     stack_size = 100
 }
 
@@ -2187,7 +2187,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fa",
     stack_size = 100
 }
 
@@ -2198,7 +2198,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fb",
     stack_size = 100
 }
 
@@ -2242,7 +2242,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fc",
     stack_size = 100
 }
 
@@ -2253,7 +2253,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fd",
     stack_size = 100
 }
 
@@ -2275,7 +2275,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fe",
     stack_size = 100
 }
 
@@ -2432,8 +2432,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/polishing-wheel.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-parts",
+    order = "b",
     stack_size = 100
 }
 
@@ -2499,7 +2499,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-parts",
-    order = "da",
+    order = "a",
     stack_size = 100
 }
 
@@ -2733,7 +2733,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-parts",
-    order = "eaa",
+    order = "f",
     stack_size = 10
 }
 
@@ -2744,7 +2744,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-parts",
-    order = "eab",
+    order = "c",
     stack_size = 10
 }
 
@@ -2755,7 +2755,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-parts",
-    order = "eac",
+    order = "d",
     stack_size = 10
 }
 
@@ -2766,7 +2766,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-parts",
-    order = "ead",
+    order = "e",
     stack_size = 10
 }
 
