@@ -2888,8 +2888,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp108.png", scale = 0.6},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ga",
+    subgroup = "py-alternativeenergy-parts-mechanical-parts",
+    order = "1",
     stack_size = 100
 }
 
@@ -2910,8 +2910,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp208.png", scale = 0.6},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ga",
+    subgroup = "py-alternativeenergy-parts-mechanical-parts",
+    order = "2",
     stack_size = 100
 }
 
@@ -2932,8 +2932,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp308.png", scale = 0.60},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ga",
+    subgroup = "py-alternativeenergy-parts-mechanical-parts",
+    order = "3",
     stack_size = 100
 }
 
@@ -2954,8 +2954,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp408.png", scale = 0.60},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ga",
+    subgroup = "py-alternativeenergy-parts-mechanical-parts",
+    order = "4",
     stack_size = 100
 }
 

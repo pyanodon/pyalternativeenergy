@@ -105,6 +105,102 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-parts-additional-part", --all members are currently unused & hidden
+        group = "py-alternativeenergy",
+        order = "y"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-shaft",
+        group = "py-alternativeenergy",
+        order = "ya"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-gearbox",
+        group = "py-alternativeenergy",
+        order = "yb"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-brake",
+        group = "py-alternativeenergy",
+        order = "yc"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-controler",
+        group = "py-alternativeenergy",
+        order = "yd"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-utility-box",
+        group = "py-alternativeenergy",
+        order = "ye"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-electronics",
+        group = "py-alternativeenergy",
+        order = "yf"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-mechanical-parts",
+        group = "py-alternativeenergy",
+        order = "yg"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-anemometer",
+        group = "py-alternativeenergy",
+        order = "yh"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-vane",
+        group = "py-alternativeenergy",
+        order = "yi"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-tower",
+        group = "py-alternativeenergy",
+        order = "yj"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-blade",
+        group = "py-alternativeenergy",
+        order = "yk"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-rotor",
+        group = "py-alternativeenergy",
+        order = "yl"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-yaw-drive",
+        group = "py-alternativeenergy",
+        order = "ym"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-nacelle",
+        group = "py-alternativeenergy",
+        order = "yn"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-hydraulic-system",
+        group = "py-alternativeenergy",
+        order = "yo"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-parts",
         group = "py-alternativeenergy",
         order = "z"
