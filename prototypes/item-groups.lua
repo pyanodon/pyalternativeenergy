@@ -39,6 +39,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-organic-fluids",
+        group = "py-alternativeenergy",
+        order = "bax"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-molten-salt",
         group = "py-alternativeenergy",
         order = "bb"
