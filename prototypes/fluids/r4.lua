@@ -24,6 +24,6 @@ FLUID {
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 100,
     gas_temperature = 15,
-    subgroup = "py-alternativeenergy-fluids",
-    order = "c"
+    subgroup = "py-alternativeenergy-lithium-processing",
+    order = "r4"
 }

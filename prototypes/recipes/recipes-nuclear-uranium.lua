@@ -113,9 +113,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "control-rod", amount = 1}
-    },
-    subgroup = "py-nuclear",
-    order = "g"
+    }
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -149,7 +147,7 @@ RECIPE {
     },
     results = {},
     subgroup = "py-nuclear",
-    order = "g"
+    order = "c"
 }:add_unlock("nuclear-power")
 
 --PUREX
@@ -214,9 +212,7 @@ RECIPE {
         {type = "item",  name = "high-energy-waste-1", amount = 40},
         {type = "fluid", name = "salt-solution",       amount = 400}
     },
-    main_product = "high-energy-waste-1",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "high-energy-waste-1"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -231,9 +227,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "purex-concentrate-1", amount = 100}
-    },
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    }
 }:add_unlock("nuclear-power")
 
 
@@ -252,9 +246,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-2", amount = 60},
         {type = "fluid", name = "purex-waste-1",       amount = 30},
     },
-    main_product = "purex-concentrate-2",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-concentrate-2"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -272,9 +264,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-4", amount = 50},
         {type = "fluid", name = "purex-waste-1",       amount = 20},
     },
-    main_product = "purex-concentrate-3",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-concentrate-3"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -292,9 +282,7 @@ RECIPE {
         {type = "fluid", name = "purex-pu-concentrate-2", amount = 50},
         {type = "fluid", name = "purex-waste-1",          amount = 10},
     },
-    main_product = "purex-concentrate-5",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-concentrate-5"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -311,9 +299,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-4",   amount = 60},
         {type = "fluid", name = "purex-waste-1",         amount = 5},
     },
-    main_product = "purex-concentrate-4",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-concentrate-4"
 }:add_unlock("nuclear-power")
 
 --purex waste
@@ -333,9 +319,7 @@ RECIPE {
         {type = "fluid", name = "purex-waste-2",       amount = 40},
         {type = "item",  name = "sb-chloride",         amount = 5}
     },
-    main_product = "purex-waste-2",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-waste-2"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -352,9 +336,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-5", amount = 40},
         {type = "fluid", name = "purex-waste-3",       amount = 40},
     },
-    main_product = "purex-waste-3",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-waste-3"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -375,9 +357,7 @@ RECIPE {
         {type = "item",  name = "molybdenum-ore",        amount = 5},
         {type = "item",  name = "vitrified-glass",       amount = 1},
     },
-    main_product = "vitrified-glass",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "vitrified-glass"
 }:add_unlock("nuclear-power")
 
 
@@ -399,9 +379,7 @@ RECIPE {
         {type = "item",  name = "molybdenum-ore",        amount = 5},
         {type = "item",  name = "vitrified-glass",       amount = 1},
     },
-    main_product = "vitrified-glass",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "vitrified-glass"
 }:add_unlock("nuclear-power")
 
 
@@ -422,9 +400,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-3",    amount = 40},
         {type = "fluid", name = "purex-waste-1",          amount = 5},
     },
-    main_product = "purex-pu-concentrate-1",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-pu-concentrate-1"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -442,9 +418,7 @@ RECIPE {
         {type = "fluid", name = "purex-concentrate-4",    amount = 40},
         {type = "fluid", name = "purex-raffinate",        amount = 30},
     },
-    main_product = "purex-pu-concentrate-2",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-pu-concentrate-2"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -462,9 +436,7 @@ RECIPE {
         {type = "fluid", name = "purex-u-concentrate-1",  amount = 100},
         {type = "fluid", name = "purex-raffinate",        amount = 20},
     },
-    main_product = "purex-pu-concentrate-3",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-pu-concentrate-3"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -480,9 +452,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "plutonium-peroxide", amount = 50}
     },
-    main_product = "plutonium-peroxide",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "plutonium-peroxide"
 }:add_unlock("nuclear-power")
 
 RECIPE {
@@ -498,9 +468,7 @@ RECIPE {
     results = {
         {type = "item", name = "plutonium-oxide", amount = 10}
     },
-    --main_product = "plutonium-oxide",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "plutonium-oxide"
 }:add_unlock("uranium-processing")
 
 --URANIUM
@@ -518,9 +486,7 @@ RECIPE {
         {type = "fluid", name = "purex-u-concentrate-2", amount = 50},
         {type = "fluid", name = "purex-raffinate",       amount = 30},
     },
-    main_product = "purex-u-concentrate-2",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-u-concentrate-2"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -539,9 +505,7 @@ RECIPE {
         {type = "fluid", name = "purex-raffinate",       amount = 10},
         {type = "item",  name = "tbp",                   amount = 1, independent_probability = 0.5, ignored_by_productivity = 1},
     },
-    main_product = "purex-u-concentrate-3",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-u-concentrate-3"
 }:add_unlock("nuclear-power-mk02")
 
 RECIPE {
@@ -555,9 +519,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "uranium-oxide", amount = 1}
-    },
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    }
 }:add_unlock("nuclear-power-mk02")
 
 --purex raffinate
@@ -576,9 +538,7 @@ RECIPE {
         {type = "item",  name = "niobium-ore",       amount = 5},
         {type = "fluid", name = "purex-raffinate-2", amount = 50},
     },
-    main_product = "purex-raffinate-2",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-raffinate-2"
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -595,9 +555,7 @@ RECIPE {
         {type = "fluid", name = "purex-raffinate-3", amount = 50},
         {type = "fluid", name = "re-pulp-01",        amount = 50},
     },
-    main_product = "purex-raffinate-3",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "purex-raffinate-3"
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -612,9 +570,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ac", amount = 50},
-    },
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    }
 }:add_unlock("nuclear-power-mk03")
 
 --ac reduction
@@ -631,9 +587,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ac-oxygenated", amount = 40},
-    },
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    }
 }:add_unlock("nuclear-power-mk03")
 
 RECIPE {
@@ -650,9 +604,7 @@ RECIPE {
         {type = "fluid", name = "c-oxygenated",    amount = 20},
         {type = "item",  name = "americium-oxide", amount = 5},
     },
-    main_product = "americium-oxide",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    main_product = "americium-oxide"
 }:add_unlock("nuclear-power-mk03") --thorium is a reducing agent and therefore should be an oxide
 
 RECIPE {
@@ -668,8 +620,8 @@ RECIPE {
     results = {
         {type = "item", name = "cm-250", amount = 2},
     },
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    subgroup = "py-nuclear-isotopes",
+    order = "96-250"
 }:add_unlock("nuclear-power-mk03") --lithium is a reducing agent and therefore should be an oxide
 
 RECIPE {
@@ -686,9 +638,8 @@ RECIPE {
         {type = "item",  name = "antimonium-ore",    amount = 4},
         {type = "fluid", name = "hydrogen-chloride", amount = 50}
     },
-    main_product = "antimonium-ore",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    icons = py.composite_icon("antimonium-ore", "sb-chloride"),
+    main_product = "antimonium-ore"
 }:add_unlock("nuclear-power-mk03")
 
 --MANHATTEN PROJECT--
@@ -710,8 +661,8 @@ RECIPE {
         {type = "item", name = "u-238", amount = 10, independent_probability = 0.9}
     },
     --main_product = "u-235",
-    subgroup = "py-nuclear-waste",
-    order = "b"
+    subgroup = "py-rawores-uranium",
+    order = "q-3"
 }:add_unlock("uranium-processing")
 
 RECIPE {
@@ -825,5 +776,5 @@ RECIPE {
     main_product = "uf6",
     icon = "__pyraworesgraphics__/graphics/icons/powdered-u-screening.png",
     icon_size = 32,
-    subgroup = "py-nuclear",
+    subgroup = "py-rawores-uranium",
 }:add_unlock("uranium-mk01")

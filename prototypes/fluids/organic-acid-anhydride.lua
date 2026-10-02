@@ -9,7 +9,7 @@ FLUID {
     max_temperature = 100,
     gas_temperature = 15,
     subgroup = "py-alternativeenergy-fluids",
-    order = "c"
+    order = "ca"
 }
 
 RECIPE {

@@ -450,7 +450,7 @@ while enrichment < 100 do
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u238 * 100)},
         },
         main_product = "uf6",
-        subgroup = "py-rawores-uranium",
+        subgroup = "py-rawores-uranium-uf6",
         order = string.format("uranium-%02u", recipe_num),
         localised_name = {"recipe-name.uf6", name},
         icon = "__pyalternativeenergygraphics__/graphics/icons/ut" .. t .. "-" .. l .. ".png",
@@ -605,7 +605,7 @@ for _, layer in pairs(data.raw["mining-drill"]["uranium-mine"].graphics_set.anim
 end
 data.raw["mining-drill"]["uranium-mine"].input_fluid_box = nil
 ITEM("uranium-mine").subgroup = "py-alternativeenergy-special-buildings"
-ITEM("uranium-mine").order = "s[uranium]b"
+ITEM("uranium-mine").order = "aa"
 
 RECIPE("mibc"):remove_unlock("mibc"):add_unlock("titanium-mk02")
 data.raw.technology["mibc"] = nil

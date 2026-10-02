@@ -95,6 +95,7 @@ local proto = ENTITY {
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
 new_proto.picture = table.deepcopy(proto.picture.layers[1])
+new_proto.factoriopedia_alternative = proto.name
 data:extend {new_proto}
 
 data:extend {{
@@ -108,6 +109,7 @@ data:extend {{
     collision_mask = {layers = {wind_layer = true}},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     selectable_in_game = false,
+    hidden = true,
     picture = {
         filename = "__pyalternativeenergygraphics__/graphics/entity/multiblade-turbine-mk03/ground.png",
         width = 288,

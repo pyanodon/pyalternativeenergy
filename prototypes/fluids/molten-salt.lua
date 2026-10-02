@@ -8,7 +8,7 @@ FLUID {
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 5000,
     --gas_temperature = 5000,
-    subgroup = "py-alternativeenergy-fluids",
-    order = "z-[molten-salt]",
+    subgroup = "py-alternativeenergy-molten-salt",
+    order = "z-a[molten-salt]",
     auto_barrel = false
 }

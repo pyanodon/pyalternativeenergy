@@ -88,7 +88,9 @@ do
                     shift = panel.picture.shift,
                 },
                 impact_category        = panel.impact_category,
-                localised_name         = {"entity-name.solar-tower-panel"}
+                localised_name         = {"entity-name.solar-tower-panel"},
+                hidden                 = true,
+                factoriopedia_alternative = "solar-tower-panel0"
             }
             i = i + 1
         end

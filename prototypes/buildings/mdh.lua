@@ -28,7 +28,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
-    order = "a",
+    order = "e",
     place_result = "mdh",
     stack_size = 10
 }

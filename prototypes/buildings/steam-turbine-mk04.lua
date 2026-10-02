@@ -36,7 +36,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk04",
-    order = "e",
+    order = "x",
     place_result = "steam-turbine-mk04",
     stack_size = 10
 }

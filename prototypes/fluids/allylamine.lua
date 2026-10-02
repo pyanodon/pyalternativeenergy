@@ -26,5 +26,5 @@ FLUID {
     base_color = {r = 1, g = 1, b = 1},
     flow_color = {r = 1, g = 1, b = 1},
     subgroup = "py-alternativeenergy-fluids",
-    order = "c"
+    order = "hb"
 }

@@ -34,7 +34,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/aerial-mk04.png",
     icon_size = 64,
     subgroup = "py-alternativeenergy-buildings-mk04",
-    order = "b",
+    order = "fa",
     place_result = "aerial-blimp-mk04",
     stack_size = 1,
     flags = {"not-stackable"}

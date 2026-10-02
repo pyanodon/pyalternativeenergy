@@ -149,6 +149,7 @@ data:extend {{
     collision_box = {{-200, -200}, {200, 200}},
     collision_mask = {layers = {sut_placement_distance = true}},
     selectable_in_game = false,
+    factoriopedia_alternative = "sut",
     picture = {
         filename = "__core__/graphics/empty.png",
         width = 1,

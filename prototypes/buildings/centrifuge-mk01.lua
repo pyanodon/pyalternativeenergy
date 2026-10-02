@@ -24,7 +24,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk01",
-    order = "a",
+    order = "c",
     place_result = "centrifuge-mk01",
     stack_size = 10
 }

@@ -10,6 +10,6 @@ FLUID {
     max_temperature = 10000,
     --gas_temperature = 15,
     subgroup = "py-nuclear",
-    order = "c",
+    order = "cc",
     auto_barrel = false
 }

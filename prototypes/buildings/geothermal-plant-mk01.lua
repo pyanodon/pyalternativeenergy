@@ -21,7 +21,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-special-buildings",
-    order = "a",
+    order = "b",
     place_result = "geothermal-plant-mk01",
     stack_size = 10
 }

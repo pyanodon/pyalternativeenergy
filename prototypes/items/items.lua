@@ -28,7 +28,7 @@ ITEM {
     },
     flags = {},
     subgroup = "py-nuclear",
-    order = "a",
+    order = "aa",
     stack_size = 50,
     fuel_categories = {"control-rod"},
     fuel_value = "10MJ",
@@ -42,7 +42,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-nuclear",
-    order = "a",
+    order = "ab",
     stack_size = 100
 }
 
@@ -52,8 +52,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-1.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-waste",
+    order = "ba",
     stack_size = 100
 }
 
@@ -63,8 +63,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-2.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-waste",
+    order = "bb",
     stack_size = 100
 }
 
@@ -74,8 +74,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-232.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "90-232",
     stack_size = 100
 }
 
@@ -85,8 +85,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/th-233.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "90-233",
     stack_size = 100
 }
 
@@ -96,8 +96,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pa-233.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "91-233",
     stack_size = 100
 }
 
@@ -107,8 +107,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/uranium-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-waste",
+    order = "c",
     stack_size = 100
 }
 
@@ -118,8 +118,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-232.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-232",
     stack_size = 100
 }
 
@@ -129,8 +129,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-233.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-233",
     stack_size = 100
 }
 
@@ -140,8 +140,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-234.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-234",
     stack_size = 100
 }
 
@@ -151,8 +151,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-235.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-235",
     stack_size = 100
 }
 
@@ -162,8 +162,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-236.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-236",
     stack_size = 100
 }
 
@@ -173,8 +173,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-237.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-237",
     stack_size = 100
 }
 
@@ -184,8 +184,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-238.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-238",
     stack_size = 100
 }
 
@@ -195,8 +195,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-239.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-239",
     stack_size = 100
 }
 
@@ -206,8 +206,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/u-240.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "92-240",
     stack_size = 100
 }
 
@@ -217,8 +217,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/plutonium-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-waste",
+    order = "aa",
     stack_size = 100
 }
 
@@ -228,8 +228,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/plutonium-oxide-mox.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-waste",
+    order = "bba",
     stack_size = 100
 }
 
@@ -239,8 +239,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-238.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "94-238",
     stack_size = 100
 }
 
@@ -250,8 +250,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-239.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "94-239",
     stack_size = 100
 }
 
@@ -261,8 +261,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-240.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "94-240",
     stack_size = 100
 }
 
@@ -272,8 +272,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-241.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "94-241",
     stack_size = 100
 }
 
@@ -283,8 +283,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/pu-242.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "94-242",
     stack_size = 100
 }
 
@@ -294,8 +294,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/americium-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-waste",
+    order = "d",
     stack_size = 100
 }
 
@@ -305,8 +305,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/am-241.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "95-241",
     stack_size = 100
 }
 
@@ -316,8 +316,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/am-243.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "95-243",
     stack_size = 100
 }
 
@@ -327,8 +327,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/cm-250.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "96-250",
     stack_size = 100
 }
 
@@ -338,8 +338,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/po-210.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-isotopes",
+    order = "84-210",
     stack_size = 100
 }
 
@@ -349,8 +349,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/vitrified-glass.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
-    order = "a",
+    subgroup = "py-nuclear-waste",
+    order = "bc",
     stack_size = 100,
     weight = tons / 500,
     send_to_orbit_mode = "automated",
@@ -362,7 +362,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/sb-hpo-pu.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-nuclear",
+    subgroup = "py-nuclear-waste",
     order = "a",
     stack_size = 100
 }
@@ -374,7 +374,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-nuclear",
-    order = "a",
+    order = "z",
     stack_size = 100
 }
 
@@ -463,8 +463,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lead-acetate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aab",
+    subgroup = "py-rawores-antimony",
+    order = "ce",
     stack_size = 100
 }
 
@@ -474,8 +474,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/yellow-dextrine.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aab",
+    subgroup = "py-rawores-antimony",
+    order = "cg",
     stack_size = 100
 }
 
@@ -485,8 +485,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/sodium-cyanate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aab",
+    subgroup = "py-rawores-antimony",
+    order = "cf",
     stack_size = 100
 }
 
@@ -507,8 +507,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/sb-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aaz",
+    subgroup = "py-rawores-antimony",
+    order = "d",
     stack_size = 100
 }
 
@@ -645,8 +645,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ammonium-oxalate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "cb",
     stack_size = 100
 }
 
@@ -656,8 +656,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/oxalic-acid.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ca",
     stack_size = 100
 }
 
@@ -667,8 +667,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-plate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-lithium-processing",
+    order = "u",
     stack_size = 100
 }
 
@@ -678,8 +678,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/eg-si.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "ac",
     stack_size = 100
 }
 
@@ -689,8 +689,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-slab.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "bab",
     stack_size = 100
 }
 
@@ -700,8 +700,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-plate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "bbb",
     stack_size = 100
 }
 
@@ -711,8 +711,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/crucible.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "baa",
     stack_size = 100
 }
 
@@ -722,8 +722,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/diamond-wire.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "bba",
     stack_size = 100
 }
 
@@ -733,8 +733,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/anti-reflex-glass.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-panes",
+    order = "ab",
     stack_size = 100
 }
 
@@ -744,8 +744,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/polycrystalline-cell.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-panes",
+    order = "ea",
     stack_size = 100
 }
 
@@ -756,7 +756,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "aa",
     stack_size = 100
 }
 
@@ -766,8 +766,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/passivation-layer.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-panes",
+    order = "g",
     stack_size = 100
 }
 
@@ -777,8 +777,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/quartz-crucible.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "ca",
     stack_size = 100
 }
 
@@ -789,7 +789,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "za",
     stack_size = 100
 }
 
@@ -799,8 +799,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-slab.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "cb",
     stack_size = 100
 }
 
@@ -810,8 +810,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-plate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-silicon-processing",
+    order = "cc",
     stack_size = 100
 }
 
@@ -821,8 +821,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/monocrystalline-cell.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-panes",
+    order = "eb",
     stack_size = 100
 }
 
@@ -869,8 +869,8 @@ ITEM {
     icon_size = 64,
     flags = {},
     --subgroup = "py-battery-equipment",
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-hightech-tier-1",
+    order = "b",
     stack_size = 100,
     localised_name = {"item-name.battery-mk00"},
     --place_as_equipment_result = 'battery-mk00'
@@ -882,8 +882,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/flo.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ja",
     stack_size = 100
 }
 
@@ -893,8 +893,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lfo.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "jb",
     stack_size = 100
 }
 
@@ -904,8 +904,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/dbr.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "b",
     stack_size = 100
 }
 
@@ -916,7 +916,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "ae",
     stack_size = 100
 }
 
@@ -973,8 +973,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/1d-photonic-crystal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "a",
     stack_size = 100
 }
 
@@ -984,8 +984,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nxsb-alloy.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-metals",
+    order = "b",
     stack_size = 100
 }
 
@@ -995,7 +995,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/fenxsb.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-1",
+    subgroup = "py-alternativeenergy-intermetallics-1-2",
     order = "aa",
     stack_size = 100
 }
@@ -1006,7 +1006,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/vitreloy.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-1",
+    subgroup = "py-alternativeenergy-intermetallics-1-2",
     order = "ab",
     stack_size = 100
 }
@@ -1017,7 +1017,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/intermetallics.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-1",
+    subgroup = "py-alternativeenergy-intermetallics-1-2",
     order = "az",
     stack_size = 100
 }
@@ -1028,7 +1028,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ptcda.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-1",
+    subgroup = "py-alternativeenergy-intermetallics-1-2",
     order = "ba",
     stack_size = 100
 }
@@ -1039,7 +1039,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/self-assembly-monolayer.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-1",
+    subgroup = "py-alternativeenergy-intermetallics-1-2",
     order = "bz",
     stack_size = 100
 }
@@ -1050,7 +1050,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nbalti.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-1",
+    subgroup = "py-alternativeenergy-intermetallics-1-2",
     order = "bb",
     stack_size = 100
 }
@@ -1061,7 +1061,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/crmoni.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-1",
+    subgroup = "py-alternativeenergy-intermetallics-1-2",
     order = "bc",
     stack_size = 100
 }
@@ -1072,7 +1072,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/citric-acid.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "ca",
     stack_size = 100
 }
@@ -1083,7 +1083,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/sodium-citrate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cb",
     stack_size = 100
 }
@@ -1094,7 +1094,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/metallic-core.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cc",
     stack_size = 100
 }
@@ -1105,7 +1105,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/silica-shell.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cd",
     stack_size = 100
 }
@@ -1116,7 +1116,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/plasmonic-core.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "ce",
     stack_size = 100
 }
@@ -1127,7 +1127,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/diethylaniline.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cf",
     stack_size = 100
 }
@@ -1138,7 +1138,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/3-diethylaminophenol.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cg",
     stack_size = 100
 }
@@ -1149,7 +1149,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/phthalic-anhydride.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "ch",
     stack_size = 100
 }
@@ -1160,7 +1160,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/rhodamine-b.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "ci",
     stack_size = 100
 }
@@ -1171,7 +1171,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/fluorophore.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cj",
     stack_size = 100
 }
@@ -1182,7 +1182,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-niobate-nano.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "ck",
     stack_size = 100
 }
@@ -1193,7 +1193,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/dieletric-layer.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cl",
     stack_size = 100
 }
@@ -1204,7 +1204,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/core-shell.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cy",
     stack_size = 100
 }
@@ -1215,7 +1215,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ns-material.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-2",
+    subgroup = "py-alternativeenergy-intermetallics-3",
     order = "cz",
     stack_size = 100
 }
@@ -1226,7 +1226,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/metastable-quasicrystal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-3",
+    subgroup = "py-alternativeenergy-intermetallics-4",
     order = "az",
     stack_size = 100
 }
@@ -1237,7 +1237,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/time-crystal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-3",
+    subgroup = "py-alternativeenergy-intermetallics-4",
     order = "ab",
     stack_size = 100
 }
@@ -1248,7 +1248,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/quasicrystal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-3",
+    subgroup = "py-alternativeenergy-intermetallics-4",
     order = "ac",
     stack_size = 100
 }
@@ -1259,7 +1259,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/photon-deposited-quartz.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-3",
+    subgroup = "py-alternativeenergy-intermetallics-4",
     order = "aa",
     stack_size = 100
 }
@@ -1270,8 +1270,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mositial-nx.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-1",
-    order = "z",
+    subgroup = "py-alternativeenergy-intermetallics-3",
+    order = "cyb",
     stack_size = 100
 }
 
@@ -1281,8 +1281,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/pbsb-alloy.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-metals",
+    order = "a",
     stack_size = 100
 }
 
@@ -1292,8 +1292,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nxzngd.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-intermetallics-3",
-    order = "y",
+    subgroup = "py-alternativeenergy-intermetallics-4",
+    order = "yb",
     stack_size = 100
 }
 
@@ -1303,8 +1303,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/fdtd.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "f",
     stack_size = 100
 }
 
@@ -1314,8 +1314,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/fbg.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "g",
     stack_size = 100
 }
 
@@ -1325,8 +1325,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/dieletric-mirror.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "e",
     stack_size = 100
 }
 
@@ -1336,8 +1336,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/animal-reflectors.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "c",
     stack_size = 100
 }
 
@@ -1347,8 +1347,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/inverse-opal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "d",
     stack_size = 100
 }
 
@@ -1358,8 +1358,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/photonic-crystal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "d",
     stack_size = 100
 }
 
@@ -1369,8 +1369,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/hardener.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "kb",
     stack_size = 100
 }
 
@@ -1380,8 +1380,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/glycidylamine.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ka",
     stack_size = 100
 }
 
@@ -1391,8 +1391,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/photonic-chip.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-photonics",
+    order = "h",
     stack_size = 100
 }
 
@@ -1402,7 +1402,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/gaas.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-hightech-tier-4",
     order = "aae",
     stack_size = 100
 }
@@ -1413,8 +1413,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ti-n.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-metals",
+    order = "d",
     stack_size = 100
 }
 
@@ -1436,52 +1436,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/e9.png", scale = 0.66},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alienlife-creature-product",
     order = "aaa",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "ingap",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/ingap.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "ingaas",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/ingaas.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "arsenic",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/arsenic.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
-    stack_size = 100
-}
-
-ITEM {
-    type = "item",
-    name = "mqdc",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/mqdc.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
     stack_size = 100
 }
 
@@ -1492,7 +1448,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "ac",
     stack_size = 100
 }
 
@@ -1502,8 +1458,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/tio2.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ba",
     stack_size = 100
 }
 
@@ -1513,8 +1469,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/transparent-anode.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-panes",
+    order = "bb",
     stack_size = 100
 }
 
@@ -1524,8 +1480,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/triphenylanime.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "mb",
     stack_size = 100
 }
 
@@ -1535,8 +1491,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/bt.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ma",
     stack_size = 100
 }
 
@@ -1546,8 +1502,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cyanoacetate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "d",
     stack_size = 100
 }
 
@@ -1557,8 +1513,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cyanoacrylate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "f",
     stack_size = 100
 }
 
@@ -1568,8 +1524,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/photosensitive-dye.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "mc",
     stack_size = 100
 }
 
@@ -1580,7 +1536,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "aae",
+    order = "ab",
     stack_size = 100
 }
 
@@ -1590,7 +1546,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/czts-slab.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "aae",
     stack_size = 100
 }
@@ -1601,7 +1557,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/czts-plate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "aae",
     stack_size = 100
 }
@@ -1624,7 +1580,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    order = "af",
     stack_size = 100
 }
 
@@ -1634,7 +1590,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ingap.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-hightech-tier-4",
     order = "ab",
     stack_size = 100
 }
@@ -1645,7 +1601,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ingaas.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-hightech-tier-4",
     order = "ab",
     stack_size = 100
 }
@@ -1656,7 +1612,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/arsenic.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-hightech-tier-4",
     order = "ab",
     stack_size = 100
 }
@@ -1667,7 +1623,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/alag-grid.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-hightech-tier-4",
     order = "ab",
     stack_size = 100
 }
@@ -1702,8 +1658,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/dodecanoic-acid.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ea",
     stack_size = 100
 }
 
@@ -1713,8 +1669,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/dda.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "eb",
     stack_size = 100
 }
 
@@ -1725,7 +1681,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    order = "ba",
     stack_size = 100
 }
 
@@ -1736,7 +1692,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    order = "bb",
     stack_size = 100
 }
 
@@ -1747,7 +1703,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    order = "ca",
     stack_size = 100
 }
 
@@ -1757,8 +1713,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/tbp.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "bd",
     stack_size = 100
 }
 
@@ -1768,8 +1724,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/sb-silicate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-metals",
+    order = "bb",
     stack_size = 100
 }
 
@@ -1779,8 +1735,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/pyridine.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "bc",
     stack_size = 100
 }
 
@@ -1801,8 +1757,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-hydroxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-lithium-processing",
+    order = "t",
     stack_size = 100
 }
 
@@ -1812,8 +1768,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/lithium-carbonate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-lithium-processing",
+    order = "s",
     stack_size = 100
 }
 
@@ -1823,8 +1779,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/acetaldehyde.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ab",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "bb",
     stack_size = 100
 }
 
@@ -1834,8 +1790,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/acrylonitrile.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ba",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ab",
     stack_size = 100
 }
 
@@ -1845,8 +1801,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/pan.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ba",
+    subgroup = "py-alternativeenergy-carbon-fiber",
+    order = "a",
     stack_size = 100
 }
 
@@ -1856,8 +1812,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/oxidized-pan-fiber.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ba",
+    subgroup = "py-alternativeenergy-carbon-fiber",
+    order = "b",
     stack_size = 100
 }
 
@@ -1867,8 +1823,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/pre-cf.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ba",
+    subgroup = "py-alternativeenergy-carbon-fiber",
+    order = "c",
     stack_size = 100
 }
 
@@ -1878,8 +1834,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf1.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ba",
+    subgroup = "py-alternativeenergy-carbon-fiber",
+    order = "d",
     stack_size = 100
 }
 
@@ -1889,8 +1845,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf2.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ba",
+    subgroup = "py-alternativeenergy-carbon-fiber",
+    order = "e",
     stack_size = 100
 }
 
@@ -1900,8 +1856,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/dry-cf.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ba",
+    subgroup = "py-alternativeenergy-carbon-fiber",
+    order = "f",
     stack_size = 100
 }
 
@@ -1911,8 +1867,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cf.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ba",
+    subgroup = "py-alternativeenergy-carbon-fiber",
+    order = "g",
     stack_size = 100
 }
 
@@ -1923,7 +1879,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "i[electric-engine-unit]",
+    order = "i[electric-engine-unit]a",
     stack_size = 100
 }
 
@@ -1934,7 +1890,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "i[electric-engine-unit]",
+    order = "i[electric-engine-unit]b",
     stack_size = 100
 }
 
@@ -1944,8 +1900,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/erbium.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-metals",
+    order = "cd",
     stack_size = 100
 }
 
@@ -1955,8 +1911,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ernico.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-metals",
+    order = "ce",
     stack_size = 100
 }
 
@@ -1966,7 +1922,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/er-oxalate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-metals",
     order = "ca",
     stack_size = 100
 }
@@ -1977,8 +1933,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/er-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-metals",
+    order = "cc",
     stack_size = 100
 }
 
@@ -1988,8 +1944,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/impure-er-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-metals",
+    order = "cb",
     stack_size = 100
 }
 
@@ -1999,7 +1955,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/fan.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2010,8 +1966,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/hts-coil.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-fusion-items",
+    order = "m",
     stack_size = 100
 }
 
@@ -2021,7 +1977,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/magnetic-ring.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2033,7 +1989,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "j[electric-engine-unit]",
+    order = "j[electric-engine-unit]b",
     stack_size = 100
 }
 
@@ -2044,7 +2000,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "j[electric-engine-unit]",
+    order = "j[electric-engine-unit]c",
     stack_size = 100
 }
 
@@ -2055,7 +2011,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-engine-units",
-    order = "j[electric-engine-unit]",
+    order = "j[electric-engine-unit]a",
     stack_size = 100
 }
 
@@ -2065,7 +2021,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ybco-monocrystal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2076,7 +2032,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/air-duct.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2087,7 +2043,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cryostat.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2098,7 +2054,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cryocooler.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-sc-engine",
     order = "ca",
     stack_size = 100
 }
@@ -2109,8 +2065,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/libr.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "gb",
     stack_size = 100
 }
 
@@ -2120,8 +2076,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/hfip.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ge",
     stack_size = 100
 }
 
@@ -2131,8 +2087,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/guhcl.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "gc",
     stack_size = 100
 }
 
@@ -2142,8 +2098,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/rpc-mesh.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-panes",
+    order = "ha",
     stack_size = 100
 }
 
@@ -2153,8 +2109,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/nano-mesh.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-panes",
+    order = "hb",
     stack_size = 100
 }
 
@@ -2165,7 +2121,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "zc",
     stack_size = 100
 }
 
@@ -2175,8 +2131,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/hbr.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ga",
     stack_size = 100
 }
 
@@ -2187,7 +2143,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "zb",
     stack_size = 100
 }
 
@@ -2197,8 +2153,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/hexafluoroacetone.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "gd",
     stack_size = 100
 }
 
@@ -2208,8 +2164,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/triethoxysilane.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "lb",
     stack_size = 100
 }
 
@@ -2219,8 +2175,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/phenothiazine.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "la",
     stack_size = 100
 }
 
@@ -2231,7 +2187,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fa",
     stack_size = 100
 }
 
@@ -2242,7 +2198,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fb",
     stack_size = 100
 }
 
@@ -2252,8 +2208,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/pvp.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "lf",
     stack_size = 100
 }
 
@@ -2263,8 +2219,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/gbl.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "le",
     stack_size = 100
 }
 
@@ -2274,8 +2230,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/butynediol.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ld",
     stack_size = 100
 }
 
@@ -2286,7 +2242,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fc",
     stack_size = 100
 }
 
@@ -2297,7 +2253,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fd",
     stack_size = 100
 }
 
@@ -2307,8 +2263,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/aptes.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "lc",
     stack_size = 100
 }
 
@@ -2319,7 +2275,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-items",
-    order = "ca",
+    order = "fe",
     stack_size = 100
 }
 
@@ -2366,8 +2322,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/guaiacol.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "a",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "i",
     stack_size = 100
 }
 
@@ -2410,8 +2366,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/polished-glass-surface.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-panes",
+    order = "ca",
     stack_size = 100
 }
 
@@ -2421,8 +2377,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/clean-glass-sheet.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-panes",
+    order = "cb",
     stack_size = 100
 }
 
@@ -2432,8 +2388,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/stannous-chloride.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "ha",
     stack_size = 100
 }
 
@@ -2443,8 +2399,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/prepared-glass.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-panes",
+    order = "cc",
     stack_size = 100
 }
 
@@ -2454,8 +2410,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/crude-mirror.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-panes",
+    order = "cd",
     stack_size = 100
 }
 
@@ -2465,8 +2421,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/silver-nitrate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "hb",
     stack_size = 100
 }
 
@@ -2476,8 +2432,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/polishing-wheel.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-parts",
+    order = "b",
     stack_size = 100
 }
 
@@ -2487,7 +2443,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alternativeenergy-panes",
     order = "da",
     stack_size = 100
 }
@@ -2498,8 +2454,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "dab",
+    subgroup = "py-alternativeenergy-panes",
+    order = "db",
     stack_size = 100
 }
 
@@ -2509,8 +2465,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "dac",
+    subgroup = "py-alternativeenergy-panes",
+    order = "dc",
     stack_size = 100
 }
 
@@ -2520,8 +2476,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/mirror-mk04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "dad",
+    subgroup = "py-alternativeenergy-panes",
+    order = "dd",
     stack_size = 100
 }
 
@@ -2531,8 +2487,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/cerium-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "hc",
     stack_size = 100
 }
 
@@ -2542,8 +2498,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/axis-tracker.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "da",
+    subgroup = "py-alternativeenergy-parts",
+    order = "a",
     stack_size = 100
 }
 
@@ -2553,8 +2509,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/acrylic.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "dae",
+    subgroup = "py-alternativeenergy-panes",
+    order = "ba",
     stack_size = 100
 }
 
@@ -2564,8 +2520,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/ometad.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "dae",
+    subgroup = "py-alternativeenergy-chemicals",
+    order = "n",
     stack_size = 100
 }
 
@@ -2776,8 +2732,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/stirling-engine.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "eaa",
+    subgroup = "py-alternativeenergy-parts",
+    order = "f",
     stack_size = 10
 }
 
@@ -2787,8 +2743,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/regenerator.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "eab",
+    subgroup = "py-alternativeenergy-parts",
+    order = "c",
     stack_size = 10
 }
 
@@ -2798,8 +2754,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/heatsink.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "eac",
+    subgroup = "py-alternativeenergy-parts",
+    order = "d",
     stack_size = 10
 }
 
@@ -2809,8 +2765,8 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/displacer.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ead",
+    subgroup = "py-alternativeenergy-parts",
+    order = "e",
     stack_size = 10
 }
 
@@ -2822,7 +2778,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/enriched-ash.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alienlife-bioash",
     order = "fa",
     stack_size = 100
 }
@@ -2833,7 +2789,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/washed-ash.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alienlife-bioash",
     order = "fb",
     stack_size = 100
 }
@@ -2844,7 +2800,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/processed-ash.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alienlife-bioash",
     order = "fc",
     stack_size = 100
 }
@@ -2855,7 +2811,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/advanced-substrate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alienlife-bioash",
     order = "fd",
     stack_size = 100
 }
@@ -2866,7 +2822,7 @@ ITEM {
     icon = "__pyalternativeenergygraphics__/graphics/icons/bio-ore.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alternativeenergy-items",
+    subgroup = "py-alienlife-bioash",
     order = "fe",
     stack_size = 100
 }
@@ -2888,8 +2844,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp108.png", scale = 0.6},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ga",
+    subgroup = "py-alternativeenergy-parts-mechanical-parts",
+    order = "1",
     stack_size = 100
 }
 
@@ -2910,8 +2866,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp208.png", scale = 0.6},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ga",
+    subgroup = "py-alternativeenergy-parts-mechanical-parts",
+    order = "2",
     stack_size = 100
 }
 
@@ -2932,8 +2888,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp308.png", scale = 0.60},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ga",
+    subgroup = "py-alternativeenergy-parts-mechanical-parts",
+    order = "3",
     stack_size = 100
 }
 
@@ -2954,8 +2910,8 @@ ITEM {
         {size = 64, filename = "__pyalternativeenergygraphics__/graphics/icons/mips/mp408.png", scale = 0.60},
     },
     flags = {},
-    subgroup = "py-alternativeenergy-items",
-    order = "ga",
+    subgroup = "py-alternativeenergy-parts-mechanical-parts",
+    order = "4",
     stack_size = 100
 }
 

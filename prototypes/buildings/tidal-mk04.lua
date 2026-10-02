@@ -29,7 +29,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-buildings-mk04",
-    order = "d",
+    order = "fb",
     place_result = "tidal-mk04",
     stack_size = 10
 }

@@ -1238,8 +1238,6 @@ RECIPE {
     results = {
         {type = "fluid", name = "steam", amount = 500, temperature = 1000},
     },
-    subgroup = "py-alternativeenergy-fluids",
-    order = "s"
 }:add_unlock("nonrenewable-mk01")
 
 --[[

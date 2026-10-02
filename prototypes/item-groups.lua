@@ -39,21 +39,57 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alternativeenergy-organic-fluids",
+        group = "py-alternativeenergy",
+        order = "bax"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-molten-salt",
+        group = "py-alternativeenergy",
+        order = "bb"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-lithium-processing",
+        group = "py-alternativeenergy",
+        order = "bbx"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alternativeenergy-items",
         group = "py-alternativeenergy",
         order = "bc"
     },
     {
         type = "item-subgroup",
-        name = "py-alternativeenergy-intermetallics-1",
+        name = "py-alternativeenergy-chemicals",
         group = "py-alternativeenergy",
-        order = "bd"
+        order = "bc-a"
     },
     {
         type = "item-subgroup",
-        name = "py-alternativeenergy-intermetallics-2",
+        name = "py-alternativeenergy-carbon-fiber",
         group = "py-alternativeenergy",
-        order = "be"
+        order = "bca"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-panes",
+        group = "py-alternativeenergy",
+        order = "bcb"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-photonics",
+        group = "py-alternativeenergy",
+        order = "bcc"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-intermetallics-1-2",
+        group = "py-alternativeenergy",
+        order = "bd"
     },
     {
         type = "item-subgroup",
@@ -63,15 +99,33 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-rawores-thorium",
-        group = "py-rawores",
-        order = "br"
+        name = "py-alternativeenergy-intermetallics-4",
+        group = "py-alternativeenergy",
+        order = "bg"
     },
     {
         type = "item-subgroup",
-        name = "py-rawores-gd",
-        group = "py-rawores",
-        order = "bs"
+        name = "py-alternativeenergy-metals",
+        group = "py-alternativeenergy",
+        order = "bh"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-sc-engine",
+        group = "py-alternativeenergy",
+        order = "bi"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-nuclear-isotopes",
+        group = "py-alternativeenergy",
+        order = "ni"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-nuclear",
+        group = "py-alternativeenergy",
+        order = "nu"
     },
     {
         type = "item-subgroup",
@@ -81,9 +135,105 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-nuclear",
+        name = "py-nuclear-waste-fluids",
         group = "py-alternativeenergy",
-        order = "nu"
+        order = "nx"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-nuclear-purex",
+        group = "py-alternativeenergy",
+        order = "ny"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-shaft",
+        group = "py-alternativeenergy",
+        order = "ya"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-gearbox",
+        group = "py-alternativeenergy",
+        order = "yb"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-brake",
+        group = "py-alternativeenergy",
+        order = "yc"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-controler",
+        group = "py-alternativeenergy",
+        order = "yd"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-utility-box",
+        group = "py-alternativeenergy",
+        order = "ye"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-electronics",
+        group = "py-alternativeenergy",
+        order = "yf"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-mechanical-parts",
+        group = "py-alternativeenergy",
+        order = "yg"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-anemometer",
+        group = "py-alternativeenergy",
+        order = "yh"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-vane",
+        group = "py-alternativeenergy",
+        order = "yi"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-tower",
+        group = "py-alternativeenergy",
+        order = "yj"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-blade",
+        group = "py-alternativeenergy",
+        order = "yk"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-rotor",
+        group = "py-alternativeenergy",
+        order = "yl"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-yaw-drive",
+        group = "py-alternativeenergy",
+        order = "ym"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-nacelle",
+        group = "py-alternativeenergy",
+        order = "yn"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-hydraulic-system",
+        group = "py-alternativeenergy",
+        order = "yo"
     },
     {
         type = "item-subgroup",
@@ -96,6 +246,12 @@ data:extend {
         name = "py-alternativeenergy-engine-units",
         group = "py-alternativeenergy",
         order = "zz"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-additional-part", --all members are currently unused & hidden
+        group = "py-alternativeenergy",
+        order = "zzz"
     },
     --SPECIALS--
     {
@@ -112,17 +268,58 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-rawores-thorium",
+        group = "py-rawores",
+        order = "br"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-rawores-gd",
+        group = "py-rawores",
+        order = "bs"
+    },
+    {
+        type = "item-subgroup",
         name = "test",
         group = "py-alternativeenergy",
         order = "az"
     },
     {
         type = "item-subgroup",
-        name = "py-rawores-uranium-depleted",
+        name = "py-rawores-uranium-uf6",
         group = "py-rawores",
         order = "bma"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-rawores-uranium-depleted",
+        group = "py-rawores",
+        order = "bmb"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-bioash",
+        group = "py-rawores",
+        order = "xc"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-hightech-silicon-processing",
+        group = "py-hightech",
+        order = "da"
     },
 }
 
 data.raw.item["engine-unit"].subgroup = "py-alternativeenergy-engine-units"
 data.raw.item["electric-engine-unit"].subgroup = "py-alternativeenergy-engine-units"
+data.raw.item["electric-engine-unit"].order = "i[electric-engine-unit]c"
+data.raw.item["lithium-peroxide"].subgroup = "py-alternativeenergy-lithium-processing"
+data.raw.item["lithium-peroxide"].order = "v"
+data.raw.item["sodium-silicate"].subgroup = "py-hightech-silicon-processing"
+data.raw.item["sodium-silicate"].order = "ad"
+data.raw.item["silica-powder"].subgroup = "py-hightech-silicon-processing"
+data.raw.item["silica-powder"].order = "ae"
+data.raw.item["silicon"].subgroup = "py-hightech-silicon-processing"
+data.raw.item["silicon"].order = "af"
+data.raw.item["methyl-acrylate"].subgroup = "py-alternativeenergy-chemicals"
+data.raw.item["methyl-acrylate"].order = "aa"

@@ -100,7 +100,7 @@ for i = 1, 4 do
         icon_size = icon_size,
         flags = {},
         subgroup = "py-alternativeenergy-buildings-mk0" .. i,
-        order = "a",
+        order = "dd",
         place_result = name,
         stack_size = 10
     }
