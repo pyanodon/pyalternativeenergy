@@ -111,6 +111,7 @@ data:extend {{
     collision_mask = {layers = {wind_layer = true}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     selectable_in_game = false,
+    hidden = true,
     picture = {
         filename = "__pyalternativeenergygraphics__/graphics/icons/filler.png",
         width = 4,

@@ -84,6 +84,7 @@ local proto = ENTITY {
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
 new_proto.picture = table.deepcopy(proto.picture.layers[1])
+new_proto.factoriopedia_alternative = proto.name
 data:extend {new_proto}
 
 data:extend {{
@@ -97,6 +98,7 @@ data:extend {{
     collision_mask = {layers = {wind_layer = true}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     selectable_in_game = false,
+    hidden = true,
     picture = util.empty_sprite(),
     created_effect = {
         type = "area",

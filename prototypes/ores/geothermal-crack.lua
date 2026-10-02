@@ -52,6 +52,7 @@ data:extend {{
     icon = "__pyalternativeenergygraphics__/graphics/icons/geothermal-crack.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
+    subgroup = "mineable-fluids",
     order = "a-b-a",
     map_color = {r = 0.639, g = 0.074, b = 0.007},
     highlight = true,
