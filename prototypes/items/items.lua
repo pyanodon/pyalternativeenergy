@@ -1271,7 +1271,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-intermetallics-3",
-    order = "z",
+    order = "cyb",
     stack_size = 100
 }
 
