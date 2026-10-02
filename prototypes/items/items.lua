@@ -646,7 +646,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "cb",
     stack_size = 100
 }
 
@@ -657,7 +657,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "ca",
     stack_size = 100
 }
 
@@ -883,7 +883,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "ja",
     stack_size = 100
 }
 
@@ -894,7 +894,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "jb",
     stack_size = 100
 }
 
@@ -1370,7 +1370,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "kb",
     stack_size = 100
 }
 
@@ -1381,7 +1381,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "ka",
     stack_size = 100
 }
 
@@ -1459,7 +1459,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "ba",
     stack_size = 100
 }
 
@@ -1481,7 +1481,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "mb",
     stack_size = 100
 }
 
@@ -1492,7 +1492,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "ma",
     stack_size = 100
 }
 
@@ -1503,7 +1503,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "d",
     stack_size = 100
 }
 
@@ -1514,7 +1514,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "aae",
+    order = "f",
     stack_size = 100
 }
 
@@ -1525,7 +1525,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ad",
+    order = "mc",
     stack_size = 100
 }
 
@@ -1659,7 +1659,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ab",
+    order = "ea",
     stack_size = 100
 }
 
@@ -1670,7 +1670,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ab",
+    order = "eb",
     stack_size = 100
 }
 
@@ -1714,7 +1714,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ab",
+    order = "bd",
     stack_size = 100
 }
 
@@ -1736,7 +1736,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ab",
+    order = "bc",
     stack_size = 100
 }
 
@@ -1780,7 +1780,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ab",
+    order = "bb",
     stack_size = 100
 }
 
@@ -1791,7 +1791,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ba",
+    order = "ab",
     stack_size = 100
 }
 
@@ -2066,7 +2066,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "gb",
     stack_size = 100
 }
 
@@ -2077,7 +2077,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "ge",
     stack_size = 100
 }
 
@@ -2088,7 +2088,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "gc",
     stack_size = 100
 }
 
@@ -2132,7 +2132,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "ga",
     stack_size = 100
 }
 
@@ -2154,7 +2154,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "gd",
     stack_size = 100
 }
 
@@ -2165,7 +2165,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "lb",
     stack_size = 100
 }
 
@@ -2176,7 +2176,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "la",
     stack_size = 100
 }
 
@@ -2209,7 +2209,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "lf",
     stack_size = 100
 }
 
@@ -2220,7 +2220,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "le",
     stack_size = 100
 }
 
@@ -2231,7 +2231,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "ld",
     stack_size = 100
 }
 
@@ -2264,7 +2264,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "ca",
+    order = "lc",
     stack_size = 100
 }
 
@@ -2323,7 +2323,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "a",
+    order = "i",
     stack_size = 100
 }
 
@@ -2389,7 +2389,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "da",
+    order = "ha",
     stack_size = 100
 }
 
@@ -2422,7 +2422,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "da",
+    order = "hb",
     stack_size = 100
 }
 
@@ -2488,7 +2488,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "da",
+    order = "hc",
     stack_size = 100
 }
 
@@ -2521,7 +2521,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     subgroup = "py-alternativeenergy-chemicals",
-    order = "dae",
+    order = "n",
     stack_size = 100
 }
 
