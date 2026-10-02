@@ -147,12 +147,6 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alternativeenergy-parts-additional-part", --all members are currently unused & hidden
-        group = "py-alternativeenergy",
-        order = "y"
-    },
-    {
-        type = "item-subgroup",
         name = "py-alternativeenergy-parts-shaft",
         group = "py-alternativeenergy",
         order = "ya"
@@ -252,6 +246,12 @@ data:extend {
         name = "py-alternativeenergy-engine-units",
         group = "py-alternativeenergy",
         order = "zz"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alternativeenergy-parts-additional-part", --all members are currently unused & hidden
+        group = "py-alternativeenergy",
+        order = "zzz"
     },
     --SPECIALS--
     {
