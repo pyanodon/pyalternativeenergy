@@ -619,7 +619,6 @@ Aerial.on_init = function()
 end
 
 ---Just initializes the global data and rebuilds the network. There's additional checks for existing turbines in the migrations/aerial-1.2.29.lua
----@source ../migrations/aerial-1.2.29.lua
 py.on_event(py.events.on_init(), Aerial.on_init)
 
 ---Counts the turbines of all types for a given electric network
