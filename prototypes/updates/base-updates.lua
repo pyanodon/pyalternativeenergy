@@ -353,7 +353,7 @@ data.raw.technology["uranium-processing"].enabled = true
 data.raw.technology["uranium-processing"].hidden = false
 data.raw.technology["uranium-mining"].enabled = false
 data.raw.technology["uranium-mining"].hidden = true
-RECIPE(data.raw.recipe["satellite"]):remove_unlock("rocket-silo"):add_unlock("space-science-pack")
+RECIPE("satellite"):remove_unlock("rocket-silo"):add_unlock("space-science-pack")
 data.raw.technology["rocket-silo"].prerequisites = {}
 
 TECHNOLOGY("uranium-processing").research_trigger = nil
