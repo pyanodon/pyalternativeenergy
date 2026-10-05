@@ -13,11 +13,11 @@ py.autorecipes {
 			{
 				{name = "numal",        amount = 1},
 				{name = "anabolic-rna", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat-numal", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 180,
 			tech = "anabolic-rna"
 		},

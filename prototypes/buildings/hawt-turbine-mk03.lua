@@ -90,9 +90,10 @@ local proto = ENTITY {
 -- Make a copy with only the base animation
 local new_proto = table.deepcopy(proto)
 new_proto.name = proto.name .. "-blank"
-new_proto.picture = table.deepcopy(proto.picture.layers[1])
-new_proto.picture.filename = new_proto.picture.filename:gsub("r4", "base-mk03")
-data:extend {new_proto}
+new_proto.picture = table.deepcopy(proto.picture--[[@cast -?]].layers--[[@cast -?]][1])
+---@cast new_proto.picture -?
+new_proto.picture.filename = new_proto.picture.filename--[[@cast -?]]:gsub("r4", "base-mk03")
+data:extend {new_proto--[[@as data.EntityPrototype]]}
 
 data:extend {{
     type = "simple-entity-with-force",

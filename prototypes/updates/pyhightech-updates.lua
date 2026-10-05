@@ -9,8 +9,8 @@ TECHNOLOGY("quantum-processor"):add_pack("military-science-pack")
 TECHNOLOGY("schrodinger-antelope"):add_pack("military-science-pack")
 
 --BUILDINDS--
-if RECIPE["quantum-computer"] then
-    RECIPE["quantum-computer"]
+if data.raw.recipe["quantum-computer"] then
+    RECIPE("quantum-computer")
         :remove_ingredient("gasturbinemk03")
         :add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 50}
         :add_ingredient {type = "item", name = "sc-engine", amount = 10}
@@ -114,7 +114,8 @@ RECIPE("py-logistic-robot-mk04"):add_ingredient {type = "item", name = "metastab
 RECIPE("lithium-chloride"):remove_ingredient("reo"):add_ingredient {type = "item", name = "lithium-hydroxide", amount = 1}
 RECIPE("nexelit-battery"):remove_unlock("py-accumulator-mk01"):add_unlock {"battery-mk02"}
 RECIPE("nanochip"):add_ingredient {type = "item", name = "milfe", amount = 1}
-RECIPE("carbon-nanotube"):add_ingredient {type = "item", name = "milfe", amount = 1}.results[1].amount = 5
+RECIPE("carbon-nanotube"):add_ingredient {type = "item", name = "milfe", amount = 1}
+data.raw.recipe["carbon-nanotube"].results--[[@cast -?]][1]--[[@cast -?]].amount = 5
 RECIPE("parametric-oscilator"):add_ingredient {type = "item", name = "milfe", amount = 1}
 RECIPE("quantum-well"):add_ingredient {type = "item", name = "milfe", amount = 1}
 RECIPE("quantum-dots"):add_ingredient {type = "item", name = "milfe", amount = 1}
@@ -139,7 +140,7 @@ RECIPE("neutron-moderator-mk04"):add_ingredient {type = "item", name = "supercon
 RECIPE("neutron-absorber-mk03"):add_ingredient {type = "item", name = "diamagnetic-material", amount = 20}:add_ingredient {type = "item", name = "harmonic-absorber", amount = 15}
 RECIPE("neutron-absorber-mk04"):add_ingredient {type = "item", name = "superconductor-servomechanims", amount = 6}:add_ingredient {type = "item", name = "quantum-vortex-storage-system", amount = 4}
 
-table.insert(RECIPE("phosphoric-acid").results, {type = "fluid", name = "hydrofluoric-acid", amount = 10})
+table.insert(data.raw.recipe["phosphoric-acid"].results--[[@cast -?]], {type = "fluid", name = "hydrofluoric-acid", amount = 10})
 
 RECIPE("py-science-pack-3"):add_ingredient {type = "item", name = "re-magnet", amount = 1}
 
@@ -216,7 +217,7 @@ data.raw.recipe["quantum-battery"].results = {{type = "item", name = "used-quant
 
 RECIPE("random-science-pack"):remove_unlock("space-science-pack").hidden = true
 
-RECIPE("pa-diamond"):remove_unlock("nucleo-mk02"):add_unlock("nucleo-mk03").energy_required = data.raw.recipe["pa-diamond"].energy_required * 2
+RECIPE("pa-diamond"):remove_unlock("nucleo-mk02"):add_unlock("nucleo-mk03").energy_required = data.raw.recipe["pa-diamond"].energy_required--[[@cast -?]] * 2
 
 RECIPE("coarse-tar"):remove_ingredient("coarse"):add_ingredient {type = "item", name = "coarse", amount = 1}.energy_required = 3
 RECIPE("coarse-tar").results = {{type = "fluid", name = "tar", amount = 70}}

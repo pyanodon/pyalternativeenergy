@@ -46,13 +46,13 @@ ITEM("biocarnation"):spoil("advanced-substrate", 2 * hour)
 ITEM("cm-250"):spoil("plutonium-oxide", minute * 8300)
 ITEM("pa-233"):spoil("u-233", 27 * second) -- realistic time is 27 days
 RECIPE("pa233-u233"):remove_unlock("nuclear-power-mk03"):hide()
-ITEM("po-210"):spoil("reduced-lead", 138.4 * minute)
-ITEM("pu-238"):spoil("u-234", 87.7 * minute)
+ITEM("po-210"):spoil("reduced-lead", (138.4 * minute)--[[@as uint]])
+ITEM("pu-238"):spoil("u-234", (87.7 * minute)--[[@as uint]])
 ITEM("pu-239"):spoil("u-235", 24100 * minute)
 ITEM("pu-240"):spoil("u-236", 6560 * minute)
-ITEM("pu-241"):spoil("am-241", 14.3 * month)
+ITEM("pu-241"):spoil("am-241", (14.3 * month)--[[@as uint]])
 ITEM("pu-242"):spoil("u-238", 373300 * second)
-ITEM("th-233"):spoil("pa-233", 22.3 * minute)
+ITEM("th-233"):spoil("pa-233", (22.3 * minute)--[[@as uint]])
 
 --[[
 ITEM("u-232"):spoil("th-228", 68.9 * year)
@@ -82,7 +82,7 @@ ITEM("meat"):spoil("dried-meat", 4 * hour)
 ITEM("guts"):spoil("dried-meat", 8 * hour)
 ITEM("brain"):spoil("dried-meat", 16 * hour)
 
-ITEM("manure"):spoil("rich-clay", 5.5 * hour)
+ITEM("manure"):spoil("rich-clay", (5.5 * hour)--[[@as uint]])
 
 RECIPE("fertilizer-3"):add_ingredient {type = "item", name = "biocrud", amount = 2}
 
@@ -109,18 +109,18 @@ local meat_to_remove = {
 
 for _, food in pairs(meaty_foods) do
     if not data.raw.recipe[food] then error(food) end
-    food = RECIPE(food)
-    local removed_count = 0
-    for _, ingredient in pairs(food.ingredients) do
+    food_obj = RECIPE(food)
+    local removed_count = 0.0
+    for _, ingredient in pairs(food_obj.ingredients--[[@cast -?]]) do
         if meat_to_remove[ingredient.name] then
             removed_count = removed_count + ingredient.amount
         end
     end
-    if removed_count == 0 then error(food.name .. " has no meat") end
+    if removed_count == 0 then error(food_obj.name .. " has no meat") end
     for meat in pairs(meat_to_remove) do
-        food:remove_ingredient(meat)
+        food_obj:remove_ingredient(meat)
     end
-    food:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}
+    food_obj:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}
 end
 
 for _, workers_food in pairs {

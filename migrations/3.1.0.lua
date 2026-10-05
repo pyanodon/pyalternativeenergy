@@ -1,3 +1,4 @@
+---@diagnostic disable
 -- remove solar storage references
 storage.solarpanels = nil
 storage.unsynced_solarpanels = nil

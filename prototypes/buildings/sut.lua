@@ -17,7 +17,7 @@ data:extend {{
     icon_size = 64,
     decorative_removal_probability = 1,
     variants = {
-        transition = table.deepcopy(TILE("concrete").variants.transition),
+        transition = table.deepcopy(TILE("concrete").variants--[[@as data.TileTransitionsVariants]].transition),
         main = {
             {
                 picture = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/tile/white.png",

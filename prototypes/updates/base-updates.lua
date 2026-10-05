@@ -1,4 +1,5 @@
 local sounds = require "__base__/prototypes/entity/sounds"
+local nuke_shockwave_starting_speed_deviation = 0.075
 
 -- TECH CHANGES
 
@@ -415,7 +416,7 @@ RECIPE("nuclear-reactor"):add_unlock("uranium-processing"):remove_ingredient("su
 
 data.raw.technology["atomic-bomb"].prerequisites = {}
 TECHNOLOGY("atomic-bomb"):add_prereq("uranium-processing")
-data.raw.technology["atomic-bomb"].unit.ingredients = {
+data.raw.technology["atomic-bomb"].unit--[[@cast -?]].ingredients = {
     {"automation-science-pack", 1},
     {"logistic-science-pack",   1},
     {"py-science-pack-2",       1}
@@ -477,15 +478,15 @@ ITEM("battery").hidden = true
 
 RECIPE("centrifuge"):remove_unlock("filtration"):set_fields {hidden = true}
 ITEM("centrifuge").hidden = true
-ENTITY("centrifuge", "assembling-machine").hidden = true
+ENTITY("centrifuge").hidden = true
 
-ITEM("speed-module").effect.consumption = 1.0
-ITEM("speed-module-2").effect.consumption = 1.2
-ITEM("speed-module-3").effect.consumption = 1.5
+ITEM("speed-module").effect--[[@as data.Effect]].consumption = 1.0
+ITEM("speed-module-2").effect--[[@as data.Effect]].consumption = 1.2
+ITEM("speed-module-3").effect--[[@as data.Effect]].consumption = 1.5
 
-ITEM("productivity-module").effect.consumption = 1.2
-ITEM("productivity-module-2").effect.consumption = 1.5
-ITEM("productivity-module-3").effect.consumption = 2.0
+ITEM("productivity-module").effect--[[@as data.Effect]].consumption = 1.2
+ITEM("productivity-module-2").effect--[[@as data.Effect]].consumption = 1.5
+ITEM("productivity-module-3").effect--[[@as data.Effect]].consumption = 2.0
 
 ENTITY("beacon"):set_fields{energy_usage = "2MW"}:hide()
 
@@ -997,10 +998,10 @@ if not mods.pystellarexpedition then
     }
 end
 
-ITEM("space-science-pack", "tool"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
-ITEM("space-science-pack", "tool"):set("icon_size", 64)
+ITEM("space-science-pack"):set("icon", "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png")
+ITEM("space-science-pack"):set("icon_size", 64)
 
-data.raw.recipe["empty-boric-acid-barrel"].results[1].temperature = 10
+data.raw.recipe["empty-boric-acid-barrel"].results--[[@cast -?]][1]--[[@cast -?]].temperature = 10
 
 RECIPE {
     type = "recipe",

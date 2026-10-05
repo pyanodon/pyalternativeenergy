@@ -1,3 +1,12 @@
+---@namespace PyAlternativeenergy
+---@type PyAlternativeenergyStorage
+storage = storage --[[@as PyAlternativeenergyStorage]]
+
+---@class (partial) PyAlternativeenergyStorage
+---@field heliostat_towers table
+---@field energy_per_heliostat number
+---@field update_heliostat_guis boolean
+
 ---@class Heliostat
 ---@field events {[string]: function}
 ---@field max_heliostats uint
@@ -34,7 +43,7 @@ function Heliostat.update_power_generation(tower, excluded_heliostat)
     for _, heliostat in pairs(tower.surface.find_entities_filtered {position = tower.position, radius = Thermosolar.tower_range, force = tower.force, type = "simple-entity-with-owner"}) do
         if heliostat ~= excluded_heliostat and Heliostat.is_heliostat(heliostat) then
             tower_data.heliostats = tower_data.heliostats + 1
-            heliostat = Heliostat.rotate_heliostat(heliostat, tower)
+            heliostat = Heliostat.rotate_heliostat(heliostat, tower)--[[@as LuaEntity]]
         end
     end
     tower_data.max_production = (storage.energy_per_heliostat * tower_data.heliostats) * tower.surface.solar_power_multiplier
@@ -44,6 +53,7 @@ function Heliostat.update_power_generation(tower, excluded_heliostat)
     Heliostat.update_all_guis()
 end
 
+---@param tower LuaEntity?
 function Heliostat.rotate_heliostat(heliostat, tower)
     local sprite_num
     local old_sprite_num = string.match(heliostat.name, "solar%-tower%-panel(%d+)")
@@ -79,7 +89,7 @@ Heliostat.events.on_built = function(event)
     if not entity.valid then return end
 
     if Heliostat.is_heliostat(entity) then
-        entity = Heliostat.rotate_heliostat(entity)
+        entity = Heliostat.rotate_heliostat(entity)--[[@as LuaEntity]]
         local tower = Heliostat.find_tower(entity)
         if tower then Heliostat.update_power_generation(tower) end
     elseif entity.name == "solar-tower-building" then
@@ -109,13 +119,13 @@ end
 
 ---@param event EventData.on_gui_opened
 Heliostat.events.on_gui_opened = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local entity = event.entity
     if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= "solar-tower-building" then return end
 
     if player.gui.screen.heliostat_gui then player.gui.screen.heliostat_gui.destroy() end
     local main_frame = player.gui.screen.add {type = "frame", name = "heliostat_gui", caption = entity.prototype.localised_name, direction = "vertical"}
-    main_frame.tags = {unit_number = entity.unit_number}
+    main_frame.tags = {unit_number = entity.unit_number--[[@as number]]}
     main_frame.auto_center = true
     main_frame.style.vertically_stretchable = true
     player.opened = main_frame
@@ -123,7 +133,7 @@ Heliostat.events.on_gui_opened = function(event)
     local content_frame = main_frame.add {type = "frame", name = "content_frame", style = "inside_shallow_frame_with_padding"}
 
     local camera_frame = content_frame.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
-    local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = {entity.position.x, entity.position.y - 10}, surface_index = entity.surface.index}
+    local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = {x = entity.position.x,y = entity.position.y--[[@cast -?]] - 10}, surface_index = entity.surface.index}
     camera.visible = true
     camera.style.height = 380
     camera.style.width = 200
@@ -152,7 +162,7 @@ end
 
 ---@param event EventData.on_gui_closed
 Heliostat.events.on_gui_closed = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
         local gui = player.gui.screen.heliostat_gui
         if gui then gui.destroy() end
@@ -179,7 +189,7 @@ end
 
 ---@param event EventData.CustomInputEvent
 py.on_event(py.events.on_entity_clicked(), function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     if player.cursor_stack and player.cursor_stack.valid_for_read then return end
     local entity = player.selected
     if not entity or not Heliostat.is_heliostat(entity) then return end

@@ -13,6 +13,7 @@ updates.locomotive =
             layers =
             {
                 util.sprite_load("__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sloped/loco-sloped",
+                    ---@diagnostic disable-next-line: generic-constraint-mismatch
                     {
                         dice = 4,
                         priority = "very-low",
@@ -22,6 +23,7 @@ updates.locomotive =
                     }
                 ),
                 util.sprite_load("__pyalternativeenergygraphics__/graphics/entity/mk04-train/locomotive/sloped/glow-sloped",
+                    ---@diagnostic disable-next-line: generic-constraint-mismatch
                     {
                         dice = 4,
                         priority = "very-low",
@@ -48,6 +50,7 @@ updates.fluid_wagon =
             layers =
             {
                 util.sprite_load("__pyalternativeenergygraphics__/graphics/entity/mk04-train/fluid-wagon/sloped/fluid-sloped",
+                    ---@diagnostic disable-next-line: generic-constraint-mismatch
                     {
                         priority = "very-low",
                         direction_count = 160,
@@ -70,6 +73,7 @@ updates.cargo_wagon =
             layers =
             {
                 util.sprite_load("__pyalternativeenergygraphics__/graphics/entity/mk04-train/cargo-wagon/sloped/wagon-sloped",
+                    ---@diagnostic disable-next-line: generic-constraint-mismatch
                     {
                         priority = "very-low",
                         direction_count = 160,

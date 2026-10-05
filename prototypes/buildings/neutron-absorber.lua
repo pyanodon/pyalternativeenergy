@@ -236,4 +236,4 @@ end
 
 data.raw.fluid["boric-acid"].default_temperature = 0
 data.raw.fluid["boric-acid"].max_temperature = 10
-data.raw.recipe["boric-acid"].results[1].temperature = 10
+data.raw.recipe["boric-acid"].results--[[@cast -?]][1]--[[@cast -?]].temperature = 10

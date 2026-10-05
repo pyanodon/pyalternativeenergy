@@ -186,7 +186,7 @@ local molten_salt_recipes = {
 for _, name in pairs(molten_salt_recipes) do
     for mk = 1, 4, 1 do
         local recipe = name .. mk
-        table.insert(data.raw.recipe[recipe].icons, {
+        table.insert(data.raw.recipe[recipe].icons--[[@cast -?]], {
             icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. mk .. ".png",
             icon_size = 64,
         })

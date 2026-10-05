@@ -1,3 +1,13 @@
+---@namespace PyAlternativeenergy
+---@type PyAlternativeenergyStorage
+storage = storage --[[@as PyAlternativeenergyStorage]]
+
+---@class (partial) PyAlternativeenergyStorage
+---@field _last_cancel_creation_message number
+---@field _last_failed_airspace string
+---@field windmill table
+---@field last_windmill int?
+
 Wind = {}
 Wind.events = {}
 
@@ -86,7 +96,7 @@ Wind.events.on_built = function(event)
                 create_at_cursor = not not player_index
             }
             if player_index then
-                game.get_player(player_index).create_local_flying_text(cant_build_message)
+                game.get_player(player_index)--[[@cast -?]].create_local_flying_text(cant_build_message)
             else
                 for _, player in pairs(game.connected_players) do
                     player.create_local_flying_text(cant_build_message)
@@ -196,9 +206,9 @@ py.on_event(py.events.on_init(), function(event)
     for _, planet in pairs(game.planets) do
         -- reset properties
         if planet.surface then
-            planet.surface.set_property("py-wind-speed-variance", planet.prototype.surface_properties["py-wind-speed-variance"] or planet.surface.get_property("py-wind-speed-variance"))
-            planet.surface.set_property("py-wind-speed-min", planet.prototype.surface_properties["py-wind-speed-min"] or planet.surface.get_property("py-wind-speed-min"))
-            planet.surface.set_property("py-wind-speed-max", planet.prototype.surface_properties["py-wind-speed-max"] or planet.surface.get_property("py-wind-speed-max"))
+            planet.surface.set_property("py-wind-speed-variance", planet.prototype.surface_properties--[[@cast -?]]["py-wind-speed-variance"] or planet.surface.get_property("py-wind-speed-variance"))
+            planet.surface.set_property("py-wind-speed-min", planet.prototype.surface_properties--[[@cast -?]]["py-wind-speed-min"] or planet.surface.get_property("py-wind-speed-min"))
+            planet.surface.set_property("py-wind-speed-max", planet.prototype.surface_properties--[[@cast -?]]["py-wind-speed-max"] or planet.surface.get_property("py-wind-speed-max"))
         end
     end
 end)

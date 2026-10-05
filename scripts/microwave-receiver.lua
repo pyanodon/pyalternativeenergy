@@ -1,3 +1,10 @@
+---@namespace PyAlternativeenergy
+---@type PyAlternativeenergyStorage
+storage = storage --[[@as PyAlternativeenergyStorage]]
+
+---@class (partial) PyAlternativeenergyStorage
+---@field microwave_receivers table
+
 local MAX_SATELLITES_PER_RECIEVER = 15
 local POWER_PRODUCTION_PER_SATELLITE_WATTS = 800000
 
@@ -130,7 +137,7 @@ py.on_event(defines.events.on_rocket_launched, function(event)
 end)
 
 py.on_event(py.events.on_entity_clicked(), function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local entity = player.selected
     if not entity or not entity.valid then return end
     if entity.name ~= "microwave-receiver" then return end
@@ -147,7 +154,7 @@ py.on_event(defines.events.on_gui_opened, function(event)
 end)
 
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
         local gui = get_gui(player)
         if gui then gui.destroy() end

@@ -237,13 +237,13 @@ RECIPE {
     }
 }:add_unlock("nuclear-power-mk02")
 
-table.insert(data.raw.locomotive.locomotive.energy_source.fuel_categories, "nuke")
-table.insert(data.raw.locomotive["mk02-locomotive"].energy_source.fuel_categories, "nuke")
-table.insert(data.raw["assembling-machine"]["assembling-machine-3"].energy_source.fuel_categories, "nuke")
-table.insert(data.raw["assembling-machine"]["atomizer-mk03"].energy_source.fuel_categories, "nuke")
-table.insert(data.raw["assembling-machine"]["atomizer-mk04"].energy_source.fuel_categories, "nuke")
-table.insert(data.raw["assembling-machine"]["sinter-unit"].energy_source.fuel_categories, "nuke")
-table.insert(data.raw["furnace"]["py-burner"].energy_source.fuel_categories, "nuke")
+table.insert(data.raw.locomotive.locomotive.energy_source.fuel_categories--[[@cast -?]], "nuke")
+table.insert(data.raw.locomotive["mk02-locomotive"].energy_source.fuel_categories--[[@cast -?]], "nuke")
+table.insert(data.raw["assembling-machine"]["assembling-machine-3"].energy_source.fuel_categories--[[@cast -?]], "nuke")
+table.insert(data.raw["assembling-machine"]["atomizer-mk03"].energy_source.fuel_categories--[[@cast -?]], "nuke")
+table.insert(data.raw["assembling-machine"]["atomizer-mk04"].energy_source.fuel_categories--[[@cast -?]], "nuke")
+table.insert(data.raw["assembling-machine"]["sinter-unit"].energy_source.fuel_categories--[[@cast -?]], "nuke")
+table.insert(data.raw["furnace"]["py-burner"].energy_source.fuel_categories--[[@cast -?]], "nuke")
 
 --move uranium ore processing recipes
 RECIPE("grade-1-u"):remove_unlock("uranium-mk01"):add_unlock("uranium-processing")
@@ -576,11 +576,12 @@ data.raw["assembling-machine"]["wet-scrubber-mk02"].energy_usage = "2MW"
 data.raw["assembling-machine"]["wet-scrubber-mk03"].energy_usage = "3MW"
 data.raw["assembling-machine"]["wet-scrubber-mk04"].energy_usage = "4MW"
 
-if data.raw.resource["uranium-ore"] then
+if data.raw.resource["uranium-ore"]and data.raw.resource["uranium-ore"].minable then
     data.raw.resource["uranium-ore"].minable.required_fluid = nil
     data.raw.resource["uranium-ore"].minable.fluid_amount = nil
     data.raw.resource["uranium-ore"].minable.mining_time = 1
 end
+if data.raw.resource["uranium-rock"].minable == nil then error() end
 data.raw.resource["uranium-rock"].minable.required_fluid = nil
 data.raw.resource["uranium-rock"].minable.fluid_amount = nil
 data.raw.resource["uranium-rock"].minable.mining_time = 1
@@ -600,7 +601,7 @@ data.raw["item"]["uranium-mine"].icon = "__pyalternativeenergygraphics__/graphic
 data.raw["item"]["uranium-mine"].icon_size = 64
 RECIPE("uranium-mine"):remove_unlock("big-mines"):add_unlock("nuclear-power-mk02")
 RECIPE("uranium-mine"):remove_ingredient("electric-mining-drill"):add_ingredient {type = "item", name = "uranium-mining-drill", amount = 1}
-for _, layer in pairs(data.raw["mining-drill"]["uranium-mine"].graphics_set.animation.layers) do
+for _, layer in pairs(data.raw["mining-drill"]["uranium-mine"].graphics_set--[[@cast -?]].animation--[[@cast -?]].layers--[[@as data.Animation[] ]]) do
     layer.animation_speed = 0.3
 end
 data.raw["mining-drill"]["uranium-mine"].input_fluid_box = nil
