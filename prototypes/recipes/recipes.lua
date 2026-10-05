@@ -1360,7 +1360,7 @@ for f, metatable in pairs{
           shift = {-7, 7}
         }
       }
-    }:add_unlock("nonrenewable-mk0" .. (fluid.name == "steam" and math.max(i-1, 1) or i))
+    }--[[@as data.RecipePrototype]]:add_unlock("nonrenewable-mk0" .. (fluid.name == "steam" and math.max(i-1, 1) or i))
   end
 end
 
