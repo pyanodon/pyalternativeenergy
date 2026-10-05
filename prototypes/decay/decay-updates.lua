@@ -120,7 +120,7 @@ for _, food in pairs(meaty_foods) do
     for meat in pairs(meat_to_remove) do
         food_obj:remove_ingredient(meat)
     end
-    food_obj:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}
+    food_obj:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}--[[@as data.IngredientPrototype]]
 end
 
 for _, workers_food in pairs {
