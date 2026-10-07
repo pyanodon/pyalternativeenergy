@@ -497,6 +497,23 @@ py.mod_data.recipe_gui.alt_icons["mova-super"] = "mova"
 py.mod_data.recipe_gui.subgroups["numal"] = true
 py.mod_data.recipe_gui.subgroups["zungror"] = true
 
+-- smart farm recipes
+py.mod_data.smart_farm.crops["replicator-mova"] = {
+    resource = "mova",
+    recipes = {
+        ["mova-super-1"] = 1,
+        ["mova-super-2"] = 2,
+        ["mova-super-3"] = 3,
+        ["mova-super-4"] = 4,
+        ["mova-super-5"] = 5,
+        ["mova-super-6"] = 6,
+        ["mova-super-7"] = 7,
+        ["mova-super-8"] = 8,
+        ["mova-super-9"] = 9,
+        ["mova-super-10"] = 10,
+    }
+}
+
 --pySE
 if not mods["pystellarexpedition"] then return end
 data.raw["assembling-machine"]["arqad-hive-mk01-with-cags"].energy_usage = "1MW"
