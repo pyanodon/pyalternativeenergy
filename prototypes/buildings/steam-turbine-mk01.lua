@@ -44,6 +44,7 @@ ENTITY {
     effectivity = 1,
     fluid_usage_per_tick = 1,
     maximum_temperature = 1000,
+    minimum_input_temperature = 500,
     destroy_non_fuel_fluid = false,
     resistances = {
         {
@@ -55,7 +56,6 @@ ENTITY {
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     fluid_box = {
         filter = "pressured-steam",
-        minimum_temperature = 500,
         volume = 200,
         pipe_covers = py.pipe_covers(false, true, true, true),
         --pipe_picture = pipe_pictures({0, 3}),

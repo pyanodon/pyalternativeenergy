@@ -59,13 +59,13 @@ ENTITY {
         scale_fluid_usage = true,
         destroy_non_fluid_fuel = false,
         maximum_temperature = 3000,
+        minimum_input_temperature = 3000,
         fluid_box = {
             production_type = "input",
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             filter = "molten-salt",
-            minimum_temperature = 3000,
             pipe_connections = {{flow_direction = "input", position = {-3, 6.0}, direction = defines.direction.south}}
         },
         output_fluid_box = {
