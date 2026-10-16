@@ -51,6 +51,7 @@ ENTITY {
     effectivity = 1,
     fluid_usage_per_tick = 10,
     maximum_temperature = 2000,
+    minimum_input_temperature = 1000,
     destroy_non_fuel_fluid = false,
     resistances = {
         {
@@ -66,7 +67,6 @@ ENTITY {
         pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
         production_type = "input-output",
         filter = "pressured-steam",
-        minimum_temperature = 1000,
         pipe_connections = {
             {flow_direction = "input-output", position = {0, 3.0},  direction = defines.direction.south},
             {flow_direction = "input-output", position = {-3.0, 0}, direction = defines.direction.west},

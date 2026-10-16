@@ -40,6 +40,7 @@ ITEM {
 
 ENTITY {
     type = "construction-robot",
+    tall = true,
     name = "py-construction-robot-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/c-pynobot-mk03.png",
     icon_size = 64,
