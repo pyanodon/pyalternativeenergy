@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.11
+Date: 2026-10-16
+  Changes:
+    - Fixed loading on Factorio 2.1.22 (for real this time)
+---------------------------------------------------------------------------------------------------
 Version: 3.2.10
-Date: ???
+Date: 2026-10-16
   Changes:
     - Made aerial turbines tall
     - Fixed loading on Factorio 2.1.22

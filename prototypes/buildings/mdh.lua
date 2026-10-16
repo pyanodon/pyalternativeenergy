@@ -45,6 +45,7 @@ ENTITY {
     effectivity = 1,
     fluid_usage_per_tick = 400,
     maximum_temperature = 4000,
+    minimum_input_temperature = 500,
     destroy_non_fuel_fluid = false,
     custom_tooltip_fields = { -- remove whenever wube https://forums.factorio.com/viewtopic.php?t=130073
       {
@@ -67,7 +68,6 @@ ENTITY {
         pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
         production_type = "input-output",
         filter = "neutron",
-        minimum_temperature = 500.0,
         pipe_connections = {
             {flow_direction = "input-output", position = {2.5, 5.5},   direction = defines.direction.east},
             {flow_direction = "input-output", position = {-2.5, 5.5},  direction = defines.direction.west},
