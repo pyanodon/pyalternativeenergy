@@ -129,9 +129,9 @@ RECIPE("subcritical-water-01").categories = {"heat-exchanger"}
 RECIPE("subcritical-water-02").categories = {"heat-exchanger"}
 
 for _, recipe in pairs(data.raw.recipe) do
-    RECIPE(recipe):replace_ingredient("battery", "battery-mk01"):replace_result("battery", "battery-mk01")
+    RECIPE(recipe.name):replace_ingredient("battery", "battery-mk01"):replace_result("battery", "battery-mk01")
 
-    if RECIPE(recipe):has_category("combustion") then
+    if RECIPE(recipe.name):has_category("combustion") then
         recipe.hidden = true
         for t, tech in pairs(data.raw.technology) do
             if tech.effects ~= nil then
