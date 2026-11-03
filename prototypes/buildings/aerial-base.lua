@@ -21,8 +21,6 @@ for i = 1, 4 do
             render_no_power_icon = false
         },
         collision_mask = {layers = {}},
-        charge_cooldown = 0,
-        discharge_cooldown = 0
     }}
 end
 
@@ -163,8 +161,6 @@ ENTITY {
         circuit_wire_connection_point
     },
     circuit_wire_max_distance = 9,
-    circuit_connector_sprites = _G.circuit_connector_definitions["accumulator"].sprites,
-    item_slot_count = 10,
     integration_patch_render_layer = "lower-object-above-shadow",
     integration_patch = {
         filename = "__pyalternativeenergygraphics__/graphics/entity/aerial-base/r.png",
@@ -192,7 +188,5 @@ ENTITY {
     },
     collision_box = {{-5.4, -5.4}, {5.4, 5.4}},
     inventory_size = 40,
-    enable_inventory_bar = false,
-    scale_info_icons = true,
     inventory_type = "with_filters_and_bar"
 }

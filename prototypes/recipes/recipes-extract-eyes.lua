@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "extract-auog-eye",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -18,7 +18,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "extract-ulric-eye",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -35,7 +35,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "extract-mukmoux-eye",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -52,7 +52,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "extract-scrondrix-eye",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -69,7 +69,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "extract-dhilmos-eye",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 30,
     ingredients = {

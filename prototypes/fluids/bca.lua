@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "bca",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 15,
     ingredients = {

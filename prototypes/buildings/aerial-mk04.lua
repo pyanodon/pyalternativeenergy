@@ -5,7 +5,7 @@ RECIPE {
     type = "recipe",
     name = "aerial-blimp-mk04",
     energy_required = 50,
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     ingredients =
     {
@@ -45,6 +45,7 @@ data:extend
     {
         ai_settings = {do_separation = false, path_resolution_modifier = -5},
         type = "unit",
+        tall = true,
         additional_pastable_entities = {"aerial-blimp-mk01", "aerial-blimp-mk02", "aerial-blimp-mk03", "aerial-blimp-mk04"},
         name = "aerial-blimp-mk04",
         selection_priority = 49,
@@ -63,9 +64,6 @@ data:extend
             },
         },
         healing_per_tick = 0.04,
-        immune_to_tree_impacts = true,
-        has_belt_immunity = true,
-        immune_to_rock_impacts = true,
         collision_mask = {layers = {}, not_colliding_with_itself = true},
         selection_box = {{-1.5, -3.5}, {1.5, 3.5}},
         attack_parameters =

@@ -45,7 +45,7 @@ ENTITY {
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     input_fluid_box = {
-        pipe_picture = _G.assembler2pipepictures(),
+        pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
         pipe_covers = _G.pipecoverspictures(),
         volume = 200,
         pipe_connections = {
@@ -104,6 +104,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pycoalprocessinggraphics__/sounds/borax-mine.ogg"},
         idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/borax-mine.ogg", volume = 0.3},
-        apparent_volume = 2.5
     }
 }

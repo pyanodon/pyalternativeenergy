@@ -278,6 +278,7 @@ require "prototypes.buildings.rtg"
 require "prototypes.buildings.mk04-locomotive"
 require "prototypes.buildings.mk04-cargo-wagon"
 require "prototypes.buildings.mk04-fluid-wagon"
+require "prototypes.buildings.mk04-train-sloped"
 require "prototypes.buildings.multiblade-turbine-mk01"
 require "prototypes.buildings.multiblade-turbine-mk03"
 require "prototypes.buildings.numal-mk01"
@@ -297,8 +298,12 @@ require "prototypes.animations.hawt-turbine-mk01"
 require "prototypes.animations.hawt-turbine-mk02"
 require "prototypes.animations.hawt-turbine-mk03"
 require "prototypes.animations.hawt-turbine-mk04"
+require "prototypes.animations.tidal"
 
 require "prototypes.decay.decay"
+
+--(( OTHER ))
+require "prototypes.surface-properties"
 
 data.raw.fluid["crude-oil"].subgroup = "test"
 data.raw.fluid["gasoline"].subgroup = "test"

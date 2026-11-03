@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "numal-egg",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"numal"},
 	module_limitations = "numal",
 	subgroup = "py-alienlife-numal",
@@ -19,12 +19,12 @@ py.autorecipes {
 				{name = "trits",       amount = 1},
 				{name = "cdna",        amount = 1},
 				{name = "barrel-milk", amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "numal-egg",         amount = 4},
 				{name = "empty-barrel-milk", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "numal-mk01"
 		},
@@ -217,7 +217,7 @@ RECIPE {
 
 py.autorecipes {
 	name = "numal-raising",
-	category = "numal",
+	categories = {"numal"},
 	module_limitations = "numal",
 	subgroup = "py-alienlife-numal",
 	order = "b",
@@ -234,12 +234,12 @@ py.autorecipes {
 				{name = "meat",               amount = 10},
 				{name = "guts",               amount = 10},
 				{name = "arqad-honey-barrel", amount = 1, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "numal", amount_min = 1, amount_max = 4},
 				{name = "cage",  amount = 1}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 350,
 			tech = "numal-mk01"
 		},

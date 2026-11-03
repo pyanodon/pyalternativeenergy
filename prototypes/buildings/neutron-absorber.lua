@@ -126,7 +126,7 @@ for i = 1, 4 do
         dying_explosion = "solar-panel-explosion",
         collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
         selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-        forced_symmetry = "diagonal-pos",
+        use_mirroring = true,
         crafting_categories = {"neutron-absorber"},
         crafting_speed = i,
         energy_source = {
@@ -143,7 +143,7 @@ for i = 1, 4 do
                     {flow_direction = "input-output", position = {0, -1.0}, direction = defines.direction.north},
                     {flow_direction = "input-output", position = {0, 1.0},  direction = defines.direction.south}
                 },
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 production_type = "input-output",
                 filter = "boric-acid"
@@ -209,7 +209,7 @@ for i = 1, 4 do
         fluid_boxes = {
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 volume = 100,
                 pipe_connections = {
@@ -236,4 +236,4 @@ end
 
 data.raw.fluid["boric-acid"].default_temperature = 0
 data.raw.fluid["boric-acid"].max_temperature = 10
-data.raw.recipe["boric-acid"].results[1].temperature = 10
+data.raw.recipe["boric-acid"].results--[[@cast -?]][1]--[[@cast -?]].temperature = 10

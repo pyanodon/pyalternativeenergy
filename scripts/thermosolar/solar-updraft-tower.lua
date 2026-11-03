@@ -1,3 +1,10 @@
+---@namespace PyAlternativeenergy
+---@type PyAlternativeenergyStorage
+storage = storage --[[@as PyAlternativeenergyStorage]]
+
+---@class (partial) PyAlternativeenergyStorage
+---@field update_sut_guis boolean
+
 local floor = math.floor
 
 Solar_Updraft_Tower = {}
@@ -72,6 +79,7 @@ end
 local function clear_shine_effect(surface, position)
     local x, y = position.x, position.y
 
+    ---@type number
     local a, b = floor(x / 2), y
     a = a * (-1) ^ floor(a / 30)
     b = b * (-1) ^ floor(b / 30)
@@ -105,6 +113,7 @@ py.on_event(py.events.on_built_tile(), function(event)
 
         local x, y = position.x, position.y
 
+        ---@type number
         local a, b = floor(x / 2), y
         a = a * (-1) ^ floor(a / 30)
         b = b * (-1) ^ floor(b / 30)
@@ -163,9 +172,9 @@ py.register_on_nth_tick(60, "sut", "pyae", function()
         local activity = Thermosolar.calc_daylight(surface)
 
         if activity == 0 then
-            entity.active = false
+            entity.disabled_by_script = true
         else
-            entity.active = true
+            entity.disabled_by_script = false
             local smokestack = activity == 1 and "sut-smokestack" or "sut-smokestack-weak"
             surface.create_entity {name = smokestack, position = {entity.position.x, entity.position.y - 28}}
         end

@@ -2,7 +2,7 @@
 RECIPE {
     type = "recipe",
     name = "fenxsb-alloy",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -20,7 +20,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fenxsb-alloy-2",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vitreloy",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -56,7 +56,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "intermetallics",
-    category = "advanced-foundry",
+    categories = {"advanced-foundry"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -74,7 +74,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "self-assembly-monolayer",
-    category = "advanced-foundry",
+    categories = {"advanced-foundry"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -94,7 +94,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ptcda",
-    category = "wet-scrubber",
+    categories = {"wet-scrubber"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -112,7 +112,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nbalti",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -129,7 +129,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crmoni",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -148,7 +148,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "citric-acid-01",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -165,7 +165,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "citric-acid-02",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -181,7 +181,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sodium-citrate",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -197,7 +197,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "metallic-core",
-    category = "nmf",
+    categories = {"nmf"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -215,7 +215,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "silica-shell",
-    category = "nmf",
+    categories = {"nmf"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -231,7 +231,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plasmonic-core",
-    category = "nano",
+    categories = {"nano"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -250,7 +250,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "diethylaniline",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -267,7 +267,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "3-diethylaminophenol",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -286,7 +286,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phthalic-anhydride",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -305,7 +305,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rhodamine-b",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -323,7 +323,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fluorophore",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -340,7 +340,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lithium-niobate-nano",
-    category = "nmf",
+    categories = {"nmf"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -357,7 +357,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dieletric-layer",
-    category = "nmf",
+    categories = {"nmf"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -373,7 +373,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "core-shell",
-    category = "nano",
+    categories = {"nano"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -391,7 +391,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mositial-nx",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -410,7 +410,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ns-material",
-    category = "nano",
+    categories = {"nano"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -435,7 +435,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "metastable-quasicrystal",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -458,7 +458,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "time-crystal",
-    category = "pa",
+    categories = {"pa"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -468,7 +468,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "time-crystal",     amount = 1},
-        {type = "item", name = "yag-laser-module", amount = 1, probability = 0.9, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "yag-laser-module", amount = 1, independent_probability = 0.9, ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     main_product = "time-crystal",
 }:add_unlock("intermetallics-mk04")
@@ -476,7 +476,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "quasicrystal",
-    category = "advanced-foundry",
+    categories = {"advanced-foundry"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -495,7 +495,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nxzngd",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -513,7 +513,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "molten-nxzngd",
-    category = "py-rawores-smelter",
+    categories = {"py-rawores-smelter"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -533,7 +533,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "photon-deposited-quartz",
-    category = "nano",
+    categories = {"nano"},
     enabled = false,
     energy_required = 30,
     ingredients = {

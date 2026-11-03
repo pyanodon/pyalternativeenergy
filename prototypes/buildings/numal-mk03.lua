@@ -50,11 +50,12 @@ ENTITY {
     collision_mask = data.raw["assembling-machine"]["numal-reef-mk01"].collision_mask,
     collision_box = {{-3.3, -5.3}, {3.3, 5.3}},
     selection_box = {{-3.5, -5.5}, {3.5, 5.5}},
-    forced_symmetry = "diagonal-pos",
+    use_mirroring = true,
     draw_entity_info_icon_background = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"numal"},
+    effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "numal-reef-mk01"),
     energy_source = {
         type = "electric",
@@ -663,51 +664,50 @@ ENTITY {
                 }
             }
         },
-    },
-    working_visualisations =
-    {
-        {
-            north_animation = {
+        working_visualisations = {
+            {
+                north_animation = {
 
-                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/north/all.png",
-                frame_count = 150,
-                line_length = 15,
-                width = 192,
-                height = 192,
-                shift = util.by_pixel(16, -76),
-                animation_speed = 0.4
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/numal/north/all.png",
+                    frame_count = 150,
+                    line_length = 15,
+                    width = 192,
+                    height = 192,
+                    shift = util.by_pixel(16, -76),
+                    animation_speed = 0.4
 
+                },
+                south_animation = {
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/all.png",
+                    frame_count = 150,
+                    line_length = 15,
+                    width = 160,
+                    height = 192,
+                    shift = util.by_pixel(0, -16),
+                    animation_speed = 0.4
+                },
+                west_animation = {
+
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/numal/east/all.png",
+                    frame_count = 150,
+                    line_length = 15,
+                    width = 192,
+                    height = 192,
+                    shift = util.by_pixel(-48, -48),
+                    animation_speed = 0.4
+
+                },
+                east_animation = {
+
+                    filename = "__pyalternativeenergygraphics__/graphics/entity/numal/west/all.png",
+                    frame_count = 150,
+                    line_length = 15,
+                    width = 192,
+                    height = 160,
+                    shift = util.by_pixel(45, -64),
+                    animation_speed = 0.4
+                }
             },
-            south_animation = {
-                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/south/all.png",
-                frame_count = 150,
-                line_length = 15,
-                width = 160,
-                height = 192,
-                shift = util.by_pixel(0, -16),
-                animation_speed = 0.4
-            },
-            west_animation = {
-
-                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/east/all.png",
-                frame_count = 150,
-                line_length = 15,
-                width = 192,
-                height = 192,
-                shift = util.by_pixel(-48, -48),
-                animation_speed = 0.4
-
-            },
-            east_animation = {
-
-                filename = "__pyalternativeenergygraphics__/graphics/entity/numal/west/all.png",
-                frame_count = 150,
-                line_length = 15,
-                width = 192,
-                height = 160,
-                shift = util.by_pixel(45, -64),
-                animation_speed = 0.4
-            }
         },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -715,9 +715,9 @@ ENTITY {
         -- 1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {0, 5.0}, direction = defines.direction.south}}
         },
     },
@@ -725,8 +725,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/numal.ogg", volume = 1.0},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/numal.ogg", volume = 0.65},
-        apparent_volume = 0.45
     },
-    -- Blacklist from squeak through
-    squeak_behaviour = false
 }

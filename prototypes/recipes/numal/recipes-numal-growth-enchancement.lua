@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "numal-improved",
-	category = "numal",
+	categories = {"numal"},
 	--module_limitations = 'numal',
 	subgroup = "py-alienlife-numal",
 	order = "b",
@@ -13,11 +13,11 @@ py.autorecipes {
 			{
 				{name = "numal",        amount = 1},
 				{name = "anabolic-rna", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat-numal", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 180,
 			tech = "anabolic-rna"
 		},

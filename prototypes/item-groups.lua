@@ -3,7 +3,6 @@ data:extend {
         type = "item-group",
         name = "py-alternativeenergy",
         order = "u",
-        inventory_order = "u",
         icon = "__pyalternativeenergygraphics__/graphics/icons/group/item-group.png",
         icon_size = 64
     },

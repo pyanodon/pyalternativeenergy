@@ -40,7 +40,7 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    forced_symmetry = "diagonal-pos",
+    use_mirroring = true,
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"heat-exchanger"},
@@ -140,7 +140,6 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyfusionenergygraphics__/sounds/heat-exchanger.ogg"},
         idle_sound = {filename = "__pyfusionenergygraphics__/sounds/heat-exchanger.ogg", volume = 0.3},
-        apparent_volume = 2.5
     },
     next_upgrade = "py-heat-exchanger-mk03"
 }

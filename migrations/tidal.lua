@@ -1,3 +1,4 @@
+---@diagnostic disable
 storage.tidal_plants = storage.tidal_plants or {}
 
 local migrated_count = 0

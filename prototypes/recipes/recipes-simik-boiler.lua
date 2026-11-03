@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "steam-250",
-    category = "simik-boiler",
+    categories = {"simik-boiler"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "steam-500",
-    category = "simik-boiler",
+    categories = {"simik-boiler"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -33,7 +33,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pressured-steam-1",
-    category = "simik-boiler",
+    categories = {"simik-boiler"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -48,7 +48,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pressured-steam-2",
-    category = "simik-boiler",
+    categories = {"simik-boiler"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pressured-steam-3",
-    category = "simik-boiler",
+    categories = {"simik-boiler"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -78,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pressured-steam-4",
-    category = "simik-boiler",
+    categories = {"simik-boiler"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -93,7 +93,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-hot-air-boiler",
-    category = "simik-boiler",
+    categories = {"simik-boiler"},
     enabled = false,
     energy_required = 15,
     ingredients = {

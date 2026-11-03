@@ -23,7 +23,7 @@ RECIPE("nmf-mk01"):add_ingredient {type = "item", name = "intermetallics", amoun
 RECIPE("secondary-crusher-mk01"):remove_unlock("machines-mk01"):add_unlock("crusher-2") --:add_ingredient({type = "item", name = "intermetallics", amount = 8})
 RECIPE("thickener-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 7}
 RECIPE("gas-separator-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}
-RECIPE("hydrocyclone-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}:remove_unlock("vanadium-processing"):add_unlock("iron-mk02")
+RECIPE("hydrocyclone-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}:remove_unlock("advanced-mining-facilities"):add_unlock("iron-mk02")
 --RECIPE("automated-screener-mk01"):add_ingredient({type = "item", name = "intermetallics", amount = 3})
 RECIPE("centrifugal-pan-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 10}
 RECIPE("compressor-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 6}
@@ -156,7 +156,7 @@ data.raw["assembling-machine"]["fusion-reactor-mk02"].crafting_categories = {"fu
 RECIPE {
     type = "recipe",
     name = "liquid-helium",
-    category = "compressor",
+    categories = {"compressor"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -181,7 +181,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hydrogen-sulfide",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -198,7 +198,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "deuterium-sulfide",
-    category = "gas-separator",
+    categories = {"gas-separator"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -215,7 +215,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "enriched-water",
-    category = "compressor",
+    categories = {"compressor"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -232,7 +232,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "enriched-water-distillation",
-    category = "distilator",
+    categories = {"distilator"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -249,7 +249,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "deuterium",
-    category = "electrolyzer",
+    categories = {"electrolyzer"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -265,7 +265,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dt-fusion",
-    category = "fusion-01",
+    categories = {"fusion-01"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -286,13 +286,12 @@ RECIPE {
     icon_size = 32,
     subgroup = "py-fusion-items",
     order = "e",
-    show_details_in_recipe_tooltip = false
 }:remove_unlock("fusion-mk02"):add_unlock("fusion-mk01")
 
 RECIPE {
     type = "recipe",
     name = "deuterium-fusion",
-    category = "fusion-01",
+    categories = {"fusion-01"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -311,13 +310,12 @@ RECIPE {
     icon_size = 32,
     subgroup = "py-fusion-items",
     order = "e",
-    show_details_in_recipe_tooltip = false
 }:remove_unlock("fusion-mk01"):add_unlock("fusion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "dt-he3",
-    category = "fusion-02",
+    categories = {"fusion-02"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -335,13 +333,12 @@ RECIPE {
     icon_size = 32,
     subgroup = "py-fusion-items",
     order = "e",
-    show_details_in_recipe_tooltip = false
 }
 
 RECIPE {
     type = "recipe",
     name = "b-h",
-    category = "fusion-02",
+    categories = {"fusion-02"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -358,7 +355,6 @@ RECIPE {
     icon_size = 32,
     subgroup = "py-fusion-items",
     order = "e",
-    show_details_in_recipe_tooltip = false
 }
 
 RECIPE("antimatter-fusion"):remove_unlock("fusion-mk04")
@@ -385,7 +381,6 @@ RECIPE {
     icon_size = 32,
     subgroup = 'py-fusion-items',
     order = 'e',
-    show_details_in_recipe_tooltip = false
 }
 ]] --
 

@@ -46,19 +46,20 @@ ENTITY {
     max_health = 1000,
     corpse = "locomotive-remnants",
     dying_explosion = "locomotive-explosion",
-    collision_box = {{-0.6, -2.5}, {0.6, 2.5}},
+    collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
     selection_box = {{-1, -3.0}, {1, 3.0}},
     --damaged_trigger_effect = hit_effects.entity(),
     drawing_box_vertical_extension = data.raw["locomotive"]["locomotive"].drawing_box_vertical_extension,
+    icons_positioning = {{inventory_index = defines.inventory.fuel, shift = {0, 0.3}, max_icons_per_row = 1}},
     alert_icon_shift = util.by_pixel(0, -24),
-    weight = 900,
-    max_speed = 1.7,
-    max_power = "700kW",
+    fast_replaceable_group = "locomotive",
+    weight = 1000,
+    max_power = "2.4MW",
     reversing_power_modifier = 0.4,
-    braking_force = 25,
-    friction_force = 0.40,
+    braking_force = 81,
+    friction_force = 0.20,
     vertical_selection_shift = -0.2,
-    air_resistance = 0.0025, -- this is a percentage of current speed that will be subtracted
+    air_resistance = 0.0030, -- this is a percentage of current speed that will be subtracted
     connection_distance = 3,
     joint_distance = 4,
     energy_per_hit_point = 5,
@@ -295,12 +296,12 @@ ENTITY {
         },
         match_speed_to_activity = true,
         max_sounds_per_prototype = 2,
-        -- use_doppler_shift = false
+        -- use_doppler_shift = false,
+        activity_to_speed_modifiers = {minimum = 0.5},
+        activity_to_volume_modifiers ={multiplier = 0.35}
     },
     open_sound = {filename = "__pyalternativeenergygraphics__/sounds/locomotive-open.ogg", volume = 0.6},
     close_sound = {filename = "__pyalternativeenergygraphics__/sounds/locomotive-close.ogg", volume = 0.6},
-    sound_minimum_speed = 0.5,
-    sound_scaling_ratio = 0.35,
     water_reflection = {
         pictures =
         {

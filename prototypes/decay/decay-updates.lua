@@ -24,7 +24,7 @@ RECIPE("jacket-bio-ore")
     name = "nanozymes",
     type = "item",
     amount = 1,
-    probability = 0.90,
+    independent_probability = 0.90,
     ignored_by_stats = 1,
     ignored_by_productivity = 1
 }
@@ -45,15 +45,14 @@ ITEM("biocarnation"):spoil("advanced-substrate", 2 * hour)
 --ITEM("am-243"):spoil("np-239", minute * 7370)
 ITEM("cm-250"):spoil("plutonium-oxide", minute * 8300)
 ITEM("pa-233"):spoil("u-233", 27 * second) -- realistic time is 27 days
-RECIPE("pa233-u233"):remove_unlock("nuclear-power-mk03")
-data.raw.recipe["pa233-u233"] = nil
-ITEM("po-210"):spoil("reduced-lead", 138.4 * minute)
-ITEM("pu-238"):spoil("u-234", 87.7 * minute)
+RECIPE("pa233-u233"):remove_unlock("nuclear-power-mk03"):hide()
+ITEM("po-210"):spoil("reduced-lead", (138.4 * minute)--[[@as uint]])
+ITEM("pu-238"):spoil("u-234", (87.7 * minute)--[[@as uint]])
 ITEM("pu-239"):spoil("u-235", 24100 * minute)
 ITEM("pu-240"):spoil("u-236", 6560 * minute)
-ITEM("pu-241"):spoil("am-241", 14.3 * month)
+ITEM("pu-241"):spoil("am-241", (14.3 * month)--[[@as uint]])
 ITEM("pu-242"):spoil("u-238", 373300 * second)
-ITEM("th-233"):spoil("pa-233", 22.3 * minute)
+ITEM("th-233"):spoil("pa-233", (22.3 * minute)--[[@as uint]])
 
 --[[
 ITEM("u-232"):spoil("th-228", 68.9 * year)
@@ -70,7 +69,7 @@ for i = 232, 240 do
     ITEM("u-" .. i):spoil("uranium-oxide", 50 * minute)
 end
 ITEM("uranium-oxide"):spoil("ash", day)
-data.raw.recipe["uranium-seperation"]:replace_ingredient("u238", {type = "item", name = "u238", amount = 10, probability = 0.25}):add_ingredient {type = "item", name = "ash", amount = 10, probability = 0.425}
+RECIPE("uranium-seperation"):replace_result("u-238", {type = "item", name = "u-238", amount = 10, shared_probability = {min = 0.325, max = 0.575}}):add_result {type = "item", name = "ash", amount = 10, shared_probability = {min = 0.575, max = 1.000}}
 
 ITEM("high-energy-waste-2"):spoil("high-energy-waste-1", 5 * minute)
 ITEM("high-energy-waste-1"):spoil("ash", 5 * minute)
@@ -83,7 +82,7 @@ ITEM("meat"):spoil("dried-meat", 4 * hour)
 ITEM("guts"):spoil("dried-meat", 8 * hour)
 ITEM("brain"):spoil("dried-meat", 16 * hour)
 
-ITEM("manure"):spoil("rich-clay", 5.5 * hour)
+ITEM("manure"):spoil("rich-clay", (5.5 * hour)--[[@as uint]])
 
 RECIPE("fertilizer-3"):add_ingredient {type = "item", name = "biocrud", amount = 2}
 
@@ -110,18 +109,18 @@ local meat_to_remove = {
 
 for _, food in pairs(meaty_foods) do
     if not data.raw.recipe[food] then error(food) end
-    food = RECIPE(food)
-    local removed_count = 0
-    for _, ingredient in pairs(food.ingredients) do
+    food_obj = RECIPE(food)
+    local removed_count = 0.0
+    for _, ingredient in pairs(food_obj.ingredients--[[@cast -?]]) do
         if meat_to_remove[ingredient.name] then
             removed_count = removed_count + ingredient.amount
         end
     end
-    if removed_count == 0 then error(food.name .. " has no meat") end
+    if removed_count == 0 then error(food_obj.name .. " has no meat") end
     for meat in pairs(meat_to_remove) do
-        food:remove_ingredient(meat)
+        food_obj:remove_ingredient(meat)
     end
-    food:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}
+    food_obj:add_ingredient {type = "item", name = "dried-meat", amount = removed_count}--[[@as data.IngredientPrototype]]
 end
 
 for _, workers_food in pairs {
@@ -135,7 +134,7 @@ end
 ITEM("native-flora"):spoil("floraspollinin", 200 * minute)
 
 ITEM("native-flora").fuel_value = "175kJ"
-ITEM("native-flora").fuel_category = "biomass"
+ITEM("native-flora").fuel_categories = {"biomass"}
 
 -- This shouldn't be a thing, as much as I love spoilage waiting for multiple hours for jerky is not fun!
 -- RECIPE("dried-meat-01"):remove_unlock("rendering")
@@ -250,7 +249,11 @@ local allow_decay_propogation = {
 }
 
 for _, recipe in pairs(data.raw.recipe) do
-    recipe.result_is_always_fresh = not allow_decay_propogation[recipe.name]
+    for _, result in pairs(recipe.results or {}) do
+        if result.type == "item" and not allow_decay_propogation[recipe.name] then
+            result.always_fresh = true
+        end
+    end
 end
 
 -- Raw ores

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "he-01",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -9,7 +9,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 200},
+        {type = "fluid", name = "molten-salt",     amount = 200, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 1000},
     },
     main_product = "pressured-steam",
@@ -18,7 +18,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "he-02",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -26,7 +26,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 2000},
     },
     main_product = "pressured-steam",
@@ -35,7 +35,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "he-03",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -43,7 +43,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 3000},
     },
     main_product = "pressured-steam",
@@ -52,7 +52,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "he-04",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -60,7 +60,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 4000},
     },
     main_product = "pressured-steam",
@@ -69,7 +69,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "he-05",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -77,7 +77,7 @@ RECIPE {
         {type = "fluid", name = "pressured-water", amount = 75},
     },
     results = {
-        {type = "fluid", name = "molten-salt",     amount = 100},
+        {type = "fluid", name = "molten-salt",     amount = 100, autotech_is_not_primary_source = true},
         {type = "fluid", name = "pressured-steam", amount = 75, temperature = 5000},
     },
     main_product = "pressured-steam",
@@ -87,7 +87,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geo-he-00",
-    category = "rhe",
+    categories = {"rhe"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -104,7 +104,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geo-he-01",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -122,7 +122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geo-he-02",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -140,7 +140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geo-he-03",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 2.5,
     ingredients = {

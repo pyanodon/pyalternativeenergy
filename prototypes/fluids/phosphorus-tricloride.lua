@@ -11,7 +11,7 @@ RECIPE {
         {type = "fluid", name = "phosphorus-tricloride", amount = 50}
     },
     main_product = "phosphorus-tricloride",
-    category = "electrolyzer"
+    categories = {"electrolyzer"}
 }:add_unlock("nuclear-power")
 
 FLUID {

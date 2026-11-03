@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "eg-si",
-    category = "advanced-foundry",
+    categories = {"advanced-foundry"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -20,7 +20,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crucible",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "polycrystalline-slab",
-    category = "eaf",
+    categories = {"eaf"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -54,7 +54,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "polycrystalline-plate",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -73,7 +73,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "quartz-crucible",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -89,7 +89,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "monocrystalline-slab",
-    category = "eaf",
+    categories = {"eaf"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -105,7 +105,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "monocrystalline-plate",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -122,7 +122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "silicon-wafer-3",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -138,7 +138,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "silicon-wafer-2",
-    category = "electronic",
+    categories = {"electronic"},
     enabled = false,
     energy_required = 5,
     ingredients = {

@@ -1,9 +1,9 @@
 {
     "name": "pyalternativeenergy",
     "version": "4.0.0",
-    "factorio_version": "2.0",
+    "factorio_version": "2.1",
     "title": "Pyanodons Alternative Energy",
-    "author": "Pyanodon, Nexela, Kingarthur, Notnotmelon, Mootykins, ShadowGlass, Archezekiel, Quintuple, Przemo",
+    "author": "Pyanodon, Nexela, Kingarthur, Notnotmelon, Mootykins, ShadowGlass, Archezekiel, Quintuple, przemo1232, protocol_1903",
     "contact": "https://discord.gg/SBHM3h5Utj",
     "homepage": "https://github.com/pyanodon/pyalternativeenergy",
     "description": "Contains POWER!",
@@ -16,9 +16,9 @@
         "? enable-all-feature-flags",
         "(?) pyindustry",
         "! wret-beacon-rebalance-mod",
-        "! BigBags",
         "! ResearchFog",
-        "! omnimatter_energy"
+        "! omnimatter_energy",
+        "+ cargo-bays-and-unloaders"
     ],
     "package": {
         "ignore": [],

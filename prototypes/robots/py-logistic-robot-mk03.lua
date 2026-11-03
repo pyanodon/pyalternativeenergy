@@ -4,7 +4,7 @@ RECIPE {
     type = "recipe",
     name = "py-logistic-robot-mk03",
     energy_required = 15,
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "processing-unit",        amount = 3},
@@ -40,6 +40,7 @@ ITEM {
 
 ENTITY {
     type = "logistic-robot",
+    tall = true,
     name = "py-logistic-robot-mk03",
     icon = "__pyalternativeenergygraphics__/graphics/icons/l-pynobot-mk03.png",
     icon_size = 64,
@@ -54,7 +55,6 @@ ENTITY {
     selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
     max_payload_size = 5,
     speed = 0.17,
-    transfer_distance = 0.5,
     max_energy = "4MJ",
     energy_per_tick = "0.06kJ",
     speed_multiplier_when_out_of_energy = 0.2,
@@ -154,5 +154,4 @@ ENTITY {
         scale = 0.55
     },
     working_sound = sounds.flying_robot(0.5),
-    cargo_centered = {0.0, 0.2}
 }

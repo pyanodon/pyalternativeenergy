@@ -30,7 +30,7 @@ ITEM {
     subgroup = "py-nuclear",
     order = "a",
     stack_size = 50,
-    fuel_category = "control-rod",
+    fuel_categories = {"control-rod"},
     fuel_value = "10MJ",
     burnt_result = "used-control-rod"
 }
@@ -947,9 +947,7 @@ ITEM {
     icon_size = 64,
     flags = {},
     fuel_value = "1000MJ",
-    fuel_category = "quantum",
-    fuel_acceleration_multiplier = 3.5,
-    fuel_top_speed_multiplier = 2.5,
+    fuel_categories = {"quantum"},
     burnt_result = "used-quantum-battery",
     subgroup = "py-battery-equipment",
     order = "d",
@@ -2670,7 +2668,6 @@ ITEM {
     order = "q-a",
     stack_size = 50,
     effect = {speed = 1, pollution = 1},
-    limitation = {},
 }
 
 ITEM {
@@ -2689,7 +2686,6 @@ ITEM {
     order = "q-b",
     stack_size = 50,
     effect = {speed = 1.5, pollution = 1},
-    limitation = {},
 }
 
 ITEM {
@@ -2708,7 +2704,6 @@ ITEM {
     order = "q-c",
     stack_size = 50,
     effect = {speed = 2, pollution = 1},
-    limitation = {},
 }
 
 ITEM {
@@ -2727,7 +2722,6 @@ ITEM {
     order = "q-d",
     stack_size = 50,
     effect = {speed = 2.5, pollution = 1},
-    limitation = {},
 }
 
 ITEM {

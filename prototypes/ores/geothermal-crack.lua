@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: need-check-nil
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["geothermal-crack"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["geothermal-crack"] = {}
 
@@ -77,7 +78,6 @@ data:extend {{
     tree_removal_max_distance = 32 * 32,
     collision_mask = {layers = {resource = true}},
     autoplace = {
-        name = "geothermal-crack",
         order = "b-geothermal-crac",
         control = "geothermal-crack",
         -- We return the chance of spawning on any given tile here
@@ -94,7 +94,6 @@ data:extend {{
                 width = 352,
                 height = 352,
                 frame_count = 1,
-                variation_count = 1,
                 shift = util.by_pixel(0, 0)
             },
             {
@@ -104,7 +103,6 @@ data:extend {{
                 width = 352,
                 height = 352,
                 frame_count = 1,
-                variation_count = 1,
                 shift = util.by_pixel(0, 0)
             }
         }

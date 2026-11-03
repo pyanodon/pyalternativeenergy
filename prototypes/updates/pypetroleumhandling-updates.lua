@@ -78,8 +78,8 @@ RECIPE("guar-gum-plantation-mk04"):add_ingredient {type = "item", name = "metast
 RECIPE("tholin-capsule"):add_ingredient {type = "item", name = "cf", amount = 30}
 RECIPE("small-parts-03"):replace_ingredient("rubber", {type = "item", name = "cf", amount = 1})
 
-RECIPE("reheat-coke-gas"):replace_ingredient("combustion-mixture1", {type = "fluid", name = "hot-molten-salt", amount = 50, minimum_temperature = 995})
-table.insert(RECIPE("reheat-coke-gas").results, {type = "fluid", name = "molten-salt", amount = 50})
+RECIPE("reheat-coke-gas"):replace_ingredient("combustion-mixture1", {type = "fluid", name = "hot-molten-salt", amount = 50, minimum_temperature = 950})
+table.insert(data.raw.recipe["reheat-coke-gas"].results--[[@cast -?]], {type = "fluid", name = "molten-salt", amount = 50})
 
 RECIPE("reheat-outlet-gas-1"):remove_unlock("hot-air-mk03"):hide()
 RECIPE("reheat-outlet-gas-2"):replace_ingredient("combustion-mixture1", {type = "fluid", name = "hot-molten-salt", amount = 50, minimum_temperature = 1995})
@@ -123,7 +123,7 @@ data.raw["assembling-machine"]["upgrader-mk03"].energy_usage            = "3MW"
 data.raw["assembling-machine"]["upgrader-mk04"].energy_usage            = "4MW"
 
 data.raw.item["carbon-black"].fuel_value                                = "2.5MJ"
-data.raw.item["carbon-black"].fuel_category                             = "biomass"
+data.raw.item["carbon-black"].fuel_categories                           = {"biomass"}
 data.raw.item["carbon-black"].fuel_emissions_multiplier                 = 3.5
 data.raw.item["carbon-black"].fuel_acceleration_multiplier              = 0.8
 data.raw.item["carbon-black"].fuel_top_speed_multiplier                 = 0.8

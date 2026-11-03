@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "clean-organic-pulp",
-    category = "carbonfilter",
+    categories = {"carbonfilter"},
     enabled = false,
     energy_required = 10,
     ingredients = {

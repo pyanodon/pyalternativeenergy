@@ -44,6 +44,7 @@ ENTITY {
     effectivity = 1,
     fluid_usage_per_tick = 1,
     maximum_temperature = 1000,
+    minimum_input_temperature = 500,
     destroy_non_fuel_fluid = false,
     resistances = {
         {
@@ -55,7 +56,6 @@ ENTITY {
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     fluid_box = {
         filter = "pressured-steam",
-        minimum_temperature = 500,
         volume = 200,
         pipe_covers = py.pipe_covers(false, true, true, true),
         --pipe_picture = pipe_pictures({0, 3}),
@@ -70,21 +70,28 @@ ENTITY {
         usage_priority = "secondary-output",
     },
     --scale=1.75,
-    horizontal_animation = {
-        filename = "__pyfusionenergygraphics__/graphics/entity/py-turbine/py-turbine-horizontal.png",
-        width = 170,
-        height = 178,
-        frame_count = 40,
-        line_length = 10,
-        shift = {0.05, -0.0}
-    },
-    vertical_animation = {
-        filename = "__pyfusionenergygraphics__/graphics/entity/py-turbine/py-turbine-vertical.png",
-        width = 170,
-        height = 178,
-        frame_count = 40,
-        line_length = 10,
-        shift = {0.05, -0.0}
+    two_direction_only = true,
+    pictures = {
+        north = {
+          animation = {
+              filename = "__pyfusionenergygraphics__/graphics/entity/py-turbine/py-turbine-vertical.png",
+              width = 170,
+              height = 178,
+              frame_count = 40,
+              line_length = 10,
+              shift = {0.05, -0.0}
+          }
+        },
+        east = {
+          animation = {
+              filename = "__pyfusionenergygraphics__/graphics/entity/py-turbine/py-turbine-horizontal.png",
+              width = 170,
+              height = 178,
+              frame_count = 40,
+              line_length = 10,
+              shift = {0.05, -0.0}
+          }
+        }
     },
     smoke = {
         {
@@ -93,17 +100,15 @@ ENTITY {
             east_position = {-0.0, -2},
             frequency = 10 / 32,
             starting_vertical_speed = 0.08,
-            slow_down_factor = 1,
+            vertical_speed_slowdown = 1,
             starting_frame_deviation = 60
         }
     },
-    min_perceived_performance = 0.1,
-    performance_to_sound_speedup = 0.3,
-    match_speed_to_activity = true,
+    perceived_performance = {minimum = 0.2},
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyfusionenergygraphics__/sounds/py-turbine.ogg", volume = 0.5},
         idle_sound = {filename = "__pyfusionenergygraphics__/sounds/py-turbine.ogg", volume = 0.3},
-        apparent_volume = 1.5
+        activity_to_speed_modifiers = {multiplier = 0.3}
     }
 }

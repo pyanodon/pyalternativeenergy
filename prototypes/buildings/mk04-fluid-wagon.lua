@@ -48,14 +48,20 @@ ENTITY {
     selection_box = {{-1.2, -1.7}, {1.2, 1.7}},
     --damaged_trigger_effect = hit_effects.entity(),
     vertical_selection_shift = -0.5,
-    weight = 400,
-    max_speed = 1.7,
-    braking_force = 25,
-    friction_force = 0.30,
+    fast_replaceable_group = "fluid-wagon",
+    weight = 900,
+    braking_force = 35,
+    friction_force = 0.20,
     air_resistance = 0.0050,
     connection_distance = 2,
     joint_distance = 1.5, --igual to collision box works if the sprite is tight in the png
     tank_count = 2,
+    valve_to_valve_offset_when_horizontal = {1.62, 0},
+    base_valve_xy_offset_when_horizontal = {0.22, 0},
+    base_valve_z_offset_projected_when_horizontal = -2.32,
+    valve_to_valve_offset_when_vertical = {0, 1.3},
+    base_valve_xy_offset_when_vertical = {0, 0.2},
+    base_valve_z_offset_projected_when_vertical = -2.4,
     energy_per_hit_point = 5,
     capacity = 75000,
     resistances =
@@ -200,10 +206,8 @@ ENTITY {
         sound = sound_variations("__base__/sound/train-tie", 6, 0.4, {volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3)})
     },
     tie_distance = 30,
-    crash_trigger = crash_trigger(),
     open_sound = sounds.cargo_wagon_open,
     close_sound = sounds.cargo_wagon_close,
-    sound_minimum_speed = 1,
     impact_category = "default",
     water_reflection = {
         pictures =

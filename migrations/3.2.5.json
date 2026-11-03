@@ -1,0 +1,16 @@
+{
+    "recipe": [
+        [
+            "pressured-steam-into-steam-150",
+            "depressurize-steam"
+        ],
+        [
+            "pressured-steam-into-steam-250",
+            "depressurize-steam"
+        ],
+        [
+            "pressured-steam-into-steam-500",
+            "depressurize-steam"
+        ]
+    ]
+}

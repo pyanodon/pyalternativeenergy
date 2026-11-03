@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "crude-enzyme",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -27,7 +27,6 @@ FLUID {
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 100,
     gas_temperature = 15,
-    crudessure_to_speed_ratio = 0.4,
     subgroup = "py-alternativeenergy-fluids",
     order = "a",
 }

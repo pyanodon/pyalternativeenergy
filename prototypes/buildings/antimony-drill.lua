@@ -176,10 +176,9 @@ for i = 1, 4 do
             }
         },
         energy_usage = power_usage_by_tier[i],
-        mining_power = 1,
         resource_searching_radius = 4.49 + ((i - 1) * 3),
         resource_drain_rate_percent = 200 * (2 ^ -i),
-        vector_to_place_result = {0, -3.65},
+        vector_to_place_result = {0, -3.8},
         radius_visualisation_picture = {
             filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
             width = 12,
@@ -187,6 +186,7 @@ for i = 1, 4 do
         },
         circuit_connector = circuit_connector_definitions["antimony-drill-mkxx"],
         circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
+        tall = true,
         graphics_set = {
             animation = {
                 layers = {
@@ -265,7 +265,6 @@ for i = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalternativeenergygraphics__/sounds/antimonium-drill.ogg", volume = 0.55},
             idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/antimonium-drill.ogg", volume = 0.1},
-            apparent_volume = 2.5
         }
     }
 
@@ -281,6 +280,6 @@ for i = 1, 4 do
         legacy_entity.resource_searching_radius = 4.49
         legacy_entity.effect_receiver = nil
         legacy_entity.localised_description = {"entity-description.antimony-drill-mk0" .. i}
-        data:extend {legacy_entity}
+        data:extend {legacy_entity--[[@as data.EntityPrototype]]}
     end
 end

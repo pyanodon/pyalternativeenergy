@@ -17,7 +17,7 @@ data:extend {{
     icon_size = 64,
     decorative_removal_probability = 1,
     variants = {
-        transition = table.deepcopy(TILE("concrete").variants.transition),
+        transition = table.deepcopy(TILE("concrete").variants--[[@as data.TileTransitionsVariants]].transition),
         main = {
             {
                 picture = "__pyalternativeenergygraphics__/graphics/entity/updraft-tower/tile/white.png",
@@ -135,7 +135,6 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 1.0},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/hawt-turbine-mk04.ogg", volume = 0.70},
-        apparent_volume = 2.5
     },
     render_layer = "entity-info-icon",
     collision_mask = {layers = {item = true, object = true, player = true, water_tile = true, sut = true, sut_placement_distance = true}}

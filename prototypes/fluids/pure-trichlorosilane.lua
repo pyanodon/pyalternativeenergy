@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "pure-trichlorosilane",
-    category = "distilator",
+    categories = {"distilator"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -9,9 +9,9 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "pure-trichlorosilane", amount = 50},
-        {type = "item",  name = "iron-ore",             amount = 1, probability = 0.3},
-        {type = "item",  name = "ore-aluminium",        amount = 1, probability = 0.3},
-        {type = "item",  name = "copper-ore",           amount = 1, probability = 0.3},
+        {type = "item",  name = "iron-ore",             amount = 1, independent_probability = 0.3},
+        {type = "item",  name = "ore-aluminium",        amount = 1, independent_probability = 0.3},
+        {type = "item",  name = "copper-ore",           amount = 1, independent_probability = 0.3},
     },
     main_product = "pure-trichlorosilane",
 }:add_unlock("silicon-mk01")

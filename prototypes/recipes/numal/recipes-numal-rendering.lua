@@ -18,7 +18,7 @@ local IMP_SPECIAL = 20
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	--module_limitations = 'numal',
 	subgroup = "py-alienlife-numal",
 	order = "b",
@@ -29,7 +29,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "numal", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -38,12 +38,14 @@ py.autorecipes {
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "brain",           amount = BASE_BRAIN},
 				{name = "numal-ink",       amount = BASE_SPECIAL},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "numal-mk01",
 			name = "full-render-num",
-			icon = "__pyalternativeenergygraphics__/graphics/icons/rendering-numal.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",     draw_background = false},
+				{icon = "__pyalternativeenergygraphics__/graphics/icons/numal.png", draw_background = true}
+			}
 		},
 		--guts numal rendering
 		{

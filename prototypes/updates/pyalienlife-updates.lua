@@ -281,7 +281,7 @@ RECIPE("sb-pulp-05"):add_ingredient {type = "item", name = "yellow-dextrine", am
 RECIPE("sodium-cyanate"):add_ingredient {type = "item", name = "urea", amount = 5}
 RECIPE("oxalic-acid"):add_ingredient {type = "item", name = "sugar", amount = 5}
 RECIPE("gd-metal"):add_ingredient {type = "item", name = "cobalt-extract", amount = 2}
-RECIPE("chloral").category = "chemistry"
+RECIPE("chloral").categories = {"chemistry"}
 RECIPE("nanocarrier"):add_ingredient {type = "item", name = "metallic-glass", amount = 1}
 -- RECIPE('gh'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
 -- RECIPE('gh-2'):add_ingredient({type = "item", name = "nanocarrier", amount = 1})
@@ -305,10 +305,10 @@ RECIPE("perfect-samples"):add_ingredient {type = "item", name = "vsk", amount = 
 RECIPE("perfect-samples"):add_ingredient {type = "item", name = "aeroorgan", amount = 1}
 RECIPE("gastrocapacitor"):add_ingredient {type = "item", name = "sugar", amount = 1}:replace_ingredient("phytoplankton", "fatty-acids")
 
-ITEM("simik"):set_fields {fuel_category = "simik", fuel_value = "800MJ", burnt_result = "used-simik"}
-ITEM("simik-mk02"):set_fields {fuel_category = "simik", fuel_value = "1000MJ", burnt_result = "used-simik-mk02"}
-ITEM("simik-mk03"):set_fields {fuel_category = "simik", fuel_value = "1500MJ", burnt_result = "used-simik-mk03"}
-ITEM("simik-mk04"):set_fields {fuel_category = "simik", fuel_value = "2000MJ", burnt_result = "used-simik-mk04"}
+ITEM("simik"):set_fields {fuel_categories = {"simik"}, fuel_value = "800MJ", burnt_result = "used-simik"}
+ITEM("simik-mk02"):set_fields {fuel_categories = {"simik"}, fuel_value = "1000MJ", burnt_result = "used-simik-mk02"}
+ITEM("simik-mk03"):set_fields {fuel_categories = {"simik"}, fuel_value = "1500MJ", burnt_result = "used-simik-mk03"}
+ITEM("simik-mk04"):set_fields {fuel_categories = {"simik"}, fuel_value = "2000MJ", burnt_result = "used-simik-mk04"}
 
 RECIPE("nano-cellulose"):remove_ingredient("steam"):add_ingredient {type = "fluid", name = "pressured-steam", amount = 50}
 RECIPE("zymogens"):add_ingredient {type = "item", name = "zungror-cocoon", amount = 2}
@@ -321,15 +321,19 @@ RECIPE("py-science-pack-4"):add_ingredient {type = "item", name = "mechanical-pa
 
 RECIPE("battery-mk01"):remove_unlock("electric-energy-accumulators"):add_unlock("battery-mk01"):replace_ingredient("lead-plate", "pbsb-alloy")
 
-RECIPE("grod-seeds-mk02-soaker"):set_fields {category = "centrifuging"}:set_fields {energy_required = 20}
-RECIPE("grod-seeds-mk03-soaker"):set_fields {category = "centrifuging"}:set_fields {energy_required = 20}
-RECIPE("grod-seeds-mk04-soaker"):set_fields {category = "centrifuging"}:set_fields {energy_required = 20}
+RECIPE("grod-seeds-mk02-soaker"):set_fields {categories = {"centrifuging"}}:set_fields {energy_required = 20}
+RECIPE("grod-seeds-mk03-soaker"):set_fields {categories = {"centrifuging"}}:set_fields {energy_required = 20}
+RECIPE("grod-seeds-mk04-soaker"):set_fields {categories = {"centrifuging"}}:set_fields {energy_required = 20}
 
 RECIPE("brain-cartridge-01"):add_ingredient {type = "item", name = "nbalti", amount = 1}
 
 RECIPE("brain-cartridge-03"):add_ingredient {type = "item", name = "eva", amount = 1}
 
 RECIPE("brain-cartridge-04"):add_ingredient {type = "item", name = "acrylic", amount = 2}:add_ingredient {type = "fluid", name = "numal-ink", amount = 10}
+
+-- add new farms
+py.mod_data.farm_buildings["zungror-lair"] = {default_module = "zungror", domain = "animal"}
+py.mod_data.farm_buildings["numal-reef"] = {default_module = "numal", domain = "animal"}
 
 --pyAL--
 data.raw["assembling-machine"]["arqad-hive-mk01"].energy_usage = "1MW"
@@ -481,6 +485,17 @@ data.raw["assembling-machine"]["yotoi-aloe-orchard-mk04"].energy_usage = "4MW"
 data.raw["assembling-machine"]["zipir-reef-mk02"].energy_usage = "2MW"
 data.raw["assembling-machine"]["zipir-reef-mk03"].energy_usage = "3MW"
 data.raw["assembling-machine"]["zipir-reef-mk04"].energy_usage = "4MW"
+
+-- new farm building
+py.mod_data.farm_buildings["fish-farm-turd"] = {default_module = "fish", domain = "animal"}
+
+-- new smart farm recipes
+py.mod_data.recipe_gui.subgroups["mova-super"] = true
+py.mod_data.recipe_gui.alt_icons["mova-super"] = "mova"
+
+-- slaughterhouse and rc recipes
+py.mod_data.recipe_gui.subgroups["numal"] = true
+py.mod_data.recipe_gui.subgroups["zungror"] = true
 
 --pySE
 if not mods["pystellarexpedition"] then return end

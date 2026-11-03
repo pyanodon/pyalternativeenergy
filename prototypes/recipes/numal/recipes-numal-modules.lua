@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "numal-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"numal"},
     enabled = false,
     energy_required = 30,
@@ -20,10 +20,10 @@ RECIPE {
         {type = "item", name = "water-barrel",  amount = 15},
     },
     results = {
-        {type = "item", name = "numal-mk02", amount = 1, probability = 0.005},
+        {type = "item", name = "numal-mk02", amount = 1, independent_probability = 0.005},
         {type = "item", name = "barrel",     amount = 15},
         {type = "item", name = "cage",       amount = 1},
-        {type = "item", name = "numal",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "numal",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "numal-mk02",
     icons =
@@ -42,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "numal-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"numal"},
     enabled = false,
     energy_required = 30,
@@ -55,10 +55,10 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 15},
     },
     results = {
-        {type = "item", name = "numal-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "numal-mk03", amount = 1, independent_probability = 0.004},
         {type = "item", name = "barrel",     amount = 15},
         {type = "item", name = "cage",       amount = 1},
-        {type = "item", name = "numal-mk02", amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "numal-mk02", amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
     },
     main_product = "numal-mk03",
     icons =
@@ -77,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "numal-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"numal"},
     enabled = false,
     energy_required = 30,
@@ -90,10 +90,10 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 15},
     },
     results = {
-        {type = "item", name = "numal-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "numal-mk04", amount = 1, independent_probability = 0.003},
         {type = "item", name = "barrel",     amount = 15},
         {type = "item", name = "cage",       amount = 1},
-        {type = "item", name = "numal-mk03", amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "numal-mk03", amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
     },
     main_product = "numal-mk04",
     icons =
@@ -112,7 +112,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "numal-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-numal-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -162,7 +162,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "numal-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -195,7 +195,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-numal-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -213,7 +213,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "numal-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 350,
     ingredients = {
@@ -246,7 +246,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-numal-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

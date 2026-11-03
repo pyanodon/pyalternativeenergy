@@ -54,6 +54,7 @@ ENTITY {
     },
     energy_production = "0MW",
     energy_usage = "0kW",
+    tall = true,
     animation = {
         layers = {
             {

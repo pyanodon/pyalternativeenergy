@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "teos",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 10,
     ingredients = {

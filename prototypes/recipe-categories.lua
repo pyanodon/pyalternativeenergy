@@ -71,7 +71,6 @@ data:extend {
         type = "recipe-category",
         name = "numal",
         allowed_module_categories = {"numal"},
-        modules_required = true
     },
     { -- categories are kept per tier since factoriopedia can't tell that a thing has a fixed recipe
         type = "recipe-category",
