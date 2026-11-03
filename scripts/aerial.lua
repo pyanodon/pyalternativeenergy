@@ -388,7 +388,7 @@ local function get_or_create_accumulator(aerial_entity, network_override)
             return get_or_create_accumulator(aerial_entity)
         end
         -- Yep, we have a pole to base on
-        ---@cast accumulator LuaEntity?
+        ---@diagnostic disable-next-line: cast-local-type
         accumulator = aerial_entity.surface.create_entity {
             name = name .. "-accumulator",
             position = first_pole.position,
@@ -1425,7 +1425,7 @@ function Aerial.update_gui(player)
     local last_20 = aerial.last_20
     distance_bonus = math.ceil(distance_bonus * 1000) / 10
     if last_20 then
-        local distance_bonus_string = tostring(distance_bonus)
+        distance_bonus_string = tostring(distance_bonus)
         -- Add the trailing .0 if there's no decimal value
         if not distance_bonus_string:find("%.") then
             distance_bonus_string = distance_bonus_string .. ".0"
@@ -1453,7 +1453,7 @@ function Aerial.update_gui(player)
         local distance = math.max(0, calc_distance(target.position, entity.position) - 5)
         local seconds = distance / travel_speeds[entity.name--[[@as AerialTurbineName]]]
         local minutes = math.floor(seconds / 60)
-        local seconds_string = tostring(math.floor(seconds % 60))
+        seconds_string = tostring(math.floor(seconds % 60))
         -- zero-pad the seconds to a length of two digits
         if #seconds_string == 1 then
             seconds_string = "0" .. seconds_string

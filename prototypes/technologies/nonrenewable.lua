@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/non-renewable-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"energy-1"},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 200,
@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/non-renewable-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"nonrenewable-mk01", "energy-2"},
+    prerequisites = {"nonrenewable-mk01"},
     effects = {},
     unit = {
         count = 300,
@@ -41,7 +41,7 @@ TECHNOLOGY {
     icon = "__pyalternativeenergygraphics__/graphics/technology/non-renewable-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"nonrenewable-mk02", "energy-3"},
+    prerequisites = {"nonrenewable-mk02"},
     effects = {},
     unit = {
         count = 400,

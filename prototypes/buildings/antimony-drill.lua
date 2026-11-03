@@ -96,10 +96,10 @@ local function old_energy_source()
 end
 
 local power_usage_by_tier = {
-    "1MW",
-    "3MW",
-    "6MW",
     "10MW",
+    "30MW",
+    "60MW",
+    "100MW",
 }
 
 for i = 1, 4 do
@@ -131,15 +131,12 @@ for i = 1, 4 do
         max_health = 700 * i,
         resource_categories = {"antimonium"},
         corpse = "big-remnants",
-        effect_receiver = {
-            -- makes green modules 9x less effective in order to not trivalize the fluid fuel challenge.
-            -- 20% consumption is still possible with green beacons later on.
-            base_effect = {consumption = 9}
-        },
+		
         dying_explosion = "big-explosion",
         collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
         module_slots = i,
+        allowed_effects = {"speed", "productivity"},
         mining_speed = i,
         energy_source = {
             type = "fluid",

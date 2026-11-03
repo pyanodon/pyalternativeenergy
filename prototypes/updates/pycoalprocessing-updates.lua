@@ -12,14 +12,14 @@ RECIPE("stone-distilation"):add_unlock("heavy-oil-mk01"):replace_ingredient("sto
 RECIPE("equipment-chassi"):replace_ingredient("duralumin", {type = "item", name = "fenxsb-alloy", amount = 1})
 
 --remove combustion mix stuff
-RECIPE("power-house"):remove_unlock("energy-1"):set_fields {hidden = true}
-RECIPE("power-house-mk02"):remove_unlock("machines-mk03"):set_fields {hidden = true}
-RECIPE("power-house-mk03"):remove_unlock("machines-mk04"):set_fields {hidden = true}
-RECIPE("power-house-mk04"):remove_unlock("machines-mk05"):set_fields {hidden = true}
+RECIPE("power-house"):remove_unlock("energy-1"):hide()
+RECIPE("power-house-mk02"):remove_unlock("machines-mk03"):hide()
+RECIPE("power-house-mk03"):remove_unlock("machines-mk04"):hide()
+RECIPE("power-house-mk04"):remove_unlock("machines-mk05"):hide()
 
-RECIPE("gasturbinemk01"):remove_unlock("energy-1"):set_fields {hidden = true}
-RECIPE("gasturbinemk02"):remove_unlock("machines-mk03"):set_fields {hidden = true}
-RECIPE("gasturbinemk03"):remove_unlock("machines-mk04"):set_fields {hidden = true}
+RECIPE("gasturbinemk01"):remove_unlock("energy-1"):hide()
+RECIPE("gasturbinemk02"):remove_unlock("machines-mk03"):hide()
+RECIPE("gasturbinemk03"):remove_unlock("machines-mk04"):hide()
 
 --RECIPE("evaporator"):remove_ingredient('chemical-plant-mk01'):remove_unlock("fluid-processing-machines-2"):add_unlock("nexelit-mk01")
 --RECIPE("quenching-tower"):remove_unlock("machines-mk01"):add_unlock("nexelit-mk01")

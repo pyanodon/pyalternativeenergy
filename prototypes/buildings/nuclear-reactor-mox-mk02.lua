@@ -51,7 +51,7 @@ ENTITY {
     use_mirroring = true,
     module_slots = 0,
     allowed_effects = {},
-    crafting_categories = {"nuclear-mox-fission"},
+    crafting_categories = {"nuclear-mox-fission", "nuclear-mox-fission-2"},
     crafting_speed = 2,
     energy_source =
     {
