@@ -2,46 +2,74 @@
 ---@type PyAlternativeenergyStorage
 storage = storage --[[@as PyAlternativeenergyStorage]]
 
----@class (partial) PyAlternativeenergyStorage
----@field microwave_receivers table
+MicrowaveReciever = MicrowaveReciever or py.mod_data.microwave_reciever --[[@as MicrowaveRecieverData]]
 
-local MAX_SATELLITES_PER_RECIEVER = 15
-local POWER_PRODUCTION_PER_SATELLITE_WATTS = 800000
+py.assert_type (
+    MicrowaveReciever,
+    "table",
+    "ERROR: pY mod data [microwave_reciever] is invalid"
+)
+
+py.assert_type (
+    MicrowaveReciever.max_satellites_pre_reciever,
+    {"uint", "gtzero"},
+    "ERROR: pY mod data [microwave_reciever] field [max_satellites_pre_reciever] is invalid"
+)
+
+py.assert_type (
+    MicrowaveReciever.production_per_satellite,
+    {"energy"},
+    "ERROR: pY mod data [microwave_reciever] field [max_satellites_pre_reciever] is invalid"
+)
+
+---@class MicrowaveReciever
+---@field allocated_satellites uint
+---@field force LuaForce
+---@field entity LuaEntity
+
+---@class (partial) PyAlternativeenergyStorage
+---@field microwave_receivers table<uint, MicrowaveReciever>
+
+require "__core__.lualib.util"
 
 py.on_event(py.events.on_init(), function()
     storage.microwave_receivers = storage.microwave_receivers or {}
 end)
 
+---@param player LuaPlayer
 local function get_gui(player)
     return player.gui.screen.microwave_receiver_gui
 end
 
+---@param gui LuaGuiElement
 local function update_gui(gui)
-    local force = game.forces[gui.tags.force]
+    local force = game.forces[gui.tags.force --[[@as string]]]
     if not force or not force.valid then return end
 
-    local microwave_data = storage.microwave_receivers[gui.tags.unit_number]
+    local microwave_data = storage.microwave_receivers[gui.tags.unit_number --[[@as uint]]]
     if not microwave_data then
         gui.destroy(); return
     end
 
     local content_flow = gui.content_frame.content_flow
-    content_flow.progressbar.value = microwave_data.allocated_satellites / MAX_SATELLITES_PER_RECIEVER
+    content_flow.progressbar.value = microwave_data.allocated_satellites / MicrowaveReciever.max_satellites_pre_reciever
     content_flow.progressbar.caption = {
         "",
-        microwave_data.allocated_satellites .. "/" .. MAX_SATELLITES_PER_RECIEVER,
+        microwave_data.allocated_satellites .. "/" .. MicrowaveReciever.max_satellites_pre_reciever,
         "    ",
-        py.format_energy(microwave_data.allocated_satellites * POWER_PRODUCTION_PER_SATELLITE_WATTS, "W")
+        py.format_energy(microwave_data.allocated_satellites * util.parse_energy(MicrowaveReciever.production_per_satellite), "W")
     }
     content_flow.total_launched.caption = {"microwave-receiver-gui.launched-satellites", force.get_item_launched("microwave-satellite")}
 
     local total_built = 0
-    for _, microwave_data in pairs(storage.microwave_receivers) do
-        if microwave_data.force == force then total_built = total_built + 1 end
+    for _, data in pairs(storage.microwave_receivers) do
+        if data.force == force then total_built = total_built + 1 end
     end
     content_flow.total_built.caption = {"microwave-receiver-gui.total-receivers", total_built}
 end
 
+---@param player LuaPlayer
+---@param entity LuaEntity
 local function create_gui(player, entity)
     -- check for existing ui and delete.
     local old_gui = get_gui(player)
@@ -56,7 +84,7 @@ local function create_gui(player, entity)
 
     local main_frame = player.gui.screen.add {type = "frame", name = "microwave_receiver_gui", caption = entity.prototype.localised_name, direction = "vertical"}
     main_frame.style.width = 340
-    main_frame.tags = {unit_number = entity.unit_number, force = player.force.name}
+    main_frame.tags = {unit_number = entity.unit_number --[[@as uint]], force = player.force.name --[[@as string]]}
     main_frame.auto_center = true
     player.opened = main_frame
 
@@ -88,13 +116,14 @@ local function create_gui(player, entity)
     update_gui(main_frame)
 end
 
+---@param force LuaForce
 local function recalc_satellite_distribution(force)
     local total_launched = force.get_item_launched("microwave-satellite")
     local total_receivers = 0
     for _, microwave_data in pairs(storage.microwave_receivers) do
         if microwave_data.force == force then total_receivers = total_receivers + 1 end
     end
-    local average_satellites = math.min(MAX_SATELLITES_PER_RECIEVER, math.ceil(total_launched / total_receivers))
+    local average_satellites = math.min(MicrowaveReciever.max_satellites_pre_reciever, math.ceil(total_launched / total_receivers))
 
     for _, microwave_data in pairs(storage.microwave_receivers) do
         if total_launched >= average_satellites then
@@ -106,7 +135,7 @@ local function recalc_satellite_distribution(force)
         end
 
         local entity = microwave_data.entity
-        entity.power_production = microwave_data.allocated_satellites * POWER_PRODUCTION_PER_SATELLITE_WATTS
+        entity.power_production = microwave_data.allocated_satellites * util.parse_energy(MicrowaveReciever.production_per_satellite)
         entity.electric_buffer_size = entity.power_production
     end
 
@@ -118,45 +147,51 @@ local function recalc_satellite_distribution(force)
     end
 end
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "microwave-receiver" then return end
-    storage.microwave_receivers[entity.unit_number] = {unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force}
-    recalc_satellite_distribution(entity.force)
+    storage.microwave_receivers[entity.unit_number --[[@cast -?]]] = {unit_number = entity.unit_number, entity = entity, allocated_satellites = 0, force = entity.force --[[@as LuaForce]]}
+    recalc_satellite_distribution(entity.force --[[@as LuaForce]])
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "microwave-receiver" then return end
-    storage.microwave_receivers[entity.unit_number] = nil
-    recalc_satellite_distribution(entity.force)
+    storage.microwave_receivers[entity.unit_number --[[@cast -?]]] = nil
+    recalc_satellite_distribution(entity.force --[[@as LuaForce]])
 end)
 
+---@param event EventData.on_rocket_launched
 py.on_event(defines.events.on_rocket_launched, function(event)
-    recalc_satellite_distribution(event.rocket.force)
+    recalc_satellite_distribution(event.rocket.force --[[@as LuaForce]])
 end)
 
+---@param event EventData.CustomInputEvent
 py.on_event(py.events.on_entity_clicked(), function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
     local entity = player.selected
     if not entity or not entity.valid then return end
     if entity.name ~= "microwave-receiver" then return end
-    create_gui(player, entity)
+    create_gui(player --[[@cast -?]], entity)
 end)
 
+---@param event EventData.on_gui_opened
 py.on_event(defines.events.on_gui_opened, function(event)
     if event.gui_type ~= defines.gui_type.entity then return end
     local player = game.get_player(event.player_index)
     local entity = event.entity
     if not entity or not entity.valid then return end
     if entity.name ~= "microwave-receiver" then return end
-    create_gui(player, entity)
+    create_gui(player --[[@cast -?]], entity)
 end)
 
+---@param event EventData.on_gui_closed|EventData.on_player_changed_surface
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
-        local gui = get_gui(player)
+        local gui = get_gui(player --[[@cast -?]])
         if gui then gui.destroy() end
     end
 end)

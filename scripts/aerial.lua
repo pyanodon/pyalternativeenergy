@@ -1080,6 +1080,7 @@ local function find_target(aerial)
     }
 end
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 Aerial.events.on_built = function(event)
     local entity = event.entity
     if not entity.valid or not entity.unit_number then
@@ -1176,6 +1177,7 @@ Aerial.events.on_built = function(event)
     end
 end
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 Aerial.events.on_destroyed = function(event)
     local entity = event.entity
     if not entity.valid or not entity.unit_number then

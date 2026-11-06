@@ -57,6 +57,7 @@ py.on_event(defines.events.on_script_trigger_effect, function(event)
     storage.tidal_plants[entity.unit_number] = solar_panel
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if not entity.valid or not entity.unit_number then return end
