@@ -147,6 +147,7 @@ py.on_event(py.events.on_mined_tile(), function(event)
     end
 end)
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "sut" then return end
@@ -188,6 +189,7 @@ py.register_on_nth_tick(60, "sut", "pyae", function()
     end
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     local tower_data = storage.solar_updraft_towers[entity.unit_number]
