@@ -4,7 +4,7 @@ Date: ????
   Changes:
     - Added microwave reciever mod-data
     - Supported smart farm mod-data integrations
-    - Updated autotech caches to fix bhoddos TURD requiring efficiency2 module tech
+    - Updated autotech caches to fix bhoddos T.U.R.D. requiring efficiency-module-2 tech
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.11
 Date: 2026-10-16
