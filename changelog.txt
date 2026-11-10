@@ -5,6 +5,7 @@ Date: ????
     - Added microwave reciever mod-data
     - Supported smart farm mod-data integrations
     - Updated autotech caches to fix bhoddos T.U.R.D. requiring efficiency-module-2 tech
+    - Fixed aerial turbines not being belt immune
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.11
 Date: 2026-10-16

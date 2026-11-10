@@ -78,6 +78,7 @@ data:extend
         vision_distance = 0,
         movement_speed = 0.06,
         distance_per_frame = 0.18,
+        has_belt_immunity = true,
         absorptions_to_join_attack = {pollution = 0},
         distraction_cooldown = 0,
         dying_explosion = "blood-explosion-small",
