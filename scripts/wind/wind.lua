@@ -43,6 +43,7 @@ local function seconds(n)
     return 60 * n
 end
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 Wind.events.on_built = function(event)
     local entity = event.entity
     local turbine_type = entity.valid and managed_turbines[entity.name]
@@ -192,6 +193,7 @@ Wind.events.on_script_trigger_effect = function(event)
     end
 end
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 Wind.events.on_destroyed = function(event)
     local entity = event.entity
     if not managed_turbines[entity.name] then return end
