@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.12
-Date: ????
+Date: 2026-11-16
   Changes:
     - Added microwave reciever mod-data
     - Supported smart farm mod-data integrations
