@@ -19,15 +19,6 @@ require "scripts/thermosolar/heliostat"
 require "scripts/wind/wind"
 require "scripts/aerial"
 require "scripts/tidal"
-local mova_data = require "scripts/crops/farm-mova"
-
-script.on_load(function()
-    remote.call("py_smart_farming", "add_launch_products", mova_data)
-end)
-
-script.on_init(function()
-    remote.call("py_smart_farming", "add_launch_products", mova_data)
-end)
 
 py.on_event(py.events.on_init(), function()
     storage.reactor_tanks = storage.reactor_tanks or {}
@@ -35,6 +26,7 @@ py.on_event(py.events.on_init(), function()
     storage.stirling = storage.stirling or {}
 end)
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     Heliostat.events.on_built(event)
     Wind.events.on_built(event)
@@ -95,6 +87,7 @@ end)
 py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
 py.register_on_nth_tick(83, "tidal", "pyae", Tidal.events[83])
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     Heliostat.events.on_destroyed(event)
     Wind.events.on_destroyed(event)

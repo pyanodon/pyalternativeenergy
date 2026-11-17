@@ -308,6 +308,9 @@ require "prototypes.decay.decay"
 --(( OTHER ))
 require "prototypes.surface-properties"
 
+--mod-data
+require "prototypes/mod-data/microwave-reciever"
+
 data.raw.fluid["crude-oil"].subgroup = "test"
 data.raw.fluid["gasoline"].subgroup = "test"
 data.raw.fluid["fatty-acids"].fuel_value = "1MJ"
