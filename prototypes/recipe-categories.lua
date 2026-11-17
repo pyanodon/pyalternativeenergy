@@ -72,6 +72,10 @@ data:extend {
         name = "numal",
         allowed_module_categories = {"numal"},
     },
+    {
+        type = "recipe-category",
+        name = "py-fuel-injector"
+    },
     { -- categories are kept per tier since factoriopedia can't tell that a thing has a fixed recipe
         type = "recipe-category",
         name = "powerplant-mk01"

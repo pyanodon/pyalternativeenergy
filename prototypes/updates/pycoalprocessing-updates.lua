@@ -281,3 +281,6 @@ data.raw.recipe["tailings-classification"].results = {
     {type = "item", name = "ore-titanium", amount = 1},
     {type = "item", name = "ore-tin",      amount = 1},
 }
+
+-- add fuel value to combustion mixture
+FLUID("combustion-mixture1").fuel_value = "1MJ"
