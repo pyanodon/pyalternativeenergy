@@ -9,12 +9,12 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "sb-phosphate-2",      amount = 60},
         {type = "fluid", name = "purex-concentrate-1", amount = 30},
-        {type = "item",  name = "plastic-bar",         amount = 3},
+        {type = "item",  name = "plastic-bar",         amount = 3, ignored_by_stats = 3},
     },
     results = {
         {type = "fluid", name = "phosphorous-acid", amount = 120},
         {type = "item",  name = "sb-oxide",         amount = 1,     independent_probability = 0.50},
-        {type = "item",  name = "plastic-bar",      amount_min = 1, amount_max = 3,    ignored_by_stats = 3, ignored_by_productivity = 3},
+        {type = "item",  name = "plastic-bar",      amount_min = 1, amount_max = 3,                ignored_by_stats = 3, ignored_by_productivity = 3},
     },
     allow_productivity = true,
     main_product = "phosphorous-acid",
@@ -104,8 +104,8 @@ RECIPE {
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-        {type = "item", name = "soil",      amount = 2},
-        {type = "item", name = "limestone", amount = 3},
+        {type = "item", name = "soil",      amount = 2, ignored_by_stats = 2},
+        {type = "item", name = "limestone", amount = 3, ignored_by_stats = 2},
     },
     results = {
         {type = "item", name = "soil",      amount = 3, ignored_by_productivity = 2, ignored_by_stats = 2},
@@ -143,7 +143,7 @@ RECIPE {
     energy_required = 1,
     ingredients = {
         {type = "item",  name = "sulfur", amount = 1},
-        {type = "fluid", name = "water",  amount = 50},
+        {type = "fluid", name = "water",  amount = 50, ignored_by_stats = 10},
     },
     results = {
         {type = "fluid", name = "water", amount = 10, ignored_by_productivity = 10, ignored_by_stats = 10},
@@ -719,7 +719,7 @@ RECIPE {
     energy_required = 4,
     ingredients = {
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
-        {type = "item",  name = "small-lamp",        amount = 1},
+        {type = "item",  name = "small-lamp",        amount = 1,  ignored_by_stats = 1},
     },
     results = {
         {type = "fluid", name = "chlorine",   amount = 100},

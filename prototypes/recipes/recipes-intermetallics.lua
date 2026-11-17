@@ -464,7 +464,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "diamond",              amount = 5},
         {type = "item", name = "parametric-oscilator", amount = 1}, -- nv-center
-        {type = "item", name = "yag-laser-module",     amount = 1},
+        {type = "item", name = "yag-laser-module",     amount = 1, ignored_by_stats = 1},
     },
     results = {
         {type = "item", name = "time-crystal",     amount = 1},

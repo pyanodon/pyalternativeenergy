@@ -289,7 +289,7 @@ RECIPE {
     energy_required = 25,
     ingredients = {
         {type = "item",  name = "photophore",       amount = 25},
-        {type = "item",  name = "yag-laser-module", amount = 1},
+        {type = "item",  name = "yag-laser-module", amount = 1,   ignored_by_stats = 1},
         {type = "item",  name = "graphene-roll",    amount = 20},
         {type = "item",  name = "silver-plate",     amount = 25},
         {type = "fluid", name = "vacuum",           amount = 1000},
@@ -1301,7 +1301,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "organic-solvent",    amount = 100},
-        {type = "fluid", name = "bacteria-2",         amount = 50},
+        {type = "fluid", name = "bacteria-2",         amount = 50, ignored_by_stats = 50},
         {type = "fluid", name = "pressured-hydrogen", amount = 50},
         {type = "item",  name = "meat",               amount = 10},
     },
