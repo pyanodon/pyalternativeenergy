@@ -148,7 +148,7 @@ RECIPE {
         {type = "item",  name = "biopolymer",        amount = 5},
         {type = "item",  name = "colloidal-silica",  amount = 2},
         {type = "item",  name = "hardener",          amount = 1},
-        {type = "item",  name = "yag-laser-module",  amount = 1},
+        {type = "item",  name = "yag-laser-module",  amount = 1,  ignored_by_stats = 1},
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
     },
     results = {
