@@ -349,22 +349,20 @@ TECHNOLOGY {
     order = "c-k-f-e"
 }
 
-data.raw.technology["uranium-processing"].enabled = true
-data.raw.technology["uranium-processing"].hidden = false
-data.raw.technology["uranium-mining"].enabled = false
-data.raw.technology["uranium-mining"].hidden = true
-RECIPE("satellite"):remove_unlock("rocket-silo"):add_unlock("space-science-pack")
+TECHNOLOGY("uranium-processing"):unhide().enabled = true
+TECHNOLOGY("uranium-mining"):hide().enabled = false
+data.raw.recipe["satellite"]:remove_unlock("rocket-silo"):add_unlock("space-science-pack")
 data.raw.technology["rocket-silo"].prerequisites = {}
 
 TECHNOLOGY("uranium-processing").research_trigger = nil
 TECHNOLOGY("uranium-processing").prerequisites = {}
 TECHNOLOGY("uranium-processing"):add_pack("py-science-pack-2")
 
-TECHNOLOGY("kovarex-enrichment-process"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("kovarex-enrichment-process"):hide().enabled = false
 
-TECHNOLOGY("battery"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("battery"):hide().enabled = false
 
-TECHNOLOGY("solar-energy"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("solar-energy"):hide().enabled = false
 
 TECHNOLOGY("speed-module-3"):add_pack("military-science-pack")
 TECHNOLOGY("productivity-module-3"):add_pack("military-science-pack")
@@ -472,13 +470,13 @@ RECIPE("big-electric-pole"):remove_unlock("electric-energy-distribution-1"):add_
 
 RECIPE("substation"):replace_ingredient("steel-plate", "stainless-steel"):remove_unlock("electric-energy-distribution-2"):add_unlock("electric-energy-distribution-4")
 
-ITEM("uranium-235").hidden = true
-ITEM("uranium-238").hidden = true
-ITEM("battery").hidden = true
+ITEM("uranium-235"):hide()
+ITEM("uranium-238"):hide()
+ITEM("battery"):hide()
 
-RECIPE("centrifuge"):remove_unlock("filtration"):set_fields {hidden = true}
-ITEM("centrifuge").hidden = true
-ENTITY("centrifuge").hidden = true
+RECIPE("centrifuge"):remove_unlock("filtration"):hide()
+ITEM("centrifuge"):hide()
+ENTITY("centrifuge", "assembling-machine"):hide()
 
 ITEM("speed-module").effect--[[@as data.Effect]].consumption = 1.0
 ITEM("speed-module-2").effect--[[@as data.Effect]].consumption = 1.2
@@ -488,7 +486,7 @@ ITEM("productivity-module").effect--[[@as data.Effect]].consumption = 1.2
 ITEM("productivity-module-2").effect--[[@as data.Effect]].consumption = 1.5
 ITEM("productivity-module-3").effect--[[@as data.Effect]].consumption = 2.0
 
-ENTITY("beacon"):set_fields{energy_usage = "2MW"}:hide()
+ENTITY("beacon"):hide().energy_usage = "2MW"
 
 data.raw.item["space-science-pack"].stack_size = 200
 
@@ -795,7 +793,7 @@ RECIPE("power-armor-mk2"):set_fields {
         {type = "item",  name = "hydraulic-system-mk02", amount = 2},
         {type = "item",  name = "cooling-tower-mk02",    amount = 1},
         {type = "item",  name = "sc-engine",             amount = 6},
-        {type = "item",  name = "vacuum-pump-mk04",      amount = 2},
+        {type = "item",  name = "vacuum-pump-mk03",      amount = 2},
         {type = "item",  name = "ht-pipes",              amount = 10},
         {type = "item",  name = "metallic-glass",        amount = 20},
         {type = "item",  name = "nxzngd",                amount = 40},

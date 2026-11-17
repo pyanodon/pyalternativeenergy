@@ -50,17 +50,17 @@ RECIPE("tar-to-nickel"):set_fields {energy_required = 10}
 RECIPE("honey-comb"):set_fields {energy_required = 1}
 RECIPE("honey-comb-buffed"):set_fields {energy_required = 3}
 
-TECHNOLOGY("pyrrhic"):add_prereq("mass-production")
-TECHNOLOGY("pyrrhic"):add_prereq("machines-mk05")
-TECHNOLOGY("pyrrhic"):add_prereq("oil-machines-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("smelters-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("nuclear-power-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("electronics-machines-4")
-TECHNOLOGY("pyrrhic"):add_prereq("tholin-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("land-animals-mk05")
-TECHNOLOGY("pyrrhic"):add_prereq("mycology-mk05")
-TECHNOLOGY("pyrrhic"):add_prereq("botany-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("biotech-machines-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("mass-production")
+data.raw.technology["pyrrhic"]:add_prereq("machines-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("oil-machines-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("smelters-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("nuclear-power-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("electronics-machines-4")
+data.raw.technology["pyrrhic"]:add_prereq("tholin-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("land-animals-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("mycology-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("botany-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("biotech-machines-mk04")
 
 RECIPE {
     type = "recipe",
@@ -101,7 +101,7 @@ RECIPE("ht-locomotive"):add_ingredient {type = "item", name = "ns-material", amo
 RECIPE("ht-generic-wagon"):add_ingredient {type = "item", name = "ns-material", amount = 2}:add_ingredient {type = "item", name = "super-steel", amount = 10}
 RECIPE("ht-generic-fluid-wagon"):add_ingredient {type = "item", name = "ns-material", amount = 2}:add_ingredient {type = "item", name = "super-steel", amount = 10}
 
-TECHNOLOGY("nuclear-fuel-reprocessing"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("nuclear-fuel-reprocessing"):hide().enabled = false
 RECIPE("lithium-peroxide"):remove_unlock("filtration-mk02"):add_unlock("lithium-processing"):add_ingredient {type = "item", name = "lithium-hydroxide", amount = 2}
 RECIPE("low-density-structure"):add_ingredient {type = "item", name = "cf", amount = 10}
 RECIPE("arithmetic-combinator"):add_ingredient {type = "item", name = "battery", amount = 1}
@@ -133,6 +133,7 @@ for _, recipe in pairs(data.raw.recipe) do
 
     if RECIPE(recipe.name):has_category("combustion") then
         recipe.hidden = true
+        recipe.hidden_in_factoriopedia = true
         for t, tech in pairs(data.raw.technology) do
             if tech.effects ~= nil then
                 for e, effect in pairs(tech.effects) do
@@ -176,23 +177,6 @@ for _, name in pairs{
     }
 end
 
-local molten_salt_recipes = {
-    "biomass-molten-salt-0",
-    "coal-molten-salt-0",
-    "gas-molten-salt-0",
-    "oil-molten-salt-0",
-}
--- Add the mk01..mk04 color bars to the hot-molten-salt recipes
-for _, name in pairs(molten_salt_recipes) do
-    for mk = 1, 4, 1 do
-        local recipe = name .. mk
-        table.insert(data.raw.recipe[recipe].icons--[[@cast -?]], {
-            icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. mk .. ".png",
-            icon_size = 64,
-        })
-    end
-end
-
 for _, resource in pairs(data.raw.resource) do
     if not resource.selection_priority then
         resource.selection_priority = 40
@@ -204,7 +188,7 @@ if feature_flags.space_travel and not data.raw.armor["mech-armor"] then
     data.raw.armor["power-armor-mk2"].provides_flight = true
 end
 
-TECHNOLOGY("oil-processing"):add_pack("logistic-science-pack")
+data.raw.technology["oil-processing"]:add_pack("logistic-science-pack")
 
 --gather recipes for module changes
 local recipes_list =

@@ -3,7 +3,7 @@ data.raw.fluid["pressured-steam"].heat_capacity = "8kJ"
 RECIPE("nuclear-sample"):replace_ingredient("plutonium", {type = "item", name = "pu-238", amount = 1}):remove_unlock("production-science-pack"):add_unlock("chemical-science-pack")
 
 -- TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-mk02')
-TECHNOLOGY("kovarex-enrichment-process-2"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("kovarex-enrichment-process-2"):hide().enabled = false
 
 TECHNOLOGY("helium-processing"):remove_pack("production-science-pack")
 TECHNOLOGY("boron-mk02"):remove_pack("production-science-pack")
@@ -147,8 +147,8 @@ RECIPE {
     },
 }
 
-RECIPE("d2o-distilation"):remove_unlock("fusion-mk01"):set_fields {hidden = true}
-RECIPE("heavy-water"):remove_unlock("fusion-mk01"):set_fields {hidden = true}
+RECIPE("d2o-distilation"):remove_unlock("fusion-mk01"):hide()
+RECIPE("heavy-water"):remove_unlock("fusion-mk01"):hide()
 
 
 data.raw["assembling-machine"]["fusion-reactor-mk02"].crafting_categories = {"fusion-01", "fusion-02"}
