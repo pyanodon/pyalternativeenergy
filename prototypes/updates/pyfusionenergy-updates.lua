@@ -1,7 +1,7 @@
 data.raw.fluid["pressured-steam"].heat_capacity = "8kJ"
 
 RECIPE("nuclear-sample"):replace_ingredient("plutonium", {type = "item", name = "pu-238", amount = 1}):remove_unlock("production-science-pack"):add_unlock("chemical-science-pack")
-
+ITEM("plutonium"):set_fields {hidden = true}
 -- TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-mk02')
 TECHNOLOGY("kovarex-enrichment-process-2"):set_fields {enabled = false, hidden = true}
 
@@ -15,7 +15,8 @@ RECIPE("methyl-acrylate"):remove_unlock("ethanolamine"):add_unlock("acrylic")
 
 --BUILDINDS--
 RECIPE("particle-accelerator-mk01"):remove_ingredient("gasturbinemk02")
-RECIPE("py-turbine"):remove_ingredient("gasturbinemk03") -- TODO: replace with something
+RECIPE("py-turbine"):remove_ingredient("gasturbinemk03"):set_fields {hidden = true} -- TODO: replace with something
+ITEM("py-turbine"):set_fields {hidden = true}
 
 RECIPE("automated-screener-mk01"):remove_unlock("machines-mk01"):add_unlock("copper-mk01")
 RECIPE("agitator-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}

@@ -23,9 +23,6 @@ RECIPE("oil-boiler-mk01"):add_ingredient {type = "item", name = "intermetallics"
 --RECIPE("rhe"):add_ingredient({type = "item", name = "intermetallics", amount = 10})
 RECIPE("sulfur-mine"):add_ingredient {type = "item", name = "intermetallics", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-01", amount = 2}
 
-RECIPE("crude-to-fuel-oil"):set_fields {hidden = true}
-RECIPE("scrude-to-fuel-oil"):set_fields {hidden = true}
-
 RECIPE("natural-gas-derrick-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 4}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 RECIPE("oil-derrick-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 5}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
 RECIPE("oil-sand-extractor-mk02"):add_ingredient {type = "item", name = "self-assembly-monolayer", amount = 10}:add_ingredient {type = "item", name = "mechanical-parts-02", amount = 1}
@@ -76,6 +73,13 @@ RECIPE("upgrader-mk04"):add_ingredient {type = "item", name = "metastable-quasic
 RECIPE("fracking-rig"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 30}:add_ingredient {type = "item", name = "sc-engine", amount = 6}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 5}
 RECIPE("guar-gum-plantation-mk04"):add_ingredient {type = "item", name = "metastable-quasicrystal", amount = 10}:add_ingredient {type = "item", name = "sc-engine", amount = 3}:add_ingredient {type = "item", name = "mechanical-parts-04", amount = 1}
 
+--ITEMS--
+
+RECIPE("crude-to-fuel-oil"):set_fields {hidden = true}
+RECIPE("scrude-to-fuel-oil"):set_fields {hidden = true}
+RECIPE("scrude-to-hydrogen"):set_fields {hidden = true}
+ITEM("processed-light-oil"):set_fields {hidden = true}
+ITEM("hot-reaction-gas"):set_fields {hidden = true}
 --RECIPES --
 
 RECIPE("tholin-capsule"):add_ingredient {type = "item", name = "cf", amount = 30}

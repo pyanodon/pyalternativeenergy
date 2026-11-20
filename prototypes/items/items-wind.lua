@@ -11,7 +11,7 @@ ITEM {
     stack_size = 100
 }
 
-ITEM {
+--[[ITEM {
     type = "item",
     name = "additional-part-mk01",
     icon = "__pyalternativeenergygraphics__/graphics/icons/additional-part-mk01.png",
@@ -20,7 +20,7 @@ ITEM {
     subgroup = "py-alternativeenergy-parts",
     order = "a",
     stack_size = 100
-}
+}--]]
 
 ITEM {
     type = "item",
@@ -168,7 +168,7 @@ ITEM {
     stack_size = 100
 }
 
-ITEM {
+--[[ITEM {
     type = "item",
     name = "additional-part-mk02",
     icon = "__pyalternativeenergygraphics__/graphics/icons/additional-part-mk02.png",
@@ -177,7 +177,7 @@ ITEM {
     subgroup = "py-alternativeenergy-parts",
     order = "ab",
     stack_size = 100
-}
+}--]]
 
 ITEM {
     type = "item",
