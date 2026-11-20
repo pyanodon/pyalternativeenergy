@@ -138,7 +138,7 @@ for _, recipe in pairs(data.raw.recipe) do
                 for e, effect in pairs(tech.effects) do
                     if effect.type == "unlock-recipe" then
                         if effect.recipe == recipe.name then
-                            RECIPE(recipe.name):remove_unlock(tech.name)
+                            RECIPE(recipe.name):remove_unlock(tech.name):set_fields {hidden = true}
                         end
                     end
                 end

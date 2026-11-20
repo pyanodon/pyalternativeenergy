@@ -9,7 +9,7 @@ TECHNOLOGY("helium-processing"):remove_pack("production-science-pack")
 TECHNOLOGY("boron-mk02"):remove_pack("production-science-pack")
 
 RECIPE("grease-table-mk01"):remove_unlock("diamond-mining"):add_unlock("machines-mk03")
-RECIPE("py-turbine"):remove_unlock("fusion-mk01")
+RECIPE("py-turbine"):remove_unlock("fusion-mk01"):set_fields {hidden = true}
 RECIPE("lead-container"):replace_ingredient("lead-plate", {type = "item", name = "pbsb-alloy", amount = 4})
 RECIPE("methyl-acrylate"):remove_unlock("ethanolamine"):add_unlock("acrylic")
 
@@ -109,10 +109,10 @@ RECIPE("b-h"):remove_ingredient("pressured-water")
 RECIPE("antimatter-fusion"):replace_result("critical-steam", "neutron", 1000)
 RECIPE("antimatter-fusion"):remove_ingredient("pressured-water")
 
-RECIPE("steam-exchange1"):remove_unlock("fusion-mk01")
-RECIPE("steam-exchange2"):remove_unlock("fusion-mk02")
-RECIPE("steam-exchange3"):remove_unlock("fusion-mk03")
-RECIPE("steam-exchange4"):remove_unlock("fusion-mk04")
+RECIPE("steam-exchange1"):remove_unlock("fusion-mk01"):set_fields {hidden = true}
+RECIPE("steam-exchange2"):remove_unlock("fusion-mk02"):set_fields {hidden = true}
+RECIPE("steam-exchange3"):remove_unlock("fusion-mk03"):set_fields {hidden = true}
+RECIPE("steam-exchange4"):remove_unlock("fusion-mk04"):set_fields {hidden = true}
 RECIPE("steam-exchange5"):remove_unlock("fusion-mk04"):add_unlock("fusion-mk01")
 
 RECIPE {
@@ -357,7 +357,7 @@ RECIPE {
     order = "e",
 }
 
-RECIPE("antimatter-fusion"):remove_unlock("fusion-mk04")
+RECIPE("antimatter-fusion"):remove_unlock("fusion-mk04"):set_fields {hidden = true}
 
 --[[ removed for total rebuild in pysex
 RECIPE {
