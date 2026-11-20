@@ -17,16 +17,6 @@ RECIPE("power-house-mk02"):remove_unlock("machines-mk03"):set_fields {hidden = t
 RECIPE("power-house-mk03"):remove_unlock("machines-mk04"):set_fields {hidden = true}
 RECIPE("power-house-mk04"):remove_unlock("machines-mk05"):set_fields {hidden = true}
 
-if not mods["pystellarexpedition"] then
-    RECIPE("gasturbinemk01"):remove_unlock("energy-1"):set_fields {hidden = true}
-    RECIPE("gasturbinemk02"):remove_unlock("machines-mk03"):set_fields {hidden = true}
-    RECIPE("gasturbinemk03"):remove_unlock("machines-mk04"):set_fields {hidden = true}
-    ITEM("gasturbinemk01"):set_fields {hidden = true}
-    ITEM("gasturbinemk02"):set_fields {hidden = true}
-    ITEM("gasturbinemk03"):set_fields {hidden = true}
-end
-RECIPE("solar-panel"):set_fields {hidden = true}
-ITEM("solar-panel"):set_fields {hidden = true}
 RECIPE("pumpjack"):set_fields {hidden = true}
 ITEM("pumpjack"):set_fields {hidden = true}
 

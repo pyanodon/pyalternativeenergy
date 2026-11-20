@@ -78,6 +78,8 @@ RECIPE("guar-gum-plantation-mk04"):add_ingredient {type = "item", name = "metast
 RECIPE("crude-to-fuel-oil"):set_fields {hidden = true}
 RECIPE("scrude-to-fuel-oil"):set_fields {hidden = true}
 RECIPE("scrude-to-hydrogen"):set_fields {hidden = true}
+FLUID("processed-light-oil"):set_fields {hidden = true}
+FLUID("hot-reaction-gas"):set_fields {hidden = true}
 --RECIPES --
 
 RECIPE("tholin-capsule"):add_ingredient {type = "item", name = "cf", amount = 30}

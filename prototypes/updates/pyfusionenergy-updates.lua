@@ -15,7 +15,7 @@ RECIPE("methyl-acrylate"):remove_unlock("ethanolamine"):add_unlock("acrylic")
 
 --BUILDINDS--
 RECIPE("particle-accelerator-mk01"):remove_ingredient("gasturbinemk02")
-RECIPE("py-turbine"):remove_ingredient("gasturbinemk03"):set_fields {hidden = true} -- TODO: replace with something
+RECIPE("py-turbine"):remove_ingredient("gasturbinemk03") -- TODO: replace with something
 ITEM("py-turbine"):set_fields {hidden = true}
 
 RECIPE("automated-screener-mk01"):remove_unlock("machines-mk01"):add_unlock("copper-mk01")

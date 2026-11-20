@@ -84,6 +84,7 @@ RECIPE("copper-mine"):add_ingredient {type = "item", name = "mechanical-parts-02
 RECIPE("iron-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 RECIPE("lead-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 RECIPE("nexelit-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
+ITEM("nexelit-mine"):set_fields {hidden = true}
 RECIPE("nickel-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 RECIPE("phosphate-mine-02"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 RECIPE("quartz-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
@@ -122,6 +123,10 @@ RECIPE("uranium-fuel-cell-mk02"):remove_unlock("uranium-mk01"):set_fields {hidde
 RECIPE("uranium-fuel-cell-mk03"):remove_unlock("uranium-mk02")
 RECIPE("uranium-fuel-cell-mk04"):remove_unlock("uranium-mk03")
 RECIPE("uranium-fuel-cell-mk05"):remove_unlock("uranium-mk04"):set_fields {hidden = true}
+ITEM("uranium-fuel-cell-mk02"):set_fields {hidden = true}
+ITEM("used-up-uranium-fuel-cell-mk02"):set_fields {hidden = true}
+ITEM("uranium-fuel-cell-mk05"):set_fields {hidden = true}
+ITEM("used-up-uranium-fuel-cell-mk05"):set_fields {hidden = true}
 RECIPE("nuclear-fuel-reprocessing-mk04"):remove_unlock("uranium-mk03"):set_fields {hidden = true}
 RECIPE("nuclear-fuel-reprocessing-mk05"):remove_unlock("uranium-mk04"):set_fields {hidden = true}
 
