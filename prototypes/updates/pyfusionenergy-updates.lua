@@ -1,7 +1,7 @@
 data.raw.fluid["pressured-steam"].heat_capacity = "8kJ"
 
 RECIPE("nuclear-sample"):replace_ingredient("plutonium", {type = "item", name = "pu-238", amount = 1}):remove_unlock("production-science-pack"):add_unlock("chemical-science-pack")
-
+ITEM("plutonium"):set_fields {hidden = true}
 -- TECHNOLOGY('diamond-mining'):remove_pack('chemical-science-pack'):remove_pack('py-science-pack-2'):remove_prereq('excavation-2'):add_prereq('machines-mk02'):remove_prereq('filtration-mk02')
 TECHNOLOGY("kovarex-enrichment-process-2"):set_fields {enabled = false, hidden = true}
 
@@ -9,13 +9,14 @@ TECHNOLOGY("helium-processing"):remove_pack("production-science-pack")
 TECHNOLOGY("boron-mk02"):remove_pack("production-science-pack")
 
 RECIPE("grease-table-mk01"):remove_unlock("diamond-mining"):add_unlock("machines-mk03")
-RECIPE("py-turbine"):remove_unlock("fusion-mk01")
+RECIPE("py-turbine"):remove_unlock("fusion-mk01"):set_fields {hidden = true}
 RECIPE("lead-container"):replace_ingredient("lead-plate", {type = "item", name = "pbsb-alloy", amount = 4})
 RECIPE("methyl-acrylate"):remove_unlock("ethanolamine"):add_unlock("acrylic")
 
 --BUILDINDS--
 RECIPE("particle-accelerator-mk01"):remove_ingredient("gasturbinemk02")
 RECIPE("py-turbine"):remove_ingredient("gasturbinemk03") -- TODO: replace with something
+ITEM("py-turbine"):set_fields {hidden = true}
 
 RECIPE("automated-screener-mk01"):remove_unlock("machines-mk01"):add_unlock("copper-mk01")
 RECIPE("agitator-mk01"):add_ingredient {type = "item", name = "intermetallics", amount = 5}
@@ -109,10 +110,10 @@ RECIPE("b-h"):remove_ingredient("pressured-water")
 RECIPE("antimatter-fusion"):replace_result("critical-steam", "neutron", 1000)
 RECIPE("antimatter-fusion"):remove_ingredient("pressured-water")
 
-RECIPE("steam-exchange1"):remove_unlock("fusion-mk01")
-RECIPE("steam-exchange2"):remove_unlock("fusion-mk02")
-RECIPE("steam-exchange3"):remove_unlock("fusion-mk03")
-RECIPE("steam-exchange4"):remove_unlock("fusion-mk04")
+RECIPE("steam-exchange1"):remove_unlock("fusion-mk01"):set_fields {hidden = true}
+RECIPE("steam-exchange2"):remove_unlock("fusion-mk02"):set_fields {hidden = true}
+RECIPE("steam-exchange3"):remove_unlock("fusion-mk03"):set_fields {hidden = true}
+RECIPE("steam-exchange4"):remove_unlock("fusion-mk04"):set_fields {hidden = true}
 RECIPE("steam-exchange5"):remove_unlock("fusion-mk04"):add_unlock("fusion-mk01")
 
 RECIPE {
@@ -357,7 +358,7 @@ RECIPE {
     order = "e",
 }
 
-RECIPE("antimatter-fusion"):remove_unlock("fusion-mk04")
+RECIPE("antimatter-fusion"):remove_unlock("fusion-mk04"):set_fields {hidden = true}
 
 --[[ removed for total rebuild in pysex
 RECIPE {

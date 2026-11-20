@@ -76,11 +76,11 @@ RECIPE("yag-laser-module"):add_ingredient {type = "item", name = "erbium", amoun
 RECIPE("nems"):add_ingredient {type = "item", name = "nanozymes", amount = 1}
 RECIPE("heavy-n"):add_ingredient {type = "fluid", name = "sb-pulp-02", amount = 200}
 
-RECIPE("pa-uranium-235"):remove_unlock("nucleo-mk03")
-RECIPE("pa-aromatics"):remove_unlock("nucleo")
-RECIPE("pa-benzene"):remove_unlock("nucleo")
-RECIPE("pa-propene"):remove_unlock("nucleo")
-RECIPE("pa-coal"):remove_unlock("nucleo")
+RECIPE("pa-uranium-235"):remove_unlock("nucleo-mk03"):set_fields {hidden = true}
+RECIPE("pa-aromatics"):remove_unlock("nucleo"):set_fields {hidden = true}
+RECIPE("pa-benzene"):remove_unlock("nucleo"):set_fields {hidden = true}
+RECIPE("pa-propene"):remove_unlock("nucleo"):set_fields {hidden = true}
+RECIPE("pa-coal"):remove_unlock("nucleo"):set_fields {hidden = true}
 
 RECIPE("sodium-silicate"):remove_unlock("colloidal-silica"):add_unlock {"silicon-mk01"}
 RECIPE("quantum-dots"):remove_unlock("space-science-pack"):add_unlock {"quantum-processor"}
@@ -215,7 +215,7 @@ RECIPE("nexelit-battery-recharge"):remove_unlock("railway-mk03"):add_unlock("bat
 RECIPE("quantum-battery-recharge"):remove_unlock("railway-mk04"):add_unlock("battery-mk04")
 data.raw.recipe["quantum-battery"].results = {{type = "item", name = "used-quantum-battery", amount = 1}}
 
-RECIPE("random-science-pack"):remove_unlock("space-science-pack").hidden = true
+RECIPE("random-science-pack"):remove_unlock("space-science-pack"):set_fields {hidden = true}
 
 RECIPE("pa-diamond"):remove_unlock("nucleo-mk02"):add_unlock("nucleo-mk03").energy_required = data.raw.recipe["pa-diamond"].energy_required--[[@cast -?]] * 2
 

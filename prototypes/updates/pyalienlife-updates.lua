@@ -331,6 +331,7 @@ RECIPE("brain-cartridge-03"):add_ingredient {type = "item", name = "eva", amount
 
 RECIPE("brain-cartridge-04"):add_ingredient {type = "item", name = "acrylic", amount = 2}:add_ingredient {type = "fluid", name = "numal-ink", amount = 10}
 
+
 -- add new farms
 py.mod_data.farm_buildings["zungror-lair"] = {default_module = "zungror", domain = "animal"}
 py.mod_data.farm_buildings["numal-reef"] = {default_module = "numal", domain = "animal"}

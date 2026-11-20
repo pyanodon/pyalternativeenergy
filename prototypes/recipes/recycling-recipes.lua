@@ -648,7 +648,7 @@ RECIPE {
 
 -- msa acid
 
-RECIPE {
+--[[RECIPE {
     type = "recipe",
     name = "msa-void-boric-acid",
     categories = {"mixer"},
@@ -663,7 +663,7 @@ RECIPE {
     },
     allow_productivity = true,
     main_product = "water"
-}
+}--]]
 
 --coke oven gas
 

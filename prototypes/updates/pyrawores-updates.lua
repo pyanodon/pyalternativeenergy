@@ -84,6 +84,7 @@ RECIPE("copper-mine"):add_ingredient {type = "item", name = "mechanical-parts-02
 RECIPE("iron-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 RECIPE("lead-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 RECIPE("nexelit-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
+ITEM("nexelit-mine"):set_fields {hidden = true}
 RECIPE("nickel-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 RECIPE("phosphate-mine-02"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
 RECIPE("quartz-mine"):add_ingredient {type = "item", name = "mechanical-parts-02", amount = 10}
@@ -106,14 +107,28 @@ RECIPE("gravel-saline-water"):remove_unlock("electrolysis"):add_unlock("crusher"
 RECIPE("p2s5"):remove_unlock("additives"):add_unlock("intermetallics-mk02")
 RECIPE("p2s5-2"):remove_unlock("additives"):add_unlock("intermetallics-mk02")
 
+--Removing unused items
+ITEM("grade-4-iron"):set_fields {hidden = true}
+ITEM("grade-4-lead"):set_fields {hidden = true}
+
+--Removing unused isotopes
+ITEM("u-239"):set_fields {hidden = true}
+ITEM("u-240"):set_fields {hidden = true}
+ITEM("th-233"):set_fields {hidden = true}
+ITEM("thorium-232"):set_fields {hidden = true}
+
 --removing old nuclear reactor fuel cells as they wont do anything now.
 RECIPE("uranium-fuel-cell"):remove_unlock("uranium-mk01"):add_unlock("uranium-processing")
-RECIPE("uranium-fuel-cell-mk02"):remove_unlock("uranium-mk01")
+RECIPE("uranium-fuel-cell-mk02"):remove_unlock("uranium-mk01"):set_fields {hidden = true}
 RECIPE("uranium-fuel-cell-mk03"):remove_unlock("uranium-mk02")
 RECIPE("uranium-fuel-cell-mk04"):remove_unlock("uranium-mk03")
-RECIPE("uranium-fuel-cell-mk05"):remove_unlock("uranium-mk04")
-RECIPE("nuclear-fuel-reprocessing-mk04"):remove_unlock("uranium-mk03")
-RECIPE("nuclear-fuel-reprocessing-mk05"):remove_unlock("uranium-mk04")
+RECIPE("uranium-fuel-cell-mk05"):remove_unlock("uranium-mk04"):set_fields {hidden = true}
+ITEM("uranium-fuel-cell-mk02"):set_fields {hidden = true}
+ITEM("used-up-uranium-fuel-cell-mk02"):set_fields {hidden = true}
+ITEM("uranium-fuel-cell-mk05"):set_fields {hidden = true}
+ITEM("used-up-uranium-fuel-cell-mk05"):set_fields {hidden = true}
+RECIPE("nuclear-fuel-reprocessing-mk04"):remove_unlock("uranium-mk03"):set_fields {hidden = true}
+RECIPE("nuclear-fuel-reprocessing-mk05"):remove_unlock("uranium-mk04"):set_fields {hidden = true}
 
 --tweaked by pyal from fuel production to uranium techs. now removing completely
 RECIPE("fuelrod-mk01-1"):remove_unlock("uranium-mk01")
@@ -121,8 +136,9 @@ RECIPE("fuelrod-mk02"):remove_unlock("uranium-mk01")
 RECIPE("fuelrod-mk03"):remove_unlock("uranium-mk02")
 RECIPE("fuelrod-mk04"):remove_unlock("uranium-mk03")
 RECIPE("fuelrod-mk05"):remove_unlock("uranium-mk04")
-RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessing")
-RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing")
+RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessing"):set_fields {hidden = true}
+RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing"):set_fields {hidden = true}
+RECIPE("nuclear-fuel-reprocessing"):set_fields {hidden = true}
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
 RECIPE("fuelrod-mk01-1"):add_ingredient {type = "item", name = "pu-239", amount = 1}:replace_ingredient("coke", "graphite"):add_unlock("uranium-processing"):set_fields {categories = {"crafting"}}
@@ -326,7 +342,7 @@ RECIPE {
     order = "q-2"
 }:remove_unlock("uranium-mk02"):add_unlock("uranium-processing")
 
-RECIPE("u235-pulp-01"):remove_unlock("uranium-mk01")
+RECIPE("u235-pulp-01"):remove_unlock("uranium-mk01"):set_fields {hidden = true}
 RECIPE("heavy-fermion"):remove_ingredient("40-u-powder")
 
 RECIPE("space-science-pack"):replace_ingredient("yellow-cake", "pu-238")
