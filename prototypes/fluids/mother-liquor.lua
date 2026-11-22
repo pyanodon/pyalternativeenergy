@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "mother-liquor",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -19,7 +19,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mother-liquor-prime",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {

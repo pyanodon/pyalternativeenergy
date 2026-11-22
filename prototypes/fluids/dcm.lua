@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "dcm",
-    categories = {"fbreactor"}, --chemical plant later
+    category = "fbreactor", --chemical plant later
     enabled = false,
     energy_required = 10,
     ingredients = {

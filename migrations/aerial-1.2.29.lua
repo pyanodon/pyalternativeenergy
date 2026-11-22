@@ -1,4 +1,3 @@
----@diagnostic disable
 if storage.aerials and not storage.aerials.aerial_counts then
     storage.aerials = nil
 end

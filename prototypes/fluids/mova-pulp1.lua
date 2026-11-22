@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "mova-pulp1",
-    categories = {"pulp"},
+    category = "pulp",
     enabled = false,
     energy_required = 10,
     ingredients = {

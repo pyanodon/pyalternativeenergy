@@ -1,7 +1,7 @@
 -- RECIPE {
 --     type = "recipe",
 --     name = "pocl3",
---     categories = {"hpf"},
+--     category = "hpf",
 --     enabled = false,
 --     energy_required = 10,
 --     ingredients = {
@@ -20,7 +20,7 @@
 RECIPE {
     type = "recipe",
     name = "acetaldehyde-1",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -39,7 +39,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "acetaldehyde-2",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -56,7 +56,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pyridine",
-    categories = {"fbreactor"},
+    category = "fbreactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -76,7 +76,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tbp",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -96,7 +96,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sb-silicate",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -111,7 +111,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lithium-hydroxide",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -129,7 +129,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lithium",
-    categories = {"electrolyzer"},
+    category = "electrolyzer",
     enabled = false,
     energy_required = 5,
     ingredients = {

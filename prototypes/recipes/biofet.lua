@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "nickel-nitrate",
-    categories = {"carbonfilter"},
+    category = "carbonfilter",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -18,7 +18,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "triethoxysilane",
-    categories = {"fbreactor"},
+    category = "fbreactor",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pre-phenothiazine",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -53,7 +53,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phenothiazine",
-    categories = {"sinter"},
+    category = "sinter",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -73,7 +73,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "neodymium-nitrate",
-    categories = {"agitator"},
+    category = "agitator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -89,7 +89,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pvp",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -107,7 +107,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gbl",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -126,7 +126,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "butynediol",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -145,7 +145,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "perovskite-nickelate",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -164,7 +164,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bioreceptor",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -185,7 +185,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "aptes",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -203,7 +203,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "biofet",
-    categories = {"bio-printer"},
+    category = "bio-printer",
     enabled = false,
     energy_required = 10,
     ingredients = {

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "nuclear-molten-salt-01",
-    categories = {"nuclear-fission"},
+    category = "nuclear-fission",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -80,7 +80,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mox-molten-salt-01",
-    categories = {"nuclear-mox-fission"},
+    category = "nuclear-mox-fission",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -159,7 +159,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "thermal-neutron",
-    categories = {"neutron-moderator"},
+    category = "neutron-moderator",
     enabled = false,
     energy_required = 20,
     ingredients = {

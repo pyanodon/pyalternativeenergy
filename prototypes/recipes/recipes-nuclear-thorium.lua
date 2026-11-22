@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "molten-thorium",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -19,7 +19,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nuclear-molten-thorium-reactor",
-    categories = {"nuclear-fission"},
+    category = "nuclear-fission",
     icon = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fluids/nuclear-molten-thorium-reactor.png",
     icon_size = 64,
     enabled = false,
@@ -40,7 +40,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pa-233-seperation",
-    categories = {"centrifuging"},
+    category = "centrifuging",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -60,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pa233-u233",
-    categories = {"neutron-absorber"},
+    category = "neutron-absorber",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -77,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u233-uf6",
-    categories = {"centrifuging"},
+    category = "centrifuging",
     enabled = false,
     energy_required = 40,
     ingredients = {

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "middle-processed-lard",
-    categories = {"cracker"},
+    category = "cracker",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -20,7 +20,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fatty-acids",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fatty-acids-2",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -54,7 +54,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "processed-fatty-acids",
-    categories = {"scrubber"},
+    category = "scrubber",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -70,7 +70,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vinyl-acetate",
-    categories = {"fluid-separator"},
+    category = "fluid-separator",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -88,7 +88,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "eva",
-    categories = {"carbonfilter"},
+    category = "carbonfilter",
     enabled = false,
     energy_required = 10,
     ingredients = {

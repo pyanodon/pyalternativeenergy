@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "photonic-chip",
-    categories = {"electronic"},
+    category = "electronic",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -26,7 +26,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fbg",
-    categories = {"pcb"},
+    category = "pcb",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -47,7 +47,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fdtd",
-    categories = {"nano"},
+    category = "nano",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -66,7 +66,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dieletric-mirror",
-    categories = {"glassworks"},
+    category = "glassworks",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -86,7 +86,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ti-n",
-    categories = {"py-rawores-smelter"},
+    category = "py-rawores-smelter",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -103,7 +103,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "animal-reflectors",
-    categories = {"gas-separator"},
+    category = "gas-separator",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -124,7 +124,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "photonic-crystal",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -141,7 +141,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "inverse-opal",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -153,7 +153,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "inverse-opal",     amount = 1},
-        {type = "item", name = "yag-laser-module", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1, independent_probability = 0.9},
+        {type = "item", name = "yag-laser-module", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1, probability = 0.9},
     },
     main_product = "inverse-opal",
 }:add_unlock("photonics")
@@ -161,7 +161,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hardener",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -181,7 +181,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "glycidylamine",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 20,
     ingredients = {

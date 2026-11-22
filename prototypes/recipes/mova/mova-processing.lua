@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "mova-washing",
-    categories = {"washer"},
+    category = "washer",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -22,7 +22,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guaiacol",
-    categories = {"agitator"},
+    category = "agitator",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -40,7 +40,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ammonium-sulfate",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -57,7 +57,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mpa",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -76,7 +76,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nanozymes",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 10,
     ingredients = {

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "silicate-solution",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {

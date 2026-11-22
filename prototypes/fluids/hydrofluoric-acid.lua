@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "hydrofluoric-acid",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 5,
     ingredients = {

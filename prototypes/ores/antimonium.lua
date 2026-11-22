@@ -1,6 +1,5 @@
 local resource_autoplace = require "resource-autoplace"
 
----@diagnostic disable-next-line: need-check-nil
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["antimonium"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["antimonium"] = {}
 
@@ -35,6 +34,8 @@ ENTITY {
     },
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    tantimonium_removal_probability = 0.7,
+    tantimonium_removal_max_distance = 32 * 32,
     autoplace = resource_autoplace.resource_autoplace_settings {
         name = "antimonium",
         order = "b",

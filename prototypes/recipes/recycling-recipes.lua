@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "purex-antimony-void",
-    categories = {"scrubber"},
+    category = "scrubber",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -13,7 +13,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "phosphorous-acid", amount = 120},
-        {type = "item",  name = "sb-oxide",         amount = 1,     independent_probability = 0.50},
+        {type = "item",  name = "sb-oxide",         amount = 1,     probability = 0.50},
         {type = "item",  name = "plastic-bar",      amount_min = 1, amount_max = 3,    ignored_by_stats = 3, ignored_by_productivity = 3},
     },
     allow_productivity = true,
@@ -25,7 +25,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purest-nitrogen-void",
-    categories = {"vacuum"},
+    category = "vacuum",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -44,7 +44,7 @@ data.raw.recipe["purest-nitrogen-gas"].localised_description = {"recipe-descript
 RECIPE {
     type = "recipe",
     name = "water-from-oxygen-and-hydrogen",
-    categories = {"quenching-tower"},
+    category = "quenching-tower",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "chloride-void-iron-oxide",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -80,7 +80,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "chloride-void-muddy-sludge",
-    categories = {"hydrocyclone"},
+    category = "hydrocyclone",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -100,7 +100,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "limestone-void",
-    categories = {"secondary-crusher"},
+    category = "secondary-crusher",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -120,7 +120,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sulfur-void-tar",
-    categories = {"washer"},
+    category = "washer",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -138,7 +138,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sulfur-void-water",
-    categories = {"desulfurization"},
+    category = "desulfurization",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -159,7 +159,7 @@ RECIPE("organics-from-dirty-water"):remove_unlock("fluid-separation"):add_unlock
 RECIPE {
     type = "recipe",
     name = "muddy-sludge-void-electrolyzer",
-    categories = {"electrolyzer"},
+    category = "electrolyzer",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -177,7 +177,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "filtration-dirty-water",
-    categories = {"carbonfilter"},
+    category = "carbonfilter",
     enabled = false,
     energy_required = 5.5,
     ingredients = {
@@ -200,7 +200,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "coal-gas-void",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -210,7 +210,7 @@ RECIPE {
         {type = "item", name = "ash", amount = 1},
     },
     allow_productivity = true,
-    icons = py.composite_icon("ash", "coal-gas")
+    main_product = "ash"
 }:add_unlock("coal-processing-1")
 
 --slacked lime
@@ -218,7 +218,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "slacked-lime-void",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -239,7 +239,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "skin-to-lead",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -249,13 +249,13 @@ RECIPE {
         {type = "item", name = "ore-lead", amount = 5},
     },
     allow_productivity = true,
-    icons = py.composite_icon("ore-lead", "skin")
+    main_product = "ore-lead",
 }:add_unlock("molecular-decohesion")
 
 RECIPE {
     type = "recipe",
     name = "skin-fatty-acids",
-    categories = {"olefin"},
+    category = "olefin",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -274,7 +274,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bonemeal-to-bones-and-meat",
-    categories = {"fbreactor"},
+    category = "fbreactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -294,7 +294,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bones-to-kerogen",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -304,7 +304,7 @@ RECIPE {
         {type = "item", name = "kerogen", amount = 8},
     },
     allow_productivity = true,
-    icons = py.composite_icon("kerogen", "bones")
+    main_product = "kerogen",
 }:add_unlock("molecular-decohesion")
 
 --guts
@@ -312,23 +312,23 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guts-to-acetic-acid",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
         {type = "item", name = "guts", amount = 20},
     },
     results = {
-        {type = "fluid", name = "acetic-acid", amount = 60, autotech_is_not_primary_source = true},
+        {type = "fluid", name = "acetic-acid", amount = 60},
     },
     allow_productivity = true,
-    icons = py.composite_icon("acetic-acid", "guts")
+    main_product = "acetic-acid",
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "jerky-to-phytoplankton",
-    categories = {"plankton"},
+    category = "plankton",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -347,7 +347,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "waste-water-void",
-    categories = {"quenching-tower"},
+    category = "quenching-tower",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -366,7 +366,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "used-comb-to-residual-mixture",
-    categories = {"eaf"},
+    category = "eaf",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -385,7 +385,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthropod-blood-to-blood",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -405,7 +405,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "chitin-void",
-    categories = {"tar"},
+    category = "tar",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -419,15 +419,15 @@ RECIPE {
     },
     allow_productivity = true,
     main_product = "carbolic-oil",
-    crafting_machine_tint = {primary = FLUID("carbolic-oil").base_color, secondary = defines.color.deeppink}
-}--[[@as data.RecipePrototype]]:add_unlock("rendering")
+    crafting_machine_tint = {primary = FLUID["carbolic-oil"].base_color, secondary = defines.color.deeppink}
+}:add_unlock("rendering")
 
 --sodium hydroxide
 
 RECIPE {
     type = "recipe",
     name = "sodium-hydroxide-void",
-    categories = {"washer"},
+    category = "washer",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -448,7 +448,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vanadium-pulp-3-void",
-    categories = {"agitator"},
+    category = "agitator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -468,7 +468,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "titanium-overflow-waste-void",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -486,7 +486,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "titanium-pulp-stage-3-void",
-    categories = {"pan"},
+    category = "pan",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -505,7 +505,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sand-void-glass",
-    categories = {"glassworks"},
+    category = "glassworks",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -526,7 +526,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tar-to-carbolic",
-    categories = {"distilator"},
+    category = "distilator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -535,7 +535,7 @@ RECIPE {
         {type = "item",  name = "raw-coal", amount = 1},
     },
     results = {
-        {type = "item",  name = "rich-clay",    amount = 1, independent_probability = 0.3},
+        {type = "item",  name = "rich-clay",    amount = 1, probability = 0.3},
         {type = "item",  name = "ash",          amount = 1},
         {type = "fluid", name = "coal-gas",     amount = 35},
         {type = "fluid", name = "carbolic-oil", amount = 10},
@@ -549,7 +549,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "medium-distillate-to-high-distillate",
-    categories = {"cracker"},
+    category = "cracker",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -568,7 +568,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "anthracene-oil-creosote",
-    categories = {"tar"},
+    category = "tar",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -579,15 +579,15 @@ RECIPE {
     },
     allow_productivity = true,
     main_product = "creosote",
-    crafting_machine_tint = RECIPE("creosote").crafting_machine_tint
-}--[[@as data.RecipePrototype]]:add_unlock("creosote")
+    crafting_machine_tint = RECIPE["creosote"].crafting_machine_tint
+}:add_unlock("creosote")
 
 --refined natural gas
 
 RECIPE {
     type = "recipe",
     name = "formaldehyde-from-refined-natural-gas",
-    categories = {"gas-refinery"},
+    category = "gas-refinery",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -607,7 +607,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "refined-natural-gas-to-condensates",
-    categories = {"compressor"},
+    category = "compressor",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -631,7 +631,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "methanol-void-denitrification",
-    categories = {"methanol"},
+    category = "methanol",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -651,7 +651,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "msa-void-boric-acid",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -670,7 +670,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cog-void-soot",
-    categories = {"wet-scrubber"},
+    category = "wet-scrubber",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -689,7 +689,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fluorine-to-olefins",
-    categories = {"olefin"},
+    category = "olefin",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -714,7 +714,7 @@ RECIPE("cyanic-acid-01"):remove_unlock("advanced-circuit"):add_unlock("melamine"
 RECIPE {
     type = "recipe",
     name = "hydrogen-chloride-void",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -724,7 +724,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "chlorine",   amount = 100},
         {type = "fluid", name = "hydrogen",   amount = 100},
-        {type = "item",  name = "small-lamp", amount = 1,  independent_probability = 0.5, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item",  name = "small-lamp", amount = 1,  probability = 0.5, ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     allow_productivity = true,
     main_product = "chlorine"
@@ -735,7 +735,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "acetone-void-degrease",
-    categories = {"grease"},
+    category = "grease",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -757,7 +757,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wastewater-recovery",
-    categories = {"thickener"},
+    category = "thickener",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -776,7 +776,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oleochemicals-bioplastic",
-    categories = {"methanol"},
+    category = "methanol",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -786,18 +786,18 @@ RECIPE {
     results = {
         {type = "item", name = "plastic-bar", amount = 10},
     },
-    allow_productivity = false,
+    allowed_productivity = false,
 }:add_unlock("plastics-mk02")
 
 RECIPE {
     type = "recipe",
     name = "rubber-from-oleochemicals",
-    categories = {"hor"},
+    category = "hor",
     enabled = false,
     energy_required = 6,
     ingredients = {
-        {type = "fluid", name = "polybutadiene", amount = 20},
         {type = "fluid", name = "oleochemicals", amount = 350},
+        {type = "fluid", name = "polybutadiene", amount = 20},
         {type = "item",  name = "carbon-black",  amount = 10},
         {type = "item",  name = "latex",         amount = 1},
         {type = "item",  name = "sulfur",        amount = 2},
@@ -815,14 +815,14 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "steel-from-barrels",
-    categories = {"advanced-crafting"},
+    category = "advanced-crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "barrel", amount = 1},
     },
     results = {
-        {type = "item", name = "steel-plate", amount = 1, independent_probability = 0.65},
+        {type = "item", name = "steel-plate", amount = 1, probability = 0.65},
     },
     subgroup = "barrel",
     order = "aa",

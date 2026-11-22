@@ -54,7 +54,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-    use_mirroring = true,
+    forced_symmetry = "diagonal-pos",
     module_slots = 3,
     allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"simik-boiler"},
@@ -78,7 +78,6 @@ ENTITY {
         },
     },
     energy_usage = "4000kW",
-    tall = true,
     graphics_set = {
         animation = {
             layers = {
@@ -230,7 +229,7 @@ ENTITY {
             production_type = "input",
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
+            volume = 1000,
             secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
             pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}}
         },
@@ -238,7 +237,7 @@ ENTITY {
             production_type = "input",
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
+            volume = 1000,
             secondary_draw_orders = {north = 0, east = 0, south = 8, west = 0},
             pipe_connections = {{flow_direction = "input", position = {2.0, -5.0}, direction = defines.direction.north}}
         },
@@ -263,20 +262,20 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/simik-boiler.ogg", volume = 0.9},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/simik-boiler.ogg", volume = 0.3},
+        apparent_volume = 2.5
     }
 }
 -- Swap to niobium pipes
-for _, fluid_box in pairs(data.raw["assembling-machine"]["simik-boiler"].fluid_boxes--[[@cast -?]]) do
+for _, fluid_box in pairs(data.raw["assembling-machine"]["simik-boiler"].fluid_boxes) do
     -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
     if type(fluid_box) == "boolean" then
         break
     end
-    if fluid_box.pipe_covers == nil or fluid_box.pipe_covers.south == nil or fluid_box.pipe_picture == nil then error() end
     if fluid_box.pipe_covers.south.layers then
-        fluid_box.pipe_covers.south.layers[1]--[[@cast -?]].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
-        fluid_box.pipe_covers.south.layers[2]--[[@cast -?]].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
+        fluid_box.pipe_covers.south.layers[1].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
+        fluid_box.pipe_covers.south.layers[2].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
     end
     -- Move cover up to compensate
-    fluid_box.pipe_picture.south--[[@cast -?]].scale = 0.5
-    fluid_box.pipe_picture.south--[[@cast -?]].shift = {0, -2.33}
+    fluid_box.pipe_picture.south.scale = 0.5
+    fluid_box.pipe_picture.south.shift = {0, -2.33}
 end
