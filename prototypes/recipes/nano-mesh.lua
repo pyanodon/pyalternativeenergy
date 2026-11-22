@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "libr",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hbr",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crude-salt",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -53,7 +53,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guhcl",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -71,7 +71,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ammonium-mixture",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -90,7 +90,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hexafluoroacetone",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -109,7 +109,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hfip",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -127,7 +127,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pre-fiber-1",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pre-fiber-2",
-    categories = {"pan"},
+    category = "pan",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -160,7 +160,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pre-fiber-3",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -177,7 +177,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rpc-mesh",
-    categories = {"centrifuging"},
+    category = "centrifuging",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -193,7 +193,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nano-mesh",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 20,
     ingredients = {

@@ -45,42 +45,19 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
-    use_mirroring = true,
+    forced_symmetry = "diagonal-pos",
     module_slots = 0,
     --allowed_effects = {'speed', 'consumption'},
     crafting_categories = {"lrf2"},
     crafting_speed = 1,
-    energy_source = { -- consume 25/s at 3kC
-        type = "fluid",
+    energy_source = {
+        type = "electric",
+        usage_priority = "primary-input",
         emissions_per_minute = {
             pollution = 1
-        },
-        burns_fluid = false,
-        scale_fluid_usage = true,
-        destroy_non_fluid_fuel = false,
-        maximum_temperature = 3000,
-        minimum_input_temperature = 3000,
-        fluid_box = {
-            production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
-            filter = "molten-salt",
-            pipe_connections = {{flow_direction = "input", position = {-3, 6.0}, direction = defines.direction.south}}
-        },
-        output_fluid_box = {
-            production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {2, 6.0}, direction = defines.direction.south}}
-        },
-        spent_fluid = {
-            name = "molten-salt",
-            temperature = 1000
-        },
+        }
     },
-    energy_usage = "50MW",
+    energy_usage = "60MW",
     graphics_set = {
         working_visualisations = {
             {
@@ -132,6 +109,8 @@ ENTITY {
                     animation_speed = 0.3,
                     blend_mode = "additive",
                     draw_as_glow = true,
+                    effect = "uranium-glow",
+                    fadeout = true,
                 }
             },
             {
@@ -148,6 +127,8 @@ ENTITY {
                     animation_speed = 0.3,
                     blend_mode = "additive",
                     draw_as_glow = true,
+                    effect = "uranium-glow",
+                    fadeout = true,
                 }
             },
             {
@@ -164,6 +145,8 @@ ENTITY {
                     animation_speed = 0.3,
                     blend_mode = "additive",
                     draw_as_glow = true,
+                    effect = "uranium-glow",
+                    fadeout = true,
                 }
             },
         },
@@ -191,22 +174,37 @@ ENTITY {
     fluid_boxes = {
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {{flow_direction = "input", position = {2, -6.0}, direction = defines.direction.north}}
         },
         {
+            production_type = "input",
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            volume = 1000,
+            pipe_connections = {{flow_direction = "input", position = {-3, 6.0}, direction = defines.direction.south}}
+        },
+        {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-3, -6.0}, direction = defines.direction.north}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            volume = 100,
+            pipe_connections = {{flow_direction = "output", position = {2, 6.0}, direction = defines.direction.south}}
         },
     },
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 0.5},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/solar-concentrator.ogg", volume = 0.1},
+        apparent_volume = 2.5
     }
 }

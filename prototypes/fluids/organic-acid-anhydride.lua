@@ -15,7 +15,7 @@ FLUID {
 RECIPE {
     type = "recipe",
     name = "organic-acid-anhydride",
-    categories = {"mixer"}, --change for future chemical plant
+    category = "mixer", --change for future chemical plant
     enabled = false,
     energy_required = 10,
     ingredients = {

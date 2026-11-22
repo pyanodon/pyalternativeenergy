@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "dodecanoic-acid",
-    categories = {"fluid-separator"},
+    category = "fluid-separator",
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -18,7 +18,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dodecylamine",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "iron-nanoparticles",
-    categories = {"drp"},
+    category = "drp",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -57,7 +57,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "milfe",
-    categories = {"nano"},
+    category = "nano",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -75,7 +75,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nanocarrier",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 20,
     ingredients = {

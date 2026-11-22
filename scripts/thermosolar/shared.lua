@@ -1,17 +1,3 @@
----@namespace PyAlternativeenergy
----@type PyAlternativeenergyStorage
-storage = storage --[[@as PyAlternativeenergyStorage]]
-
----@class (partial) PyAlternativeenergyStorage
----@field solar_updraft_towers table
----@field tower_circles table
----@field heliostat_tower_max_power_output number
-
----@class Thermosolar
----@field events {[string]: function}
----@field tower_range uint
----@field calc_daylight fun(surface: LuaSurface): number
----@field calc_average_daylight fun(surface: LuaSurface): number
 Thermosolar = {}
 Thermosolar.events = {}
 
@@ -23,7 +9,11 @@ py.on_event(py.events.on_init(), function(event)
     storage.heliostat_towers = storage.heliostat_towers or {}
     local steam = prototypes.fluid["pressured-steam"]
     local joules_per_unit = steam.heat_capacity * steam.max_temperature
-    local mk04_max_output_in_w = prototypes.entity["steam-turbine-mk04"].get_fluid_usage_per_tick()--[[@cast -?]] * joules_per_unit * 60
+    -- https://github.com/pyanodon/pyalternativeenergy/commit/18a30a5faddbcf7674b7993a223c3bf9babc65aa
+    local _, fluid_usage_per_tick = pcall(function() return prototypes.entity["steam-turbine-mk04"].get_fluid_usage_per_tick() end)
+    if type(fluid_usage_per_tick) == "string" then fluid_usage_per_tick = nil end
+    fluid_usage_per_tick = fluid_usage_per_tick or prototypes.entity["steam-turbine-mk04"].fluid_usage_per_tick
+    local mk04_max_output_in_w = fluid_usage_per_tick * joules_per_unit * 60
     storage.heliostat_tower_max_power_output = Heliostat.mk04_turbines_supported_per_maxed_tower * mk04_max_output_in_w
     storage.energy_per_heliostat = storage.heliostat_tower_max_power_output / Heliostat.max_heliostats
 end)
@@ -82,7 +72,6 @@ function Thermosolar.calc_daylight(surface)
     elseif sunrise_start <= time and time < day_start then
         time_multiplier = 1 + (day_start - time) * (1 / (sunrise_start - day_start))
     end
-    ---@diagnostic disable-next-line: return-type-mismatch
     return time_multiplier
 end
 

@@ -1,24 +1,3 @@
----@namespace PyAlternativeenergy
----@type PyAlternativeenergyStorage
-storage = storage --[[@as PyAlternativeenergyStorage]]
-
----@class (partial) PyAlternativeenergyStorage
----@field heliostat_towers table
----@field energy_per_heliostat number
----@field update_heliostat_guis boolean
-
----@class Heliostat
----@field events {[string]: function}
----@field max_heliostats uint
----@field mk04_turbines_supported_per_maxed_tower number
----@field is_heliostat fun(heliostat: LuaEntity): boolean
----@field find_tower fun(heliostat: LuaEntity): LuaEntity?
----@field min_void_temp number
----@field max_void_temp number
----@field update_power_generation fun(tower: LuaEntity, excluded_heliostat: LuaEntity?): LuaEntity?
----@field rotate_heliostat fun(heliostat: LuaEntity, tower: LuaEntity): LuaEntity
----@field update_gui fun(gui: LuaGuiElement)
----@field update_all_guis fun()
 Heliostat = {}
 Heliostat.events = {}
 
@@ -33,8 +12,8 @@ function Heliostat.find_tower(heliostat)
     return heliostat.surface.find_entities_filtered {name = "solar-tower-building", force = heliostat.force, radius = Thermosolar.tower_range, limit = 1, position = heliostat.position}[1]
 end
 
-Heliostat.min_void_temp = 0
-Heliostat.max_void_temp = 8333.33333333
+local min_void_temp = 0
+local max_void_temp = 8333.33333333
 function Heliostat.update_power_generation(tower, excluded_heliostat)
     local tower_data = storage.heliostat_towers[tower.unit_number]
     if not tower_data then return end
@@ -43,7 +22,7 @@ function Heliostat.update_power_generation(tower, excluded_heliostat)
     for _, heliostat in pairs(tower.surface.find_entities_filtered {position = tower.position, radius = Thermosolar.tower_range, force = tower.force, type = "simple-entity-with-owner"}) do
         if heliostat ~= excluded_heliostat and Heliostat.is_heliostat(heliostat) then
             tower_data.heliostats = tower_data.heliostats + 1
-            heliostat = Heliostat.rotate_heliostat(heliostat, tower)--[[@as LuaEntity]]
+            heliostat = Heliostat.rotate_heliostat(heliostat, tower)
         end
     end
     tower_data.max_production = (storage.energy_per_heliostat * tower_data.heliostats) * tower.surface.solar_power_multiplier
@@ -53,18 +32,15 @@ function Heliostat.update_power_generation(tower, excluded_heliostat)
     Heliostat.update_all_guis()
 end
 
----@param tower LuaEntity?
 function Heliostat.rotate_heliostat(heliostat, tower)
     local sprite_num
     local old_sprite_num = string.match(heliostat.name, "solar%-tower%-panel(%d+)")
-    ---@diagnostic disable-next-line: assign-type-mismatch
     old_sprite_num = tonumber(old_sprite_num)
 
     local tower = tower or Heliostat.find_tower(heliostat)
     if not tower then
         sprite_num = 0
     else
-        ---@diagnostic disable-next-line: need-check-nil
         local x, y = (heliostat.position.x - tower.position.x), (heliostat.position.y - tower.position.y)
         local angle = math.atan2(y, x)
         local deg = math.deg(angle)
@@ -80,17 +56,15 @@ function Heliostat.rotate_heliostat(heliostat, tower)
         force = heliostat.force
     }
     heliostat.destroy()
-    ---@diagnostic disable-next-line: return-type-mismatch
     return rotated
 end
 
----@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 Heliostat.events.on_built = function(event)
     local entity = event.entity
     if not entity.valid then return end
 
     if Heliostat.is_heliostat(entity) then
-        entity = Heliostat.rotate_heliostat(entity)--[[@as LuaEntity]]
+        entity = Heliostat.rotate_heliostat(entity)
         local tower = Heliostat.find_tower(entity)
         if tower then Heliostat.update_power_generation(tower) end
     elseif entity.name == "solar-tower-building" then
@@ -102,7 +76,6 @@ Heliostat.events.on_built = function(event)
     end
 end
 
----@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 Heliostat.events.on_destroyed = function(event)
     local entity = event.entity
 
@@ -119,15 +92,14 @@ Heliostat.events.on_destroyed = function(event)
     storage.update_heliostat_guis = not not next(storage.heliostat_towers)
 end
 
----@param event EventData.on_gui_opened
 Heliostat.events.on_gui_opened = function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
     local entity = event.entity
     if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= "solar-tower-building" then return end
 
     if player.gui.screen.heliostat_gui then player.gui.screen.heliostat_gui.destroy() end
     local main_frame = player.gui.screen.add {type = "frame", name = "heliostat_gui", caption = entity.prototype.localised_name, direction = "vertical"}
-    main_frame.tags = {unit_number = entity.unit_number--[[@as number]]}
+    main_frame.tags = {unit_number = entity.unit_number}
     main_frame.auto_center = true
     main_frame.style.vertically_stretchable = true
     player.opened = main_frame
@@ -135,7 +107,7 @@ Heliostat.events.on_gui_opened = function(event)
     local content_frame = main_frame.add {type = "frame", name = "content_frame", style = "inside_shallow_frame_with_padding"}
 
     local camera_frame = content_frame.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
-    local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = {x = entity.position.x,y = entity.position.y--[[@cast -?]] - 10}, surface_index = entity.surface.index}
+    local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = {entity.position.x, entity.position.y - 10}, surface_index = entity.surface.index}
     camera.visible = true
     camera.style.height = 380
     camera.style.width = 200
@@ -162,16 +134,14 @@ Heliostat.events.on_gui_opened = function(event)
     Heliostat.update_gui(main_frame)
 end
 
----@param event EventData.on_gui_closed
 Heliostat.events.on_gui_closed = function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
     if (event.gui_type or player.opened_gui_type) == defines.gui_type.custom then
         local gui = player.gui.screen.heliostat_gui
         if gui then gui.destroy() end
     end
 end
 
----@param gui LuaGuiElement
 function Heliostat.update_gui(gui)
     local tower_data = storage.heliostat_towers[gui.tags.unit_number]
     if not tower_data then
@@ -189,9 +159,8 @@ function Heliostat.update_gui(gui)
     content_flow.daylight.caption = {"sut-gui.daylight", math.floor(daylight * 100)}
 end
 
----@param event EventData.CustomInputEvent
 py.on_event(py.events.on_entity_clicked(), function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
     if player.cursor_stack and player.cursor_stack.valid_for_read then return end
     local entity = player.selected
     if not entity or not Heliostat.is_heliostat(entity) then return end
@@ -205,9 +174,9 @@ py.register_on_nth_tick(60, "heliostat", "pyae", function()
             local tower = tower_data.entity
             local daylight = Thermosolar.calc_daylight(tower.surface)
             if daylight ~= 0 then
-                local target_temperature = (tower_data.efficiency * daylight) * (Heliostat.max_void_temp - Heliostat.min_void_temp)
-                target_temperature = math.min(Heliostat.max_void_temp, math.max(Heliostat.min_void_temp, target_temperature + Heliostat.min_void_temp))
-                tower.set_fluid(3, {name = "solar-concentration", amount = 61, temperature = target_temperature})
+                local target_temperature = (tower_data.efficiency * daylight) * (max_void_temp - min_void_temp)
+                target_temperature = math.min(max_void_temp, math.max(min_void_temp, target_temperature + min_void_temp))
+                tower.fluidbox[3] = {name = "solar-concentration", amount = 61, temperature = target_temperature}
             end
         end
     end

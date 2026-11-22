@@ -1,13 +1,3 @@
----@namespace PyAlternativeenergy
----@type PyAlternativeenergyStorage
-storage = storage --[[@as PyAlternativeenergyStorage]]
-
----@class (partial) PyAlternativeenergyStorage
----@field _last_cancel_creation_message number
----@field _last_failed_airspace string
----@field windmill table
----@field last_windmill int?
-
 Wind = {}
 Wind.events = {}
 
@@ -36,6 +26,7 @@ local animated_turbines = {
     ["multiblade"] = true
 }
 
+local variation = require "scripts.wind.variation"
 -- TODO check animation changes
 local draw_animation = rendering.draw_animation
 
@@ -43,7 +34,6 @@ local function seconds(n)
     return 60 * n
 end
 
----@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 Wind.events.on_built = function(event)
     local entity = event.entity
     local turbine_type = entity.valid and managed_turbines[entity.name]
@@ -97,7 +87,7 @@ Wind.events.on_built = function(event)
                 create_at_cursor = not not player_index
             }
             if player_index then
-                game.get_player(player_index)--[[@cast -?]].create_local_flying_text(cant_build_message)
+                game.get_player(player_index).create_local_flying_text(cant_build_message)
             else
                 for _, player in pairs(game.connected_players) do
                     player.create_local_flying_text(cant_build_message)
@@ -134,6 +124,7 @@ Wind.events.on_built = function(event)
     end
 
     storage.windmill[entry.entity.unit_number] = entry
+    Wind.update_power_generation(entry, Wind.calculate_wind_speed())
 end
 
 local function positions_equal(position_a, position_b)
@@ -193,7 +184,6 @@ Wind.events.on_script_trigger_effect = function(event)
     end
 end
 
----@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 Wind.events.on_destroyed = function(event)
     local entity = event.entity
     if not managed_turbines[entity.name] then return end
@@ -204,15 +194,6 @@ end
 
 py.on_event(py.events.on_init(), function(event)
     storage.windmill = storage.windmill or {}
-    storage.last_windmill = nil
-    for _, planet in pairs(game.planets) do
-        -- reset properties
-        if planet.surface then
-            planet.surface.set_property("py-wind-speed-variance", planet.prototype.surface_properties--[[@cast -?]]["py-wind-speed-variance"] or planet.surface.get_property("py-wind-speed-variance"))
-            planet.surface.set_property("py-wind-speed-min", planet.prototype.surface_properties--[[@cast -?]]["py-wind-speed-min"] or planet.surface.get_property("py-wind-speed-min"))
-            planet.surface.set_property("py-wind-speed-max", planet.prototype.surface_properties--[[@cast -?]]["py-wind-speed-max"] or planet.surface.get_property("py-wind-speed-max"))
-        end
-    end
 end)
 
 function Wind.draw_windmill(windmill_data, direction)
@@ -222,7 +203,7 @@ function Wind.draw_windmill(windmill_data, direction)
             animation = windmill_data.base_name .. direction,
             surface = windmill_data.entity.surface,
             target = windmill_data.entity,
-            render_layer = "object"
+            render_layer = "higher-object-above"
         }.id
     elseif windmill_data.direction ~= direction then
         windmill_data.direction = direction
@@ -232,7 +213,7 @@ function Wind.draw_windmill(windmill_data, direction)
             animation = windmill_data.base_name .. direction,
             surface = windmill_data.entity.surface,
             target = windmill_data.entity,
-            render_layer = "object"
+            render_layer = "higher-object-above"
         }.id
     end
 end
@@ -258,49 +239,46 @@ function Wind.calculate_wind_direction(surface)
     end
 end
 
--- double sine wave out of sync, clamped [0, 1]
 local sin = math.sin
 local pi = math.pi
-function Wind.calculate_wind_speed(variance)
-    local x = game.tick / 10000 * variance
-    return (sin(2 * x) + sin(pi * x)) / 4 + 0.5
+function Wind.calculate_wind_speed()
+    local x = game.tick / 10000
+    return (sin(2 * x) + sin(pi * x)) / 2
+end
+
+function Wind.update_power_generation(windmill_data, wind_speed)
+    local entity = windmill_data.entity
+    local power_output = entity.prototype.get_max_energy_production() * (1 + variation[windmill_data.base_name] * wind_speed)
+    entity.power_production = power_output
+    entity.electric_buffer_size = power_output
 end
 
 Wind.events[61] = function()
-    for _, planet in pairs(game.planets) do
-        local surface = planet.surface
-        -- windspeed calculations
-        local variance = surface and surface.get_property("py-wind-speed-variance")
-        -- skip surfaces that do not change
-        if surface and variance ~= 0 then
-            local min_speed = surface.get_property("py-wind-speed-min")
-            local max_speed = surface.get_property("py-wind-speed-max")
-            local wind_speed = Wind.calculate_wind_speed(variance) * (max_speed - min_speed) + min_speed -- adjusted to [min, max]
-            surface.set_property("py-wind-speed", wind_speed)
+    local wind_speed = Wind.calculate_wind_speed()
+    local direction = Wind.calculate_wind_direction(game.surfaces["nauvis"])
 
-            -- wind direction calculations
-            local direction = Wind.calculate_wind_direction(surface)
-            local key, details = storage.last_windmill, nil
-            local max_iter = 0
-            repeat
-                max_iter = max_iter + 1
-                key, details = next(storage.windmill, key)
-                -- Empty table or end of list
-                if not key or not details then
-                    break
-                end
-                if details.entity.valid and animated_turbines[details.turbine_type] then
-                    Wind.draw_windmill(details, direction)
-                elseif not details.entity.valid then
-                    _ = details.collision.valid and details.collision.destroy()
-                    if details.anim_id then
-                        local animation = rendering.get_object_by_id(details.anim_id)
-                        if animation then animation.destroy() end
-                    end
-                    storage.windmill[key] = nil
-                end
-            until max_iter > 101
-            storage.last_windmill = key
+    local key, details = storage.last_windmill, nil
+    local max_iter = 0
+    repeat
+        max_iter = max_iter + 1
+        key, details = next(storage.windmill, key)
+        -- Empty table or end of list
+        if not key or not details then
+            break
         end
-    end
+        if details.entity.valid then
+            if animated_turbines[details.turbine_type] then
+                Wind.draw_windmill(details, direction)
+            end
+            Wind.update_power_generation(details, wind_speed)
+        else
+            _ = details.collision.valid and details.collision.destroy()
+            if details.anim_id then
+                local animation = rendering.get_object_by_id(details.anim_id)
+                if animation then animation.destroy() end
+            end
+            storage.windmill[key] = nil
+        end
+    until max_iter > 101
+    storage.last_windmill = key
 end

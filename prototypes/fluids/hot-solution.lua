@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "hot-solution",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 20,
     ingredients = {

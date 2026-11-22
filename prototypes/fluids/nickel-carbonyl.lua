@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "nickel-carbonyl",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients =

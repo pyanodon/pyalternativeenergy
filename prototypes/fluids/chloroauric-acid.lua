@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "chloroauric-acid",
-    categories = {"electrolyzer"},
+    category = "electrolyzer",
     enabled = false,
     energy_required = 10,
     ingredients = {

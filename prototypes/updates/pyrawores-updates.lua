@@ -125,12 +125,12 @@ RECIPE("nuclear-fuel-reprocessing-mk02"):remove_unlock("nuclear-fuel-reprocessin
 RECIPE("nuclear-fuel-reprocessing-mk03"):remove_unlock("nuclear-fuel-reprocessing")
 --TODO:update recipes using the different rods to use different nuclear waste products. aka pu, am, cm
 
-RECIPE("fuelrod-mk01-1"):add_ingredient {type = "item", name = "pu-239", amount = 1}:replace_ingredient("coke", "graphite"):add_unlock("uranium-processing"):set_fields {categories = {"crafting"}}
+RECIPE("fuelrod-mk01-1"):add_ingredient {type = "item", name = "pu-239", amount = 1}:replace_ingredient("coke", "graphite"):add_unlock("uranium-processing"):set_fields {category = "crafting"}
 
 RECIPE {
     type = "recipe",
     name = "fuelrod-mk02",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -174,6 +174,7 @@ ITEM {
                 size = 64,
                 filename = "__pyalternativeenergygraphics__/graphics/icons/po-210-nuclear-fuel.png",
                 scale = 0.25,
+                mipmap_count = 1
             },
             {
                 draw_as_light = true,
@@ -181,10 +182,11 @@ ITEM {
                 size = 64,
                 filename = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fuel-light.png",
                 scale = 0.25,
+                mipmap_count = 1
             }
         }
     },
-    fuel_categories = {"nuke"},
+    fuel_category = "nuke",
     fuel_value = "1.21GJ",
     fuel_acceleration_multiplier = 2.5,
     fuel_top_speed_multiplier = 2,
@@ -208,6 +210,7 @@ ITEM {
                 size = 64,
                 filename = "__pyalternativeenergygraphics__/graphics/icons/used-po-210-nuclear-fuel.png",
                 scale = 0.25,
+                mipmap_count = 1
             },
             {
                 draw_as_light = true,
@@ -215,6 +218,7 @@ ITEM {
                 size = 64,
                 filename = "__pyalternativeenergygraphics__/graphics/icons/nuclear-fuel-light.png",
                 scale = 0.25,
+                mipmap_count = 1
             }
         }
     },
@@ -237,13 +241,13 @@ RECIPE {
     }
 }:add_unlock("nuclear-power-mk02")
 
-table.insert(data.raw.locomotive.locomotive.energy_source.fuel_categories--[[@cast -?]], "nuke")
-table.insert(data.raw.locomotive["mk02-locomotive"].energy_source.fuel_categories--[[@cast -?]], "nuke")
-table.insert(data.raw["assembling-machine"]["assembling-machine-3"].energy_source.fuel_categories--[[@cast -?]], "nuke")
-table.insert(data.raw["assembling-machine"]["atomizer-mk03"].energy_source.fuel_categories--[[@cast -?]], "nuke")
-table.insert(data.raw["assembling-machine"]["atomizer-mk04"].energy_source.fuel_categories--[[@cast -?]], "nuke")
-table.insert(data.raw["assembling-machine"]["sinter-unit"].energy_source.fuel_categories--[[@cast -?]], "nuke")
-table.insert(data.raw["furnace"]["py-burner"].energy_source.fuel_categories--[[@cast -?]], "nuke")
+table.insert(data.raw.locomotive.locomotive.energy_source.fuel_categories, "nuke")
+table.insert(data.raw.locomotive["mk02-locomotive"].energy_source.fuel_categories, "nuke")
+table.insert(data.raw["assembling-machine"]["assembling-machine-3"].energy_source.fuel_categories, "nuke")
+table.insert(data.raw["assembling-machine"]["atomizer-mk03"].energy_source.fuel_categories, "nuke")
+table.insert(data.raw["assembling-machine"]["atomizer-mk04"].energy_source.fuel_categories, "nuke")
+table.insert(data.raw["assembling-machine"]["sinter-unit"].energy_source.fuel_categories, "nuke")
+table.insert(data.raw["furnace"]["py-burner"].energy_source.fuel_categories, "nuke")
 
 --move uranium ore processing recipes
 RECIPE("grade-1-u"):remove_unlock("uranium-mk01"):add_unlock("uranium-processing")
@@ -255,7 +259,7 @@ RECIPE("grade-2-u-crush"):remove_unlock("uranium-mk01"):add_unlock("uranium-proc
 RECIPE {
     type = "recipe",
     name = "u-pulp-01",
-    categories = {"leaching"},
+    category = "leaching",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -274,7 +278,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u-pulp-02",
-    categories = {"leaching"}, --pyfe agitator
+    category = "leaching", --pyfe agitator
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -292,7 +296,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u-pulp-03",
-    categories = {"leaching"},
+    category = "leaching",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -310,7 +314,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "u-rich-pulp",
-    categories = {"chemistry"}, --agitator
+    category = "chemistry", --agitator
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -432,18 +436,14 @@ while enrichment < 100 do
         t = 4
     end
 
-
-    local max_temp = math.floor(u235 * 100)
-    local negative_mod = 10 ^ -(5 - math.floor(math.log(max_temp, 10))) -- Negative modifier loses one decimal for each order of magnitude the temp gains
-
     RECIPE {
         type = "recipe",
         name = recipe_name,
-        categories = {"gas-separator"},
+        category = "gas-separator",
         enabled = false,
         energy_required = 1,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment * 100), maximum_temperature = max_temp - negative_mod}
+            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(enrichment * 100), maximum_temperature = math.floor(u235 * 100) - 0.000001}
         },
         results = {
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100)},
@@ -502,17 +502,14 @@ while duf > duf_min do
 
     local name = string.format("%.2f", tostring(u238))
 
-    local max_temp = math.floor(u235 * 100)
-    local negative_mod = 10 ^ -(5 - math.floor(math.log(max_temp, 10))) -- Negative modifier loses one decimal for each order of magnitude the temp gains
-
     RECIPE {
         type = "recipe",
         name = "depleted-uf6-" .. string.gsub(name, "%.", "-"), --TODO:find a way to fix uf6 names
-        categories = {"gas-separator"},
+        category = "gas-separator",
         enabled = false,
         energy_required = 1,
         ingredients = {
-            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf * 100), maximum_temperature = max_temp - negative_mod}
+            {type = "fluid", name = "uf6", amount = 400, minimum_temperature = math.floor(duf * 100), maximum_temperature = math.floor(u235 * 100) - 0.000001}
         },
         results = {
             {type = "fluid", name = "uf6", amount = 200, temperature = math.floor(u235 * 100)},
@@ -535,7 +532,7 @@ end
 RECIPE {
     type = "recipe",
     name = "Depleted-uf6-to-u-oxide",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -576,12 +573,11 @@ data.raw["assembling-machine"]["wet-scrubber-mk02"].energy_usage = "2MW"
 data.raw["assembling-machine"]["wet-scrubber-mk03"].energy_usage = "3MW"
 data.raw["assembling-machine"]["wet-scrubber-mk04"].energy_usage = "4MW"
 
-if data.raw.resource["uranium-ore"]and data.raw.resource["uranium-ore"].minable then
+if data.raw.resource["uranium-ore"] then
     data.raw.resource["uranium-ore"].minable.required_fluid = nil
     data.raw.resource["uranium-ore"].minable.fluid_amount = nil
     data.raw.resource["uranium-ore"].minable.mining_time = 1
 end
-if data.raw.resource["uranium-rock"].minable == nil then error() end
 data.raw.resource["uranium-rock"].minable.required_fluid = nil
 data.raw.resource["uranium-rock"].minable.fluid_amount = nil
 data.raw.resource["uranium-rock"].minable.mining_time = 1
@@ -601,7 +597,7 @@ data.raw["item"]["uranium-mine"].icon = "__pyalternativeenergygraphics__/graphic
 data.raw["item"]["uranium-mine"].icon_size = 64
 RECIPE("uranium-mine"):remove_unlock("big-mines"):add_unlock("nuclear-power-mk02")
 RECIPE("uranium-mine"):remove_ingredient("electric-mining-drill"):add_ingredient {type = "item", name = "uranium-mining-drill", amount = 1}
-for _, layer in pairs(data.raw["mining-drill"]["uranium-mine"].graphics_set--[[@cast -?]].animation--[[@cast -?]].layers--[[@as data.Animation[] ]]) do
+for _, layer in pairs(data.raw["mining-drill"]["uranium-mine"].graphics_set.animation.layers) do
     layer.animation_speed = 0.3
 end
 data.raw["mining-drill"]["uranium-mine"].input_fluid_box = nil

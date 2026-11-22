@@ -33,7 +33,31 @@ data:extend {
     },
     {
         type = "recipe-category",
+        name = "nuclear-fission-2"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-fission-3"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-fission-4"
+    },
+    {
+        type = "recipe-category",
         name = "nuclear-mox-fission"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-mox-fission-2"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-mox-fission-3"
+    },
+    {
+        type = "recipe-category",
+        name = "nuclear-mox-fission-4"
     },
     {
         type = "recipe-category",
@@ -47,46 +71,23 @@ data:extend {
         type = "recipe-category",
         name = "numal",
         allowed_module_categories = {"numal"},
+        modules_required = true
+    },
+    { -- categories are kept per tier since factoriopedia can't tell that a thing has a fixed recipe
+        type = "recipe-category",
+        name = "powerplant-mk01"
     },
     {
         type = "recipe-category",
-        name = "coal-powerplant"
+        name = "powerplant-mk02"
     },
     {
         type = "recipe-category",
-        name = "coal-powerplant-mk02"
+        name = "powerplant-mk03"
     },
     {
         type = "recipe-category",
-        name = "coal-powerplant-mk03"
-    },
-    {
-        type = "recipe-category",
-        name = "coal-powerplant-mk04"
-    },
-    {
-        type = "recipe-category",
-        name = "biomass-powerplant"
-    },
-    {
-        type = "recipe-category",
-        name = "biomass-powerplant-mk02"
-    },
-    {
-        type = "recipe-category",
-        name = "biomass-powerplant-mk03"
-    },
-    {
-        type = "recipe-category",
-        name = "biomass-powerplant-mk04"
-    },
-    {
-        type = "recipe-category",
-        name = "oil-powerplant"
-    },
-    {
-        type = "recipe-category",
-        name = "gas-powerplant"
+        name = "powerplant-mk04"
     },
     {
         type = "recipe-category",

@@ -1,4 +1,3 @@
----@diagnostic disable
 --[[
  Fix case where we accidentally placed accumulators in the table without specifying their network
 --]]

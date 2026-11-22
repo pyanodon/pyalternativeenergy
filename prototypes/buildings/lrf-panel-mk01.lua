@@ -108,6 +108,7 @@ ENTITY {
     collision_box = {{-2.2, -4.8}, {2.2, 4.8}},
     selection_box = {{-2.5, -5.0}, {2.5, 5.0}},
     mode = "heat-fluid-inside",
+    target_temperature = 5000,
     energy_source = {type = "void"},
     energy_consumption = "600kW",
     burning_cooldown = 0,

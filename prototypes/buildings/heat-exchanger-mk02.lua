@@ -40,7 +40,7 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    use_mirroring = true,
+    forced_symmetry = "diagonal-pos",
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"heat-exchanger"},
@@ -110,14 +110,14 @@ ENTITY {
             production_type = "output",
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, {0.6, -0.1}, {-0.6, -0.1}),
             pipe_covers = py.pipe_covers(true, true, true, true),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {0.0, -3.0}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, {0.6, -0.1}, {-0.6, -0.1}),
             pipe_covers = py.pipe_covers(true, true, true, true),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-3.0, 0.0}, direction = defines.direction.west}}
         },
         {
@@ -140,6 +140,7 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyfusionenergygraphics__/sounds/heat-exchanger.ogg"},
         idle_sound = {filename = "__pyfusionenergygraphics__/sounds/heat-exchanger.ogg", volume = 0.3},
+        apparent_volume = 2.5
     },
     next_upgrade = "py-heat-exchanger-mk03"
 }

@@ -1,29 +1,29 @@
 require "prototypes.decay.decay-updates"
 
 --MOVED RECIPES CATEGORIES
-RECIPE("honey-comb").categories = {"centrifuging"}
-RECIPE("honey-comb-buffed").categories = {"centrifuging"}
-RECIPE("nickel-tailings").categories = {"centrifuging"}
-RECIPE("xylenol-2").categories = {"centrifuging"}
-RECIPE("al-tailings-separation").categories = {"centrifuging"}
-RECIPE("simik-blood-to-oleochemicals").categories = {"centrifuging"}
-RECIPE("chromite-concentrate").categories = {"centrifuging"}
-RECIPE("vanabins").categories = {"centrifuging"}
-RECIPE("clean-rf-gel").categories = {"centrifuging"}
-RECIPE("gold-precipitate").categories = {"centrifuging"}
-RECIPE("serine").categories = {"centrifuging"}
-RECIPE("albumin-1").categories = {"centrifuging"}
-RECIPE("outlet-gas-02").categories = {"centrifuging"}
-RECIPE("serine").categories = {"centrifuging"}
-RECIPE("tar-to-nickel").categories = {"centrifuging"}
-RECIPE("bitumen-to-nickel").categories = {"centrifuging"}
-RECIPE("nickel-prepared-solution").categories = {"centrifuging"}
-RECIPE("chromium-rejects").categories = {"centrifuging"}
-RECIPE("nuclear-fuel-reprocessing-mk02").categories = {"centrifuging"}
-RECIPE("nuclear-fuel-reprocessing-mk03").categories = {"centrifuging"}
-RECIPE("nuclear-fuel-reprocessing-mk04").categories = {"centrifuging"}
-RECIPE("nuclear-fuel-reprocessing-mk05").categories = {"centrifuging"}
-RECIPE("plutonium-fuel-reprocessing").categories = {"centrifuging"}
+RECIPE("honey-comb").category = "centrifuging"
+RECIPE("honey-comb-buffed").category = "centrifuging"
+RECIPE("nickel-tailings").category = "centrifuging"
+RECIPE("xylenol-2").category = "centrifuging"
+RECIPE("al-tailings-separation").category = "centrifuging"
+RECIPE("simik-blood-to-oleochemicals").category = "centrifuging"
+RECIPE("chromite-concentrate").category = "centrifuging"
+RECIPE("vanabins").category = "centrifuging"
+RECIPE("clean-rf-gel").category = "centrifuging"
+RECIPE("gold-precipitate").category = "centrifuging"
+RECIPE("serine").category = "centrifuging"
+RECIPE("albumin-1").category = "centrifuging"
+RECIPE("outlet-gas-02").category = "centrifuging"
+RECIPE("serine").category = "centrifuging"
+RECIPE("tar-to-nickel").category = "centrifuging"
+RECIPE("bitumen-to-nickel").category = "centrifuging"
+RECIPE("nickel-prepared-solution").category = "centrifuging"
+RECIPE("chromium-rejects").category = "centrifuging"
+RECIPE("nuclear-fuel-reprocessing-mk02").category = "centrifuging"
+RECIPE("nuclear-fuel-reprocessing-mk03").category = "centrifuging"
+RECIPE("nuclear-fuel-reprocessing-mk04").category = "centrifuging"
+RECIPE("nuclear-fuel-reprocessing-mk05").category = "centrifuging"
+RECIPE("plutonium-fuel-reprocessing").category = "centrifuging"
 
 --adjusting all centrifudge recipe speeds
 RECIPE("uranium-processing"):set_fields {energy_required = 40}
@@ -50,22 +50,22 @@ RECIPE("tar-to-nickel"):set_fields {energy_required = 10}
 RECIPE("honey-comb"):set_fields {energy_required = 1}
 RECIPE("honey-comb-buffed"):set_fields {energy_required = 3}
 
-TECHNOLOGY("pyrrhic"):add_prereq("mass-production")
-TECHNOLOGY("pyrrhic"):add_prereq("machines-mk05")
-TECHNOLOGY("pyrrhic"):add_prereq("oil-machines-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("smelters-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("nuclear-power-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("electronics-machines-4")
-TECHNOLOGY("pyrrhic"):add_prereq("tholin-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("land-animals-mk05")
-TECHNOLOGY("pyrrhic"):add_prereq("mycology-mk05")
-TECHNOLOGY("pyrrhic"):add_prereq("botany-mk04")
-TECHNOLOGY("pyrrhic"):add_prereq("biotech-machines-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("mass-production")
+data.raw.technology["pyrrhic"]:add_prereq("machines-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("oil-machines-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("smelters-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("nuclear-power-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("electronics-machines-4")
+data.raw.technology["pyrrhic"]:add_prereq("tholin-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("land-animals-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("mycology-mk05")
+data.raw.technology["pyrrhic"]:add_prereq("botany-mk04")
+data.raw.technology["pyrrhic"]:add_prereq("biotech-machines-mk04")
 
 RECIPE {
     type = "recipe",
     name = "solvent-separation",
-    categories = {"centrifuging"},
+    category = "centrifuging",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -101,7 +101,7 @@ RECIPE("ht-locomotive"):add_ingredient {type = "item", name = "ns-material", amo
 RECIPE("ht-generic-wagon"):add_ingredient {type = "item", name = "ns-material", amount = 2}:add_ingredient {type = "item", name = "super-steel", amount = 10}
 RECIPE("ht-generic-fluid-wagon"):add_ingredient {type = "item", name = "ns-material", amount = 2}:add_ingredient {type = "item", name = "super-steel", amount = 10}
 
-TECHNOLOGY("nuclear-fuel-reprocessing"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("nuclear-fuel-reprocessing"):hide().enabled = false
 RECIPE("lithium-peroxide"):remove_unlock("filtration-mk02"):add_unlock("lithium-processing"):add_ingredient {type = "item", name = "lithium-hydroxide", amount = 2}
 RECIPE("low-density-structure"):add_ingredient {type = "item", name = "cf", amount = 10}
 RECIPE("arithmetic-combinator"):add_ingredient {type = "item", name = "battery", amount = 1}
@@ -125,14 +125,16 @@ RECIPE("py-logistic-robot-mk04"):add_ingredient {type = "item", name = "gearbox-
 RECIPE("py-construction-robot-mk01"):add_ingredient {type = "item", name = "battery-mk01", amount = 2}
 RECIPE("py-logistic-robot-mk01"):add_ingredient {type = "item", name = "battery-mk01", amount = 2}
 
-RECIPE("subcritical-water-01").categories = {"heat-exchanger"}
-RECIPE("subcritical-water-02").categories = {"heat-exchanger"}
+RECIPE("subcritical-water-01").category = "heat-exchanger"
+RECIPE("subcritical-water-02").category = "heat-exchanger"
 
 for _, recipe in pairs(data.raw.recipe) do
-    RECIPE(recipe.name):replace_ingredient("battery", "battery-mk01"):replace_result("battery", "battery-mk01")
+    recipe:replace_ingredient("battery", "battery-mk01")
+    recipe:replace_result("battery", "battery-mk01")
 
-    if RECIPE(recipe.name):has_category("combustion") then
+    if recipe.category == "combustion" then
         recipe.hidden = true
+        recipe.hidden_in_factoriopedia = true
         for t, tech in pairs(data.raw.technology) do
             if tech.effects ~= nil then
                 for e, effect in pairs(tech.effects) do
@@ -149,48 +151,49 @@ end
 
 --ENERGY COSTS--
 
--- add wind data to entity tooltip fields
-for _, name in pairs{
+--ENERGY PRODUCTION DESCRIPTION --
+for name, variance in pairs(require "scripts.wind.variation") do
+    variance = {"entity-description.variance", tostring(variance * 100)}
+    -- Handle the surrogate items that show in electric stats, too
+    for _, suffix in pairs {"", "-blank"} do
+        local entity = data.raw["electric-energy-interface"][name .. suffix]
+        if entity then
+            if entity.localised_description then
+                entity.localised_description = {"", entity.localised_description, "\n", variance}
+            else
+                entity.localised_description = {"?", {"", {"entity-description." .. name}, "\n", variance}, variance}
+            end
+        end
+    end
+end
+
+local electric_energy_interfaces = {
     "hawt-turbine-mk01",
     "hawt-turbine-mk02",
     "hawt-turbine-mk03",
     "hawt-turbine-mk04",
-    "hawt-turbine-mk01-blank",
-    "hawt-turbine-mk02-blank",
-    "hawt-turbine-mk03-blank",
-    "hawt-turbine-mk04-blank",
     "vawt-turbine-mk01",
     "vawt-turbine-mk02",
     "vawt-turbine-mk03",
     "vawt-turbine-mk04",
     "multiblade-turbine-mk01",
     "multiblade-turbine-mk03",
-    "multiblade-turbine-mk01-blank",
-    "multiblade-turbine-mk03-blank",
-} do
-    local entity = data.raw["solar-panel"][name]
-    entity.custom_tooltip_fields = entity.custom_tooltip_fields or {}
-    entity.custom_tooltip_fields[#entity.custom_tooltip_fields+1] = {
-        name = {"entity-tooltip.output"},
-        value = {"entity-tooltip.output-per-kmph", entity.production}
-    }
-end
-
-local molten_salt_recipes = {
-    "biomass-molten-salt-0",
-    "coal-molten-salt-0",
-    "gas-molten-salt-0",
-    "oil-molten-salt-0",
+    "solar-panel-mk02",
+    "solar-panel-mk03",
 }
--- Add the mk01..mk04 color bars to the hot-molten-salt recipes
-for _, name in pairs(molten_salt_recipes) do
-    for mk = 1, 4, 1 do
-        local recipe = name .. mk
-        table.insert(data.raw.recipe[recipe].icons--[[@cast -?]], {
-            icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. mk .. ".png",
-            icon_size = 64,
-        })
+
+for _, name in pairs(electric_energy_interfaces) do
+    local item = data.raw.item[name]
+    local entity = data.raw["electric-energy-interface"][name]
+    local output = {"entity-description.max-output", tostring(entity.energy_production)}
+    if item.localised_description then
+        item.localised_description = {"", item.localised_description, "\n", (output)}
+    elseif entity.localised_description then
+        item.localised_description = {"", entity.localised_description, "\n", output}
+    else
+        item.localised_description = {"?", {"", {"entity-description." .. name}, "\n", output}, output}
     end
+    entity.energy_source.buffer_capacity = entity.energy_production
 end
 
 for _, resource in pairs(data.raw.resource) do
@@ -204,7 +207,7 @@ if feature_flags.space_travel and not data.raw.armor["mech-armor"] then
     data.raw.armor["power-armor-mk2"].provides_flight = true
 end
 
-TECHNOLOGY("oil-processing"):add_pack("logistic-science-pack")
+data.raw.technology["oil-processing"]:add_pack("logistic-science-pack")
 
 --gather recipes for module changes
 local recipes_list =
@@ -370,7 +373,6 @@ local recipes_list =
     "sc-stator",
     "self-assembly-monolayer",
     "shaft-mk01",
-    "shaft-mk02",
     "silica-shell",
     "silicon-wafer-2",
     "silicon-wafer-3",

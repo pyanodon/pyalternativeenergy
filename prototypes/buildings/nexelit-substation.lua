@@ -35,6 +35,7 @@ ENTITY {
     max_health = 600,
     corpse = "substation-remnants",
     dying_explosion = "substation-explosion",
+    track_coverage_during_build_by_moving = true,
     collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
     selection_box = {{-2, -2}, {2, 2}},
     maximum_wire_distance = 60,
@@ -80,8 +81,6 @@ ENTITY {
         }
     },
     impact_category = "metal-large",
-    open_sound = { filename = "__base__/sound/electric-network-open.ogg", volume = 0.6 },
-    close_sound = { filename = "__base__/sound/electric-network-close.ogg", volume = 0.6 },
     working_sound =
     {
         sound =

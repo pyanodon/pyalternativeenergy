@@ -1,10 +1,3 @@
----@namespace PyAlternativeenergy
----@type PyAlternativeenergyStorage
-storage = storage --[[@as PyAlternativeenergyStorage]]
-
----@class (partial) PyAlternativeenergyStorage
----@field update_sut_guis boolean
-
 local floor = math.floor
 
 Solar_Updraft_Tower = {}
@@ -79,7 +72,6 @@ end
 local function clear_shine_effect(surface, position)
     local x, y = position.x, position.y
 
-    ---@type number
     local a, b = floor(x / 2), y
     a = a * (-1) ^ floor(a / 30)
     b = b * (-1) ^ floor(b / 30)
@@ -113,7 +105,6 @@ py.on_event(py.events.on_built_tile(), function(event)
 
         local x, y = position.x, position.y
 
-        ---@type number
         local a, b = floor(x / 2), y
         a = a * (-1) ^ floor(a / 30)
         b = b * (-1) ^ floor(b / 30)
@@ -147,7 +138,6 @@ py.on_event(py.events.on_mined_tile(), function(event)
     end
 end)
 
----@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "sut" then return end
@@ -173,9 +163,9 @@ py.register_on_nth_tick(60, "sut", "pyae", function()
         local activity = Thermosolar.calc_daylight(surface)
 
         if activity == 0 then
-            entity.disabled_by_script = true
+            entity.active = false
         else
-            entity.disabled_by_script = false
+            entity.active = true
             local smokestack = activity == 1 and "sut-smokestack" or "sut-smokestack-weak"
             surface.create_entity {name = smokestack, position = {entity.position.x, entity.position.y - 28}}
         end
@@ -189,7 +179,6 @@ py.register_on_nth_tick(60, "sut", "pyae", function()
     end
 end)
 
----@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     local tower_data = storage.solar_updraft_towers[entity.unit_number]

@@ -67,7 +67,7 @@ steb 6b: Pu-sol3 + heat -> PuO2 + offgas
 RECIPE {
     type = "recipe",
     name = "pu239-uf6",
-    categories = {"centrifuging"},
+    category = "centrifuging",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -85,17 +85,17 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mox-fuel-seperation",
-    categories = {"fluid-separator"},
+    category = "fluid-separator",
     enabled = false,
     energy_required = 10,
     ingredients = {
         {type = "fluid", name = "reactor-waste-2",  amount = 200},
-        {type = "item",  name = "lithium-peroxide", amount = 40},
+        {type = "item",  name = "lithium-peroxide", amount = 20},
     },
     results = {
         {type = "fluid", name = "hot-molten-salt",     amount = 20000, temperature = 5000},
         {type = "item",  name = "high-energy-waste-2", amount = 80},
-        {type = "fluid", name = "salt-solution",       amount = 800}
+        {type = "fluid", name = "salt-solution",       amount = 400}
     },
     main_product = "high-energy-waste-2",
     subgroup = "py-nuclear-waste",
@@ -104,8 +104,83 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "mox-fuel-seperation2",
+    category = "fluid-separator",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "reactor-waste-22",  amount = 200},
+        {type = "item",  name = "lithium-peroxide", amount = 14},
+    },
+    results = {
+        {type = "fluid", name = "hot-molten-salt",     amount = 20000, temperature = 5000},
+        {type = "item",  name = "high-energy-waste-2", amount = 80},
+        {type = "fluid", name = "salt-solution",       amount = 280}
+    },
+    main_product = "high-energy-waste-2",
+    icons =
+    {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-2.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+    },
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power-mk02")
+
+RECIPE {
+    type = "recipe",
+    name = "mox-fuel-seperation3",
+    category = "fluid-separator",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "reactor-waste-23",  amount = 200},
+        {type = "item",  name = "lithium-peroxide", amount = 8},
+    },
+    results = {
+        {type = "fluid", name = "hot-molten-salt",     amount = 20000, temperature = 5000},
+        {type = "item",  name = "high-energy-waste-2", amount = 80},
+        {type = "fluid", name = "salt-solution",       amount = 160}
+    },
+    main_product = "high-energy-waste-2",
+    icons =
+    {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-2.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+    },
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "mox-fuel-seperation4",
+    category = "fluid-separator",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "reactor-waste-24",  amount = 200},
+        {type = "item",  name = "lithium-peroxide", amount = 2},
+    },
+    results = {
+        {type = "fluid", name = "hot-molten-salt",     amount = 20000, temperature = 5000},
+        {type = "item",  name = "high-energy-waste-2", amount = 80},
+        {type = "fluid", name = "salt-solution",       amount = 40}
+    },
+    main_product = "high-energy-waste-2",
+    icons =
+    {
+        {icon = "__pyalternativeenergygraphics__/graphics/icons/transuranic-ores/high-energy-waste-2.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+    },
+    subgroup = "py-nuclear-waste",
+    order = "b"
+}:add_unlock("nuclear-power-mk04")
+
+RECIPE {
+    type = "recipe",
     name = "waste-mox-disolving",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -123,18 +198,18 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plutonium-seperation-2",
-    categories = {"pa"},
+    category = "pa",
     enabled = false,
     energy_required = 5,
     ingredients = {
         {type = "item", name = "plutonium-oxide-mox", amount = 50},
     },
     results = {
-        {type = "item", name = "pu-238", amount = 150, independent_probability = 0.4},
-        {type = "item", name = "pu-239", amount = 50,  independent_probability = 0.2},
-        {type = "item", name = "pu-240", amount = 150, independent_probability = 0.5},
-        {type = "item", name = "pu-241", amount = 80,  independent_probability = 0.05},
-        {type = "item", name = "pu-242", amount = 150, independent_probability = 0.6},
+        {type = "item", name = "pu-238", amount = 150, probability = 0.4},
+        {type = "item", name = "pu-239", amount = 50,  probability = 0.2},
+        {type = "item", name = "pu-240", amount = 150, probability = 0.5},
+        {type = "item", name = "pu-241", amount = 80,  probability = 0.05},
+        {type = "item", name = "pu-242", amount = 150, probability = 0.6},
     },
     main_product = "pu-242",
     subgroup = "py-nuclear",

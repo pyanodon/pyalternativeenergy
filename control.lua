@@ -1,14 +1,6 @@
----@namespace PyAlternativeenergy
----@type PyAlternativeenergyStorage
-storage = storage --[[@as PyAlternativeenergyStorage]]
-
----@class (partial) PyAlternativeenergyStorage
----@field reactor_tanks table
----@field lrf_panels table
----@field stirling table
-
 require "__pypostprocessing__.lib"
 
+local farms = require "scripts/farming"
 local events = defines.events
 
 require "scripts/wiki/text-pages"
@@ -16,6 +8,7 @@ require "scripts/microwave-receiver"
 require "scripts/thermosolar/shared"
 require "scripts/thermosolar/solar-updraft-tower"
 require "scripts/thermosolar/heliostat"
+require "scripts/solar"
 require "scripts/wind/wind"
 require "scripts/aerial"
 require "scripts/tidal"
@@ -24,10 +17,13 @@ py.on_event(py.events.on_init(), function()
     storage.reactor_tanks = storage.reactor_tanks or {}
     storage.lrf_panels = storage.lrf_panels or {}
     storage.stirling = storage.stirling or {}
+    for farm, farm_data in pairs(farms) do
+        remote.call("pyfarm", "register", farm, farm_data.domain, farm_data.default_module)
+    end
 end)
 
----@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
+    Solar.events.on_built(event)
     Heliostat.events.on_built(event)
     Wind.events.on_built(event)
     Aerial.events.on_built(event)
@@ -69,26 +65,26 @@ local REQUIRES_SUNLIGHT = {
 }
 
 py.register_on_nth_tick(55, "thermosolar", "pyae", function(event)
-    local disabled = Thermosolar.calc_daylight(game.surfaces["nauvis"]) < 0.5 -- TODO: fix for multisurface
+    local active = Thermosolar.calc_daylight(game.surfaces["nauvis"]) > 0.5 -- TODO: fix for multisurface
     for _, panel in pairs(storage.lrf_panels) do
         if panel.valid then
-            panel.disabled_by_script = disabled
-            panel.custom_status = disabled and REQUIRES_SUNLIGHT or nil
+            panel.active = active
+            panel.custom_status = (not active) and REQUIRES_SUNLIGHT or nil
         end
     end
     for _, panel in pairs(storage.stirling) do
         if panel.valid then
-            panel.disabled_by_script = disabled
-            panel.custom_status = disabled and REQUIRES_SUNLIGHT or nil
+            panel.active = active
+            panel.custom_status = (not active) and REQUIRES_SUNLIGHT or nil
         end
     end
 end)
 
+py.register_on_nth_tick(100, "solar", "pyae", Solar.events[100])
 py.register_on_nth_tick(61, "wind", "pyae", Wind.events[61])
-py.register_on_nth_tick(83, "tidal", "pyae", Tidal.events[83])
 
----@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
+    Solar.events.on_destroyed(event)
     Heliostat.events.on_destroyed(event)
     Wind.events.on_destroyed(event)
     Aerial.events.on_destroyed(event)
@@ -127,7 +123,6 @@ end)
 
 py.on_event(defines.events.on_tick, function(event)
     local func_list = remote.call("on_nth_tick", "query", "pyae", event.tick)
-    --[[@cast func_list string[] ]]
     for _, func in pairs(func_list) do
         py.mod_nth_tick_funcs[func]()
     end

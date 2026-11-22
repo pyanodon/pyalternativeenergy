@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "trichlorosilane",
-    categories = {"fbreactor"},
+    category = "fbreactor",
     enabled = false,
     energy_required = 10,
     ingredients = {

@@ -47,10 +47,12 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
-    use_mirroring = true,
+    forced_symmetry = "diagonal-pos",
     module_slots = 3,
     allowed_effects = {"consumption", "speed", "pollution"},
-    crafting_categories = {"biomass-powerplant-mk03"},
+    allowed_module_categories = {"speed"},
+    crafting_categories = {"powerplant-mk03"},
+    fixed_recipe = py.spoilage_enabled() and "biomass-molten-salt-03" or "molten-salt-03",
     crafting_speed = 3,
     energy_source =
     {
@@ -78,14 +80,14 @@ ENTITY {
                 east_position = util.by_pixel(208, 108),
                 west_position = util.by_pixel(208, 108),
                 frequency = 45,
-                vertical_speed_slowdown = 1,
+                slow_down_factor = 1,
                 starting_vertical_speed = 0.09,
                 starting_frame_deviation = 60,
+                color = {r = 0.2, g = 0.2, b = 0.2},
             },
         }
     },
     energy_usage = "8MW",
-    tall = true,
     graphics_set = {
         working_visualisations = {
             {
@@ -100,6 +102,7 @@ ENTITY {
                     width = 160,
                     height = 288,
                     animation_speed = 1 / 2,
+                    draw_as_light = true,
                     draw_as_glow = true,
                 }
             },
@@ -115,6 +118,7 @@ ENTITY {
                     width = 160,
                     height = 288,
                     animation_speed = 1 / 2,
+                    draw_as_light = true,
                     draw_as_glow = true,
                 }
             },
@@ -196,35 +200,35 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {{flow_direction = "input", position = {-3.0, 7.0}, direction = defines.direction.south}}
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {{flow_direction = "input", position = {3.0, 7.0}, direction = defines.direction.south}}
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {0.0, -7.0}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {3.0, -7.0}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-3.0, -7.0}, direction = defines.direction.north}}
@@ -234,6 +238,7 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalternativeenergygraphics__/sounds/biomass-powerplant.ogg", volume = 0.70},
         idle_sound = {filename = "__pyalternativeenergygraphics__/sounds/biomass-powerplant.ogg", volume = 0.1},
+        apparent_volume = 0.45
     },
     fast_replaceable_group = "biomass-power"
 }
