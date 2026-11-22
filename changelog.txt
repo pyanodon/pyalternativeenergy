@@ -14,7 +14,7 @@ Date: ???
     - Nuclear isotope processing recipes will inherit their decay state from ingredients where possible. Resolves https://github.com/pyanodon/pybugreports/issues/1327
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.12
-Date: 2026-11-16
+Date: ????
   Changes:
     - Added microwave reciever mod-data
     - Supported smart farm mod-data integrations
